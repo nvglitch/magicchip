@@ -1,0 +1,93 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { Check, ArrowRight } from 'lucide-react';
+
+const features = [
+  '7nm Process Technology',
+  'Up to 128 Cores',
+  'DDR5 Memory Support',
+  'PCIe 5.0 Interface',
+  'Advanced Security Features',
+  'Energy Efficient Design',
+];
+
+export default function FeaturedProduct() {
+  return (
+    <section id="solutions" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Image Side */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative"
+          >
+            <div className="aspect-square rounded-lg bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center relative overflow-hidden">
+              {/* Decorative elements */}
+              <div className="absolute inset-0 opacity-30">
+                <div className="absolute top-1/4 left-1/4 w-32 h-32 border border-blue-500/30 rounded-full" />
+                <div className="absolute bottom-1/4 right-1/4 w-48 h-48 border border-purple-500/30 rounded-full" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-emerald-500/20 rounded-full" />
+              </div>
+              
+              {/* Product representation */}
+              <div className="relative z-10 text-center">
+                <div className="w-48 h-48 mx-auto bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg shadow-2xl flex items-center justify-center">
+                  <span className="text-6xl font-bold text-white">MC</span>
+                </div>
+                <p className="mt-6 text-gray-400 text-sm">MC-Pro Series X1</p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Content Side */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="text-blue-600 font-semibold text-sm uppercase tracking-wide">
+              Flagship Product
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4">
+              MC-Pro Series X1
+            </h2>
+            <p className="text-lg text-gray-600 mb-6">
+              Our most advanced processor yet, designed for demanding enterprise workloads. 
+              Built with cutting-edge 7nm technology and featuring up to 128 cores, 
+              the MC-Pro X1 delivers unprecedented performance for data centers, 
+              cloud infrastructure, and AI applications.
+            </p>
+
+            {/* Features List */}
+            <div className="grid grid-cols-2 gap-3 mb-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={feature}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                  className="flex items-center space-x-2"
+                >
+                  <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">{feature}</span>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <button className="inline-flex items-center px-6 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors">
+              View System
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
