@@ -1,23 +1,30 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Download, X, FileText } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Download, X, FileText, Check } from 'lucide-react';
+import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function LeadGeneration() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
   });
+  const { t } = useLanguage();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
     console.log('Form submitted:', formData);
-    setIsModalOpen(false);
-    setFormData({ name: '', email: '', company: '' });
+    setIsSubmitted(true);
+    setTimeout(() => {
+      setIsModalOpen(false);
+      setIsSubmitted(false);
+      setFormData({ name: '', email: '', company: '' });
+    }, 2000);
   };
 
   return (
@@ -35,28 +42,21 @@ export default function LeadGeneration() {
             >
               <div className="flex items-center space-x-3 mb-4">
                 <FileText className="w-8 h-8 text-blue-300" />
-                <span className="text-blue-300 font-medium">Free Resource</span>
+                <span className="text-blue-300 font-medium">{t.lead.badge}</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                2026 Enterprise Hardware Selection Guide
+                {t.lead.title}
               </h2>
               <p className="text-lg text-blue-100 mb-6">
-                Comprehensive insights on choosing the right hardware infrastructure for your business. 
-                Includes performance benchmarks, TCO analysis, and implementation roadmaps.
+                {t.lead.description}
               </p>
               <ul className="space-y-2 text-blue-100">
-                <li className="flex items-center space-x-2">
-                  <span className="w-1.5 h-1.5 bg-blue-400 rounded-full" />
-                  <span>50+ pages of expert analysis</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-1.5 h-1.5 bg-blue-400 rounded-full" />
-                  <span>Industry-specific recommendations</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-1.5 h-1.5 bg-blue-400 rounded-full" />
-                  <span>2026 technology roadmap included</span>
-                </li>
+                {t.lead.benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-center space-x-2">
+                    <span className="w-1.5 h-1.5 bg-blue-400 rounded-full" />
+                    <span>{benefit}</span>
+                  </li>
+                ))}
               </ul>
             </motion.div>
 
@@ -70,10 +70,10 @@ export default function LeadGeneration() {
             >
               <div className="bg-white rounded-lg p-8 shadow-2xl">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Get Your Free Copy
+                  {t.lead.form.title}
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  Enter your details below and we&apos;ll send the guide to your inbox.
+                  {t.lead.form.subtitle}
                 </p>
                 
                 {/* Inline Form */}
@@ -81,7 +81,7 @@ export default function LeadGeneration() {
                   <div>
                     <input
                       type="text"
-                      placeholder="Full Name"
+                      placeholder={t.lead.form.name}
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -91,7 +91,7 @@ export default function LeadGeneration() {
                   <div>
                     <input
                       type="email"
-                      placeholder="Work Email"
+                      placeholder={t.lead.form.email}
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -103,12 +103,11 @@ export default function LeadGeneration() {
                     className="w-full flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     <Download className="w-5 h-5 mr-2" />
-                    Get the Guide
+                    {t.lead.form.cta}
                   </button>
                 </form>
-
-                <p className="text-xs text-gray-500 mt-4 text-center">
-                  We respect your privacy. Unsubscribe at any time.
+                <p className="mt-4 text-xs text-gray-500 text-center">
+                  {t.lead.form.privacy}
                 </p>
               </div>
             </motion.div>
@@ -117,50 +116,96 @@ export default function LeadGeneration() {
       </section>
 
       {/* Modal */}
-      {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
+      <AnimatePresence>
+        {isModalOpen && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            className="bg-white rounded-lg p-8 max-w-md w-full relative"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50"
+            onClick={() => setIsModalOpen(false)}
           >
-            <button
-              onClick={() => setIsModalOpen(false)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+              className="bg-white rounded-lg p-8 max-w-md w-full"
             >
-              <X className="w-6 h-6" />
-            </button>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Download Guide
-            </h3>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <input
-                type="text"
-                placeholder="Full Name"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-              <input
-                type="email"
-                placeholder="Work Email"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-              <button
-                type="submit"
-                className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Download Now
-              </button>
-            </form>
+              {isSubmitted ? (
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Check className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    Thank You!
+                  </h3>
+                  <p className="text-gray-600">
+                    Check your email for the guide.
+                  </p>
+                </div>
+              ) : (
+                <>
+                  <div className="flex items-center justify-between mb-6">
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      {t.lead.form.title}
+                    </h3>
+                    <button
+                      onClick={() => setIsModalOpen(false)}
+                      className="text-gray-400 hover:text-gray-600"
+                    >
+                      <X className="w-6 h-6" />
+                    </button>
+                  </div>
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        {t.lead.form.name}
+                      </label>
+                      <input
+                        type="text"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        {t.lead.form.email}
+                      </label>
+                      <input
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Company
+                      </label>
+                      <input
+                        type="text"
+                        value={formData.company}
+                        onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+                    >
+                      {t.lead.form.cta}
+                    </button>
+                  </form>
+                </>
+              )}
+            </motion.div>
           </motion.div>
-        </div>
-      )}
+        )}
+      </AnimatePresence>
     </>
   );
 }

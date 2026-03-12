@@ -2,17 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { Check, ArrowRight } from 'lucide-react';
-
-const features = [
-  '7nm Process Technology',
-  'Up to 128 Cores',
-  'DDR5 Memory Support',
-  'PCIe 5.0 Interface',
-  'Advanced Security Features',
-  'Energy Efficient Design',
-];
+import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function FeaturedProduct() {
+  const { t } = useLanguage();
+
   return (
     <section id="solutions" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,7 +32,7 @@ export default function FeaturedProduct() {
                 <div className="w-48 h-48 mx-auto bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg shadow-2xl flex items-center justify-center">
                   <span className="text-6xl font-bold text-white">MC</span>
                 </div>
-                <p className="mt-6 text-gray-400 text-sm">MC-Pro Series X1</p>
+                <p className="mt-6 text-gray-400 text-sm">{t.featured.title}</p>
               </div>
             </div>
           </motion.div>
@@ -51,21 +45,18 @@ export default function FeaturedProduct() {
             transition={{ duration: 0.6 }}
           >
             <span className="text-blue-600 font-semibold text-sm uppercase tracking-wide">
-              Flagship Product
+              {t.featured.badge}
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4">
-              MC-Pro Series X1
+              {t.featured.title}
             </h2>
             <p className="text-lg text-gray-600 mb-6">
-              Our most advanced processor yet, designed for demanding enterprise workloads. 
-              Built with cutting-edge 7nm technology and featuring up to 128 cores, 
-              the MC-Pro X1 delivers unprecedented performance for data centers, 
-              cloud infrastructure, and AI applications.
+              {t.featured.description}
             </p>
 
             {/* Features List */}
             <div className="grid grid-cols-2 gap-3 mb-8">
-              {features.map((feature, index) => (
+              {t.featured.features.map((feature, index) => (
                 <motion.div
                   key={feature}
                   initial={{ opacity: 0, y: 10 }}
@@ -82,7 +73,7 @@ export default function FeaturedProduct() {
 
             {/* CTA */}
             <button className="inline-flex items-center px-6 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors">
-              View System
+              {t.featured.cta}
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
           </motion.div>

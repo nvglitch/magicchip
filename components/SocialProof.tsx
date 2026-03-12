@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Quote, ArrowRight } from 'lucide-react';
+import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 const logos = [
   { name: 'TechCorp', initials: 'TC' },
@@ -15,6 +16,8 @@ const logos = [
 ];
 
 export default function SocialProof() {
+  const { t } = useLanguage();
+
   return (
     <section className="py-20 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,10 +30,10 @@ export default function SocialProof() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Trusted by Industry Leaders
+            {t.social.title}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Powering innovation at leading enterprises worldwide
+            {t.social.subtitle}
           </p>
         </motion.div>
 
@@ -78,16 +81,15 @@ export default function SocialProof() {
             <div>
               <Quote className="w-10 h-10 text-blue-600 mb-4" />
               <blockquote className="text-xl md:text-2xl text-gray-800 font-medium mb-6 leading-relaxed">
-                MagicChip&apos;s processors have transformed our data center operations. 
-                We&apos;ve seen a 40% improvement in processing speed while reducing energy consumption by 25%.
+                {t.social.quote}
               </blockquote>
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
                   JD
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900">John Davidson</p>
-                  <p className="text-gray-600 text-sm">CTO, TechCorp Industries</p>
+                  <p className="font-semibold text-gray-900">{t.social.author}</p>
+                  <p className="text-gray-600 text-sm">{t.social.role}</p>
                 </div>
               </div>
             </div>
@@ -96,30 +98,31 @@ export default function SocialProof() {
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-white rounded-lg p-6 shadow-sm">
                 <p className="text-3xl font-bold text-blue-600 mb-1">40%</p>
-                <p className="text-gray-600 text-sm">Performance Increase</p>
+                <p className="text-gray-600 text-sm">{t.social.stats.performance}</p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <p className="text-3xl font-bold text-green-600 mb-1">25%</p>
-                <p className="text-gray-600 text-sm">Energy Reduction</p>
+                <p className="text-3xl font-bold text-emerald-600 mb-1">25%</p>
+                <p className="text-gray-600 text-sm">{t.social.stats.energy}</p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm">
                 <p className="text-3xl font-bold text-purple-600 mb-1">99.9%</p>
-                <p className="text-gray-600 text-sm">Uptime Achieved</p>
+                <p className="text-gray-600 text-sm">{t.social.stats.uptime}</p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm">
                 <p className="text-3xl font-bold text-orange-600 mb-1">3x</p>
-                <p className="text-gray-600 text-sm">ROI in 18 months</p>
+                <p className="text-gray-600 text-sm">{t.social.stats.roi}</p>
               </div>
             </div>
           </div>
 
-          <div className="mt-8 pt-8 border-t border-gray-200">
+          {/* CTA */}
+          <div className="mt-8 text-center">
             <a
               href="#"
-              className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors"
+              className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
             >
-              Read the Case Study
-              <ArrowRight className="w-4 h-4 ml-2" />
+              {t.social.caseStudy}
+              <ArrowRight className="w-5 h-5 ml-2" />
             </a>
           </div>
         </motion.div>

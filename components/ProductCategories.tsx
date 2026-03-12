@@ -2,39 +2,42 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight, Cpu, Server, Shield, Zap } from 'lucide-react';
-
-const categories = [
-  {
-    id: 1,
-    title: 'Enterprise Processors',
-    description: 'High-performance CPUs designed for data centers and cloud computing infrastructure.',
-    icon: Cpu,
-    image: 'bg-gradient-to-br from-blue-600 to-blue-800',
-  },
-  {
-    id: 2,
-    title: 'AI Accelerators',
-    description: 'Specialized chips for machine learning and artificial intelligence workloads.',
-    icon: Zap,
-    image: 'bg-gradient-to-br from-purple-600 to-purple-800',
-  },
-  {
-    id: 3,
-    title: 'Network Solutions',
-    description: 'Advanced networking chips for high-speed connectivity and data transmission.',
-    icon: Server,
-    image: 'bg-gradient-to-br from-emerald-600 to-emerald-800',
-  },
-  {
-    id: 4,
-    title: 'Security Modules',
-    description: 'Hardware-based security solutions for enterprise-grade data protection.',
-    icon: Shield,
-    image: 'bg-gradient-to-br from-orange-600 to-orange-800',
-  },
-];
+import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function ProductCategories() {
+  const { t } = useLanguage();
+
+  const categories = [
+    {
+      id: 1,
+      title: t.products.categories.processors.title,
+      description: t.products.categories.processors.description,
+      icon: Cpu,
+      image: 'bg-gradient-to-br from-blue-600 to-blue-800',
+    },
+    {
+      id: 2,
+      title: t.products.categories.ai.title,
+      description: t.products.categories.ai.description,
+      icon: Zap,
+      image: 'bg-gradient-to-br from-purple-600 to-purple-800',
+    },
+    {
+      id: 3,
+      title: t.products.categories.network.title,
+      description: t.products.categories.network.description,
+      icon: Server,
+      image: 'bg-gradient-to-br from-emerald-600 to-emerald-800',
+    },
+    {
+      id: 4,
+      title: t.products.categories.security.title,
+      description: t.products.categories.security.description,
+      icon: Shield,
+      image: 'bg-gradient-to-br from-orange-600 to-orange-800',
+    },
+  ];
+
   return (
     <section id="products" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,10 +50,10 @@ export default function ProductCategories() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Product Categories
+            {t.products.title}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Discover our comprehensive range of cutting-edge hardware solutions designed for modern enterprises.
+            {t.products.subtitle}
           </p>
         </motion.div>
 
@@ -91,7 +94,7 @@ export default function ProductCategories() {
                   href="#"
                   className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors group/link"
                 >
-                  Learn More
+                  {t.products.learnMore}
                   <ArrowRight className="w-4 h-4 ml-2 transform group-hover/link:translate-x-1 transition-transform" />
                 </a>
               </div>

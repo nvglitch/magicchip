@@ -9,7 +9,7 @@ interface DropdownItem {
   title: string;
   description?: string;
   href: string;
-  icon?: React.ReactNode;
+  icon?: string;
 }
 
 interface NavItem {
@@ -25,37 +25,39 @@ export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const { t, language, setLanguage } = useLanguage();
 
-  // 虚构的下拉菜单内容
-  const dropdownContent: Record<string, DropdownItem[]> = {
+  // 多语言下拉菜单内容
+  const getDropdownContent = (): Record<string, DropdownItem[]> => ({
     products: [
-      { title: 'Enterprise CPUs', description: 'High-performance processors for data centers', href: '#', icon: '💻' },
-      { title: 'AI Accelerators', description: 'Specialized chips for ML workloads', href: '#', icon: '🤖' },
-      { title: 'Network Chips', description: 'Advanced connectivity solutions', href: '#', icon: '🌐' },
-      { title: 'Security Modules', description: 'Hardware-based data protection', href: '#', icon: '🔒' },
-      { title: 'View All Products', href: '#products' },
+      { title: t.navDropdown?.products?.enterpriseCPUs || 'Enterprise CPUs', description: t.navDropdown?.products?.enterpriseCPUsDesc || 'High-performance processors for data centers', href: '#', icon: '💻' },
+      { title: t.navDropdown?.products?.aiAccelerators || 'AI Accelerators', description: t.navDropdown?.products?.aiAcceleratorsDesc || 'Specialized chips for ML workloads', href: '#', icon: '🤖' },
+      { title: t.navDropdown?.products?.networkChips || 'Network Chips', description: t.navDropdown?.products?.networkChipsDesc || 'Advanced connectivity solutions', href: '#', icon: '🌐' },
+      { title: t.navDropdown?.products?.securityModules || 'Security Modules', description: t.navDropdown?.products?.securityModulesDesc || 'Hardware-based data protection', href: '#', icon: '🔒' },
+      { title: t.navDropdown?.products?.viewAll || 'View All Products', href: '#products' },
     ],
     solutions: [
-      { title: 'Data Center', description: 'Scalable infrastructure solutions', href: '#', icon: '🏢' },
-      { title: 'Cloud Computing', description: 'Flexible cloud architecture', href: '#', icon: '☁️' },
-      { title: 'Edge Computing', description: 'Low-latency edge processing', href: '#', icon: '⚡' },
-      { title: 'AI & Machine Learning', description: 'Intelligent computing platforms', href: '#', icon: '🧠' },
-      { title: 'View All Solutions', href: '#solutions' },
+      { title: t.navDropdown?.solutions?.dataCenter || 'Data Center', description: t.navDropdown?.solutions?.dataCenterDesc || 'Scalable infrastructure solutions', href: '#', icon: '🏢' },
+      { title: t.navDropdown?.solutions?.cloudComputing || 'Cloud Computing', description: t.navDropdown?.solutions?.cloudComputingDesc || 'Flexible cloud architecture', href: '#', icon: '☁️' },
+      { title: t.navDropdown?.solutions?.edgeComputing || 'Edge Computing', description: t.navDropdown?.solutions?.edgeComputingDesc || 'Low-latency edge processing', href: '#', icon: '⚡' },
+      { title: t.navDropdown?.solutions?.aiML || 'AI & Machine Learning', description: t.navDropdown?.solutions?.aiMLDesc || 'Intelligent computing platforms', href: '#', icon: '🧠' },
+      { title: t.navDropdown?.solutions?.viewAll || 'View All Solutions', href: '#solutions' },
     ],
     services: [
-      { title: 'Consulting', description: 'Expert architecture guidance', href: '#', icon: '💡' },
-      { title: 'Implementation', description: 'End-to-end deployment support', href: '#', icon: '🚀' },
-      { title: 'Training', description: 'Technical certification programs', href: '#', icon: '📚' },
-      { title: 'Support', description: '24/7 technical assistance', href: '#', icon: '🎧' },
-      { title: 'View All Services', href: '#services' },
+      { title: t.navDropdown?.services?.consulting || 'Consulting', description: t.navDropdown?.services?.consultingDesc || 'Expert architecture guidance', href: '#', icon: '💡' },
+      { title: t.navDropdown?.services?.implementation || 'Implementation', description: t.navDropdown?.services?.implementationDesc || 'End-to-end deployment support', href: '#', icon: '🚀' },
+      { title: t.navDropdown?.services?.training || 'Training', description: t.navDropdown?.services?.trainingDesc || 'Technical certification programs', href: '#', icon: '📚' },
+      { title: t.navDropdown?.services?.support || 'Support', description: t.navDropdown?.services?.supportDesc || '24/7 technical assistance', href: '#', icon: '🎧' },
+      { title: t.navDropdown?.services?.viewAll || 'View All Services', href: '#services' },
     ],
     about: [
-      { title: 'Our Story', description: 'Company history and mission', href: '#', icon: '📖' },
-      { title: 'Leadership', description: 'Meet our executive team', href: '#', icon: '👥' },
-      { title: 'Careers', description: 'Join our growing team', href: '#', icon: '🎯' },
-      { title: 'Press & Media', description: 'News and announcements', href: '#', icon: '📰' },
-      { title: 'Contact Us', href: '#about' },
+      { title: t.navDropdown?.about?.ourStory || 'Our Story', description: t.navDropdown?.about?.ourStoryDesc || 'Company history and mission', href: '#', icon: '📖' },
+      { title: t.navDropdown?.about?.leadership || 'Leadership', description: t.navDropdown?.about?.leadershipDesc || 'Meet our executive team', href: '#', icon: '👥' },
+      { title: t.navDropdown?.about?.careers || 'Careers', description: t.navDropdown?.about?.careersDesc || 'Join our growing team', href: '#', icon: '🎯' },
+      { title: t.navDropdown?.about?.press || 'Press & Media', description: t.navDropdown?.about?.pressDesc || 'News and announcements', href: '#', icon: '📰' },
+      { title: t.navDropdown?.about?.contactUs || 'Contact Us', href: '#about' },
     ],
-  };
+  });
+
+  const dropdownContent = getDropdownContent();
 
   const navItems: NavItem[] = [
     { label: t.nav.products, href: '#products', dropdown: dropdownContent.products },

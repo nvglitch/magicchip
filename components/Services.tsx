@@ -9,47 +9,50 @@ import {
   GraduationCap, 
   RefreshCw 
 } from 'lucide-react';
-
-const services = [
-  {
-    id: 1,
-    title: 'Strategic Consulting',
-    description: 'Expert guidance on hardware architecture and infrastructure planning tailored to your business needs.',
-    icon: Lightbulb,
-  },
-  {
-    id: 2,
-    title: 'Custom Engineering',
-    description: 'Bespoke chip design and optimization services for specialized applications and unique requirements.',
-    icon: Wrench,
-  },
-  {
-    id: 3,
-    title: 'Global Deployment',
-    description: 'End-to-end support for worldwide rollouts including logistics, installation, and configuration.',
-    icon: Globe,
-  },
-  {
-    id: 4,
-    title: '24/7 Technical Support',
-    description: 'Round-the-clock assistance from our team of certified engineers and technical specialists.',
-    icon: Headphones,
-  },
-  {
-    id: 5,
-    title: 'Training & Certification',
-    description: 'Comprehensive training programs to help your team maximize the potential of our solutions.',
-    icon: GraduationCap,
-  },
-  {
-    id: 6,
-    title: 'Lifecycle Management',
-    description: 'Continuous updates, maintenance, and upgrade paths to keep your systems at peak performance.',
-    icon: RefreshCw,
-  },
-];
+import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function Services() {
+  const { t } = useLanguage();
+
+  const services = [
+    {
+      id: 1,
+      title: t.services.items.consulting.title,
+      description: t.services.items.consulting.description,
+      icon: Lightbulb,
+    },
+    {
+      id: 2,
+      title: t.services.items.engineering.title,
+      description: t.services.items.engineering.description,
+      icon: Wrench,
+    },
+    {
+      id: 3,
+      title: t.services.items.deployment.title,
+      description: t.services.items.deployment.description,
+      icon: Globe,
+    },
+    {
+      id: 4,
+      title: t.services.items.support.title,
+      description: t.services.items.support.description,
+      icon: Headphones,
+    },
+    {
+      id: 5,
+      title: t.services.items.training.title,
+      description: t.services.items.training.description,
+      icon: GraduationCap,
+    },
+    {
+      id: 6,
+      title: t.services.items.lifecycle.title,
+      description: t.services.items.lifecycle.description,
+      icon: RefreshCw,
+    },
+  ];
+
   return (
     <section id="services" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,10 +65,10 @@ export default function Services() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Enterprise Services
+            {t.services.title}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive support and professional services to ensure your success at every stage
+            {t.services.subtitle}
           </p>
         </motion.div>
 
@@ -102,15 +105,15 @@ export default function Services() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mt-12"
         >
-          <p className="text-gray-600 mb-4">
-            Need a customized service package?
-          </p>
-          <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
-            Contact Our Team
+          <button className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+            {t.services.cta}
           </button>
+          <p className="mt-4 text-gray-600">
+            {t.services.customPackage}
+          </p>
         </motion.div>
       </div>
     </section>
