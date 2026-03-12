@@ -1,7 +1,31 @@
 'use client';
 
 import { useState } from 'react';
-import { Search, Globe, Menu, X, Check, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
+import { 
+  Search, 
+  Globe, 
+  Menu, 
+  X, 
+  Check, 
+  ChevronRight,
+  Cpu,
+  Brain,
+  Network,
+  Shield,
+  Server,
+  Cloud,
+  Zap,
+  Lightbulb,
+  Wrench,
+  GraduationCap,
+  HeadphonesIcon,
+  BookOpen,
+  Users,
+  Target,
+  Newspaper,
+  Mail
+} from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
@@ -9,7 +33,7 @@ interface DropdownItem {
   title: string;
   description?: string;
   href: string;
-  icon?: string;
+  icon?: React.ElementType;
 }
 
 interface NavItem {
@@ -25,35 +49,35 @@ export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const { t, language, setLanguage } = useLanguage();
 
-  // 多语言下拉菜单内容
+  // 多语言下拉菜单内容 - 使用专业图标
   const getDropdownContent = (): Record<string, DropdownItem[]> => ({
     products: [
-      { title: t.navDropdown?.products?.enterpriseCPUs || 'Enterprise CPUs', description: t.navDropdown?.products?.enterpriseCPUsDesc || 'High-performance processors for data centers', href: '#', icon: '💻' },
-      { title: t.navDropdown?.products?.aiAccelerators || 'AI Accelerators', description: t.navDropdown?.products?.aiAcceleratorsDesc || 'Specialized chips for ML workloads', href: '#', icon: '🤖' },
-      { title: t.navDropdown?.products?.networkChips || 'Network Chips', description: t.navDropdown?.products?.networkChipsDesc || 'Advanced connectivity solutions', href: '#', icon: '🌐' },
-      { title: t.navDropdown?.products?.securityModules || 'Security Modules', description: t.navDropdown?.products?.securityModulesDesc || 'Hardware-based data protection', href: '#', icon: '🔒' },
+      { title: t.navDropdown?.products?.enterpriseCPUs || 'Enterprise CPUs', description: t.navDropdown?.products?.enterpriseCPUsDesc || 'High-performance processors for data centers', href: '#', icon: Cpu },
+      { title: t.navDropdown?.products?.aiAccelerators || 'AI Accelerators', description: t.navDropdown?.products?.aiAcceleratorsDesc || 'Specialized chips for ML workloads', href: '#', icon: Brain },
+      { title: t.navDropdown?.products?.networkChips || 'Network Chips', description: t.navDropdown?.products?.networkChipsDesc || 'Advanced connectivity solutions', href: '#', icon: Network },
+      { title: t.navDropdown?.products?.securityModules || 'Security Modules', description: t.navDropdown?.products?.securityModulesDesc || 'Hardware-based data protection', href: '#', icon: Shield },
       { title: t.navDropdown?.products?.viewAll || 'View All Products', href: '#products' },
     ],
     solutions: [
-      { title: t.navDropdown?.solutions?.dataCenter || 'Data Center', description: t.navDropdown?.solutions?.dataCenterDesc || 'Scalable infrastructure solutions', href: '#', icon: '🏢' },
-      { title: t.navDropdown?.solutions?.cloudComputing || 'Cloud Computing', description: t.navDropdown?.solutions?.cloudComputingDesc || 'Flexible cloud architecture', href: '#', icon: '☁️' },
-      { title: t.navDropdown?.solutions?.edgeComputing || 'Edge Computing', description: t.navDropdown?.solutions?.edgeComputingDesc || 'Low-latency edge processing', href: '#', icon: '⚡' },
-      { title: t.navDropdown?.solutions?.aiML || 'AI & Machine Learning', description: t.navDropdown?.solutions?.aiMLDesc || 'Intelligent computing platforms', href: '#', icon: '🧠' },
+      { title: t.navDropdown?.solutions?.dataCenter || 'Data Center', description: t.navDropdown?.solutions?.dataCenterDesc || 'Scalable infrastructure solutions', href: '#', icon: Server },
+      { title: t.navDropdown?.solutions?.cloudComputing || 'Cloud Computing', description: t.navDropdown?.solutions?.cloudComputingDesc || 'Flexible cloud architecture', href: '#', icon: Cloud },
+      { title: t.navDropdown?.solutions?.edgeComputing || 'Edge Computing', description: t.navDropdown?.solutions?.edgeComputingDesc || 'Low-latency edge processing', href: '#', icon: Zap },
+      { title: t.navDropdown?.solutions?.aiML || 'AI & Machine Learning', description: t.navDropdown?.solutions?.aiMLDesc || 'Intelligent computing platforms', href: '#', icon: Brain },
       { title: t.navDropdown?.solutions?.viewAll || 'View All Solutions', href: '#solutions' },
     ],
     services: [
-      { title: t.navDropdown?.services?.consulting || 'Consulting', description: t.navDropdown?.services?.consultingDesc || 'Expert architecture guidance', href: '#', icon: '💡' },
-      { title: t.navDropdown?.services?.implementation || 'Implementation', description: t.navDropdown?.services?.implementationDesc || 'End-to-end deployment support', href: '#', icon: '🚀' },
-      { title: t.navDropdown?.services?.training || 'Training', description: t.navDropdown?.services?.trainingDesc || 'Technical certification programs', href: '#', icon: '📚' },
-      { title: t.navDropdown?.services?.support || 'Support', description: t.navDropdown?.services?.supportDesc || '24/7 technical assistance', href: '#', icon: '🎧' },
+      { title: t.navDropdown?.services?.consulting || 'Consulting', description: t.navDropdown?.services?.consultingDesc || 'Expert architecture guidance', href: '#', icon: Lightbulb },
+      { title: t.navDropdown?.services?.implementation || 'Implementation', description: t.navDropdown?.services?.implementationDesc || 'End-to-end deployment support', href: '#', icon: Wrench },
+      { title: t.navDropdown?.services?.training || 'Training', description: t.navDropdown?.services?.trainingDesc || 'Technical certification programs', href: '#', icon: GraduationCap },
+      { title: t.navDropdown?.services?.support || 'Support', description: t.navDropdown?.services?.supportDesc || '24/7 technical assistance', href: '#', icon: HeadphonesIcon },
       { title: t.navDropdown?.services?.viewAll || 'View All Services', href: '#services' },
     ],
     about: [
-      { title: t.navDropdown?.about?.ourStory || 'Our Story', description: t.navDropdown?.about?.ourStoryDesc || 'Company history and mission', href: '#', icon: '📖' },
-      { title: t.navDropdown?.about?.leadership || 'Leadership', description: t.navDropdown?.about?.leadershipDesc || 'Meet our executive team', href: '#', icon: '👥' },
-      { title: t.navDropdown?.about?.careers || 'Careers', description: t.navDropdown?.about?.careersDesc || 'Join our growing team', href: '#', icon: '🎯' },
-      { title: t.navDropdown?.about?.press || 'Press & Media', description: t.navDropdown?.about?.pressDesc || 'News and announcements', href: '#', icon: '📰' },
-      { title: t.navDropdown?.about?.contactUs || 'Contact Us', href: '#about' },
+      { title: t.navDropdown?.about?.ourStory || 'Our Story', description: t.navDropdown?.about?.ourStoryDesc || 'Company history and mission', href: '#', icon: BookOpen },
+      { title: t.navDropdown?.about?.leadership || 'Leadership', description: t.navDropdown?.about?.leadershipDesc || 'Meet our executive team', href: '#', icon: Users },
+      { title: t.navDropdown?.about?.careers || 'Careers', description: t.navDropdown?.about?.careersDesc || 'Join our growing team', href: '#', icon: Target },
+      { title: t.navDropdown?.about?.press || 'Press & Media', description: t.navDropdown?.about?.pressDesc || 'News and announcements', href: '#', icon: Newspaper },
+      { title: t.navDropdown?.about?.contactUs || 'Contact Us', href: '#about', icon: Mail },
     ],
   });
 
@@ -76,9 +100,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center space-x-2 text-xl font-bold text-gray-900 hover:text-gray-700 transition-colors">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg"></div>
-            <span>MagicChip</span>
+          <a href="#" className="flex items-center h-8">
+            <Image 
+              src="/logo.png" 
+              alt="MagicChip" 
+              width={120} 
+              height={32} 
+              className="h-8 w-auto object-contain"
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -122,7 +151,9 @@ export default function Navbar() {
                           }`}
                         >
                           {dropdownItem.icon && (
-                            <span className="mr-3 text-lg">{dropdownItem.icon}</span>
+                            <div className="mr-3 w-5 h-5 flex items-center justify-center flex-shrink-0">
+                              <dropdownItem.icon className="w-5 h-5 text-gray-500" />
+                            </div>
                           )}
                           <div className="flex-1">
                             <div className="text-sm font-medium text-gray-900">
@@ -260,11 +291,11 @@ export default function Navbar() {
                         <a
                           key={index}
                           href={dropdownItem.href}
-                          className="block py-2 text-sm text-gray-600 hover:text-blue-600 transition-colors"
+                          className="flex items-center py-2 text-sm text-gray-600 hover:text-blue-600 transition-colors"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
                           {dropdownItem.icon && (
-                            <span className="mr-2">{dropdownItem.icon}</span>
+                            <dropdownItem.icon className="w-4 h-4 mr-2" />
                           )}
                           {dropdownItem.title}
                         </a>
