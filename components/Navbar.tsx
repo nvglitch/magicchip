@@ -1,21 +1,67 @@
 'use client';
 
 import { useState } from 'react';
-import { Search, Globe, Menu, X, Check } from 'lucide-react';
+import { Search, Globe, Menu, X, Check, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+
+interface DropdownItem {
+  title: string;
+  description?: string;
+  href: string;
+  icon?: React.ReactNode;
+}
+
+interface NavItem {
+  label: string;
+  href: string;
+  dropdown?: DropdownItem[];
+}
 
 export default function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const { t, language, setLanguage } = useLanguage();
 
-  const navLinks = [
-    { label: t.nav.products, href: '#products' },
-    { label: t.nav.solutions, href: '#solutions' },
-    { label: t.nav.services, href: '#services' },
-    { label: t.nav.aboutUs, href: '#about' },
+  // 虚构的下拉菜单内容
+  const dropdownContent: Record<string, DropdownItem[]> = {
+    products: [
+      { title: 'Enterprise CPUs', description: 'High-performance processors for data centers', href: '#', icon: '💻' },
+      { title: 'AI Accelerators', description: 'Specialized chips for ML workloads', href: '#', icon: '🤖' },
+      { title: 'Network Chips', description: 'Advanced connectivity solutions', href: '#', icon: '🌐' },
+      { title: 'Security Modules', description: 'Hardware-based data protection', href: '#', icon: '🔒' },
+      { title: 'View All Products', href: '#products' },
+    ],
+    solutions: [
+      { title: 'Data Center', description: 'Scalable infrastructure solutions', href: '#', icon: '🏢' },
+      { title: 'Cloud Computing', description: 'Flexible cloud architecture', href: '#', icon: '☁️' },
+      { title: 'Edge Computing', description: 'Low-latency edge processing', href: '#', icon: '⚡' },
+      { title: 'AI & Machine Learning', description: 'Intelligent computing platforms', href: '#', icon: '🧠' },
+      { title: 'View All Solutions', href: '#solutions' },
+    ],
+    services: [
+      { title: 'Consulting', description: 'Expert architecture guidance', href: '#', icon: '💡' },
+      { title: 'Implementation', description: 'End-to-end deployment support', href: '#', icon: '🚀' },
+      { title: 'Training', description: 'Technical certification programs', href: '#', icon: '📚' },
+      { title: 'Support', description: '24/7 technical assistance', href: '#', icon: '🎧' },
+      { title: 'View All Services', href: '#services' },
+    ],
+    about: [
+      { title: 'Our Story', description: 'Company history and mission', href: '#', icon: '📖' },
+      { title: 'Leadership', description: 'Meet our executive team', href: '#', icon: '👥' },
+      { title: 'Careers', description: 'Join our growing team', href: '#', icon: '🎯' },
+      { title: 'Press & Media', description: 'News and announcements', href: '#', icon: '📰' },
+      { title: 'Contact Us', href: '#about' },
+    ],
+  };
+
+  const navItems: NavItem[] = [
+    { label: t.nav.products, href: '#products', dropdown: dropdownContent.products },
+    { label: t.nav.solutions, href: '#solutions', dropdown: dropdownContent.solutions },
+    { label: t.nav.services, href: '#services', dropdown: dropdownContent.services },
+    { label: t.nav.aboutUs, href: '#about', dropdown: dropdownContent.about },
   ];
 
   const languages = [
@@ -34,15 +80,67 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-gray-700 hover:text-gray-900 font-medium transition-colors"
+          <div className="hidden md:flex items-center space-x-1">
+            {navItems.map((item) => (
+              <div
+                key={item.label}
+                className="relative"
+                onMouseEnter={() => item.dropdown && setActiveDropdown(item.label)}
+                onMouseLeave={() => setActiveDropdown(null)}
               >
-                {link.label}
-              </a>
+                <a
+                  href={item.href}
+                  className="group relative px-4 py-2 text-gray-700 hover:text-gray-900 font-medium transition-colors"
+                >
+                  <span className="relative">
+                    {item.label}
+                    {/* Hover underline effect */}
+                    <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full" />
+                  </span>
+                </a>
+
+                {/* Dropdown Menu */}
+                <AnimatePresence>
+                  {item.dropdown && activeDropdown === item.label && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute top-full left-0 mt-1 w-72 bg-white rounded-lg shadow-xl border border-gray-100 py-2 z-50"
+                    >
+                      {item.dropdown.map((dropdownItem, index) => (
+                        <a
+                          key={index}
+                          href={dropdownItem.href}
+                          className={`flex items-start px-4 py-3 transition-colors ${
+                            dropdownItem.description
+                              ? 'hover:bg-gray-50'
+                              : 'hover:bg-blue-50 text-blue-600 font-medium border-t border-gray-100 mt-2 pt-3'
+                          }`}
+                        >
+                          {dropdownItem.icon && (
+                            <span className="mr-3 text-lg">{dropdownItem.icon}</span>
+                          )}
+                          <div className="flex-1">
+                            <div className="text-sm font-medium text-gray-900">
+                              {dropdownItem.title}
+                            </div>
+                            {dropdownItem.description && (
+                              <div className="text-xs text-gray-500 mt-0.5">
+                                {dropdownItem.description}
+                              </div>
+                            )}
+                          </div>
+                          {!dropdownItem.description && (
+                            <ChevronRight className="w-4 h-4 ml-2 text-blue-600" />
+                          )}
+                        </a>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             ))}
           </div>
 
@@ -145,15 +243,33 @@ export default function Navbar() {
             className="md:hidden border-t border-gray-200 bg-white overflow-hidden"
           >
             <div className="px-4 py-4 space-y-3">
-              {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="block py-2 text-gray-700 hover:text-gray-900 font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
+              {navItems.map((item) => (
+                <div key={item.label} className="space-y-2">
+                  <a
+                    href={item.href}
+                    className="block py-2 text-gray-700 hover:text-gray-900 font-medium"
+                    onClick={() => !item.dropdown && setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                  {item.dropdown && (
+                    <div className="pl-4 space-y-1 border-l-2 border-gray-100">
+                      {item.dropdown.map((dropdownItem, index) => (
+                        <a
+                          key={index}
+                          href={dropdownItem.href}
+                          className="block py-2 text-sm text-gray-600 hover:text-blue-600 transition-colors"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {dropdownItem.icon && (
+                            <span className="mr-2">{dropdownItem.icon}</span>
+                          )}
+                          {dropdownItem.title}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
               <div className="pt-3 border-t border-gray-200">
                 <div className="text-sm font-semibold text-gray-500 mb-2">{t.language.title}</div>
