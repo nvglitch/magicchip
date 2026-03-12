@@ -13,18 +13,16 @@ import {
   Brain,
   Network,
   Shield,
-  Server,
-  Cloud,
-  Zap,
-  Lightbulb,
-  Wrench,
-  GraduationCap,
-  HeadphonesIcon,
+  Newspaper,
+  Download,
+  FileCode,
+  Phone,
+  MessageCircle,
+  Mail,
   BookOpen,
   Users,
   Target,
-  Newspaper,
-  Mail
+  Factory
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
@@ -56,28 +54,21 @@ export default function Navbar() {
       { title: t.navDropdown?.products?.aiAccelerators || 'AI Accelerators', description: t.navDropdown?.products?.aiAcceleratorsDesc || 'Specialized chips for ML workloads', href: '#', icon: Brain },
       { title: t.navDropdown?.products?.networkChips || 'Network Chips', description: t.navDropdown?.products?.networkChipsDesc || 'Advanced connectivity solutions', href: '#', icon: Network },
       { title: t.navDropdown?.products?.securityModules || 'Security Modules', description: t.navDropdown?.products?.securityModulesDesc || 'Hardware-based data protection', href: '#', icon: Shield },
-      { title: t.navDropdown?.products?.viewAll || 'View All Products', href: '#products' },
     ],
-    solutions: [
-      { title: t.navDropdown?.solutions?.dataCenter || 'Data Center', description: t.navDropdown?.solutions?.dataCenterDesc || 'Scalable infrastructure solutions', href: '#', icon: Server },
-      { title: t.navDropdown?.solutions?.cloudComputing || 'Cloud Computing', description: t.navDropdown?.solutions?.cloudComputingDesc || 'Flexible cloud architecture', href: '#', icon: Cloud },
-      { title: t.navDropdown?.solutions?.edgeComputing || 'Edge Computing', description: t.navDropdown?.solutions?.edgeComputingDesc || 'Low-latency edge processing', href: '#', icon: Zap },
-      { title: t.navDropdown?.solutions?.aiML || 'AI & Machine Learning', description: t.navDropdown?.solutions?.aiMLDesc || 'Intelligent computing platforms', href: '#', icon: Brain },
-      { title: t.navDropdown?.solutions?.viewAll || 'View All Solutions', href: '#solutions' },
+    documents: [
+      { title: 'News', description: 'Latest updates and announcements', href: '#', icon: Newspaper },
+      { title: 'File Downloads', description: 'Brochures, whitepapers, and resources', href: '#', icon: Download },
+      { title: 'Tech Document', description: 'Technical specifications and manuals', href: '#', icon: FileCode },
     ],
-    services: [
-      { title: t.navDropdown?.services?.consulting || 'Consulting', description: t.navDropdown?.services?.consultingDesc || 'Expert architecture guidance', href: '#', icon: Lightbulb },
-      { title: t.navDropdown?.services?.implementation || 'Implementation', description: t.navDropdown?.services?.implementationDesc || 'End-to-end deployment support', href: '#', icon: Wrench },
-      { title: t.navDropdown?.services?.training || 'Training', description: t.navDropdown?.services?.trainingDesc || 'Technical certification programs', href: '#', icon: GraduationCap },
-      { title: t.navDropdown?.services?.support || 'Support', description: t.navDropdown?.services?.supportDesc || '24/7 technical assistance', href: '#', icon: HeadphonesIcon },
-      { title: t.navDropdown?.services?.viewAll || 'View All Services', href: '#services' },
+    contact: [
+      { title: 'Email', description: 'Send us an email', href: 'mailto:info@magicchip.com', icon: Mail },
+      { title: 'Phone', description: 'Call our sales team', href: 'tel:+1234567890', icon: Phone },
+      { title: 'WhatsApp', description: 'Chat with us on WhatsApp', href: 'https://wa.me/1234567890', icon: MessageCircle },
     ],
     about: [
-      { title: t.navDropdown?.about?.ourStory || 'Our Story', description: t.navDropdown?.about?.ourStoryDesc || 'Company history and mission', href: '#', icon: BookOpen },
+      { title: 'Our Company', description: 'Company history and mission', href: '#', icon: BookOpen },
+      { title: 'Our Factory', description: 'Manufacturing facilities and capabilities', href: '#', icon: Factory },
       { title: t.navDropdown?.about?.leadership || 'Leadership', description: t.navDropdown?.about?.leadershipDesc || 'Meet our executive team', href: '#', icon: Users },
-      { title: t.navDropdown?.about?.careers || 'Careers', description: t.navDropdown?.about?.careersDesc || 'Join our growing team', href: '#', icon: Target },
-      { title: t.navDropdown?.about?.press || 'Press & Media', description: t.navDropdown?.about?.pressDesc || 'News and announcements', href: '#', icon: Newspaper },
-      { title: t.navDropdown?.about?.contactUs || 'Contact Us', href: '#about', icon: Mail },
     ],
   });
 
@@ -85,8 +76,8 @@ export default function Navbar() {
 
   const navItems: NavItem[] = [
     { label: t.nav.products, href: '#products', dropdown: dropdownContent.products },
-    { label: t.nav.solutions, href: '#solutions', dropdown: dropdownContent.solutions },
-    { label: t.nav.services, href: '#services', dropdown: dropdownContent.services },
+    { label: 'Documents', href: '#documents', dropdown: dropdownContent.documents },
+    { label: 'Contact', href: '#contact', dropdown: dropdownContent.contact },
     { label: t.nav.aboutUs, href: '#about', dropdown: dropdownContent.about },
   ];
 
