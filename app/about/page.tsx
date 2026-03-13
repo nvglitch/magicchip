@@ -34,7 +34,7 @@ const aboutData = {
         ]
       },
       {
-        title: 'Leadership Team',
+        title: 'Member Team',
         description: 'Meet our executive team driving innovation and growth in the semiconductor industry',
         icon: Users,
         href: '/leadership',

@@ -226,7 +226,7 @@ export default function ContactSection() {
                 <li>
                   <a href="/leadership" className="flex items-center hover:text-blue-200 transition-colors">
                     <ChevronRight className="w-4 h-4 mr-2" />
-                    {language === 'en' ? 'Leadership' : '领导团队'}
+                    {language === 'en' ? 'Member Team' : '团队成员'}
                   </a>
                 </li>
               </ul>

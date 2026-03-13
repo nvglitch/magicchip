@@ -7,7 +7,7 @@ import { Linkedin, Mail, Globe } from 'lucide-react';
 const leadershipData = {
   en: {
     hero: {
-      title: 'Leadership',
+      title: 'Member Team',
       subtitle: 'Meet the team driving innovation in enterprise hardware'
     },
     description: 'Our leadership team brings decades of experience in semiconductor industry, combining technical expertise with business acumen to guide MagicChip\'s continued growth and innovation.',
@@ -73,7 +73,7 @@ const leadershipData = {
   },
   zh: {
     hero: {
-      title: '领导团队',
+      title: '团队成员',
       subtitle: '认识推动企业硬件创新的团队'
     },
     description: '我们的领导团队拥有数十年的半导体行业经验，将技术专长与商业智慧相结合，引领MagicChip持续成长与创新。',

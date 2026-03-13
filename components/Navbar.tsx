@@ -68,7 +68,7 @@ export default function Navbar() {
     about: [
       { title: 'Our Company', description: 'Company history and mission', href: '/company', icon: BookOpen },
       { title: 'Our Factory', description: 'Manufacturing facilities and capabilities', href: '/factory', icon: Factory },
-      { title: t.navDropdown?.about?.leadership || 'Leadership', description: t.navDropdown?.about?.leadershipDesc || 'Meet our executive team', href: '/leadership', icon: Users },
+      { title: t.navDropdown?.about?.leadership || 'Member Team', description: t.navDropdown?.about?.leadershipDesc || 'Meet our team members', href: '/leadership', icon: Users },
     ],
   });
 
