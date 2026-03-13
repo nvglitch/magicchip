@@ -7,16 +7,16 @@ export default function Footer() {
 
   const footerLinks = {
     about: [
-      { label: t.footer.about[0], href: '/company' },
-      { label: t.footer.about[1], href: '/factory' },
-      { label: t.footer.about[2], href: '/leadership' },
-      { label: t.footer.about[3], href: '/news' },
+      { label: t.footer.about[0], href: '/company', key: 'about-0' },
+      { label: t.footer.about[1], href: '/factory', key: 'about-1' },
+      { label: t.footer.about[2], href: '/leadership', key: 'about-2' },
+      { label: t.footer.about[3], href: '/news', key: 'about-3' },
     ],
     support: [
-      { label: t.footer.support[0], href: '/tech-docs' },
-      { label: t.footer.support[1], href: '/downloads' },
-      { label: t.footer.support[2], href: '/contact' },
-      { label: t.footer.support[3], href: '#' },
+      { label: t.footer.support[0], href: '/tech-docs', key: 'support-0' },
+      { label: t.footer.support[1], href: '/downloads', key: 'support-1' },
+      { label: t.footer.support[2], href: '/contact', key: 'support-2' },
+      { label: t.footer.support[3], href: '#', key: 'support-3' },
     ],
     contact: t.footer.contact.map((label, index) => ({ 
       label, 
