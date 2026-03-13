@@ -72,7 +72,7 @@ export default function FeaturedProduct() {
             </div>
 
             {/* CTA */}
-            <button className="inline-flex items-center px-6 py-3 bg-gray-900 text-white font-semibold rounded-md hover:bg-gray-800 transition-colors">
+            <button className="inline-flex items-center px-6 py-3 border-2 border-gray-900 text-gray-900 font-semibold rounded-md hover:bg-gray-900 hover:text-white transition-colors">
               {t.featured.cta}
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
