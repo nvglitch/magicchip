@@ -1,46 +1,103 @@
 'use client';
 
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
-import { translations, Language, Translations } from './translations';
+import React, { createContext, useContext, useState, useCallback, ReactNode, useEffect } from 'react';
+import { Language, SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE, detectBrowserLanguage, isValidLanguage } from './config';
+import { TranslationSchema } from './types';
+import { en } from './locales/en';
+
+// Lazy load other languages
+const loadTranslation = async (lang: Language): Promise<TranslationSchema> => {
+  switch (lang) {
+    case 'en':
+      return en;
+    case 'fr':
+      return (await import('./locales/fr')).fr;
+    case 'de':
+      return (await import('./locales/de')).de;
+    case 'it':
+      return (await import('./locales/it')).it;
+    case 'es':
+      return (await import('./locales/es')).es;
+    default:
+      return en;
+  }
+};
 
 interface LanguageContextType {
   language: Language;
-  t: Translations;
+  t: TranslationSchema;
   setLanguage: (lang: Language) => void;
-  toggleLanguage: () => void;
+  isLoading: boolean;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+const STORAGE_KEY = 'magicchip-language';
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>('en');
+  const [language, setLanguageState] = useState<Language>(DEFAULT_LANGUAGE);
+  const [translations, setTranslations] = useState<TranslationSchema>(en);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const setLanguage = useCallback((lang: Language) => {
-    setLanguageState(lang);
-    // Optionally persist to localStorage
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('magicchip-language', lang);
-    }
-  }, []);
+  // Initialize language from localStorage or browser
+  useEffect(() => {
+    const initLanguage = async () => {
+      if (typeof window === 'undefined') return;
 
-  const toggleLanguage = useCallback(() => {
-    setLanguage(language === 'en' ? 'zh' : 'en');
-  }, [language, setLanguage]);
+      let savedLang: Language = DEFAULT_LANGUAGE;
 
-  // Load from localStorage on mount
-  React.useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('magicchip-language') as Language;
-      if (saved && (saved === 'en' || saved === 'zh')) {
-        setLanguageState(saved);
+      // Try localStorage first
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored && isValidLanguage(stored)) {
+        savedLang = stored;
+      } else {
+        // Fallback to browser language detection
+        savedLang = detectBrowserLanguage();
       }
-    }
+
+      if (savedLang !== DEFAULT_LANGUAGE) {
+        setIsLoading(true);
+        const trans = await loadTranslation(savedLang);
+        setTranslations(trans);
+        setLanguageState(savedLang);
+        setIsLoading(false);
+      }
+    };
+
+    initLanguage();
   }, []);
 
-  const t = translations[language];
+  const setLanguage = useCallback(async (lang: Language) => {
+    if (!isValidLanguage(lang)) {
+      console.warn(`Invalid language: ${lang}, falling back to ${DEFAULT_LANGUAGE}`);
+      lang = DEFAULT_LANGUAGE;
+    }
+
+    setIsLoading(true);
+
+    try {
+      const trans = await loadTranslation(lang);
+      setTranslations(trans);
+      setLanguageState(lang);
+
+      // Persist to localStorage
+      if (typeof window !== 'undefined') {
+        localStorage.setItem(STORAGE_KEY, lang);
+        // Update HTML lang attribute for SEO
+        document.documentElement.lang = lang;
+      }
+    } catch (error) {
+      console.error(`Failed to load language ${lang}:`, error);
+      // Fallback to English on error
+      setTranslations(en);
+      setLanguageState(DEFAULT_LANGUAGE);
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
 
   return (
-    <LanguageContext.Provider value={{ language, t, setLanguage, toggleLanguage }}>
+    <LanguageContext.Provider value={{ language, t: translations, setLanguage, isLoading }}>
       {children}
     </LanguageContext.Provider>
   );

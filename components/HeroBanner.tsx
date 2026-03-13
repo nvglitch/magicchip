@@ -98,7 +98,7 @@ export default function HeroBanner() {
 
   return (
     <section className="relative w-full overflow-hidden bg-gray-900">
-      <div className="relative w-full aspect-[16/9] lg:aspect-video max-h-[80vh]">
+      <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-video min-h-[400px] sm:min-h-[500px] max-h-[80vh]">
         <AnimatePresence initial={false} custom={direction} mode="popLayout">
           <motion.div
             key={`bg-${currentSlide}`}
@@ -123,11 +123,11 @@ export default function HeroBanner() {
                   src={slides[currentSlide].image}
                   alt={slides[currentSlide].title}
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
                   sizes="100vw"
                   priority={currentSlide === 0}
                 />
-                <div className="absolute inset-0 bg-black/40 lg:bg-black/30" />
+                <div className="absolute inset-0 bg-black/50 sm:bg-black/40 lg:bg-black/30" />
               </div>
             ) : (
               <div className="absolute inset-0 bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-900">
@@ -156,13 +156,13 @@ export default function HeroBanner() {
                 transition={{ duration: 0.5, ease: 'easeOut' }}
                 className="max-w-2xl pointer-events-auto"
               >
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 lg:mb-6 leading-tight">
                   {slides[currentSlide].title}
                 </h1>
-                <p className="text-lg sm:text-xl text-gray-200 mb-8">
+                <p className="text-sm sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6 lg:mb-8 line-clamp-3 sm:line-clamp-none">
                   {slides[currentSlide].subtitle}
                 </p>
-                <button className="px-8 py-4 border-2 border-white text-white font-semibold rounded-md hover:bg-white/10 transition-colors">
+                <button className="px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 border-2 border-white text-white text-sm sm:text-base font-semibold rounded-md hover:bg-white/10 transition-colors">
                   {slides[currentSlide].cta}
                 </button>
               </motion.div>
@@ -170,30 +170,30 @@ export default function HeroBanner() {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-6 pointer-events-auto">
+        <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 sm:gap-4 lg:gap-6 pointer-events-auto">
           <button
             onClick={prevSlide}
-            className="p-2 text-white/70 hover:text-white transition-colors"
+            className="p-1.5 sm:p-2 text-white/70 hover:text-white transition-colors touch-manipulation"
             aria-label="Previous slide"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           <button
             onClick={() => setIsPlaying(!isPlaying)}
-            className="p-3 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors"
+            className="p-2 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors touch-manipulation"
             aria-label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}
           >
-            {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+            {isPlaying ? <Pause className="w-4 h-4 sm:w-5 sm:h-5" /> : <Play className="w-4 h-4 sm:w-5 sm:h-5" />}
           </button>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2">
             {slides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'w-8 bg-white' : 'w-2 bg-white/50 hover:bg-white/70'
+                className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 touch-manipulation ${
+                  index === currentSlide ? 'w-6 sm:w-8 bg-white' : 'w-1.5 sm:w-2 bg-white/50 hover:bg-white/70'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -202,10 +202,10 @@ export default function HeroBanner() {
 
           <button
             onClick={nextSlide}
-            className="p-2 text-white/70 hover:text-white transition-colors"
+            className="p-1.5 sm:p-2 text-white/70 hover:text-white transition-colors touch-manipulation"
             aria-label="Next slide"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
         </div>
 

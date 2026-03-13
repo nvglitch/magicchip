@@ -1,0 +1,205 @@
+import { TranslationSchema } from '../types';
+
+export const fr: TranslationSchema = {
+  nav: {
+    home: 'Accueil',
+    products: 'Produits',
+    solutions: 'Solutions',
+    services: 'Services',
+    aboutUs: 'À Propos',
+    searchPlaceholder: 'Rechercher des produits, solutions...',
+  },
+  navDropdown: {
+    products: {
+      enterpriseCPUs: 'Processeurs Entreprise',
+      enterpriseCPUsDesc: 'Processeurs haute performance pour centres de données',
+      aiAccelerators: 'Accélérateurs IA',
+      aiAcceleratorsDesc: 'Puces spécialisées pour charges de travail ML',
+      networkChips: 'Puces Réseau',
+      networkChipsDesc: 'Solutions de connectivité avancées',
+      securityModules: 'Modules de Sécurité',
+      securityModulesDesc: 'Protection des données basée sur le matériel',
+      viewAll: 'Voir Tous les Produits',
+    },
+    solutions: {
+      dataCenter: 'Centre de Données',
+      dataCenterDesc: 'Solutions d\'infrastructure évolutives',
+      cloudComputing: 'Cloud Computing',
+      cloudComputingDesc: 'Architecture cloud flexible',
+      edgeComputing: 'Edge Computing',
+      edgeComputingDesc: 'Traitement edge à faible latence',
+      aiML: 'IA et Machine Learning',
+      aiMLDesc: 'Plateformes de calcul intelligentes',
+      viewAll: 'Voir Toutes les Solutions',
+    },
+    services: {
+      consulting: 'Conseil',
+      consultingDesc: 'Conseils d\'experts en architecture',
+      implementation: 'Implémentation',
+      implementationDesc: 'Support de déploiement de bout en bout',
+      training: 'Formation',
+      trainingDesc: 'Programmes de certification technique',
+      support: 'Support',
+      supportDesc: 'Assistance technique 24/7',
+      viewAll: 'Voir Tous les Services',
+    },
+    about: {
+      ourStory: 'Notre Histoire',
+      ourStoryDesc: 'Histoire et mission de l\'entreprise',
+      leadership: 'Équipe Membre',
+      leadershipDesc: 'Rencontrez les membres de notre équipe',
+      careers: 'Carrières',
+      careersDesc: 'Rejoignez notre équipe en croissance',
+      press: 'Presse et Médias',
+      pressDesc: 'Actualités et annonces',
+      contactUs: 'Nous Contacter',
+    },
+  },
+  hero: {
+    slide1: {
+      title: 'Puissance de Traitement Nouvelle Génération',
+      subtitle: 'Architecture de puce révolutionnaire pour applications d\'entreprise',
+      cta: 'Explorer les Solutions',
+    },
+    slide2: {
+      title: 'Innovation Pilotée par l\'IA',
+      subtitle: 'Solutions matérielles intelligentes pour le centre de données moderne',
+      cta: 'Découvrir les Puces IA',
+    },
+    slide3: {
+      title: 'Technologie Durable',
+      subtitle: 'Haute performance avec conception économe en énergie',
+      cta: 'En Savoir Plus',
+    },
+    dragHint: 'Glisser pour naviguer',
+  },
+  products: {
+    title: 'Catégories de Produits',
+    subtitle: 'Découvrez notre gamme complète de solutions matérielles de pointe conçues pour les entreprises modernes.',
+    categories: {
+      processors: {
+        title: 'Processeurs Entreprise',
+        description: 'CPU haute performance conçus pour les centres de données et l\'infrastructure cloud.',
+      },
+      ai: {
+        title: 'Accélérateurs IA',
+        description: 'Puces spécialisées pour les charges de travail d\'apprentissage automatique et d\'intelligence artificielle.',
+      },
+      network: {
+        title: 'Solutions Réseau',
+        description: 'Puces réseau avancées pour connectivité haute vitesse et transmission de données.',
+      },
+      security: {
+        title: 'Modules de Sécurité',
+        description: 'Solutions de sécurité matérielles pour la protection des données de niveau entreprise.',
+      },
+    },
+    learnMore: 'En Savoir Plus',
+  },
+  featured: {
+    badge: 'Produit Phare',
+    title: 'Série MC-Pro X1',
+    description: 'Notre processeur le plus avancé à ce jour, conçu pour les charges de travail d\'entreprise exigeantes.',
+    features: [
+      'Technologie de Processus 7nm',
+      'Jusqu\'à 128 Cœurs',
+      'Support Mémoire DDR5',
+      'Interface PCIe 5.0',
+      'Fonctionnalités de Sécurité Avancées',
+      'Conception Économe en Énergie',
+    ],
+    cta: 'Voir le Système',
+  },
+  services: {
+    title: 'Services Entreprise',
+    subtitle: 'Support complet et services professionnels pour assurer votre succès à chaque étape',
+    items: {
+      consulting: {
+        title: 'Conseil Stratégique',
+        description: 'Conseils d\'experts sur l\'architecture matérielle et la planification d\'infrastructure.',
+      },
+      engineering: {
+        title: 'Ingénierie Personnalisée',
+        description: 'Services de conception et d\'optimisation de puces sur mesure.',
+      },
+      deployment: {
+        title: 'Déploiement Mondial',
+        description: 'Support de bout en bout pour les déploiements mondiaux.',
+      },
+      support: {
+        title: 'Support Technique 24/7',
+        description: 'Assistance 24h/24 de notre équipe d\'ingénieurs certifiés.',
+      },
+      training: {
+        title: 'Formation et Certification',
+        description: 'Programmes de formation complets pour votre équipe.',
+      },
+      lifecycle: {
+        title: 'Gestion du Cycle de Vie',
+        description: 'Mises à jour continues et chemins de mise à niveau.',
+      },
+    },
+    cta: 'Contacter Notre Équipe',
+    customPackage: 'Besoin d\'un forfait de services personnalisé?',
+  },
+  social: {
+    title: 'Approuvé par les Leaders de l\'Industrie',
+    subtitle: 'Alimenter l\'innovation dans les entreprises leaders du monde entier',
+    quote: 'Les processeurs de MagicChip ont transformé nos opérations de centre de données.',
+    author: 'John Davidson',
+    role: 'CTO, TechCorp Industries',
+    stats: {
+      performance: 'Augmentation des Performances',
+      energy: 'Réduction d\'Énergie',
+      uptime: 'Disponibilité Atteinte',
+      roi: 'ROI en 18 mois',
+    },
+    caseStudy: 'Lire l\'Étude de Cas',
+  },
+  lead: {
+    badge: 'Ressource Gratuite',
+    title: 'Guide de Sélection du Matériel d\'Entreprise 2026',
+    description: 'Informations complètes sur le choix de la bonne infrastructure matérielle.',
+    benefits: [
+      'Plus de 50 pages d\'analyse d\'experts',
+      'Recommandations spécifiques à l\'industrie',
+      'Feuille de route technologique 2026 incluse',
+    ],
+    form: {
+      title: 'Obtenez Votre Copie Gratuite',
+      subtitle: 'Entrez vos coordonnées ci-dessous.',
+      name: 'Nom Complet',
+      email: 'Email Professionnel',
+      cta: 'Obtenir le Guide',
+      privacy: 'Nous respectons votre vie privée.',
+    },
+  },
+  footer: {
+    newsletter: {
+      title: 'Restez Informé',
+      subtitle: 'Recevez les dernières actualités produits.',
+      placeholder: 'Entrez votre email',
+      button: 'S\'abonner',
+    },
+    links: {
+      about: 'À Propos',
+      support: 'Support',
+      contact: 'Contact',
+    },
+    about: ['Notre Entreprise', 'Notre Usine', 'Équipe Membre', 'Actualités'],
+    support: ['Documents Techniques', 'Téléchargements', 'Nous Contacter', 'Portail Support'],
+    contact: ['Email', 'Téléphone', 'WhatsApp'],
+    copyright: '© 2026 MagicChip. Tous droits réservés.',
+    privacy: 'Confidentialité',
+    terms: 'Conditions',
+  },
+  language: {
+    title: 'Langue',
+    en: 'English',
+    fr: 'Français',
+    de: 'Deutsch',
+    it: 'Italiano',
+    es: 'Español',
+  },
+};
+

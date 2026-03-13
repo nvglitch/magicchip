@@ -211,7 +211,8 @@ const downloadsData = {
 
 export default function DownloadsPage() {
   const { language } = useLanguage();
-  const data = downloadsData[language];
+  const dataLanguage = (downloadsData as any)[language] ? language : 'en';
+  const data = (downloadsData as any)[dataLanguage];
   const pageTitle = language === 'en' ? 'File Downloads' : '文件下载';
   const pageSubtitle = language === 'en'
     ? 'Access brochures, whitepapers, datasheets, and other resources'
@@ -239,7 +240,7 @@ export default function DownloadsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Category Filter */}
             <div className="flex flex-wrap gap-3 mb-10">
-              {data.categories.map((category, index) => (
+              {data.categories.map((category: any, index: number) => (
                 <motion.button
                   key={category.id}
                   initial={{ opacity: 0, y: 10 }}
@@ -277,7 +278,7 @@ export default function DownloadsPage() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-100">
-                    {data.items.map((item, index) => (
+                    {data.items.map((item: any, index: number) => (
                       <motion.tr
                         key={item.id}
                         initial={{ opacity: 0 }}
@@ -293,7 +294,7 @@ export default function DownloadsPage() {
                         </td>
                         <td className="px-6 py-4">
                           <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                            {data.categories.find(c => c.id === item.category)?.name}
+                            {data.categories.find((c: any) => c.id === item.category)?.name}
                           </span>
                         </td>
                         <td className="px-6 py-4 text-sm text-gray-600">{item.format}</td>

@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "translate": "node scripts/ai-translate.js",
+    "translate:quick": "node scripts/quick-translate.js",
+    "translate:validate": "node scripts/validate-translations.js"
   },
   "dependencies": {
     "framer-motion": "^12.35.2",

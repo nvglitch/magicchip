@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for file:*)",
+      "Bash(do echo:*)",
+      "Read(//d/Desktop/NVG 临时文件/NVG项目三月/magicchip/**)",
+      "Bash(done)",
+      "Bash(cd \"D:\\\\Desktop\\\\NVG 临时文件\\\\NVG项目三月\\\\magicchip\" && npm run build 2>&1 | head -100)",
+      "Bash(cd \"D:\\\\Desktop\\\\NVG 临时文件\\\\NVG项目三月\\\\magicchip\" && npm run build 2>&1 | grep -A 5 \"Type error\" | head -30)",
+      "Bash(cd \"D:\\\\Desktop\\\\NVG 临时文件\\\\NVG项目三月\\\\magicchip\" && npm run build 2>&1 | grep \"Type error\" | head -10)",
+      "Bash(cd \"D:\\\\Desktop\\\\NVG 临时文件\\\\NVG项目三月\\\\magicchip\" && npm run build 2>&1 | grep -B 3 \"Type error\" | head -20)",
+      "Bash(cd \"D:\\\\Desktop\\\\NVG 临时文件\\\\NVG项目三月\\\\magicchip\" && npm run build 2>&1 | tail -50)",
+      "Bash(cd \"D:\\\\Desktop\\\\NVG 临时文件\\\\NVG项目三月\\\\magicchip\" && npm run build 2>&1 | tail -30)",
+      "Bash(cd \"D:\\\\Desktop\\\\NVG 临时文件\\\\NVG项目三月\\\\magicchip\" && npm run build 2>&1 | tail -20)",
+      "Bash(cd \"D:\\\\Desktop\\\\NVG 临时文件\\\\NVG项目三月\\\\magicchip\" && npm run build 2>&1 | tail -15)",
+      "Bash(cd \"D:\\\\Desktop\\\\NVG 临时文件\\\\NVG项目三月\\\\magicchip\" && npm run build 2>&1 | grep -E \"\\(✓|Failed|Error\\)\" | tail -10)",
+      "Bash(cd \"D:\\\\Desktop\\\\NVG 临时文件\\\\NVG项目三月\\\\magicchip\" && npm run build 2>&1 | grep -A 5 \"Type error\")",
+      "Bash(cd \"D:\\\\Desktop\\\\NVG 临时文件\\\\NVG项目三月\\\\magicchip\" && npm run build 2>&1 | tail -10)",
+      "Bash(cd \"D:\\\\Desktop\\\\NVG 临时文件\\\\NVG项目三月\\\\magicchip\" && npm run build 2>&1 | grep -E \"\\(✓ Compiled|Build completed|error\\)\" | tail -5)",
+      "Bash(cd \"D:\\\\Desktop\\\\NVG 临时文件\\\\NVG项目三月\\\\magicchip\" && ls -lh scripts/*.js scripts/*.md *.md | grep -E \"\\(translate|TRANSLATION|DELIVERY\\)\" | head -20)"
+    ]
+  }
+}

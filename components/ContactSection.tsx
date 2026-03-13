@@ -59,7 +59,8 @@ const contactData = {
 
 export default function ContactSection() {
   const { language } = useLanguage();
-  const data = contactData[language];
+  const dataLanguage = (contactData as any)[language] ? language : 'en';
+  const data = (contactData as any)[dataLanguage];
 
   return (
     <section id="contact" className="py-20 bg-white">
@@ -91,7 +92,7 @@ export default function ContactSection() {
             className="lg:col-span-1"
           >
             <div className="space-y-4">
-              {data.info.map((item, index) => (
+              {data.info.map((item: any, index: number) => (
                 <a
                   key={index}
                   href={item.href}
@@ -125,7 +126,7 @@ export default function ContactSection() {
                 {language === 'en' ? 'Global Offices' : '全球办公室'}
               </h4>
               <div className="grid grid-cols-2 gap-2">
-                {data.offices.map((office, index) => (
+                {data.offices.map((office: any, index: number) => (
                   <div key={index} className="text-sm">
                     <span className="font-medium text-gray-900">{office.city}</span>
                     <span className="text-gray-500"> - {office.address}</span>

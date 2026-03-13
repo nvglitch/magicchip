@@ -241,7 +241,8 @@ const techDocsData = {
 
 export default function TechDocsPage() {
   const { language } = useLanguage();
-  const data = techDocsData[language];
+  const dataLanguage = (techDocsData as any)[language] ? language : 'en';
+  const data = (techDocsData as any)[dataLanguage];
   const pageTitle = language === 'en' ? 'Technical Documentation' : '技术文档';
   const pageSubtitle = language === 'en'
     ? 'Comprehensive technical resources for developers and engineers'
@@ -268,7 +269,7 @@ export default function TechDocsPage() {
         <section className="py-12 bg-white border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-              {data.categories.map((category, index) => (
+              {data.categories.map((category: any, index: number) => (
                 <motion.a
                   key={category.id}
                   href={`#${category.id}`}
@@ -292,8 +293,8 @@ export default function TechDocsPage() {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="space-y-8">
-              {data.categories.map((category) => {
-                const categoryDocs = data.documents.filter(doc => doc.category === category.id);
+              {data.categories.map((category: any) => {
+                const categoryDocs = data.documents.filter((doc: any) => doc.category === category.id);
                 if (categoryDocs.length === 0) return null;
                 
                 return (
@@ -306,7 +307,7 @@ export default function TechDocsPage() {
                     </div>
                     
                     <div className="grid gap-4">
-                      {categoryDocs.map((doc, index) => (
+                      {categoryDocs.map((doc: any, index: number) => (
                         <motion.div
                           key={doc.id}
                           initial={{ opacity: 0, x: -20 }}

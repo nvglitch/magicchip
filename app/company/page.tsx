@@ -121,7 +121,9 @@ const companyData = {
 
 export default function CompanyPage() {
   const { language } = useLanguage();
-  const data = companyData[language];
+  // Fallback to English for languages that don't have translations yet
+  const dataLanguage = (companyData as any)[language] ? language : 'en';
+  const data = (companyData as any)[dataLanguage];
 
   return (
     <>
@@ -144,7 +146,7 @@ export default function CompanyPage() {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {data.stats.map((stat, index) => (
+              {data.stats.map((stat: any, index: number) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -199,7 +201,7 @@ export default function CompanyPage() {
               {language === 'en' ? 'Our Core Values' : '我们的核心价值观'}
             </h2>
             <div className="grid md:grid-cols-4 gap-8">
-              {data.values.map((value, index) => (
+              {data.values.map((value: any, index: number) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -225,7 +227,7 @@ export default function CompanyPage() {
             <div className="relative">
               <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-blue-200 hidden md:block" />
               <div className="space-y-12">
-                {data.timeline.map((item, index) => (
+                {data.timeline.map((item: any, index: number) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
@@ -254,7 +256,7 @@ export default function CompanyPage() {
               {language === 'en' ? 'Global Presence' : '全球布局'}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {data.locations.map((location, index) => (
+              {data.locations.map((location: any, index: number) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

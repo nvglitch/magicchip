@@ -117,7 +117,8 @@ const factoryData = {
 
 export default function FactoryPage() {
   const { language } = useLanguage();
-  const data = factoryData[language];
+  const dataLanguage = (factoryData as any)[language] ? language : 'en';
+  const data = (factoryData as any)[dataLanguage];
 
   return (
     <>
@@ -155,7 +156,7 @@ export default function FactoryPage() {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {data.stats.map((stat, index) => (
+              {data.stats.map((stat: any, index: number) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -178,7 +179,7 @@ export default function FactoryPage() {
               {language === 'en' ? 'Our Facilities' : '我们的设施'}
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              {data.facilities.map((facility, index) => (
+              {data.facilities.map((facility: any, index: number) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -197,7 +198,7 @@ export default function FactoryPage() {
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">{facility.title}</h3>
                     <p className="text-gray-600 text-sm mb-4">{facility.description}</p>
                     <ul className="space-y-2">
-                      {facility.features.map((feature, idx) => (
+                      {facility.features.map((feature: any, idx: number) => (
                         <li key={idx} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="w-4 h-4 text-blue-600 mr-2" />
                           {feature}
@@ -223,7 +224,7 @@ export default function FactoryPage() {
                 : '我们的设施保持最高的行业标准和认证'}
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {data.certifications.map((cert, index) => (
+              {data.certifications.map((cert: any, index: number) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -255,7 +256,7 @@ export default function FactoryPage() {
                 </div>
                 <p className="text-green-100 mb-6 text-lg">{data.sustainability.content}</p>
                 <ul className="space-y-3">
-                  {data.sustainability.highlights.map((highlight, index) => (
+                  {data.sustainability.highlights.map((highlight: any, index: number) => (
                     <li key={index} className="flex items-center">
                       <CheckCircle className="w-5 h-5 mr-3 text-green-300" />
                       <span>{highlight}</span>

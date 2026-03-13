@@ -22,6 +22,12 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  overflow-x: hidden;
+  min-width: 320px;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 /* Smooth scrolling */
@@ -51,4 +57,17 @@ html {
 ::selection {
   background: rgba(37, 99, 235, 0.2);
   color: inherit;
+}
+
+/* iPad Air and similar tablet optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav .nav-item {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  nav .nav-item {
+    font-size: 0.8125rem;
+  }
 }

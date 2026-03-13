@@ -121,7 +121,8 @@ const contactData = {
 
 export default function ContactPage() {
   const { language } = useLanguage();
-  const data = contactData[language];
+  const dataLanguage = (contactData as any)[language] ? language : 'en';
+  const data = (contactData as any)[dataLanguage];
 
   return (
     <>
@@ -144,7 +145,7 @@ export default function ContactPage() {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {data.info.map((item, index) => (
+              {data.info.map((item: any, index: number) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -258,7 +259,7 @@ export default function ContactPage() {
                 >
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">{data.global.title}</h2>
                   <div className="grid md:grid-cols-2 gap-4">
-                    {data.global.offices.map((office, index) => (
+                    {data.global.offices.map((office: any, index: number) => (
                       <div key={index} className="flex items-start p-4 bg-gray-50 rounded-md">
                         <MapPin className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
                         <div>

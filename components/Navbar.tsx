@@ -26,6 +26,7 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { LANGUAGE_NAMES, SUPPORTED_LANGUAGES } from '@/lib/i18n/config';
 
 interface DropdownItem {
   title: string;
@@ -82,28 +83,30 @@ export default function Navbar() {
     { label: t.nav.aboutUs, href: '/about', dropdown: dropdownContent.about },
   ];
 
-  const languages = [
-    { code: 'en' as const, label: t.language.en },
-    { code: 'zh' as const, label: t.language.zh },
-  ];
+  const languages = SUPPORTED_LANGUAGES.map(code => ({
+    code,
+    label: LANGUAGE_NAMES[code].native,
+    flag: LANGUAGE_NAMES[code].flag,
+  }));
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <div className="w-full max-w-7xl mx-auto px-3 md:px-4 lg:px-6 xl:px-8">
+        <div className="flex items-center justify-between h-16 gap-2 md:gap-3 lg:gap-4">
           {/* Logo */}
-          <a href="/" className="flex items-center h-10">
-            <Image 
-              src="/logo.png" 
-              alt="MagicChip" 
-              width={150} 
-              height={40} 
-              className="h-10 w-auto object-contain"
+          <a href="/" className="flex items-center flex-shrink-0 h-10 min-w-0">
+            <Image
+              src="/logo.png"
+              alt="MagicChip"
+              width={150}
+              height={40}
+              className="h-7 md:h-8 lg:h-10 w-auto object-contain"
+              priority
             />
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-0 lg:space-x-1 flex-1 justify-center max-w-xl lg:max-w-3xl">
             {navItems.map((item) => (
               <div
                 key={item.label}
@@ -113,7 +116,7 @@ export default function Navbar() {
               >
                 <a
                   href={item.href}
-                  className="group relative px-4 py-2 text-gray-700 hover:text-gray-900 font-medium transition-colors"
+                  className="nav-item group relative px-2 lg:px-4 py-2 text-gray-700 hover:text-gray-900 font-medium transition-colors whitespace-nowrap text-sm lg:text-base"
                 >
                   <span className="relative">
                     {item.label}
@@ -170,11 +173,11 @@ export default function Navbar() {
           </div>
 
           {/* Toolbar */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center gap-1 md:gap-2 lg:gap-4 flex-shrink-0 ml-auto">
             {/* Search */}
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="p-2 text-gray-700 hover:text-gray-900 transition-colors"
+              className="p-1.5 md:p-2 text-gray-700 hover:text-gray-900 transition-colors touch-manipulation"
               aria-label="Search"
             >
               <Search className="w-5 h-5" />
@@ -182,12 +185,13 @@ export default function Navbar() {
 
             {/* Language/Region Dropdown */}
             <div className="relative">
-              <button 
+              <button
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-                className="hidden sm:flex items-center space-x-1 p-2 text-gray-700 hover:text-gray-900 transition-colors"
+                className="hidden sm:flex items-center gap-1 p-1.5 md:p-2 text-gray-700 hover:text-gray-900 transition-colors touch-manipulation"
+                aria-label="Change language"
               >
-                <Globe className="w-5 h-5" />
-                <span className="text-sm font-medium uppercase">{language}</span>
+                <Globe className="w-5 h-5 flex-shrink-0" />
+                <span className="text-xs md:text-sm font-medium uppercase">{language}</span>
               </button>
 
               {/* Language Dropdown Menu */}
@@ -198,9 +202,9 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute right-0 top-full mt-2 w-40 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50"
+                    className="absolute right-0 top-full mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50"
                   >
-                    <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase">
+                    <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase border-b border-gray-100">
                       {t.language.title}
                     </div>
                     {languages.map((lang) => (
@@ -210,11 +214,14 @@ export default function Navbar() {
                           setLanguage(lang.code);
                           setIsLangMenuOpen(false);
                         }}
-                        className="w-full flex items-center justify-between px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                        className="w-full flex items-center justify-between px-3 py-2.5 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
                       >
-                        <span>{lang.label}</span>
+                        <span className="flex items-center gap-2">
+                          <span className="text-lg">{lang.flag}</span>
+                          <span>{lang.label}</span>
+                        </span>
                         {language === lang.code && (
-                          <Check className="w-4 h-4 text-blue-600" />
+                          <Check className="w-4 h-4 text-blue-600 flex-shrink-0" />
                         )}
                       </button>
                     ))}
@@ -226,7 +233,7 @@ export default function Navbar() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 text-gray-700 hover:text-gray-900 transition-colors"
+              className="md:hidden p-1.5 md:p-2 text-gray-700 hover:text-gray-900 transition-colors touch-manipulation"
               aria-label="Menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -242,13 +249,13 @@ export default function Navbar() {
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="overflow-hidden"
+              className="overflow-hidden border-t border-gray-200"
             >
-              <div className="py-4">
+              <div className="py-3 sm:py-4">
                 <input
                   type="text"
                   placeholder={t.nav.searchPlaceholder}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
                   autoFocus
                 />
               </div>
@@ -265,31 +272,31 @@ export default function Navbar() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden border-t border-gray-200 bg-white overflow-hidden"
+            className="md:hidden border-t border-gray-200 bg-white overflow-hidden max-h-[calc(100vh-4rem)] overflow-y-auto"
           >
-            <div className="px-4 py-4 space-y-3">
+            <div className="px-3 sm:px-4 py-4 space-y-3">
               {navItems.map((item) => (
                 <div key={item.label} className="space-y-2">
                   <a
                     href={item.href}
-                    className="block py-2 text-gray-700 hover:text-gray-900 font-medium"
+                    className="block py-2 text-gray-700 hover:text-gray-900 font-medium touch-manipulation"
                     onClick={() => !item.dropdown && setIsMobileMenuOpen(false)}
                   >
                     {item.label}
                   </a>
                   {item.dropdown && (
-                    <div className="pl-4 space-y-1 border-l-2 border-gray-100">
+                    <div className="pl-3 sm:pl-4 space-y-1 border-l-2 border-gray-100">
                       {item.dropdown.map((dropdownItem, index) => (
                         <a
                           key={index}
                           href={dropdownItem.href}
-                          className="flex items-center py-2 text-sm text-gray-600 hover:text-blue-600 transition-colors"
+                          className="flex items-center py-2 text-sm text-gray-600 hover:text-blue-600 transition-colors touch-manipulation"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
                           {dropdownItem.icon && (
-                            <dropdownItem.icon className="w-4 h-4 mr-2" />
+                            <dropdownItem.icon className="w-4 h-4 mr-2 flex-shrink-0" />
                           )}
-                          {dropdownItem.title}
+                          <span className="truncate">{dropdownItem.title}</span>
                         </a>
                       ))}
                     </div>
@@ -306,14 +313,17 @@ export default function Navbar() {
                         setLanguage(lang.code);
                         setIsMobileMenuOpen(false);
                       }}
-                      className={`w-full flex items-center justify-between px-2 py-2 text-sm rounded-md transition-colors ${
-                        language === lang.code 
-                          ? 'bg-blue-50 text-blue-600' 
+                      className={`w-full flex items-center justify-between px-2 py-2.5 text-sm rounded-md transition-colors touch-manipulation ${
+                        language === lang.code
+                          ? 'bg-blue-50 text-blue-600'
                           : 'text-gray-700 hover:bg-gray-100'
                       }`}
                     >
-                      <span>{lang.label}</span>
-                      {language === lang.code && <Check className="w-4 h-4" />}
+                      <span className="flex items-center gap-2">
+                        <span className="text-lg">{lang.flag}</span>
+                        <span>{lang.label}</span>
+                      </span>
+                      {language === lang.code && <Check className="w-4 h-4 flex-shrink-0" />}
                     </button>
                   ))}
                 </div>

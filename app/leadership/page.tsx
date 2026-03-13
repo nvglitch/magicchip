@@ -141,7 +141,8 @@ const leadershipData = {
 
 export default function LeadershipPage() {
   const { language } = useLanguage();
-  const data = leadershipData[language];
+  const dataLanguage = (leadershipData as any)[language] ? language : 'en';
+  const data = (leadershipData as any)[dataLanguage];
 
   return (
     <>
@@ -181,7 +182,7 @@ export default function LeadershipPage() {
               {language === 'en' ? 'Executive Team' : '管理团队'}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {data.executives.map((exec, index) => (
+              {data.executives.map((exec: any, index: number) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -229,7 +230,7 @@ export default function LeadershipPage() {
             </h2>
             <div className="max-w-4xl mx-auto">
               <div className="grid md:grid-cols-2 gap-6">
-                {data.board.members.map((member, index) => (
+                {data.board.members.map((member: any, index: number) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
