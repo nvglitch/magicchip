@@ -75,6 +75,7 @@ export default function Navbar() {
   const dropdownContent = getDropdownContent();
 
   const navItems: NavItem[] = [
+    { label: t.nav.home, href: '/', dropdown: undefined },
     { label: t.nav.products, href: '/products', dropdown: dropdownContent.products },
     { label: 'Documents', href: '/documents', dropdown: dropdownContent.documents },
     { label: 'Contact', href: '/contact', dropdown: dropdownContent.contact },

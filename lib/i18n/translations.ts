@@ -2,6 +2,7 @@ export const translations = {
   en: {
     // Navigation
     nav: {
+      home: 'Home',
       products: 'Products',
       solutions: 'Solutions',
       services: 'Services',
@@ -210,6 +211,7 @@ export const translations = {
   zh: {
     // Navigation
     nav: {
+      home: '首页',
       products: '产品',
       solutions: '解决方案',
       services: '服务',
