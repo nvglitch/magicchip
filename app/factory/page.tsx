@@ -161,7 +161,7 @@ export default function FactoryPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center bg-white p-8 rounded-2xl shadow-sm"
+                  className="text-center bg-white p-8 rounded-md shadow-sm"
                 >
                   <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">{stat.value}</div>
                   <div className="text-gray-600">{stat.label}</div>
@@ -184,7 +184,7 @@ export default function FactoryPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-gray-50 rounded-2xl overflow-hidden"
+                  className="bg-gray-50 rounded-md overflow-hidden"
                 >
                   <div className="h-48 overflow-hidden">
                     <img 
@@ -229,7 +229,7 @@ export default function FactoryPage() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="bg-white p-6 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow"
+                  className="bg-white p-6 rounded-md text-center shadow-sm hover:shadow-md transition-shadow"
                 >
                   <Award className="w-8 h-8 text-blue-600 mx-auto mb-3" />
                   <div className="font-semibold text-gray-900">{cert.name}</div>
@@ -269,22 +269,22 @@ export default function FactoryPage() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="grid grid-cols-2 gap-4"
               >
-                <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
+                <div className="bg-white/10 backdrop-blur rounded-md p-6 text-center">
                   <Zap className="w-8 h-8 mx-auto mb-2" />
                   <div className="font-bold text-2xl">40%</div>
                   <div className="text-green-100 text-sm">{language === 'en' ? 'Energy Reduction' : '能耗降低'}</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
+                <div className="bg-white/10 backdrop-blur rounded-md p-6 text-center">
                   <Shield className="w-8 h-8 mx-auto mb-2" />
                   <div className="font-bold text-2xl">90%</div>
                   <div className="text-green-100 text-sm">{language === 'en' ? 'Water Recycled' : '水回收'}</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
+                <div className="bg-white/10 backdrop-blur rounded-md p-6 text-center">
                   <Factory className="w-8 h-8 mx-auto mb-2" />
                   <div className="font-bold text-2xl">0</div>
                   <div className="text-green-100 text-sm">{language === 'en' ? 'Waste to Landfill' : '垃圾填埋'}</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
+                <div className="bg-white/10 backdrop-blur rounded-md p-6 text-center">
                   <Leaf className="w-8 h-8 mx-auto mb-2" />
                   <div className="font-bold text-2xl">2030</div>
                   <div className="text-green-100 text-sm">{language === 'en' ? 'Carbon Neutral' : '碳中和'}</div>

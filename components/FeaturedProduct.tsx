@@ -19,7 +19,7 @@ export default function FeaturedProduct() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="aspect-square rounded-lg bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center relative overflow-hidden">
+            <div className="aspect-square rounded-md bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center relative overflow-hidden">
               {/* Decorative elements */}
               <div className="absolute inset-0 opacity-30">
                 <div className="absolute top-1/4 left-1/4 w-32 h-32 border border-blue-500/30 rounded-full" />
@@ -29,7 +29,7 @@ export default function FeaturedProduct() {
               
               {/* Product representation */}
               <div className="relative z-10 text-center">
-                <div className="w-48 h-48 mx-auto bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg shadow-2xl flex items-center justify-center">
+                <div className="w-48 h-48 mx-auto bg-gradient-to-br from-blue-600 to-purple-600 rounded-md shadow-2xl flex items-center justify-center">
                   <span className="text-6xl font-bold text-white">MC</span>
                 </div>
                 <p className="mt-6 text-gray-400 text-sm">{t.featured.title}</p>
@@ -72,7 +72,7 @@ export default function FeaturedProduct() {
             </div>
 
             {/* CTA */}
-            <button className="inline-flex items-center px-6 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors">
+            <button className="inline-flex items-center px-6 py-3 bg-gray-900 text-white font-semibold rounded-md hover:bg-gray-800 transition-colors">
               {t.featured.cta}
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>

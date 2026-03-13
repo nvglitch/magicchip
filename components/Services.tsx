@@ -82,10 +82,10 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className="bg-white rounded-lg p-6 shadow-sm hover:shadow-lg transition-all duration-300"
+              className="bg-white rounded-md p-6 shadow-sm hover:shadow-lg transition-all duration-300"
             >
               {/* Icon */}
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-blue-100 rounded-md flex items-center justify-center mb-4">
                 <service.icon className="w-6 h-6 text-blue-600" />
               </div>
 
@@ -108,7 +108,7 @@ export default function Services() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mt-12"
         >
-          <button className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+          <button className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors">
             {t.services.cta}
           </button>
           <p className="mt-4 text-gray-600">

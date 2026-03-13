@@ -95,9 +95,9 @@ export default function ContactSection() {
                 <a
                   key={index}
                   href={item.href}
-                  className="flex items-center p-4 bg-gray-50 rounded-xl hover:bg-blue-50 transition-colors group"
+                  className="flex items-center p-4 bg-gray-50 rounded-md hover:bg-blue-50 transition-colors group"
                 >
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-600 transition-colors">
+                  <div className="w-10 h-10 bg-blue-100 rounded-md flex items-center justify-center mr-4 group-hover:bg-blue-600 transition-colors">
                     <item.icon className="w-5 h-5 text-blue-600 group-hover:text-white" />
                   </div>
                   <div>
@@ -113,14 +113,14 @@ export default function ContactSection() {
               href="https://wa.me/1234567890"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center mt-6 p-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl hover:from-green-600 hover:to-green-700 transition-all"
+              className="flex items-center justify-center mt-6 p-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-md hover:from-green-600 hover:to-green-700 transition-all"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               <span className="font-medium">{data.whatsapp.button}</span>
             </a>
 
             {/* Global Offices */}
-            <div className="mt-6 p-4 bg-gray-50 rounded-xl">
+            <div className="mt-6 p-4 bg-gray-50 rounded-md">
               <h4 className="font-semibold text-gray-900 mb-3">
                 {language === 'en' ? 'Global Offices' : '全球办公室'}
               </h4>
@@ -143,7 +143,7 @@ export default function ContactSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-2"
           >
-            <div className="bg-gray-50 p-8 rounded-2xl">
+            <div className="bg-gray-50 p-8 rounded-md">
               <h3 className="text-xl font-bold text-gray-900 mb-6">{data.form.title}</h3>
               <form className="space-y-4">
                 <div className="grid md:grid-cols-2 gap-4">
@@ -151,14 +151,14 @@ export default function ContactSection() {
                     <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.name}</label>
                     <input 
                       type="text" 
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white"
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.email}</label>
                     <input 
                       type="email" 
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white"
                     />
                   </div>
                 </div>
@@ -166,12 +166,12 @@ export default function ContactSection() {
                   <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.message}</label>
                   <textarea 
                     rows={4}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white"
                   />
                 </div>
                 <button 
                   type="submit"
-                  className="w-full flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                  className="w-full flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors"
                 >
                   <Send className="w-5 h-5 mr-2" />
                   {data.form.button}
@@ -188,7 +188,7 @@ export default function ContactSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="lg:col-span-1"
           >
-            <div className="bg-gradient-to-br from-blue-900 to-blue-700 p-6 rounded-2xl text-white h-full">
+            <div className="bg-gradient-to-br from-blue-900 to-blue-700 p-6 rounded-md text-white h-full">
               <h3 className="text-lg font-bold mb-4">
                 {language === 'en' ? 'Quick Links' : '快速链接'}
               </h3>

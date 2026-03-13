@@ -74,7 +74,7 @@ export default function SocialProof() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-8 md:p-12"
+          className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-md p-8 md:p-12"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Quote */}
@@ -96,19 +96,19 @@ export default function SocialProof() {
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
-              <div className="bg-white rounded-lg p-6 shadow-sm">
+              <div className="bg-white rounded-md p-6 shadow-sm">
                 <p className="text-3xl font-bold text-blue-600 mb-1">40%</p>
                 <p className="text-gray-600 text-sm">{t.social.stats.performance}</p>
               </div>
-              <div className="bg-white rounded-lg p-6 shadow-sm">
+              <div className="bg-white rounded-md p-6 shadow-sm">
                 <p className="text-3xl font-bold text-emerald-600 mb-1">25%</p>
                 <p className="text-gray-600 text-sm">{t.social.stats.energy}</p>
               </div>
-              <div className="bg-white rounded-lg p-6 shadow-sm">
+              <div className="bg-white rounded-md p-6 shadow-sm">
                 <p className="text-3xl font-bold text-purple-600 mb-1">99.9%</p>
                 <p className="text-gray-600 text-sm">{t.social.stats.uptime}</p>
               </div>
-              <div className="bg-white rounded-lg p-6 shadow-sm">
+              <div className="bg-white rounded-md p-6 shadow-sm">
                 <p className="text-3xl font-bold text-orange-600 mb-1">3x</p>
                 <p className="text-gray-600 text-sm">{t.social.stats.roi}</p>
               </div>

@@ -68,7 +68,7 @@ export default function LeadGeneration() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="lg:w-1/2 w-full"
             >
-              <div className="bg-white rounded-lg p-8 shadow-2xl">
+              <div className="bg-white rounded-md p-8 shadow-2xl">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {t.lead.form.title}
                 </h3>
@@ -84,7 +84,7 @@ export default function LeadGeneration() {
                       placeholder={t.lead.form.name}
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       required
                     />
                   </div>
@@ -94,13 +94,13 @@ export default function LeadGeneration() {
                       placeholder={t.lead.form.email}
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       required
                     />
                   </div>
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+                    className="w-full flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors"
                   >
                     <Download className="w-5 h-5 mr-2" />
                     {t.lead.form.cta}
@@ -130,7 +130,7 @@ export default function LeadGeneration() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-lg p-8 max-w-md w-full"
+              className="bg-white rounded-md p-8 max-w-md w-full"
             >
               {isSubmitted ? (
                 <div className="text-center">
@@ -166,7 +166,7 @@ export default function LeadGeneration() {
                         type="text"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                         required
                       />
                     </div>
@@ -178,7 +178,7 @@ export default function LeadGeneration() {
                         type="email"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                         required
                       />
                     </div>
@@ -190,12 +190,12 @@ export default function LeadGeneration() {
                         type="text"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
                     </div>
                     <button
                       type="submit"
-                      className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+                      className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors"
                     >
                       {t.lead.form.cta}
                     </button>

@@ -147,7 +147,7 @@ export default function HeroBanner() {
               <p className="text-lg sm:text-xl text-gray-200 mb-8">
                 {slides[currentSlide].subtitle}
               </p>
-              <button className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+              <button className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-md hover:bg-gray-100 transition-colors">
                 {slides[currentSlide].cta}
               </button>
             </motion.div>

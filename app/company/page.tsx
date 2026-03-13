@@ -168,9 +168,9 @@ export default function CompanyPage() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                className="bg-white p-8 rounded-2xl shadow-sm"
+                className="bg-white p-8 rounded-md shadow-sm"
               >
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-md flex items-center justify-center mb-4">
                   <Target className="w-6 h-6 text-blue-600" />
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">{data.mission.title}</h2>
@@ -180,9 +180,9 @@ export default function CompanyPage() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white p-8 rounded-2xl shadow-sm"
+                className="bg-white p-8 rounded-md shadow-sm"
               >
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-md flex items-center justify-center mb-4">
                   <Eye className="w-6 h-6 text-blue-600" />
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">{data.vision.title}</h2>
@@ -260,7 +260,7 @@ export default function CompanyPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-gray-50 p-6 rounded-xl"
+                  className="bg-gray-50 p-6 rounded-md"
                 >
                   <MapPin className="w-6 h-6 text-blue-600 mb-3" />
                   <h3 className="font-semibold text-gray-900">{location.city}</h3>

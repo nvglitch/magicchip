@@ -275,9 +275,9 @@ export default function TechDocsPage() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="flex flex-col items-center p-6 bg-gray-50 rounded-xl hover:bg-blue-50 hover:shadow-md transition-all group"
+                  className="flex flex-col items-center p-6 bg-gray-50 rounded-md hover:bg-blue-50 hover:shadow-md transition-all group"
                 >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3 group-hover:bg-blue-600 transition-colors">
+                  <div className="w-12 h-12 bg-blue-100 rounded-md flex items-center justify-center mb-3 group-hover:bg-blue-600 transition-colors">
                     <category.icon className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors" />
                   </div>
                   <span className="font-medium text-gray-900 text-center">{category.name}</span>
@@ -299,7 +299,7 @@ export default function TechDocsPage() {
                 return (
                   <div key={category.id} id={category.id}>
                     <div className="flex items-center mb-6">
-                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                      <div className="w-10 h-10 bg-blue-100 rounded-md flex items-center justify-center mr-3">
                         <category.icon className="w-5 h-5 text-blue-600" />
                       </div>
                       <h2 className="text-2xl font-bold text-gray-900">{category.name}</h2>
@@ -312,7 +312,7 @@ export default function TechDocsPage() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.3, delay: index * 0.05 }}
-                          className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100"
+                          className="bg-white p-6 rounded-md shadow-sm hover:shadow-md transition-shadow border border-gray-100"
                         >
                           <div className="flex items-start justify-between">
                             <div className="flex-1">
@@ -328,7 +328,7 @@ export default function TechDocsPage() {
                             </div>
                             <a 
                               href="#"
-                              className="ml-4 flex items-center px-4 py-2 bg-gray-100 hover:bg-blue-600 hover:text-white rounded-lg transition-colors"
+                              className="ml-4 flex items-center px-4 py-2 bg-gray-100 hover:bg-blue-600 hover:text-white rounded-md transition-colors"
                             >
                               <ExternalLink className="w-4 h-4 mr-2" />
                               {language === 'en' ? 'View' : '查看'}

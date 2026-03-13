@@ -187,7 +187,7 @@ export default function LeadershipPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+                  className="bg-white rounded-md overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
                 >
                   <div className="h-64 overflow-hidden">
                     <img 
@@ -203,13 +203,13 @@ export default function LeadershipPage() {
                     <div className="flex items-center gap-4">
                       <a 
                         href={exec.linkedin}
-                        className="p-2 bg-gray-100 rounded-lg hover:bg-blue-100 transition-colors"
+                        className="p-2 bg-gray-100 rounded-md hover:bg-blue-100 transition-colors"
                       >
                         <Linkedin className="w-5 h-5 text-gray-600 hover:text-blue-600" />
                       </a>
                       <a 
                         href={`mailto:${exec.email}`}
-                        className="p-2 bg-gray-100 rounded-lg hover:bg-blue-100 transition-colors"
+                        className="p-2 bg-gray-100 rounded-md hover:bg-blue-100 transition-colors"
                       >
                         <Mail className="w-5 h-5 text-gray-600 hover:text-blue-600" />
                       </a>
@@ -235,7 +235,7 @@ export default function LeadershipPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-gray-50 p-6 rounded-xl"
+                    className="bg-gray-50 p-6 rounded-md"
                   >
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">{member.name}</h3>
                     <p className="text-gray-600 text-sm">{member.title}</p>

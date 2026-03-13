@@ -129,7 +129,7 @@ export default function Navbar() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-1 w-72 bg-white rounded-lg shadow-xl border border-gray-100 py-2 z-50"
+                      className="absolute top-full left-0 mt-1 w-72 bg-white rounded-md shadow-xl border border-gray-100 py-2 z-50"
                     >
                       {item.dropdown.map((dropdownItem, index) => (
                         <a
@@ -197,7 +197,7 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute right-0 top-full mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50"
+                    className="absolute right-0 top-full mt-2 w-40 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50"
                   >
                     <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase">
                       {t.language.title}
@@ -247,7 +247,7 @@ export default function Navbar() {
                 <input
                   type="text"
                   placeholder={t.nav.searchPlaceholder}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   autoFocus
                 />
               </div>
@@ -305,7 +305,7 @@ export default function Navbar() {
                         setLanguage(lang.code);
                         setIsMobileMenuOpen(false);
                       }}
-                      className={`w-full flex items-center justify-between px-2 py-2 text-sm rounded-lg transition-colors ${
+                      className={`w-full flex items-center justify-between px-2 py-2 text-sm rounded-md transition-colors ${
                         language === lang.code 
                           ? 'bg-blue-50 text-blue-600' 
                           : 'text-gray-700 hover:bg-gray-100'

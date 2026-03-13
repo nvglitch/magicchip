@@ -245,7 +245,7 @@ export default function DownloadsPage() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-lg hover:border-blue-500 hover:text-blue-600 transition-colors"
+                  className="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-md hover:border-blue-500 hover:text-blue-600 transition-colors"
                 >
                   <category.icon className="w-4 h-4 mr-2" />
                   {category.name}
@@ -254,7 +254,7 @@ export default function DownloadsPage() {
             </div>
 
             {/* Downloads Table */}
-            <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+            <div className="bg-white rounded-md shadow-sm overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead className="bg-gray-50 border-b border-gray-200">
@@ -299,7 +299,7 @@ export default function DownloadsPage() {
                         <td className="px-6 py-4 text-sm text-gray-600">{item.format}</td>
                         <td className="px-6 py-4 text-sm text-gray-600">{item.size}</td>
                         <td className="px-6 py-4 text-right">
-                          <button className="inline-flex items-center px-3 py-1.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors">
+                          <button className="inline-flex items-center px-3 py-1.5 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors">
                             <Download className="w-4 h-4 mr-2" />
                             {language === 'en' ? 'Download' : '下载'}
                           </button>

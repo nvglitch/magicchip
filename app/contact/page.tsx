@@ -173,7 +173,7 @@ export default function ContactPage() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                className="bg-white p-8 rounded-2xl shadow-sm"
+                className="bg-white p-8 rounded-md shadow-sm"
               >
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">{data.form.title}</h2>
                 <form className="space-y-4">
@@ -182,14 +182,14 @@ export default function ContactPage() {
                       <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.name}</label>
                       <input 
                         type="text" 
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.email}</label>
                       <input 
                         type="email" 
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       />
                     </div>
                   </div>
@@ -198,14 +198,14 @@ export default function ContactPage() {
                       <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.company}</label>
                       <input 
                         type="text" 
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.subject}</label>
                       <input 
                         type="text" 
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       />
                     </div>
                   </div>
@@ -213,12 +213,12 @@ export default function ContactPage() {
                     <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.message}</label>
                     <textarea 
                       rows={4}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     />
                   </div>
                   <button 
                     type="submit"
-                    className="w-full flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                    className="w-full flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors"
                   >
                     <Send className="w-5 h-5 mr-2" />
                     {data.form.submit}
@@ -233,7 +233,7 @@ export default function ContactPage() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-                  className="bg-gradient-to-r from-green-500 to-green-600 p-8 rounded-2xl text-white"
+                  className="bg-gradient-to-r from-green-500 to-green-600 p-8 rounded-md text-white"
                 >
                   <div className="flex items-center mb-4">
                     <MessageCircle className="w-8 h-8 mr-3" />
@@ -242,7 +242,7 @@ export default function ContactPage() {
                   <p className="text-green-100 mb-6">{data.whatsapp.description}</p>
                   <a 
                     href="https://wa.me/1234567890"
-                    className="inline-flex items-center px-6 py-3 bg-white text-green-600 font-medium rounded-lg hover:bg-green-50 transition-colors"
+                    className="inline-flex items-center px-6 py-3 bg-white text-green-600 font-medium rounded-md hover:bg-green-50 transition-colors"
                   >
                     <MessageSquare className="w-5 h-5 mr-2" />
                     {data.whatsapp.button}
@@ -254,12 +254,12 @@ export default function ContactPage() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
-                  className="bg-white p-8 rounded-2xl shadow-sm"
+                  className="bg-white p-8 rounded-md shadow-sm"
                 >
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">{data.global.title}</h2>
                   <div className="grid md:grid-cols-2 gap-4">
                     {data.global.offices.map((office, index) => (
-                      <div key={index} className="flex items-start p-4 bg-gray-50 rounded-xl">
+                      <div key={index} className="flex items-start p-4 bg-gray-50 rounded-md">
                         <MapPin className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
                         <div>
                           <div className="font-semibold text-gray-900">{office.city}</div>
