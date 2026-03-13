@@ -1,8 +1,6 @@
 'use client';
 
 import { useLanguage } from '@/lib/i18n/LanguageContext';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import { Factory, Shield, Zap, Leaf, Users, Award, CheckCircle, ArrowRight } from 'lucide-react';
 
@@ -123,7 +121,6 @@ export default function FactoryPage() {
 
   return (
     <>
-      <Navbar />
       <main className="pt-16 min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
@@ -297,7 +294,6 @@ export default function FactoryPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }
