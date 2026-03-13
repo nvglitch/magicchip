@@ -6,19 +6,21 @@ export default function Footer() {
   const { t } = useLanguage();
 
   const footerLinks = {
-    about: t.footer.about.map((label, index) => ({ 
-      label, 
-      href: '#',
-      key: `about-${index}`
-    })),
-    support: t.footer.support.map((label, index) => ({ 
-      label, 
-      href: '#',
-      key: `support-${index}`
-    })),
+    about: [
+      { label: t.footer.about[0], href: '/company' },
+      { label: t.footer.about[1], href: '/factory' },
+      { label: t.footer.about[2], href: '/leadership' },
+      { label: t.footer.about[3], href: '/news' },
+    ],
+    support: [
+      { label: t.footer.support[0], href: '/tech-docs' },
+      { label: t.footer.support[1], href: '/downloads' },
+      { label: t.footer.support[2], href: '/contact' },
+      { label: t.footer.support[3], href: '#' },
+    ],
     contact: t.footer.contact.map((label, index) => ({ 
       label, 
-      href: '#',
+      href: index === 0 ? '/contact' : index === 1 ? '#' : index === 2 ? '#' : '#',
       key: `contact-${index}`
     })),
   };

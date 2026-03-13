@@ -56,9 +56,9 @@ export default function Navbar() {
       { title: t.navDropdown?.products?.securityModules || 'Security Modules', description: t.navDropdown?.products?.securityModulesDesc || 'Hardware-based data protection', href: '#', icon: Shield },
     ],
     documents: [
-      { title: 'News', description: 'Latest updates and announcements', href: '#', icon: Newspaper },
-      { title: 'File Downloads', description: 'Brochures, whitepapers, and resources', href: '#', icon: Download },
-      { title: 'Tech Document', description: 'Technical specifications and manuals', href: '#', icon: FileCode },
+      { title: 'News', description: 'Latest updates and announcements', href: '/news', icon: Newspaper },
+      { title: 'File Downloads', description: 'Brochures, whitepapers, and resources', href: '/downloads', icon: Download },
+      { title: 'Tech Document', description: 'Technical specifications and manuals', href: '/tech-docs', icon: FileCode },
     ],
     contact: [
       { title: 'Email', description: 'Send us an email', href: 'mailto:info@magicchip.com', icon: Mail },
@@ -66,9 +66,9 @@ export default function Navbar() {
       { title: 'WhatsApp', description: 'Chat with us on WhatsApp', href: 'https://wa.me/1234567890', icon: MessageCircle },
     ],
     about: [
-      { title: 'Our Company', description: 'Company history and mission', href: '#', icon: BookOpen },
-      { title: 'Our Factory', description: 'Manufacturing facilities and capabilities', href: '#', icon: Factory },
-      { title: t.navDropdown?.about?.leadership || 'Leadership', description: t.navDropdown?.about?.leadershipDesc || 'Meet our executive team', href: '#', icon: Users },
+      { title: 'Our Company', description: 'Company history and mission', href: '/company', icon: BookOpen },
+      { title: 'Our Factory', description: 'Manufacturing facilities and capabilities', href: '/factory', icon: Factory },
+      { title: t.navDropdown?.about?.leadership || 'Leadership', description: t.navDropdown?.about?.leadershipDesc || 'Meet our executive team', href: '/leadership', icon: Users },
     ],
   });
 
@@ -76,9 +76,9 @@ export default function Navbar() {
 
   const navItems: NavItem[] = [
     { label: t.nav.products, href: '#products', dropdown: dropdownContent.products },
-    { label: 'Documents', href: '#documents', dropdown: dropdownContent.documents },
-    { label: 'Contact', href: '#contact', dropdown: dropdownContent.contact },
-    { label: t.nav.aboutUs, href: '#about', dropdown: dropdownContent.about },
+    { label: 'Documents', href: '/news', dropdown: dropdownContent.documents },
+    { label: 'Contact', href: '/contact', dropdown: dropdownContent.contact },
+    { label: t.nav.aboutUs, href: '/company', dropdown: dropdownContent.about },
   ];
 
   const languages = [
@@ -91,13 +91,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center h-8">
+          <a href="/" className="flex items-center h-10">
             <Image 
               src="/logo.png" 
               alt="MagicChip" 
-              width={120} 
-              height={32} 
-              className="h-8 w-auto object-contain"
+              width={150} 
+              height={40} 
+              className="h-10 w-auto object-contain"
             />
           </a>
 
