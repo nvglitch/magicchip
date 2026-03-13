@@ -75,10 +75,10 @@ export default function Navbar() {
   const dropdownContent = getDropdownContent();
 
   const navItems: NavItem[] = [
-    { label: t.nav.products, href: '#products', dropdown: dropdownContent.products },
-    { label: 'Documents', href: '/news', dropdown: dropdownContent.documents },
+    { label: t.nav.products, href: '/products', dropdown: dropdownContent.products },
+    { label: 'Documents', href: '/documents', dropdown: dropdownContent.documents },
     { label: 'Contact', href: '/contact', dropdown: dropdownContent.contact },
-    { label: t.nav.aboutUs, href: '/company', dropdown: dropdownContent.about },
+    { label: t.nav.aboutUs, href: '/about', dropdown: dropdownContent.about },
   ];
 
   const languages = [

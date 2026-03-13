@@ -1,13 +1,14 @@
 'use client';
 
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { Mail, Phone, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const footerLinks = {
     about: [
-      { label: t.footer.about[0], href: '/company', key: 'about-0' },
+      { label: t.footer.about[0], href: '/about', key: 'about-0' },
       { label: t.footer.about[1], href: '/factory', key: 'about-1' },
       { label: t.footer.about[2], href: '/leadership', key: 'about-2' },
       { label: t.footer.about[3], href: '/news', key: 'about-3' },
@@ -18,12 +19,13 @@ export default function Footer() {
       { label: t.footer.support[2], href: '/contact', key: 'support-2' },
       { label: t.footer.support[3], href: '#', key: 'support-3' },
     ],
-    contact: t.footer.contact.map((label, index) => ({ 
-      label, 
-      href: index === 0 ? '/contact' : index === 1 ? '#' : index === 2 ? '#' : '#',
-      key: `contact-${index}`
-    })),
   };
+
+  const contactLinks = [
+    { label: 'Email', zhLabel: '邮箱', href: 'mailto:info@magicchip.com', icon: Mail },
+    { label: 'Phone', zhLabel: '电话', href: 'tel:+1234567890', icon: Phone },
+    { label: 'WhatsApp', zhLabel: 'WhatsApp', href: 'https://wa.me/1234567890', icon: MessageCircle },
+  ];
 
   return (
     <footer className="bg-gray-900 text-gray-300">
@@ -79,10 +81,11 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">{t.footer.links.contact}</h4>
             <ul className="space-y-3">
-              {footerLinks.contact.map((link) => (
-                <li key={link.key}>
-                  <a href={link.href} className="hover:text-white transition-colors">
-                    {link.label}
+              {contactLinks.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="flex items-center hover:text-white transition-colors">
+                    <link.icon className="w-4 h-4 mr-2 flex-shrink-0" />
+                    {language === 'en' ? link.label : link.zhLabel}
                   </a>
                 </li>
               ))}
