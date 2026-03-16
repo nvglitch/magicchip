@@ -1,0 +1,27 @@
+{
+  "id": "ai-accelerators",
+  "order": 2,
+  "icon": "Zap",
+  "gradient": "from-purple-600 to-purple-800",
+  "title": {
+    "en": "AI Accelerators",
+    "zh": "AI加速器",
+    "fr": "Accélérateurs IA",
+    "de": "KI-Beschleuniger",
+    "it": "Acceleratori IA",
+    "es": "Aceleradores IA"
+  },
+  "description": {
+    "en": "Specialized chips optimized for machine learning and artificial intelligence workloads.",
+    "zh": "专为机器学习和人工智能工作负载优化的专用芯片。",
+    "fr": "Puces spécialisées optimisées pour les charges de travail d'apprentissage automatique et d'IA.",
+    "de": "Spezialisierte Chips für maschinelles Lernen und KI-Workloads optimiert.",
+    "it": "Chip specializzati ottimizzati per carichi di lavoro di machine learning e IA.",
+    "es": "Chips especializados optimizados para cargas de trabajo de machine learning e IA."
+  },
+  "features": {
+    "en": ["Tensor processing cores", "High memory bandwidth", "Low latency inference", "Scalable architecture"],
+    "zh": ["张量处理核心", "高内存带宽", "低延迟推理", "可扩展架构"]
+  },
+  "published": true
+}

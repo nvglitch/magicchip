@@ -1,0 +1,31 @@
+{
+  "contact": {
+    "email": "info@magicchip.com",
+    "phone": "+86 123 4567 8900",
+    "whatsapp": "+86 123 4567 8900",
+    "wechatQR": "/wechat-qr.png",
+    "address": {
+      "en": "123 Tech Park, Shenzhen, China",
+      "zh": "中国深圳科技园123号"
+    }
+  },
+  "social": {
+    "linkedin": "https://linkedin.com/company/magicchip",
+    "twitter": "https://twitter.com/magicchip",
+    "facebook": "https://facebook.com/magicchip",
+    "youtube": "https://youtube.com/@magicchip"
+  },
+  "company": {
+    "name": "MagicChip",
+    "logo": "/logo.png",
+    "foundedYear": 2020,
+    "description": {
+      "en": "Leading provider of advanced enterprise hardware solutions",
+      "zh": "领先的企业级硬件解决方案提供商"
+    }
+  },
+  "newsletter": {
+    "enabled": true,
+    "apiEndpoint": "/api/newsletter"
+  }
+}

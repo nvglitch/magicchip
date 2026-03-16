@@ -6,35 +6,48 @@ import { Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import Image from 'next/image';
 
-export default function HeroBanner() {
-  const { t } = useLanguage();
+interface MultiLangText {
+  en: string;
+  zh?: string;
+  fr?: string;
+  de?: string;
+  it?: string;
+  es?: string;
+}
+
+interface Banner {
+  id: string;
+  order: number;
+  image: string | null;
+  title: MultiLangText;
+  subtitle: MultiLangText;
+  ctaText: MultiLangText;
+  ctaLink: string;
+  published: boolean;
+}
+
+interface HeroBannerProps {
+  banners: Banner[];
+}
+
+function getLocalizedText(text: MultiLangText, language: string): string {
+  return text[language as keyof MultiLangText] || text.en;
+}
+
+export default function HeroBanner({ banners }: HeroBannerProps) {
+  const { language, t } = useLanguage();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [direction, setDirection] = useState(0);
 
-  const slides = [
-    {
-      id: 1,
-      title: t.hero.slide1.title,
-      subtitle: t.hero.slide1.subtitle,
-      cta: t.hero.slide1.cta,
-      image: '/banner1.jpg',
-    },
-    {
-      id: 2,
-      title: t.hero.slide2.title,
-      subtitle: t.hero.slide2.subtitle,
-      cta: t.hero.slide2.cta,
-      image: '/banner2.jpg',
-    },
-    {
-      id: 3,
-      title: t.hero.slide3.title,
-      subtitle: t.hero.slide3.subtitle,
-      cta: t.hero.slide3.cta,
-      image: null,
-    },
-  ];
+  const slides = banners.map(banner => ({
+    id: banner.id,
+    title: getLocalizedText(banner.title, language),
+    subtitle: getLocalizedText(banner.subtitle, language),
+    cta: getLocalizedText(banner.ctaText, language),
+    ctaLink: banner.ctaLink,
+    image: banner.image,
+  }));
 
   const nextSlide = useCallback(() => {
     setDirection(1);
@@ -95,6 +108,10 @@ export default function HeroBanner() {
       y: -30,
     },
   };
+
+  if (slides.length === 0) {
+    return null;
+  }
 
   return (
     <section className="relative w-full overflow-hidden bg-gray-900">
@@ -162,9 +179,12 @@ export default function HeroBanner() {
                 <p className="text-sm sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6 lg:mb-8 line-clamp-3 sm:line-clamp-none">
                   {slides[currentSlide].subtitle}
                 </p>
-                <button className="px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 border-2 border-white text-white text-sm sm:text-base font-semibold rounded-md hover:bg-white/10 transition-colors">
+                <a
+                  href={slides[currentSlide].ctaLink}
+                  className="inline-block px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 border-2 border-white text-white text-sm sm:text-base font-semibold rounded-md hover:bg-white/10 transition-colors"
+                >
                   {slides[currentSlide].cta}
-                </button>
+                </a>
               </motion.div>
             </AnimatePresence>
           </div>

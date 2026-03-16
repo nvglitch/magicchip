@@ -1,0 +1,27 @@
+{
+  "id": "network-chips",
+  "order": 3,
+  "icon": "Server",
+  "gradient": "from-emerald-600 to-emerald-800",
+  "title": {
+    "en": "Network Chips",
+    "zh": "网络芯片",
+    "fr": "Puces Réseau",
+    "de": "Netzwerk-Chips",
+    "it": "Chip di Rete",
+    "es": "Chips de Red"
+  },
+  "description": {
+    "en": "Advanced connectivity solutions for next-generation network infrastructure.",
+    "zh": "面向下一代网络基础设施的先进连接解决方案。",
+    "fr": "Solutions de connectivité avancées pour l'infrastructure réseau de nouvelle génération.",
+    "de": "Fortschrittliche Konnektivitätslösungen für Netzwerkinfrastruktur der nächsten Generation.",
+    "it": "Soluzioni di connettività avanzate per infrastrutture di rete di nuova generazione.",
+    "es": "Soluciones de conectividad avanzadas para infraestructura de red de próxima generación."
+  },
+  "features": {
+    "en": ["High-speed data transfer", "Low power consumption", "Advanced security features", "Flexible programmability"],
+    "zh": ["高速数据传输", "低功耗", "先进的安全功能", "灵活的可编程性"]
+  },
+  "published": true
+}

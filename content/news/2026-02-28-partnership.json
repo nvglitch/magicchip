@@ -1,0 +1,30 @@
+{
+  "id": "cloudtech-partnership-2026",
+  "date": "2026-02-28",
+  "category": {
+    "en": "Partnership",
+    "zh": "合作伙伴",
+    "fr": "Partenariat",
+    "de": "Partnerschaft",
+    "it": "Partnership",
+    "es": "Asociación"
+  },
+  "title": {
+    "en": "Strategic Partnership with CloudTech Solutions Announced",
+    "zh": "宣布与CloudTech Solutions建立战略合作伙伴关系",
+    "fr": "Partenariat stratégique avec CloudTech Solutions annoncé",
+    "de": "Strategische Partnerschaft mit CloudTech Solutions angekündigt",
+    "it": "Annunciata partnership strategica con CloudTech Solutions",
+    "es": "Anunciada asociación estratégica con CloudTech Solutions"
+  },
+  "excerpt": {
+    "en": "MagicChip and CloudTech join forces to deliver integrated edge computing solutions.",
+    "zh": "MagicChip与CloudTech携手提供集成边缘计算解决方案。",
+    "fr": "MagicChip et CloudTech unissent leurs forces pour offrir des solutions de calcul périphérique intégrées.",
+    "de": "MagicChip und CloudTech schließen sich zusammen, um integrierte Edge-Computing-Lösungen zu liefern.",
+    "it": "MagicChip e CloudTech uniscono le forze per offrire soluzioni di edge computing integrate.",
+    "es": "MagicChip y CloudTech unen fuerzas para ofrecer soluciones de computación edge integradas."
+  },
+  "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop",
+  "published": true
+}

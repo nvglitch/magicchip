@@ -1,0 +1,27 @@
+{
+  "id": "processors",
+  "order": 1,
+  "icon": "Cpu",
+  "gradient": "from-blue-600 to-blue-800",
+  "title": {
+    "en": "Enterprise Processors",
+    "zh": "企业级处理器",
+    "fr": "Processeurs Entreprise",
+    "de": "Enterprise-Prozessoren",
+    "it": "Processori Enterprise",
+    "es": "Procesadores Empresariales"
+  },
+  "description": {
+    "en": "High-performance CPUs designed for data centers and cloud computing infrastructure.",
+    "zh": "专为数据中心和云计算基础设施设计的高性能CPU。",
+    "fr": "Processeurs haute performance conçus pour les centres de données et l'infrastructure cloud.",
+    "de": "Hochleistungs-CPUs für Rechenzentren und Cloud-Computing-Infrastruktur.",
+    "it": "CPU ad alte prestazioni progettate per data center e infrastrutture cloud.",
+    "es": "CPUs de alto rendimiento diseñadas para centros de datos e infraestructura cloud."
+  },
+  "features": {
+    "en": ["Up to 128 cores", "Advanced cache architecture", "Enterprise-grade reliability", "Virtualization support"],
+    "zh": ["最多128核心", "先进的缓存架构", "企业级可靠性", "虚拟化支持"]
+  },
+  "published": true
+}

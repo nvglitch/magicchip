@@ -1,42 +1,58 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Cpu, Server, Shield, Zap } from 'lucide-react';
+import { ArrowRight, Cpu, Server, Shield, Zap, Brain, type LucideIcon } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
-export default function ProductCategories() {
-  const { t } = useLanguage();
+interface MultiLangText {
+  en: string;
+  zh?: string;
+  fr?: string;
+  de?: string;
+  it?: string;
+  es?: string;
+}
 
-  const categories = [
-    {
-      id: 1,
-      title: t.products.categories.processors.title,
-      description: t.products.categories.processors.description,
-      icon: Cpu,
-      image: 'bg-gradient-to-br from-blue-600 to-blue-800',
-    },
-    {
-      id: 2,
-      title: t.products.categories.ai.title,
-      description: t.products.categories.ai.description,
-      icon: Zap,
-      image: 'bg-gradient-to-br from-purple-600 to-purple-800',
-    },
-    {
-      id: 3,
-      title: t.products.categories.network.title,
-      description: t.products.categories.network.description,
-      icon: Server,
-      image: 'bg-gradient-to-br from-emerald-600 to-emerald-800',
-    },
-    {
-      id: 4,
-      title: t.products.categories.security.title,
-      description: t.products.categories.security.description,
-      icon: Shield,
-      image: 'bg-gradient-to-br from-orange-600 to-orange-800',
-    },
-  ];
+interface Product {
+  id: string;
+  order: number;
+  icon: string;
+  gradient: string;
+  title: MultiLangText;
+  description: MultiLangText;
+  features?: MultiLangText;
+  published: boolean;
+}
+
+interface ProductCategoriesProps {
+  products: Product[];
+}
+
+const iconMap: Record<string, LucideIcon> = {
+  Cpu,
+  Zap,
+  Server,
+  Shield,
+  Brain,
+};
+
+function getLocalizedText(text: MultiLangText, language: string): string {
+  return text[language as keyof MultiLangText] || text.en;
+}
+
+export default function ProductCategories({ products }: ProductCategoriesProps) {
+  const { t, language } = useLanguage();
+
+  const categories = products.map(product => {
+    const IconComponent = iconMap[product.icon] || Cpu;
+    return {
+      id: product.id,
+      title: getLocalizedText(product.title, language),
+      description: getLocalizedText(product.description, language),
+      icon: IconComponent,
+      image: `bg-gradient-to-br ${product.gradient}`,
+    };
+  });
 
   return (
     <section id="products" className="py-20 bg-gray-50">
@@ -91,7 +107,7 @@ export default function ProductCategories() {
                   {category.description}
                 </p>
                 <a
-                  href="#"
+                  href="/products"
                   className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors group/link"
                 >
                   {t.products.learnMore}

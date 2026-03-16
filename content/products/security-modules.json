@@ -1,0 +1,27 @@
+{
+  "id": "security-modules",
+  "order": 4,
+  "icon": "Shield",
+  "gradient": "from-orange-600 to-orange-800",
+  "title": {
+    "en": "Security Modules",
+    "zh": "安全模块",
+    "fr": "Modules de Sécurité",
+    "de": "Sicherheitsmodule",
+    "it": "Moduli di Sicurezza",
+    "es": "Módulos de Seguridad"
+  },
+  "description": {
+    "en": "Hardware-based security solutions for comprehensive data protection.",
+    "zh": "基于硬件的安全解决方案，提供全面的数据保护。",
+    "fr": "Solutions de sécurité basées sur le matériel pour une protection complète des données.",
+    "de": "Hardware-basierte Sicherheitslösungen für umfassenden Datenschutz.",
+    "it": "Soluzioni di sicurezza basate su hardware per protezione dati completa.",
+    "es": "Soluciones de seguridad basadas en hardware para protección integral de datos."
+  },
+  "features": {
+    "en": ["Hardware encryption", "Secure boot", "Tamper detection", "Key management"],
+    "zh": ["硬件加密", "安全启动", "篡改检测", "密钥管理"]
+  },
+  "published": true
+}

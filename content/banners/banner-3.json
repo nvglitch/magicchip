@@ -1,0 +1,31 @@
+{
+  "id": "banner-3",
+  "order": 3,
+  "image": null,
+  "title": {
+    "en": "Sustainable Technology",
+    "zh": "可持续技术",
+    "fr": "Technologie Durable",
+    "de": "Nachhaltige Technologie",
+    "it": "Tecnologia Sostenibile",
+    "es": "Tecnología Sostenible"
+  },
+  "subtitle": {
+    "en": "High performance with energy-efficient design",
+    "zh": "高性能与节能设计",
+    "fr": "Haute performance avec conception économe en énergie",
+    "de": "Hohe Leistung mit energieeffizientem Design",
+    "it": "Alte prestazioni con design efficiente dal punto di vista energetico",
+    "es": "Alto rendimiento con diseño eficiente en energía"
+  },
+  "ctaText": {
+    "en": "Learn More",
+    "zh": "了解更多",
+    "fr": "En Savoir Plus",
+    "de": "Mehr Erfahren",
+    "it": "Scopri di Più",
+    "es": "Más Información"
+  },
+  "ctaLink": "/about",
+  "published": true
+}

@@ -1,0 +1,30 @@
+{
+  "id": "ai-accelerator-launch-2026",
+  "date": "2026-03-10",
+  "category": {
+    "en": "Product Launch",
+    "zh": "产品发布",
+    "fr": "Lancement Produit",
+    "de": "Produktlaunch",
+    "it": "Lancio Prodotto",
+    "es": "Lanzamiento Producto"
+  },
+  "title": {
+    "en": "MagicChip Announces Next-Generation AI Accelerator Platform",
+    "zh": "MagicChip发布下一代AI加速器平台",
+    "fr": "MagicChip présente la plateforme d'accélération IA de nouvelle génération",
+    "de": "MagicChip kündigt next-generation KI-Beschleunigerplattform an",
+    "it": "MagicChip presenta la piattaforma acceleratore IA di nuova generazione",
+    "es": "MagicChip presenta la plataforma aceleradora de IA de nueva generación"
+  },
+  "excerpt": {
+    "en": "Revolutionary MC-AI Pro series delivers 3x performance improvement for machine learning workloads.",
+    "zh": "革命性的MC-AI Pro系列为机器学习工作负载提供3倍性能提升。",
+    "fr": "La série révolutionnaire MC-AI Pro offre une amélioration des performances 3x pour les charges de travail machine learning.",
+    "de": "Die revolutionäre MC-AI Pro-Serie liefert 3x Performance-Verbesserung für Machine Learning Workloads.",
+    "it": "La rivoluzionaria serie MC-AI Pro offre un miglioramento delle prestazioni 3x per carichi di lavoro machine learning.",
+    "es": "La revolucionaria serie MC-AI Pro ofrece una mejora de rendimiento 3x para cargas de trabajo de machine learning."
+  },
+  "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop",
+  "published": true
+}

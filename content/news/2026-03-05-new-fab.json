@@ -1,0 +1,30 @@
+{
+  "id": "new-fab-facility-2026",
+  "date": "2026-03-05",
+  "category": {
+    "en": "Company News",
+    "zh": "公司新闻",
+    "fr": "Actualités Entreprise",
+    "de": "Unternehmensnachrichten",
+    "it": "Notizie Aziendali",
+    "es": "Noticias de la Empresa"
+  },
+  "title": {
+    "en": "MagicChip Expands Manufacturing Capacity with New Fab Facility",
+    "zh": "MagicChip通过新工厂扩大生产能力",
+    "fr": "MagicChip étend sa capacité de fabrication avec une nouvelle usine",
+    "de": "MagicChip erweitert Produktionskapazität mit neuer Fabrik",
+    "it": "MagicChip espande la capacità produttiva con nuovo stabilimento",
+    "es": "MagicChip expande capacidad de fabricación con nueva planta"
+  },
+  "excerpt": {
+    "en": "The new 300mm wafer fabrication line in Shenzhen will increase production capacity by 50%.",
+    "zh": "深圳的新300mm晶圆制造生产线将使产能提高50%。",
+    "fr": "La nouvelle ligne de fabrication de wafers 300mm à Shenzhen augmentera la capacité de production de 50%.",
+    "de": "Die neue 300mm Wafer-Fertigungslinie in Shenzhen wird die Produktionskapazität um 50% erhöhen.",
+    "it": "La nuova linea di produzione wafer 300mm a Shenzhen aumenterà la capacità produttiva del 50%.",
+    "es": "La nueva línea de fabricación de obleas de 300mm en Shenzhen aumentará la capacidad de producción en 50%."
+  },
+  "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=400&fit=crop",
+  "published": true
+}

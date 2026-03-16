@@ -1,0 +1,31 @@
+{
+  "id": "banner-2",
+  "order": 2,
+  "image": "/banner2.jpg",
+  "title": {
+    "en": "AI-Driven Innovation",
+    "zh": "AI驱动的创新",
+    "fr": "Innovation Pilotée par l'IA",
+    "de": "KI-gesteuerte Innovation",
+    "it": "Innovazione Guidata dall'IA",
+    "es": "Innovación Impulsada por IA"
+  },
+  "subtitle": {
+    "en": "Intelligent hardware solutions for the modern data center",
+    "zh": "面向现代数据中心的智能硬件解决方案",
+    "fr": "Solutions matérielles intelligentes pour le centre de données moderne",
+    "de": "Intelligente Hardware-Lösungen für das moderne Rechenzentrum",
+    "it": "Soluzioni hardware intelligenti per il data center moderno",
+    "es": "Soluciones de hardware inteligentes para el centro de datos moderno"
+  },
+  "ctaText": {
+    "en": "Discover AI Chips",
+    "zh": "探索AI芯片",
+    "fr": "Découvrir les Puces IA",
+    "de": "KI-Chips Entdecken",
+    "it": "Scopri Chip IA",
+    "es": "Descubrir Chips IA"
+  },
+  "ctaLink": "/products",
+  "published": true
+}
