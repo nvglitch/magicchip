@@ -36,7 +36,7 @@ magicchip/
 `content/site-config.json`
 
 ### 可修改内容
-- **联系方式**：邮箱、电话、WhatsApp、微信二维码
+- **联系方式**：邮箱、电话、WhatsApp、微信二维码、办公地址、工作时间
 - **社交媒体**：LinkedIn、Twitter、Facebook、YouTube链接
 - **公司信息**：公司名称、Logo路径、成立年份
 
@@ -47,13 +47,26 @@ magicchip/
     "email": "info@magicchip.com",
     "phone": "+86 123 4567 8900",
     "whatsapp": "+86 123 4567 8900",
-    "wechatQR": "/wechat-qr.png"
+    "wechatQR": "/wechat-qr.png",
+    "address": {
+      "en": "Shenzhen, China",
+      "zh": "中国深圳"
+    },
+    "businessHours": {
+      "en": "Mon-Fri: 9AM - 6PM (GMT+8)",
+      "zh": "周一至周五：上午9点 - 下午6点"
+    }
   },
   "social": {
     "linkedin": "https://linkedin.com/company/magicchip"
   }
 }
 ```
+
+### 注意事项
+- 联系方式会自动显示在首页联系板块和页脚
+- 修改后需要重新构建项目才能生效
+- 地址和工作时间支持多语言
 
 ---
 

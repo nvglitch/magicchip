@@ -5,8 +5,12 @@
     "whatsapp": "+86 123 4567 8900",
     "wechatQR": "/wechat-qr.png",
     "address": {
-      "en": "123 Tech Park, Shenzhen, China",
-      "zh": "中国深圳科技园123号"
+      "en": "Shenzhen, China",
+      "zh": "中国深圳"
+    },
+    "businessHours": {
+      "en": "Mon-Fri: 9AM - 6PM (GMT+8)",
+      "zh": "周一至周五：上午9点 - 下午6点"
     }
   },
   "social": {

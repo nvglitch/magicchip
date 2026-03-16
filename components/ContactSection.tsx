@@ -2,7 +2,17 @@
 
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock, MessageCircle, Send, MessageSquare, ChevronRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, MessageCircle, Send, ChevronRight } from 'lucide-react';
+import { getSiteConfig } from '@/lib/content-loader';
+
+interface ContactSectionProps {
+  siteConfig: ReturnType<typeof getSiteConfig>;
+}
+
+function getLocalizedText(text: any, language: string): string {
+  if (typeof text === 'string') return text;
+  return text?.[language as keyof typeof text] || text?.en || '';
+}
 
 const contactData = {
   en: {
@@ -10,7 +20,7 @@ const contactData = {
       title: 'Get in Touch',
       subtitle: "We're here to help and answer any questions you might have"
     },
-    globalOffices: 'Global Offices',
+    officeAddress: 'Office Address',
     quickLinks: 'Quick Links',
     links: {
       latestNews: 'Latest News',
@@ -20,18 +30,12 @@ const contactData = {
       ourFactory: 'Our Factory',
       memberTeam: 'Member Team'
     },
-    info: [
-      { title: 'Email', content: 'info@magicchip.com', icon: Mail, href: 'mailto:info@magicchip.com' },
-      { title: 'Phone', content: '+1 (555) 123-4567', icon: Phone, href: 'tel:+15551234567' },
-      { title: 'Headquarters', content: 'San Jose, CA, USA', icon: MapPin, href: '#' },
-      { title: 'Business Hours', content: 'Mon-Fri: 9AM - 6PM (PST)', icon: Clock, href: '#' }
-    ],
-    offices: [
-      { city: 'USA', address: 'San Jose, CA' },
-      { city: 'China', address: 'Shenzhen' },
-      { city: 'Germany', address: 'Munich' },
-      { city: 'Japan', address: 'Tokyo' }
-    ],
+    labels: {
+      email: 'Email',
+      phone: 'Phone',
+      address: 'Office Address',
+      businessHours: 'Business Hours'
+    },
     form: {
       title: 'Send us a Message',
       name: 'Name',
@@ -40,8 +44,39 @@ const contactData = {
       button: 'Send Message'
     },
     whatsapp: {
-      title: 'Chat on WhatsApp',
-      button: 'Start Chat'
+      button: 'Start WhatsApp Chat'
+    }
+  },
+  zh: {
+    hero: {
+      title: '联系我们',
+      subtitle: '我们随时为您提供帮助并解答您的问题'
+    },
+    officeAddress: '办公地址',
+    quickLinks: '快速链接',
+    links: {
+      latestNews: '最新动态',
+      downloads: '资料下载',
+      techDocuments: '技术文档',
+      aboutUs: '关于我们',
+      ourFactory: '工厂介绍',
+      memberTeam: '团队成员'
+    },
+    labels: {
+      email: '邮箱',
+      phone: '电话',
+      address: '办公地址',
+      businessHours: '工作时间'
+    },
+    form: {
+      title: '发送消息',
+      name: '姓名',
+      email: '邮箱',
+      message: '我们能帮您什么？',
+      button: '发送消息'
+    },
+    whatsapp: {
+      button: '开始WhatsApp聊天'
     }
   },
   fr: {
@@ -49,7 +84,7 @@ const contactData = {
       title: 'Contactez-Nous',
       subtitle: 'Nous sommes ici pour vous aider et répondre à toutes vos questions'
     },
-    globalOffices: 'Bureaux Mondiaux',
+    officeAddress: 'Adresse du Bureau',
     quickLinks: 'Liens Rapides',
     links: {
       latestNews: 'Actualités',
@@ -59,18 +94,12 @@ const contactData = {
       ourFactory: 'Notre Usine',
       memberTeam: 'Équipe'
     },
-    info: [
-      { title: 'Email', content: 'info@magicchip.com', icon: Mail, href: 'mailto:info@magicchip.com' },
-      { title: 'Téléphone', content: '+1 (555) 123-4567', icon: Phone, href: 'tel:+15551234567' },
-      { title: 'Siège', content: 'San Jose, CA, USA', icon: MapPin, href: '#' },
-      { title: 'Horaires', content: 'Lun-Ven: 9h-18h (PST)', icon: Clock, href: '#' }
-    ],
-    offices: [
-      { city: 'USA', address: 'San Jose, CA' },
-      { city: 'Chine', address: 'Shenzhen' },
-      { city: 'Allemagne', address: 'Munich' },
-      { city: 'Japon', address: 'Tokyo' }
-    ],
+    labels: {
+      email: 'Email',
+      phone: 'Téléphone',
+      address: 'Adresse du Bureau',
+      businessHours: 'Horaires'
+    },
     form: {
       title: 'Envoyez-nous un Message',
       name: 'Nom',
@@ -79,133 +108,44 @@ const contactData = {
       button: 'Envoyer'
     },
     whatsapp: {
-      title: 'Discuter sur WhatsApp',
-      button: 'Commencer'
-    }
-  },
-  de: {
-    hero: {
-      title: 'Kontaktieren Sie Uns',
-      subtitle: 'Wir sind hier, um Ihnen zu helfen und alle Ihre Fragen zu beantworten'
-    },
-    globalOffices: 'Globale Büros',
-    quickLinks: 'Schnelllinks',
-    links: {
-      latestNews: 'Neuigkeiten',
-      downloads: 'Downloads',
-      techDocuments: 'Technische Dokumente',
-      aboutUs: 'Über Uns',
-      ourFactory: 'Unsere Fabrik',
-      memberTeam: 'Team'
-    },
-    info: [
-      { title: 'E-Mail', content: 'info@magicchip.com', icon: Mail, href: 'mailto:info@magicchip.com' },
-      { title: 'Telefon', content: '+1 (555) 123-4567', icon: Phone, href: 'tel:+15551234567' },
-      { title: 'Hauptquartier', content: 'San Jose, CA, USA', icon: MapPin, href: '#' },
-      { title: 'Geschäftszeiten', content: 'Mo-Fr: 9-18 Uhr (PST)', icon: Clock, href: '#' }
-    ],
-    offices: [
-      { city: 'USA', address: 'San Jose, CA' },
-      { city: 'China', address: 'Shenzhen' },
-      { city: 'Deutschland', address: 'München' },
-      { city: 'Japan', address: 'Tokio' }
-    ],
-    form: {
-      title: 'Nachricht senden',
-      name: 'Name',
-      email: 'E-Mail',
-      message: 'Wie können wir Ihnen helfen?',
-      button: 'Senden'
-    },
-    whatsapp: {
-      title: 'Auf WhatsApp chatten',
-      button: 'Starten'
-    }
-  },
-  it: {
-    hero: {
-      title: 'Contattaci',
-      subtitle: 'Siamo qui per aiutarti e rispondere a qualsiasi domanda'
-    },
-    globalOffices: 'Uffici Globali',
-    quickLinks: 'Link Rapidi',
-    links: {
-      latestNews: 'Notizie',
-      downloads: 'Download',
-      techDocuments: 'Documenti Tecnici',
-      aboutUs: 'Chi Siamo',
-      ourFactory: 'La Nostra Fabbrica',
-      memberTeam: 'Team'
-    },
-    info: [
-      { title: 'Email', content: 'info@magicchip.com', icon: Mail, href: 'mailto:info@magicchip.com' },
-      { title: 'Telefono', content: '+1 (555) 123-4567', icon: Phone, href: 'tel:+15551234567' },
-      { title: 'Sede', content: 'San Jose, CA, USA', icon: MapPin, href: '#' },
-      { title: 'Orari', content: 'Lun-Ven: 9-18 (PST)', icon: Clock, href: '#' }
-    ],
-    offices: [
-      { city: 'USA', address: 'San Jose, CA' },
-      { city: 'Cina', address: 'Shenzhen' },
-      { city: 'Germania', address: 'Monaco' },
-      { city: 'Giappone', address: 'Tokyo' }
-    ],
-    form: {
-      title: 'Inviaci un Messaggio',
-      name: 'Nome',
-      email: 'Email',
-      message: 'Come possiamo aiutarti?',
-      button: 'Invia'
-    },
-    whatsapp: {
-      title: 'Chatta su WhatsApp',
-      button: 'Inizia'
-    }
-  },
-  es: {
-    hero: {
-      title: 'Contáctenos',
-      subtitle: 'Estamos aquí para ayudarte y responder cualquier pregunta'
-    },
-    globalOffices: 'Oficinas Globales',
-    quickLinks: 'Enlaces Rápidos',
-    links: {
-      latestNews: 'Noticias',
-      downloads: 'Descargas',
-      techDocuments: 'Documentos Técnicos',
-      aboutUs: 'Sobre Nosotros',
-      ourFactory: 'Nuestra Fábrica',
-      memberTeam: 'Equipo'
-    },
-    info: [
-      { title: 'Email', content: 'info@magicchip.com', icon: Mail, href: 'mailto:info@magicchip.com' },
-      { title: 'Teléfono', content: '+1 (555) 123-4567', icon: Phone, href: 'tel:+15551234567' },
-      { title: 'Sede', content: 'San Jose, CA, USA', icon: MapPin, href: '#' },
-      { title: 'Horario', content: 'Lun-Vie: 9-18 (PST)', icon: Clock, href: '#' }
-    ],
-    offices: [
-      { city: 'EE.UU.', address: 'San Jose, CA' },
-      { city: 'China', address: 'Shenzhen' },
-      { city: 'Alemania', address: 'Múnich' },
-      { city: 'Japón', address: 'Tokio' }
-    ],
-    form: {
-      title: 'Envíanos un Mensaje',
-      name: 'Nombre',
-      email: 'Email',
-      message: '¿Cómo podemos ayudarte?',
-      button: 'Enviar'
-    },
-    whatsapp: {
-      title: 'Chatear en WhatsApp',
-      button: 'Iniciar'
+      button: 'Commencer sur WhatsApp'
     }
   }
 };
 
-export default function ContactSection() {
+export default function ContactSection({ siteConfig }: ContactSectionProps) {
   const { language } = useLanguage();
   const dataLanguage = (contactData as any)[language] ? language : 'en';
   const data = (contactData as any)[dataLanguage];
+
+  if (!siteConfig) return null;
+
+  const contactInfo = [
+    {
+      title: data.labels.email,
+      content: siteConfig.contact.email,
+      icon: Mail,
+      href: `mailto:${siteConfig.contact.email}`
+    },
+    {
+      title: data.labels.phone,
+      content: siteConfig.contact.phone,
+      icon: Phone,
+      href: `tel:${siteConfig.contact.phone}`
+    },
+    {
+      title: data.labels.address,
+      content: getLocalizedText(siteConfig.contact.address, language),
+      icon: MapPin,
+      href: '#'
+    },
+    {
+      title: data.labels.businessHours,
+      content: getLocalizedText(siteConfig.contact.businessHours, language),
+      icon: Clock,
+      href: '#'
+    }
+  ];
 
   return (
     <section id="contact" className="py-20 bg-white">
@@ -235,7 +175,7 @@ export default function ContactSection() {
             className="lg:col-span-1"
           >
             <div className="space-y-4">
-              {data.info.map((item: any, index: number) => (
+              {contactInfo.map((item, index) => (
                 <a
                   key={index}
                   href={item.href}
@@ -254,7 +194,7 @@ export default function ContactSection() {
 
             {/* WhatsApp Button */}
             <a
-              href="https://wa.me/1234567890"
+              href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, '')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center mt-6 p-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-md hover:from-green-600 hover:to-green-700 transition-all"
@@ -262,21 +202,6 @@ export default function ContactSection() {
               <MessageCircle className="w-5 h-5 mr-2" />
               <span className="font-medium">{data.whatsapp.button}</span>
             </a>
-
-            {/* Global Offices */}
-            <div className="mt-6 p-4 bg-gray-50 rounded-md">
-              <h4 className="font-semibold text-gray-900 mb-3">
-                {data.globalOffices}
-              </h4>
-              <div className="grid grid-cols-2 gap-2">
-                {data.offices.map((office: any, index: number) => (
-                  <div key={index} className="text-sm">
-                    <span className="font-medium text-gray-900">{office.city}</span>
-                    <span className="text-gray-500"> - {office.address}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </motion.div>
 
           {/* Contact Form */}
@@ -293,27 +218,27 @@ export default function ContactSection() {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.name}</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white"
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.email}</label>
-                    <input 
-                      type="email" 
+                    <input
+                      type="email"
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white"
                     />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.message}</label>
-                  <textarea 
+                  <textarea
                     rows={4}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white"
                   />
                 </div>
-                <button 
+                <button
                   type="submit"
                   className="w-full flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors"
                 >

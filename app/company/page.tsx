@@ -55,10 +55,7 @@ const companyData = {
       { year: '2025', title: 'New Fab', description: 'Opened advanced manufacturing facility' }
     ],
     locations: [
-      { city: 'Shenzhen', country: 'China', address: 'Headquarters & R&D Center' },
-      { city: 'San Jose', country: 'USA', address: 'North America HQ' },
-      { city: 'Munich', country: 'Germany', address: 'Europe Office' },
-      { city: 'Tokyo', country: 'Japan', address: 'Asia Pacific Sales' }
+      { city: 'Shenzhen', country: 'China', address: 'Office Address' }
     ]
   },
   fr: {
@@ -95,10 +92,7 @@ const companyData = {
       { year: '2025', title: 'Nouvelle Usine', description: 'Ouverture d\'une installation de fabrication avancée' }
     ],
     locations: [
-      { city: 'Shenzhen', country: 'Chine', address: 'Siège et R&D' },
-      { city: 'San Jose', country: 'USA', address: 'Siège Amérique du Nord' },
-      { city: 'Munich', country: 'Allemagne', address: 'Bureau Europe' },
-      { city: 'Tokyo', country: 'Japon', address: 'Ventes APAC' }
+      { city: 'Shenzhen', country: 'Chine', address: 'Adresse du Bureau' }
     ]
   },
   de: {
@@ -135,10 +129,7 @@ const companyData = {
       { year: '2025', title: 'Neue Fabrik', description: 'Eröffnung einer hochmodernen Fertigungsanlage' }
     ],
     locations: [
-      { city: 'Shenzhen', country: 'China', address: 'Hauptsitz und F&E' },
-      { city: 'San Jose', country: 'USA', address: 'Nordamerika-Zentrale' },
-      { city: 'München', country: 'Deutschland', address: 'Europa-Büro' },
-      { city: 'Tokio', country: 'Japan', address: 'APAC Vertrieb' }
+      { city: 'Shenzhen', country: 'China', address: 'Büroadresse' }
     ]
   },
   it: {
@@ -175,10 +166,7 @@ const companyData = {
       { year: '2025', title: 'Nuova Fabbrica', description: 'Apertura di uno stabilimento produttivo avanzato' }
     ],
     locations: [
-      { city: 'Shenzhen', country: 'Cina', address: 'Sede e R&D' },
-      { city: 'San Jose', country: 'USA', address: 'Sede Nord America' },
-      { city: 'Monaco', country: 'Germania', address: 'Ufficio Europa' },
-      { city: 'Tokyo', country: 'Giappone', address: 'Vendite APAC' }
+      { city: 'Shenzhen', country: 'Cina', address: 'Indirizzo Ufficio' }
     ]
   },
   es: {
@@ -215,10 +203,7 @@ const companyData = {
       { year: '2025', title: 'Nueva Fábrica', description: 'Apertura de instalación de fabricación avanzada' }
     ],
     locations: [
-      { city: 'Shenzhen', country: 'China', address: 'Sede y I+D' },
-      { city: 'San Jose', country: 'EE.UU.', address: 'Sede Norte América' },
-      { city: 'Múnich', country: 'Alemania', address: 'Oficina Europa' },
-      { city: 'Tokio', country: 'Japón', address: 'Ventas APAC' }
+      { city: 'Shenzhen', country: 'China', address: 'Dirección de Oficina' }
     ]
   }
 };
@@ -369,16 +354,16 @@ export default function CompanyPage() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              {'Global Presence'}
+              {'Office Location'}
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="flex justify-center">
               {data.locations.map((location: any, index: number) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-gray-50 p-6 rounded-md"
+                  className="bg-gray-50 p-6 rounded-md max-w-md"
                 >
                   <MapPin className="w-6 h-6 text-blue-600 mb-3" />
                   <h3 className="font-semibold text-gray-900">{location.city}</h3>

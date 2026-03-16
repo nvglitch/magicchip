@@ -5,11 +5,12 @@ import LeadGeneration from "@/components/LeadGeneration";
 import SocialProof from "@/components/SocialProof";
 import Services from "@/components/Services";
 import ContactSection from "@/components/ContactSection";
-import { getAllBanners, getAllProducts } from "@/lib/content-loader";
+import { getAllBanners, getAllProducts, getSiteConfig } from "@/lib/content-loader";
 
 export default function Home() {
   const banners = getAllBanners();
   const products = getAllProducts();
+  const siteConfig = getSiteConfig();
 
   return (
     <div>
@@ -18,7 +19,7 @@ export default function Home() {
       <FeaturedProduct />
       <Services />
       <SocialProof />
-      <ContactSection />
+      <ContactSection siteConfig={siteConfig} />
       <LeadGeneration />
     </div>
   );

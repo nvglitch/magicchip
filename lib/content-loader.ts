@@ -56,6 +56,7 @@ export interface SiteConfig {
     whatsapp: string;
     wechatQR: string;
     address: MultiLangText;
+    businessHours: MultiLangText;
   };
   social: {
     linkedin?: string;
