@@ -1,10 +1,62 @@
 export interface TranslationSchema {
+  // SEO Metadata
+  seo: {
+    // Page titles
+    pageTitle: {
+      home: string;
+      products: string;
+      about: string;
+      contact: string;
+      documents: string;
+      downloads: string;
+      news: string;
+      factory: string;
+      company: string;
+      leadership: string;
+      techDocs: string;
+    };
+    // Meta descriptions
+    metaDescription: {
+      home: string;
+      products: string;
+      about: string;
+      contact: string;
+      documents: string;
+      downloads: string;
+      news: string;
+      factory: string;
+      company: string;
+      leadership: string;
+      techDocs: string;
+    };
+    // Image alt texts
+    altTexts: {
+      hero: string;
+      featuredProduct: string;
+      logo: string;
+      socialProof: string;
+      company: string;
+      factory: string;
+      team: string;
+      products: string;
+      documents: string;
+    };
+  };
+  // Open Graph
+  og: {
+    title: string;
+    description: string;
+    image: string;
+    url: string;
+  };
   nav: {
     home: string;
     products: string;
     solutions: string;
     services: string;
     aboutUs: string;
+    documents: string;
+    contact: string;
     searchPlaceholder: string;
   };
   navDropdown: {
@@ -51,6 +103,22 @@ export interface TranslationSchema {
       press: string;
       pressDesc: string;
       contactUs: string;
+    };
+    documents: {
+      news: string;
+      newsDesc: string;
+      downloads: string;
+      downloadsDesc: string;
+      techDocs: string;
+      techDocsDesc: string;
+    };
+    contact: {
+      email: string;
+      emailDesc: string;
+      phone: string;
+      phoneDesc: string;
+      whatsapp: string;
+      whatsappDesc: string;
     };
   };
   hero: {

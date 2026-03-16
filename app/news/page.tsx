@@ -55,53 +55,203 @@ const newsData = {
       image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=400&fit=crop'
     }
   ],
-  zh: [
+  fr: [
     {
       id: 1,
-      title: 'MagicChip 发布新一代AI加速平台',
-      excerpt: '革命性的MC-AI Pro系列为机器学习工作负载带来3倍性能提升。',
-      date: '2026年3月10日',
-      category: '产品发布',
+      title: 'MagicChip présente la plateforme d\'accélération IA de nouvelle génération',
+      excerpt: 'La série révolutionnaire MC-AI Pro offre une amélioration des performances 3x pour les charges de travail machine learning.',
+      date: '10 Mars 2026',
+      category: 'Lancement Produit',
       image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop'
     },
     {
       id: 2,
-      title: 'MagicChip扩产 - 新建晶圆厂',
-      excerpt: '深圳新建的300mm晶圆生产线将使产能提升50%。',
-      date: '2026年3月5日',
-      category: '公司动态',
+      title: 'MagicChip étend sa capacité de fabrication avec une nouvelle usine',
+      excerpt: 'La nouvelle ligne de fabrication de wafers 300mm à Shenzhen augmentera la capacité de production de 50%.',
+      date: '5 Mars 2026',
+      category: 'Actualités Entreprise',
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=400&fit=crop'
     },
     {
       id: 3,
-      title: '与CloudTech解决方案达成战略合作',
-      excerpt: 'MagicChip与CloudTech强强联合，提供集成边缘计算解决方案。',
-      date: '2026年2月28日',
-      category: '合作伙伴',
+      title: 'Partenariat stratégique avec CloudTech Solutions annoncé',
+      excerpt: 'MagicChip et CloudTech unissent leurs forces pour offrir des solutions de calcul périphérique intégrées.',
+      date: '28 Février 2026',
+      category: 'Partenariat',
       image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop'
     },
     {
       id: 4,
-      title: 'MagicChip荣获"最佳企业硬件提供商"奖',
-      excerpt: '因对数据中心基础设施的杰出贡献获得行业认可。',
-      date: '2026年2月20日',
-      category: '奖项',
+      title: 'MagicChip gagne le prix "Meilleur Fournisseur de Matériel Entreprise"',
+      excerpt: 'Reconnaissance industrielle pour les contributions exceptionnelles à l\'infrastructure des centres de données.',
+      date: '20 Février 2026',
+      category: 'Récompenses',
       image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=400&fit=crop'
     },
     {
       id: 5,
-      title: '2025年第四季度财务业绩超预期',
-      excerpt: '企业和AI聚焦产品需求增长带动强劲业绩。',
-      date: '2026年2月15日',
-      category: '财务',
+      title: 'Les résultats financiers T4 2025 dépassent les attentes',
+      excerpt: 'Croissance forte portée par la demande accrue pour les produits entreprise et IA.',
+      date: '15 Février 2026',
+      category: 'Financier',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop'
     },
     {
       id: 6,
-      title: 'MagicChip启动可持续发展计划',
-      excerpt: '承诺到2030年通过采用可再生能源实现碳中和制造。',
-      date: '2026年2月10日',
-      category: '可持续发展',
+      title: 'MagicChip lance une initiative de développement durable',
+      excerpt: 'Engagement à atteindre une fabrication carboneutre d\'ici 2030 grâce aux énergies renouvelables.',
+      date: '10 Février 2026',
+      category: 'Développement Durable',
+      image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=400&fit=crop'
+    }
+  ],
+  de: [
+    {
+      id: 1,
+      title: 'MagicChip kündigt next-generation KI-Beschleunigerplattform an',
+      excerpt: 'Die revolutionäre MC-AI Pro-Serie liefert 3x Performance-Verbesserung für Machine Learning Workloads.',
+      date: '10. März 2026',
+      category: 'Produktlaunch',
+      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop'
+    },
+    {
+      id: 2,
+      title: 'MagicChip erweitert Produktionskapazität mit neuer Fabrik',
+      excerpt: 'Die neue 300mm Wafer-Fertigungslinie in Shenzhen wird die Produktionskapazität um 50% erhöhen.',
+      date: '5. März 2026',
+      category: 'Unternehmensnachrichten',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=400&fit=crop'
+    },
+    {
+      id: 3,
+      title: 'Strategische Partnerschaft mit CloudTech Solutions angekündigt',
+      excerpt: 'MagicChip und CloudTech schließen sich zusammen, um integrierte Edge-Computing-Lösungen zu liefern.',
+      date: '28. Februar 2026',
+      category: 'Partnerschaft',
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop'
+    },
+      {
+      id: 4,
+      title: 'MagicChip gewinnt "Bester Enterprise Hardware Anbieter" Award',
+      excerpt: 'Branchenanerkennung für herausragende Beiträge zur Rechenzentrumsinfrastruktur.',
+      date: '20. Februar 2026',
+      category: 'Auszeichnungen',
+      image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=400&fit=crop'
+    },
+    {
+      id: 5,
+      title: 'Q4 2025 Finanzergebnisse übertreffen Erwartungen',
+      excerpt: 'Starkes Wachstum getrieben durch erhöhte Nachfrage nach Enterprise- und KI-Produkten.',
+      date: '15. Februar 2026',
+      category: 'Finanzen',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop'
+    },
+    {
+      id: 6,
+      title: 'MagicChip startet Nachhaltigkeitsinitiative',
+      excerpt: 'Verpflichtung zur kohlenstoffneutralen Fertigung bis 2030 durch erneuerbare Energie.',
+      date: '10. Februar 2026',
+      category: 'Nachhaltigkeit',
+      image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=400&fit=crop'
+    }
+  ],
+  it: [
+    {
+      id: 1,
+      title: 'MagicChip presenta la piattaforma acceleratore IA di nuova generazione',
+      excerpt: 'La rivoluzionaria serie MC-AI Pro offre un miglioramento delle prestazioni 3x per carichi di lavoro machine learning.',
+      date: '10 Marzo 2026',
+      category: 'Lancio Prodotto',
+      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop'
+    },
+    {
+      id: 2,
+      title: 'MagicChip espande la capacità produttiva con nuovo stabilimento',
+      excerpt: 'La nuova linea di produzione wafer 300mm a Shenzhen aumenterà la capacità produttiva del 50%.',
+      date: '5 Marzo 2026',
+      category: 'Notizie Aziendali',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=400&fit=crop'
+    },
+    {
+      id: 3,
+      title: 'Annunciata partnership strategica con CloudTech Solutions',
+      excerpt: 'MagicChip e CloudTech uniscono le forze per offrire soluzioni di edge computing integrate.',
+      date: '28 Febbraio 2026',
+      category: 'Partnership',
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop'
+    },
+    {
+      id: 4,
+      title: 'MagicChip vince il premio "Miglior Fornitore Hardware Enterprise"',
+      excerpt: 'Riconoscimento del settore per i contributi eccezionali all\'infrastruttura dei data center.',
+      date: '20 Febbraio 2026',
+      category: 'Riconoscimenti',
+      image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=400&fit=crop'
+    },
+    {
+      id: 5,
+      title: 'Risultati finanziari Q4 2025 superano le aspettative',
+      excerpt: 'Crescita forte trainata dalla maggiore domanda di prodotti enterprise e IA.',
+      date: '15 Febbraio 2026',
+      category: 'Finanziario',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop'
+    },
+    {
+      id: 6,
+      title: 'MagicChip lancia iniziativa di sostenibilità',
+      excerpt: 'Impegno a raggiungere produzione carbon-neutral entro il 2030 attraverso energie rinnovabili.',
+      date: '10 Febbraio 2026',
+      category: 'Sostenibilità',
+      image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=400&fit=crop'
+    }
+  ],
+  es: [
+    {
+      id: 1,
+      title: 'MagicChip presenta la plataforma aceleradora de IA de nueva generación',
+      excerpt: 'La revolucionaria serie MC-AI Pro ofrece una mejora de rendimiento 3x para cargas de trabajo de machine learning.',
+      date: '10 Marzo 2026',
+      category: 'Lanzamiento Producto',
+      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop'
+    },
+    {
+      id: 2,
+      title: 'MagicChip expande capacidad de fabricación con nueva planta',
+      excerpt: 'La nueva línea de fabricación de obleas de 300mm en Shenzhen aumentará la capacidad de producción en 50%.',
+      date: '5 Marzo 2026',
+      category: 'Noticias de la Empresa',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=400&fit=crop'
+    },
+    {
+      id: 3,
+      title: 'Anunciada asociación estratégica con CloudTech Solutions',
+      excerpt: 'MagicChip y CloudTech unen fuerzas para ofrecer soluciones de computación edge integradas.',
+      date: '28 Febrero 2026',
+      category: 'Asociación',
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop'
+    },
+    {
+      id: 4,
+      title: 'MagicChip gana el premio "Mejor Proveedor de Hardware Empresarial"',
+      excerpt: 'Reconocimiento de la industria por contribuciones destacadas a la infraestructura de centros de datos.',
+      date: '20 Febrero 2026',
+      category: 'Premios',
+      image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=400&fit=crop'
+    },
+    {
+      id: 5,
+      title: 'Resultados financieros Q4 2025 superan expectativas',
+      excerpt: 'Fuerte crecimiento impulsado por mayor demanda de productos empresariales y de IA.',
+      date: '15 Febrero 2026',
+      category: 'Financiero',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop'
+    },
+    {
+      id: 6,
+      title: 'MagicChip lanza iniciativa de sostenibilidad',
+      excerpt: 'Compromiso a lograr fabricación carbono-neutral para 2030 mediante energía renovable.',
+      date: '10 Febrero 2026',
+      category: 'Sostenibilidad',
       image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=400&fit=crop'
     }
   ]
@@ -109,11 +259,9 @@ const newsData = {
 
 export default function NewsPage() {
   const { language } = useLanguage();
-  const news = language === 'en' ? newsData.en : newsData.zh;
-  const pageTitle = language === 'en' ? 'News & Updates' : '新闻动态';
-  const pageSubtitle = language === 'en' 
-    ? 'Stay informed about the latest developments from MagicChip'
-    : '了解MagicChip的最新发展';
+  const news = newsData[language] || newsData.en;
+  const pageTitle = 'News & Updates';
+  const pageSubtitle = 'Stay informed about the latest developments from MagicChip';
 
   return (
     <>
@@ -172,7 +320,7 @@ export default function NewsPage() {
                       href={`/news/${item.id}`}
                       className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors"
                     >
-                      {language === 'en' ? 'Read More' : '阅读更多'}
+                      {'Read More'}
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </a>
                   </div>

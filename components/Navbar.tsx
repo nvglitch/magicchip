@@ -57,14 +57,14 @@ export default function Navbar() {
       { title: t.navDropdown?.products?.securityModules || 'Security Modules', description: t.navDropdown?.products?.securityModulesDesc || 'Hardware-based data protection', href: '#', icon: Shield },
     ],
     documents: [
-      { title: 'News', description: 'Latest updates and announcements', href: '/news', icon: Newspaper },
-      { title: 'File Downloads', description: 'Brochures, whitepapers, and resources', href: '/downloads', icon: Download },
-      { title: 'Tech Document', description: 'Technical specifications and manuals', href: '/tech-docs', icon: FileCode },
+      { title: t.navDropdown?.documents?.news || 'News', description: t.navDropdown?.documents?.newsDesc || 'Latest updates and announcements', href: '/news', icon: Newspaper },
+      { title: t.navDropdown?.documents?.downloads || 'File Downloads', description: t.navDropdown?.documents?.downloadsDesc || 'Brochures, whitepapers, and resources', href: '/downloads', icon: Download },
+      { title: t.navDropdown?.documents?.techDocs || 'Tech Document', description: t.navDropdown?.documents?.techDocsDesc || 'Technical specifications and manuals', href: '/tech-docs', icon: FileCode },
     ],
     contact: [
-      { title: 'Email', description: 'Send us an email', href: 'mailto:info@magicchip.com', icon: Mail },
-      { title: 'Phone', description: 'Call our sales team', href: 'tel:+1234567890', icon: Phone },
-      { title: 'WhatsApp', description: 'Chat with us on WhatsApp', href: 'https://wa.me/1234567890', icon: MessageCircle },
+      { title: t.navDropdown?.contact?.email || 'Email', description: t.navDropdown?.contact?.emailDesc || 'Send us an email', href: 'mailto:info@magicchip.com', icon: Mail },
+      { title: t.navDropdown?.contact?.phone || 'Phone', description: t.navDropdown?.contact?.phoneDesc || 'Call our sales team', href: 'tel:+1234567890', icon: Phone },
+      { title: t.navDropdown?.contact?.whatsapp || 'WhatsApp', description: t.navDropdown?.contact?.whatsappDesc || 'Chat with us on WhatsApp', href: 'https://wa.me/1234567890', icon: MessageCircle },
     ],
     about: [
       { title: 'Our Company', description: 'Company history and mission', href: '/company', icon: BookOpen },
@@ -78,8 +78,8 @@ export default function Navbar() {
   const navItems: NavItem[] = [
     { label: t.nav.home, href: '/', dropdown: undefined },
     { label: t.nav.products, href: '/products', dropdown: dropdownContent.products },
-    { label: 'Documents', href: '/documents', dropdown: dropdownContent.documents },
-    { label: 'Contact', href: '/contact', dropdown: dropdownContent.contact },
+    { label: t.nav.documents, href: '/documents', dropdown: dropdownContent.documents },
+    { label: t.nav.contact, href: '/contact', dropdown: dropdownContent.contact },
     { label: t.nav.aboutUs, href: '/about', dropdown: dropdownContent.about },
   ];
 

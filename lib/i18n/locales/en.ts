@@ -1,12 +1,61 @@
 import { TranslationSchema } from '../types';
 
 export const en: TranslationSchema = {
+  // SEO Metadata
+  seo: {
+    pageTitle: {
+      home: 'MagicChip - Advanced Hardware Solutions | Enterprise Processors & AI Chips',
+      products: 'Enterprise Hardware Products | Processors, AI Accelerators & Network Solutions',
+      about: 'About MagicChip | Company History, Mission & Team',
+      contact: 'Contact Us | MagicChip Enterprise Support',
+      documents: 'Technical Documentation | Product Manuals & Resources',
+      downloads: 'Downloads | Drivers, Firmware & Software',
+      news: 'News & Updates | MagicChip Company News',
+      factory: 'Manufacturing Facilities | MagicChip Production',
+      company: 'Our Company | MagicChip Enterprise Overview',
+      leadership: 'Leadership Team | Meet Our Experts',
+      techDocs: 'Technical Documentation | API References & Guides',
+    },
+    metaDescription: {
+      home: 'MagicChip is a leading provider of advanced enterprise hardware solutions including high-performance processors, AI accelerators, and network chips. Transform your data center with cutting-edge technology.',
+      products: 'Explore MagicChip\'s comprehensive range of enterprise hardware products including enterprise CPUs, AI accelerators, network solutions, and security modules. High-performance for modern businesses.',
+      about: 'Learn about MagicChip\'s history, mission, and team. We are dedicated to providing innovative hardware solutions for enterprise applications worldwide.',
+      contact: 'Contact MagicChip for enterprise hardware solutions and technical support. Our team is ready to assist you with product inquiries and customer service.',
+      documents: 'Access MagicChip technical documentation, product manuals, API references, and installation guides. Comprehensive resources for enterprise hardware deployment.',
+      downloads: 'Download drivers, firmware, software, and product resources for MagicChip hardware solutions. Keep your systems up to date.',
+      news: 'Latest news, announcements, and updates from MagicChip. Stay informed about product launches, partnerships, and company developments.',
+      factory: 'Discover MagicChip\'s state-of-the-art manufacturing facilities. Learn about our advanced production capabilities and quality standards.',
+      company: 'MagicChip is a global leader in enterprise hardware solutions. Learn about our company values, vision, and commitment to innovation.',
+      leadership: 'Meet the leadership team at MagicChip. Our experts drive innovation in enterprise hardware and customer success.',
+      techDocs: 'Comprehensive technical documentation for MagicChip products. API references, integration guides, and developer resources.',
+    },
+    altTexts: {
+      hero: 'MagicChip hero banner showcasing enterprise hardware technology',
+      featuredProduct: 'MagicChip MC-Pro Series X1 flagship processor',
+      logo: 'MagicChip company logo',
+      socialProof: 'MagicChip customer testimonial from industry leader',
+      company: 'MagicChip corporate headquarters',
+      factory: 'MagicChip manufacturing facility interior',
+      team: 'MagicChip leadership team members',
+      products: 'MagicChip enterprise hardware product lineup',
+      documents: 'MagicChip technical documentation resources',
+    },
+  },
+  // Open Graph
+  og: {
+    title: 'MagicChip - Advanced Enterprise Hardware Solutions',
+    description: 'Leading provider of high-performance processors, AI accelerators, and network solutions for enterprise applications.',
+    image: '/og-image.jpg',
+    url: 'https://magicchip.com',
+  },
   nav: {
     home: 'Home',
     products: 'Products',
     solutions: 'Solutions',
     services: 'Services',
     aboutUs: 'About Us',
+    documents: 'Documents',
+    contact: 'Contact',
     searchPlaceholder: 'Search products, solutions...',
   },
   navDropdown: {
@@ -53,6 +102,22 @@ export const en: TranslationSchema = {
       press: 'Press & Media',
       pressDesc: 'News and announcements',
       contactUs: 'Contact Us',
+    },
+    documents: {
+      news: 'News',
+      newsDesc: 'Latest updates and announcements',
+      downloads: 'File Downloads',
+      downloadsDesc: 'Brochures, whitepapers, and resources',
+      techDocs: 'Tech Document',
+      techDocsDesc: 'Technical specifications and manuals',
+    },
+    contact: {
+      email: 'Email',
+      emailDesc: 'Send us an email',
+      phone: 'Phone',
+      phoneDesc: 'Call our sales team',
+      whatsapp: 'WhatsApp',
+      whatsappDesc: 'Chat with us on WhatsApp',
     },
   },
   hero: {

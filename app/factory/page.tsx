@@ -59,64 +59,226 @@ const factoryData = {
       ]
     }
   },
-  zh: {
+  fr: {
     hero: {
-      title: '我们的工厂',
-      subtitle: '最先进的制造设施，追求卓越品质'
+      title: 'Notre Usine',
+      subtitle: 'Installations de fabrication de pointe pour une excellence garantie'
     },
     overview: {
-      title: '卓越制造',
-      content: '我们先进的制造设施总面积超过50,000平方米，分布于多个地点，采用尖端的半导体制造技术，生产为数字世界提供动力的芯片。'
+      title: 'Excellence de Fabrication',
+      content: 'Nos installations de fabrication avancées s\'étendent sur plus de 50 000 mètres carrés à plusieurs endroits, utilisant une technologie de fabrication de semi-conducteurs de pointe pour produire des puces qui alimentent le monde numérique.'
     },
     stats: [
-      { value: '50,000+', label: '平方米生产区域' },
-      { value: '1,200+', label: '员工数量' },
-      { value: '10M+', label: '月芯片产量' },
-      { value: '99.9%', label: '良品率' }
+      { value: '50,000+', label: 'm² Zone de Production' },
+      { value: '1,200+', label: 'Employés' },
+      { value: '10M+', label: 'Puces/Mois' },
+      { value: '99.9%', label: 'Taux de Rendement' }
     ],
     facilities: [
       {
-        title: '晶圆制造',
-        description: '先进的300mm晶圆厂，采用前沿工艺节点。',
+        title: 'Fabrication de Wafers',
+        description: 'Fonderie de wafers 300mm avancée avec des nœuds de processus de pointe.',
         image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop',
-        features: ['300mm晶圆加工', '14nm-28nm工艺节点', '百级洁净室']
+        features: ['Traitement wafers 300mm', 'Nœuds de processus 14nm - 28nm', 'Salle blanche Classe 100']
       },
       {
-        title: '封装与测试',
-        description: '先进的封装和最终测试设施。',
+        title: 'Assemblage & Test',
+        description: 'Installations de assemblage et de test final de pointe.',
         image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop',
-        features: ['先进封装', '自动化测试', '质量保证']
+        features: ['Emballage avancé', 'Test automatisé', 'Assurance qualité']
       },
       {
-        title: '研发中心',
-        description: '下一代芯片开发的创新中心。',
+        title: 'Centre R&D',
+        description: 'Centre d\'innovation pour le développement de puces de nouvelle génération.',
         image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=400&fit=crop',
-        features: ['产品设计', '仿真与建模', '原型制作']
+        features: ['Conception produit', 'Simulation & modélisation', 'Prototypage']
       }
     ],
     certifications: [
-      { name: 'ISO 9001', description: '质量管理' },
-      { name: 'ISO 14001', description: '环境管理' },
-      { name: 'IATF 16949', description: '汽车质量' },
-      { name: 'ISO 45001', description: '职业健康安全' },
-      { name: 'ISO 27001', description: '信息安全' },
-      { name: 'IECQ', description: '电子元件' }
+      { name: 'ISO 9001', description: 'Management Qualité' },
+      { name: 'ISO 14001', description: 'Management Environnemental' },
+      { name: 'IATF 16949', description: 'Qualité Automobile' },
+      { name: 'ISO 45001', description: 'Santé & Sécurité au Travail' },
+      { name: 'ISO 27001', description: 'Sécurité de l\'Information' },
+      { name: 'IECQ', description: 'Composants Électroniques' }
     ],
     sustainability: {
-      title: '可持续制造',
-      content: '我们致力于通过节能工艺、减排计划和可再生能源采用来最大限度地减少对环境的影响。',
+      title: 'Fabrication Durable',
+      content: 'Nous nous engageons à minimiser notre impact environnemental grâce à des processus économes en énergie, des programmes de réduction des déchets et l\'adoption d\'énergie renouvelable.',
       highlights: [
-        '每颗芯片能耗降低40%',
-        '水资源回收率达90%',
-        '零垃圾填埋目标',
-        '2030年实现碳中和'
+        'Réduction de 40% de la consommation d\'énergie par puce',
+        'Taux de recyclage de l\'eau de 90%',
+        'Objectif zero déchet en décharge',
+        'Carboneutralité d\'ici 2030'
+      ]
+    }
+  },
+  de: {
+    hero: {
+      title: 'Unsere Fabrik',
+      subtitle: 'Hochmoderne Fertigungsanlagen für Spitzenleistung'
+    },
+    overview: {
+      title: 'Fertigungsexzellenz',
+      content: 'Unsere fortschrittlichen Fertigungsanlagen erstrecken sich über mehr als 50.000 Quadratmeter an mehreren Standorten und verwenden modernste Halbleiterfertigungstechnologie, um Chips herzustellen, die die digitale Welt antreiben.'
+    },
+    stats: [
+      { value: '50,000+', label: 'm² Produktionsfläche' },
+      { value: '1,200+', label: 'Mitarbeiter' },
+      { value: '10M+', label: 'Chips/Monat' },
+      { value: '99.9%', label: 'Ausbeuterate' }
+    ],
+    facilities: [
+      {
+        title: 'Wafer-Fertigung',
+        description: 'Moderne 300mm Wafer-Fabrik mit fortschrittlichsten Prozessknoten.',
+        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop',
+        features: ['300mm Wafer-Verarbeitung', '14nm - 28nm Prozessknoten', 'Reinraum Klasse 100']
+      },
+      {
+        title: 'Montage & Test',
+        description: 'Modernste Verpackungs- und Endtestanlagen.',
+        image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop',
+        features: ['Fortschrittliche Verpackung', 'Automatisiertes Testen', 'Qualitätssicherung']
+      },
+      {
+        title: 'Forschungszentrum',
+        description: 'Innovationszentrum für die Entwicklung nächster Chip-Generationen.',
+        image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=400&fit=crop',
+        features: ['Produktdesign', 'Simulation & Modellierung', 'Prototyping']
+      }
+    ],
+    certifications: [
+      { name: 'ISO 9001', description: 'Qualitätsmanagement' },
+      { name: 'ISO 14001', description: 'Umweltmanagement' },
+      { name: 'IATF 16949', description: 'Automobilqualität' },
+      { name: 'ISO 45001', description: 'Arbeitsschutz' },
+      { name: 'ISO 27001', description: 'Informationssicherheit' },
+      { name: 'IECQ', description: 'Elektronische Komponenten' }
+    ],
+    sustainability: {
+      title: 'Nachhaltige Fertigung',
+      content: 'Wir verpflichten uns, unsere Umweltauswirkungen durch energieeffiziente Prozesse, Abfallvermeidungsprogramme und den Einsatz erneuerbarer Energien zu minimieren.',
+      highlights: [
+        '40% Reduzierung des Energieverbrauchs pro Chip',
+        'Wasserrückgewinnungsrate von 90%',
+        'Ziel: Null Abfall zur Deponie',
+        'Klimaneutral bis 2030'
+      ]
+    }
+  },
+  it: {
+    hero: {
+      title: 'La Nostra Fabbrica',
+      subtitle: 'Impianti di produzione all\'avanguardia per eccellenza garantita'
+    },
+    overview: {
+      title: 'Eccellenza nella Produzione',
+      content: 'I nostri impianti di produzione avanzati si estendono per oltre 50.000 metri quadrati in più località, utilizzando tecnologia di fabbricazione di semiconduttori all\'avanguardia per produrre chip che alimentano il mondo digitale.'
+    },
+    stats: [
+      { value: '50,000+', label: 'mq Area di Produzione' },
+      { value: '1,200+', label: 'Dipendenti' },
+      { value: '10M+', label: 'Chip/Mese' },
+      { value: '99.9%', label: 'Tasso di Rendimento' }
+    ],
+    facilities: [
+      {
+        title: 'Fabbricazione Wafer',
+        description: 'Fabbrica wafer 300mm avanzata con nodi di processo all\'avanguardia.',
+        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop',
+        features: ['Processazione wafer 300mm', 'Nodi di processo 14nm - 28nm', 'Sala bianca Classe 100']
+      },
+      {
+        title: 'Assemblaggio & Test',
+        description: 'Impianti di confezionamento e test finale all\'avanguardia.',
+        image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop',
+        features: ['Confezionamento avanzato', 'Test automatizzato', 'Assicurazione qualità']
+      },
+      {
+        title: 'Centro R&D',
+        description: 'Hub di innovazione per lo sviluppo di chip di nuova generazione.',
+        image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=400&fit=crop',
+        features: ['Design prodotto', 'Simulazione & modellazione', 'Prototipazione']
+      }
+    ],
+    certifications: [
+      { name: 'ISO 9001', description: 'Gestione Qualità' },
+      { name: 'ISO 14001', description: 'Gestione Ambientale' },
+      { name: 'IATF 16949', description: 'Qualità Automotive' },
+      { name: 'ISO 45001', description: 'Salute & Sicurezza sul Lavoro' },
+      { name: 'ISO 27001', description: 'Sicurezza delle Informazioni' },
+      { name: 'IECQ', description: 'Componenti Elettronici' }
+    ],
+    sustainability: {
+      title: 'Produzione Sostenibile',
+      content: 'Ci impegniamo a minimizzare il nostro impatto ambientale attraverso processi ad alta efficienza energetica, programmi di riduzione dei rifiuti e adozione di energie rinnovabili.',
+      highlights: [
+        'Riduzione del 40% del consumo energetico per chip',
+        'Tasso di riciclaggio dell\'acqua del 90%',
+        'Obiettivo rifiuti zero in discarica',
+        'Carbonneutral entro il 2030'
+      ]
+    }
+  },
+  es: {
+    hero: {
+      title: 'Nuestra Fábrica',
+      subtitle: 'Instalaciones de fabricación de vanguardia para garantizar la excelencia'
+    },
+    overview: {
+      title: 'Excelencia en Manufactura',
+      content: 'Nuestras avanzadas instalaciones de fabricación se extienden por más de 50,000 metros cuadrados en múltiples ubicaciones, utilizando tecnología de fabricación de semiconductores de vanguardia para producir chips que alimentan el mundo digital.'
+    },
+    stats: [
+      { value: '50,000+', label: 'm² Área de Producción' },
+      { value: '1,200+', label: 'Empleados' },
+      { value: '10M+', label: 'Chips/Mes' },
+      { value: '99.9%', label: 'Tasa de Rendimiento' }
+    ],
+    facilities: [
+      {
+        title: 'Fabricación de Wafers',
+        description: 'Fábrica de wafers 300mm avanzada con nodos de proceso de vanguardia.',
+        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop',
+        features: ['Procesamiento de wafers 300mm', 'Nodos de proceso 14nm - 28nm', 'Sala limpia Clase 100']
+      },
+      {
+        title: 'Ensamble & Prueba',
+        description: 'Instalaciones de encapsulado y prueba final de vanguardia.',
+        image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop',
+        features: ['Encapsulado avanzado', 'Pruebas automatizadas', 'Aseguramiento de calidad']
+      },
+      {
+        title: 'Centro I+D',
+        description: 'Centro de innovación para el desarrollo de chips de nueva generación.',
+        image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=400&fit=crop',
+        features: ['Diseño de producto', 'Simulación y modelado', 'Prototipado']
+      }
+    ],
+    certifications: [
+      { name: 'ISO 9001', description: 'Gestión de Calidad' },
+      { name: 'ISO 14001', description: 'Gestión Ambiental' },
+      { name: 'IATF 16949', description: 'Calidad Automotriz' },
+      { name: 'ISO 45001', description: 'Salud y Seguridad Laboral' },
+      { name: 'ISO 27001', description: 'Seguridad de la Información' },
+      { name: 'IECQ', description: 'Componentes Electrónicos' }
+    ],
+    sustainability: {
+      title: 'Manufactura Sostenible',
+      content: 'Nos comprometemos a minimizar nuestro impacto ambiental a través de procesos eficientes en energía, programas de reducción de residuos y adopción de energía renovable.',
+      highlights: [
+        'Reducción del 40% en el consumo de energía por chip',
+        'Tasa de reciclaje de agua del 90%',
+        'Objetivo cero residuos a vertedero',
+        'Carbono neutral para 2030'
       ]
     }
   }
 };
 
 export default function FactoryPage() {
-  const { language } = useLanguage();
+  const { t, language } = useLanguage();
   const dataLanguage = (factoryData as any)[language] ? language : 'en';
   const data = (factoryData as any)[dataLanguage];
 
@@ -176,7 +338,7 @@ export default function FactoryPage() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              {language === 'en' ? 'Our Facilities' : '我们的设施'}
+              {t.factory.ourFacilities}
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               {data.facilities.map((facility: any, index: number) => (
@@ -216,12 +378,10 @@ export default function FactoryPage() {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
-              {language === 'en' ? 'Certifications' : '认证资质'}
+              {t.factory.certifications}
             </h2>
             <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-              {language === 'en' 
-                ? 'Our facilities maintain the highest industry standards and certifications'
-                : '我们的设施保持最高的行业标准和认证'}
+              {'Our facilities maintain the highest industry standards and certifications'}
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {data.certifications.map((cert: any, index: number) => (
@@ -273,22 +433,22 @@ export default function FactoryPage() {
                 <div className="bg-white/10 backdrop-blur rounded-md p-6 text-center">
                   <Zap className="w-8 h-8 mx-auto mb-2" />
                   <div className="font-bold text-2xl">40%</div>
-                  <div className="text-green-100 text-sm">{language === 'en' ? 'Energy Reduction' : '能耗降低'}</div>
+                  <div className="text-green-100 text-sm">{t.factory.stats.energyReduction}</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-md p-6 text-center">
                   <Shield className="w-8 h-8 mx-auto mb-2" />
                   <div className="font-bold text-2xl">90%</div>
-                  <div className="text-green-100 text-sm">{language === 'en' ? 'Water Recycled' : '水回收'}</div>
+                  <div className="text-green-100 text-sm">{t.factory.stats.waterRecycled}</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-md p-6 text-center">
                   <Factory className="w-8 h-8 mx-auto mb-2" />
                   <div className="font-bold text-2xl">0</div>
-                  <div className="text-green-100 text-sm">{language === 'en' ? 'Waste to Landfill' : '垃圾填埋'}</div>
+                  <div className="text-green-100 text-sm">{t.factory.stats.wasteToLandfill}</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-md p-6 text-center">
                   <Leaf className="w-8 h-8 mx-auto mb-2" />
                   <div className="font-bold text-2xl">2030</div>
-                  <div className="text-green-100 text-sm">{language === 'en' ? 'Carbon Neutral' : '碳中和'}</div>
+                  <div className="text-green-100 text-sm">{t.factory.stats.carbonNeutral}</div>
                 </div>
               </motion.div>
             </div>

@@ -55,6 +55,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
         savedLang = detectBrowserLanguage();
       }
 
+      // Chinese is no longer supported, fallback to English
+      if (savedLang === 'zh') {
+        savedLang = 'en';
+      }
+
       if (savedLang !== DEFAULT_LANGUAGE) {
         setIsLoading(true);
         const trans = await loadTranslation(savedLang);
@@ -68,6 +73,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const setLanguage = useCallback(async (lang: Language) => {
+    // Chinese is no longer supported, fallback to English
+    if (lang === 'zh') {
+      lang = 'en';
+    }
+    
     if (!isValidLanguage(lang)) {
       console.warn(`Invalid language: ${lang}, falling back to ${DEFAULT_LANGUAGE}`);
       lang = DEFAULT_LANGUAGE;

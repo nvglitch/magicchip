@@ -22,9 +22,9 @@ export default function Footer() {
   };
 
   const contactLinks = [
-    { label: 'Email', zhLabel: '邮箱', href: 'mailto:info@magicchip.com', icon: Mail },
-    { label: 'Phone', zhLabel: '电话', href: 'tel:+1234567890', icon: Phone },
-    { label: 'WhatsApp', zhLabel: 'WhatsApp', href: 'https://wa.me/1234567890', icon: MessageCircle },
+    { key: 'email', href: 'mailto:info@magicchip.com', icon: Mail },
+    { key: 'phone', href: 'tel:+1234567890', icon: Phone },
+    { key: 'whatsapp', href: 'https://wa.me/1234567890', icon: MessageCircle },
   ];
 
   return (
@@ -82,10 +82,10 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">{t.footer.links.contact}</h4>
             <ul className="space-y-3">
               {contactLinks.map((link) => (
-                <li key={link.label}>
+                <li key={link.key}>
                   <a href={link.href} className="flex items-center hover:text-white transition-colors">
                     <link.icon className="w-4 h-4 mr-2 flex-shrink-0" />
-                    {language === 'en' ? link.label : link.zhLabel}
+                    {t.footer.contact[link.key === 'email' ? 0 : link.key === 'phone' ? 1 : 2]}
                   </a>
                 </li>
               ))}

@@ -63,61 +63,230 @@ const aboutData = {
       }
     ]
   },
-  zh: {
+  fr: {
     hero: {
-      title: '关于 MagicChip',
-      subtitle: '自2015年引领半导体创新'
+      title: 'À Propos de MagicChip',
+      subtitle: 'Innovation semiconductrice pionnière depuis 2015'
     },
     sections: [
       {
-        title: '公司介绍',
-        description: '了解我们的历史、使命和半导体技术的未来愿景',
+        title: 'Notre Entreprise',
+        description: 'Découvrez notre histoire, notre mission et notre vision pour l\'avenir de la technologie semiconductrice',
         icon: BookOpen,
         href: '/company',
         stats: [
-          { label: '成立时间', value: '2015年' },
-          { label: '员工数量', value: '500+' },
-          { label: '专利数量', value: '120+' }
+          { label: 'Fondée', value: '2015' },
+          { label: 'Employés', value: '500+' },
+          { label: 'Brevets', value: '120+' }
         ]
       },
       {
-        title: '生产设施',
-        description: '探索我们先进的制造设施和生产产能',
+        title: 'Installations de Fabrication',
+        description: 'Explorez nos installations de fabrication de pointe et nos capacités de production',
         icon: Factory,
         href: '/factory',
         stats: [
-          { label: '工厂数量', value: '3座' },
-          { label: '年产能', value: '1000万+' },
-          { label: '良品率', value: '99.9%' }
+          { label: 'Usines', value: '3' },
+          { label: 'Capacité', value: '10M+' },
+          { label: 'Taux de Rendement', value: '99.9%' }
         ]
       },
       {
-        title: '领导团队',
-        description: '认识推动半导体行业创新与发展的执行团队',
+        title: 'Équipe Membre',
+        description: 'Rencontrez notre équipe dirigeante qui stimule l\'innovation et la croissance dans l\'industrie semiconductrice',
         icon: Users,
         href: '/leadership',
         stats: [
-          { label: '高管人数', value: '8位' },
-          { label: '平均经验', value: '20+' },
-          { label: '行业奖项', value: '15个' }
+          { label: 'Dirigeants', value: '8' },
+          { label: 'Expérience Moyenne', value: '20+' },
+          { label: 'Prix Industriels', value: '15' }
         ]
       }
     ],
     highlights: [
       {
         icon: Globe,
-        title: '全球布局',
-        description: '业务遍及4大洲，客户覆盖50多个国家'
+        title: 'Présence Globale',
+        description: 'Opérations sur 4 continents avec des clients dans plus de 50 pays'
       },
       {
         icon: Award,
-        title: '行业认可',
-        description: '获奖产品与持续的质量认证'
+        title: 'Reconnaissance Industrielle',
+        description: 'Produits primés et certifications de qualité constantes'
       },
       {
         icon: TrendingUp,
-        title: '快速增长',
-        description: '过去5年年收入增长40%'
+        title: 'Croissance Rapide',
+        description: 'Croissance du chiffre d\'affaires de 40% par an au cours des 5 dernières années'
+      }
+    ]
+  },
+  de: {
+    hero: {
+      title: 'Über MagicChip',
+      subtitle: 'Pionierin der Halbleiterinnovation seit 2015'
+    },
+    sections: [
+      {
+        title: 'Unser Unternehmen',
+        description: 'Erfahren Sie mehr über unsere Geschichte, Mission und Vision für die Zukunft der Halbleitertechnologie',
+        icon: BookOpen,
+        href: '/company',
+        stats: [
+          { label: 'Gegründet', value: '2015' },
+          { label: 'Mitarbeiter', value: '500+' },
+          { label: 'Patente', value: '120+' }
+        ]
+      },
+      {
+        title: 'Fertigungsanlagen',
+        description: 'Entdecken Sie unsere hochmodernen Fertigungsanlagen und Produktionskapazitäten',
+        icon: Factory,
+        href: '/factory',
+        stats: [
+          { label: 'Fabriken', value: '3' },
+          { label: 'Kapazität', value: '10M+' },
+          { label: 'Ausbeute', value: '99.9%' }
+        ]
+      },
+      {
+        title: 'Mitglieder-Team',
+        description: 'Lernen Sie unser Führungsteam kennen, das Innovation und Wachstum in der Halbleiterindustrie vorantreibt',
+        icon: Users,
+        href: '/leadership',
+        stats: [
+          { label: 'Führungskräfte', value: '8' },
+          { label: 'Durchschn. Erfahrung', value: '20+' },
+          { label: 'Industriepreise', value: '15' }
+        ]
+      }
+    ],
+    highlights: [
+      {
+        icon: Globe,
+        title: 'Globale Präsenz',
+        description: 'Operationen auf 4 Kontinenten mit Kunden in über 50 Ländern'
+      },
+      {
+        icon: Award,
+        title: 'Branchenanerkennung',
+        description: 'Preisgekrönte Produkte und constante Qualitätszertifizierungen'
+      },
+      {
+        icon: TrendingUp,
+        title: 'Schnelles Wachstum',
+        description: 'Jährliches Umsatzwachstum von 40% in den letzten 5 Jahren'
+      }
+    ]
+  },
+  it: {
+    hero: {
+      title: 'Su MagicChip',
+      subtitle: 'Innovazione nei semiconduttori pioniera dal 2015'
+    },
+    sections: [
+      {
+        title: 'La Nostra Azienda',
+        description: 'Scopri la nostra storia, missione e visione per il futuro della tecnologia dei semiconduttori',
+        icon: BookOpen,
+        href: '/company',
+        stats: [
+          { label: 'Fondata', value: '2015' },
+          { label: 'Dipendenti', value: '500+' },
+          { label: 'Brevetti', value: '120+' }
+        ]
+      },
+      {
+        title: 'Impianti di Produzione',
+        description: 'Esplora i nostri impianti di fabbricazione all\'avanguardia e le capacità produttive',
+        icon: Factory,
+        href: '/factory',
+        stats: [
+          { label: 'Fabbriche', value: '3' },
+          { label: 'Capacità', value: '10M+' },
+          { label: 'Tasso di Resa', value: '99.9%' }
+        ]
+      },
+      {
+        title: 'Team Membri',
+        description: 'Incontra il nostro team dirigenziale che guida l\'innovazione e la crescita nell\'industria dei semiconduttori',
+        icon: Users,
+        href: '/leadership',
+        stats: [
+          { label: 'Dirigenti', value: '8' },
+          { label: 'Esperienza Media', value: '20+' },
+          { label: 'Premi Industriali', value: '15' }
+        ]
+      }
+    ],
+    highlights: [
+      {
+        icon: Globe,
+        title: 'Presenza Globale',
+        description: 'Operazioni su 4 continenti con clienti in più di 50 paesi'
+      },
+      {
+        icon: Award,
+        title: 'Riconoscimento Industriale',
+        description: 'Prodotti pluripremiati e certificazioni di qualità costanti'
+      },
+      {
+        icon: TrendingUp,
+        title: 'Crescita Rapida',
+        description: 'Crescita del fatturato del 40% anno su anno negli ultimi 5 anni'
+      }
+    ]
+  },
+  es: {
+    hero: {
+      title: 'Sobre MagicChip',
+      subtitle: 'Innovación en semiconductores pionera desde 2015'
+    },
+    sections: [
+      {
+        title: 'Nuestra Empresa',
+        description: 'Conoce nuestra historia, misión y visión para el futuro de la tecnología de semiconductores',
+        icon: BookOpen,
+        href: '/company',
+        stats: [
+          { label: 'Fundada', value: '2015' },
+          { label: 'Empleados', value: '500+' },
+          { label: 'Patentes', value: '120+' }
+        ]
+      },
+      {
+        title: 'Instalaciones de Fabricación',
+        description: 'Explora nuestras instalaciones de fabricación de vanguardia y capacidades de producción',
+        icon: Factory,
+        href: '/factory',
+        stats: [
+          { label: 'Fábricas', value: '3' },
+          { label: 'Capacidad', value: '10M+' },
+          { label: 'Tasa de Rendimiento', value: '99.9%' }
+        ]
+      },
+      {
+        title: 'Equipo de Miembros',
+        description: 'Conoce a nuestro equipo directivo que impulsa la innovación y el crecimiento en la industria de semiconductores',
+        icon: Users,
+        href: '/leadership',
+        stats: [
+          { label: 'Ejecutivos', value: '8' },
+          { label: 'Experiencia Promedio', value: '20+' },
+          { label: 'Premios Industriales', value: '15' }
+        ]
+      }
+    ],
+    highlights: [
+      {
+        icon: Globe,
+        title: 'Presencia Global',
+        description: 'Operaciones en 4 continentes con clientes en más de 50 países'
+      },
+      {
+        icon: Award,
+        title: 'Reconocimiento Industrial',
+        description: 'Productos galardonados y certificaciones de calidad consistentes'
       }
     ]
   }
@@ -125,7 +294,7 @@ const aboutData = {
 
 export default function AboutPage() {
   const { language } = useLanguage();
-  const data = language === 'en' ? aboutData.en : aboutData.zh;
+  const data = aboutData[language] || aboutData.en;
 
   return (
     <main className="min-h-screen bg-white">
@@ -175,7 +344,7 @@ export default function AboutPage() {
                   ))}
                 </div>
                 <span className="flex items-center text-blue-600 font-medium">
-                  {language === 'en' ? 'Learn More' : '了解更多'}
+                  {'Learn More'}
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </span>
               </motion.a>

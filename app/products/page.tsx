@@ -44,54 +44,182 @@ const productsData = {
       title: 'Need a Custom Solution?',
       description: 'We offer customized semiconductor solutions tailored to your specific requirements.',
       button: 'Contact Sales'
-    }
+    },
+    learnMore: 'Learn More'
   },
-  zh: {
+  fr: {
     hero: {
-      title: '产品中心',
-      subtitle: '创新半导体解决方案，为计算未来提供动力'
+      title: 'Nos Produits',
+      subtitle: 'Solutions semiconductrices innovantes alimentant le futur de l\'informatique'
     },
     categories: [
       {
-        title: '企业级CPU',
-        description: '为数据中心和企业工作负载设计的高性能处理器',
-        features: ['最高128核心', '先进缓存架构', '企业级可靠性', '虚拟化支持'],
+        title: 'Processeurs Entreprise',
+        description: 'Processeurs haute performance conçus pour les centres de données et les charges de travail entreprise',
+        features: ['Jusqu\'à 128 cœurs', 'Architecture de cache avancée', 'Fiabilité de niveau entreprise', 'Support de virtualisation'],
         icon: Cpu,
         href: '#'
       },
       {
-        title: 'AI加速器',
-        description: '针对机器学习和AI工作负载优化的专业芯片',
-        features: ['张量处理核心', '高内存带宽', '低延迟推理', '可扩展架构'],
+        title: 'Accélérateurs IA',
+        description: 'Puces spécialisées optimisées pour les charges de travail d\'apprentissage automatique et d\'IA',
+        features: ['Cœurs de traitement tensoriel', 'Large bande passante mémoire', 'Inférence à faible latence', 'Architecture évolutive'],
         icon: Brain,
         href: '#'
       },
       {
-        title: '网络芯片',
-        description: '面向下一代网络的高级连接解决方案',
-        features: ['高速数据传输', '低功耗', '高级安全功能', '灵活可编程'],
+        title: 'Puces Réseau',
+        description: 'Solutions de connectivité avancées pour les réseaux de nouvelle génération',
+        features: ['Transfert de données haute vitesse', 'Faible consommation d\'énergie', 'Fonctionnalités de sécurité avancées', 'Programmabilité flexible'],
         icon: Network,
         href: '#'
       },
       {
-        title: '安全模块',
-        description: '用于数据保护的硬件安全解决方案',
-        features: ['硬件加密', '安全启动', '篡改检测', '密钥管理'],
+        title: 'Modules de Sécurité',
+        description: 'Solutions de sécurité basées sur le matériel pour la protection des données',
+        features: ['Chiffrement matériel', 'Démarrage sécurisé', 'Détection de falsification', 'Gestion des clés'],
         icon: Shield,
         href: '#'
       }
     ],
     cta: {
-      title: '需要定制方案？',
-      description: '我们提供根据您的特定需求定制的半导体解决方案。',
-      button: '联系销售'
-    }
+      title: 'Besoin d\'une Solution Personnalisée?',
+      description: 'Nous proposons des solutions semiconductrices personnalisées adaptées à vos besoins spécifiques.',
+      button: 'Contacter les Ventes'
+    },
+    learnMore: 'En Savoir Plus'
+  },
+  de: {
+    hero: {
+      title: 'Unsere Produkte',
+      subtitle: 'Innovative Halbleiterlösungen, die die Zukunft des Computing antreiben'
+    },
+    categories: [
+      {
+        title: 'Enterprise-Prozessoren',
+        description: 'Hochleistungsprozessoren für Rechenzentren und Enterprise-Workloads',
+        features: ['Bis zu 128 Kerne', 'Erweiterte Cache-Architektur', 'Enterprise-Zuverlässigkeit', 'Virtualisierungsunterstützung'],
+        icon: Cpu,
+        href: '#'
+      },
+      {
+        title: 'KI-Beschleuniger',
+        description: 'Spezialisierte Chips für maschinelles Lernen und KI-Workloads',
+        features: ['Tensor-Verarbeitungskerne', 'Hohe Speicherbandbreite', 'Inferenz mit niedriger Latenz', 'Skalierbare Architektur'],
+        icon: Brain,
+        href: '#'
+      },
+      {
+        title: 'Netzwerk-Chips',
+        description: 'Fortgeschrittene Konnektivitätslösungen für Netzwerke der nächsten Generation',
+        features: ['Hochgeschwindigkeits-Datentransfer', 'Niedriger Stromverbrauch', 'Erweiterte Sicherheitsfunktionen', 'Flexible Programmierbarkeit'],
+        icon: Network,
+        href: '#'
+      },
+      {
+        title: 'Sicherheitsmodule',
+        description: 'Hardware-basierte Sicherheitslösungen für Datenschutz',
+        features: ['Hardware-Verschlüsselung', 'Sicherer Start', 'Manipulationserkennung', 'Schlüsselverwaltung'],
+        icon: Shield,
+        href: '#'
+      }
+    ],
+    cta: {
+      title: 'Benötigen Sie eine Maßgeschneiderte Lösung?',
+      description: 'Wir bieten maßgeschneiderte Halbleiterlösungen, die auf Ihre spezifischen Anforderungen zugeschnitten sind.',
+      button: 'Vertrieb Kontaktieren'
+    },
+    learnMore: 'Mehr Erfahren'
+  },
+  it: {
+    hero: {
+      title: 'I Nostri Prodotti',
+      subtitle: 'Soluzioni semiconduttrici innovative che alimentano il futuro del computing'
+    },
+    categories: [
+      {
+        title: 'CPU Enterprise',
+        description: 'Processori ad alte prestazioni progettati per data center e carichi di lavoro enterprise',
+        features: ['Fino a 128 core', 'Architettura cache avanzata', 'Affidabilità di livello enterprise', 'Supporto alla virtualizzazione'],
+        icon: Cpu,
+        href: '#'
+      },
+      {
+        title: 'Acceleratori IA',
+        description: 'Chip specializzati ottimizzati per carichi di lavoro di machine learning e IA',
+        features: ['Core di elaborazione tensoriale', 'Alta larghezza di banda di memoria', 'Inferenza a bassa latenza', 'Architettura scalabile'],
+        icon: Brain,
+        href: '#'
+      },
+      {
+        title: 'Chip di Rete',
+        description: 'Soluzioni di connettività avanzate per reti di nuova generazione',
+        features: ['Trasferimento dati ad alta velocità', 'Basso consumo energetico', 'Funzionalità di sicurezza avanzate', 'Programmabilità flessibile'],
+        icon: Network,
+        href: '#'
+      },
+      {
+        title: 'Moduli di Sicurezza',
+        description: 'Soluzioni di sicurezza basate su hardware per la protezione dei dati',
+        features: ['Crittografia hardware', 'Avvio sicuro', 'Rilevamento manomissioni', 'Gestione delle chiavi'],
+        icon: Shield,
+        href: '#'
+      }
+    ],
+    cta: {
+      title: 'Hai Bisogno di una Soluzione Personalizzata?',
+      description: 'Offriamo soluzioni semiconduttrici personalizzate adattate alle tue esigenze specifiche.',
+      button: 'Contatta le Vendite'
+    },
+    learnMore: 'Scopri di Più'
+  },
+  es: {
+    hero: {
+      title: 'Nuestros Productos',
+      subtitle: 'Soluciones semiconductrices innovadoras que impulsan el futuro de la computación'
+    },
+    categories: [
+      {
+        title: 'CPU Empresariales',
+        description: 'Procesadores de alto rendimiento diseñados para centros de datos y cargas de trabajo empresariales',
+        features: ['Hasta 128 núcleos', 'Arquitectura de caché avanzada', 'Confiabilidad de nivel empresarial', 'Soporte de virtualización'],
+        icon: Cpu,
+        href: '#'
+      },
+      {
+        title: 'Aceleradores IA',
+        description: 'Chip especializados optimizados para cargas de trabajo de aprendizaje automático e IA',
+        features: ['Núcleos de procesamiento tensorial', 'Ancho de banda de memoria alto', 'Inferencia de baja latencia', 'Arquitectura escalable'],
+        icon: Brain,
+        href: '#'
+      },
+      {
+        title: 'Chips de Red',
+        description: 'Soluciones de conectividad avanzadas para redes de próxima generación',
+        features: ['Transferencia de datos de alta velocidad', 'Bajo consumo de energía', 'Funciones de seguridad avanzadas', 'Programabilidad flexible'],
+        icon: Network,
+        href: '#'
+      },
+      {
+        title: 'Módulos de Seguridad',
+        description: 'Soluciones de seguridad basadas en hardware para la protección de datos',
+        features: ['Cifrado de hardware', 'Arranque seguro', 'Detección de manipulaciones', 'Gestión de claves'],
+        icon: Shield,
+        href: '#'
+      }
+    ],
+    cta: {
+      title: '¿Necesitas una Solución Personalizada?',
+      description: 'Ofrecemos soluciones semiconductrices personalizadas adaptadas a tus requisitos específicos.',
+      button: 'Contactar Ventas'
+    },
+    learnMore: 'Más Información'
   }
 };
 
 export default function ProductsPage() {
   const { language } = useLanguage();
-  const data = language === 'en' ? productsData.en : productsData.zh;
+  const data = productsData[language] || productsData.en;
 
   return (
     <main className="min-h-screen bg-white">
@@ -134,7 +262,7 @@ export default function ProductsPage() {
                     href={category.href}
                     className="flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
                   >
-                    {language === 'en' ? 'Learn More' : '了解更多'}
+                    {data.learnMore}
                     <ArrowRight className="w-4 h-4 ml-1" />
                   </a>
                 </div>

@@ -61,60 +61,164 @@ const companyData = {
       { city: 'Tokyo', country: 'Japan', address: 'Asia Pacific Sales' }
     ]
   },
-  zh: {
+  fr: {
     hero: {
-      title: '关于我们',
-      subtitle: '自2015年起，引领企业硬件技术创新'
+      title: 'À Propos de MagicChip',
+      subtitle: 'Pionnier de l\'innovation semiconductrice depuis 2015'
     },
     stats: [
-      { value: '10+', label: '年行业经验' },
-      { value: '500+', label: '企业客户' },
-      { value: '50M+', label: '芯片出货量' },
-      { value: '30+', label: '服务国家' }
+      { value: '10+', label: 'Années d\'Expérience' },
+      { value: '500+', label: 'Clients Entreprise' },
+      { value: '50M+', label: 'Puces Livrées' },
+      { value: '30+', label: 'Pays Desservis' }
     ],
     mission: {
-      title: '企业使命',
-      content: '以尖端的硬件解决方案赋能企业，推动创新、效率和可持续增长。我们致力于提供构成现代数字基础设施骨干的半导体技术。'
+      title: 'Notre Mission',
+      content: 'Révolutionner l\'industrie des semi-conducteurs avec des solutions de calcul de pointe qui alimentent l\'avenir de la technologie.'
     },
     vision: {
-      title: '企业愿景',
-      content: '成为全球企业级芯片解决方案的领导者，以技术创新、品质卓越和社会贡献而闻名。'
+      title: 'Notre Vision',
+      content: 'Devenir le leader mondial des semi-conducteurs, en permettant des avancées dans l\'IA, le cloud computing et l\'edge computing.'
     },
     values: [
-      {
-        title: '创新',
-        description: '我们不断突破芯片设计和制造的极限。',
-        icon: '💡'
-      },
-      {
-        title: '品质',
-        description: '我们生产的每颗芯片都符合最高的可靠性和性能标准。',
-        icon: '⭐'
-      },
-      {
-        title: '可持续发展',
-        description: '我们致力于通过绿色制造减少环境足迹。',
-        icon: '🌱'
-      },
-      {
-        title: '合作伙伴',
-        description: '我们与客户建立基于信任和共同成功的长期关系。',
-        icon: '🤝'
-      }
+      { title: 'Innovation', description: 'Nous repoussons constamment les limites de ce qui est possible dans la conception et la fabrication des puces.', icon: '💡' },
+      { title: 'Qualité', description: 'Chaque puce que nous produisons répond aux plus hautes normes de fiabilité et de performance.', icon: '⭐' },
+      { title: 'Durabilité', description: 'Nous nous engageons à réduire notre empreinte environnementale grâce à une fabrication verte.', icon: '🌱' },
+      { title: 'Partenariat', description: 'Nous construisons des relations à long terme avec nos clients fondées sur la confiance et le succès mutuel.', icon: '🤝' }
     ],
     timeline: [
-      { year: '2015', title: '成立', description: 'MagicChip在深圳成立' },
-      { year: '2017', title: '首款产品', description: '发布MC-Pro X1系列' },
-      { year: '2019', title: '全球扩张', description: '在美国和欧洲开设办事处' },
-      { year: '2021', title: 'AI聚焦', description: '推出AI加速器产品线' },
-      { year: '2023', title: '上市', description: '在纳斯达克上市' },
-      { year: '2025', title: '新工厂', description: '开设先进制造设施' }
+      { year: '2015', title: 'Fondation', description: 'MagicChip a été fondé à Shenzhen' },
+      { year: '2017', title: 'Premier Produit', description: 'Lancement de la série MC-Pro X1' },
+      { year: '2019', title: 'Expansion Mondiale', description: 'Ouverture de bureaux aux États-Unis et en Europe' },
+      { year: '2021', title: 'Focus IA', description: 'Introduction de la ligne de produits accélérateurs IA' },
+      { year: '2023', title: 'Introduction en Bourse', description: 'Cotation au NASDAQ' },
+      { year: '2025', title: 'Nouvelle Usine', description: 'Ouverture d\'une installation de fabrication avancée' }
     ],
     locations: [
-      { city: '深圳', country: '中国', address: '总部与研发中心' },
-      { city: '圣何塞', country: '美国', address: '北美总部' },
-      { city: '慕尼黑', country: '德国', address: '欧洲办公室' },
-      { city: '东京', country: '日本', address: '亚太销售' }
+      { city: 'Shenzhen', country: 'Chine', address: 'Siège et R&D' },
+      { city: 'San Jose', country: 'USA', address: 'Siège Amérique du Nord' },
+      { city: 'Munich', country: 'Allemagne', address: 'Bureau Europe' },
+      { city: 'Tokyo', country: 'Japon', address: 'Ventes APAC' }
+    ]
+  },
+  de: {
+    hero: {
+      title: 'Über MagicChip',
+      subtitle: 'Pionier der Halbleiterinnovation seit 2015'
+    },
+    stats: [
+      { value: '10+', label: 'Jahre Erfahrung' },
+      { value: '500+', label: 'Unternehmenskunden' },
+      { value: '50M+', label: 'Ausgelieferte Chips' },
+      { value: '30+', label: 'Bediente Länder' }
+    ],
+    mission: {
+      title: 'Unsere Mission',
+      content: 'Die Halbleiterindustrie mit Spitzentechnologie-Lösungen revolutionieren, die die Zukunft der Technologie antreiben.'
+    },
+    vision: {
+      title: 'Unsere Vision',
+      content: 'Weltmarktführer in Halbleitern werden und Fortschritte in KI, Cloud Computing und Edge Computing ermöglichen.'
+    },
+    values: [
+      { title: 'Innovation', description: 'Wir erweitern ständig die Grenzen dessen, was in Chip-Design und -Fertigung möglich ist.', icon: '💡' },
+      { title: 'Qualität', description: 'Jeder Chip, den wir herstellen, erfüllt die höchsten Standards für Zuverlässigkeit und Leistung.', icon: '⭐' },
+      { title: 'Nachhaltigkeit', description: 'Wir verpflichten uns, unseren ökologischen Fußabdruck durch grüne Fertigung zu reduzieren.', icon: '🌱' },
+      { title: 'Partnerschaft', description: 'Wir bauen langfristige Beziehungen zu unseren Kunden auf Vertrauen und gemeinsamen Erfolg auf.', icon: '🤝' }
+    ],
+    timeline: [
+      { year: '2015', title: 'Gründung', description: 'MagicChip wurde in Shenzhen gegründet' },
+      { year: '2017', title: 'Erstes Produkt', description: 'Einführung der MC-Pro X1 Serie' },
+      { year: '2019', title: 'Globale Expansion', description: 'Eröffnung von Büros in den USA und Europa' },
+      { year: '2021', title: 'KI-Fokus', description: 'Einführung der KI-Beschleuniger-Produktlinie' },
+      { year: '2023', title: 'Börsengang', description: 'Notierung am NASDAQ' },
+      { year: '2025', title: 'Neue Fabrik', description: 'Eröffnung einer hochmodernen Fertigungsanlage' }
+    ],
+    locations: [
+      { city: 'Shenzhen', country: 'China', address: 'Hauptsitz und F&E' },
+      { city: 'San Jose', country: 'USA', address: 'Nordamerika-Zentrale' },
+      { city: 'München', country: 'Deutschland', address: 'Europa-Büro' },
+      { city: 'Tokio', country: 'Japan', address: 'APAC Vertrieb' }
+    ]
+  },
+  it: {
+    hero: {
+      title: 'Chi Siamo MagicChip',
+      subtitle: 'Pioniere dell\'innovazione nei semiconduttori dal 2015'
+    },
+    stats: [
+      { value: '10+', label: 'Anni di Esperienza' },
+      { value: '500+', label: 'Clienti Aziendali' },
+      { value: '50M+', label: 'Chip Spediti' },
+      { value: '30+', label: 'Paesi Serviti' }
+    ],
+    mission: {
+      title: 'La Nostra Missione',
+      content: 'Rivoluzionare l\'industria dei semiconduttori con soluzioni di calcolo all\'avanguardia che alimentano il futuro della tecnologia.'
+    },
+    vision: {
+      title: 'La Nostra Visione',
+      content: 'Diventare leader mondiale nei semiconduttori, permettendo progressi in IA, cloud computing e edge computing.'
+    },
+    values: [
+      { title: 'Innovazione', description: 'Spingiamo costantemente i limiti di ciò che è possibile nella progettazione e produzione dei chip.', icon: '💡' },
+      { title: 'Qualità', description: 'Ogni chip che produciamo rispetta i più alti standard di affidabilità e prestazioni.', icon: '⭐' },
+      { title: 'Sostenibilità', description: 'Ci impegniamo a ridurre il nostro impatto ambientale attraverso una produzione verde.', icon: '🌱' },
+      { title: 'Partnership', description: 'Costruiamo relazioni a lungo termine con i nostri clienti basate su fiducia e successo reciproco.', icon: '🤝' }
+    ],
+    timeline: [
+      { year: '2015', title: 'Fondazione', description: 'MagicChip è stata fondata a Shenzhen' },
+      { year: '2017', title: 'Primo Prodotto', description: 'Lancio della serie MC-Pro X1' },
+      { year: '2019', title: 'Espansione Globale', description: 'Apertura di uffici negli USA e in Europa' },
+      { year: '2021', title: 'Focus IA', description: 'Introduzione della linea di prodotti acceleratori IA' },
+      { year: '2023', title: 'IPO', description: 'Quotazione al NASDAQ' },
+      { year: '2025', title: 'Nuova Fabbrica', description: 'Apertura di uno stabilimento produttivo avanzato' }
+    ],
+    locations: [
+      { city: 'Shenzhen', country: 'Cina', address: 'Sede e R&D' },
+      { city: 'San Jose', country: 'USA', address: 'Sede Nord America' },
+      { city: 'Monaco', country: 'Germania', address: 'Ufficio Europa' },
+      { city: 'Tokyo', country: 'Giappone', address: 'Vendite APAC' }
+    ]
+  },
+  es: {
+    hero: {
+      title: 'Acerca de MagicChip',
+      subtitle: 'Pionero en innovación de semiconductores desde 2015'
+    },
+    stats: [
+      { value: '10+', label: 'Años de Experiencia' },
+      { value: '500+', label: 'Clientes Empresariales' },
+      { value: '50M+', label: 'Chips Enviados' },
+      { value: '30+', label: 'Países Atendidos' }
+    ],
+    mission: {
+      title: 'Nuestra Misión',
+      content: 'Revolucionar la industria de semiconductores con soluciones informáticas de vanguardia que impulsan el futuro de la tecnología.'
+    },
+    vision: {
+      title: 'Nuestra Visión',
+      content: 'Convertirnos en el líder mundial en semiconductores, permitiendo avances en IA, computación en la nube y edge computing.'
+    },
+    values: [
+      { title: 'Innovación', description: 'Constantemente superamos los límites de lo posible en el diseño y fabricación de chips.', icon: '💡' },
+      { title: 'Calidad', description: 'Cada chip que producimos cumple con los más altos estándares de confiabilidad y rendimiento.', icon: '⭐' },
+      { title: 'Sostenibilidad', description: 'Nos comprometemos a reducir nuestra huella ambiental mediante fabricación verde.', icon: '🌱' },
+      { title: 'Asociación', description: 'Construimos relaciones a largo plazo con nuestros clientes basadas en confianza y éxito mutuo.', icon: '🤝' }
+    ],
+    timeline: [
+      { year: '2015', title: 'Fundación', description: 'MagicChip fue fundada en Shenzhen' },
+      { year: '2017', title: 'Primer Producto', description: 'Lanzamiento de la serie MC-Pro X1' },
+      { year: '2019', title: 'Expansión Global', description: 'Apertura de oficinas en EE.UU. y Europa' },
+      { year: '2021', title: 'Enfoque IA', description: 'Introducción de la línea de productos aceleradores IA' },
+      { year: '2023', title: 'OPV', description: 'Cotización en NASDAQ' },
+      { year: '2025', title: 'Nueva Fábrica', description: 'Apertura de instalación de fabricación avanzada' }
+    ],
+    locations: [
+      { city: 'Shenzhen', country: 'China', address: 'Sede y I+D' },
+      { city: 'San Jose', country: 'EE.UU.', address: 'Sede Norte América' },
+      { city: 'Múnich', country: 'Alemania', address: 'Oficina Europa' },
+      { city: 'Tokio', country: 'Japón', address: 'Ventas APAC' }
     ]
   }
 };
@@ -198,7 +302,7 @@ export default function CompanyPage() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              {language === 'en' ? 'Our Core Values' : '我们的核心价值观'}
+              {'Our Core Values'}
             </h2>
             <div className="grid md:grid-cols-4 gap-8">
               {data.values.map((value: any, index: number) => (
@@ -222,7 +326,7 @@ export default function CompanyPage() {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              {language === 'en' ? 'Our Journey' : '发展历程'}
+              {'Our Journey'}
             </h2>
             <div className="relative">
               <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-blue-200 hidden md:block" />
@@ -253,7 +357,7 @@ export default function CompanyPage() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              {language === 'en' ? 'Global Presence' : '全球布局'}
+              {'Global Presence'}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {data.locations.map((location: any, index: number) => (

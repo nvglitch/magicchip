@@ -106,19 +106,19 @@ const downloadsData = {
       }
     ]
   },
-  zh: {
+  fr: {
     categories: [
-      { id: 'brochures', name: '产品手册', icon: FileText },
-      { id: 'whitepapers', name: '白皮书', icon: FileText },
-      { id: 'datasheets', name: '数据手册', icon: FileText },
-      { id: 'presentations', name: '演示文稿', icon: Presentation },
-      { id: 'images', name: '图片与Logo', icon: Image },
+      { id: 'brochures', name: 'Brochures', icon: FileText },
+      { id: 'whitepapers', name: 'Livres Blancs', icon: FileText },
+      { id: 'datasheets', name: 'Fiches Techniques', icon: FileText },
+      { id: 'presentations', name: 'Présentations', icon: Presentation },
+      { id: 'images', name: 'Images & Logos', icon: Image },
     ],
     items: [
       {
         id: 1,
-        title: 'MagicChip产品组合2026',
-        description: '我们的企业硬件和服务产品的完整概述。',
+        title: 'MagicChip Portfolio Produits 2026',
+        description: 'Aperçu complet de notre matériel entreprise et de nos services.',
         category: 'brochures',
         format: 'PDF',
         size: '4.2 MB',
@@ -126,8 +126,8 @@ const downloadsData = {
       },
       {
         id: 2,
-        title: '企业解决方案指南',
-        description: '数据中心和云基础设施解决方案的完整指南。',
+        title: 'Guide des Solutions Entreprise',
+        description: 'Guide complet des solutions d\'infrastructure de centre de données et cloud.',
         category: 'brochures',
         format: 'PDF',
         size: '3.8 MB',
@@ -135,8 +135,8 @@ const downloadsData = {
       },
       {
         id: 3,
-        title: 'AI加速器白皮书',
-        description: 'MC-AI Pro系列架构和性能的技术深入分析。',
+        title: 'Livre Blanc Accélérateur IA',
+        description: 'Plongeon technique dans l\'architecture et les performances de la série MC-AI Pro.',
         category: 'whitepapers',
         format: 'PDF',
         size: '2.5 MB',
@@ -144,8 +144,8 @@ const downloadsData = {
       },
       {
         id: 4,
-        title: '边缘计算架构',
-        description: '在企业环境中部署边缘解决方案的最佳实践。',
+        title: 'Architecture Edge Computing',
+        description: 'Bonnes pratiques pour le déploiement de solutions edge en environnements entreprise.',
         category: 'whitepapers',
         format: 'PDF',
         size: '1.8 MB',
@@ -153,8 +153,8 @@ const downloadsData = {
       },
       {
         id: 5,
-        title: 'MC-Pro X1 数据手册',
-        description: '旗舰处理器系列的完整技术规格。',
+        title: 'Fiche Technique MC-Pro X1',
+        description: 'Spécifications techniques complètes de la série de processeurs flagship.',
         category: 'datasheets',
         format: 'PDF',
         size: '890 KB',
@@ -162,8 +162,8 @@ const downloadsData = {
       },
       {
         id: 6,
-        title: 'MC-Network 10G 数据手册',
-        description: '网络芯片规格和性能基准。',
+        title: 'Fiche Technique MC-Network 10G',
+        description: 'Spécifications des puces réseau et benchmarks de performance.',
         category: 'datasheets',
         format: 'PDF',
         size: '720 KB',
@@ -171,8 +171,8 @@ const downloadsData = {
       },
       {
         id: 7,
-        title: '2025年第四季度投资者演示',
-        description: '季度财务业绩和业务展望。',
+        title: 'Présentation Investisseurs T4 2025',
+        description: 'Résultats financiers trimestriels et perspectives commerciales.',
         category: 'presentations',
         format: 'PPTX',
         size: '8.5 MB',
@@ -180,8 +180,8 @@ const downloadsData = {
       },
       {
         id: 8,
-        title: '合作伙伴计划概述',
-        description: '潜在业务合作伙伴和经销商信息。',
+        title: 'Aperçu Programme Partenaires',
+        description: 'Informations pour les partenaires commerciaux et revendeurs potentiels.',
         category: 'presentations',
         format: 'PDF',
         size: '2.1 MB',
@@ -189,8 +189,8 @@ const downloadsData = {
       },
       {
         id: 9,
-        title: '品牌资产包',
-        description: '官方Logo、品牌指南和批准使用的图片。',
+        title: 'Pack Identité de Marque',
+        description: 'Logos officiels, directives de marque et images approuvées.',
         category: 'images',
         format: 'ZIP',
         size: '15.3 MB',
@@ -198,8 +198,311 @@ const downloadsData = {
       },
       {
         id: 10,
-        title: '产品摄影',
-        description: '用于媒体和营销的高分辨率产品图片。',
+        title: 'Photographie Produit',
+        description: 'Images produit haute résolution pour les médias et le marketing.',
+        category: 'images',
+        format: 'ZIP',
+        size: '45.8 MB',
+        date: '2026-02-01'
+      }
+    ]
+  },
+  de: {
+    categories: [
+      { id: 'brochures', name: 'Broschüren', icon: FileText },
+      { id: 'whitepapers', name: 'Whitepapers', icon: FileText },
+      { id: 'datasheets', name: 'Datenblätter', icon: FileText },
+      { id: 'presentations', name: 'Präsentationen', icon: Presentation },
+      { id: 'images', name: 'Bilder & Logos', icon: Image },
+    ],
+    items: [
+      {
+        id: 1,
+        title: 'MagicChip Produktportfolio 2026',
+        description: 'Vollständiger Überblick über unsere Enterprise-Hardware und Serviceangebote.',
+        category: 'brochures',
+        format: 'PDF',
+        size: '4.2 MB',
+        date: '2026-03-01'
+      },
+      {
+        id: 2,
+        title: 'Enterprise-Lösungen Guide',
+        description: 'Umfassender Leitfaden zu Rechenzentrums- und Cloud-Infrastrukturlösungen.',
+        category: 'brochures',
+        format: 'PDF',
+        size: '3.8 MB',
+        date: '2026-02-15'
+      },
+      {
+        id: 3,
+        title: 'KI-Beschleuniger Whitepaper',
+        description: 'Technischer Einblick in die MC-AI Pro-Serienarchitektur und -leistung.',
+        category: 'whitepapers',
+        format: 'PDF',
+        size: '2.5 MB',
+        date: '2026-02-20'
+      },
+      {
+        id: 4,
+        title: 'Edge Computing Architektur',
+        description: 'Best Practices für die Bereitstellung von Edge-Lösungen in Unternehmensumgebungen.',
+        category: 'whitepapers',
+        format: 'PDF',
+        size: '1.8 MB',
+        date: '2026-01-10'
+      },
+      {
+        id: 5,
+        title: 'MC-Pro X1 Datenblatt',
+        description: 'Vollständige technische Spezifikationen für die Flaggschiff-Prozessorserie.',
+        category: 'datasheets',
+        format: 'PDF',
+        size: '890 KB',
+        date: '2026-03-05'
+      },
+      {
+        id: 6,
+        title: 'MC-Network 10G Datenblatt',
+        description: 'Netzwerkchip-Spezifikationen und Leistungsbenchmarks.',
+        category: 'datasheets',
+        format: 'PDF',
+        size: '720 KB',
+        date: '2026-02-28'
+      },
+      {
+        id: 7,
+        title: 'Investorenpräsentation Q4 2025',
+        description: 'Quartalsergebnisse und Geschäftsausblick.',
+        category: 'presentations',
+        format: 'PPTX',
+        size: '8.5 MB',
+        date: '2026-02-15'
+      },
+      {
+        id: 8,
+        title: 'Partnerprogramm Übersicht',
+        description: 'Informationen für potenzielle Geschäftspartner und Reseller.',
+        category: 'presentations',
+        format: 'PDF',
+        size: '2.1 MB',
+        date: '2026-01-20'
+      },
+      {
+        id: 9,
+        title: 'Marken-Assets Paket',
+        description: 'Offizielle Logos, Markenrichtlinien und genehmigte Bilder.',
+        category: 'images',
+        format: 'ZIP',
+        size: '15.3 MB',
+        date: '2026-01-05'
+      },
+      {
+        id: 10,
+        title: 'Produktfotografie',
+        description: 'Hochauflösende Produktbilder für Medien und Marketing.',
+        category: 'images',
+        format: 'ZIP',
+        size: '45.8 MB',
+        date: '2026-02-01'
+      }
+    ]
+  },
+  it: {
+    categories: [
+      { id: 'brochures', name: 'Brochure', icon: FileText },
+      { id: 'whitepapers', name: 'Whitepaper', icon: FileText },
+      { id: 'datasheets', name: 'Schede Tecniche', icon: FileText },
+      { id: 'presentations', name: 'Presentazioni', icon: Presentation },
+      { id: 'images', name: 'Immagini & Loghi', icon: Image },
+    ],
+    items: [
+      {
+        id: 1,
+        title: 'MagicChip Portfolio Prodotti 2026',
+        description: 'Panoramica completa della nostra hardware enterprise e delle offerte di servizio.',
+        category: 'brochures',
+        format: 'PDF',
+        size: '4.2 MB',
+        date: '2026-03-01'
+      },
+      {
+        id: 2,
+        title: 'Guida Soluzioni Enterprise',
+        description: 'Guida completa delle soluzioni di infrastruttura data center e cloud.',
+        category: 'brochures',
+        format: 'PDF',
+        size: '3.8 MB',
+        date: '2026-02-15'
+      },
+      {
+        id: 3,
+        title: 'Whitepaper Acceleratore IA',
+        description: 'Approfondimento tecnico sull\'architettura e le prestazioni della serie MC-AI Pro.',
+        category: 'whitepapers',
+        format: 'PDF',
+        size: '2.5 MB',
+        date: '2026-02-20'
+      },
+      {
+        id: 4,
+        title: 'Architettura Edge Computing',
+        description: 'Best practices per il dispiegamento di soluzioni edge in ambienti enterprise.',
+        category: 'whitepapers',
+        format: 'PDF',
+        size: '1.8 MB',
+        date: '2026-01-10'
+      },
+      {
+        id: 5,
+        title: 'Scheda Tecnica MC-Pro X1',
+        description: 'Specifiche tecniche complete per la serie di processori flagship.',
+        category: 'datasheets',
+        format: 'PDF',
+        size: '890 KB',
+        date: '2026-03-05'
+      },
+      {
+        id: 6,
+        title: 'Scheda Tecnica MC-Network 10G',
+        description: 'Specifiche dei chip di rete e benchmark delle prestazioni.',
+        category: 'datasheets',
+        format: 'PDF',
+        size: '720 KB',
+        date: '2026-02-28'
+      },
+      {
+        id: 7,
+        title: 'Presentazione Investitori Q4 2025',
+        description: 'Risultati finanziari trimestrali e prospettive commerciali.',
+        category: 'presentations',
+        format: 'PPTX',
+        size: '8.5 MB',
+        date: '2026-02-15'
+      },
+      {
+        id: 8,
+        title: 'Panoramica Programma Partner',
+        description: 'Informazioni per potenziali partner commerciali e rivenditori.',
+        category: 'presentations',
+        format: 'PDF',
+        size: '2.1 MB',
+        date: '2026-01-20'
+      },
+      {
+        id: 9,
+        title: 'Pack Asset Marchio',
+        description: 'Loghi ufficiali, linee guida del marchio e immagini approvate.',
+        category: 'images',
+        format: 'ZIP',
+        size: '15.3 MB',
+        date: '2026-01-05'
+      },
+      {
+        id: 10,
+        title: 'Fotografia Prodotto',
+        description: 'Immagini prodotto ad alta risoluzione per media e marketing.',
+        category: 'images',
+        format: 'ZIP',
+        size: '45.8 MB',
+        date: '2026-02-01'
+      }
+    ]
+  },
+  es: {
+    categories: [
+      { id: 'brochures', name: 'Folletos', icon: FileText },
+      { id: 'whitepapers', name: 'Whitepapers', icon: FileText },
+      { id: 'datasheets', name: 'Fichas Técnicas', icon: FileText },
+      { id: 'presentations', name: 'Presentaciones', icon: Presentation },
+      { id: 'images', name: 'Imágenes & Logos', icon: Image },
+    ],
+    items: [
+      {
+        id: 1,
+        title: 'MagicChip Portafolio de Productos 2026',
+        description: 'Resumen completo de nuestro hardware empresarial y ofertas de servicios.',
+        category: 'brochures',
+        format: 'PDF',
+        size: '4.2 MB',
+        date: '2026-03-01'
+      },
+      {
+        id: 2,
+        title: 'Guía de Soluciones Empresariales',
+        description: 'Guía completa de soluciones de infraestructura de centros de datos y cloud.',
+        category: 'brochures',
+        format: 'PDF',
+        size: '3.8 MB',
+        date: '2026-02-15'
+      },
+      {
+        id: 3,
+        title: 'Whitepaper Acelerador IA',
+        description: 'Profundización técnica en la arquitectura y rendimiento de la serie MC-AI Pro.',
+        category: 'whitepapers',
+        format: 'PDF',
+        size: '2.5 MB',
+        date: '2026-02-20'
+      },
+      {
+        id: 4,
+        title: 'Arquitectura Edge Computing',
+        description: 'Mejores prácticas para implementar soluciones edge en entornos empresariales.',
+        category: 'whitepapers',
+        format: 'PDF',
+        size: '1.8 MB',
+        date: '2026-01-10'
+      },
+      {
+        id: 5,
+        title: 'Ficha Técnica MC-Pro X1',
+        description: 'Especificaciones técnicas completas de la serie de procesadores flagship.',
+        category: 'datasheets',
+        format: 'PDF',
+        size: '890 KB',
+        date: '2026-03-05'
+      },
+      {
+        id: 6,
+        title: 'Ficha Técnica MC-Network 10G',
+        description: 'Especificaciones de chips de red y benchmarks de rendimiento.',
+        category: 'datasheets',
+        format: 'PDF',
+        size: '720 KB',
+        date: '2026-02-28'
+      },
+      {
+        id: 7,
+        title: 'Presentación Inversores Q4 2025',
+        description: 'Resultados financieros trimestrales y perspectivas comerciales.',
+        category: 'presentations',
+        format: 'PPTX',
+        size: '8.5 MB',
+        date: '2026-02-15'
+      },
+      {
+        id: 8,
+        title: 'Resumen Programa de Socios',
+        description: 'Información para socios comerciales y revendedores potenciales.',
+        category: 'presentations',
+        format: 'PDF',
+        size: '2.1 MB',
+        date: '2026-01-20'
+      },
+      {
+        id: 9,
+        title: 'Paquete de Activos de Marca',
+        description: 'Logos oficiales, directrices de marca e imágenes aprobadas.',
+        category: 'images',
+        format: 'ZIP',
+        size: '15.3 MB',
+        date: '2026-01-05'
+      },
+      {
+        id: 10,
+        title: 'Fotografía de Producto',
+        description: 'Imágenes de producto de alta resolución para medios y marketing.',
         category: 'images',
         format: 'ZIP',
         size: '45.8 MB',
@@ -210,13 +513,11 @@ const downloadsData = {
 };
 
 export default function DownloadsPage() {
-  const { language } = useLanguage();
+  const { t, language } = useLanguage();
   const dataLanguage = (downloadsData as any)[language] ? language : 'en';
   const data = (downloadsData as any)[dataLanguage];
-  const pageTitle = language === 'en' ? 'File Downloads' : '文件下载';
-  const pageSubtitle = language === 'en'
-    ? 'Access brochures, whitepapers, datasheets, and other resources'
-    : '获取产品手册、白皮书、数据手册和其他资源';
+  const pageTitle = t.downloads.title;
+  const pageSubtitle = t.downloads.subtitle;
 
   return (
     <>
@@ -261,19 +562,19 @@ export default function DownloadsPage() {
                   <thead className="bg-gray-50 border-b border-gray-200">
                     <tr>
                       <th className="text-left px-6 py-4 text-sm font-semibold text-gray-600">
-                        {language === 'en' ? 'Document' : '文档'}
+                        {t.downloads.table.document}
                       </th>
                       <th className="text-left px-6 py-4 text-sm font-semibold text-gray-600">
-                        {language === 'en' ? 'Category' : '类别'}
+                        {t.downloads.table.category}
                       </th>
                       <th className="text-left px-6 py-4 text-sm font-semibold text-gray-600">
-                        {language === 'en' ? 'Format' : '格式'}
+                        {t.downloads.table.format}
                       </th>
                       <th className="text-left px-6 py-4 text-sm font-semibold text-gray-600">
-                        {language === 'en' ? 'Size' : '大小'}
+                        {t.downloads.table.size}
                       </th>
                       <th className="text-right px-6 py-4 text-sm font-semibold text-gray-600">
-                        {language === 'en' ? 'Download' : '下载'}
+                        {t.downloads.table.download}
                       </th>
                     </tr>
                   </thead>
@@ -302,7 +603,7 @@ export default function DownloadsPage() {
                         <td className="px-6 py-4 text-right">
                           <button className="inline-flex items-center px-3 py-1.5 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors">
                             <Download className="w-4 h-4 mr-2" />
-                            {language === 'en' ? 'Download' : '下载'}
+                            {t.downloads.table.download}
                           </button>
                         </td>
                       </motion.tr>

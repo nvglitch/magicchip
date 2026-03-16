@@ -6,6 +6,20 @@ import { Mail, Phone, MapPin, Clock, MessageCircle, Send, MessageSquare, Chevron
 
 const contactData = {
   en: {
+    hero: {
+      title: 'Get in Touch',
+      subtitle: "We're here to help and answer any questions you might have"
+    },
+    globalOffices: 'Global Offices',
+    quickLinks: 'Quick Links',
+    links: {
+      latestNews: 'Latest News',
+      downloads: 'Downloads',
+      techDocuments: 'Tech Documents',
+      aboutUs: 'About Us',
+      ourFactory: 'Our Factory',
+      memberTeam: 'Member Team'
+    },
     info: [
       { title: 'Email', content: 'info@magicchip.com', icon: Mail, href: 'mailto:info@magicchip.com' },
       { title: 'Phone', content: '+1 (555) 123-4567', icon: Phone, href: 'tel:+15551234567' },
@@ -30,29 +44,160 @@ const contactData = {
       button: 'Start Chat'
     }
   },
-  zh: {
+  fr: {
+    hero: {
+      title: 'Contactez-Nous',
+      subtitle: 'Nous sommes ici pour vous aider et répondre à toutes vos questions'
+    },
+    globalOffices: 'Bureaux Mondiaux',
+    quickLinks: 'Liens Rapides',
+    links: {
+      latestNews: 'Actualités',
+      downloads: 'Téléchargements',
+      techDocuments: 'Documents Techniques',
+      aboutUs: 'À Propos',
+      ourFactory: 'Notre Usine',
+      memberTeam: 'Équipe'
+    },
     info: [
-      { title: '邮箱', content: 'info@magicchip.com', icon: Mail, href: 'mailto:info@magicchip.com' },
-      { title: '电话', content: '+1 (555) 123-4567', icon: Phone, href: 'tel:+15551234567' },
-      { title: '总部', content: '美国加利福尼亚州圣何塞', icon: MapPin, href: '#' },
-      { title: '工作时间', content: '周一至周五: 9:00-18:00', icon: Clock, href: '#' }
+      { title: 'Email', content: 'info@magicchip.com', icon: Mail, href: 'mailto:info@magicchip.com' },
+      { title: 'Téléphone', content: '+1 (555) 123-4567', icon: Phone, href: 'tel:+15551234567' },
+      { title: 'Siège', content: 'San Jose, CA, USA', icon: MapPin, href: '#' },
+      { title: 'Horaires', content: 'Lun-Ven: 9h-18h (PST)', icon: Clock, href: '#' }
     ],
     offices: [
-      { city: '美国', address: '圣何塞' },
-      { city: '中国', address: '深圳' },
-      { city: '德国', address: '慕尼黑' },
-      { city: '日本', address: '东京' }
+      { city: 'USA', address: 'San Jose, CA' },
+      { city: 'Chine', address: 'Shenzhen' },
+      { city: 'Allemagne', address: 'Munich' },
+      { city: 'Japon', address: 'Tokyo' }
     ],
     form: {
-      title: '发送消息',
-      name: '姓名',
-      email: '邮箱',
-      message: '有什么可以帮助您？',
-      button: '发送消息'
+      title: 'Envoyez-nous un Message',
+      name: 'Nom',
+      email: 'Email',
+      message: 'Comment pouvons-nous vous aider?',
+      button: 'Envoyer'
     },
     whatsapp: {
-      title: 'WhatsApp 咨询',
-      button: '开始聊天'
+      title: 'Discuter sur WhatsApp',
+      button: 'Commencer'
+    }
+  },
+  de: {
+    hero: {
+      title: 'Kontaktieren Sie Uns',
+      subtitle: 'Wir sind hier, um Ihnen zu helfen und alle Ihre Fragen zu beantworten'
+    },
+    globalOffices: 'Globale Büros',
+    quickLinks: 'Schnelllinks',
+    links: {
+      latestNews: 'Neuigkeiten',
+      downloads: 'Downloads',
+      techDocuments: 'Technische Dokumente',
+      aboutUs: 'Über Uns',
+      ourFactory: 'Unsere Fabrik',
+      memberTeam: 'Team'
+    },
+    info: [
+      { title: 'E-Mail', content: 'info@magicchip.com', icon: Mail, href: 'mailto:info@magicchip.com' },
+      { title: 'Telefon', content: '+1 (555) 123-4567', icon: Phone, href: 'tel:+15551234567' },
+      { title: 'Hauptquartier', content: 'San Jose, CA, USA', icon: MapPin, href: '#' },
+      { title: 'Geschäftszeiten', content: 'Mo-Fr: 9-18 Uhr (PST)', icon: Clock, href: '#' }
+    ],
+    offices: [
+      { city: 'USA', address: 'San Jose, CA' },
+      { city: 'China', address: 'Shenzhen' },
+      { city: 'Deutschland', address: 'München' },
+      { city: 'Japan', address: 'Tokio' }
+    ],
+    form: {
+      title: 'Nachricht senden',
+      name: 'Name',
+      email: 'E-Mail',
+      message: 'Wie können wir Ihnen helfen?',
+      button: 'Senden'
+    },
+    whatsapp: {
+      title: 'Auf WhatsApp chatten',
+      button: 'Starten'
+    }
+  },
+  it: {
+    hero: {
+      title: 'Contattaci',
+      subtitle: 'Siamo qui per aiutarti e rispondere a qualsiasi domanda'
+    },
+    globalOffices: 'Uffici Globali',
+    quickLinks: 'Link Rapidi',
+    links: {
+      latestNews: 'Notizie',
+      downloads: 'Download',
+      techDocuments: 'Documenti Tecnici',
+      aboutUs: 'Chi Siamo',
+      ourFactory: 'La Nostra Fabbrica',
+      memberTeam: 'Team'
+    },
+    info: [
+      { title: 'Email', content: 'info@magicchip.com', icon: Mail, href: 'mailto:info@magicchip.com' },
+      { title: 'Telefono', content: '+1 (555) 123-4567', icon: Phone, href: 'tel:+15551234567' },
+      { title: 'Sede', content: 'San Jose, CA, USA', icon: MapPin, href: '#' },
+      { title: 'Orari', content: 'Lun-Ven: 9-18 (PST)', icon: Clock, href: '#' }
+    ],
+    offices: [
+      { city: 'USA', address: 'San Jose, CA' },
+      { city: 'Cina', address: 'Shenzhen' },
+      { city: 'Germania', address: 'Monaco' },
+      { city: 'Giappone', address: 'Tokyo' }
+    ],
+    form: {
+      title: 'Inviaci un Messaggio',
+      name: 'Nome',
+      email: 'Email',
+      message: 'Come possiamo aiutarti?',
+      button: 'Invia'
+    },
+    whatsapp: {
+      title: 'Chatta su WhatsApp',
+      button: 'Inizia'
+    }
+  },
+  es: {
+    hero: {
+      title: 'Contáctenos',
+      subtitle: 'Estamos aquí para ayudarte y responder cualquier pregunta'
+    },
+    globalOffices: 'Oficinas Globales',
+    quickLinks: 'Enlaces Rápidos',
+    links: {
+      latestNews: 'Noticias',
+      downloads: 'Descargas',
+      techDocuments: 'Documentos Técnicos',
+      aboutUs: 'Sobre Nosotros',
+      ourFactory: 'Nuestra Fábrica',
+      memberTeam: 'Equipo'
+    },
+    info: [
+      { title: 'Email', content: 'info@magicchip.com', icon: Mail, href: 'mailto:info@magicchip.com' },
+      { title: 'Teléfono', content: '+1 (555) 123-4567', icon: Phone, href: 'tel:+15551234567' },
+      { title: 'Sede', content: 'San Jose, CA, USA', icon: MapPin, href: '#' },
+      { title: 'Horario', content: 'Lun-Vie: 9-18 (PST)', icon: Clock, href: '#' }
+    ],
+    offices: [
+      { city: 'EE.UU.', address: 'San Jose, CA' },
+      { city: 'China', address: 'Shenzhen' },
+      { city: 'Alemania', address: 'Múnich' },
+      { city: 'Japón', address: 'Tokio' }
+    ],
+    form: {
+      title: 'Envíanos un Mensaje',
+      name: 'Nombre',
+      email: 'Email',
+      message: '¿Cómo podemos ayudarte?',
+      button: 'Enviar'
+    },
+    whatsapp: {
+      title: 'Chatear en WhatsApp',
+      button: 'Iniciar'
     }
   }
 };
@@ -73,12 +218,10 @@ export default function ContactSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {language === 'en' ? 'Get in Touch' : '联系我们'}
+            {data.hero.title}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {language === 'en' 
-              ? 'We\'re here to help and answer any questions you might have'
-              : '我们随时为您提供帮助并解答任何问题'}
+            {data.hero.subtitle}
           </p>
         </motion.div>
 
@@ -123,7 +266,7 @@ export default function ContactSection() {
             {/* Global Offices */}
             <div className="mt-6 p-4 bg-gray-50 rounded-md">
               <h4 className="font-semibold text-gray-900 mb-3">
-                {language === 'en' ? 'Global Offices' : '全球办公室'}
+                {data.globalOffices}
               </h4>
               <div className="grid grid-cols-2 gap-2">
                 {data.offices.map((office: any, index: number) => (
@@ -189,48 +332,34 @@ export default function ContactSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="lg:col-span-1"
           >
-            <div className="bg-gradient-to-br from-blue-900 to-blue-700 p-6 rounded-md text-white h-full">
-              <h3 className="text-lg font-bold mb-4">
-                {language === 'en' ? 'Quick Links' : '快速链接'}
-              </h3>
-              <ul className="space-y-3">
-                <li>
-                  <a href="/news" className="flex items-center hover:text-blue-200 transition-colors">
-                    <ChevronRight className="w-4 h-4 mr-2" />
-                    {language === 'en' ? 'Latest News' : '最新动态'}
-                  </a>
-                </li>
-                <li>
-                  <a href="/downloads" className="flex items-center hover:text-blue-200 transition-colors">
-                    <ChevronRight className="w-4 h-4 mr-2" />
-                    {language === 'en' ? 'Downloads' : '资料下载'}
-                  </a>
-                </li>
-                <li>
-                  <a href="/tech-docs" className="flex items-center hover:text-blue-200 transition-colors">
-                    <ChevronRight className="w-4 h-4 mr-2" />
-                    {language === 'en' ? 'Tech Documents' : '技术文档'}
-                  </a>
-                </li>
-                <li>
-                  <a href="/company" className="flex items-center hover:text-blue-200 transition-colors">
-                    <ChevronRight className="w-4 h-4 mr-2" />
-                    {language === 'en' ? 'About Us' : '关于我们'}
-                  </a>
-                </li>
-                <li>
-                  <a href="/factory" className="flex items-center hover:text-blue-200 transition-colors">
-                    <ChevronRight className="w-4 h-4 mr-2" />
-                    {language === 'en' ? 'Our Factory' : '工厂设施'}
-                  </a>
-                </li>
-                <li>
-                  <a href="/leadership" className="flex items-center hover:text-blue-200 transition-colors">
-                    <ChevronRight className="w-4 h-4 mr-2" />
-                    {language === 'en' ? 'Member Team' : '团队成员'}
-                  </a>
-                </li>
-              </ul>
+            <div className="bg-gray-50 p-4 rounded-md">
+              <h4 className="font-semibold text-gray-900 mb-3">{data.quickLinks}</h4>
+              <div className="space-y-2">
+                <a href="/news" className="flex items-center text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                  <ChevronRight className="w-4 h-4 mr-1" />
+                  {data.links.latestNews}
+                </a>
+                <a href="/downloads" className="flex items-center text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                  <ChevronRight className="w-4 h-4 mr-1" />
+                  {data.links.downloads}
+                </a>
+                <a href="/tech-docs" className="flex items-center text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                  <ChevronRight className="w-4 h-4 mr-1" />
+                  {data.links.techDocuments}
+                </a>
+                <a href="/about" className="flex items-center text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                  <ChevronRight className="w-4 h-4 mr-1" />
+                  {data.links.aboutUs}
+                </a>
+                <a href="/factory" className="flex items-center text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                  <ChevronRight className="w-4 h-4 mr-1" />
+                  {data.links.ourFactory}
+                </a>
+                <a href="/leadership" className="flex items-center text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                  <ChevronRight className="w-4 h-4 mr-1" />
+                  {data.links.memberTeam}
+                </a>
+              </div>
             </div>
           </motion.div>
         </div>

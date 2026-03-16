@@ -121,84 +121,200 @@ const techDocsData = {
       }
     ]
   },
-  zh: {
+  fr: {
     categories: [
       { 
         id: 'processors', 
-        name: '处理器', 
+        name: 'Processeurs', 
         icon: Cpu,
-        description: 'CPU和处理器文档'
+        description: 'Documentation CPU et processeurs'
       },
       { 
         id: 'network', 
-        name: '网络', 
+        name: 'Réseau', 
         icon: Database,
-        description: '网络芯片和连接文档'
+        description: 'Documentation puces réseau et connectivité'
       },
       { 
         id: 'security', 
-        name: '安全', 
+        name: 'Sécurité', 
         icon: Lock,
-        description: '安全模块文档'
+        description: 'Documentation modules de sécurité'
       },
       { 
         id: 'api', 
-        name: 'API参考', 
+        name: 'Référence API', 
         icon: Settings,
-        description: '开发者API和SDK'
+        description: 'APIs développeur et SDKs'
       },
       { 
         id: 'guides', 
-        name: '用户指南', 
+        name: 'Guides Utilisateur', 
         icon: BookOpen,
-        description: '安装和设置指南'
+        description: 'Guides d\'installation et configuration'
       },
     ],
     documents: [
       {
         id: 1,
-        title: 'MC-Pro X1系列编程指南',
-        description: 'MC-Pro X1处理器系列的完整编程手册，包括架构概述、指令集和优化技术。',
+        title: 'Guide de Programmation MC-Pro X1',
+        description: 'Manuel de programmation complet pour la série de processeurs MC-Pro X1 incluant vue d\'architecture, jeu d\'instructions et techniques d\'optimisation.',
         category: 'processors',
         updated: '2026-03-01',
         pages: 245
       },
       {
         id: 2,
-        title: '处理器热管理',
-        description: '最佳冷却方案和散热策略的热设计指南。',
+        title: 'Gestion Thermique des Processeurs',
+        description: 'Guide de conception thermique pour des solutions de refroidissement optimales et stratégies de dissipation de chaleur.',
         category: 'processors',
         updated: '2026-02-15',
         pages: 89
       },
       {
         id: 3,
-        title: 'MC-Network 10G配置指南',
-        description: '网络芯片的分步配置说明，包括VLAN、QoS和绑定设置。',
+        title: 'Guide de Configuration MC-Network 10G',
+        description: 'Instructions de configuration paso à paso pour les puces réseau incluant paramètres VLAN, QoS et bonding.',
         category: 'network',
         updated: '2026-02-28',
         pages: 156
       },
       {
         id: 4,
-        title: '网络性能调优',
-        description: '最大化网络吞吐量和降低延迟的高级调优参数。',
+        title: 'Optimisation Performance Réseau',
+        description: 'Paramètres d\'optimisation avancés pour maximiser le débit réseau et réduire la latence.',
         category: 'network',
         updated: '2026-01-20',
         pages: 78
       },
       {
         id: 5,
-        title: '安全模块集成指南',
-        description: '硬件安全模块的集成文档，包括密钥管理和加密API。',
+        title: 'Guide d\'Intégration Module Sécurité',
+        description: 'Documentation d\'intégration pour les modules de sécurité matérielle incluant gestion des clés et APIs de chiffrement.',
         category: 'security',
         updated: '2026-02-10',
         pages: 112
       },
       {
         id: 6,
-        title: '安全启动实现',
-        description: '安全启动链和固件验证的实施指南。',
+        title: 'Implémentation Secure Boot',
+        description: 'Guide d\'implémentation pour la chaîne de boot sécurisé et validation du firmware.',
+        category: 'security',
+        updated: '2026-01-15',
+        pages: 65
+      },
+      {
+        id: 7,
+        title: 'API REST MagicChip v2.0',
+        description: 'Référence API REST complète pour la plateforme de gestion et monitoring cloud.',
+        category: 'api',
+        updated: '2026-03-05',
+        pages: 320
+      },
+      {
+        id: 8,
+        title: 'Installation SDK & Démarrage',
+        description: 'Guide d\'installation du kit de développement logiciel et tutoriel de démarrage rapide.',
+        category: 'api',
+        updated: '2026-02-20',
+        pages: 45
+      },
+      {
+        id: 9,
+        title: 'Manuel d\'Installation Matériel',
+        description: 'Guide complet d\'installation matérielle pour le montage en rack et configuration initiale.',
+        category: 'guides',
+        updated: '2026-01-10',
+        pages: 34
+      },
+      {
+        id: 10,
+        title: 'Guide d\'Administration Système',
+        description: 'Documentation complète d\'administration système incluant procédures de monitoring, sauvegarde et récupération.',
+        category: 'guides',
+        updated: '2026-02-01',
+        pages: 189
+      }
+    ]
+  },
+  de: {
+    categories: [
+      { 
+        id: 'processors', 
+        name: 'Prozessoren', 
+        icon: Cpu,
+        description: 'CPU und Prozessordokumentation'
+      },
+      { 
+        id: 'network', 
+        name: 'Netzwerk', 
+        icon: Database,
+        description: 'Netzwerkchip- und Konnektivitätsdokumente'
+      },
+      { 
+        id: 'security', 
+        name: 'Sicherheit', 
+        icon: Lock,
+        description: 'Sicherheitsmoduldokumentation'
+      },
+      { 
+        id: 'api', 
+        name: 'API-Referenz', 
+        icon: Settings,
+        description: 'Entwickler-APIs und SDKs'
+      },
+      { 
+        id: 'guides', 
+        name: 'Benutzerhandbücher', 
+        icon: BookOpen,
+        description: 'Installations- und Einrichtungsanleitungen'
+      },
+    ],
+    documents: [
+      {
+        id: 1,
+        title: 'MC-Pro X1 Serie Programmierhandbuch',
+        description: 'Vollständiges Programmierhandbuch für die MC-Pro X1 Prozessorserie mit Architekturübersicht, Befehlssatz und Optimierungstechniken.',
+        category: 'processors',
+        updated: '2026-03-01',
+        pages: 245
+      },
+      {
+        id: 2,
+        title: 'Prozessor-Wärmemanagement',
+        description: 'Thermisches Designhandbuch für optimale Kühllösungen und Wärmeableitungsstrategien.',
+        category: 'processors',
+        updated: '2026-02-15',
+        pages: 89
+      },
+      {
+        id: 3,
+        title: 'MC-Network 10G Konfigurationshandbuch',
+        description: 'Schritt-für-Schritt Konfigurationsanweisungen für Netzwerkchips einschließlich VLAN-, QoS- und Bonding-Einstellungen.',
+        category: 'network',
+        updated: '2026-02-28',
+        pages: 156
+      },
+      {
+        id: 4,
+        title: 'Netzwerk-Performance-Optimierung',
+        description: 'Erweiterte Optimierungsparameter zur Maximierung des Netzwerkdurchsatzes und Reduzierung der Latenz.',
+        category: 'network',
+        updated: '2026-01-20',
+        pages: 78
+      },
+      {
+        id: 5,
+        title: 'Sicherheitsmodul-Integrationshandbuch',
+        description: 'Integrationsdokumentation für Hardware-Sicherheitsmodule einschließlich Schlüsselverwaltung und Verschlüsselungs-APIs.',
+        category: 'security',
+        updated: '2026-02-10',
+        pages: 112
+      },
+      {
+        id: 6,
+        title: 'Secure Boot Implementierung',
+        description: 'Implementierungshandbuch für sichere Boot-Kette und Firmware-Validierung.',
         category: 'security',
         updated: '2026-01-15',
         pages: 65
@@ -206,31 +322,263 @@ const techDocsData = {
       {
         id: 7,
         title: 'MagicChip REST API v2.0',
-        description: '云管理和监控平台的完整REST API参考。',
+        description: 'Vollständige REST-API-Referenz für Cloud-Management- und Monitoring-Plattform.',
         category: 'api',
         updated: '2026-03-05',
         pages: 320
       },
       {
         id: 8,
-        title: 'SDK安装与快速入门',
-        description: '软件开发工具包安装指南和快速入门教程。',
+        title: 'SDK Installation & Erste Schritte',
+        description: 'Installationsanleitung für das Software Development Kit und Schnellstart-Tutorial.',
         category: 'api',
         updated: '2026-02-20',
         pages: 45
       },
       {
         id: 9,
-        title: '硬件安装手册',
-        description: '机架安装和初始设置的完整硬件安装指南。',
+        title: 'Hardware-Installationshandbuch',
+        description: 'Vollständiges Hardware-Installationshandbuch für Rackmontage und Ersteinrichtung.',
         category: 'guides',
         updated: '2026-01-10',
         pages: 34
       },
       {
         id: 10,
-        title: '系统管理指南',
-        description: '全面的系统管理文档，包括监控、备份和恢复程序。',
+        title: 'Systemverwaltungshandbuch',
+        description: 'Umfassende Systemverwaltungsdokumentation einschließlich Monitoring-, Backup- und Wiederherstellungsverfahren.',
+        category: 'guides',
+        updated: '2026-02-01',
+        pages: 189
+      }
+    ]
+  },
+  it: {
+    categories: [
+      { 
+        id: 'processors', 
+        name: 'Processori', 
+        icon: Cpu,
+        description: 'Documentazione CPU e processori'
+      },
+      { 
+        id: 'network', 
+        name: 'Rete', 
+        icon: Database,
+        description: 'Documentazione chip di rete e connettività'
+      },
+      { 
+        id: 'security', 
+        name: 'Sicurezza', 
+        icon: Lock,
+        description: 'Documentazione moduli di sicurezza'
+      },
+      { 
+        id: 'api', 
+        name: 'Riferimento API', 
+        icon: Settings,
+        description: 'API developer e SDK'
+      },
+      { 
+        id: 'guides', 
+        name: 'Guide Utente', 
+        icon: BookOpen,
+        description: 'Guide di installazione e configurazione'
+      },
+    ],
+    documents: [
+      {
+        id: 1,
+        title: 'Guida alla Programmazione MC-Pro X1',
+        description: 'Manuale di programmazione completo per la serie di processori MC-Pro X1 inclusi panoramica dell\'architettura, set di istruzioni e tecniche di ottimizzazione.',
+        category: 'processors',
+        updated: '2026-03-01',
+        pages: 245
+      },
+      {
+        id: 2,
+        title: 'Gestione Termica del Processore',
+        description: 'Guida alla progettazione termica per soluzioni di raffreddamento ottimali e strategie di dissipazione del calore.',
+        category: 'processors',
+        updated: '2026-02-15',
+        pages: 89
+      },
+      {
+        id: 3,
+        title: 'Guida alla Configurazione MC-Network 10G',
+        description: 'Istruzioni di configurazione passo per passo per i chip di rete incluse impostazioni VLAN, QoS e bonding.',
+        category: 'network',
+        updated: '2026-02-28',
+        pages: 156
+      },
+      {
+        id: 4,
+        title: 'Ottimizzazione Performance di Rete',
+        description: 'Parametri di ottimizzazione avanzati per massimizzare il throughput di rete e ridurre la latenza.',
+        category: 'network',
+        updated: '2026-01-20',
+        pages: 78
+      },
+      {
+        id: 5,
+        title: 'Guida all\'Integrazione Modulo Sicurezza',
+        description: 'Documentazione di integrazione per moduli di sicurezza hardware inclusa gestione delle chiavi e API di crittografia.',
+        category: 'security',
+        updated: '2026-02-10',
+        pages: 112
+      },
+      {
+        id: 6,
+        title: 'Implementazione Secure Boot',
+        description: 'Guida all\'implementazione per catena di boot sicuro e validazione del firmware.',
+        category: 'security',
+        updated: '2026-01-15',
+        pages: 65
+      },
+      {
+        id: 7,
+        title: 'MagicChip REST API v2.0',
+        description: 'Riferimento API REST completo per piattaforma di gestione e monitoraggio cloud.',
+        category: 'api',
+        updated: '2026-03-05',
+        pages: 320
+      },
+      {
+        id: 8,
+        title: 'Installazione SDK & Guida Introduttiva',
+        description: 'Guida all\'installazione del kit di sviluppo software e tutorial di avvio rapido.',
+        category: 'api',
+        updated: '2026-02-20',
+        pages: 45
+      },
+      {
+        id: 9,
+        title: 'Manuale di Installazione Hardware',
+        description: 'Guida completa all\'installazione hardware per montaggio in rack e configurazione iniziale.',
+        category: 'guides',
+        updated: '2026-01-10',
+        pages: 34
+      },
+      {
+        id: 10,
+        title: 'Guida all\'Amministrazione di Sistema',
+        description: 'Documentazione completa di amministrazione di sistema incluse procedure di monitoraggio, backup e ripristino.',
+        category: 'guides',
+        updated: '2026-02-01',
+        pages: 189
+      }
+    ]
+  },
+  es: {
+    categories: [
+      { 
+        id: 'processors', 
+        name: 'Procesadores', 
+        icon: Cpu,
+        description: 'Documentación de CPU y procesadores'
+      },
+      { 
+        id: 'network', 
+        name: 'Redes', 
+        icon: Database,
+        description: 'Documentación de chips de red y conectividad'
+      },
+      { 
+        id: 'security', 
+        name: 'Seguridad', 
+        icon: Lock,
+        description: 'Documentación de módulos de seguridad'
+      },
+      { 
+        id: 'api', 
+        name: 'Referencia API', 
+        icon: Settings,
+        description: 'APIs de desarrollador y SDKs'
+      },
+      { 
+        id: 'guides', 
+        name: 'Guías de Usuario', 
+        icon: BookOpen,
+        description: 'Guías de instalación y configuración'
+      },
+    ],
+    documents: [
+      {
+        id: 1,
+        title: 'Guía de Programación MC-Pro X1',
+        description: 'Manual de programación completo para la serie de procesadores MC-Pro X1 incluyendo visión general de la arquitectura, conjunto de instrucciones y técnicas de optimización.',
+        category: 'processors',
+        updated: '2026-03-01',
+        pages: 245
+      },
+      {
+        id: 2,
+        title: 'Gestión Térmica del Procesador',
+        description: 'Guía de diseño térmico para soluciones de refrigeración óptimas y estrategias de disipación de calor.',
+        category: 'processors',
+        updated: '2026-02-15',
+        pages: 89
+      },
+      {
+        id: 3,
+        title: 'Guía de Configuración MC-Network 10G',
+        description: 'Instrucciones de configuración paso a paso para chips de red incluyendo ajustes de VLAN, QoS y bonding.',
+        category: 'network',
+        updated: '2026-02-28',
+        pages: 156
+      },
+      {
+        id: 4,
+        title: 'Optimización de Rendimiento de Red',
+        description: 'Parámetros de optimización avanzados para maximizar el rendimiento de red y reducir la latencia.',
+        category: 'network',
+        updated: '2026-01-20',
+        pages: 78
+      },
+      {
+        id: 5,
+        title: 'Guía de Integración de Módulo de Seguridad',
+        description: 'Documentación de integración para módulos de seguridad de hardware incluyendo gestión de claves y APIs de cifrado.',
+        category: 'security',
+        updated: '2026-02-10',
+        pages: 112
+      },
+      {
+        id: 6,
+        title: 'Implementación de Secure Boot',
+        description: 'Guía de implementación para cadena de arranque seguro y validación de firmware.',
+        category: 'security',
+        updated: '2026-01-15',
+        pages: 65
+      },
+      {
+        id: 7,
+        title: 'MagicChip REST API v2.0',
+        description: 'Referencia completa de API REST para plataforma de gestión y monitoreo en la nube.',
+        category: 'api',
+        updated: '2026-03-05',
+        pages: 320
+      },
+      {
+        id: 8,
+        title: 'Instalación SDK y Primeros Pasos',
+        description: 'Guía de instalación del kit de desarrollo de software y tutorial de inicio rápido.',
+        category: 'api',
+        updated: '2026-02-20',
+        pages: 45
+      },
+      {
+        id: 9,
+        title: 'Manual de Instalación de Hardware',
+        description: 'Guía completa de instalación de hardware para montaje en rack y configuración inicial.',
+        category: 'guides',
+        updated: '2026-01-10',
+        pages: 34
+      },
+      {
+        id: 10,
+        title: 'Guía de Administración del Sistema',
+        description: 'Documentación completa de administración del sistema incluyendo procedimientos de monitoreo, respaldo y recuperación.',
         category: 'guides',
         updated: '2026-02-01',
         pages: 189
@@ -243,10 +591,8 @@ export default function TechDocsPage() {
   const { language } = useLanguage();
   const dataLanguage = (techDocsData as any)[language] ? language : 'en';
   const data = (techDocsData as any)[dataLanguage];
-  const pageTitle = language === 'en' ? 'Technical Documentation' : '技术文档';
-  const pageSubtitle = language === 'en'
-    ? 'Comprehensive technical resources for developers and engineers'
-    : '为开发者和工程师提供的全面技术资源';
+  const pageTitle = 'Technical Documentation';
+  const pageSubtitle = 'Comprehensive technical resources for developers and engineers';
 
   return (
     <>
@@ -323,8 +669,8 @@ export default function TechDocsPage() {
                               </h3>
                               <p className="text-gray-600 text-sm mb-3">{doc.description}</p>
                               <div className="flex items-center gap-4 text-xs text-gray-500">
-                                <span>{language === 'en' ? 'Updated:' : '更新:'} {doc.updated}</span>
-                                <span>{doc.pages} {language === 'en' ? 'pages' : '页'}</span>
+                                <span>Updated: {doc.updated}</span>
+                                <span>{doc.pages} pages</span>
                               </div>
                             </div>
                             <a 
@@ -332,7 +678,7 @@ export default function TechDocsPage() {
                               className="ml-4 flex items-center px-4 py-2 bg-gray-100 hover:bg-blue-600 hover:text-white rounded-md transition-colors"
                             >
                               <ExternalLink className="w-4 h-4 mr-2" />
-                              {language === 'en' ? 'View' : '查看'}
+                              <span>View</span>
                               <ChevronRight className="w-4 h-4 ml-1" />
                             </a>
                           </div>

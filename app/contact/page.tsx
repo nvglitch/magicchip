@@ -61,60 +61,228 @@ const contactData = {
       button: 'Start Chat'
     }
   },
-  zh: {
+  fr: {
     hero: {
-      title: '联系我们',
-      subtitle: '我们随时为您提供帮助并解答任何问题'
+      title: 'Contactez-Nous',
+      subtitle: 'Nous sommes là pour vous aider et répondre à toutes vos questions'
     },
     info: [
       {
-        title: '邮箱',
-        description: '随时给我们发送邮件',
+        title: 'Email',
+        description: 'Envoyez-nous un email à tout moment',
         content: 'info@magicchip.com',
         icon: Mail
       },
       {
-        title: '电话',
-        description: '周一至周五 9:00-18:00',
+        title: 'Téléphone',
+        description: 'Lun-Ven de 9h à 18h',
         content: '+1 (555) 123-4567',
         icon: Phone
       },
       {
-        title: '总部',
-        description: '访问我们的总部',
-        content: '美国加利福尼亚州圣何塞市科技大道123号，95110',
+        title: 'Siège Social',
+        description: 'Visitez notre siège social',
+        content: '123 Tech Boulevard, San Jose, CA 95110, USA',
         icon: MapPin
       },
       {
-        title: '工作时间',
-        description: '我们的支持团队',
-        content: '周一至周五: 9:00 AM - 6:00 PM (太平洋时间)',
+        title: 'Horaires d\'Ouverture',
+        description: 'Notre équipe de support',
+        content: 'Lun-Ven: 9h00 - 18h00 (PST)',
         icon: Clock
       }
     ],
     global: {
-      title: '全球办公室',
+      title: 'Bureaux Mondiaux',
       offices: [
-        { city: '圣何塞', country: '美国', address: '加利福尼亚州科技大道123号 95110' },
-        { city: '深圳', country: '中国', address: '南山区，深圳 518000' },
-        { city: '慕尼黑', country: '德国', address: '科技园，80939 慕尼黑' },
-        { city: '东京', country: '日本', address: '涩谷区，东京 150-0002' }
+        { city: 'San Jose', country: 'USA', address: '123 Tech Boulevard, CA 95110' },
+        { city: 'Shenzhen', country: 'Chine', address: 'Nanshan District, Shenzhen 518000' },
+        { city: 'Munich', country: 'Allemagne', address: 'Technopark, 80939 Munich' },
+        { city: 'Tokyo', country: 'Japon', address: 'Shibuya, Tokyo 150-0002' }
       ]
     },
     form: {
-      title: '发送消息',
-      name: '您的姓名',
-      email: '邮箱地址',
-      company: '公司',
-      subject: '主题',
-      message: '留言内容',
-      submit: '发送消息',
-      success: '感谢您！我们将尽快回复您。'
+      title: 'Envoyez-nous un Message',
+      name: 'Votre Nom',
+      email: 'Adresse Email',
+      company: 'Entreprise',
+      subject: 'Sujet',
+      message: 'Message',
+      submit: 'Envoyer le Message',
+      success: 'Merci! Nous vous répondrons bientôt.'
     },
     whatsapp: {
-      title: 'WhatsApp 在线咨询',
-      description: '通过 WhatsApp 快速获取回复',
-      button: '开始聊天'
+      title: 'Discuter sur WhatsApp',
+      description: 'Obtenez des réponses rapides sur WhatsApp',
+      button: 'Commencer le Chat'
+    }
+  },
+  de: {
+    hero: {
+      title: 'Kontaktieren Sie Uns',
+      subtitle: 'Wir sind hier, um Ihnen zu helfen und alle Ihre Fragen zu beantworten'
+    },
+    info: [
+      {
+        title: 'E-Mail',
+        description: 'Senden Sie uns jederzeit eine E-Mail',
+        content: 'info@magicchip.com',
+        icon: Mail
+      },
+      {
+        title: 'Telefon',
+        description: 'Mo-Fr von 9 bis 18 Uhr',
+        content: '+1 (555) 123-4567',
+        icon: Phone
+      },
+      {
+        title: 'Hauptsitz',
+        description: 'Besuchen Sie unseren Hauptsitz',
+        content: '123 Tech Boulevard, San Jose, CA 95110, USA',
+        icon: MapPin
+      },
+      {
+        title: 'Geschäftszeiten',
+        description: 'Unser Support-Team',
+        content: 'Mo-Fr: 9:00 - 18:00 Uhr (PST)',
+        icon: Clock
+      }
+    ],
+    global: {
+      title: 'Globale Büros',
+      offices: [
+        { city: 'San Jose', country: 'USA', address: '123 Tech Boulevard, CA 95110' },
+        { city: 'Shenzhen', country: 'China', address: 'Nanshan District, Shenzhen 518000' },
+        { city: 'München', country: 'Deutschland', address: 'Technopark, 80939 München' },
+        { city: 'Tokio', country: 'Japan', address: 'Shibuya, Tokio 150-0002' }
+      ]
+    },
+    form: {
+      title: 'Senden Sie uns eine Nachricht',
+      name: 'Ihr Name',
+      email: 'E-Mail-Adresse',
+      company: 'Unternehmen',
+      subject: 'Betreff',
+      message: 'Nachricht',
+      submit: 'Nachricht Senden',
+      success: 'Danke! Wir melden uns bald bei Ihnen.'
+    },
+    whatsapp: {
+      title: 'Auf WhatsApp chatten',
+      description: 'Erhalten Sie schnelle Antworten auf WhatsApp',
+      button: 'Chat Starten'
+    }
+  },
+  it: {
+    hero: {
+      title: 'Contattaci',
+      subtitle: 'Siamo qui per aiutarti e rispondere a qualsiasi domanda'
+    },
+    info: [
+      {
+        title: 'Email',
+        description: 'Inviaci un\'email in qualsiasi momento',
+        content: 'info@magicchip.com',
+        icon: Mail
+      },
+      {
+        title: 'Telefono',
+        description: 'Lun-Ven dalle 9 alle 18',
+        content: '+1 (555) 123-4567',
+        icon: Phone
+      },
+      {
+        title: 'Sede Centrale',
+        description: 'Visita la nostra sede centrale',
+        content: '123 Tech Boulevard, San Jose, CA 95110, USA',
+        icon: MapPin
+      },
+      {
+        title: 'Orari di Apertura',
+        description: 'Il nostro team di supporto',
+        content: 'Lun-Ven: 9:00 - 18:00 (PST)',
+        icon: Clock
+      }
+    ],
+    global: {
+      title: 'Uffici Globali',
+      offices: [
+        { city: 'San Jose', country: 'USA', address: '123 Tech Boulevard, CA 95110' },
+        { city: 'Shenzhen', country: 'Cina', address: 'Nanshan District, Shenzhen 518000' },
+        { city: 'Monaco', country: 'Germania', address: 'Technopark, 80939 Monaco' },
+        { city: 'Tokyo', country: 'Giappone', address: 'Shibuya, Tokyo 150-0002' }
+      ]
+    },
+    form: {
+      title: 'Inviaci un Messaggio',
+      name: 'Il Tuo Nome',
+      email: 'Indirizzo Email',
+      company: 'Azienda',
+      subject: 'Oggetto',
+      message: 'Messaggio',
+      submit: 'Invia il Messaggio',
+      success: 'Grazie! Ti risponderemo presto.'
+    },
+    whatsapp: {
+      title: 'Chatta su WhatsApp',
+      description: 'Ricevi risposte rapide su WhatsApp',
+      button: 'Inizia la Chat'
+    }
+  },
+  es: {
+    hero: {
+      title: 'Contáctenos',
+      subtitle: 'Estamos aquí para ayudar y responder cualquier pregunta que tengas'
+    },
+    info: [
+      {
+        title: 'Correo',
+        description: 'Envíanos un correo en cualquier momento',
+        content: 'info@magicchip.com',
+        icon: Mail
+      },
+      {
+        title: 'Teléfono',
+        description: 'Lun-Vie de 9am a 6pm',
+        content: '+1 (555) 123-4567',
+        icon: Phone
+      },
+      {
+        title: 'Sede Central',
+        description: 'Visita nuestra sede central',
+        content: '123 Tech Boulevard, San Jose, CA 95110, USA',
+        icon: MapPin
+      },
+      {
+        title: 'Horario de Atención',
+        description: 'Nuestro equipo de soporte',
+        content: 'Lun-Vie: 9:00 AM - 6:00 PM (PST)',
+        icon: Clock
+      }
+    ],
+    global: {
+      title: 'Oficinas Globales',
+      offices: [
+        { city: 'San Jose', country: 'EE.UU.', address: '123 Tech Boulevard, CA 95110' },
+        { city: 'Shenzhen', country: 'China', address: 'Distrito de Nanshan, Shenzhen 518000' },
+        { city: 'Múnich', country: 'Alemania', address: 'Technopark, 80939 Múnich' },
+        { city: 'Tokio', country: 'Japón', address: 'Shibuya, Tokio 150-0002' }
+      ]
+    },
+    form: {
+      title: 'Envíanos un Mensaje',
+      name: 'Tu Nombre',
+      email: 'Correo Electrónico',
+      company: 'Empresa',
+      subject: 'Asunto',
+      message: 'Mensaje',
+      submit: 'Enviar Mensaje',
+      success: '¡Gracias! Te responderemos pronto.'
+    },
+    whatsapp: {
+      title: 'Chatea en WhatsApp',
+      description: 'Obtén respuestas rápidas en WhatsApp',
+      button: 'Iniciar Chat'
     }
   }
 };
@@ -281,7 +449,7 @@ export default function ContactPage() {
           <div className="w-full h-full flex items-center justify-center bg-gray-300">
             <div className="text-center text-gray-500">
               <MapPin className="w-12 h-12 mx-auto mb-2" />
-              <p>{language === 'en' ? 'Map View' : '地图视图'}</p>
+              <p>{'Map View'}</p>
             </div>
           </div>
         </section>

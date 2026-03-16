@@ -1,12 +1,61 @@
 import { TranslationSchema } from '../types';
 
 export const fr: TranslationSchema = {
+  // SEO Metadata
+  seo: {
+    pageTitle: {
+      home: 'MagicChip - Solutions Matérielles Avancées | Processeurs Entreprise & Puces IA',
+      products: 'Produits Matériels Entreprise | Processeurs, Accélérateurs IA & Solutions Réseau',
+      about: 'À Propos de MagicChip | Histoire, Mission & Équipe',
+      contact: 'Contactez-Nous | Support Enterprise MagicChip',
+      documents: 'Documentation Technique | Manuels Produits & Ressources',
+      downloads: 'Téléchargements | Pilotes, Firmware & Logiciels',
+      news: 'Actualités & Mises à Jour | Nouvelles MagicChip',
+      factory: 'Installations de Fabrication | Production MagicChip',
+      company: 'Notre Entreprise | Aperçu Enterprise MagicChip',
+      leadership: 'Équipe de Direction | Rencontrez Nos Experts',
+      techDocs: 'Documentation Technique | Références API & Guides',
+    },
+    metaDescription: {
+      home: 'MagicChip est un fournisseur leader de solutions matérielles enterprise avancées, y compris des processeurs haute performance, des accélérateurs IA et des puces réseau. Transformez votre centre de données avec une technologie de pointe.',
+      products: 'Explorez la gamme complète de produits matériels enterprise de MagicChip, y compris les CPU entreprise, les accélérateurs IA, les solutions réseau et les modules de sécurité. Haute performance pour les entreprises modernes.',
+      about: 'Découvrez l\'histoire, la mission et l\'équipe de MagicChip. Nous nous engageons à fournir des solutions matérielles innovantes pour les applications enterprise dans le monde entier.',
+      contact: 'Contactez MagicChip pour des solutions matérielles enterprise et un support technique. Notre équipe est prête à vous aider avec vos demandes de produits et le service client.',
+      documents: 'Accédez à la documentation technique de MagicChip, manuels produits, références API et guides d\'installation. Ressources complètes pour le déploiement de matériel enterprise.',
+      downloads: 'Téléchargez des pilotes, firmware, logiciels et ressources produits pour les solutions matérielles MagicChip. Gardez vos systèmes à jour.',
+      news: 'Dernières nouvelles, annonces et mises à jour de MagicChip. Restez informé des lancements de produits, partenariats et développements de l\'entreprise.',
+      factory: 'Découvrez les installations de fabrication de pointe de MagicChip. Apprenez-en plus sur nos capacités de production avancées et nos normes de qualité.',
+      company: 'MagicChip est un leader mondial des solutions matérielles enterprise. Apprenez-en plus sur nos valeurs d\'entreprise, notre vision et notre engagement envers l\'innovation.',
+      leadership: 'Rencontrez l\'équipe de direction de MagicChip. Nos experts pilotent l\'innovation dans le matériel enterprise et le succès client.',
+      techDocs: 'Documentation technique complète pour les produits MagicChip. Références API, guides d\'intégration et ressources développeurs.',
+    },
+    altTexts: {
+      hero: 'Bannière principale MagicChip présentant la technologie matérielle enterprise',
+      featuredProduct: 'MagicChip MC-Pro Series X1 processeur phare',
+      logo: 'Logo de l\'entreprise MagicChip',
+      socialProof: 'Témoignage client MagicChip d\'un leader de l\'industrie',
+      company: 'Siège social de MagicChip',
+      factory: 'Intérieur des installations de fabrication MagicChip',
+      team: 'Membres de l\'équipe de direction MagicChip',
+      products: 'Gamme de produits matériels enterprise MagicChip',
+      documents: 'Ressources de documentation technique MagicChip',
+    },
+  },
+  // Open Graph
+  og: {
+    title: 'MagicChip - Solutions Matérielles Enterprise Avancées',
+    description: 'Fournisseur leader de processeurs haute performance, accélérateurs IA et solutions réseau pour applications enterprise.',
+    image: '/og-image.jpg',
+    url: 'https://magicchip.com/fr',
+  },
   nav: {
     home: 'Accueil',
     products: 'Produits',
     solutions: 'Solutions',
     services: 'Services',
     aboutUs: 'À Propos',
+    documents: 'Documents',
+    contact: 'Contact',
     searchPlaceholder: 'Rechercher des produits, solutions...',
   },
   navDropdown: {
@@ -53,6 +102,22 @@ export const fr: TranslationSchema = {
       press: 'Presse et Médias',
       pressDesc: 'Actualités et annonces',
       contactUs: 'Nous Contacter',
+    },
+    documents: {
+      news: 'Actualités',
+      newsDesc: 'Dernières mises à jour et annonces',
+      downloads: 'Téléchargements',
+      downloadsDesc: 'Brochures, livres blancs et ressources',
+      techDocs: 'Documents Techniques',
+      techDocsDesc: 'Spécifications techniques et manuels',
+    },
+    contact: {
+      email: 'Email',
+      emailDesc: 'Envoyez-nous un email',
+      phone: 'Téléphone',
+      phoneDesc: 'Appelez notre équipe commerciale',
+      whatsapp: 'WhatsApp',
+      whatsappDesc: 'Discutez avec nous sur WhatsApp',
     },
   },
   hero: {
