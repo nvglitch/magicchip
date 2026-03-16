@@ -222,7 +222,7 @@ export default function ProductsPage() {
   const data = productsData[language] || productsData.en;
 
   return (
-    <main className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-24 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
@@ -303,6 +303,6 @@ export default function ProductsPage() {
           </motion.div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
