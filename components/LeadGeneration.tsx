@@ -138,10 +138,10 @@ export default function LeadGeneration() {
                     <Check className="w-8 h-8 text-green-600" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    Thank You!
+                    {t.lead.form.successTitle}
                   </h3>
                   <p className="text-gray-600">
-                    Check your email for the guide.
+                    {t.lead.form.successMessage}
                   </p>
                 </div>
               ) : (

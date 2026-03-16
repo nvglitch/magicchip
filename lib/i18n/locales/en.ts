@@ -237,6 +237,8 @@ export const en: TranslationSchema = {
       email: 'Work Email',
       cta: 'Get the Guide',
       privacy: 'We respect your privacy. Unsubscribe at any time.',
+      successTitle: 'Thank You!',
+      successMessage: 'Check your email for the guide.',
     },
   },
   footer: {
@@ -265,5 +267,43 @@ export const en: TranslationSchema = {
     de: 'Deutsch',
     it: 'Italiano',
     es: 'Español',
+  },
+  downloads: {
+    title: 'Downloads',
+    subtitle: 'Access our latest product documentation, drivers, and resources',
+    table: {
+      document: 'Document',
+      category: 'Category',
+      format: 'Format',
+      size: 'Size',
+      download: 'Download',
+    },
+  },
+  factory: {
+    hero: {
+      title: 'Our Manufacturing Facilities',
+      subtitle: 'State-of-the-art production capabilities delivering excellence',
+    },
+    overview: {
+      title: 'World-Class Manufacturing',
+      description: 'Our advanced facilities combine cutting-edge technology with rigorous quality standards to produce industry-leading hardware solutions.',
+    },
+    capabilities: {
+      title: 'Production Capabilities',
+      subtitle: 'Advanced manufacturing technology and processes',
+    },
+    quality: {
+      title: 'Quality Assurance',
+      subtitle: 'Rigorous testing and certification standards',
+    },
+    ourFacilities: 'Our Facilities',
+    certifications: 'Certifications & Standards',
+    certificationsSubtitle: 'Our facilities maintain the highest industry standards and certifications',
+    stats: {
+      energyReduction: 'Energy Reduction',
+      waterRecycled: 'Water Recycled',
+      wasteToLandfill: 'Waste to Landfill',
+      carbonNeutral: 'Carbon Neutral Target',
+    },
   },
 };

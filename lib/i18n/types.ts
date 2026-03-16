@@ -227,6 +227,8 @@ export interface TranslationSchema {
       email: string;
       cta: string;
       privacy: string;
+      successTitle: string;
+      successMessage: string;
     };
   };
   footer: {
@@ -255,5 +257,43 @@ export interface TranslationSchema {
     de: string;
     it: string;
     es: string;
+  };
+  downloads: {
+    title: string;
+    subtitle: string;
+    table: {
+      document: string;
+      category: string;
+      format: string;
+      size: string;
+      download: string;
+    };
+  };
+  factory: {
+    hero: {
+      title: string;
+      subtitle: string;
+    };
+    overview: {
+      title: string;
+      description: string;
+    };
+    capabilities: {
+      title: string;
+      subtitle: string;
+    };
+    quality: {
+      title: string;
+      subtitle: string;
+    };
+    ourFacilities: string;
+    certifications: string;
+    certificationsSubtitle: string;
+    stats: {
+      energyReduction: string;
+      waterRecycled: string;
+      wasteToLandfill: string;
+      carbonNeutral: string;
+    };
   };
 }

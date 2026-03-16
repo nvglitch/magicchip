@@ -381,7 +381,7 @@ export default function FactoryPage() {
               {t.factory.certifications}
             </h2>
             <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-              {'Our facilities maintain the highest industry standards and certifications'}
+              {t.factory.certificationsSubtitle}
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {data.certifications.map((cert: any, index: number) => (

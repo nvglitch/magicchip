@@ -237,6 +237,8 @@ export const fr: TranslationSchema = {
       email: 'Email Professionnel',
       cta: 'Obtenir le Guide',
       privacy: 'Nous respectons votre vie privée.',
+      successTitle: 'Merci!',
+      successMessage: 'Vérifiez votre email pour le guide.',
     },
   },
   footer: {
@@ -265,6 +267,44 @@ export const fr: TranslationSchema = {
     de: 'Deutsch',
     it: 'Italiano',
     es: 'Español',
+  },
+  downloads: {
+    title: 'Téléchargements',
+    subtitle: 'Accédez à notre dernière documentation produit, pilotes et ressources',
+    table: {
+      document: 'Document',
+      category: 'Catégorie',
+      format: 'Format',
+      size: 'Taille',
+      download: 'Télécharger',
+    },
+  },
+  factory: {
+    hero: {
+      title: 'Nos Installations de Fabrication',
+      subtitle: 'Capacités de production de pointe offrant l\'excellence',
+    },
+    overview: {
+      title: 'Fabrication de Classe Mondiale',
+      description: 'Nos installations avancées combinent technologie de pointe et normes de qualité rigoureuses pour produire des solutions matérielles de premier plan.',
+    },
+    capabilities: {
+      title: 'Capacités de Production',
+      subtitle: 'Technologie et processus de fabrication avancés',
+    },
+    quality: {
+      title: 'Assurance Qualité',
+      subtitle: 'Normes de test et de certification rigoureuses',
+    },
+    ourFacilities: 'Nos Installations',
+    certifications: 'Certifications & Normes',
+    certificationsSubtitle: 'Nos installations maintiennent les normes et certifications industrielles les plus élevées',
+    stats: {
+      energyReduction: 'Réduction d\'Énergie',
+      waterRecycled: 'Eau Recyclée',
+      wasteToLandfill: 'Déchets en Décharge',
+      carbonNeutral: 'Objectif Carbone Neutre',
+    },
   },
 };
 
