@@ -296,4 +296,36 @@ export interface TranslationSchema {
       carbonNeutral: string;
     };
   };
+  chat: {
+    fab: {
+      tooltip: string;
+    };
+    header: {
+      greeting: string;
+      close: string;
+    };
+    tabs: {
+      wechat: string;
+      message: string;
+    };
+    wechat: {
+      title: string;
+      subtitle: string;
+      wechatId: string;
+      copyButton: string;
+      copied: string;
+      scanQr: string;
+    };
+    form: {
+      title: string;
+      subtitle: string;
+      namePlaceholder: string;
+      emailPlaceholder: string;
+      messagePlaceholder: string;
+      submitButton: string;
+      submitting: string;
+      successTitle: string;
+      successMessage: string;
+    };
+  };
 }

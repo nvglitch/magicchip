@@ -306,5 +306,37 @@ export const fr: TranslationSchema = {
       carbonNeutral: 'Objectif Carbone Neutre',
     },
   },
+  chat: {
+    fab: {
+      tooltip: 'Discutez avec nous',
+    },
+    header: {
+      greeting: 'Bonjour ! Comment pouvons-nous vous aider ?',
+      close: 'Fermer',
+    },
+    tabs: {
+      wechat: 'WeChat',
+      message: 'Laisser un Message',
+    },
+    wechat: {
+      title: 'Consultation WeChat',
+      subtitle: 'Scannez le code QR ou copiez l\'ID WeChat',
+      wechatId: 'MagicChip_Support',
+      copyButton: 'Copier l\'ID WeChat',
+      copied: 'Copié !',
+      scanQr: 'Scanner pour ajouter WeChat',
+    },
+    form: {
+      title: 'Laisser un Message',
+      subtitle: 'Nous vous répondrons dans les 24 heures',
+      namePlaceholder: 'Votre Nom',
+      emailPlaceholder: 'Votre Email',
+      messagePlaceholder: 'Comment pouvons-nous vous aider ?',
+      submitButton: 'Envoyer le Message',
+      submitting: 'Envoi en cours...',
+      successTitle: 'Message Envoyé !',
+      successMessage: 'Nous vous contacterons bientôt.',
+    },
+  },
 };
 

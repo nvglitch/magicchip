@@ -306,4 +306,36 @@ export const es: TranslationSchema = {
       carbonNeutral: 'Objetivo Carbono Neutral',
     },
   },
+  chat: {
+    fab: {
+      tooltip: 'Chatea con nosotros',
+    },
+    header: {
+      greeting: '¡Hola! ¿Cómo podemos ayudarte?',
+      close: 'Cerrar',
+    },
+    tabs: {
+      wechat: 'WeChat',
+      message: 'Dejar Mensaje',
+    },
+    wechat: {
+      title: 'Consulta WeChat',
+      subtitle: 'Escanea el código QR o copia el ID de WeChat',
+      wechatId: 'MagicChip_Support',
+      copyButton: 'Copiar ID de WeChat',
+      copied: '¡Copiado!',
+      scanQr: 'Escanear para agregar WeChat',
+    },
+    form: {
+      title: 'Dejar un Mensaje',
+      subtitle: 'Te responderemos en 24 horas',
+      namePlaceholder: 'Tu Nombre',
+      emailPlaceholder: 'Tu Email',
+      messagePlaceholder: '¿Cómo podemos ayudarte?',
+      submitButton: 'Enviar Mensaje',
+      submitting: 'Enviando...',
+      successTitle: '¡Mensaje Enviado!',
+      successMessage: 'Te contactaremos pronto.',
+    },
+  },
 };
