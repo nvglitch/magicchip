@@ -200,19 +200,27 @@ export default function LiveChatWidget() {
 
                       {/* QR Code */}
                       <div className="flex justify-center">
-                        <div className="w-48 h-48 bg-gray-100 rounded-lg flex items-center justify-center">
+                        <div className="w-48 h-48 bg-gray-100 rounded-lg flex items-center justify-center relative overflow-hidden">
                           <Image
                             src="/wechat-qr.png"
                             alt={t.chat.wechat.scanQr}
                             width={192}
                             height={192}
-                            className="rounded-lg"
+                            className="rounded-lg object-cover"
                             onError={(e) => {
                               // Fallback if image doesn't exist
-                              e.currentTarget.style.display = 'none';
+                              const target = e.currentTarget as HTMLImageElement;
+                              target.style.display = 'none';
+                              const parent = target.parentElement;
+                              if (parent) {
+                                const span = parent.querySelector('span');
+                                if (span) {
+                                  span.style.display = 'block';
+                                }
+                              }
                             }}
                           />
-                          <span className="text-gray-400 text-sm">
+                          <span className="text-gray-400 text-sm text-center px-4 hidden">
                             {t.chat.wechat.scanQr}
                           </span>
                         </div>
@@ -415,26 +423,29 @@ export default function LiveChatWidget() {
 
                       {/* QR Code */}
                       <div className="flex justify-center">
-                        <div className="w-48 h-48 bg-gray-100 rounded-lg flex items-center justify-center relative">
+                        <div className="w-48 h-48 bg-gray-100 rounded-lg flex items-center justify-center relative overflow-hidden">
                           <Image
                             src="/wechat-qr.png"
                             alt={t.chat.wechat.scanQr}
                             width={192}
                             height={192}
-                            className="rounded-lg"
+                            className="rounded-lg object-cover"
                             onError={(e) => {
                               // Fallback if image doesn't exist
                               const target = e.currentTarget as HTMLImageElement;
                               target.style.display = 'none';
                               const parent = target.parentElement;
                               if (parent) {
-                                const span = document.createElement('span');
-                                span.className = 'text-gray-400 text-sm text-center px-4';
-                                span.textContent = t.chat.wechat.scanQr;
-                                parent.appendChild(span);
+                                const span = parent.querySelector('span');
+                                if (span) {
+                                  span.style.display = 'block';
+                                }
                               }
                             }}
                           />
+                          <span className="text-gray-400 text-sm text-center px-4 hidden">
+                            {t.chat.wechat.scanQr}
+                          </span>
                         </div>
                       </div>
 
