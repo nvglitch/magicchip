@@ -2,7 +2,7 @@
 
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { motion } from 'framer-motion';
-import { Target, Eye, Award, Users, Globe, TrendingUp, MapPin, Calendar, ArrowRight } from 'lucide-react';
+import { Target, Eye, Award, Users, Globe, TrendingUp, MapPin, Calendar, ArrowRight, Lightbulb, Star, Leaf, Handshake } from 'lucide-react';
 
 const companyData = {
   en: {
@@ -28,22 +28,22 @@ const companyData = {
       {
         title: 'Innovation',
         description: 'We constantly push the boundaries of what\'s possible in chip design and manufacturing.',
-        icon: '💡'
+        icon: 'Lightbulb'
       },
       {
         title: 'Quality',
         description: 'Every chip we produce meets the highest standards of reliability and performance.',
-        icon: '⭐'
+        icon: 'Star'
       },
       {
         title: 'Sustainability',
         description: 'We are committed to reducing our environmental footprint through green manufacturing.',
-        icon: '🌱'
+        icon: 'Leaf'
       },
       {
         title: 'Partnership',
         description: 'We build long-term relationships with our clients based on trust and mutual success.',
-        icon: '🤝'
+        icon: 'Handshake'
       }
     ],
     timeline: [
@@ -81,10 +81,10 @@ const companyData = {
       content: 'Devenir le leader mondial des semi-conducteurs, en permettant des avancées dans l\'IA, le cloud computing et l\'edge computing.'
     },
     values: [
-      { title: 'Innovation', description: 'Nous repoussons constamment les limites de ce qui est possible dans la conception et la fabrication des puces.', icon: '💡' },
-      { title: 'Qualité', description: 'Chaque puce que nous produisons répond aux plus hautes normes de fiabilité et de performance.', icon: '⭐' },
-      { title: 'Durabilité', description: 'Nous nous engageons à réduire notre empreinte environnementale grâce à une fabrication verte.', icon: '🌱' },
-      { title: 'Partenariat', description: 'Nous construisons des relations à long terme avec nos clients fondées sur la confiance et le succès mutuel.', icon: '🤝' }
+      { title: 'Innovation', description: 'Nous repoussons constamment les limites de ce qui est possible dans la conception et la fabrication des puces.', icon: 'Lightbulb' },
+      { title: 'Qualité', description: 'Chaque puce que nous produisons répond aux plus hautes normes de fiabilité et de performance.', icon: 'Star' },
+      { title: 'Durabilité', description: 'Nous nous engageons à réduire notre empreinte environnementale grâce à une fabrication verte.', icon: 'Leaf' },
+      { title: 'Partenariat', description: 'Nous construisons des relations à long terme avec nos clients fondées sur la confiance et le succès mutuel.', icon: 'Handshake' }
     ],
     timeline: [
       { year: '2015', title: 'Fondation', description: 'MagicChip a été fondé à Shenzhen' },
@@ -121,10 +121,10 @@ const companyData = {
       content: 'Weltmarktführer in Halbleitern werden und Fortschritte in KI, Cloud Computing und Edge Computing ermöglichen.'
     },
     values: [
-      { title: 'Innovation', description: 'Wir erweitern ständig die Grenzen dessen, was in Chip-Design und -Fertigung möglich ist.', icon: '💡' },
-      { title: 'Qualität', description: 'Jeder Chip, den wir herstellen, erfüllt die höchsten Standards für Zuverlässigkeit und Leistung.', icon: '⭐' },
-      { title: 'Nachhaltigkeit', description: 'Wir verpflichten uns, unseren ökologischen Fußabdruck durch grüne Fertigung zu reduzieren.', icon: '🌱' },
-      { title: 'Partnerschaft', description: 'Wir bauen langfristige Beziehungen zu unseren Kunden auf Vertrauen und gemeinsamen Erfolg auf.', icon: '🤝' }
+      { title: 'Innovation', description: 'Wir erweitern ständig die Grenzen dessen, was in Chip-Design und -Fertigung möglich ist.', icon: 'Lightbulb' },
+      { title: 'Qualität', description: 'Jeder Chip, den wir herstellen, erfüllt die höchsten Standards für Zuverlässigkeit und Leistung.', icon: 'Star' },
+      { title: 'Nachhaltigkeit', description: 'Wir verpflichten uns, unseren ökologischen Fußabdruck durch grüne Fertigung zu reduzieren.', icon: 'Leaf' },
+      { title: 'Partnerschaft', description: 'Wir bauen langfristige Beziehungen zu unseren Kunden auf Vertrauen und gemeinsamen Erfolg auf.', icon: 'Handshake' }
     ],
     timeline: [
       { year: '2015', title: 'Gründung', description: 'MagicChip wurde in Shenzhen gegründet' },
@@ -161,10 +161,10 @@ const companyData = {
       content: 'Diventare leader mondiale nei semiconduttori, permettendo progressi in IA, cloud computing e edge computing.'
     },
     values: [
-      { title: 'Innovazione', description: 'Spingiamo costantemente i limiti di ciò che è possibile nella progettazione e produzione dei chip.', icon: '💡' },
-      { title: 'Qualità', description: 'Ogni chip che produciamo rispetta i più alti standard di affidabilità e prestazioni.', icon: '⭐' },
-      { title: 'Sostenibilità', description: 'Ci impegniamo a ridurre il nostro impatto ambientale attraverso una produzione verde.', icon: '🌱' },
-      { title: 'Partnership', description: 'Costruiamo relazioni a lungo termine con i nostri clienti basate su fiducia e successo reciproco.', icon: '🤝' }
+      { title: 'Innovazione', description: 'Spingiamo costantemente i limiti di ciò che è possibile nella progettazione e produzione dei chip.', icon: 'Lightbulb' },
+      { title: 'Qualità', description: 'Ogni chip che produciamo rispetta i più alti standard di affidabilità e prestazioni.', icon: 'Star' },
+      { title: 'Sostenibilità', description: 'Ci impegniamo a ridurre il nostro impatto ambientale attraverso una produzione verde.', icon: 'Leaf' },
+      { title: 'Partnership', description: 'Costruiamo relazioni a lungo termine con i nostri clienti basate su fiducia e successo reciproco.', icon: 'Handshake' }
     ],
     timeline: [
       { year: '2015', title: 'Fondazione', description: 'MagicChip è stata fondata a Shenzhen' },
@@ -201,10 +201,10 @@ const companyData = {
       content: 'Convertirnos en el líder mundial en semiconductores, permitiendo avances en IA, computación en la nube y edge computing.'
     },
     values: [
-      { title: 'Innovación', description: 'Constantemente superamos los límites de lo posible en el diseño y fabricación de chips.', icon: '💡' },
-      { title: 'Calidad', description: 'Cada chip que producimos cumple con los más altos estándares de confiabilidad y rendimiento.', icon: '⭐' },
-      { title: 'Sostenibilidad', description: 'Nos comprometemos a reducir nuestra huella ambiental mediante fabricación verde.', icon: '🌱' },
-      { title: 'Asociación', description: 'Construimos relaciones a largo plazo con nuestros clientes basadas en confianza y éxito mutuo.', icon: '🤝' }
+      { title: 'Innovación', description: 'Constantemente superamos los límites de lo posible en el diseño y fabricación de chips.', icon: 'Lightbulb' },
+      { title: 'Calidad', description: 'Cada chip que producimos cumple con los más altos estándares de confiabilidad y rendimiento.', icon: 'Star' },
+      { title: 'Sostenibilidad', description: 'Nos comprometemos a reducir nuestra huella ambiental mediante fabricación verde.', icon: 'Leaf' },
+      { title: 'Asociación', description: 'Construimos relaciones a largo plazo con nuestros clientes basadas en confianza y éxito mutuo.', icon: 'Handshake' }
     ],
     timeline: [
       { year: '2015', title: 'Fundación', description: 'MagicChip fue fundada en Shenzhen' },
@@ -305,19 +305,31 @@ export default function CompanyPage() {
               {'Our Core Values'}
             </h2>
             <div className="grid md:grid-cols-4 gap-8">
-              {data.values.map((value: any, index: number) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center p-6"
-                >
-                  <div className="text-4xl mb-4">{value.icon}</div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{value.title}</h3>
-                  <p className="text-gray-600 text-sm">{value.description}</p>
-                </motion.div>
-              ))}
+              {data.values.map((value: any, index: number) => {
+                const iconMap: Record<string, any> = {
+                  Lightbulb,
+                  Star,
+                  Leaf,
+                  Handshake
+                };
+                const IconComponent = iconMap[value.icon] || Lightbulb;
+
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="text-center p-6"
+                  >
+                    <div className="w-12 h-12 bg-blue-100 rounded-md flex items-center justify-center mx-auto mb-4">
+                      <IconComponent className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{value.title}</h3>
+                    <p className="text-gray-600 text-sm">{value.description}</p>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>

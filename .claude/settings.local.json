@@ -18,7 +18,8 @@
       "Bash(cd \"D:\\\\Desktop\\\\NVG 临时文件\\\\NVG项目三月\\\\magicchip\" && npm run build 2>&1 | tail -10)",
       "Bash(cd \"D:\\\\Desktop\\\\NVG 临时文件\\\\NVG项目三月\\\\magicchip\" && npm run build 2>&1 | grep -E \"\\(✓ Compiled|Build completed|error\\)\" | tail -5)",
       "Bash(cd \"D:\\\\Desktop\\\\NVG 临时文件\\\\NVG项目三月\\\\magicchip\" && ls -lh scripts/*.js scripts/*.md *.md | grep -E \"\\(translate|TRANSLATION|DELIVERY\\)\" | head -20)",
-      "Bash(cd:*)"
+      "Bash(cd:*)",
+      "Bash(npm run:*)"
     ]
   }
 }
