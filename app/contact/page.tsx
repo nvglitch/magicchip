@@ -36,15 +36,6 @@ const contactData = {
         icon: Clock
       }
     ],
-    global: {
-      title: 'Global Offices',
-      offices: [
-        { city: 'San Jose', country: 'USA', address: '123 Tech Boulevard, CA 95110' },
-        { city: 'Shenzhen', country: 'China', address: 'Nanshan District, Shenzhen 518000' },
-        { city: 'Munich', country: 'Germany', address: 'Technopark, 80939 Munich' },
-        { city: 'Tokyo', country: 'Japan', address: 'Shibuya, Tokyo 150-0002' }
-      ]
-    },
     form: {
       title: 'Send us a Message',
       name: 'Your Name',
@@ -92,15 +83,6 @@ const contactData = {
         icon: Clock
       }
     ],
-    global: {
-      title: 'Bureaux Mondiaux',
-      offices: [
-        { city: 'San Jose', country: 'USA', address: '123 Tech Boulevard, CA 95110' },
-        { city: 'Shenzhen', country: 'Chine', address: 'Nanshan District, Shenzhen 518000' },
-        { city: 'Munich', country: 'Allemagne', address: 'Technopark, 80939 Munich' },
-        { city: 'Tokyo', country: 'Japon', address: 'Shibuya, Tokyo 150-0002' }
-      ]
-    },
     form: {
       title: 'Envoyez-nous un Message',
       name: 'Votre Nom',
@@ -148,15 +130,6 @@ const contactData = {
         icon: Clock
       }
     ],
-    global: {
-      title: 'Globale Büros',
-      offices: [
-        { city: 'San Jose', country: 'USA', address: '123 Tech Boulevard, CA 95110' },
-        { city: 'Shenzhen', country: 'China', address: 'Nanshan District, Shenzhen 518000' },
-        { city: 'München', country: 'Deutschland', address: 'Technopark, 80939 München' },
-        { city: 'Tokio', country: 'Japan', address: 'Shibuya, Tokio 150-0002' }
-      ]
-    },
     form: {
       title: 'Senden Sie uns eine Nachricht',
       name: 'Ihr Name',
@@ -204,15 +177,6 @@ const contactData = {
         icon: Clock
       }
     ],
-    global: {
-      title: 'Uffici Globali',
-      offices: [
-        { city: 'San Jose', country: 'USA', address: '123 Tech Boulevard, CA 95110' },
-        { city: 'Shenzhen', country: 'Cina', address: 'Nanshan District, Shenzhen 518000' },
-        { city: 'Monaco', country: 'Germania', address: 'Technopark, 80939 Monaco' },
-        { city: 'Tokyo', country: 'Giappone', address: 'Shibuya, Tokyo 150-0002' }
-      ]
-    },
     form: {
       title: 'Inviaci un Messaggio',
       name: 'Il Tuo Nome',
@@ -260,15 +224,6 @@ const contactData = {
         icon: Clock
       }
     ],
-    global: {
-      title: 'Oficinas Globales',
-      offices: [
-        { city: 'San Jose', country: 'EE.UU.', address: '123 Tech Boulevard, CA 95110' },
-        { city: 'Shenzhen', country: 'China', address: 'Distrito de Nanshan, Shenzhen 518000' },
-        { city: 'Múnich', country: 'Alemania', address: 'Technopark, 80939 Múnich' },
-        { city: 'Tokio', country: 'Japón', address: 'Shibuya, Tokio 150-0002' }
-      ]
-    },
     form: {
       title: 'Envíanos un Mensaje',
       name: 'Tu Nombre',
@@ -348,15 +303,15 @@ export default function ContactPage() {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.name}</label>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.email}</label>
-                      <input 
-                        type="email" 
+                      <input
+                        type="email"
                         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       />
                     </div>
@@ -364,27 +319,27 @@ export default function ContactPage() {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.company}</label>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.subject}</label>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       />
                     </div>
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.message}</label>
-                    <textarea 
+                    <textarea
                       rows={4}
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     />
                   </div>
-                  <button 
+                  <button
                     type="submit"
                     className="w-full flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors"
                   >
@@ -394,7 +349,7 @@ export default function ContactPage() {
                 </form>
               </motion.div>
 
-              {/* WhatsApp & Global Offices */}
+              {/* WhatsApp & Map */}
               <div className="space-y-8">
                 {/* WhatsApp */}
                 <motion.div
@@ -408,7 +363,7 @@ export default function ContactPage() {
                     <h2 className="text-2xl font-bold">{data.whatsapp.title}</h2>
                   </div>
                   <p className="text-green-100 mb-6">{data.whatsapp.description}</p>
-                  <a 
+                  <a
                     href="https://wa.me/1234567890"
                     className="inline-flex items-center px-6 py-3 bg-white text-green-600 font-medium rounded-md hover:bg-green-50 transition-colors"
                   >
@@ -417,38 +372,21 @@ export default function ContactPage() {
                   </a>
                 </motion.div>
 
-                {/* Global Offices */}
+                {/* Map */}
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
-                  className="bg-white p-8 rounded-md shadow-sm"
+                  className="h-96 bg-gray-200 rounded-md overflow-hidden"
                 >
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">{data.global.title}</h2>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {data.global.offices.map((office: any, index: number) => (
-                      <div key={index} className="flex items-start p-4 bg-gray-50 rounded-md">
-                        <MapPin className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <div className="font-semibold text-gray-900">{office.city}</div>
-                          <div className="text-sm text-gray-600">{office.country}</div>
-                          <div className="text-sm text-gray-500 mt-1">{office.address}</div>
-                        </div>
-                      </div>
-                    ))}
+                  <div className="w-full h-full flex items-center justify-center bg-gray-300">
+                    <div className="text-center text-gray-500">
+                      <MapPin className="w-12 h-12 mx-auto mb-2" />
+                      <p>{'Map View'}</p>
+                    </div>
                   </div>
                 </motion.div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Map */}
-        <section className="h-96 bg-gray-200">
-          <div className="w-full h-full flex items-center justify-center bg-gray-300">
-            <div className="text-center text-gray-500">
-              <MapPin className="w-12 h-12 mx-auto mb-2" />
-              <p>{'Map View'}</p>
             </div>
           </div>
         </section>

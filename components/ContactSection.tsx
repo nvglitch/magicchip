@@ -110,6 +110,102 @@ const contactData = {
     whatsapp: {
       button: 'Commencer sur WhatsApp'
     }
+  },
+  de: {
+    hero: {
+      title: 'Kontaktieren Sie Uns',
+      subtitle: 'Wir sind hier, um Ihnen zu helfen und alle Ihre Fragen zu beantworten'
+    },
+    officeAddress: 'Büroadresse',
+    quickLinks: 'Schnelllinks',
+    links: {
+      latestNews: 'Neuigkeiten',
+      downloads: 'Downloads',
+      techDocuments: 'Technische Dokumente',
+      aboutUs: 'Über Uns',
+      ourFactory: 'Unsere Fabrik',
+      memberTeam: 'Team'
+    },
+    labels: {
+      email: 'E-Mail',
+      phone: 'Telefon',
+      address: 'Büroadresse',
+      businessHours: 'Geschäftszeiten'
+    },
+    form: {
+      title: 'Senden Sie uns eine Nachricht',
+      name: 'Name',
+      email: 'E-Mail',
+      message: 'Wie können wir Ihnen helfen?',
+      button: 'Nachricht Senden'
+    },
+    whatsapp: {
+      button: 'WhatsApp Chat Starten'
+    }
+  },
+  it: {
+    hero: {
+      title: 'Contattaci',
+      subtitle: 'Siamo qui per aiutarti e rispondere a qualsiasi domanda'
+    },
+    officeAddress: 'Indirizzo Ufficio',
+    quickLinks: 'Link Rapidi',
+    links: {
+      latestNews: 'Notizie',
+      downloads: 'Download',
+      techDocuments: 'Documenti Tecnici',
+      aboutUs: 'Chi Siamo',
+      ourFactory: 'La Nostra Fabbrica',
+      memberTeam: 'Team'
+    },
+    labels: {
+      email: 'Email',
+      phone: 'Telefono',
+      address: 'Indirizzo Ufficio',
+      businessHours: 'Orari di Apertura'
+    },
+    form: {
+      title: 'Inviaci un Messaggio',
+      name: 'Nome',
+      email: 'Email',
+      message: 'Come possiamo aiutarti?',
+      button: 'Invia Messaggio'
+    },
+    whatsapp: {
+      button: 'Inizia Chat WhatsApp'
+    }
+  },
+  es: {
+    hero: {
+      title: 'Contáctenos',
+      subtitle: 'Estamos aquí para ayudar y responder cualquier pregunta que tengas'
+    },
+    officeAddress: 'Dirección de Oficina',
+    quickLinks: 'Enlaces Rápidos',
+    links: {
+      latestNews: 'Noticias',
+      downloads: 'Descargas',
+      techDocuments: 'Documentos Técnicos',
+      aboutUs: 'Nosotros',
+      ourFactory: 'Nuestra Fábrica',
+      memberTeam: 'Equipo'
+    },
+    labels: {
+      email: 'Correo',
+      phone: 'Teléfono',
+      address: 'Dirección de Oficina',
+      businessHours: 'Horario de Atención'
+    },
+    form: {
+      title: 'Envíanos un Mensaje',
+      name: 'Nombre',
+      email: 'Correo',
+      message: '¿Cómo podemos ayudarte?',
+      button: 'Enviar Mensaje'
+    },
+    whatsapp: {
+      button: 'Iniciar Chat de WhatsApp'
+    }
   }
 };
 

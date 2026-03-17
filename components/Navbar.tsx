@@ -94,13 +94,21 @@ export default function Navbar() {
       <div className="w-full max-w-7xl mx-auto px-3 md:px-4 lg:px-6 xl:px-8">
         <div className="flex items-center justify-between h-16 gap-2 md:gap-3 lg:gap-4">
           {/* Logo */}
-          <a href="/" className="flex items-center flex-shrink-0 h-10 min-w-0">
+          <a href="/" className="flex items-center flex-shrink-0 h-10 min-w-0 ml-2 md:ml-0">
+            <Image
+              src="/magic chip Logo.png"
+              alt="MagicChip"
+              width={150}
+              height={40}
+              className="h-7 md:h-8 lg:h-10 w-auto object-contain md:hidden"
+              priority
+            />
             <Image
               src="/logo.png"
               alt="MagicChip"
               width={150}
               height={40}
-              className="h-7 md:h-8 lg:h-10 w-auto object-contain"
+              className="hidden md:block h-8 lg:h-10 w-auto object-contain"
               priority
             />
           </a>
@@ -275,6 +283,37 @@ export default function Navbar() {
             className="md:hidden border-t border-gray-200 bg-white overflow-hidden max-h-[calc(100vh-4rem)] overflow-y-auto"
           >
             <div className="px-3 sm:px-4 py-4 space-y-3">
+              {/* Language Selector - Moved to Top */}
+              <div className="pb-3 border-b border-gray-200">
+                <div className="text-sm font-semibold text-gray-500 mb-2 flex items-center gap-2">
+                  <Globe className="w-4 h-4" />
+                  {t.language.title}
+                </div>
+                <div className="space-y-1">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => {
+                        setLanguage(lang.code);
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className={`w-full flex items-center justify-between px-3 py-2.5 text-sm rounded-md transition-colors touch-manipulation ${
+                        language === lang.code
+                          ? 'bg-blue-50 text-blue-600 font-medium'
+                          : 'text-gray-700 hover:bg-gray-50'
+                      }`}
+                    >
+                      <span className="flex items-center gap-2">
+                        <span className="text-lg">{lang.flag}</span>
+                        <span>{lang.label}</span>
+                      </span>
+                      {language === lang.code && <Check className="w-4 h-4 flex-shrink-0" />}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Navigation Items */}
               {navItems.map((item) => (
                 <div key={item.label} className="space-y-2">
                   <a
@@ -303,31 +342,6 @@ export default function Navbar() {
                   )}
                 </div>
               ))}
-              <div className="pt-3 border-t border-gray-200">
-                <div className="text-sm font-semibold text-gray-500 mb-2">{t.language.title}</div>
-                <div className="space-y-1">
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => {
-                        setLanguage(lang.code);
-                        setIsMobileMenuOpen(false);
-                      }}
-                      className={`w-full flex items-center justify-between px-2 py-2.5 text-sm rounded-md transition-colors touch-manipulation ${
-                        language === lang.code
-                          ? 'bg-blue-50 text-blue-600'
-                          : 'text-gray-700 hover:bg-gray-100'
-                      }`}
-                    >
-                      <span className="flex items-center gap-2">
-                        <span className="text-lg">{lang.flag}</span>
-                        <span>{lang.label}</span>
-                      </span>
-                      {language === lang.code && <Check className="w-4 h-4 flex-shrink-0" />}
-                    </button>
-                  ))}
-                </div>
-              </div>
             </div>
           </motion.div>
         )}
