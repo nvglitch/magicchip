@@ -1,7 +1,7 @@
 {
   "id": "banner-3",
   "order": 3,
-  "image": null,
+  "image": "/banner3.jpg",
   "title": {
     "en": "Sustainable Technology",
     "zh": "可持续技术",
