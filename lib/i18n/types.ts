@@ -305,16 +305,16 @@ export interface TranslationSchema {
       close: string;
     };
     tabs: {
-      wechat: string;
+      whatsapp: string;
       message: string;
     };
-    wechat: {
+    whatsapp: {
       title: string;
       subtitle: string;
-      wechatId: string;
+      number: string;
       copyButton: string;
       copied: string;
-      scanQr: string;
+      startChat: string;
     };
     form: {
       title: string;

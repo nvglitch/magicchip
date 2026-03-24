@@ -62,9 +62,9 @@ export default function Navbar() {
       { title: t.navDropdown?.documents?.techDocs || 'Tech Document', description: t.navDropdown?.documents?.techDocsDesc || 'Technical specifications and manuals', href: '/tech-docs', icon: FileCode },
     ],
     contact: [
-      { title: t.navDropdown?.contact?.email || 'Email', description: t.navDropdown?.contact?.emailDesc || 'Send us an email', href: 'mailto:info@magicchip.com', icon: Mail },
-      { title: t.navDropdown?.contact?.phone || 'Phone', description: t.navDropdown?.contact?.phoneDesc || 'Call our sales team', href: 'tel:+1234567890', icon: Phone },
-      { title: t.navDropdown?.contact?.whatsapp || 'WhatsApp', description: t.navDropdown?.contact?.whatsappDesc || 'Chat with us on WhatsApp', href: 'https://wa.me/1234567890', icon: MessageCircle },
+      { title: t.navDropdown?.contact?.email || 'Email', description: t.navDropdown?.contact?.emailDesc || 'Send us an email', href: 'mailto:Contact@szmagicchip.com', icon: Mail },
+      { title: t.navDropdown?.contact?.phone || 'Phone', description: t.navDropdown?.contact?.phoneDesc || 'Call our sales team', href: 'tel:+8613392172330', icon: Phone },
+      { title: t.navDropdown?.contact?.whatsapp || 'WhatsApp', description: t.navDropdown?.contact?.whatsappDesc || 'Chat with us on WhatsApp', href: 'https://wa.me/8613392172330', icon: MessageCircle },
     ],
     about: [
       { title: 'Our Company', description: 'Company history and mission', href: '/company', icon: BookOpen },

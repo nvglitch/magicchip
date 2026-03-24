@@ -14,19 +14,19 @@ const contactData = {
       {
         title: 'Email',
         description: 'Send us an email anytime',
-        content: 'info@magicchip.com',
+        content: 'Contact@szmagicchip.com',
         icon: Mail
       },
       {
         title: 'Phone',
         description: 'Mon-Fri from 9am to 6pm',
-        content: '+1 (555) 123-4567',
+        content: '+86 133 9217 2330',
         icon: Phone
       },
       {
         title: 'Headquarters',
         description: 'Visit our headquarters',
-        content: '123 Tech Boulevard, San Jose, CA 95110, USA',
+        content: '5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China',
         icon: MapPin
       },
       {
@@ -61,19 +61,19 @@ const contactData = {
       {
         title: 'Email',
         description: 'Envoyez-nous un email à tout moment',
-        content: 'info@magicchip.com',
+        content: 'Contact@szmagicchip.com',
         icon: Mail
       },
       {
         title: 'Téléphone',
         description: 'Lun-Ven de 9h à 18h',
-        content: '+1 (555) 123-4567',
+        content: '+86 133 9217 2330',
         icon: Phone
       },
       {
         title: 'Siège Social',
         description: 'Visitez notre siège social',
-        content: '123 Tech Boulevard, San Jose, CA 95110, USA',
+        content: '5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China',
         icon: MapPin
       },
       {
@@ -108,19 +108,19 @@ const contactData = {
       {
         title: 'E-Mail',
         description: 'Senden Sie uns jederzeit eine E-Mail',
-        content: 'info@magicchip.com',
+        content: 'Contact@szmagicchip.com',
         icon: Mail
       },
       {
         title: 'Telefon',
         description: 'Mo-Fr von 9 bis 18 Uhr',
-        content: '+1 (555) 123-4567',
+        content: '+86 133 9217 2330',
         icon: Phone
       },
       {
         title: 'Hauptsitz',
         description: 'Besuchen Sie unseren Hauptsitz',
-        content: '123 Tech Boulevard, San Jose, CA 95110, USA',
+        content: '5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China',
         icon: MapPin
       },
       {
@@ -155,19 +155,19 @@ const contactData = {
       {
         title: 'Email',
         description: 'Inviaci un\'email in qualsiasi momento',
-        content: 'info@magicchip.com',
+        content: 'Contact@szmagicchip.com',
         icon: Mail
       },
       {
         title: 'Telefono',
         description: 'Lun-Ven dalle 9 alle 18',
-        content: '+1 (555) 123-4567',
+        content: '+86 133 9217 2330',
         icon: Phone
       },
       {
         title: 'Sede Centrale',
         description: 'Visita la nostra sede centrale',
-        content: '123 Tech Boulevard, San Jose, CA 95110, USA',
+        content: '5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China',
         icon: MapPin
       },
       {
@@ -202,19 +202,19 @@ const contactData = {
       {
         title: 'Correo',
         description: 'Envíanos un correo en cualquier momento',
-        content: 'info@magicchip.com',
+        content: 'Contact@szmagicchip.com',
         icon: Mail
       },
       {
         title: 'Teléfono',
         description: 'Lun-Vie de 9am a 6pm',
-        content: '+1 (555) 123-4567',
+        content: '+86 133 9217 2330',
         icon: Phone
       },
       {
         title: 'Sede Central',
         description: 'Visita nuestra sede central',
-        content: '123 Tech Boulevard, San Jose, CA 95110, USA',
+        content: '5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China',
         icon: MapPin
       },
       {
@@ -364,7 +364,7 @@ export default function ContactPage() {
                   </div>
                   <p className="text-green-100 mb-6">{data.whatsapp.description}</p>
                   <a
-                    href="https://wa.me/1234567890"
+                    href="https://wa.me/8613392172330"
                     className="inline-flex items-center px-6 py-3 bg-white text-green-600 font-medium rounded-md hover:bg-green-50 transition-colors"
                   >
                     <MessageSquare className="w-5 h-5 mr-2" />

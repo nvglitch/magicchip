@@ -22,9 +22,9 @@ export default function Footer() {
   };
 
   const contactLinks = [
-    { key: 'email', href: 'mailto:info@magicchip.com', icon: Mail },
-    { key: 'phone', href: 'tel:+1234567890', icon: Phone },
-    { key: 'whatsapp', href: 'https://wa.me/1234567890', icon: MessageCircle },
+    { key: 'email', href: 'mailto:Contact@szmagicchip.com', icon: Mail },
+    { key: 'phone', href: 'tel:+8613392172330', icon: Phone },
+    { key: 'whatsapp', href: 'https://wa.me/8613392172330', icon: MessageCircle },
   ];
 
   return (

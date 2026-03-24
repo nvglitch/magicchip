@@ -2,14 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X, Copy, Check } from 'lucide-react';
-import Image from 'next/image';
+import { MessageCircle, X, Copy, Check, ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function LiveChatWidget() {
   const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState<'wechat' | 'message'>('wechat');
+  const [activeTab, setActiveTab] = useState<'whatsapp' | 'message'>('whatsapp');
   const [isCopied, setIsCopied] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -51,14 +50,18 @@ export default function LiveChatWidget() {
     }
   }, [isOpen]);
 
-  const handleCopyWechatId = async () => {
+  const handleCopyNumber = async () => {
     try {
-      await navigator.clipboard.writeText(t.chat.wechat.wechatId);
+      await navigator.clipboard.writeText('+86 133 9217 2330');
       setIsCopied(true);
       setTimeout(() => setIsCopied(false), 2000);
     } catch (err) {
       console.error('Failed to copy:', err);
     }
+  };
+
+  const handleStartWhatsApp = () => {
+    window.open('https://wa.me/8613392172330', '_blank');
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -76,7 +79,7 @@ export default function LiveChatWidget() {
       setIsOpen(false);
       setIsSubmitted(false);
       setFormData({ name: '', email: '', message: '' });
-      setActiveTab('wechat');
+      setActiveTab('whatsapp');
     }, 3000);
 
     setIsSubmitting(false);
@@ -144,15 +147,15 @@ export default function LiveChatWidget() {
               {/* Tab Navigation */}
               <div className="flex border-b border-gray-200">
                 <button
-                  onClick={() => setActiveTab('wechat')}
+                  onClick={() => setActiveTab('whatsapp')}
                   className={`flex-1 py-3 text-sm font-medium transition-colors relative ${
-                    activeTab === 'wechat'
+                    activeTab === 'whatsapp'
                       ? 'text-blue-600'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
-                  {t.chat.tabs.wechat}
-                  {activeTab === 'wechat' && (
+                  {t.chat.tabs.whatsapp}
+                  {activeTab === 'whatsapp' && (
                     <motion.div
                       layoutId="mobile-tab-indicator"
                       className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600"
@@ -180,9 +183,9 @@ export default function LiveChatWidget() {
               {/* Content */}
               <div className="flex-1 overflow-y-auto p-6">
                 <AnimatePresence mode="wait">
-                  {activeTab === 'wechat' ? (
+                  {activeTab === 'whatsapp' ? (
                     <motion.div
-                      key="wechat"
+                      key="whatsapp"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: 20 }}
@@ -191,64 +194,43 @@ export default function LiveChatWidget() {
                     >
                       <div>
                         <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                          {t.chat.wechat.title}
+                          {t.chat.whatsapp.title}
                         </h4>
                         <p className="text-sm text-gray-600">
-                          {t.chat.wechat.subtitle}
+                          {t.chat.whatsapp.subtitle}
                         </p>
                       </div>
 
-                      {/* QR Code */}
-                      <div className="flex justify-center">
-                        <div className="w-48 h-48 bg-gray-100 rounded-lg flex items-center justify-center relative overflow-hidden">
-                          <Image
-                            src="/wechat-qr.png"
-                            alt={t.chat.wechat.scanQr}
-                            width={192}
-                            height={192}
-                            className="rounded-lg object-cover"
-                            onError={(e) => {
-                              // Fallback if image doesn't exist
-                              const target = e.currentTarget as HTMLImageElement;
-                              target.style.display = 'none';
-                              const parent = target.parentElement;
-                              if (parent) {
-                                const span = parent.querySelector('span');
-                                if (span) {
-                                  span.style.display = 'block';
-                                }
-                              }
-                            }}
-                          />
-                          <span className="text-gray-400 text-sm text-center px-4 hidden">
-                            {t.chat.wechat.scanQr}
-                          </span>
-                        </div>
-                      </div>
-
-                      {/* WeChat ID */}
+                      {/* WhatsApp Number */}
                       <div className="space-y-3">
                         <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                          <p className="text-xs text-gray-600 mb-1">WeChat ID</p>
+                          <p className="text-xs text-gray-600 mb-1">WhatsApp</p>
                           <p className="text-base font-mono font-medium text-gray-900">
-                            {t.chat.wechat.wechatId}
+                            {t.chat.whatsapp.number}
                           </p>
                         </div>
                         <button
-                          onClick={handleCopyWechatId}
+                          onClick={handleCopyNumber}
                           className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                         >
                           {isCopied ? (
                             <>
                               <Check className="w-4 h-4" />
-                              {t.chat.wechat.copied}
+                              {t.chat.whatsapp.copied}
                             </>
                           ) : (
                             <>
                               <Copy className="w-4 h-4" />
-                              {t.chat.wechat.copyButton}
+                              {t.chat.whatsapp.copyButton}
                             </>
                           )}
+                        </button>
+                        <button
+                          onClick={handleStartWhatsApp}
+                          className="w-full py-3 px-4 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          {t.chat.whatsapp.startChat}
                         </button>
                       </div>
                     </motion.div>
@@ -367,15 +349,15 @@ export default function LiveChatWidget() {
               {/* Tab Navigation */}
               <div className="flex border-b border-gray-200">
                 <button
-                  onClick={() => setActiveTab('wechat')}
+                  onClick={() => setActiveTab('whatsapp')}
                   className={`flex-1 py-3 text-sm font-medium transition-colors relative ${
-                    activeTab === 'wechat'
+                    activeTab === 'whatsapp'
                       ? 'text-blue-600'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
-                  {t.chat.tabs.wechat}
-                  {activeTab === 'wechat' && (
+                  {t.chat.tabs.whatsapp}
+                  {activeTab === 'whatsapp' && (
                     <motion.div
                       layoutId="desktop-tab-indicator"
                       className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600"
@@ -403,9 +385,9 @@ export default function LiveChatWidget() {
               {/* Content */}
               <div className="overflow-y-auto p-6" style={{ maxHeight: '480px' }}>
                 <AnimatePresence mode="wait">
-                  {activeTab === 'wechat' ? (
+                  {activeTab === 'whatsapp' ? (
                     <motion.div
-                      key="wechat"
+                      key="whatsapp"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: 20 }}
@@ -414,64 +396,43 @@ export default function LiveChatWidget() {
                     >
                       <div>
                         <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                          {t.chat.wechat.title}
+                          {t.chat.whatsapp.title}
                         </h4>
                         <p className="text-sm text-gray-600">
-                          {t.chat.wechat.subtitle}
+                          {t.chat.whatsapp.subtitle}
                         </p>
                       </div>
 
-                      {/* QR Code */}
-                      <div className="flex justify-center">
-                        <div className="w-48 h-48 bg-gray-100 rounded-lg flex items-center justify-center relative overflow-hidden">
-                          <Image
-                            src="/wechat-qr.png"
-                            alt={t.chat.wechat.scanQr}
-                            width={192}
-                            height={192}
-                            className="rounded-lg object-cover"
-                            onError={(e) => {
-                              // Fallback if image doesn't exist
-                              const target = e.currentTarget as HTMLImageElement;
-                              target.style.display = 'none';
-                              const parent = target.parentElement;
-                              if (parent) {
-                                const span = parent.querySelector('span');
-                                if (span) {
-                                  span.style.display = 'block';
-                                }
-                              }
-                            }}
-                          />
-                          <span className="text-gray-400 text-sm text-center px-4 hidden">
-                            {t.chat.wechat.scanQr}
-                          </span>
-                        </div>
-                      </div>
-
-                      {/* WeChat ID */}
+                      {/* WhatsApp Number */}
                       <div className="space-y-3">
                         <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                          <p className="text-xs text-gray-600 mb-1">WeChat ID</p>
+                          <p className="text-xs text-gray-600 mb-1">WhatsApp</p>
                           <p className="text-base font-mono font-medium text-gray-900">
-                            {t.chat.wechat.wechatId}
+                            {t.chat.whatsapp.number}
                           </p>
                         </div>
                         <button
-                          onClick={handleCopyWechatId}
+                          onClick={handleCopyNumber}
                           className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                         >
                           {isCopied ? (
                             <>
                               <Check className="w-4 h-4" />
-                              {t.chat.wechat.copied}
+                              {t.chat.whatsapp.copied}
                             </>
                           ) : (
                             <>
                               <Copy className="w-4 h-4" />
-                              {t.chat.wechat.copyButton}
+                              {t.chat.whatsapp.copyButton}
                             </>
                           )}
+                        </button>
+                        <button
+                          onClick={handleStartWhatsApp}
+                          className="w-full py-3 px-4 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          {t.chat.whatsapp.startChat}
                         </button>
                       </div>
                     </motion.div>
@@ -568,4 +529,3 @@ export default function LiveChatWidget() {
     </>
   );
 }
-

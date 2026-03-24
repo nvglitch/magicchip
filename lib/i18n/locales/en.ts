@@ -315,16 +315,16 @@ export const en: TranslationSchema = {
       close: 'Close',
     },
     tabs: {
-      wechat: 'WeChat',
+      whatsapp: 'WhatsApp',
       message: 'Leave Message',
     },
-    wechat: {
-      title: 'WeChat Consultation',
-      subtitle: 'Scan QR code or copy WeChat ID',
-      wechatId: 'MagicChip_Support',
-      copyButton: 'Copy WeChat ID',
+    whatsapp: {
+      title: 'WhatsApp Chat',
+      subtitle: 'Chat with us on WhatsApp for quick responses',
+      number: '+86 133 9217 2330 [Klaus Lee]',
+      copyButton: 'Copy Number',
       copied: 'Copied!',
-      scanQr: 'Scan to add WeChat',
+      startChat: 'Start WhatsApp Chat',
     },
     form: {
       title: 'Leave a Message',
