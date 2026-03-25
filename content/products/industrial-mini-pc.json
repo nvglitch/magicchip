@@ -1,0 +1,27 @@
+{
+  "id": "industrial-mini-pc",
+  "order": 1,
+  "icon": "Cpu",
+  "gradient": "from-blue-600 to-blue-800",
+  "title": {
+    "en": "Industrial Mini PC",
+    "zh": "工业迷你电脑",
+    "fr": "Mini PC Industriel",
+    "de": "Industrieller Mini-PC",
+    "it": "Mini PC Industriale",
+    "es": "Mini PC Industrial"
+  },
+  "description": {
+    "en": "Fanless, compact industrial computers designed for harsh environments and 24/7 operation.",
+    "zh": "无风扇、紧凑型工业电脑，专为恶劣环境和24/7运行设计。",
+    "fr": "Ordinateurs industriels compacts sans ventilateur conçus pour les environnements difficiles et le fonctionnement 24/7.",
+    "de": "Lüfterlose, kompakte Industriecomputer für raue Umgebungen und 24/7-Betrieb.",
+    "it": "Computer industriali compatti senza ventola progettati per ambienti difficili e funzionamento 24/7.",
+    "es": "Computadoras industriales compactas sin ventiladores diseñadas para entornos difíciles y operación 24/7."
+  },
+  "features": {
+    "en": ["Fanless cooling system", "Wide temperature range", "Intel N-series/Core processors", "Multi-port connectivity"],
+    "zh": ["无风扇散热系统", "宽温工作范围", "Intel N系列/酷睿处理器", "多端口连接"]
+  },
+  "published": true
+}

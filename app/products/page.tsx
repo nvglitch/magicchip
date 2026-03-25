@@ -2,7 +2,7 @@
 
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { motion } from 'framer-motion';
-import { Cpu, Brain, Network, Shield, ArrowRight, CheckCircle } from 'lucide-react';
+import { Cpu, Shield, Monitor, Server, ArrowRight, CheckCircle } from 'lucide-react';
 
 const productsData = {
   en: {
@@ -12,32 +12,32 @@ const productsData = {
     },
     categories: [
       {
-        title: 'Enterprise CPUs',
-        description: 'High-performance processors designed for data center and enterprise workloads',
-        features: ['Up to 128 cores', 'Advanced cache architecture', 'Enterprise-grade reliability', 'Virtualization support'],
+        title: 'Industrial Mini PC',
+        description: 'Fanless, compact industrial computers designed for harsh environments and 24/7 operation.',
+        features: ['Fanless cooling system', 'Wide temperature range', 'Intel N-series/Core processors', 'Multi-port connectivity'],
         icon: Cpu,
-        href: '#'
+        href: '/products'
       },
       {
-        title: 'AI Accelerators',
-        description: 'Specialized chips optimized for machine learning and AI workloads',
-        features: ['Tensor processing cores', 'High memory bandwidth', 'Low latency inference', 'Scalable architecture'],
-        icon: Brain,
-        href: '#'
-      },
-      {
-        title: 'Network Chips',
-        description: 'Advanced connectivity solutions for next-generation networks',
-        features: ['High-speed data transfer', 'Low power consumption', 'Advanced security features', 'Flexible programmability'],
-        icon: Network,
-        href: '#'
-      },
-      {
-        title: 'Security Modules',
-        description: 'Hardware-based security solutions for data protection',
-        features: ['Hardware encryption', 'Secure boot', 'Tamper detection', 'Key management'],
+        title: 'Firewall Mini PC',
+        description: 'Network security appliances with advanced firewall capabilities and multi-Gigabit ports.',
+        features: ['2.5GbE/10GbE ports', 'Advanced firewall software', 'VPN support', 'Industrial-grade design'],
         icon: Shield,
-        href: '#'
+        href: '/products'
+      },
+      {
+        title: 'Desktop Mini PC',
+        description: 'Compact desktop computers ideal for business, education, and digital signage applications.',
+        features: ['Intel N-series processors', '4K display support', 'Low power consumption', 'VESA mount compatible'],
+        icon: Monitor,
+        href: '/products'
+      },
+      {
+        title: '1U/2U Firewall Server PC',
+        description: 'Rackmount firewall servers for enterprise network security with high throughput.',
+        features: ['1U/2U rackmount form factor', 'Multiple LAN ports', 'High-performance routing', 'Enterprise firewall OS support'],
+        icon: Server,
+        href: '/products'
       }
     ],
     cta: {
@@ -50,41 +50,41 @@ const productsData = {
   fr: {
     hero: {
       title: 'Nos Produits',
-      subtitle: 'Solutions semiconductrices innovantes alimentant le futur de l\'informatique'
+      subtitle: 'Solutions informatiques innovantes pour l\'avenir de l\'industrie'
     },
     categories: [
       {
-        title: 'Processeurs Entreprise',
-        description: 'Processeurs haute performance conçus pour les centres de données et les charges de travail entreprise',
-        features: ['Jusqu\'à 128 cœurs', 'Architecture de cache avancée', 'Fiabilité de niveau entreprise', 'Support de virtualisation'],
+        title: 'Mini PC Industriel',
+        description: 'Ordinateurs industriels compacts sans ventilateur conçus pour les environnements difficiles et le fonctionnement 24/7.',
+        features: ['Système de refroidissement sans ventilateur', 'Large plage de température', 'Processeurs Intel N-series/Core', 'Connectivité multi-ports'],
         icon: Cpu,
-        href: '#'
+        href: '/products'
       },
       {
-        title: 'Accélérateurs IA',
-        description: 'Puces spécialisées optimisées pour les charges de travail d\'apprentissage automatique et d\'IA',
-        features: ['Cœurs de traitement tensoriel', 'Large bande passante mémoire', 'Inférence à faible latence', 'Architecture évolutive'],
-        icon: Brain,
-        href: '#'
-      },
-      {
-        title: 'Puces Réseau',
-        description: 'Solutions de connectivité avancées pour les réseaux de nouvelle génération',
-        features: ['Transfert de données haute vitesse', 'Faible consommation d\'énergie', 'Fonctionnalités de sécurité avancées', 'Programmabilité flexible'],
-        icon: Network,
-        href: '#'
-      },
-      {
-        title: 'Modules de Sécurité',
-        description: 'Solutions de sécurité basées sur le matériel pour la protection des données',
-        features: ['Chiffrement matériel', 'Démarrage sécurisé', 'Détection de falsification', 'Gestion des clés'],
+        title: 'Mini PC Firewall',
+        description: 'Appliances de sécurité réseau avec capacités de firewall avancées et ports multi-Gigabit.',
+        features: ['Ports 2.5GbE/10GbE', 'Logiciel firewall avancé', 'Support VPN', 'Design industriel'],
         icon: Shield,
-        href: '#'
+        href: '/products'
+      },
+      {
+        title: 'Mini PC de Bureau',
+        description: 'Ordinateurs de bureau compacts idéaux pour les applications commerciales, éducatives et de signalétique numérique.',
+        features: ['Processeurs Intel N-series', 'Support affichage 4K', 'Faible consommation', 'Compatible VESA'],
+        icon: Monitor,
+        href: '/products'
+      },
+      {
+        title: 'Serveur Firewall 1U/2U',
+        description: 'Serveurs firewall rack pour sécurité réseau d\'entreprise avec haut débit.',
+        features: ['Format rack 1U/2U', 'Multiples ports LAN', 'Routage haute performance', 'Support OS firewall entreprise'],
+        icon: Server,
+        href: '/products'
       }
     ],
     cta: {
       title: 'Besoin d\'une Solution Personnalisée?',
-      description: 'Nous proposons des solutions semiconductrices personnalisées adaptées à vos besoins spécifiques.',
+      description: 'Nous proposons des solutions personnalisées adaptées à vos besoins spécifiques.',
       button: 'Contacter les Ventes'
     },
     learnMore: 'En Savoir Plus'
@@ -92,41 +92,41 @@ const productsData = {
   de: {
     hero: {
       title: 'Unsere Produkte',
-      subtitle: 'Innovative Halbleiterlösungen, die die Zukunft des Computing antreiben'
+      subtitle: 'Innovative Computerlösungen für die industrielle Zukunft'
     },
     categories: [
       {
-        title: 'Enterprise-Prozessoren',
-        description: 'Hochleistungsprozessoren für Rechenzentren und Enterprise-Workloads',
-        features: ['Bis zu 128 Kerne', 'Erweiterte Cache-Architektur', 'Enterprise-Zuverlässigkeit', 'Virtualisierungsunterstützung'],
+        title: 'Industrieller Mini-PC',
+        description: 'Lüfterlose, kompakte Industriecomputer für raue Umgebungen und 24/7-Betrieb.',
+        features: ['Lüfterloses Kühlsystem', 'Breiter Temperaturbereich', 'Intel N-series/Core Prozessoren', 'Multi-Port Konnektivität'],
         icon: Cpu,
-        href: '#'
+        href: '/products'
       },
       {
-        title: 'KI-Beschleuniger',
-        description: 'Spezialisierte Chips für maschinelles Lernen und KI-Workloads',
-        features: ['Tensor-Verarbeitungskerne', 'Hohe Speicherbandbreite', 'Inferenz mit niedriger Latenz', 'Skalierbare Architektur'],
-        icon: Brain,
-        href: '#'
-      },
-      {
-        title: 'Netzwerk-Chips',
-        description: 'Fortgeschrittene Konnektivitätslösungen für Netzwerke der nächsten Generation',
-        features: ['Hochgeschwindigkeits-Datentransfer', 'Niedriger Stromverbrauch', 'Erweiterte Sicherheitsfunktionen', 'Flexible Programmierbarkeit'],
-        icon: Network,
-        href: '#'
-      },
-      {
-        title: 'Sicherheitsmodule',
-        description: 'Hardware-basierte Sicherheitslösungen für Datenschutz',
-        features: ['Hardware-Verschlüsselung', 'Sicherer Start', 'Manipulationserkennung', 'Schlüsselverwaltung'],
+        title: 'Firewall Mini-PC',
+        description: 'Netzwerksicherheitsgeräte mit erweiterten Firewall-Funktionen und Multi-Gigabit-Ports.',
+        features: ['2.5GbE/10GbE Ports', 'Erweiterte Firewall-Software', 'VPN-Unterstützung', 'Industrielles Design'],
         icon: Shield,
-        href: '#'
+        href: '/products'
+      },
+      {
+        title: 'Desktop Mini-PC',
+        description: 'Kompakte Desktop-Computer ideal für Business-, Bildungs- und Digital-Signage-Anwendungen.',
+        features: ['Intel N-series Prozessoren', '4K Display-Unterstützung', 'Geringer Stromverbrauch', 'VESA-kompatibel'],
+        icon: Monitor,
+        href: '/products'
+      },
+      {
+        title: '1U/2U Firewall Server PC',
+        description: 'Rackmontierte Firewall-Server für Enterprise-Netzwerksicherheit mit hohem Durchsatz.',
+        features: ['1U/2U Rackmount-Formfaktor', 'Multiple LAN-Ports', 'Hochleistungs-Routing', 'Enterprise Firewall OS Support'],
+        icon: Server,
+        href: '/products'
       }
     ],
     cta: {
       title: 'Benötigen Sie eine Maßgeschneiderte Lösung?',
-      description: 'Wir bieten maßgeschneiderte Halbleiterlösungen, die auf Ihre spezifischen Anforderungen zugeschnitten sind.',
+      description: 'Wir bieten maßgeschneiderte Lösungen, die auf Ihre spezifischen Anforderungen zugeschnitten sind.',
       button: 'Vertrieb Kontaktieren'
     },
     learnMore: 'Mehr Erfahren'
@@ -134,41 +134,41 @@ const productsData = {
   it: {
     hero: {
       title: 'I Nostri Prodotti',
-      subtitle: 'Soluzioni semiconduttrici innovative che alimentano il futuro del computing'
+      subtitle: 'Soluzioni informatiche innovative per il futuro dell\'industria'
     },
     categories: [
       {
-        title: 'CPU Enterprise',
-        description: 'Processori ad alte prestazioni progettati per data center e carichi di lavoro enterprise',
-        features: ['Fino a 128 core', 'Architettura cache avanzata', 'Affidabilità di livello enterprise', 'Supporto alla virtualizzazione'],
+        title: 'Mini PC Industriale',
+        description: 'Computer industriali compatti senza ventola progettati per ambienti difficili e funzionamento 24/7.',
+        features: ['Sistema di raffreddamento senza ventola', 'Ampio range di temperatura', 'Processori Intel N-series/Core', 'Connettività multi-porta'],
         icon: Cpu,
-        href: '#'
+        href: '/products'
       },
       {
-        title: 'Acceleratori IA',
-        description: 'Chip specializzati ottimizzati per carichi di lavoro di machine learning e IA',
-        features: ['Core di elaborazione tensoriale', 'Alta larghezza di banda di memoria', 'Inferenza a bassa latenza', 'Architettura scalabile'],
-        icon: Brain,
-        href: '#'
-      },
-      {
-        title: 'Chip di Rete',
-        description: 'Soluzioni di connettività avanzate per reti di nuova generazione',
-        features: ['Trasferimento dati ad alta velocità', 'Basso consumo energetico', 'Funzionalità di sicurezza avanzate', 'Programmabilità flessibile'],
-        icon: Network,
-        href: '#'
-      },
-      {
-        title: 'Moduli di Sicurezza',
-        description: 'Soluzioni di sicurezza basate su hardware per la protezione dei dati',
-        features: ['Crittografia hardware', 'Avvio sicuro', 'Rilevamento manomissioni', 'Gestione delle chiavi'],
+        title: 'Mini PC Firewall',
+        description: 'Appliance di sicurezza di rete con capacità firewall avanzate e porte multi-Gigabit.',
+        features: ['Porte 2.5GbE/10GbE', 'Software firewall avanzato', 'Supporto VPN', 'Design industriale'],
         icon: Shield,
-        href: '#'
+        href: '/products'
+      },
+      {
+        title: 'Mini PC da Scrivania',
+        description: 'Computer desktop compatti ideali per applicazioni commerciali, educative e digital signage.',
+        features: ['Processori Intel N-series', 'Supporto display 4K', 'Basso consumo energetico', 'Compatibile VESA'],
+        icon: Monitor,
+        href: '/products'
+      },
+      {
+        title: 'Server Firewall 1U/2U',
+        description: 'Server firewall rack per sicurezza di rete aziendale con alta velocità.',
+        features: ['Fattore di forma rack 1U/2U', 'Porte LAN multiple', 'Routing ad alte prestazioni', 'Supporto OS firewall enterprise'],
+        icon: Server,
+        href: '/products'
       }
     ],
     cta: {
       title: 'Hai Bisogno di una Soluzione Personalizzata?',
-      description: 'Offriamo soluzioni semiconduttrici personalizzate adattate alle tue esigenze specifiche.',
+      description: 'Offriamo soluzioni personalizzate adattate alle tue esigenze specifiche.',
       button: 'Contatta le Vendite'
     },
     learnMore: 'Scopri di Più'
@@ -176,41 +176,41 @@ const productsData = {
   es: {
     hero: {
       title: 'Nuestros Productos',
-      subtitle: 'Soluciones semiconductrices innovadoras que impulsan el futuro de la computación'
+      subtitle: 'Soluciones informáticas innovadoras para el futuro de la industria'
     },
     categories: [
       {
-        title: 'CPU Empresariales',
-        description: 'Procesadores de alto rendimiento diseñados para centros de datos y cargas de trabajo empresariales',
-        features: ['Hasta 128 núcleos', 'Arquitectura de caché avanzada', 'Confiabilidad de nivel empresarial', 'Soporte de virtualización'],
+        title: 'Mini PC Industrial',
+        description: 'Computadoras industriales compactas sin ventiladores diseñadas para entornos difíciles y operación 24/7.',
+        features: ['Sistema de refrigeración sin ventiladores', 'Amplio rango de temperatura', 'Procesadores Intel N-series/Core', 'Conectividad multi-puerto'],
         icon: Cpu,
-        href: '#'
+        href: '/products'
       },
       {
-        title: 'Aceleradores IA',
-        description: 'Chip especializados optimizados para cargas de trabajo de aprendizaje automático e IA',
-        features: ['Núcleos de procesamiento tensorial', 'Ancho de banda de memoria alto', 'Inferencia de baja latencia', 'Arquitectura escalable'],
-        icon: Brain,
-        href: '#'
-      },
-      {
-        title: 'Chips de Red',
-        description: 'Soluciones de conectividad avanzadas para redes de próxima generación',
-        features: ['Transferencia de datos de alta velocidad', 'Bajo consumo de energía', 'Funciones de seguridad avanzadas', 'Programabilidad flexible'],
-        icon: Network,
-        href: '#'
-      },
-      {
-        title: 'Módulos de Seguridad',
-        description: 'Soluciones de seguridad basadas en hardware para la protección de datos',
-        features: ['Cifrado de hardware', 'Arranque seguro', 'Detección de manipulaciones', 'Gestión de claves'],
+        title: 'Mini PC Firewall',
+        description: 'Appliances de seguridad de red con capacidades avanzadas de firewall y puertos multi-Gigabit.',
+        features: ['Puertos 2.5GbE/10GbE', 'Software firewall avanzado', 'Soporte VPN', 'Diseño industrial'],
         icon: Shield,
-        href: '#'
+        href: '/products'
+      },
+      {
+        title: 'Mini PC de Escritorio',
+        description: 'Computadoras de escritorio compactas ideales para aplicaciones comerciales, educativas y de señalización digital.',
+        features: ['Procesadores Intel N-series', 'Soporte de pantalla 4K', 'Bajo consumo de energía', 'Compatible con VESA'],
+        icon: Monitor,
+        href: '/products'
+      },
+      {
+        title: 'Servidor Firewall 1U/2U',
+        description: 'Servidores firewall rack para seguridad de red empresarial con alto rendimiento.',
+        features: ['Factor de forma rack 1U/2U', 'Múltiples puertos LAN', 'Enrutamiento de alto rendimiento', 'Soporte SO firewall enterprise'],
+        icon: Server,
+        href: '/products'
       }
     ],
     cta: {
       title: '¿Necesitas una Solución Personalizada?',
-      description: 'Ofrecemos soluciones semiconductrices personalizadas adaptadas a tus requisitos específicos.',
+      description: 'Ofrecemos soluciones personalizadas adaptadas a tus requisitos específicos.',
       button: 'Contactar Ventas'
     },
     learnMore: 'Más Información'

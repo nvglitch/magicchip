@@ -1,0 +1,27 @@
+{
+  "id": "firewall-server",
+  "order": 4,
+  "icon": "Server",
+  "gradient": "from-purple-600 to-purple-800",
+  "title": {
+    "en": "1U/2U Firewall Server PC",
+    "zh": "1U/2U 防火墙服务器",
+    "fr": "Serveur Firewall 1U/2U",
+    "de": "1U/2U Firewall Server PC",
+    "it": "Server Firewall 1U/2U",
+    "es": "Servidor Firewall 1U/2U"
+  },
+  "description": {
+    "en": "Rackmount firewall servers for enterprise network security with high throughput.",
+    "zh": "机架式防火墙服务器，用于企业网络安全，高吞吐量。",
+    "fr": "Serveurs firewall rack pour sécurité réseau d'entreprise avec haut débit.",
+    "de": "Rackmontierte Firewall-Server für Enterprise-Netzwerksicherheit mit hohem Durchsatz.",
+    "it": "Server firewall rack per sicurezza di rete aziendale con alta velocità.",
+    "es": "Servidores firewall rack para seguridad de red empresarial con alto rendimiento."
+  },
+  "features": {
+    "en": ["1U/2U rackmount form factor", "Multiple LAN ports", "High-performance routing", "Enterprise firewall OS support"],
+    "zh": ["1U/2U机架式外形", "多个LAN端口", "高性能路由", "支持企业防火墙操作系统"]
+  },
+  "published": true
+}

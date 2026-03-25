@@ -1,0 +1,27 @@
+{
+  "id": "firewall-mini-pc",
+  "order": 2,
+  "icon": "Shield",
+  "gradient": "from-red-600 to-red-800",
+  "title": {
+    "en": "Firewall Mini PC",
+    "zh": "防火墙迷你电脑",
+    "fr": "Mini PC Firewall",
+    "de": "Firewall Mini-PC",
+    "it": "Mini PC Firewall",
+    "es": "Mini PC Firewall"
+  },
+  "description": {
+    "en": "Network security appliances with advanced firewall capabilities and multi-Gigabit ports.",
+    "zh": "配备先进防火墙功能和多千兆端口的网络安全设备。",
+    "fr": "Appliances de sécurité réseau avec capacités de firewall avancées et ports multi-Gigabit.",
+    "de": "Netzwerksicherheitsgeräte mit erweiterten Firewall-Funktionen und Multi-Gigabit-Ports.",
+    "it": "Appliance di sicurezza di rete con capacità firewall avanzate e porte multi-Gigabit.",
+    "es": "Appliances de seguridad de red con capacidades avanzadas de firewall y puertos multi-Gigabit."
+  },
+  "features": {
+    "en": ["2.5GbE/10GbE ports", "Advanced firewall software", "VPN support", "Industrial-grade design"],
+    "zh": ["2.5GbE/10GbE端口", "先进防火墙软件", "VPN支持", "工业级设计"]
+  },
+  "published": true
+}

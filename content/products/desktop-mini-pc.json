@@ -1,0 +1,27 @@
+{
+  "id": "desktop-mini-pc",
+  "order": 3,
+  "icon": "Monitor",
+  "gradient": "from-emerald-600 to-emerald-800",
+  "title": {
+    "en": "Desktop Mini PC",
+    "zh": "桌面迷你电脑",
+    "fr": "Mini PC de Bureau",
+    "de": "Desktop Mini-PC",
+    "it": "Mini PC da Scrivania",
+    "es": "Mini PC de Escritorio"
+  },
+  "description": {
+    "en": "Compact desktop computers ideal for business, education, and digital signage applications.",
+    "zh": "紧凑型台式电脑，适用于商业、教育和数字标牌应用。",
+    "fr": "Ordinateurs de bureau compacts idéaux pour les applications commerciales, éducatives et de signalétique numérique.",
+    "de": "Kompakte Desktop-Computer ideal für Business-, Bildungs- und Digital-Signage-Anwendungen.",
+    "it": "Computer desktop compatti ideali per applicazioni commerciali, educative e digital signage.",
+    "es": "Computadoras de escritorio compactas ideales para aplicaciones comerciales, educativas y de señalización digital."
+  },
+  "features": {
+    "en": ["Intel N-series processors", "4K display support", "Low power consumption", "VESA mount compatible"],
+    "zh": ["Intel N系列处理器", "4K显示支持", "低功耗", "VESA壁挂兼容"]
+  },
+  "published": true
+}

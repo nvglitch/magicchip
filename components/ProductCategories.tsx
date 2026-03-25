@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Cpu, Server, Shield, Zap, Brain, type LucideIcon } from 'lucide-react';
+import { ArrowRight, Cpu, Server, Shield, Zap, Brain, Monitor, type LucideIcon } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 interface MultiLangText {
@@ -34,6 +34,7 @@ const iconMap: Record<string, LucideIcon> = {
   Server,
   Shield,
   Brain,
+  Monitor,
 };
 
 function getLocalizedText(text: MultiLangText, language: string): string {
