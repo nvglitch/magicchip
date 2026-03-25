@@ -1,8 +1,9 @@
 'use client';
 
 import { useLanguage } from '@/lib/i18n/LanguageContext';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, MessageCircle, Send, MessageSquare } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Mail, Phone, MapPin, MessageCircle, Send, MessageSquare, CheckCircle, AlertCircle } from 'lucide-react';
+import { useState, FormEvent } from 'react';
 
 const contactData = {
   en: {
@@ -44,7 +45,9 @@ const contactData = {
       subject: 'Subject',
       message: 'Message',
       submit: 'Send Message',
-      success: 'Thank you! We\'ll get back to you soon.'
+      success: 'Message Sent Successfully!',
+      successDesc: 'Thank you for reaching out. We will get back to you soon.',
+      error: 'Please fill in all required fields'
     },
     whatsapp: {
       title: 'Chat on WhatsApp',
@@ -91,7 +94,9 @@ const contactData = {
       subject: 'Sujet',
       message: 'Message',
       submit: 'Envoyer le Message',
-      success: 'Merci! Nous vous répondrons bientôt.'
+      success: 'Message Envoyé avec Succès!',
+      successDesc: 'Merci de nous avoir contacté. Nous vous répondrons bientôt.',
+      error: 'Veuillez remplir tous les champs obligatoires'
     },
     whatsapp: {
       title: 'Discuter sur WhatsApp',
@@ -138,7 +143,9 @@ const contactData = {
       subject: 'Betreff',
       message: 'Nachricht',
       submit: 'Nachricht Senden',
-      success: 'Danke! Wir melden uns bald bei Ihnen.'
+      success: 'Nachricht Erfolgreich Gesendet!',
+      successDesc: 'Vielen Dank für Ihre Kontaktaufnahme. Wir werden uns bald bei Ihnen melden.',
+      error: 'Bitte füllen Sie alle erforderlichen Felder aus'
     },
     whatsapp: {
       title: 'Auf WhatsApp chatten',
@@ -185,7 +192,9 @@ const contactData = {
       subject: 'Oggetto',
       message: 'Messaggio',
       submit: 'Invia il Messaggio',
-      success: 'Grazie! Ti risponderemo presto.'
+      success: 'Messaggio Inviato con Successo!',
+      successDesc: 'Grazie per averci contattato. Ti risponderemo presto.',
+      error: 'Si prega di compilare tutti i campi richiesti'
     },
     whatsapp: {
       title: 'Chatta su WhatsApp',
@@ -232,7 +241,9 @@ const contactData = {
       subject: 'Asunto',
       message: 'Mensaje',
       submit: 'Enviar Mensaje',
-      success: '¡Gracias! Te responderemos pronto.'
+      success: '¡Mensaje Enviado con Éxito!',
+      successDesc: 'Gracias por contactarnos. Le responderemos pronto.',
+      error: 'Por favor complete todos los campos requeridos'
     },
     whatsapp: {
       title: 'Chatea en WhatsApp',
@@ -246,6 +257,33 @@ export default function ContactPage() {
   const { language } = useLanguage();
   const dataLanguage = (contactData as any)[language] ? language : 'en';
   const data = (contactData as any)[dataLanguage];
+
+  const [formData, setFormData] = useState({ name: '', email: '', company: '', subject: '', message: '' });
+  const [errors, setErrors] = useState<{ name?: string; email?: string; company?: string; subject?: string; message?: string }>({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const validateForm = () => {
+    const newErrors: { name?: string; email?: string; company?: string; subject?: string; message?: string } = {};
+    if (!formData.name.trim()) newErrors.name = data.form.error;
+    if (!formData.email.trim()) newErrors.email = data.form.error;
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = 'Invalid email';
+    if (!formData.company.trim()) newErrors.company = data.form.error;
+    if (!formData.subject.trim()) newErrors.subject = data.form.error;
+    if (!formData.message.trim()) newErrors.message = data.form.error;
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    if (!validateForm()) return;
+    setIsSubmitting(true);
+    await new Promise(resolve => setTimeout(resolve, 800));
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    setFormData({ name: '', email: '', company: '', subject: '', message: '' });
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -317,62 +355,239 @@ export default function ContactPage() {
               </motion.div>
 
               {/* 第二行：联系表单 */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white p-8 rounded-md shadow-sm"
-              >
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">{data.form.title}</h2>
-                <form className="space-y-4">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.name}</label>
-                      <input
-                        type="text"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.email}</label>
-                      <input
-                        type="email"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                      />
-                    </div>
-                  </div>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.company}</label>
-                      <input
-                        type="text"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.subject}</label>
-                      <input
-                        type="text"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.message}</label>
-                    <textarea
-                      rows={4}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors"
+              <AnimatePresence mode="wait">
+                {isSubmitted ? (
+                  <motion.div
+                    key="success"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                    className="bg-white p-12 rounded-md shadow-sm text-center"
                   >
-                    <Send className="w-5 h-5 mr-2" />
-                    {data.form.submit}
-                  </button>
-                </form>
-              </motion.div>
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ delay: 0.2, type: 'spring', stiffness: 200, damping: 15 }}
+                      className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6"
+                    >
+                      <CheckCircle className="w-10 h-10 text-green-600" />
+                    </motion.div>
+                    <motion.h3
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.3 }}
+                      className="text-2xl font-bold text-gray-900 mb-2"
+                    >
+                      {data.form.success}
+                    </motion.h3>
+                    <motion.p
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.4 }}
+                      className="text-gray-600"
+                    >
+                      {data.form.successDesc}
+                    </motion.p>
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="form"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="bg-white p-8 rounded-md shadow-sm"
+                  >
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">{data.form.title}</h2>
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.name}</label>
+                          <motion.div
+                            animate={errors.name ? { x: [0, -5, 5, -5, 5, 0] } : { x: 0 }}
+                            transition={{ duration: 0.4 }}
+                          >
+                            <input
+                              type="text"
+                              value={formData.name}
+                              onChange={(e) => {
+                                setFormData({ ...formData, name: e.target.value });
+                                if (errors.name) setErrors({ ...errors, name: undefined });
+                              }}
+                              className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 transition-all ${
+                                errors.name ? 'border-red-400 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-500'
+                              }`}
+                            />
+                            <AnimatePresence>
+                              {errors.name && (
+                                <motion.p
+                                  initial={{ opacity: 0, height: 0 }}
+                                  animate={{ opacity: 1, height: 'auto' }}
+                                  exit={{ opacity: 0, height: 0 }}
+                                  className="text-red-500 text-sm mt-1 flex items-center gap-1"
+                                >
+                                  <AlertCircle className="w-3 h-3" />
+                                  {errors.name}
+                                </motion.p>
+                              )}
+                            </AnimatePresence>
+                          </motion.div>
+                        </div>
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.email}</label>
+                          <motion.div
+                            animate={errors.email ? { x: [0, -5, 5, -5, 5, 0] } : { x: 0 }}
+                            transition={{ duration: 0.4 }}
+                          >
+                            <input
+                              type="email"
+                              value={formData.email}
+                              onChange={(e) => {
+                                setFormData({ ...formData, email: e.target.value });
+                                if (errors.email) setErrors({ ...errors, email: undefined });
+                              }}
+                              className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 transition-all ${
+                                errors.email ? 'border-red-400 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-500'
+                              }`}
+                            />
+                            <AnimatePresence>
+                              {errors.email && (
+                                <motion.p
+                                  initial={{ opacity: 0, height: 0 }}
+                                  animate={{ opacity: 1, height: 'auto' }}
+                                  exit={{ opacity: 0, height: 0 }}
+                                  className="text-red-500 text-sm mt-1 flex items-center gap-1"
+                                >
+                                  <AlertCircle className="w-3 h-3" />
+                                  {errors.email}
+                                </motion.p>
+                              )}
+                            </AnimatePresence>
+                          </motion.div>
+                        </div>
+                      </div>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.company}</label>
+                          <motion.div
+                            animate={errors.company ? { x: [0, -5, 5, -5, 5, 0] } : { x: 0 }}
+                            transition={{ duration: 0.4 }}
+                          >
+                            <input
+                              type="text"
+                              value={formData.company}
+                              onChange={(e) => {
+                                setFormData({ ...formData, company: e.target.value });
+                                if (errors.company) setErrors({ ...errors, company: undefined });
+                              }}
+                              className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 transition-all ${
+                                errors.company ? 'border-red-400 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-500'
+                              }`}
+                            />
+                            <AnimatePresence>
+                              {errors.company && (
+                                <motion.p
+                                  initial={{ opacity: 0, height: 0 }}
+                                  animate={{ opacity: 1, height: 'auto' }}
+                                  exit={{ opacity: 0, height: 0 }}
+                                  className="text-red-500 text-sm mt-1 flex items-center gap-1"
+                                >
+                                  <AlertCircle className="w-3 h-3" />
+                                  {errors.company}
+                                </motion.p>
+                              )}
+                            </AnimatePresence>
+                          </motion.div>
+                        </div>
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.subject}</label>
+                          <motion.div
+                            animate={errors.subject ? { x: [0, -5, 5, -5, 5, 0] } : { x: 0 }}
+                            transition={{ duration: 0.4 }}
+                          >
+                            <input
+                              type="text"
+                              value={formData.subject}
+                              onChange={(e) => {
+                                setFormData({ ...formData, subject: e.target.value });
+                                if (errors.subject) setErrors({ ...errors, subject: undefined });
+                              }}
+                              className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 transition-all ${
+                                errors.subject ? 'border-red-400 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-500'
+                              }`}
+                            />
+                            <AnimatePresence>
+                              {errors.subject && (
+                                <motion.p
+                                  initial={{ opacity: 0, height: 0 }}
+                                  animate={{ opacity: 1, height: 'auto' }}
+                                  exit={{ opacity: 0, height: 0 }}
+                                  className="text-red-500 text-sm mt-1 flex items-center gap-1"
+                                >
+                                  <AlertCircle className="w-3 h-3" />
+                                  {errors.subject}
+                                </motion.p>
+                              )}
+                            </AnimatePresence>
+                          </motion.div>
+                        </div>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.message}</label>
+                        <motion.div
+                          animate={errors.message ? { x: [0, -5, 5, -5, 5, 0] } : { x: 0 }}
+                          transition={{ duration: 0.4 }}
+                        >
+                          <textarea
+                            rows={4}
+                            value={formData.message}
+                            onChange={(e) => {
+                              setFormData({ ...formData, message: e.target.value });
+                              if (errors.message) setErrors({ ...errors, message: undefined });
+                            }}
+                            className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 transition-all resize-none ${
+                              errors.message ? 'border-red-400 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-500'
+                            }`}
+                          />
+                          <AnimatePresence>
+                            {errors.message && (
+                              <motion.p
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: 'auto' }}
+                                exit={{ opacity: 0, height: 0 }}
+                                className="text-red-500 text-sm mt-1 flex items-center gap-1"
+                              >
+                                <AlertCircle className="w-3 h-3" />
+                                {errors.message}
+                              </motion.p>
+                            )}
+                          </AnimatePresence>
+                        </motion.div>
+                      </div>
+                      <motion.button
+                        type="submit"
+                        disabled={isSubmitting}
+                        whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                        whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                        className="w-full flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+                      >
+                        {isSubmitting ? (
+                          <motion.div
+                            animate={{ rotate: 360 }}
+                            transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                            className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
+                          />
+                        ) : (
+                          <>
+                            <Send className="w-5 h-5 mr-2" />
+                            {data.form.submit}
+                          </>
+                        )}
+                      </motion.button>
+                    </form>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </div>
         </section>
