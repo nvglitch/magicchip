@@ -2,7 +2,7 @@
 
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock, MessageCircle, Send, MessageSquare } from 'lucide-react';
+import { Mail, Phone, MapPin, MessageCircle, Send, MessageSquare } from 'lucide-react';
 
 const contactData = {
   en: {
@@ -20,20 +20,20 @@ const contactData = {
       {
         title: 'Phone',
         description: 'Mon-Fri from 9am to 6pm',
-        content: '+86 133 9217 2330',
+        content: '+86 0755-23099863',
         icon: Phone
       },
       {
-        title: 'Headquarters',
-        description: 'Visit our headquarters',
-        content: '5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China',
-        icon: MapPin
+        title: 'WhatsApp',
+        description: 'Chat with us on WhatsApp',
+        content: '+86 133 9217 2330 [Klaus Lee]',
+        icon: MessageCircle
       },
       {
-        title: 'Business Hours',
-        description: 'Our support team',
-        content: 'Mon-Fri: 9:00 AM - 6:00 PM (PST)',
-        icon: Clock
+        title: 'Address',
+        description: 'Visit our office',
+        content: '5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China',
+        icon: MapPin
       }
     ],
     form: {
@@ -67,20 +67,20 @@ const contactData = {
       {
         title: 'Téléphone',
         description: 'Lun-Ven de 9h à 18h',
-        content: '+86 133 9217 2330',
+        content: '+86 0755-23099863',
         icon: Phone
       },
       {
-        title: 'Siège Social',
-        description: 'Visitez notre siège social',
-        content: '5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China',
-        icon: MapPin
+        title: 'WhatsApp',
+        description: 'Discutez avec nous sur WhatsApp',
+        content: '+86 133 9217 2330 [Klaus Lee]',
+        icon: MessageCircle
       },
       {
-        title: 'Horaires d\'Ouverture',
-        description: 'Notre équipe de support',
-        content: 'Lun-Ven: 9h00 - 18h00 (PST)',
-        icon: Clock
+        title: 'Adresse',
+        description: 'Visitez notre bureau',
+        content: '5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China',
+        icon: MapPin
       }
     ],
     form: {
@@ -114,20 +114,20 @@ const contactData = {
       {
         title: 'Telefon',
         description: 'Mo-Fr von 9 bis 18 Uhr',
-        content: '+86 133 9217 2330',
+        content: '+86 0755-23099863',
         icon: Phone
       },
       {
-        title: 'Hauptsitz',
-        description: 'Besuchen Sie unseren Hauptsitz',
-        content: '5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China',
-        icon: MapPin
+        title: 'WhatsApp',
+        description: 'Chatten Sie mit uns auf WhatsApp',
+        content: '+86 133 9217 2330 [Klaus Lee]',
+        icon: MessageCircle
       },
       {
-        title: 'Geschäftszeiten',
-        description: 'Unser Support-Team',
-        content: 'Mo-Fr: 9:00 - 18:00 Uhr (PST)',
-        icon: Clock
+        title: 'Adresse',
+        description: 'Besuchen Sie unser Büro',
+        content: '5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China',
+        icon: MapPin
       }
     ],
     form: {
@@ -161,20 +161,20 @@ const contactData = {
       {
         title: 'Telefono',
         description: 'Lun-Ven dalle 9 alle 18',
-        content: '+86 133 9217 2330',
+        content: '+86 0755-23099863',
         icon: Phone
       },
       {
-        title: 'Sede Centrale',
-        description: 'Visita la nostra sede centrale',
-        content: '5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China',
-        icon: MapPin
+        title: 'WhatsApp',
+        description: 'Chatta con noi su WhatsApp',
+        content: '+86 133 9217 2330 [Klaus Lee]',
+        icon: MessageCircle
       },
       {
-        title: 'Orari di Apertura',
-        description: 'Il nostro team di supporto',
-        content: 'Lun-Ven: 9:00 - 18:00 (PST)',
-        icon: Clock
+        title: 'Indirizzo',
+        description: 'Visita il nostro ufficio',
+        content: '5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China',
+        icon: MapPin
       }
     ],
     form: {
@@ -208,20 +208,20 @@ const contactData = {
       {
         title: 'Teléfono',
         description: 'Lun-Vie de 9am a 6pm',
-        content: '+86 133 9217 2330',
+        content: '+86 0755-23099863',
         icon: Phone
       },
       {
-        title: 'Sede Central',
-        description: 'Visita nuestra sede central',
-        content: '5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China',
-        icon: MapPin
+        title: 'WhatsApp',
+        description: 'Chatea con nosotros en WhatsApp',
+        content: '+86 133 9217 2330 [Klaus Lee]',
+        icon: MessageCircle
       },
       {
-        title: 'Horario de Atención',
-        description: 'Nuestro equipo de soporte',
-        content: 'Lun-Vie: 9:00 AM - 6:00 PM (PST)',
-        icon: Clock
+        title: 'Dirección',
+        description: 'Visita nuestra oficina',
+        content: '5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China',
+        icon: MapPin
       }
     ],
     form: {

@@ -1,15 +1,10 @@
 {
   "contact": {
     "email": "Contact@szmagicchip.com",
-    "phone": "+86 133 9217 2330",
+    "phone": "+86 0755-23099863",
     "whatsapp": "+86 133 9217 2330 [Klaus Lee]",
     "address": {
-      "en": "5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China",
-      "zh": "中国深圳市宝安区新桥街道中心路金达城5E"
-    },
-    "businessHours": {
-      "en": "Mon-Fri: 9AM - 6PM (GMT+8)",
-      "zh": "周一至周五：上午9点 - 下午6点"
+      "en": "5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China"
     }
   },
   "social": {
