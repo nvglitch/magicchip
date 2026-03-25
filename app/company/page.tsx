@@ -48,7 +48,7 @@ const companyData = {
     ],
     timeline: [
       { year: '2021', title: 'Founded', description: 'MagicChip was established in Shenzhen, focusing on mini PC R&D' },
-      { year: '2022', title: 'Product Launch', description: 'Launched first series of industrial mini PCs and tablets' },
+      { year: '2022', title: 'Product Launch', description: 'Launched industrial mini PC and tablet product lines' },
       { year: '2023', title: 'Market Expansion', description: 'Expanded to European and North American markets' },
       { year: '2024', title: 'OEM/ODM Growth', description: 'Established flexible customization service capabilities' }
     ],
@@ -216,6 +216,23 @@ export default function CompanyPage() {
             >
               <h1 className="text-4xl md:text-5xl font-bold mb-4">{data.hero.title}</h1>
               <p className="text-xl text-blue-100 max-w-2xl">{data.hero.subtitle}</p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Company Introduction */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="max-w-4xl mx-auto text-center"
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Shenzhen Magic Chip Technology Co., Ltd.</h2>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Founded in 2021, Shenzhen Magic Chip Technology Co., Ltd. is a professional manufacturer of mini PCs and industrial computing equipment based in Shenzhen, China. We specialize in R&D, manufacturing, and sales of mini PCs, industrial computers, multi-port industrial hosts, industrial tablets, and laptops. Our products are widely used in intelligent retail, digital signage, financial self-service, industrial automation, education, medical, and IoT fields.
+              </p>
             </motion.div>
           </div>
         </section>

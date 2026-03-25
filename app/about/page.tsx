@@ -65,17 +65,6 @@ const aboutData = {
           { label: 'Daily Capacity', value: '1000+' },
           { label: 'Quality Rate', value: '99.5%' }
         ]
-      },
-      {
-        title: 'Leadership Team',
-        description: 'Meet our experienced team driving innovation in industrial computing',
-        icon: Users,
-        href: '/leadership',
-        stats: [
-          { label: 'Core Team', value: '8' },
-          { label: 'Avg. Experience', value: '15+' },
-          { label: 'Export Markets', value: '30+' }
-        ]
       }
     ],
     highlights: [
@@ -487,127 +476,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Company Intro with Highlights */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">{data.intro?.title}</h2>
-            <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
-              {data.intro?.content}
-            </p>
-          </motion.div>
-
-          {/* Product Highlights */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12"
-          >
-            {data.intro?.highlights?.map((item, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="w-6 h-6 text-blue-600" />
-                </div>
-                <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
-                <p className="text-sm text-gray-600">{item.desc}</p>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Company Profile Stats */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-2xl font-bold text-gray-900">{data.companyProfile?.title}</h2>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6"
-          >
-            {data.companyProfile?.stats?.map((stat, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 text-center shadow-sm">
-                <div className="text-3xl font-bold text-blue-600 mb-2">{stat.value}</div>
-                <div className="text-sm text-gray-600">{stat.label}</div>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Philosophy Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">{data.philosophy?.title}</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">{data.philosophy?.content}</p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
-          >
-            {data.philosophy?.items?.map((item, index) => (
-              <div key={index} className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-blue-900 mb-3">{item.title}</h3>
-                <p className="text-gray-700">{item.desc}</p>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Global Markets */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">{data.markets?.title}</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">{data.markets?.content}</p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-wrap justify-center gap-4"
-          >
-            {data.markets?.regions?.map((region, index) => (
-              <div key={index} className="bg-white rounded-full px-8 py-3 shadow-sm">
-                <span className="font-semibold text-gray-800">{region}</span>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
       {/* About Sections */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {data.sections.map((section, index) => (
               <motion.a
                 key={section.title}
@@ -615,25 +487,33 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group bg-gray-50 rounded-lg p-8 hover:shadow-xl transition-all duration-300"
+                className="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-10 border border-gray-100 hover:shadow-2xl hover:border-blue-100 transition-all duration-300 overflow-hidden"
               >
-                <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
-                  <section.icon className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
+                {/* Background decoration */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full -mr-16 -mt-16 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
+
+                <div className="relative">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <section.icon className="w-8 h-8 text-white" />
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">{section.title}</h3>
+                  <p className="text-gray-600 mb-8 leading-relaxed">{section.description}</p>
+
+                  <div className="flex gap-6 mb-8">
+                    {section.stats.map((stat, idx) => (
+                      <div key={idx} className="flex-1">
+                        <div className="text-2xl font-bold text-blue-600">{stat.value}</div>
+                        <div className="text-sm text-gray-500">{stat.label}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <span className="inline-flex items-center text-blue-600 font-semibold group-hover:text-blue-700">
+                    {'Learn More'}
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
+                  </span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{section.title}</h3>
-                <p className="text-gray-600 mb-6">{section.description}</p>
-                <div className="grid grid-cols-3 gap-4 mb-6">
-                  {section.stats.map((stat, idx) => (
-                    <div key={idx} className="text-center">
-                      <div className="text-lg font-bold text-blue-600">{stat.value}</div>
-                      <div className="text-xs text-gray-500">{stat.label}</div>
-                    </div>
-                  ))}
-                </div>
-                <span className="flex items-center text-blue-600 font-medium">
-                  {'Learn More'}
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </span>
               </motion.a>
             ))}
           </div>
