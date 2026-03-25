@@ -58,14 +58,14 @@ export interface TranslationSchema {
   };
   navDropdown: {
     products: {
-      enterpriseCPUs: string;
-      enterpriseCPUsDesc: string;
-      aiAccelerators: string;
-      aiAcceleratorsDesc: string;
-      networkChips: string;
-      networkChipsDesc: string;
-      securityModules: string;
-      securityModulesDesc: string;
+      industrialMiniPC: string;
+      industrialMiniPCDesc: string;
+      firewallMiniPC: string;
+      firewallMiniPCDesc: string;
+      desktopMiniPC: string;
+      desktopMiniPCDesc: string;
+      firewallServer: string;
+      firewallServerDesc: string;
       viewAll: string;
     };
     solutions: {

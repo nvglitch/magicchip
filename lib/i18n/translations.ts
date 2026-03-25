@@ -12,14 +12,14 @@ export const translations = {
     // Nav Dropdown
     navDropdown: {
       products: {
-        enterpriseCPUs: 'Enterprise CPUs',
-        enterpriseCPUsDesc: 'High-performance processors for data centers',
-        aiAccelerators: 'AI Accelerators',
-        aiAcceleratorsDesc: 'Specialized chips for ML workloads',
-        networkChips: 'Network Chips',
-        networkChipsDesc: 'Advanced connectivity solutions',
-        securityModules: 'Security Modules',
-        securityModulesDesc: 'Hardware-based data protection',
+        industrialMiniPC: 'Industrial Mini PC',
+        industrialMiniPCDesc: 'Fanless compact industrial computers for harsh environments',
+        firewallMiniPC: 'Firewall Mini PC',
+        firewallMiniPCDesc: 'Network security appliances with multi-Gigabit ports',
+        desktopMiniPC: 'Desktop Mini PC',
+        desktopMiniPCDesc: 'Compact computers for business and education',
+        firewallServer: '1U/2U Firewall Server',
+        firewallServerDesc: 'Rackmount firewall servers for enterprise security',
         viewAll: 'View All Products',
       },
       solutions: {
@@ -246,14 +246,14 @@ export const translations = {
     // Nav Dropdown
     navDropdown: {
       products: {
-        enterpriseCPUs: 'Processeurs Entreprise',
-        enterpriseCPUsDesc: 'Processeurs haute performance pour centres de données',
-        aiAccelerators: 'Accélérateurs IA',
-        aiAcceleratorsDesc: 'Puces spécialisées pour charges de travail ML',
-        networkChips: 'Puces Réseau',
-        networkChipsDesc: 'Solutions de connectivité avancées',
-        securityModules: 'Modules de Sécurité',
-        securityModulesDesc: 'Protection des données basée sur le matériel',
+        industrialMiniPC: 'Mini PC Industriel',
+        industrialMiniPCDesc: 'Ordinateurs industriels compacts sans ventilateur pour environnements difficiles',
+        firewallMiniPC: 'Mini PC Firewall',
+        firewallMiniPCDesc: 'Appliances de sécurité réseau avec ports multi-Gigabit',
+        desktopMiniPC: 'Mini PC de Bureau',
+        desktopMiniPCDesc: 'Ordinateurs compacts pour entreprises et éducation',
+        firewallServer: 'Serveur Firewall 1U/2U',
+        firewallServerDesc: 'Serveurs firewall rack pour sécurité enterprise',
         viewAll: 'Voir Tous les Produits',
       },
       solutions: {
@@ -480,14 +480,14 @@ export const translations = {
     // Nav Dropdown
     navDropdown: {
       products: {
-        enterpriseCPUs: 'Enterprise-CPUs',
-        enterpriseCPUsDesc: 'Hochleistungsprozessoren für Rechenzentren',
-        aiAccelerators: 'KI-Beschleuniger',
-        aiAcceleratorsDesc: 'Spezialisierte Chips für ML-Workloads',
-        networkChips: 'Netzwerk-Chips',
-        networkChipsDesc: 'Erweiterte Konnektivitätslösungen',
-        securityModules: 'Sicherheitsmodule',
-        securityModulesDesc: 'Hardware-basierter Datenschutz',
+        industrialMiniPC: 'Industrieller Mini-PC',
+        industrialMiniPCDesc: 'Lüfterlose kompakte Industriecomputer für raue Umgebungen',
+        firewallMiniPC: 'Firewall Mini-PC',
+        firewallMiniPCDesc: 'Netzwerksicherheitsgeräte mit Multi-Gigabit-Ports',
+        desktopMiniPC: 'Desktop Mini-PC',
+        desktopMiniPCDesc: 'Kompakte Computer für Business und Bildung',
+        firewallServer: '1U/2U Firewall Server',
+        firewallServerDesc: 'Rackmontierte Firewall-Server für Enterprise-Sicherheit',
         viewAll: 'Alle Produkte anzeigen',
       },
       solutions: {
@@ -694,14 +694,14 @@ export const translations = {
     // Nav Dropdown
     navDropdown: {
       products: {
-        enterpriseCPUs: 'CPU Enterprise',
-        enterpriseCPUsDesc: 'Processori ad alte prestazioni per data center',
-        aiAccelerators: 'Acceleratori AI',
-        aiAcceleratorsDesc: 'Chip specializzati per carichi di lavoro ML',
-        networkChips: 'Chip di Rete',
-        networkChipsDesc: 'Soluzioni di connettività avanzate',
-        securityModules: 'Moduli di Sicurezza',
-        securityModulesDesc: 'Protezione dei dati basata su hardware',
+        industrialMiniPC: 'Mini PC Industriale',
+        industrialMiniPCDesc: 'Computer industriali compatti senza ventola per ambienti difficili',
+        firewallMiniPC: 'Mini PC Firewall',
+        firewallMiniPCDesc: 'Appliance di sicurezza di rete con porte multi-Gigabit',
+        desktopMiniPC: 'Mini PC da Scrivania',
+        desktopMiniPCDesc: 'Computer compatti per business e istruzione',
+        firewallServer: 'Server Firewall 1U/2U',
+        firewallServerDesc: 'Server firewall rack per sicurezza aziendale',
         viewAll: 'Visualizza tutti i prodotti',
       },
       solutions: {
@@ -908,14 +908,14 @@ export const translations = {
     // Nav Dropdown
     navDropdown: {
       products: {
-        enterpriseCPUs: 'CPUs Enterprise',
-        enterpriseCPUsDesc: 'Procesadores de alto rendimiento para centros de datos',
-        aiAccelerators: 'Aceleradores de IA',
-        aiAcceleratorsDesc: 'Chips especializados para cargas de trabajo de ML',
-        networkChips: 'Chips de Red',
-        networkChipsDesc: 'Soluciones de conectividad avanzadas',
-        securityModules: 'Módulos de Seguridad',
-        securityModulesDesc: 'Protección de datos basada en hardware',
+        industrialMiniPC: 'Mini PC Industrial',
+        industrialMiniPCDesc: 'Computadoras industriales compactas sin ventiladores para entornos difíciles',
+        firewallMiniPC: 'Mini PC Firewall',
+        firewallMiniPCDesc: 'Appliances de seguridad de red con puertos multi-Gigabit',
+        desktopMiniPC: 'Mini PC de Escritorio',
+        desktopMiniPCDesc: 'Computadoras compactas para negocios y educación',
+        firewallServer: 'Servidor Firewall 1U/2U',
+        firewallServerDesc: 'Servidores firewall rack para seguridad empresarial',
         viewAll: 'Ver todos los productos',
       },
       solutions: {

@@ -13,6 +13,8 @@ import {
   Brain,
   Network,
   Shield,
+  Monitor,
+  Server,
   Newspaper,
   Download,
   FileCode,
@@ -51,10 +53,10 @@ export default function Navbar() {
   // 多语言下拉菜单内容 - 使用专业图标
   const getDropdownContent = (): Record<string, DropdownItem[]> => ({
     products: [
-      { title: t.navDropdown?.products?.enterpriseCPUs || 'Enterprise CPUs', description: t.navDropdown?.products?.enterpriseCPUsDesc || 'High-performance processors for data centers', href: '#', icon: Cpu },
-      { title: t.navDropdown?.products?.aiAccelerators || 'AI Accelerators', description: t.navDropdown?.products?.aiAcceleratorsDesc || 'Specialized chips for ML workloads', href: '#', icon: Brain },
-      { title: t.navDropdown?.products?.networkChips || 'Network Chips', description: t.navDropdown?.products?.networkChipsDesc || 'Advanced connectivity solutions', href: '#', icon: Network },
-      { title: t.navDropdown?.products?.securityModules || 'Security Modules', description: t.navDropdown?.products?.securityModulesDesc || 'Hardware-based data protection', href: '#', icon: Shield },
+      { title: t.navDropdown?.products?.industrialMiniPC || 'Industrial Mini PC', description: t.navDropdown?.products?.industrialMiniPCDesc || 'Fanless compact industrial computers', href: '/products#industrial-mini-pc', icon: Cpu },
+      { title: t.navDropdown?.products?.firewallMiniPC || 'Firewall Mini PC', description: t.navDropdown?.products?.firewallMiniPCDesc || 'Network security appliances', href: '/products#firewall-mini-pc', icon: Shield },
+      { title: t.navDropdown?.products?.desktopMiniPC || 'Desktop Mini PC', description: t.navDropdown?.products?.desktopMiniPCDesc || 'Compact computers for business', href: '/products#desktop-mini-pc', icon: Monitor },
+      { title: t.navDropdown?.products?.firewallServer || '1U/2U Firewall Server', description: t.navDropdown?.products?.firewallServerDesc || 'Rackmount firewall servers', href: '/products#firewall-server', icon: Server },
     ],
     documents: [
       { title: t.navDropdown?.documents?.news || 'News', description: t.navDropdown?.documents?.newsDesc || 'Latest updates and announcements', href: '/news', icon: Newspaper },

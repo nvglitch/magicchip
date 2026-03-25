@@ -58,14 +58,14 @@ export const fr: TranslationSchema = {
   },
   navDropdown: {
     products: {
-      enterpriseCPUs: 'Processeurs Entreprise',
-      enterpriseCPUsDesc: 'Processeurs haute performance pour centres de données',
-      aiAccelerators: 'Accélérateurs IA',
-      aiAcceleratorsDesc: 'Puces spécialisées pour charges de travail ML',
-      networkChips: 'Puces Réseau',
-      networkChipsDesc: 'Solutions de connectivité avancées',
-      securityModules: 'Modules de Sécurité',
-      securityModulesDesc: 'Protection des données basée sur le matériel',
+      industrialMiniPC: 'Mini PC Industriel',
+      industrialMiniPCDesc: 'Ordinateurs industriels compacts sans ventilateur pour environnements difficiles',
+      firewallMiniPC: 'Mini PC Firewall',
+      firewallMiniPCDesc: 'Appliances de sécurité réseau avec ports multi-Gigabit',
+      desktopMiniPC: 'Mini PC de Bureau',
+      desktopMiniPCDesc: 'Ordinateurs compacts pour entreprises et éducation',
+      firewallServer: 'Serveur Firewall 1U/2U',
+      firewallServerDesc: 'Serveurs firewall rack pour sécurité enterprise',
       viewAll: 'Voir Tous les Produits',
     },
     solutions: {

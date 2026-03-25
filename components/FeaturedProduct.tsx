@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Check, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function FeaturedProduct() {
@@ -19,21 +20,18 @@ export default function FeaturedProduct() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="aspect-square rounded-md bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center relative overflow-hidden">
-              {/* Decorative elements */}
-              <div className="absolute inset-0 opacity-30">
-                <div className="absolute top-1/4 left-1/4 w-32 h-32 border border-blue-500/30 rounded-full" />
-                <div className="absolute bottom-1/4 right-1/4 w-48 h-48 border border-purple-500/30 rounded-full" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-emerald-500/20 rounded-full" />
-              </div>
-              
-              {/* Product representation */}
-              <div className="relative z-10 text-center">
-                <div className="w-48 h-48 mx-auto bg-gradient-to-br from-blue-600 to-purple-600 rounded-md shadow-2xl flex items-center justify-center">
-                  <span className="text-6xl font-bold text-white">MC</span>
-                </div>
-                <p className="mt-6 text-gray-400 text-sm">{t.featured.title}</p>
-              </div>
+            <div className="relative rounded-lg overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 shadow-xl ring-1 ring-gray-900/5">
+              <Image
+                src="/MCAI35.png"
+                alt="MCAI35"
+                width={600}
+                height={600}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </div>
+            <div className="mt-4 text-center">
+              <p className="text-gray-400 text-sm">{t.featured.title}</p>
             </div>
           </motion.div>
 
