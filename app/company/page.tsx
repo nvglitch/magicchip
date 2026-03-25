@@ -2,208 +2,198 @@
 
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { motion } from 'framer-motion';
-import { Target, Eye, Award, Users, Globe, TrendingUp, MapPin, Calendar, ArrowRight, Lightbulb, Star, Leaf, Handshake } from 'lucide-react';
+import { Target, Eye, Award, Users, Globe, TrendingUp, MapPin, Calendar, Lightbulb, Star, Handshake } from 'lucide-react';
 
 const companyData = {
   en: {
     hero: {
       title: 'Our Company',
-      subtitle: 'Pioneering the future of enterprise hardware technology since 2015'
+      subtitle: 'Professional Mini PC & Industrial Computing Solutions Since 2021'
     },
     stats: [
-      { value: '10+', label: 'Years of Experience' },
-      { value: '500+', label: 'Enterprise Clients' },
-      { value: '50M+', label: 'Chips Shipped' },
-      { value: '30+', label: 'Countries Served' }
+      { value: '4+', label: 'Years of Experience' },
+      { value: '50-100', label: 'Team Members' },
+      { value: '$10M-25M', label: 'Annual Revenue' },
+      { value: '30+', label: 'Export Markets' }
     ],
     mission: {
       title: 'Our Mission',
-      content: 'To empower enterprises with cutting-edge hardware solutions that drive innovation, efficiency, and sustainable growth. We are committed to delivering semiconductor technologies that form the backbone of modern digital infrastructure.'
+      content: 'To provide high-performance, reliable embedded computing solutions that empower businesses worldwide. We are committed to innovation in miniaturization, fanless design, and industrial-grade stability, delivering cost-effective products that meet diverse customer needs.'
     },
     vision: {
       title: 'Our Vision',
-      content: 'To be the global leader in enterprise-grade chip solutions, recognized for our technological innovation, quality excellence, and positive impact on society.'
+      content: 'To become a leading global provider of mini PCs and industrial computing equipment, recognized for our flexible OEM/ODM services, rapid response capabilities, and excellence in embedded computing solutions.'
     },
     values: [
       {
         title: 'Innovation',
-        description: 'We constantly push the boundaries of what\'s possible in chip design and manufacturing.',
+        description: 'We continuously innovate in product design, focusing on miniaturization, fanless cooling, and high-performance networking.',
         icon: 'Lightbulb'
       },
       {
         title: 'Quality',
-        description: 'Every chip we produce meets the highest standards of reliability and performance.',
+        description: 'Every product undergoes rigorous testing to ensure industrial-grade reliability and long-term stability.',
         icon: 'Star'
       },
       {
-        title: 'Sustainability',
-        description: 'We are committed to reducing our environmental footprint through green manufacturing.',
-        icon: 'Leaf'
+        title: 'Flexibility',
+        description: 'We offer flexible OEM/ODM customization services to meet specific customer requirements.',
+        icon: 'Handshake'
       },
       {
-        title: 'Partnership',
-        description: 'We build long-term relationships with our clients based on trust and mutual success.',
-        icon: 'Handshake'
+        title: 'Reliability',
+        description: 'We build trust through consistent product quality and responsive customer support.',
+        icon: 'Award'
       }
     ],
     timeline: [
-      { year: '2015', title: 'Founded', description: 'MagicChip was established in Shenzhen' },
-      { year: '2017', title: 'First Product', description: 'Launched MC-Pro X1 series' },
-      { year: '2019', title: 'Global Expansion', description: 'Opened offices in US and Europe' },
-      { year: '2021', title: 'AI Focus', description: 'Introduced AI accelerator product line' },
-      { year: '2023', title: 'IPO', description: 'Went public on NASDAQ' },
-      { year: '2025', title: 'New Fab', description: 'Opened advanced manufacturing facility' }
+      { year: '2021', title: 'Founded', description: 'MagicChip was established in Shenzhen, focusing on mini PC R&D' },
+      { year: '2022', title: 'Product Launch', description: 'Launched first series of industrial mini PCs and tablets' },
+      { year: '2023', title: 'Market Expansion', description: 'Expanded to European and North American markets' },
+      { year: '2024', title: 'OEM/ODM Growth', description: 'Established flexible customization service capabilities' }
     ],
     locations: [
-      { city: 'Shenzhen', country: 'China', address: 'Office Address' }
+      { city: 'Shenzhen', country: 'China', address: '5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China' }
     ]
   },
   fr: {
     hero: {
-      title: 'À Propos de MagicChip',
-      subtitle: 'Pionnier de l\'innovation semiconductrice depuis 2015'
+      title: 'Notre Entreprise',
+      subtitle: 'Solutions Professionnelles de Mini PC et Informatique Industrielle Depuis 2021'
     },
     stats: [
-      { value: '10+', label: 'Années d\'Expérience' },
-      { value: '500+', label: 'Clients Entreprise' },
-      { value: '50M+', label: 'Puces Livrées' },
-      { value: '30+', label: 'Pays Desservis' }
+      { value: '4+', label: 'Années d\'Expérience' },
+      { value: '50-100', label: 'Membres de l\'Équipe' },
+      { value: '$10M-25M', label: 'Revenus Annuels' },
+      { value: '30+', label: 'Marchés d\'Export' }
     ],
     mission: {
       title: 'Notre Mission',
-      content: 'Révolutionner l\'industrie des semi-conducteurs avec des solutions de calcul de pointe qui alimentent l\'avenir de la technologie.'
+      content: 'Fournir des solutions informatiques embarquées performantes et fiables qui autonomisent les entreprises du monde entier. Nous nous engageons dans l\'innovation en miniaturisation, design sans ventilateur et stabilité industrielle.'
     },
     vision: {
       title: 'Notre Vision',
-      content: 'Devenir le leader mondial des semi-conducteurs, en permettant des avancées dans l\'IA, le cloud computing et l\'edge computing.'
+      content: 'Devenir un fournisseur mondial leader de mini PC et d\'équipements informatiques industriels, reconnu pour nos services OEM/ODM flexibles et notre excellence en solutions informatiques embarquées.'
     },
     values: [
-      { title: 'Innovation', description: 'Nous repoussons constamment les limites de ce qui est possible dans la conception et la fabrication des puces.', icon: 'Lightbulb' },
-      { title: 'Qualité', description: 'Chaque puce que nous produisons répond aux plus hautes normes de fiabilité et de performance.', icon: 'Star' },
-      { title: 'Durabilité', description: 'Nous nous engageons à réduire notre empreinte environnementale grâce à une fabrication verte.', icon: 'Leaf' },
-      { title: 'Partenariat', description: 'Nous construisons des relations à long terme avec nos clients fondées sur la confiance et le succès mutuel.', icon: 'Handshake' }
+      { title: 'Innovation', description: 'Nous innovons continuellement dans la conception des produits, en nous concentrant sur la miniaturisation et le refroidissement sans ventilateur.', icon: 'Lightbulb' },
+      { title: 'Qualité', description: 'Chaque produit subit des tests rigoureux pour assurer une fiabilité de qualité industrielle.', icon: 'Star' },
+      { title: 'Flexibilité', description: 'Nous offrons des services de personnalisation OEM/ODM flexibles pour répondre aux besoins spécifiques.', icon: 'Handshake' },
+      { title: 'Fiabilité', description: 'Nous construisons la confiance grâce à une qualité de produit constante et un support client réactif.', icon: 'Award' }
     ],
     timeline: [
-      { year: '2015', title: 'Fondation', description: 'MagicChip a été fondé à Shenzhen' },
-      { year: '2017', title: 'Premier Produit', description: 'Lancement de la série MC-Pro X1' },
-      { year: '2019', title: 'Expansion Mondiale', description: 'Ouverture de bureaux aux États-Unis et en Europe' },
-      { year: '2021', title: 'Focus IA', description: 'Introduction de la ligne de produits accélérateurs IA' },
-      { year: '2023', title: 'Introduction en Bourse', description: 'Cotation au NASDAQ' },
-      { year: '2025', title: 'Nouvelle Usine', description: 'Ouverture d\'une installation de fabrication avancée' }
+      { year: '2021', title: 'Fondation', description: 'MagicChip a été fondé à Shenzhen, se concentrant sur la R&D des mini PC' },
+      { year: '2022', title: 'Lancement Produit', description: 'Lancement de la première série de mini PC industriels et tablettes' },
+      { year: '2023', title: 'Expansion Marché', description: 'Expansion vers les marchés européens et nord-américains' },
+      { year: '2024', title: 'Croissance OEM/ODM', description: 'Établissement de capacités de service de personnalisation flexible' }
     ],
     locations: [
-      { city: 'Shenzhen', country: 'Chine', address: 'Adresse du Bureau' }
+      { city: 'Shenzhen', country: 'Chine', address: '5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China' }
     ]
   },
   de: {
     hero: {
-      title: 'Über MagicChip',
-      subtitle: 'Pionier der Halbleiterinnovation seit 2015'
+      title: 'Unser Unternehmen',
+      subtitle: 'Professionelle Mini-PC- und Industrie-Computing-Lösungen seit 2021'
     },
     stats: [
-      { value: '10+', label: 'Jahre Erfahrung' },
-      { value: '500+', label: 'Unternehmenskunden' },
-      { value: '50M+', label: 'Ausgelieferte Chips' },
-      { value: '30+', label: 'Bediente Länder' }
+      { value: '4+', label: 'Jahre Erfahrung' },
+      { value: '50-100', label: 'Teammitglieder' },
+      { value: '$10M-25M', label: 'Jahresumsatz' },
+      { value: '30+', label: 'Exportmärkte' }
     ],
     mission: {
       title: 'Unsere Mission',
-      content: 'Die Halbleiterindustrie mit Spitzentechnologie-Lösungen revolutionieren, die die Zukunft der Technologie antreiben.'
+      content: 'Leistungsstarke, zuverlässige Embedded-Computing-Lösungen bereitzustellen, die Unternehmen weltweit stärken. Wir engagieren uns für Innovation in Miniaturisierung, lüfterlosem Design und industrieller Stabilität.'
     },
     vision: {
       title: 'Unsere Vision',
-      content: 'Weltmarktführer in Halbleitern werden und Fortschritte in KI, Cloud Computing und Edge Computing ermöglichen.'
+      content: 'Ein führender globaler Anbieter von Mini-PCs und industriellen Computerausrüstungen werden, anerkannt für unsere flexiblen OEM/ODM-Dienstleistungen und Exzellenz in Embedded-Computing-Lösungen.'
     },
     values: [
-      { title: 'Innovation', description: 'Wir erweitern ständig die Grenzen dessen, was in Chip-Design und -Fertigung möglich ist.', icon: 'Lightbulb' },
-      { title: 'Qualität', description: 'Jeder Chip, den wir herstellen, erfüllt die höchsten Standards für Zuverlässigkeit und Leistung.', icon: 'Star' },
-      { title: 'Nachhaltigkeit', description: 'Wir verpflichten uns, unseren ökologischen Fußabdruck durch grüne Fertigung zu reduzieren.', icon: 'Leaf' },
-      { title: 'Partnerschaft', description: 'Wir bauen langfristige Beziehungen zu unseren Kunden auf Vertrauen und gemeinsamen Erfolg auf.', icon: 'Handshake' }
+      { title: 'Innovation', description: 'Wir innovieren kontinuierlich im Produktdesign mit Fokus auf Miniaturisierung und lüfterlose Kühlung.', icon: 'Lightbulb' },
+      { title: 'Qualität', description: 'Jedes Produkt durchläuft strenge Tests, um industrietaugliche Zuverlässigkeit zu gewährleisten.', icon: 'Star' },
+      { title: 'Flexibilität', description: 'Wir bieten flexible OEM/ODM-Anpassungsdienste, um spezifische Kundenanforderungen zu erfüllen.', icon: 'Handshake' },
+      { title: 'Zuverlässigkeit', description: 'Wir bauen Vertrauen durch konstante Produktqualität und reaktionsschnellen Kundensupport auf.', icon: 'Award' }
     ],
     timeline: [
-      { year: '2015', title: 'Gründung', description: 'MagicChip wurde in Shenzhen gegründet' },
-      { year: '2017', title: 'Erstes Produkt', description: 'Einführung der MC-Pro X1 Serie' },
-      { year: '2019', title: 'Globale Expansion', description: 'Eröffnung von Büros in den USA und Europa' },
-      { year: '2021', title: 'KI-Fokus', description: 'Einführung der KI-Beschleuniger-Produktlinie' },
-      { year: '2023', title: 'Börsengang', description: 'Notierung am NASDAQ' },
-      { year: '2025', title: 'Neue Fabrik', description: 'Eröffnung einer hochmodernen Fertigungsanlage' }
+      { year: '2021', title: 'Gründung', description: 'MagicChip wurde in Shenzhen gegründet, Fokus auf Mini-PC-F&E' },
+      { year: '2022', title: 'Produkteinführung', description: 'Einführung der ersten Serie industrieller Mini-PCs und Tablets' },
+      { year: '2023', title: 'Marktexpansion', description: 'Expansion auf europäische und nordamerikanische Märkte' },
+      { year: '2024', title: 'OEM/ODM-Wachstum', description: 'Aufbau flexibler Anpassungsdienstleistungen' }
     ],
     locations: [
-      { city: 'Shenzhen', country: 'China', address: 'Büroadresse' }
+      { city: 'Shenzhen', country: 'China', address: '5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China' }
     ]
   },
   it: {
     hero: {
-      title: 'Chi Siamo MagicChip',
-      subtitle: 'Pioniere dell\'innovazione nei semiconduttori dal 2015'
+      title: 'La Nostra Azienda',
+      subtitle: 'Soluzioni Professionali di Mini PC e Informatica Industriale dal 2021'
     },
     stats: [
-      { value: '10+', label: 'Anni di Esperienza' },
-      { value: '500+', label: 'Clienti Aziendali' },
-      { value: '50M+', label: 'Chip Spediti' },
-      { value: '30+', label: 'Paesi Serviti' }
+      { value: '4+', label: 'Anni di Esperienza' },
+      { value: '50-100', label: 'Membri del Team' },
+      { value: '$10M-25M', label: 'Fatturato Annuo' },
+      { value: '30+', label: 'Mercati di Esportazione' }
     ],
     mission: {
       title: 'La Nostra Missione',
-      content: 'Rivoluzionare l\'industria dei semiconduttori con soluzioni di calcolo all\'avanguardia che alimentano il futuro della tecnologia.'
+      content: 'Fornire soluzioni di embedded computing ad alte prestazioni e affidabili che diano potere alle aziende in tutto il mondo. Ci impegniamo nell\'innovazione in miniaturizzazione, design senza ventola e stabilità industriale.'
     },
     vision: {
       title: 'La Nostra Visione',
-      content: 'Diventare leader mondiale nei semiconduttori, permettendo progressi in IA, cloud computing e edge computing.'
+      content: 'Diventare un fornitore globale leader di mini PC e attrezzature informatiche industriali, riconosciuto per i nostri servizi OEM/ODM flessibili e l\'eccellenza nelle soluzioni di embedded computing.'
     },
     values: [
-      { title: 'Innovazione', description: 'Spingiamo costantemente i limiti di ciò che è possibile nella progettazione e produzione dei chip.', icon: 'Lightbulb' },
-      { title: 'Qualità', description: 'Ogni chip che produciamo rispetta i più alti standard di affidabilità e prestazioni.', icon: 'Star' },
-      { title: 'Sostenibilità', description: 'Ci impegniamo a ridurre il nostro impatto ambientale attraverso una produzione verde.', icon: 'Leaf' },
-      { title: 'Partnership', description: 'Costruiamo relazioni a lungo termine con i nostri clienti basate su fiducia e successo reciproco.', icon: 'Handshake' }
+      { title: 'Innovazione', description: 'Innoviamo continuamente nella progettazione dei prodotti, concentrandoci sulla miniaturizzazione e sul raffreddamento senza ventola.', icon: 'Lightbulb' },
+      { title: 'Qualità', description: 'Ogni prodotto viene sottoposto a test rigorosi per garantire affidabilità di grado industriale.', icon: 'Star' },
+      { title: 'Flessibilità', description: 'Offriamo servizi di personalizzazione OEM/ODM flessibili per soddisfare requisiti specifici dei clienti.', icon: 'Handshake' },
+      { title: 'Affidabilità', description: 'Costruiamo fiducia attraverso una qualità del prodotto costante e un supporto clienti reattivo.', icon: 'Award' }
     ],
     timeline: [
-      { year: '2015', title: 'Fondazione', description: 'MagicChip è stata fondata a Shenzhen' },
-      { year: '2017', title: 'Primo Prodotto', description: 'Lancio della serie MC-Pro X1' },
-      { year: '2019', title: 'Espansione Globale', description: 'Apertura di uffici negli USA e in Europa' },
-      { year: '2021', title: 'Focus IA', description: 'Introduzione della linea di prodotti acceleratori IA' },
-      { year: '2023', title: 'IPO', description: 'Quotazione al NASDAQ' },
-      { year: '2025', title: 'Nuova Fabbrica', description: 'Apertura di uno stabilimento produttivo avanzato' }
+      { year: '2021', title: 'Fondazione', description: 'MagicChip è stata fondata a Shenzhen, concentrandosi sulla R&S dei mini PC' },
+      { year: '2022', title: 'Lancio Prodotto', description: 'Lancio della prima serie di mini PC industriali e tablet' },
+      { year: '2023', title: 'Espansione Mercato', description: 'Espansione verso i mercati europei e nordamericani' },
+      { year: '2024', title: 'Crescita OEM/ODM', description: 'Stabilimento di capacità di servizio di personalizzazione flessibile' }
     ],
     locations: [
-      { city: 'Shenzhen', country: 'Cina', address: 'Indirizzo Ufficio' }
+      { city: 'Shenzhen', country: 'Cina', address: '5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China' }
     ]
   },
   es: {
     hero: {
-      title: 'Acerca de MagicChip',
-      subtitle: 'Pionero en innovación de semiconductores desde 2015'
+      title: 'Nuestra Empresa',
+      subtitle: 'Soluciones Profesionales de Mini PC e Informática Industrial desde 2021'
     },
     stats: [
-      { value: '10+', label: 'Años de Experiencia' },
-      { value: '500+', label: 'Clientes Empresariales' },
-      { value: '50M+', label: 'Chips Enviados' },
-      { value: '30+', label: 'Países Atendidos' }
+      { value: '4+', label: 'Años de Experiencia' },
+      { value: '50-100', label: 'Miembros del Equipo' },
+      { value: '$10M-25M', label: 'Ingresos Anuales' },
+      { value: '30+', label: 'Mercados de Exportación' }
     ],
     mission: {
       title: 'Nuestra Misión',
-      content: 'Revolucionar la industria de semiconductores con soluciones informáticas de vanguardia que impulsan el futuro de la tecnología.'
+      content: 'Proporcionar soluciones de computación integrada de alto rendimiento y confiables que empoderen a las empresas de todo el mundo. Nos comprometemos con la innovación en miniaturización, diseño sin ventilador y estabilidad industrial.'
     },
     vision: {
       title: 'Nuestra Visión',
-      content: 'Convertirnos en el líder mundial en semiconductores, permitiendo avances en IA, computación en la nube y edge computing.'
+      content: 'Convertirnos en un proveedor global líder de mini PC y equipos informáticos industriales, reconocido por nuestros servicios OEM/ODM flexibles y la excelencia en soluciones de computación integrada.'
     },
     values: [
-      { title: 'Innovación', description: 'Constantemente superamos los límites de lo posible en el diseño y fabricación de chips.', icon: 'Lightbulb' },
-      { title: 'Calidad', description: 'Cada chip que producimos cumple con los más altos estándares de confiabilidad y rendimiento.', icon: 'Star' },
-      { title: 'Sostenibilidad', description: 'Nos comprometemos a reducir nuestra huella ambiental mediante fabricación verde.', icon: 'Leaf' },
-      { title: 'Asociación', description: 'Construimos relaciones a largo plazo con nuestros clientes basadas en confianza y éxito mutuo.', icon: 'Handshake' }
+      { title: 'Innovación', description: 'Innovamos continuamente en el diseño de productos, centrándonos en la miniaturización y el enfriamiento sin ventilador.', icon: 'Lightbulb' },
+      { title: 'Calidad', description: 'Cada producto se somete a pruebas rigurosas para garantizar confiabilidad de grado industrial.', icon: 'Star' },
+      { title: 'Flexibilidad', description: 'Ofrecemos servicios de personalización OEM/ODM flexibles para satisfacer requisitos específicos del cliente.', icon: 'Handshake' },
+      { title: 'Confiabilidad', description: 'Construimos confianza a través de una calidad de producto constante y soporte al cliente receptivo.', icon: 'Award' }
     ],
     timeline: [
-      { year: '2015', title: 'Fundación', description: 'MagicChip fue fundada en Shenzhen' },
-      { year: '2017', title: 'Primer Producto', description: 'Lanzamiento de la serie MC-Pro X1' },
-      { year: '2019', title: 'Expansión Global', description: 'Apertura de oficinas en EE.UU. y Europa' },
-      { year: '2021', title: 'Enfoque IA', description: 'Introducción de la línea de productos aceleradores IA' },
-      { year: '2023', title: 'OPV', description: 'Cotización en NASDAQ' },
-      { year: '2025', title: 'Nueva Fábrica', description: 'Apertura de instalación de fabricación avanzada' }
+      { year: '2021', title: 'Fundación', description: 'MagicChip fue fundada en Shenzhen, enfocándose en I+D de mini PC' },
+      { year: '2022', title: 'Lanzamiento Producto', description: 'Lanzamiento de la primera serie de mini PC industriales y tabletas' },
+      { year: '2023', title: 'Expansión Mercado', description: 'Expansión a mercados europeos y norteamericanos' },
+      { year: '2024', title: 'Crecimiento OEM/ODM', description: 'Establecimiento de capacidades de servicio de personalización flexible' }
     ],
     locations: [
-      { city: 'Shenzhen', country: 'China', address: 'Dirección de Oficina' }
+      { city: 'Shenzhen', country: 'China', address: '5E, JinDa City, Central Road, Xinqiao Street, Baoan District, Shenzhen City, China' }
     ]
   }
 };
@@ -258,9 +248,9 @@ export default function CompanyPage() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                className="bg-white p-8 rounded-md shadow-sm"
+                className="bg-white p-8 rounded-lg shadow-sm"
               >
-                <div className="w-12 h-12 bg-blue-100 rounded-md flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                   <Target className="w-6 h-6 text-blue-600" />
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">{data.mission.title}</h2>
@@ -270,9 +260,9 @@ export default function CompanyPage() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white p-8 rounded-md shadow-sm"
+                className="bg-white p-8 rounded-lg shadow-sm"
               >
-                <div className="w-12 h-12 bg-blue-100 rounded-md flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                   <Eye className="w-6 h-6 text-blue-600" />
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">{data.vision.title}</h2>
@@ -293,8 +283,8 @@ export default function CompanyPage() {
                 const iconMap: Record<string, any> = {
                   Lightbulb,
                   Star,
-                  Leaf,
-                  Handshake
+                  Handshake,
+                  Award
                 };
                 const IconComponent = iconMap[value.icon] || Lightbulb;
 
@@ -306,7 +296,7 @@ export default function CompanyPage() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="text-center p-6"
                   >
-                    <div className="w-12 h-12 bg-blue-100 rounded-md flex items-center justify-center mx-auto mb-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                       <IconComponent className="w-6 h-6 text-blue-600" />
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">{value.title}</h3>
@@ -362,7 +352,7 @@ export default function CompanyPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-gray-50 p-6 rounded-md max-w-md"
+                  className="bg-gray-50 p-6 rounded-lg max-w-md"
                 >
                   <MapPin className="w-6 h-6 text-blue-600 mb-3" />
                   <h3 className="font-semibold text-gray-900">{location.city}</h3>
