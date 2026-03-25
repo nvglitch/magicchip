@@ -117,29 +117,29 @@ export const translations = {
       title: 'Enterprise Services',
       subtitle: 'Professional OEM/ODM solutions for mini PCs and industrial computing, serving intelligent retail, digital signage, industrial automation, and IoT applications',
       items: {
-        consulting: {
-          title: 'OEM/ODM Consulting',
-          description: 'Expert guidance on product customization including Intel N-series, 13th/14th Gen Core platform selection, port configuration, and branding solutions tailored to your project requirements.',
+        industrySolutions: {
+          title: 'Industry-Specific Solutions',
+          description: 'Tailored Mini PC and industrial computing architectures optimized for smart retail, industrial automation, IoT, and healthcare.',
         },
-        engineering: {
-          title: 'Custom Engineering',
-          description: 'Flexible hardware design with 2.5GbE/10GbE multi-port networking, 4G/5G wireless module integration, multi-screen output support, and fanless thermal solutions for industrial environments.',
+        oemOdm: {
+          title: 'Flexible OEM/ODM Customization',
+          description: 'Bespoke hardware designs including fanless cooling, 2.5GbE/10GbE LAN, 4G/5G modules, and multi-display outputs.',
         },
-        deployment: {
-          title: 'Global Export',
-          description: 'Worldwide delivery to Europe, North America, Middle East, and Southeast Asia with efficient logistics management and flexible shipping options for samples and bulk orders.',
+        rapidProduction: {
+          title: 'Rapid Prototyping & Production',
+          description: "Leveraging Shenzhen's robust electronics supply chain for rapid response from initial samples to mass production.",
         },
-        support: {
-          title: 'Technical Support',
-          description: 'Professional assistance for product integration, driver support, and troubleshooting from our experienced engineering team based in Shenzhen, China.',
+        globalSupply: {
+          title: 'Global Supply & Logistics',
+          description: 'Comprehensive export services delivering reliable, cost-effective hardware to Europe, North America, Middle East, and SEA.',
         },
-        training: {
-          title: 'Product Documentation',
-          description: 'Comprehensive technical documentation and specifications to help your team integrate our mini PC and industrial computing solutions effectively.',
+        technicalSupport: {
+          title: 'Professional Technical Support',
+          description: 'Dedicated engineering support ensuring industrial-grade stability and performance across Intel N-series and Core platforms.',
         },
-        lifecycle: {
-          title: 'Sample to Production',
-          description: 'Complete service from prototype samples to mass production with 50-100 employees and $10M-25M annual capacity, ensuring quality and timely delivery.',
+        lifecycleManagement: {
+          title: 'Long-Term Reliability',
+          description: 'Sustained availability, lifecycle management, and consistent hardware configurations for long-term industrial deployments.',
         },
       },
       cta: 'Contact Our Team',

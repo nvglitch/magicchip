@@ -168,27 +168,27 @@ export interface TranslationSchema {
     title: string;
     subtitle: string;
     items: {
-      consulting: {
+      industrySolutions: {
         title: string;
         description: string;
       };
-      engineering: {
+      oemOdm: {
         title: string;
         description: string;
       };
-      deployment: {
+      rapidProduction: {
         title: string;
         description: string;
       };
-      support: {
+      globalSupply: {
         title: string;
         description: string;
       };
-      training: {
+      technicalSupport: {
         title: string;
         description: string;
       };
-      lifecycle: {
+      lifecycleManagement: {
         title: string;
         description: string;
       };

@@ -6,8 +6,8 @@ import {
   Wrench, 
   Globe, 
   Headphones, 
-  GraduationCap, 
-  RefreshCw 
+  Rocket, 
+  ShieldCheck 
 } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import Link from 'next/link';
@@ -18,39 +18,39 @@ export default function Services() {
   const services = [
     {
       id: 1,
-      title: t.services.items.consulting.title,
-      description: t.services.items.consulting.description,
+      title: t.services.items.industrySolutions.title,
+      description: t.services.items.industrySolutions.description,
       icon: Lightbulb,
     },
     {
       id: 2,
-      title: t.services.items.engineering.title,
-      description: t.services.items.engineering.description,
+      title: t.services.items.oemOdm.title,
+      description: t.services.items.oemOdm.description,
       icon: Wrench,
     },
     {
       id: 3,
-      title: t.services.items.deployment.title,
-      description: t.services.items.deployment.description,
-      icon: Globe,
+      title: t.services.items.rapidProduction.title,
+      description: t.services.items.rapidProduction.description,
+      icon: Rocket,
     },
     {
       id: 4,
-      title: t.services.items.support.title,
-      description: t.services.items.support.description,
-      icon: Headphones,
+      title: t.services.items.globalSupply.title,
+      description: t.services.items.globalSupply.description,
+      icon: Globe,
     },
     {
       id: 5,
-      title: t.services.items.training.title,
-      description: t.services.items.training.description,
-      icon: GraduationCap,
+      title: t.services.items.technicalSupport.title,
+      description: t.services.items.technicalSupport.description,
+      icon: Headphones,
     },
     {
       id: 6,
-      title: t.services.items.lifecycle.title,
-      description: t.services.items.lifecycle.description,
-      icon: RefreshCw,
+      title: t.services.items.lifecycleManagement.title,
+      description: t.services.items.lifecycleManagement.description,
+      icon: ShieldCheck,
     },
   ];
 

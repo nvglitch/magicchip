@@ -175,29 +175,29 @@ export const es: TranslationSchema = {
     title: 'Servicios Empresariales',
     subtitle: 'Soporte integral y servicios profesionales para asegurar su éxito en cada etapa',
     items: {
-      consulting: {
-        title: 'Consultoría Estratégica',
-        description: 'Orientación experta sobre arquitectura de hardware y planificación de infraestructura adaptada a las necesidades de su negocio.',
+      industrySolutions: {
+        title: 'Soluciones por Industria',
+        description: 'Arquitecturas de mini PC y computación industrial personalizadas para retail inteligente, automatización industrial, IoT y salud.',
       },
-      engineering: {
-        title: 'Ingeniería Personalizada',
-        description: 'Servicios de diseño y optimización de chips a medida para aplicaciones especializadas y requisitos únicos.',
+      oemOdm: {
+        title: 'Personalización OEM/ODM Flexible',
+        description: 'Diseños de hardware a medida que incluyen refrigeración sin ventiladores, LAN 2.5GbE/10GbE, módulos 4G/5G y salidas multi-pantalla.',
       },
-      deployment: {
-        title: 'Implementación Global',
-        description: 'Soporte integral para despliegues mundiales incluyendo logística, instalación y configuración.',
+      rapidProduction: {
+        title: 'Prototipado y Producción Rápida',
+        description: 'Aprovechando la sólida cadena de suministro electrónica de Shenzhen para una respuesta rápida desde muestras iniciales hasta producción en masa.',
       },
-      support: {
-        title: 'Soporte Técnico 24/7',
-        description: 'Asistencia las 24 horas de nuestro equipo de ingenieros certificados y especialistas técnicos.',
+      globalSupply: {
+        title: 'Suministro y Logística Global',
+        description: 'Servicios de exportación completos que ofrecen hardware confiable y rentable a Europa, América del Norte, Medio Oriente y SEA.',
       },
-      training: {
-        title: 'Formación y Certificación',
-        description: 'Programas de formación completos para ayudar a su equipo a maximizar el potencial de nuestras soluciones.',
+      technicalSupport: {
+        title: 'Soporte Técnico Profesional',
+        description: 'Soporte de ingeniería dedicado que garantiza estabilidad y rendimiento de grado industrial en plataformas Intel N-series y Core.',
       },
-      lifecycle: {
-        title: 'Gestión del Ciclo de Vida',
-        description: 'Actualizaciones continuas, mantenimiento y rutas de actualización para mantener sus sistemas en máximo rendimiento.',
+      lifecycleManagement: {
+        title: 'Fiabilidad a Largo Plazo',
+        description: 'Disponibilidad sostenida, gestión del ciclo de vida y configuraciones de hardware consistentes para despliegues industriales a largo plazo.',
       },
     },
     cta: 'Contactar a Nuestro Equipo',
