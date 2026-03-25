@@ -53,10 +53,10 @@ export default function Navbar() {
   // 多语言下拉菜单内容 - 使用专业图标
   const getDropdownContent = (): Record<string, DropdownItem[]> => ({
     products: [
-      { title: t.navDropdown?.products?.industrialMiniPC || 'Industrial Mini PC', description: t.navDropdown?.products?.industrialMiniPCDesc || 'Fanless compact industrial computers', href: '/products#industrial-mini-pc', icon: Cpu },
-      { title: t.navDropdown?.products?.firewallMiniPC || 'Firewall Mini PC', description: t.navDropdown?.products?.firewallMiniPCDesc || 'Network security appliances', href: '/products#firewall-mini-pc', icon: Shield },
-      { title: t.navDropdown?.products?.desktopMiniPC || 'Desktop Mini PC', description: t.navDropdown?.products?.desktopMiniPCDesc || 'Compact computers for business', href: '/products#desktop-mini-pc', icon: Monitor },
-      { title: t.navDropdown?.products?.firewallServer || '1U/2U Firewall Server', description: t.navDropdown?.products?.firewallServerDesc || 'Rackmount firewall servers', href: '/products#firewall-server', icon: Server },
+      { title: t.navDropdown?.products?.industrialMiniPC || 'Industrial Mini PC', description: t.navDropdown?.products?.industrialMiniPCDesc || 'Fanless compact industrial computers', href: 'https://magicchip.en.alibaba.com/productgrouplist-933739702/Industrial_PC.html?spm=a2700.shop_plgr.88.23.79c77121OixJyz', icon: Cpu, external: true },
+      { title: t.navDropdown?.products?.firewallMiniPC || 'Firewall Mini PC', description: t.navDropdown?.products?.firewallMiniPCDesc || 'Network security appliances', href: 'https://magicchip.en.alibaba.com/productgrouplist-932323740/Firewall_Mini_PC.html?spm=a2700.shop_plgr.88.32.5c807121rnWOr9', icon: Shield, external: true },
+      { title: t.navDropdown?.products?.desktopMiniPC || 'Desktop Mini PC', description: t.navDropdown?.products?.desktopMiniPCDesc || 'Compact computers for business', href: 'https://magicchip.en.alibaba.com/productgrouplist-932313801/Dekstop_Mini_PC.html?spm=a2700.shop_plgr.88.28.26c87121PeanxV', icon: Monitor, external: true },
+      { title: t.navDropdown?.products?.firewallServer || '1U/2U Firewall Server', description: t.navDropdown?.products?.firewallServerDesc || 'Rackmount firewall servers', href: 'https://magicchip.en.alibaba.com/productgrouplist-952444890/1U_2U_Firewall_Server_PC.html?spm=a2700.shop_plgr.88.18.48957121p4KllR', icon: Server, external: true },
     ],
     documents: [
       { title: t.navDropdown?.documents?.news || 'News', description: t.navDropdown?.documents?.newsDesc || 'Latest updates and announcements', href: '/news', icon: Newspaper },
@@ -64,9 +64,9 @@ export default function Navbar() {
       { title: t.navDropdown?.documents?.techDocs || 'Tech Document', description: t.navDropdown?.documents?.techDocsDesc || 'Technical specifications and manuals', href: '/tech-docs', icon: FileCode },
     ],
     contact: [
-      { title: t.navDropdown?.contact?.email || 'Email', description: t.navDropdown?.contact?.emailDesc || 'Send us an email', href: 'mailto:Contact@szmagicchip.com', icon: Mail },
-      { title: t.navDropdown?.contact?.phone || 'Phone', description: t.navDropdown?.contact?.phoneDesc || 'Call our sales team', href: 'tel:+8613392172330', icon: Phone },
-      { title: t.navDropdown?.contact?.whatsapp || 'WhatsApp', description: t.navDropdown?.contact?.whatsappDesc || 'Chat with us on WhatsApp', href: 'https://wa.me/8613392172330', icon: MessageCircle },
+      { title: t.navDropdown?.contact?.email || 'Email', description: t.navDropdown?.contact?.emailDesc || 'Send us an email', href: 'mailto:Contact@szmagicchip.com', icon: Mail, external: true },
+      { title: t.navDropdown?.contact?.phone || 'Phone', description: t.navDropdown?.contact?.phoneDesc || 'Call our sales team', href: 'tel:+8613392172330', icon: Phone, external: true },
+      { title: t.navDropdown?.contact?.whatsapp || 'WhatsApp', description: t.navDropdown?.contact?.whatsappDesc || 'Chat with us on WhatsApp', href: 'https://wa.me/8613392172330', icon: MessageCircle, external: true },
     ],
     about: [
       { title: 'Our Company', description: 'Company history and mission', href: '/company', icon: BookOpen },
@@ -148,6 +148,8 @@ export default function Navbar() {
                         <a
                           key={index}
                           href={dropdownItem.href}
+                          target={dropdownItem.external ? '_blank' : '_self'}
+                          rel={dropdownItem.external ? 'noopener noreferrer' : undefined}
                           className={`flex items-start px-4 py-3 transition-colors ${
                             dropdownItem.description
                               ? 'hover:bg-gray-50'
@@ -330,6 +332,8 @@ export default function Navbar() {
                         <a
                           key={index}
                           href={dropdownItem.href}
+                          target={dropdownItem.external ? '_blank' : '_self'}
+                          rel={dropdownItem.external ? 'noopener noreferrer' : undefined}
                           className="flex items-center py-2 text-sm text-gray-600 hover:text-blue-600 transition-colors touch-manipulation"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >

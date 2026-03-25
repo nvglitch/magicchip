@@ -18,6 +18,7 @@ interface Product {
   order: number;
   icon: string;
   gradient: string;
+  url?: string;
   title: MultiLangText;
   description: MultiLangText;
   features?: MultiLangText;
@@ -52,6 +53,7 @@ export default function ProductCategories({ products }: ProductCategoriesProps) 
       description: getLocalizedText(product.description, language),
       icon: IconComponent,
       image: `bg-gradient-to-br ${product.gradient}`,
+      url: product.url,
     };
   });
 
@@ -107,13 +109,26 @@ export default function ProductCategories({ products }: ProductCategoriesProps) 
                 <p className="text-gray-600 mb-4">
                   {category.description}
                 </p>
-                <a
-                  href="/products"
-                  className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors group/link"
-                >
-                  {t.products.learnMore}
-                  <ArrowRight className="w-4 h-4 ml-2 transform group-hover/link:translate-x-1 transition-transform" />
-                </a>
+                {category.url ? (
+                  <a
+                    href={category.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors group/link"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {t.products.learnMore}
+                    <ArrowRight className="w-4 h-4 ml-2 transform group-hover/link:translate-x-1 transition-transform" />
+                  </a>
+                ) : (
+                  <a
+                    href="/products"
+                    className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors group/link"
+                  >
+                    {t.products.learnMore}
+                    <ArrowRight className="w-4 h-4 ml-2 transform group-hover/link:translate-x-1 transition-transform" />
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}

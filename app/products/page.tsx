@@ -16,28 +16,28 @@ const productsData = {
         description: 'Fanless, compact industrial computers designed for harsh environments and 24/7 operation.',
         features: ['Fanless cooling system', 'Wide temperature range', 'Intel N-series/Core processors', 'Multi-port connectivity'],
         icon: Cpu,
-        href: '/products'
+        href: 'https://magicchip.en.alibaba.com/productgrouplist-933739702/Industrial_PC.html?spm=a2700.shop_plgr.88.23.79c77121OixJyz'
       },
       {
         title: 'Firewall Mini PC',
         description: 'Network security appliances with advanced firewall capabilities and multi-Gigabit ports.',
         features: ['2.5GbE/10GbE ports', 'Advanced firewall software', 'VPN support', 'Industrial-grade design'],
         icon: Shield,
-        href: '/products'
+        href: 'https://magicchip.en.alibaba.com/productgrouplist-932323740/Firewall_Mini_PC.html?spm=a2700.shop_plgr.88.32.5c807121rnWOr9'
       },
       {
         title: 'Desktop Mini PC',
         description: 'Compact desktop computers ideal for business, education, and digital signage applications.',
         features: ['Intel N-series processors', '4K display support', 'Low power consumption', 'VESA mount compatible'],
         icon: Monitor,
-        href: '/products'
+        href: 'https://magicchip.en.alibaba.com/productgrouplist-932313801/Dekstop_Mini_PC.html?spm=a2700.shop_plgr.88.28.26c87121PeanxV'
       },
       {
         title: '1U/2U Firewall Server PC',
         description: 'Rackmount firewall servers for enterprise network security with high throughput.',
         features: ['1U/2U rackmount form factor', 'Multiple LAN ports', 'High-performance routing', 'Enterprise firewall OS support'],
         icon: Server,
-        href: '/products'
+        href: 'https://magicchip.en.alibaba.com/productgrouplist-952444890/1U_2U_Firewall_Server_PC.html?spm=a2700.shop_plgr.88.18.48957121p4KllR'
       }
     ],
     cta: {
@@ -58,28 +58,28 @@ const productsData = {
         description: 'Ordinateurs industriels compacts sans ventilateur conçus pour les environnements difficiles et le fonctionnement 24/7.',
         features: ['Système de refroidissement sans ventilateur', 'Large plage de température', 'Processeurs Intel N-series/Core', 'Connectivité multi-ports'],
         icon: Cpu,
-        href: '/products'
+        href: 'https://magicchip.en.alibaba.com/productgrouplist-933739702/Industrial_PC.html?spm=a2700.shop_plgr.88.23.79c77121OixJyz'
       },
       {
         title: 'Mini PC Firewall',
         description: 'Appliances de sécurité réseau avec capacités de firewall avancées et ports multi-Gigabit.',
         features: ['Ports 2.5GbE/10GbE', 'Logiciel firewall avancé', 'Support VPN', 'Design industriel'],
         icon: Shield,
-        href: '/products'
+        href: 'https://magicchip.en.alibaba.com/productgrouplist-932323740/Firewall_Mini_PC.html?spm=a2700.shop_plgr.88.32.5c807121rnWOr9'
       },
       {
         title: 'Mini PC de Bureau',
         description: 'Ordinateurs de bureau compacts idéaux pour les applications commerciales, éducatives et de signalétique numérique.',
         features: ['Processeurs Intel N-series', 'Support affichage 4K', 'Faible consommation', 'Compatible VESA'],
         icon: Monitor,
-        href: '/products'
+        href: 'https://magicchip.en.alibaba.com/productgrouplist-932313801/Dekstop_Mini_PC.html?spm=a2700.shop_plgr.88.28.26c87121PeanxV'
       },
       {
         title: 'Serveur Firewall 1U/2U',
         description: 'Serveurs firewall rack pour sécurité réseau d\'entreprise avec haut débit.',
         features: ['Format rack 1U/2U', 'Multiples ports LAN', 'Routage haute performance', 'Support OS firewall entreprise'],
         icon: Server,
-        href: '/products'
+        href: 'https://magicchip.en.alibaba.com/productgrouplist-952444890/1U_2U_Firewall_Server_PC.html?spm=a2700.shop_plgr.88.18.48957121p4KllR'
       }
     ],
     cta: {
@@ -100,28 +100,28 @@ const productsData = {
         description: 'Lüfterlose, kompakte Industriecomputer für raue Umgebungen und 24/7-Betrieb.',
         features: ['Lüfterloses Kühlsystem', 'Breiter Temperaturbereich', 'Intel N-series/Core Prozessoren', 'Multi-Port Konnektivität'],
         icon: Cpu,
-        href: '/products'
+        href: 'https://magicchip.en.alibaba.com/productgrouplist-933739702/Industrial_PC.html?spm=a2700.shop_plgr.88.23.79c77121OixJyz'
       },
       {
         title: 'Firewall Mini-PC',
         description: 'Netzwerksicherheitsgeräte mit erweiterten Firewall-Funktionen und Multi-Gigabit-Ports.',
         features: ['2.5GbE/10GbE Ports', 'Erweiterte Firewall-Software', 'VPN-Unterstützung', 'Industrielles Design'],
         icon: Shield,
-        href: '/products'
+        href: 'https://magicchip.en.alibaba.com/productgrouplist-932323740/Firewall_Mini_PC.html?spm=a2700.shop_plgr.88.32.5c807121rnWOr9'
       },
       {
         title: 'Desktop Mini-PC',
         description: 'Kompakte Desktop-Computer ideal für Business-, Bildungs- und Digital-Signage-Anwendungen.',
         features: ['Intel N-series Prozessoren', '4K Display-Unterstützung', 'Geringer Stromverbrauch', 'VESA-kompatibel'],
         icon: Monitor,
-        href: '/products'
+        href: 'https://magicchip.en.alibaba.com/productgrouplist-932313801/Dekstop_Mini_PC.html?spm=a2700.shop_plgr.88.28.26c87121PeanxV'
       },
       {
         title: '1U/2U Firewall Server PC',
         description: 'Rackmontierte Firewall-Server für Enterprise-Netzwerksicherheit mit hohem Durchsatz.',
         features: ['1U/2U Rackmount-Formfaktor', 'Multiple LAN-Ports', 'Hochleistungs-Routing', 'Enterprise Firewall OS Support'],
         icon: Server,
-        href: '/products'
+        href: 'https://magicchip.en.alibaba.com/productgrouplist-952444890/1U_2U_Firewall_Server_PC.html?spm=a2700.shop_plgr.88.18.48957121p4KllR'
       }
     ],
     cta: {
@@ -142,28 +142,28 @@ const productsData = {
         description: 'Computer industriali compatti senza ventola progettati per ambienti difficili e funzionamento 24/7.',
         features: ['Sistema di raffreddamento senza ventola', 'Ampio range di temperatura', 'Processori Intel N-series/Core', 'Connettività multi-porta'],
         icon: Cpu,
-        href: '/products'
+        href: 'https://magicchip.en.alibaba.com/productgrouplist-933739702/Industrial_PC.html?spm=a2700.shop_plgr.88.23.79c77121OixJyz'
       },
       {
         title: 'Mini PC Firewall',
         description: 'Appliance di sicurezza di rete con capacità firewall avanzate e porte multi-Gigabit.',
         features: ['Porte 2.5GbE/10GbE', 'Software firewall avanzato', 'Supporto VPN', 'Design industriale'],
         icon: Shield,
-        href: '/products'
+        href: 'https://magicchip.en.alibaba.com/productgrouplist-932323740/Firewall_Mini_PC.html?spm=a2700.shop_plgr.88.32.5c807121rnWOr9'
       },
       {
         title: 'Mini PC da Scrivania',
         description: 'Computer desktop compatti ideali per applicazioni commerciali, educative e digital signage.',
         features: ['Processori Intel N-series', 'Supporto display 4K', 'Basso consumo energetico', 'Compatibile VESA'],
         icon: Monitor,
-        href: '/products'
+        href: 'https://magicchip.en.alibaba.com/productgrouplist-932313801/Dekstop_Mini_PC.html?spm=a2700.shop_plgr.88.28.26c87121PeanxV'
       },
       {
         title: 'Server Firewall 1U/2U',
         description: 'Server firewall rack per sicurezza di rete aziendale con alta velocità.',
         features: ['Fattore di forma rack 1U/2U', 'Porte LAN multiple', 'Routing ad alte prestazioni', 'Supporto OS firewall enterprise'],
         icon: Server,
-        href: '/products'
+        href: 'https://magicchip.en.alibaba.com/productgrouplist-952444890/1U_2U_Firewall_Server_PC.html?spm=a2700.shop_plgr.88.18.48957121p4KllR'
       }
     ],
     cta: {
@@ -184,28 +184,28 @@ const productsData = {
         description: 'Computadoras industriales compactas sin ventiladores diseñadas para entornos difíciles y operación 24/7.',
         features: ['Sistema de refrigeración sin ventiladores', 'Amplio rango de temperatura', 'Procesadores Intel N-series/Core', 'Conectividad multi-puerto'],
         icon: Cpu,
-        href: '/products'
+        href: 'https://magicchip.en.alibaba.com/productgrouplist-933739702/Industrial_PC.html?spm=a2700.shop_plgr.88.23.79c77121OixJyz'
       },
       {
         title: 'Mini PC Firewall',
         description: 'Appliances de seguridad de red con capacidades avanzadas de firewall y puertos multi-Gigabit.',
         features: ['Puertos 2.5GbE/10GbE', 'Software firewall avanzado', 'Soporte VPN', 'Diseño industrial'],
         icon: Shield,
-        href: '/products'
+        href: 'https://magicchip.en.alibaba.com/productgrouplist-932323740/Firewall_Mini_PC.html?spm=a2700.shop_plgr.88.32.5c807121rnWOr9'
       },
       {
         title: 'Mini PC de Escritorio',
         description: 'Computadoras de escritorio compactas ideales para aplicaciones comerciales, educativas y de señalización digital.',
         features: ['Procesadores Intel N-series', 'Soporte de pantalla 4K', 'Bajo consumo de energía', 'Compatible con VESA'],
         icon: Monitor,
-        href: '/products'
+        href: 'https://magicchip.en.alibaba.com/productgrouplist-932313801/Dekstop_Mini_PC.html?spm=a2700.shop_plgr.88.28.26c87121PeanxV'
       },
       {
         title: 'Servidor Firewall 1U/2U',
         description: 'Servidores firewall rack para seguridad de red empresarial con alto rendimiento.',
         features: ['Factor de forma rack 1U/2U', 'Múltiples puertos LAN', 'Enrutamiento de alto rendimiento', 'Soporte SO firewall enterprise'],
         icon: Server,
-        href: '/products'
+        href: 'https://magicchip.en.alibaba.com/productgrouplist-952444890/1U_2U_Firewall_Server_PC.html?spm=a2700.shop_plgr.88.18.48957121p4KllR'
       }
     ],
     cta: {
@@ -276,6 +276,8 @@ export default function ProductsPage() {
 
                   <a
                     href={category.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center text-blue-600 font-semibold group-hover:text-blue-700"
                   >
                     {data.learnMore}
