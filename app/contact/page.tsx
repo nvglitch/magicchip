@@ -287,15 +287,40 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* Contact Form & WhatsApp */}
+        {/* Contact Form & WhatsApp - 上下排版 */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12">
-              {/* Contact Form */}
+            <div className="space-y-8">
+              {/* 第一行：WhatsApp 卡片 */}
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
+                className="bg-gradient-to-r from-green-500 to-green-600 p-8 rounded-md text-white"
+              >
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                  <div className="mb-4 md:mb-0">
+                    <div className="flex items-center mb-2">
+                      <MessageCircle className="w-8 h-8 mr-3" />
+                      <h2 className="text-2xl font-bold">{data.whatsapp.title}</h2>
+                    </div>
+                    <p className="text-green-100">{data.whatsapp.description}</p>
+                  </div>
+                  <a
+                    href="https://wa.me/8613392172330"
+                    className="inline-flex items-center px-6 py-3 bg-white text-green-600 font-medium rounded-md hover:bg-green-50 transition-colors self-start md:self-auto"
+                  >
+                    <MessageSquare className="w-5 h-5 mr-2" />
+                    {data.whatsapp.button}
+                  </a>
+                </div>
+              </motion.div>
+
+              {/* 第二行：联系表单 */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-white p-8 rounded-md shadow-sm"
               >
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">{data.form.title}</h2>
@@ -348,45 +373,6 @@ export default function ContactPage() {
                   </button>
                 </form>
               </motion.div>
-
-              {/* WhatsApp & Map */}
-              <div className="space-y-8">
-                {/* WhatsApp */}
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="bg-gradient-to-r from-green-500 to-green-600 p-8 rounded-md text-white"
-                >
-                  <div className="flex items-center mb-4">
-                    <MessageCircle className="w-8 h-8 mr-3" />
-                    <h2 className="text-2xl font-bold">{data.whatsapp.title}</h2>
-                  </div>
-                  <p className="text-green-100 mb-6">{data.whatsapp.description}</p>
-                  <a
-                    href="https://wa.me/8613392172330"
-                    className="inline-flex items-center px-6 py-3 bg-white text-green-600 font-medium rounded-md hover:bg-green-50 transition-colors"
-                  >
-                    <MessageSquare className="w-5 h-5 mr-2" />
-                    {data.whatsapp.button}
-                  </a>
-                </motion.div>
-
-                {/* Map */}
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="h-96 bg-gray-200 rounded-md overflow-hidden"
-                >
-                  <div className="w-full h-full flex items-center justify-center bg-gray-300">
-                    <div className="text-center text-gray-500">
-                      <MapPin className="w-12 h-12 mx-auto mb-2" />
-                      <p>{'Map View'}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
             </div>
           </div>
         </section>
