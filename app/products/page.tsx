@@ -243,39 +243,45 @@ export default function ProductsPage() {
       </section>
 
       {/* Products Grid */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {data.categories.map((category, index) => (
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-50 rounded-md p-8 hover:shadow-xl transition-shadow duration-300"
+                className="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-10 border border-gray-100 hover:shadow-2xl hover:border-blue-100 transition-all duration-300 overflow-hidden"
               >
-                <div className="flex items-start justify-between mb-6">
-                  <div className="w-14 h-14 bg-blue-100 rounded-md flex items-center justify-center">
-                    <category.icon className="w-7 h-7 text-blue-600" />
+                {/* Background decoration */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full -mr-16 -mt-16 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
+
+                <div className="relative">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <category.icon className="w-8 h-8 text-white" />
                   </div>
+
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">{category.title}</h3>
+                  <p className="text-gray-600 mb-8 leading-relaxed">{category.description}</p>
+
+                  <ul className="space-y-3 mb-8">
+                    {category.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-600">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
                   <a
                     href={category.href}
-                    className="flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
+                    className="inline-flex items-center text-blue-600 font-semibold group-hover:text-blue-700"
                   >
                     {data.learnMore}
-                    <ArrowRight className="w-4 h-4 ml-1" />
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
                   </a>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">{category.title}</h3>
-                <p className="text-gray-600 mb-6">{category.description}</p>
-                <ul className="space-y-2">
-                  {category.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
               </motion.div>
             ))}
           </div>

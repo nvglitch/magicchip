@@ -10,6 +10,10 @@ const companyData = {
       title: 'Our Company',
       subtitle: 'Professional Mini PC & Industrial Computing Solutions Since 2021'
     },
+    intro: {
+      title: 'Shenzhen Magic Chip Technology Co., Ltd.',
+      content: 'Founded in 2021, Shenzhen Magic Chip Technology Co., Ltd. is a professional manufacturer of mini PCs and industrial computing equipment based in Shenzhen, China. We specialize in R&D, manufacturing, and sales of mini PCs, industrial computers, multi-port industrial hosts, industrial tablets, and laptops. Our products are widely used in intelligent retail, digital signage, financial self-service, industrial automation, education, medical, and IoT fields.'
+    },
     stats: [
       { value: '4+', label: 'Years of Experience' },
       { value: '50-100', label: 'Team Members' },
@@ -61,6 +65,10 @@ const companyData = {
       title: 'Notre Entreprise',
       subtitle: 'Solutions Professionnelles de Mini PC et Informatique Industrielle Depuis 2021'
     },
+    intro: {
+      title: 'Shenzhen Magic Chip Technology Co., Ltd.',
+      content: 'Fondée en 2021, Shenzhen Magic Chip Technology Co., Ltd. est un fabricant professionnel de mini PC et d\'équipements informatiques industriels basé à Shenzhen, en Chine. Nous sommes spécialisés dans la R&D, la fabrication et la vente de mini PC, ordinateurs industriels, hôtes industriels multi-ports, tablettes industrielles et ordinateurs portables. Nos produits sont largement utilisés dans la vente au détail intelligente, la signalisation numérique, les services financiers en libre-service, l\'automatisation industrielle, l\'éducation, la médecine et les domaines IoT.'
+    },
     stats: [
       { value: '4+', label: 'Années d\'Expérience' },
       { value: '50-100', label: 'Membres de l\'Équipe' },
@@ -95,6 +103,10 @@ const companyData = {
     hero: {
       title: 'Unser Unternehmen',
       subtitle: 'Professionelle Mini-PC- und Industrie-Computing-Lösungen seit 2021'
+    },
+    intro: {
+      title: 'Shenzhen Magic Chip Technology Co., Ltd.',
+      content: 'Gegründet 2021, ist Shenzhen Magic Chip Technology Co., Ltd. ein professioneller Hersteller von Mini-PCs und industriellen Computerausrüstungen mit Sitz in Shenzhen, China. Wir sind auf F&E, Herstellung und Vertrieb von Mini-PCs, Industriecomputern, Multi-Port-Industrierechnern, Industrie-Tablets und Laptops spezialisiert. Unsere Produkte finden breite Anwendung in intelligentem Einzelhandel, Digital Signage, finanziellem Self-Service, industrieller Automatisierung, Bildung, Medizin und IoT-Bereichen.'
     },
     stats: [
       { value: '4+', label: 'Jahre Erfahrung' },
@@ -131,6 +143,10 @@ const companyData = {
       title: 'La Nostra Azienda',
       subtitle: 'Soluzioni Professionali di Mini PC e Informatica Industriale dal 2021'
     },
+    intro: {
+      title: 'Shenzhen Magic Chip Technology Co., Ltd.',
+      content: 'Fondata nel 2021, Shenzhen Magic Chip Technology Co., Ltd. è un produttore professionale di mini PC e attrezzature informatiche industriali con sede a Shenzhen, in Cina. Siamo specializzati in R&S, produzione e vendita di mini PC, computer industriali, host industriali multi-porta, tablet industriali e laptop. I nostri prodotti sono ampiamente utilizzati nella vendita al dettaglio intelligente, digital signage, self-service finanziario, automazione industriale, istruzione, medicina e campi IoT.'
+    },
     stats: [
       { value: '4+', label: 'Anni di Esperienza' },
       { value: '50-100', label: 'Membri del Team' },
@@ -165,6 +181,10 @@ const companyData = {
     hero: {
       title: 'Nuestra Empresa',
       subtitle: 'Soluciones Profesionales de Mini PC e Informática Industrial desde 2021'
+    },
+    intro: {
+      title: 'Shenzhen Magic Chip Technology Co., Ltd.',
+      content: 'Fundada en 2021, Shenzhen Magic Chip Technology Co., Ltd. es un fabricante profesional de mini PC y equipos informáticos industriales con sede en Shenzhen, China. Nos especializamos en I+D, fabricación y venta de mini PC, computadoras industriales, hosts industriales multi-puerto, tabletas industriales y laptops. Nuestros productos se utilizan ampliamente en venta minorista inteligente, señalización digital, autoservicio financiero, automatización industrial, educación, medicina y campos IoT.'
     },
     stats: [
       { value: '4+', label: 'Años de Experiencia' },
@@ -229,9 +249,9 @@ export default function CompanyPage() {
               transition={{ duration: 0.6 }}
               className="max-w-4xl mx-auto text-center"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Shenzhen Magic Chip Technology Co., Ltd.</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">{data.intro?.title}</h2>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Founded in 2021, Shenzhen Magic Chip Technology Co., Ltd. is a professional manufacturer of mini PCs and industrial computing equipment based in Shenzhen, China. We specialize in R&D, manufacturing, and sales of mini PCs, industrial computers, multi-port industrial hosts, industrial tablets, and laptops. Our products are widely used in intelligent retail, digital signage, financial self-service, industrial automation, education, medical, and IoT fields.
+                {data.intro?.content}
               </p>
             </motion.div>
           </div>

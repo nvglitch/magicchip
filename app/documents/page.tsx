@@ -223,8 +223,8 @@ export default function DocumentsPage() {
       </section>
 
       {/* Document Sections */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {data.sections.map((section, index) => (
               <motion.a
@@ -233,18 +233,26 @@ export default function DocumentsPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group bg-gray-50 rounded-md p-8 hover:shadow-xl transition-all duration-300"
+                className="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-2xl hover:border-blue-100 transition-all duration-300 overflow-hidden"
               >
-                <div className="w-14 h-14 bg-blue-100 rounded-md flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
-                  <section.icon className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{section.title}</h3>
-                <p className="text-gray-600 mb-6">{section.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">{section.stats}</span>
-                  <span className="flex items-center text-blue-600 font-medium">
+                {/* Background decoration */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full -mr-16 -mt-16 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
+
+                <div className="relative">
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <section.icon className="w-7 h-7 text-white" />
+                  </div>
+
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{section.title}</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">{section.description}</p>
+
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-lg font-bold text-blue-600">{section.stats}</span>
+                  </div>
+
+                  <span className="inline-flex items-center text-blue-600 font-semibold group-hover:text-blue-700">
                     {'View'}
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
                   </span>
                 </div>
               </motion.a>
