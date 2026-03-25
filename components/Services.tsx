@@ -2,11 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { 
-  Lightbulb, 
-  Wrench, 
+  Target, 
+  Cpu, 
+  Factory, 
   Globe, 
-  Headphones, 
-  Rocket, 
+  HelpCircle, 
   ShieldCheck 
 } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
@@ -19,19 +19,19 @@ export default function Services() {
       id: 1,
       title: t.services.items.industrySolutions.title,
       description: t.services.items.industrySolutions.description,
-      icon: Lightbulb,
+      icon: Target,
     },
     {
       id: 2,
       title: t.services.items.oemOdm.title,
       description: t.services.items.oemOdm.description,
-      icon: Wrench,
+      icon: Cpu,
     },
     {
       id: 3,
       title: t.services.items.rapidProduction.title,
       description: t.services.items.rapidProduction.description,
-      icon: Rocket,
+      icon: Factory,
     },
     {
       id: 4,
@@ -43,7 +43,7 @@ export default function Services() {
       id: 5,
       title: t.services.items.technicalSupport.title,
       description: t.services.items.technicalSupport.description,
-      icon: Headphones,
+      icon: HelpCircle,
     },
     {
       id: 6,
