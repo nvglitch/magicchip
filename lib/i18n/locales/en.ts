@@ -173,7 +173,7 @@ export const en: TranslationSchema = {
   },
   services: {
     title: 'Enterprise Services',
-    subtitle: 'Comprehensive support and professional services to ensure your success at every stage',
+    subtitle: 'Delivering flexible OEM/ODM manufacturing and high-performance industrial computing solutions worldwide.',
     items: {
       industrySolutions: {
         title: 'Industry-Specific Solutions',

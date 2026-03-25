@@ -115,7 +115,7 @@ export const translations = {
     // Services
     services: {
       title: 'Enterprise Services',
-      subtitle: 'Professional OEM/ODM solutions for mini PCs and industrial computing, serving intelligent retail, digital signage, industrial automation, and IoT applications',
+      subtitle: 'Delivering flexible OEM/ODM manufacturing and high-performance industrial computing solutions worldwide.',
       items: {
         industrySolutions: {
           title: 'Industry-Specific Solutions',
