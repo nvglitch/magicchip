@@ -47,8 +47,6 @@ export const translations = {
       about: {
         ourStory: 'Our Story',
         ourStoryDesc: 'Company history and mission',
-        leadership: 'Member Team',
-        leadershipDesc: 'Meet our team members',
         careers: 'Careers',
         careersDesc: 'Join our growing team',
         press: 'Press & Media',
@@ -116,36 +114,36 @@ export const translations = {
     },
     // Services
     services: {
-      title: 'Our Services',
-      subtitle: 'Comprehensive OEM/ODM services and professional support for your industrial computing needs',
+      title: 'Enterprise Services',
+      subtitle: 'Professional OEM/ODM solutions for mini PCs and industrial computing, serving intelligent retail, digital signage, industrial automation, and IoT applications',
       items: {
         consulting: {
           title: 'OEM/ODM Consulting',
-          description: 'Expert guidance on product customization, from port configuration to branding and packaging solutions tailored to your requirements.',
+          description: 'Expert guidance on product customization including Intel N-series, 13th/14th Gen Core platform selection, port configuration, and branding solutions tailored to your project requirements.',
         },
         engineering: {
           title: 'Custom Engineering',
-          description: 'Flexible hardware customization including Intel platform selection, network port configuration, wireless module integration, and thermal design.',
+          description: 'Flexible hardware design with 2.5GbE/10GbE multi-port networking, 4G/5G wireless module integration, multi-screen output support, and fanless thermal solutions for industrial environments.',
         },
         deployment: {
-          title: 'Global Logistics',
-          description: 'Worldwide shipping with efficient logistics management. Products exported to Europe, North America, Middle East, and Southeast Asia.',
+          title: 'Global Export',
+          description: 'Worldwide delivery to Europe, North America, Middle East, and Southeast Asia with efficient logistics management and flexible shipping options for samples and bulk orders.',
         },
         support: {
           title: 'Technical Support',
-          description: 'Professional technical assistance for product integration, driver support, and troubleshooting from our experienced engineering team.',
+          description: 'Professional assistance for product integration, driver support, and troubleshooting from our experienced engineering team based in Shenzhen, China.',
         },
         training: {
-          title: 'Product Training',
-          description: 'Comprehensive product documentation and technical training to help your team understand our mini PC solutions and capabilities.',
+          title: 'Product Documentation',
+          description: 'Comprehensive technical documentation and specifications to help your team integrate our mini PC and industrial computing solutions effectively.',
         },
         lifecycle: {
-          title: 'Sample to Mass Production',
-          description: 'Complete service from prototype samples to bulk production, ensuring consistent quality and timely delivery for your projects.',
+          title: 'Sample to Production',
+          description: 'Complete service from prototype samples to mass production with 50-100 employees and $10M-25M annual capacity, ensuring quality and timely delivery.',
         },
       },
       cta: 'Contact Our Team',
-      customPackage: 'Need a customized mini PC solution?',
+      customPackage: 'Looking for a customized industrial computing solution?',
     },
     // Social Proof
     social: {
@@ -283,8 +281,6 @@ export const translations = {
       about: {
         ourStory: 'Notre Histoire',
         ourStoryDesc: 'Histoire et mission de l\'entreprise',
-        leadership: 'Équipe Membre',
-        leadershipDesc: 'Rencontrez les membres de notre équipe',
         careers: 'Carrières',
         careersDesc: 'Rejoignez notre équipe en croissance',
         press: 'Presse et Médias',
@@ -352,36 +348,36 @@ export const translations = {
     },
     // Services
     services: {
-      title: 'Nos Services',
-      subtitle: 'Services OEM/ODM complets et support professionnel pour vos besoins en informatique industrielle',
+      title: 'Services Enterprise',
+      subtitle: 'Solutions OEM/ODM professionnelles pour mini PC et informatique industrielle, desservant la vente au détail intelligente, l\'affichage numérique, l\'automatisation industrielle et les applications IoT',
       items: {
         consulting: {
           title: 'Conseil OEM/ODM',
-          description: 'Conseils d\'experts sur la personnalisation de produits, de la configuration des ports aux solutions de marquage et d\'emballage adaptées à vos besoins.',
+          description: 'Conseils d\'experts sur la personnalisation de produits incluant la sélection de plateforme Intel série N et 13e/14e génération Core, configuration des ports et solutions de marquage adaptées à vos projets.',
         },
         engineering: {
           title: 'Ingénierie Personnalisée',
-          description: 'Personnalisation flexible du matériel incluant la sélection de plateforme Intel, la configuration des ports réseau, l\'intégration de modules sans fil et la conception thermique.',
+          description: 'Conception matérielle flexible avec réseau multi-port 2.5GbE/10GbE, intégration de modules sans fil 4G/5G, support de sortie multi-écran et solutions thermiques sans ventilateur pour environnements industriels.',
         },
         deployment: {
-          title: 'Logistique Mondiale',
-          description: 'Expédition mondiale avec gestion logistique efficace. Produits exportés vers l\'Europe, l\'Amérique du Nord, le Moyen-Orient et l\'Asie du Sud-Est.',
+          title: 'Export Mondial',
+          description: 'Livraison mondiale vers l\'Europe, l\'Amérique du Nord, le Moyen-Orient et l\'Asie du Sud-Est avec gestion logistique efficace et options d\'expédition flexibles pour échantillons et commandes en vrac.',
         },
         support: {
           title: 'Support Technique',
-          description: 'Assistance technique professionnelle pour l\'intégration de produits, le support des pilotes et le dépannage de notre équipe d\'ingénieurs expérimentés.',
+          description: 'Assistance professionnelle pour l\'intégration de produits, le support des pilotes et le dépannage de notre équipe d\'ingénieurs expérimentés basée à Shenzhen, Chine.',
         },
         training: {
-          title: 'Formation Produits',
-          description: 'Documentation produit complète et formation technique pour aider votre équipe à comprendre nos solutions de mini PC et leurs capacités.',
+          title: 'Documentation Produits',
+          description: 'Documentation technique complète et spécifications pour aider votre équipe à intégrer efficacement nos solutions de mini PC et d\'informatique industrielle.',
         },
         lifecycle: {
           title: 'Échantillon à Production',
-          description: 'Service complet des échantillons prototypes à la production en masse, assurant une qualité constante et une livraison ponctuelle pour vos projets.',
+          description: 'Service complet des prototypes à la production en masse avec 50-100 employés et une capacité annuelle de 10M-25M$, assurant qualité et livraison ponctuelle.',
         },
       },
       cta: 'Contacter Notre Équipe',
-      customPackage: 'Besoin d\'une solution de mini PC personnalisée?',
+      customPackage: 'Vous recherchez une solution d\'informatique industrielle personnalisée?',
     },
     // Social Proof
     social: {
@@ -519,8 +515,6 @@ export const translations = {
       about: {
         ourStory: 'Unsere Geschichte',
         ourStoryDesc: 'Unternehmensgeschichte und Mission',
-        leadership: 'Führungsteam',
-        leadershipDesc: 'Lernen Sie unser Team kennen',
         careers: 'Karriere',
         careersDesc: 'Werden Sie Teil unseres wachsenden Teams',
         press: 'Presse & Medien',
@@ -578,36 +572,36 @@ export const translations = {
       cta: 'System anzeigen',
     },
     services: {
-      title: 'Unsere Dienstleistungen',
-      subtitle: 'Umfassende OEM/ODM-Dienstleistungen und professioneller Support für Ihre industriellen Computeranforderungen',
+      title: 'Enterprise-Dienstleistungen',
+      subtitle: 'Professionelle OEM/ODM-Lösungen für Mini-PCs und industrielle Computer, für intelligente Einzelhandelslösungen, digitale Beschilderung, industrielle Automatisierung und IoT-Anwendungen',
       items: {
         consulting: {
           title: 'OEM/ODM-Beratung',
-          description: 'Fachkundige Beratung zur Produktanpassung, von der Portkonfiguration bis zu Branding- und Verpackungslösungen, maßgeschneidert für Ihre Anforderungen.',
+          description: 'Fachkundige Beratung zur Produktanpassung einschließlich Intel N-Serie, 13./14. Gen Core Plattformauswahl, Portkonfiguration und Branding-Lösungen, maßgeschneidert für Ihre Projektanforderungen.',
         },
         engineering: {
           title: 'Maßgeschneiderte Entwicklung',
-          description: 'Flexible Hardware-Anpassung einschließlich Intel-Plattformauswahl, Netzwerkportkonfiguration, drahtloser Modulintegration und thermischem Design.',
+          description: 'Flexible Hardware-Entwicklung mit 2.5GbE/10GbE Multi-Port-Netzwerk, 4G/5G-Funkmodulintegration, Multi-Screen-Ausgang und lüfterlosen thermischen Lösungen für industrielle Umgebungen.',
         },
         deployment: {
-          title: 'Globale Logistik',
-          description: 'Weltweiter Versand mit effizientem Logistikmanagement. Produkte exportiert nach Europa, Nordamerika, Nahen Osten und Südostasien.',
+          title: 'Globaler Export',
+          description: 'Weltweite Lieferung nach Europa, Nordamerika, Nahen Osten und Südostasien mit effizientem Logistikmanagement und flexiblen Versandoptionen für Muster und Großaufträge.',
         },
         support: {
           title: 'Technischer Support',
-          description: 'Professionelle technische Unterstützung für Produktintegration, Treiberunterstützung und Fehlerbehebung durch unser erfahrenes Ingenieurteam.',
+          description: 'Professionelle Unterstützung für Produktintegration, Treiberunterstützung und Fehlerbehebung durch unser erfahrenes Ingenieurteam mit Sitz in Shenzhen, China.',
         },
         training: {
-          title: 'Produktschulung',
-          description: 'Umfassende Produktdokumentation und technische Schulungen, um Ihrem Team zu helfen, unsere Mini-PC-Lösungen und Fähigkeiten zu verstehen.',
+          title: 'Produktdokumentation',
+          description: 'Umfassende technische Dokumentation und Spezifikationen, um Ihrem Team zu helfen, unsere Mini-PC- und industriellen Computerlösungen effektiv zu integrieren.',
         },
         lifecycle: {
-          title: 'Muster bis Massenproduktion',
-          description: 'Kompletter Service von Prototypenmustern bis zur Massenproduktion, mit gleichbleibender Qualität und termingerechter Lieferung für Ihre Projekte.',
+          title: 'Muster bis Produktion',
+          description: 'Kompletter Service von Prototypenmustern bis zur Massenproduktion mit 50-100 Mitarbeitern und 10M-25M$ jährlicher Kapazität, mit gleichbleibender Qualität und termingerechter Lieferung.',
         },
       },
       cta: 'Kontaktieren Sie unser Team',
-      customPackage: 'Benötigen Sie eine maßgeschneiderte Mini-PC-Lösung?',
+      customPackage: 'Suchen Sie nach einer maßgeschneiderten industriellen Computerlösung?',
     },
     social: {
       title: 'Vertraut von Branchenführern',
@@ -727,8 +721,6 @@ export const translations = {
       about: {
         ourStory: 'La Nostra Storia',
         ourStoryDesc: 'Storia e missione aziendale',
-        leadership: 'Team Dirigenziale',
-        leadershipDesc: 'Incontra i membri del nostro team',
         careers: 'Lavora con Noi',
         careersDesc: 'Unisciti al nostro team in crescita',
         press: 'Stampa e Media',
@@ -786,36 +778,36 @@ export const translations = {
       cta: 'Visualizza Sistema',
     },
     services: {
-      title: 'I Nostri Servizi',
-      subtitle: 'Servizi OEM/ODM completi e supporto professionale per le tue esigenze di informatica industriale',
+      title: 'Servizi Enterprise',
+      subtitle: 'Soluzioni OEM/ODM professionali per mini PC e informatica industriale, per retail intelligente, digital signage, automazione industriale e applicazioni IoT',
       items: {
         consulting: {
           title: 'Consulenza OEM/ODM',
-          description: 'Guida esperta sulla personalizzazione dei prodotti, dalla configurazione delle porte alle soluzioni di branding e imballaggio su misura per le tue esigenze.',
+          description: 'Guida esperta sulla personalizzazione dei prodotti inclusa selezione piattaforma Intel serie N e Core 13a/14a gen, configurazione porte e soluzioni branding su misura per i tuoi progetti.',
         },
         engineering: {
           title: 'Ingegneria Personalizzata',
-          description: 'Personalizzazione flessibile dell\'hardware inclusa selezione piattaforma Intel, configurazione porte di rete, integrazione moduli wireless e progettazione termica.',
+          description: 'Progettazione hardware flessibile con rete multi-porta 2.5GbE/10GbE, integrazione moduli wireless 4G/5G, supporto uscita multi-schermo e soluzioni termiche senza ventola per ambienti industriali.',
         },
         deployment: {
-          title: 'Logistica Globale',
-          description: 'Spedizione mondiale con gestione logistica efficiente. Prodotti esportati in Europa, Nord America, Medio Oriente e Sud-Est Asiatico.',
+          title: 'Export Globale',
+          description: 'Consegna mondiale in Europa, Nord America, Medio Oriente e Sud-Est Asiatico con gestione logistica efficiente e opzioni di spedizione flessibili per campioni e ordini all\'ingrosso.',
         },
         support: {
           title: 'Supporto Tecnico',
-          description: 'Assistenza tecnica professionale per integrazione prodotti, supporto driver e risoluzione problemi dal nostro team di ingegneri esperti.',
+          description: 'Assistenza professionale per integrazione prodotti, supporto driver e risoluzione problemi dal nostro team di ingegneri esperti con sede a Shenzhen, Cina.',
         },
         training: {
-          title: 'Formazione Prodotti',
-          description: 'Documentazione prodotto completa e formazione tecnica per aiutare il tuo team a comprendere le nostre soluzioni mini PC e le loro capacità.',
+          title: 'Documentazione Prodotti',
+          description: 'Documentazione tecnica completa e specifiche per aiutare il tuo team a integrare efficacemente le nostre soluzioni mini PC e di informatica industriale.',
         },
         lifecycle: {
           title: 'Campione a Produzione',
-          description: 'Servizio completo dai campioni prototipo alla produzione di massa, garantendo qualità costante e consegna puntuale per i tuoi progetti.',
+          description: 'Servizio completo dai campioni prototipo alla produzione di massa con 50-100 dipendenti e capacità annuale di 10M-25M$, garantendo qualità e consegna puntuale.',
         },
       },
       cta: 'Contatta il Nostro Team',
-      customPackage: 'Hai bisogno di una soluzione mini PC personalizzata?',
+      customPackage: 'Cerchi una soluzione di informatica industriale personalizzata?',
     },
     social: {
       title: 'Fidato dai Leader del Settore',
@@ -935,8 +927,6 @@ export const translations = {
       about: {
         ourStory: 'Nuestra Historia',
         ourStoryDesc: 'Historia y misión de la empresa',
-        leadership: 'Equipo Directivo',
-        leadershipDesc: 'Conoce a los miembros de nuestro equipo',
         careers: 'Únete a Nosotros',
         careersDesc: 'Únete a nuestro equipo en crecimiento',
         press: 'Prensa y Medios',
@@ -994,36 +984,36 @@ export const translations = {
       cta: 'Ver Sistema',
     },
     services: {
-      title: 'Nuestros Servicios',
-      subtitle: 'Servicios OEM/ODM integrales y soporte profesional para tus necesidades de computación industrial',
+      title: 'Servicios Enterprise',
+      subtitle: 'Soluciones OEM/ODM profesionales para mini PCs y computación industrial, para retail inteligente, señalización digital, automatización industrial y aplicaciones IoT',
       items: {
         consulting: {
           title: 'Consultoría OEM/ODM',
-          description: 'Guía experta en personalización de productos, desde la configuración de puertos hasta soluciones de branding y empaque adaptadas a tus requisitos.',
+          description: 'Guía experta en personalización de productos incluyendo selección de plataforma Intel serie N y Core 13a/14a gen, configuración de puertos y soluciones de branding adaptadas a tus proyectos.',
         },
         engineering: {
           title: 'Ingeniería Personalizada',
-          description: 'Personalización flexible de hardware incluyendo selección de plataforma Intel, configuración de puertos de red, integración de módulos inalámbricos y diseño térmico.',
+          description: 'Diseño de hardware flexible con red multi-puerto 2.5GbE/10GbE, integración de módulos inalámbricos 4G/5G, soporte de salida multi-pantalla y soluciones térmicas sin ventilador para entornos industriales.',
         },
         deployment: {
-          title: 'Logística Global',
-          description: 'Envío mundial con gestión logística eficiente. Productos exportados a Europa, Norteamérica, Medio Oriente y Sudeste Asiático.',
+          title: 'Exportación Global',
+          description: 'Entrega mundial a Europa, Norteamérica, Medio Oriente y Sudeste Asiático con gestión logística eficiente y opciones de envío flexibles para muestras y pedidos al por mayor.',
         },
         support: {
           title: 'Soporte Técnico',
-          description: 'Asistencia técnica profesional para integración de productos, soporte de controladores y resolución de problemas de nuestro equipo de ingenieros experimentados.',
+          description: 'Asistencia profesional para integración de productos, soporte de controladores y resolución de problemas de nuestro equipo de ingenieros experimentados con sede en Shenzhen, China.',
         },
         training: {
-          title: 'Capacitación de Productos',
-          description: 'Documentación completa de productos y capacitación técnica para ayudar a tu equipo a comprender nuestras soluciones de mini PC y sus capacidades.',
+          title: 'Documentación de Productos',
+          description: 'Documentación técnica completa y especificaciones para ayudar a tu equipo a integrar eficazmente nuestras soluciones de mini PCs y computación industrial.',
         },
         lifecycle: {
           title: 'Muestra a Producción',
-          description: 'Servicio completo desde muestras prototipo hasta producción en masa, asegurando calidad constante y entrega puntual para tus proyectos.',
+          description: 'Servicio completo desde muestras prototipo hasta producción en masa con 50-100 empleados y capacidad anual de 10M-25M$, asegurando calidad y entrega puntual.',
         },
       },
       cta: 'Contacta Nuestro Equipo',
-      customPackage: '¿Necesitas una solución de mini PC personalizada?',
+      customPackage: '¿Buscas una solución de computación industrial personalizada?',
     },
     social: {
       title: 'Confiado por Líderes de la Industria',

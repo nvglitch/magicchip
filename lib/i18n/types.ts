@@ -12,7 +12,6 @@ export interface TranslationSchema {
       news: string;
       factory: string;
       company: string;
-      leadership: string;
       techDocs: string;
     };
     // Meta descriptions
@@ -26,10 +25,8 @@ export interface TranslationSchema {
       news: string;
       factory: string;
       company: string;
-      leadership: string;
       techDocs: string;
     };
-    // Image alt texts
     altTexts: {
       hero: string;
       featuredProduct: string;
@@ -96,8 +93,6 @@ export interface TranslationSchema {
     about: {
       ourStory: string;
       ourStoryDesc: string;
-      leadership: string;
-      leadershipDesc: string;
       careers: string;
       careersDesc: string;
       press: string;

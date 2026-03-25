@@ -13,7 +13,6 @@ export const fr: TranslationSchema = {
       news: 'Actualités & Mises à Jour | Nouvelles MagicChip',
       factory: 'Installations de Fabrication | Production MagicChip',
       company: 'Notre Entreprise | Aperçu Enterprise MagicChip',
-      leadership: 'Équipe de Direction | Rencontrez Nos Experts',
       techDocs: 'Documentation Technique | Références API & Guides',
     },
     metaDescription: {
@@ -26,7 +25,6 @@ export const fr: TranslationSchema = {
       news: 'Dernières nouvelles, annonces et mises à jour de MagicChip. Restez informé des lancements de produits, partenariats et développements de l\'entreprise.',
       factory: 'Découvrez les installations de fabrication de pointe de MagicChip. Apprenez-en plus sur nos capacités de production avancées et nos normes de qualité.',
       company: 'MagicChip est un leader mondial des solutions matérielles enterprise. Apprenez-en plus sur nos valeurs d\'entreprise, notre vision et notre engagement envers l\'innovation.',
-      leadership: 'Rencontrez l\'équipe de direction de MagicChip. Nos experts pilotent l\'innovation dans le matériel enterprise et le succès client.',
       techDocs: 'Documentation technique complète pour les produits MagicChip. Références API, guides d\'intégration et ressources développeurs.',
     },
     altTexts: {
@@ -95,8 +93,6 @@ export const fr: TranslationSchema = {
     about: {
       ourStory: 'Notre Histoire',
       ourStoryDesc: 'Histoire et mission de l\'entreprise',
-      leadership: 'Équipe Membre',
-      leadershipDesc: 'Rencontrez les membres de notre équipe',
       careers: 'Carrières',
       careersDesc: 'Rejoignez notre équipe en croissance',
       press: 'Presse et Médias',
@@ -253,7 +249,7 @@ export const fr: TranslationSchema = {
       support: 'Support',
       contact: 'Contact',
     },
-    about: ['Notre Entreprise', 'Notre Usine', 'Équipe Membre', 'Actualités'],
+    about: ['Notre Entreprise', 'Notre Usine', 'Actualités'],
     support: ['Documents Techniques', 'Téléchargements', 'Nous Contacter', 'Portail Support'],
     contact: ['Email', 'Téléphone', 'WhatsApp'],
     copyright: '© 2026 MagicChip. Tous droits réservés.',

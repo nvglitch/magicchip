@@ -8,10 +8,9 @@ export default function Footer() {
 
   const footerLinks = {
     about: [
-      { label: t.footer.about[0], href: '/about', key: 'about-0' },
+      { label: t.footer.about[0], href: '/company', key: 'about-0' },
       { label: t.footer.about[1], href: '/factory', key: 'about-1' },
-      { label: t.footer.about[2], href: '/leadership', key: 'about-2' },
-      { label: t.footer.about[3], href: '/news', key: 'about-3' },
+      { label: t.footer.about[2], href: '/news', key: 'about-2' },
     ],
     support: [
       { label: t.footer.support[0], href: '/tech-docs', key: 'support-0' },

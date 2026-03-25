@@ -13,7 +13,6 @@ export const es: TranslationSchema = {
       news: 'Noticias y Actualizaciones | Noticias de MagicChip',
       factory: 'Instalaciones de Fabricación | Producción de MagicChip',
       company: 'Nuestra Empresa | Resumen Enterprise de MagicChip',
-      leadership: 'Equipo Directivo | Conozca a Nuestros Expertos',
       techDocs: 'Documentación Técnica | Referencias API y Guías',
     },
     metaDescription: {
@@ -26,7 +25,6 @@ export const es: TranslationSchema = {
       news: 'Últimas noticias, anuncios y actualizaciones de MagicChip. Manténgase informado sobre lanzamientos de productos, sociedades y desarrollos empresariales.',
       factory: 'Descubra las instalaciones de fabricación de última generación de MagicChip. Conozca nuestras capacidades de producción avanzadas y estándares de calidad.',
       company: 'MagicChip es un líder global en soluciones de hardware enterprise. Conozca nuestros valores empresariales, visión y compromiso con la innovación.',
-      leadership: 'Conozca al equipo directivo de MagicChip. Nuestros expertos impulsan la innovación en hardware enterprise y el éxito del cliente.',
       techDocs: 'Documentación técnica completa para productos MagicChip. Referencias API, guías de integración y recursos para desarrolladores.',
     },
     altTexts: {
@@ -95,8 +93,6 @@ export const es: TranslationSchema = {
     about: {
       ourStory: 'Nuestra Historia',
       ourStoryDesc: 'Historia y misión de la empresa',
-      leadership: 'Equipo de Miembros',
-      leadershipDesc: 'Conoce a los miembros de nuestro equipo',
       careers: 'Empleo',
       careersDesc: 'Únete a nuestro equipo en crecimiento',
       press: 'Prensa & Medios',
@@ -253,7 +249,7 @@ export const es: TranslationSchema = {
       support: 'Soporte',
       contact: 'Contacto',
     },
-    about: ['Nuestra Empresa', 'Nuestra Fábrica', 'Equipo de Miembros', 'Noticias'],
+    about: ['Nuestra Empresa', 'Nuestra Fábrica', 'Noticias'],
     support: ['Documentos Técnicos', 'Descargas', 'Contáctenos', 'Portal de Soporte'],
     contact: ['Correo', 'Teléfono', 'WhatsApp'],
     copyright: '© 2026 MagicChip. Todos los derechos reservados.',

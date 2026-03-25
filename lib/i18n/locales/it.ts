@@ -13,7 +13,6 @@ export const it: TranslationSchema = {
       news: 'Notizie & Aggiornamenti | Notizie Aziendali MagicChip',
       factory: 'Impianti di Produzione | Produzione MagicChip',
       company: 'La Nostra Azienda | Panoramica Enterprise MagicChip',
-      leadership: 'Team Dirigenziale | Incontra i Nostri Esperti',
       techDocs: 'Documentazione Tecnica | Riferimenti API & Guide',
     },
     metaDescription: {
@@ -26,7 +25,6 @@ export const it: TranslationSchema = {
       news: 'Ultime notizie, annunci e aggiornamenti da MagicChip. Rimani informato su lanci di prodotti, partnership e sviluppi aziendali.',
       factory: 'Scopri gli impianti di produzione all\'avanguardia di MagicChip. Scopri le nostre capacità produttive avanzate e standard di qualità.',
       company: 'MagicChip è un leader globale nelle soluzioni hardware enterprise. Scopri i nostri valori aziendali, visione e impegno per l\'innovazione.',
-      leadership: 'Incontra il team dirigenziale di MagicChip. I nostri esperti guidano l\'innovazione nell\'hardware enterprise e nel successo dei clienti.',
       techDocs: 'Documentazione tecnica completa per i prodotti MagicChip. Riferimenti API, guide di integrazione e risorse per sviluppatori.',
     },
     altTexts: {
@@ -95,8 +93,6 @@ export const it: TranslationSchema = {
     about: {
       ourStory: 'La Nostra Storia',
       ourStoryDesc: 'Storia e missione dell\'azienda',
-      leadership: 'Team Membri',
-      leadershipDesc: 'Incontra i membri del nostro team',
       careers: 'Lavora con Noi',
       careersDesc: 'Unisciti al nostro team in crescita',
       press: 'Stampa & Media',
@@ -253,7 +249,7 @@ export const it: TranslationSchema = {
       support: 'Supporto',
       contact: 'Contatti',
     },
-    about: ['La Nostra Azienda', 'La Nostra Fabbrica', 'Team Membri', 'Notizie'],
+    about: ['La Nostra Azienda', 'La Nostra Fabbrica', 'Notizie'],
     support: ['Documenti Tecnici', 'Download', 'Contattaci', 'Portale di Supporto'],
     contact: ['Email', 'Telefono', 'WhatsApp'],
     copyright: '© 2026 MagicChip. Tutti i diritti riservati.',

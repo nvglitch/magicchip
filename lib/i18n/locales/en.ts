@@ -13,7 +13,6 @@ export const en: TranslationSchema = {
       news: 'News & Updates | MagicChip Company News',
       factory: 'Manufacturing Facilities | MagicChip Production',
       company: 'Our Company | MagicChip Enterprise Overview',
-      leadership: 'Leadership Team | Meet Our Experts',
       techDocs: 'Technical Documentation | API References & Guides',
     },
     metaDescription: {
@@ -26,7 +25,6 @@ export const en: TranslationSchema = {
       news: 'Latest news, announcements, and updates from MagicChip. Stay informed about product launches, partnerships, and company developments.',
       factory: 'Discover MagicChip\'s state-of-the-art manufacturing facilities. Learn about our advanced production capabilities and quality standards.',
       company: 'MagicChip is a global leader in enterprise hardware solutions. Learn about our company values, vision, and commitment to innovation.',
-      leadership: 'Meet the leadership team at MagicChip. Our experts drive innovation in enterprise hardware and customer success.',
       techDocs: 'Comprehensive technical documentation for MagicChip products. API references, integration guides, and developer resources.',
     },
     altTexts: {
@@ -95,8 +93,6 @@ export const en: TranslationSchema = {
     about: {
       ourStory: 'Our Story',
       ourStoryDesc: 'Company history and mission',
-      leadership: 'Member Team',
-      leadershipDesc: 'Meet our team members',
       careers: 'Careers',
       careersDesc: 'Join our growing team',
       press: 'Press & Media',
@@ -253,7 +249,7 @@ export const en: TranslationSchema = {
       support: 'Support',
       contact: 'Contact',
     },
-    about: ['Our Company', 'Our Factory', 'Member Team', 'News'],
+    about: ['Our Company', 'Our Factory', 'News'],
     support: ['Tech Documents', 'File Downloads', 'Contact Us', 'Support Portal'],
     contact: ['Email', 'Phone', 'WhatsApp'],
     copyright: '© 2026 MagicChip. All rights reserved.',

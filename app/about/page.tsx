@@ -2,7 +2,7 @@
 
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { motion } from 'framer-motion';
-import { BookOpen, Factory, Users, ArrowRight, Globe, Award, TrendingUp, Cpu, Network, Monitor, Zap } from 'lucide-react';
+import { BookOpen, Factory, ArrowRight, Globe, Award, TrendingUp, Cpu, Network, Monitor, Zap } from 'lucide-react';
 
 const aboutData = {
   en: {
@@ -145,17 +145,6 @@ const aboutData = {
           { label: 'Capacité Journalière', value: '1000+' },
           { label: 'Taux de Qualité', value: '99.5%' }
         ]
-      },
-      {
-        title: 'Équipe de Direction',
-        description: 'Rencontrez notre équipe expérimentée qui stimule l\'innovation dans l\'informatique industrielle',
-        icon: Users,
-        href: '/leadership',
-        stats: [
-          { label: 'Équipe Core', value: '8' },
-          { label: 'Expérience Moyenne', value: '15+' },
-          { label: 'Marchés d\'Export', value: '30+' }
-        ]
       }
     ],
     highlights: [
@@ -235,17 +224,6 @@ const aboutData = {
           { label: 'Produktionslinien', value: 'Mehrere' },
           { label: 'Tageskapazität', value: '1000+' },
           { label: 'Qualitätsrate', value: '99.5%' }
-        ]
-      },
-      {
-        title: 'Führungsteam',
-        description: 'Lernen Sie unser erfahrenes Team kennen, das Innovationen im industriellen Computing vorantreibt',
-        icon: Users,
-        href: '/leadership',
-        stats: [
-          { label: 'Kernteam', value: '8' },
-          { label: 'Durchschn. Erfahrung', value: '15+' },
-          { label: 'Exportmärkte', value: '30+' }
         ]
       }
     ],
@@ -327,17 +305,6 @@ const aboutData = {
           { label: 'Capacità Giornaliera', value: '1000+' },
           { label: 'Tasso di Qualità', value: '99.5%' }
         ]
-      },
-      {
-        title: 'Team di Leadership',
-        description: 'Incontra il nostro team esperto che guida l\'innovazione nell\'informatica industriale',
-        icon: Users,
-        href: '/leadership',
-        stats: [
-          { label: 'Team Core', value: '8' },
-          { label: 'Esperienza Media', value: '15+' },
-          { label: 'Mercati di Esportazione', value: '30+' }
-        ]
       }
     ],
     highlights: [
@@ -417,17 +384,6 @@ const aboutData = {
           { label: 'Líneas de Producción', value: 'Múltiples' },
           { label: 'Capacidad Diaria', value: '1000+' },
           { label: 'Tasa de Calidad', value: '99.5%' }
-        ]
-      },
-      {
-        title: 'Equipo de Liderazgo',
-        description: 'Conoce a nuestro equipo experimentado que impulsa la innovación en informática industrial',
-        icon: Users,
-        href: '/leadership',
-        stats: [
-          { label: 'Equipo Principal', value: '8' },
-          { label: 'Experiencia Promedio', value: '15+' },
-          { label: 'Mercados de Exportación', value: '30+' }
         ]
       }
     ],

@@ -10,6 +10,7 @@ import {
   RefreshCw 
 } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import Link from 'next/link';
 
 export default function Services() {
   const { t } = useLanguage();
@@ -108,9 +109,11 @@ export default function Services() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mt-12"
         >
-          <button className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors">
-            {t.services.cta}
-          </button>
+          <Link href="/#contact">
+            <button className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors">
+              {t.services.cta}
+            </button>
+          </Link>
           <p className="mt-4 text-gray-600">
             {t.services.customPackage}
           </p>
