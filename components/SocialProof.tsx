@@ -155,20 +155,23 @@ export default function SocialProof() {
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-slate-900/50 rounded-md p-6 shadow-sm border border-slate-600/30">
-                <p className="text-3xl font-bold text-blue-400 mb-1">40%</p>
-                <p className="text-slate-300 text-sm">{t.social.stats.performance}</p>
+                <div className="flex items-baseline mb-1">
+                  <span className="text-3xl font-bold text-yellow-400">★</span>
+                  <span className="text-3xl font-bold text-yellow-400 ml-1">{t.social.stats.rating}</span>
+                </div>
+                <p className="text-slate-300 text-sm">{t.social.stats.ratingLabel}</p>
               </div>
               <div className="bg-slate-900/50 rounded-md p-6 shadow-sm border border-slate-600/30">
-                <p className="text-3xl font-bold text-emerald-400 mb-1">25%</p>
-                <p className="text-slate-300 text-sm">{t.social.stats.energy}</p>
+                <p className="text-2xl font-bold text-blue-400 mb-1">{t.social.stats.factorySize}<span className="text-lg text-slate-400 ml-1">{t.social.stats.factorySizeUnit}</span></p>
+                <p className="text-slate-300 text-sm">{t.social.stats.factorySizeLabel}</p>
               </div>
               <div className="bg-slate-900/50 rounded-md p-6 shadow-sm border border-slate-600/30">
-                <p className="text-3xl font-bold text-purple-400 mb-1">99.9%</p>
-                <p className="text-slate-300 text-sm">{t.social.stats.uptime}</p>
+                <p className="text-3xl font-bold text-emerald-400 mb-1">{t.social.stats.responseTime}</p>
+                <p className="text-slate-300 text-sm">{t.social.stats.responseTimeLabel}</p>
               </div>
               <div className="bg-slate-900/50 rounded-md p-6 shadow-sm border border-slate-600/30">
-                <p className="text-3xl font-bold text-orange-400 mb-1">3x</p>
-                <p className="text-slate-300 text-sm">{t.social.stats.roi}</p>
+                <p className="text-3xl font-bold text-purple-400 mb-1">{t.social.stats.globalReach}</p>
+                <p className="text-slate-300 text-sm">{t.social.stats.globalReachLabel}</p>
               </div>
             </div>
           </div>

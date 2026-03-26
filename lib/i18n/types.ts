@@ -203,10 +203,15 @@ export interface TranslationSchema {
     author: string;
     role: string;
     stats: {
-      performance: string;
-      energy: string;
-      uptime: string;
-      roi: string;
+      rating: string;
+      ratingLabel: string;
+      factorySize: string;
+      factorySizeUnit: string;
+      factorySizeLabel: string;
+      responseTime: string;
+      responseTimeLabel: string;
+      globalReach: string;
+      globalReachLabel: string;
     };
     caseStudy: string;
   };
