@@ -19,13 +19,13 @@
     "es": "Empresa de alta tecnología especializada en mini PC, computadoras industriales y hardware inteligente desde 2021"
   },
   "ctaText": {
-    "en": "About Us",
-    "zh": "关于我们",
-    "fr": "À Propos",
-    "de": "Über Uns",
-    "it": "Chi Siamo",
-    "es": "Nosotros"
+    "en": "Our Company",
+    "zh": "我们的公司",
+    "fr": "Notre Entreprise",
+    "de": "Unser Unternehmen",
+    "it": "La Nostra Azienda",
+    "es": "Nuestra Empresa"
   },
-  "ctaLink": "/about",
+  "ctaLink": "/company",
   "published": true
 }

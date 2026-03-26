@@ -19,13 +19,13 @@
     "es": "Miniaturización, refrigeración sin ventilador y estabilidad industrial para soluciones de computación integrada"
   },
   "ctaText": {
-    "en": "Learn More",
-    "zh": "了解更多",
-    "fr": "En Savoir Plus",
-    "de": "Mehr Erfahren",
-    "it": "Scopri di Più",
-    "es": "Más Información"
+    "en": "Our Factory",
+    "zh": "我们的工厂",
+    "fr": "Notre Usine",
+    "de": "Unsere Fabrik",
+    "it": "La Nostra Fabbrica",
+    "es": "Nuestra Fábrica"
   },
-  "ctaLink": "/about",
+  "ctaLink": "/factory",
   "published": true
 }
