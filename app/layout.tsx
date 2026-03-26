@@ -27,6 +27,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"
+        />
+      </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <LanguageProvider>
           <Navbar />

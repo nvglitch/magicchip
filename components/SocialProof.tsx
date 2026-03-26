@@ -5,16 +5,16 @@ import { Quote } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
 
-// 国家国旗数据
+// 国家国旗数据 - 使用 flag-icons 库的国家代码
 const countries = [
-  { name: '美国', flag: '🇺🇸' },
-  { name: '加拿大', flag: '🇨🇦' },
-  { name: '马来西亚', flag: '🇲🇾' },
-  { name: '瑞典', flag: '🇸🇪' },
-  { name: '挪威', flag: '🇳🇴' },
-  { name: '法国', flag: '🇫🇷' },
-  { name: '意大利', flag: '🇮🇹' },
-  { name: '澳大利亚', flag: '🇦🇺' },
+  { name: '美国', code: 'us' },
+  { name: '加拿大', code: 'ca' },
+  { name: '马来西亚', code: 'my' },
+  { name: '瑞典', code: 'se' },
+  { name: '挪威', code: 'no' },
+  { name: '法国', code: 'fr' },
+  { name: '意大利', code: 'it' },
+  { name: '澳大利亚', code: 'au' },
 ];
 
 // 公开的全球 TopoJSON 数据源
@@ -112,16 +112,15 @@ export default function SocialProof() {
                 ease: 'linear',
               },
             }}
-            className="flex space-x-12"
+            className="flex space-x-8 items-center"
           >
             {/* Double the countries for seamless loop */}
             {[...countries, ...countries].map((country, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 flex items-center space-x-3 bg-slate-700/30 rounded-full px-6 py-3 border border-slate-600/30"
+                className="flex-shrink-0 flex items-center justify-center"
               >
-                <span className="text-3xl">{country.flag}</span>
-                <span className="text-lg font-medium text-slate-300">{country.name}</span>
+                <span className={`fi fi-${country.code} flag-icon`}></span>
               </div>
             ))}
           </motion.div>
