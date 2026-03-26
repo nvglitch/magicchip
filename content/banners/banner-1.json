@@ -1,31 +1,31 @@
 {
   "id": "banner-1",
   "order": 1,
-  "image": "/banner1_alt.jpg",
+  "image": "/banner1.jpg",
   "title": {
-    "en": "Next-Gen Processing Power",
-    "zh": "下一代处理能力",
-    "fr": "Puissance de Traitement Nouvelle Génération",
-    "de": "Next-Gen Rechenleistung",
-    "it": "Potenza di Elaborazione di Nuova Generazione",
-    "es": "Potencia de Procesamiento de Nueva Generación"
+    "en": "MCAI35 Flagship AI Chip",
+    "zh": "MCAI35 旗舰AI芯片",
+    "fr": "MCAI35 Puce IA Flagship",
+    "de": "MCAI35 Flagship-KI-Chip",
+    "it": "MCAI35 Chip IA Flagship",
+    "es": "MCAI35 Chip IA Flagship"
   },
   "subtitle": {
-    "en": "Revolutionary chip architecture for enterprise applications",
-    "zh": "面向企业应用的革命性芯片架构",
-    "fr": "Architecture de puce révolutionnaire pour applications d'entreprise",
-    "de": "Revolutionäre Chip-Architektur für Unternehmensanwendungen",
-    "it": "Architettura chip rivoluzionaria per applicazioni enterprise",
-    "es": "Arquitectura de chip revolucionaria para aplicaciones empresariales"
+    "en": "High-performance AI mini PC powered by Strix Halo platform",
+    "zh": "基于Strix Halo平台的高性能AI迷你PC",
+    "fr": "Mini PC IA haute performance alimenté par la plateforme Strix Halo",
+    "de": "Hochleistungs-KI-Mini-PC mit Strix Halo-Plattform",
+    "it": "Mini PC AI ad alte prestazioni con piattaforma Strix Halo",
+    "es": "Mini PC de IA de alto rendimiento con plataforma Strix Halo"
   },
   "ctaText": {
-    "en": "Explore Solutions",
-    "zh": "探索解决方案",
-    "fr": "Explorer les Solutions",
-    "de": "Lösungen Erkunden",
-    "it": "Esplora Soluzioni",
-    "es": "Explorar Soluciones"
+    "en": "View Product Details",
+    "zh": "查看产品详情",
+    "fr": "Voir les Détails du Produit",
+    "de": "Produktdetails Ansehen",
+    "it": "Visualizza Dettagli Prodotto",
+    "es": "Ver Detalles del Producto"
   },
-  "ctaLink": "/products",
+  "ctaLink": "/#solutions",
   "published": true
 }

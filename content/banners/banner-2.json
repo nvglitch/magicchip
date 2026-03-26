@@ -3,29 +3,29 @@
   "order": 2,
   "image": "/banner2.jpg",
   "title": {
-    "en": "AI-Driven Innovation",
-    "zh": "AI驱动的创新",
-    "fr": "Innovation Pilotée par l'IA",
-    "de": "KI-gesteuerte Innovation",
-    "it": "Innovazione Guidata dall'IA",
-    "es": "Innovación Impulsada por IA"
+    "en": "OEM/ODM Services",
+    "zh": "OEM/ODM定制服务",
+    "fr": "Services OEM/ODM",
+    "de": "OEM/ODM-Dienste",
+    "it": "Servizi OEM/ODM",
+    "es": "Servicios OEM/ODM"
   },
   "subtitle": {
-    "en": "Intelligent hardware solutions for the modern data center",
-    "zh": "面向现代数据中心的智能硬件解决方案",
-    "fr": "Solutions matérielles intelligentes pour le centre de données moderne",
-    "de": "Intelligente Hardware-Lösungen für das moderne Rechenzentrum",
-    "it": "Soluzioni hardware intelligenti per il data center moderno",
-    "es": "Soluciones de hardware inteligentes para el centro de datos moderno"
+    "en": "Miniaturization, fanless cooling, and industrial-grade stability for embedded computing solutions",
+    "zh": "小型化、无风扇散热、工业级稳定的嵌入式计算解决方案",
+    "fr": "Miniaturisation, refroidissement sans ventilateur et stabilité industrielle pour solutions informatiques embarquées",
+    "de": "Miniaturisierung, lüfterlose Kühlung und industrielle Stabilität für eingebettete Computerlösungen",
+    "it": "Miniaturizzazione, raffreddamento senza ventola e stabilità industriale per soluzioni di calcolo embedded",
+    "es": "Miniaturización, refrigeración sin ventilador y estabilidad industrial para soluciones de computación integrada"
   },
   "ctaText": {
-    "en": "Discover AI Chips",
-    "zh": "探索AI芯片",
-    "fr": "Découvrir les Puces IA",
-    "de": "KI-Chips Entdecken",
-    "it": "Scopri Chip IA",
-    "es": "Descubrir Chips IA"
+    "en": "Learn More",
+    "zh": "了解更多",
+    "fr": "En Savoir Plus",
+    "de": "Mehr Erfahren",
+    "it": "Scopri di Più",
+    "es": "Más Información"
   },
-  "ctaLink": "/products",
+  "ctaLink": "/about",
   "published": true
 }

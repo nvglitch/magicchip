@@ -3,28 +3,28 @@
   "order": 3,
   "image": "/banner3.jpg",
   "title": {
-    "en": "Sustainable Technology",
-    "zh": "可持续技术",
-    "fr": "Technologie Durable",
-    "de": "Nachhaltige Technologie",
-    "it": "Tecnologia Sostenibile",
-    "es": "Tecnología Sostenible"
+    "en": "MagicChip Technology",
+    "zh": "魔芯科技",
+    "fr": "MagicChip Technologie",
+    "de": "MagicChip Technologie",
+    "it": "MagicChip Tecnologia",
+    "es": "MagicChip Tecnología"
   },
   "subtitle": {
-    "en": "High performance with energy-efficient design",
-    "zh": "高性能与节能设计",
-    "fr": "Haute performance avec conception économe en énergie",
-    "de": "Hohe Leistung mit energieeffizientem Design",
-    "it": "Alte prestazioni con design efficiente dal punto di vista energetico",
-    "es": "Alto rendimiento con diseño eficiente en energía"
+    "en": "High-tech enterprise specializing in mini PCs, industrial computers, and smart hardware since 2021",
+    "zh": "成立于2021年，专注迷你PC、工业电脑及智能硬件的高新技术企业",
+    "fr": "Entreprise de haute technologie spécialisée dans les mini PC, ordinateurs industriels et matériel intelligent depuis 2021",
+    "de": "Hightech-Unternehmen spezialisiert auf Mini-PCs, Industriecomputer und intelligente Hardware seit 2021",
+    "it": "Azienda high-tech specializzata in mini PC, computer industriali e hardware intelligente dal 2021",
+    "es": "Empresa de alta tecnología especializada en mini PC, computadoras industriales y hardware inteligente desde 2021"
   },
   "ctaText": {
-    "en": "Learn More",
-    "zh": "了解更多",
-    "fr": "En Savoir Plus",
-    "de": "Mehr Erfahren",
-    "it": "Scopri di Più",
-    "es": "Más Información"
+    "en": "About Us",
+    "zh": "关于我们",
+    "fr": "À Propos",
+    "de": "Über Uns",
+    "it": "Chi Siamo",
+    "es": "Nosotros"
   },
   "ctaLink": "/about",
   "published": true
