@@ -98,8 +98,8 @@ export default function SocialProof() {
         {/* Country Flags Marquee */}
         <div className="relative mb-16">
           {/* Gradient Masks */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-slate-900 to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-slate-900 to-transparent z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-slate-900 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-slate-900 to-transparent z-10 pointer-events-none" />
 
           {/* Scrolling Container */}
           <motion.div
@@ -112,15 +112,25 @@ export default function SocialProof() {
                 ease: 'linear',
               },
             }}
-            className="flex space-x-8 items-center"
+            className="flex items-center gap-16"
           >
-            {/* Double the countries for seamless loop */}
-            {[...countries, ...countries].map((country, index) => (
+            {/* Triple the countries for seamless loop */}
+            {[...countries, ...countries, ...countries].map((country, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 flex items-center justify-center"
+                className="flex-shrink-0"
               >
-                <span className={`fi fi-${country.code} flag-icon`}></span>
+                <span 
+                  className={`fi fi-${country.code}`}
+                  style={{ 
+                    width: '48px', 
+                    height: '36px',
+                    display: 'inline-block',
+                    backgroundSize: 'contain',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center'
+                  }}
+                />
               </div>
             ))}
           </motion.div>

@@ -72,16 +72,16 @@ html {
   }
 }
 
-/* Flag Icons Custom Styles */
+/* Flag Icons Custom Styles - Enhanced */
 .flag-icon {
-  width: 128px;
-  height: 64px;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.flag-icon:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+/* Ensure flag icons display correctly */
+.fi {
+  background-size: cover;
+  background-position: center;
 }
