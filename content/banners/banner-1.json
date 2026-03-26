@@ -1,7 +1,7 @@
 {
   "id": "banner-1",
   "order": 1,
-  "image": "/banner1.jpg",
+  "image": "/banner1_alt.jpg",
   "title": {
     "en": "Next-Gen Processing Power",
     "zh": "下一代处理能力",
