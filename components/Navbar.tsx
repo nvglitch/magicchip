@@ -35,6 +35,7 @@ interface DropdownItem {
   description?: string;
   href: string;
   icon?: React.ElementType;
+  external?: boolean;
 }
 
 interface NavItem {

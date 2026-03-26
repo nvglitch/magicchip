@@ -9,7 +9,7 @@ export default function FeaturedProduct() {
   const { t } = useLanguage();
 
   return (
-    <section id="solutions" className="py-20 bg-white">
+    <section id="solutions" className="py-20 bg-gradient-to-b from-blue-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Image Side */}
@@ -20,7 +20,7 @@ export default function FeaturedProduct() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative rounded-lg overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 shadow-xl ring-1 ring-gray-900/5">
+            <div className="relative rounded-lg overflow-hidden bg-gradient-to-br from-blue-100 to-indigo-100 shadow-xl ring-1 ring-blue-900/5">
               <Image
                 src="/MCAI35.png"
                 alt="MCAI35"

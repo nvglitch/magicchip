@@ -54,8 +54,13 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-20 bg-white relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-100/50 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-indigo-100/50 rounded-full blur-3xl" />
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -82,11 +87,11 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className="bg-white rounded-md p-6 shadow-sm hover:shadow-lg transition-all duration-300"
+              className="bg-gradient-to-br from-white to-blue-50/50 rounded-md p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-blue-100/50"
             >
               {/* Icon */}
-              <div className="w-12 h-12 bg-blue-100 rounded-md flex items-center justify-center mb-4">
-                <service.icon className="w-6 h-6 text-blue-600" />
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-md flex items-center justify-center mb-4">
+                <service.icon className="w-6 h-6 text-white" />
               </div>
 
               {/* Content */}

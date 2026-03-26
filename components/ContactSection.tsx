@@ -170,8 +170,13 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
   if (!siteConfig) return null;
 
   return (
-    <section id="contact" className="py-24 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-24 bg-gradient-to-b from-blue-50 via-white to-blue-50 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-20 -left-20 w-60 h-60 bg-blue-200/30 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 -right-20 w-60 h-60 bg-indigo-200/30 rounded-full blur-3xl" />
+      </div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

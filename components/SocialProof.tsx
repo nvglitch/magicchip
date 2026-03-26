@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Quote, ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
 
 const logos = [
   { name: 'TechCorp', initials: 'TC' },
@@ -15,12 +16,68 @@ const logos = [
   { name: 'FutureTech', initials: 'FT' },
 ];
 
+// 公开的全球 TopoJSON 数据源
+const geoUrl = 'https://unpkg.com/world-atlas@2.0.2/countries-110m.json';
+
 export default function SocialProof() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden relative">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
+          backgroundSize: '40px 40px'
+        }} />
+      </div>
+      {/* World Map Background using react-simple-maps */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="w-full h-full">
+          <ComposableMap
+            projection="geoMercator"
+            projectionConfig={{
+              scale: 140,
+              center: [0, 20],
+            }}
+            style={{
+              width: '100%',
+              height: '100%',
+            }}
+          >
+            <Geographies geography={geoUrl}>
+              {({ geographies }) =>
+                geographies.map((geo) => (
+                  <Geography
+                    key={geo.rsmKey}
+                    geography={geo}
+                    fill="#475569"
+                    stroke="#334155"
+                    strokeWidth={0.5}
+                    style={{
+                      default: {
+                        fill: '#475569',
+                        outline: 'none',
+                      },
+                      hover: {
+                        fill: '#475569',
+                        outline: 'none',
+                      },
+                      pressed: {
+                        fill: '#475569',
+                        outline: 'none',
+                      },
+                    }}
+                  />
+                ))
+              }
+            </Geographies>
+          </ComposableMap>
+        </div>
+        {/* Overlay to fade the map into background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-800/70 to-slate-900/80" />
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -29,10 +86,10 @@ export default function SocialProof() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             {t.social.title}
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto">
             {t.social.subtitle}
           </p>
         </motion.div>
@@ -40,8 +97,8 @@ export default function SocialProof() {
         {/* Logo Marquee */}
         <div className="relative mb-16">
           {/* Gradient Masks */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-slate-900 to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-slate-900 to-transparent z-10" />
 
           {/* Scrolling Container */}
           <motion.div
@@ -60,9 +117,9 @@ export default function SocialProof() {
             {[...logos, ...logos].map((logo, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-32 h-16 bg-gray-100 rounded flex items-center justify-center"
+                className="flex-shrink-0 w-32 h-16 bg-slate-700/50 rounded flex items-center justify-center border border-slate-600/30"
               >
-                <span className="text-xl font-bold text-gray-400">{logo.initials}</span>
+                <span className="text-xl font-bold text-slate-300">{logo.initials}</span>
               </div>
             ))}
           </motion.div>
@@ -74,13 +131,13 @@ export default function SocialProof() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-md p-8 md:p-12"
+          className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-md p-8 md:p-12 border border-slate-600/30"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Quote */}
             <div>
-              <Quote className="w-10 h-10 text-blue-600 mb-4" />
-              <blockquote className="text-xl md:text-2xl text-gray-800 font-medium mb-6 leading-relaxed">
+              <Quote className="w-10 h-10 text-blue-400 mb-4" />
+              <blockquote className="text-xl md:text-2xl text-white font-medium mb-6 leading-relaxed">
                 {t.social.quote}
               </blockquote>
               <div className="flex items-center space-x-4">
@@ -88,29 +145,29 @@ export default function SocialProof() {
                   JD
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900">{t.social.author}</p>
-                  <p className="text-gray-600 text-sm">{t.social.role}</p>
+                  <p className="font-semibold text-white">{t.social.author}</p>
+                  <p className="text-slate-400 text-sm">{t.social.role}</p>
                 </div>
               </div>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
-              <div className="bg-white rounded-md p-6 shadow-sm">
-                <p className="text-3xl font-bold text-blue-600 mb-1">40%</p>
-                <p className="text-gray-600 text-sm">{t.social.stats.performance}</p>
+              <div className="bg-slate-900/50 rounded-md p-6 shadow-sm border border-slate-600/30">
+                <p className="text-3xl font-bold text-blue-400 mb-1">40%</p>
+                <p className="text-slate-300 text-sm">{t.social.stats.performance}</p>
               </div>
-              <div className="bg-white rounded-md p-6 shadow-sm">
-                <p className="text-3xl font-bold text-emerald-600 mb-1">25%</p>
-                <p className="text-gray-600 text-sm">{t.social.stats.energy}</p>
+              <div className="bg-slate-900/50 rounded-md p-6 shadow-sm border border-slate-600/30">
+                <p className="text-3xl font-bold text-emerald-400 mb-1">25%</p>
+                <p className="text-slate-300 text-sm">{t.social.stats.energy}</p>
               </div>
-              <div className="bg-white rounded-md p-6 shadow-sm">
-                <p className="text-3xl font-bold text-purple-600 mb-1">99.9%</p>
-                <p className="text-gray-600 text-sm">{t.social.stats.uptime}</p>
+              <div className="bg-slate-900/50 rounded-md p-6 shadow-sm border border-slate-600/30">
+                <p className="text-3xl font-bold text-purple-400 mb-1">99.9%</p>
+                <p className="text-slate-300 text-sm">{t.social.stats.uptime}</p>
               </div>
-              <div className="bg-white rounded-md p-6 shadow-sm">
-                <p className="text-3xl font-bold text-orange-600 mb-1">3x</p>
-                <p className="text-gray-600 text-sm">{t.social.stats.roi}</p>
+              <div className="bg-slate-900/50 rounded-md p-6 shadow-sm border border-slate-600/30">
+                <p className="text-3xl font-bold text-orange-400 mb-1">3x</p>
+                <p className="text-slate-300 text-sm">{t.social.stats.roi}</p>
               </div>
             </div>
           </div>
@@ -119,7 +176,7 @@ export default function SocialProof() {
           <div className="mt-8 text-center">
             <a
               href="#"
-              className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+              className="inline-flex items-center text-blue-400 font-semibold hover:text-blue-300 transition-colors"
             >
               {t.social.caseStudy}
               <ArrowRight className="w-5 h-5 ml-2" />

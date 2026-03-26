@@ -58,7 +58,7 @@ export default function ProductCategories({ products }: ProductCategoriesProps) 
   });
 
   return (
-    <section id="products" className="py-20 bg-gray-50">
+    <section id="products" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -103,10 +103,10 @@ export default function ProductCategories({ products }: ProductCategoriesProps) 
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">
                   {category.title}
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-slate-600 mb-4">
                   {category.description}
                 </p>
                 {category.url ? (
