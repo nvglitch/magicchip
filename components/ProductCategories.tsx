@@ -1,8 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Cpu, Server, Shield, Zap, Brain, Monitor, type LucideIcon } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import Image from 'next/image';
 
 interface MultiLangText {
   en: string;
@@ -18,6 +19,7 @@ interface Product {
   order: number;
   icon: string;
   gradient: string;
+  image?: string;
   url?: string;
   title: MultiLangText;
   description: MultiLangText;
@@ -29,15 +31,6 @@ interface ProductCategoriesProps {
   products: Product[];
 }
 
-const iconMap: Record<string, LucideIcon> = {
-  Cpu,
-  Zap,
-  Server,
-  Shield,
-  Brain,
-  Monitor,
-};
-
 function getLocalizedText(text: MultiLangText, language: string): string {
   return text[language as keyof MultiLangText] || text.en;
 }
@@ -46,13 +39,11 @@ export default function ProductCategories({ products }: ProductCategoriesProps) 
   const { t, language } = useLanguage();
 
   const categories = products.map(product => {
-    const IconComponent = iconMap[product.icon] || Cpu;
     return {
       id: product.id,
       title: getLocalizedText(product.title, language),
       description: getLocalizedText(product.description, language),
-      icon: IconComponent,
-      image: `bg-gradient-to-br ${product.gradient}`,
+      image: product.image || '',
       url: product.url,
     };
   });
@@ -88,17 +79,18 @@ export default function ProductCategories({ products }: ProductCategoriesProps) 
               className="group relative bg-white rounded-md overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300"
             >
               {/* Image Area */}
-              <div className={`h-48 ${category.image} relative overflow-hidden`}>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <category.icon className="w-16 h-16 text-white/80" />
-                </div>
+              <div className="h-48 relative overflow-hidden bg-gray-100">
+                {category.image && (
+                  <Image
+                    src={category.image}
+                    alt={category.title}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                )}
                 {/* Scale effect on hover */}
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
-                <motion.div
-                  className="absolute inset-0"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.4 }}
-                />
               </div>
 
               {/* Content */}
