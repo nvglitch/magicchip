@@ -206,9 +206,9 @@ export const it: TranslationSchema = {
   social: {
     title: 'Affidato dai Leader del Settore',
     subtitle: 'Alimentando l\'innovazione nelle aziende leader in tutto il mondo',
-    quote: 'I processori di MagicChip hanno trasformato le nostre operazioni di data center. Abbiamo visto un miglioramento del 40% nella velocità di elaborazione riducendo il consumo energetico del 25%.',
-    author: 'John Davidson',
-    role: 'CTO, TechCorp Industries',
+    quote: 'Estremamente impressionato dal servizio fornito da shenzen magic chip! Hanno un buon livello di inglese e know-how tecnico oltre a conoscenza dei prodotti, venditore altamente consigliato. La spedizione è arrivata in meno di una settimana e il prodotto era privo di difetti.',
+    author: 'S***n',
+    role: 'Clienti della Stazione Internazionale Alibaba',
     stats: {
       performance: 'Aumento delle Prestazioni',
       energy: 'Riduzione Energetica',

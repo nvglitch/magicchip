@@ -206,9 +206,9 @@ export const en: TranslationSchema = {
   social: {
     title: 'Trusted by Industry Leaders',
     subtitle: 'Powering innovation at leading enterprises worldwide',
-    quote: "MagicChip's processors have transformed our data center operations. We've seen a 40% improvement in processing speed while reducing energy consumption by 25%.",
-    author: 'John Davidson',
-    role: 'CTO, TechCorp Industries',
+    quote: 'Extremely impressed with the service provided by shenzen magic chip! They command a good level of english and technical knowhow as well as product knowledge, highly recommended seller. Shipping arrived in less than a week and the product was free from any defects.',
+    author: 'S***n',
+    role: 'Alibaba International Station customers',
     stats: {
       performance: 'Performance Increase',
       energy: 'Energy Reduction',

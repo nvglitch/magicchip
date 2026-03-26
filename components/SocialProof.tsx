@@ -1,19 +1,20 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Quote, ArrowRight } from 'lucide-react';
+import { Quote } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
 
-const logos = [
-  { name: 'TechCorp', initials: 'TC' },
-  { name: 'DataFlow', initials: 'DF' },
-  { name: 'CloudNet', initials: 'CN' },
-  { name: 'AIVentures', initials: 'AI' },
-  { name: 'SysCore', initials: 'SC' },
-  { name: 'NetScale', initials: 'NS' },
-  { name: 'QuantumLabs', initials: 'QL' },
-  { name: 'FutureTech', initials: 'FT' },
+// 国家国旗数据
+const countries = [
+  { name: '美国', flag: '🇺🇸' },
+  { name: '加拿大', flag: '🇨🇦' },
+  { name: '马来西亚', flag: '🇲🇾' },
+  { name: '瑞典', flag: '🇸🇪' },
+  { name: '挪威', flag: '🇳🇴' },
+  { name: '法国', flag: '🇫🇷' },
+  { name: '意大利', flag: '🇮🇹' },
+  { name: '澳大利亚', flag: '🇦🇺' },
 ];
 
 // 公开的全球 TopoJSON 数据源
@@ -94,7 +95,7 @@ export default function SocialProof() {
           </p>
         </motion.div>
 
-        {/* Logo Marquee */}
+        {/* Country Flags Marquee */}
         <div className="relative mb-16">
           {/* Gradient Masks */}
           <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-slate-900 to-transparent z-10" />
@@ -113,13 +114,14 @@ export default function SocialProof() {
             }}
             className="flex space-x-12"
           >
-            {/* Double the logos for seamless loop */}
-            {[...logos, ...logos].map((logo, index) => (
+            {/* Double the countries for seamless loop */}
+            {[...countries, ...countries].map((country, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-32 h-16 bg-slate-700/50 rounded flex items-center justify-center border border-slate-600/30"
+                className="flex-shrink-0 flex items-center space-x-3 bg-slate-700/30 rounded-full px-6 py-3 border border-slate-600/30"
               >
-                <span className="text-xl font-bold text-slate-300">{logo.initials}</span>
+                <span className="text-3xl">{country.flag}</span>
+                <span className="text-lg font-medium text-slate-300">{country.name}</span>
               </div>
             ))}
           </motion.div>
@@ -137,12 +139,12 @@ export default function SocialProof() {
             {/* Quote */}
             <div>
               <Quote className="w-10 h-10 text-blue-400 mb-4" />
-              <blockquote className="text-xl md:text-2xl text-white font-medium mb-6 leading-relaxed">
+              <blockquote className="text-lg md:text-xl text-white font-medium mb-6 leading-relaxed">
                 {t.social.quote}
               </blockquote>
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
-                  JD
+                  {t.social.author.charAt(0)}
                 </div>
                 <div>
                   <p className="font-semibold text-white">{t.social.author}</p>
@@ -170,17 +172,6 @@ export default function SocialProof() {
                 <p className="text-slate-300 text-sm">{t.social.stats.roi}</p>
               </div>
             </div>
-          </div>
-
-          {/* CTA */}
-          <div className="mt-8 text-center">
-            <a
-              href="#"
-              className="inline-flex items-center text-blue-400 font-semibold hover:text-blue-300 transition-colors"
-            >
-              {t.social.caseStudy}
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
           </div>
         </motion.div>
       </div>
