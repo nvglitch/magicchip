@@ -204,8 +204,8 @@ export const es: TranslationSchema = {
     customPackage: '¿Necesita un paquete de servicios personalizado?',
   },
   social: {
-    title: 'Confiado por Líderes de la Industria',
-    subtitle: 'Impulsando la innovación en empresas líderes en todo el mundo',
+    title: 'Clientes Industriales',
+    subtitle: 'Sirviendo a clientes industriales en todo el mundo',
     quote: 'Extremadamente impresionado con el servicio proporcionado por shenzen magic chip! Tienen un buen nivel de inglés y conocimientos técnicos así como conocimiento del producto, vendedor altamente recomendado. El envío llegó en menos de una semana y el producto estaba libre de defectos.',
     author: 'S***n',
     role: 'Clientes de la Estación Internacional de Alibaba',

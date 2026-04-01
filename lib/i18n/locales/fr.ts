@@ -204,8 +204,8 @@ export const fr: TranslationSchema = {
     customPackage: 'Besoin d\'un forfait de services personnalisé?',
   },
   social: {
-    title: 'Approuvé par les Leaders de l\'Industrie',
-    subtitle: 'Alimenter l\'innovation dans les entreprises leaders du monde entier',
+    title: 'Clients industriels',
+    subtitle: 'Servir des clients industriels dans le monde entier',
     quote: 'Extrêmement impressionné par le service fourni par shenzen magic chip ! Ils maîtrisent bien l\'anglais, les connaissances techniques et les produits, vendeur fortement recommandé. La livraison est arrivée en moins d\'une semaine et le produit était exempt de tout défaut.',
     author: 'S***n',
     role: 'Clients de la Station Internationale Alibaba',

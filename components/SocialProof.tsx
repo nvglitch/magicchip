@@ -97,10 +97,6 @@ export default function SocialProof() {
 
         {/* Country Flags Marquee */}
         <div className="relative mb-16">
-          {/* Gradient Masks */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-slate-900 to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-slate-900 to-transparent z-10 pointer-events-none" />
-
           {/* Scrolling Container */}
           <motion.div
             animate={{ x: ['0%', '-50%'] }}
