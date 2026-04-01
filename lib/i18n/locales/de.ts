@@ -204,8 +204,8 @@ export const de: TranslationSchema = {
     customPackage: 'Benötigen Sie ein maßgeschneidertes Service-Paket?',
   },
   social: {
-    title: 'Industriekunden',
-    subtitle: 'Dienstleistung für industrielle Kunden weltweit',
+    title: 'Vertraut von globalen Kunden',
+    subtitle: 'Dienstleistung für Mini PC-Kunden weltweit',
     quote: 'Äußerst beeindruckt vom Service von shenzen magic chip! Sie verfügen über gute Englischkenntnisse, technisches Know-how sowie Produktwissen, ein äußerst empfehlenswerter Verkäufer. Die Lieferung erfolgte in weniger als einer Woche und das Produkt war frei von Mängeln.',
     author: 'S***n',
     role: 'Alibaba International Station Kunden',
