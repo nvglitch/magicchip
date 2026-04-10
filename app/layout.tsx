@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   title: "MagicChip - Advanced Hardware Solutions",
   description: "Leading provider of high-end hardware products and enterprise services",
   icons: {
-    icon: "/magic chip Logo.png",
-    apple: "/magic chip Logo.png",
+    icon: "/magic-chip-Logo.png",
+    apple: "/magic-chip-Logo.png",
   },
 };
 

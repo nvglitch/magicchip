@@ -98,7 +98,7 @@ export default function Navbar() {
           {/* Logo */}
           <a href="/" className="flex items-center flex-shrink-0 h-10 min-w-0 ml-2 md:ml-0">
             <Image
-              src="/magic chip Logo.png"
+              src="/magic-chip-Logo.png"
               alt="MagicChip"
               width={150}
               height={40}
