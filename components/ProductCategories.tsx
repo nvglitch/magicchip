@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface MultiLangText {
   en: string;
@@ -101,26 +102,13 @@ export default function ProductCategories({ products }: ProductCategoriesProps) 
                 <p className="text-slate-600 mb-4">
                   {category.description}
                 </p>
-                {category.url ? (
-                  <a
-                    href={category.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors group/link"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    {t.products.learnMore}
-                    <ArrowRight className="w-4 h-4 ml-2 transform group-hover/link:translate-x-1 transition-transform" />
-                  </a>
-                ) : (
-                  <a
-                    href="/products"
-                    className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors group/link"
-                  >
-                    {t.products.learnMore}
-                    <ArrowRight className="w-4 h-4 ml-2 transform group-hover/link:translate-x-1 transition-transform" />
-                  </a>
-                )}
+                <Link
+                  href={`/products/${category.id}`}
+                  className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors group/link"
+                >
+                  {t.products.learnMore}
+                  <ArrowRight className="w-4 h-4 ml-2 transform group-hover/link:translate-x-1 transition-transform" />
+                </Link>
               </div>
             </motion.div>
           ))}
