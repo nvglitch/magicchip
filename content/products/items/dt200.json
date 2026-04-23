@@ -1,0 +1,29 @@
+{
+  "id": "dt200",
+  "category": "desktop-mini-pc",
+  "name": "DT-200",
+  "tagline": "Ultra-compact desktop mini PC for business and education",
+  "description": "The DT-200 is an ultra-compact desktop mini PC featuring Intel N-series processor and 4K display support. Perfect for office workstations, digital signage, and educational computing with VESA mount compatibility.",
+  "images": ["/desktop.png"],
+  "specifications": [
+    { "label": "Processor", "value": "Intel N200 (4C/4T, up to 3.7GHz)" },
+    { "label": "Memory", "value": "Up to 16GB DDR4-3200" },
+    { "label": "Storage", "value": "M.2 2280 NVMe SSD + 2.5\" SATA" },
+    { "label": "Display", "value": "4K@60Hz via HDMI 2.0 + DP 1.2" },
+    { "label": "USB", "value": "4× USB 3.2 Gen2 + 2× USB 2.0" },
+    { "label": "Network", "value": "1× 2.5G LAN + WiFi 6 + BT 5.2" },
+    { "label": "Audio", "value": "3.5mm Combo Jack + HDMI Audio" },
+    { "label": "Power", "value": "65W USB-C PD or 19V DC" },
+    { "label": "Dimensions", "value": "128×128×42mm" }
+  ],
+  "features": [
+    { "icon": "Monitor", "title": "4K Display", "description": "Crystal clear 4K@60Hz output" },
+    { "icon": "Zap", "title": "USB-C PD", "description": "Single cable power and data" },
+    { "icon": "Layers", "title": "VESA Mount", "description": "Mount behind monitor or on wall" }
+  ],
+  "applications": [
+    { "image": "/desktop.png", "title": "Office Workstation", "description": "Compact and quiet for any desk" },
+    { "image": "/Industrial.png", "title": "Digital Signage", "description": "Reliable 24/7 display controller" }
+  ],
+  "alibabaUrl": "https://magicchip.en.alibaba.com"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "fw100",
+  "category": "firewall-mini-pc",
+  "name": "FW-100",
+  "tagline": "Compact network security appliance with 4× 2.5G ports",
+  "description": "The FW-100 is a compact firewall mini PC featuring four 2.5GbE LAN ports and Intel N100 processor. Ideal for small business network security, VPN gateway, and edge firewall applications.",
+  "images": ["/firewall.png"],
+  "specifications": [
+    { "label": "Processor", "value": "Intel N100 (4C/4T, up to 3.4GHz)" },
+    { "label": "Memory", "value": "Up to 16GB DDR4-3200" },
+    { "label": "Storage", "value": "M.2 2242 SATA SSD" },
+    { "label": "LAN Ports", "value": "4× 2.5GbE RJ45 (Intel i226-V)" },
+    { "label": "USB", "value": "2× USB 3.2 + 1× USB 2.0" },
+    { "label": "Console", "value": "1× RJ45 Serial Console" },
+    { "label": "Power", "value": "12V DC / 5A Adapter" },
+    { "label": "Dimensions", "value": "134×126×40mm" }
+  ],
+  "features": [
+    { "icon": "Shield", "title": "4× 2.5G LAN", "description": "High-speed network segmentation" },
+    { "icon": "Lock", "title": "VPN Support", "description": "WireGuard, OpenVPN, IPsec ready" },
+    { "icon": "Zap", "title": "Low Power", "description": "Under 15W typical power consumption" }
+  ],
+  "applications": [
+    { "image": "/firewall.png", "title": "Small Business Firewall", "description": "Protect network with enterprise features" },
+    { "image": "/Firewall-Server.png", "title": "VPN Gateway", "description": "Secure remote access for teams" }
+  ],
+  "alibabaUrl": "https://magicchip.en.alibaba.com"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "fs500",
+  "category": "firewall-server",
+  "name": "FS-500",
+  "tagline": "1U rackmount firewall server with 6× 2.5G LAN ports",
+  "description": "The FS-500 is a 1U rackmount firewall server featuring six 2.5GbE LAN ports and Intel Core i5 processor. Designed for enterprise network security, data center edge protection, and high-throughput VPN applications.",
+  "images": ["/Firewall-Server.png"],
+  "specifications": [
+    { "label": "Processor", "value": "Intel Core i5-1240P (12C/16T)" },
+    { "label": "Memory", "value": "Up to 64GB DDR4-3200 (2× SODIMM)" },
+    { "label": "Storage", "value": "2× M.2 2280 NVMe SSD + 1× 2.5\" SATA" },
+    { "label": "LAN Ports", "value": "6× 2.5GbE RJ45 (Intel i226-V)" },
+    { "label": "Management", "value": "1× IPMI BMC RJ45" },
+    { "label": "USB", "value": "2× USB 3.2 + 2× USB 2.0" },
+    { "label": "Console", "value": "1× RJ45 Serial + VGA" },
+    { "label": "Power", "value": "250W 1U Flex PSU (Redundant Optional)" },
+    { "label": "Form Factor", "value": "1U Rackmount, 250mm Depth" }
+  ],
+  "features": [
+    { "icon": "Server", "title": "6× 2.5G LAN", "description": "High-density network ports" },
+    { "icon": "Shield", "title": "IPMI Remote", "description": "Out-of-band server management" },
+    { "icon": "Zap", "title": "Redundant Power", "description": "Optional dual PSU for reliability" }
+  ],
+  "applications": [
+    { "image": "/Firewall-Server.png", "title": "Enterprise Firewall", "description": "Protect corporate networks at scale" },
+    { "image": "/firewall.png", "title": "Data Center Edge", "description": "Secure edge computing deployments" }
+  ],
+  "alibabaUrl": "https://magicchip.en.alibaba.com"
+}

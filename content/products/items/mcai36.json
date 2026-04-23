@@ -1,0 +1,29 @@
+{
+  "id": "mcai36",
+  "category": "industrial-mini-pc",
+  "name": "MCAI36",
+  "tagline": "Industrial Edge Computing Mini PC with Intel Core i7",
+  "description": "The MCAI36 is a rugged industrial mini PC powered by Intel Core i7-1260P processor. Built for edge computing, machine vision, and industrial IoT applications with fanless design and wide temperature operation.",
+  "images": ["/Industrial.png"],
+  "specifications": [
+    { "label": "Processor", "value": "Intel Core i7-1260P (12C/16T, up to 4.7GHz)" },
+    { "label": "Memory", "value": "Up to 32GB DDR4-3200" },
+    { "label": "Storage", "value": "M.2 2280 NVMe SSD + 2.5\" SATA SSD" },
+    { "label": "Display", "value": "Triple Display: HDMI 2.0 + DP 1.2 + VGA" },
+    { "label": "USB", "value": "4× USB 3.2 Gen2 + 2× USB 2.0" },
+    { "label": "Network", "value": "Dual 2.5G LAN + WiFi 6E + BT 5.2" },
+    { "label": "Serial", "value": "2× RS232/485 + 1× RS232" },
+    { "label": "Power", "value": "12-24V DC Wide Input" },
+    { "label": "Operating Temp", "value": "-20°C to 60°C" }
+  ],
+  "features": [
+    { "icon": "Shield", "title": "Fanless Design", "description": "Silent operation with zero dust ingress" },
+    { "icon": "Thermometer", "title": "Wide Temperature", "description": "Operates in -20°C to 60°C environments" },
+    { "icon": "Network", "title": "Dual 2.5G LAN", "description": "High-speed industrial networking" }
+  ],
+  "applications": [
+    { "image": "/Industrial.png", "title": "Machine Vision", "description": "High-speed image processing for quality control" },
+    { "image": "/firewall.png", "title": "Industrial IoT Gateway", "description": "Connect sensors and devices at the edge" }
+  ],
+  "alibabaUrl": "https://magicchip.en.alibaba.com"
+}

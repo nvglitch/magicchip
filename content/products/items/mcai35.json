@@ -1,0 +1,29 @@
+{
+  "id": "mcai35",
+  "category": "industrial-mini-pc",
+  "name": "MCAI35",
+  "tagline": "High-performance AI mini PC powered by Strix Halo platform",
+  "description": "The MCAI35 is a flagship AI mini PC featuring AMD's Strix Halo platform with integrated graphics and neural processing unit. Designed for edge computing, AI workloads, and high-performance industrial applications.",
+  "images": ["/MCAI35.png"],
+  "specifications": [
+    { "label": "Processor", "value": "AMD Strix Halo (120W/132W)" },
+    { "label": "Graphics", "value": "Up to 40 Graphics Cores" },
+    { "label": "NPU", "value": "50 TOPs AI Performance" },
+    { "label": "Memory", "value": "Up to 128GB LPDDR5x 8000MT/s (8×32 bit)" },
+    { "label": "Storage", "value": "Dual M.2 2280 PCIe×4 SSD" },
+    { "label": "Display", "value": "Quad-Display: HDMI 2.1 FRL + DP 1.4" },
+    { "label": "USB", "value": "Dual USB4 (40Gbps)" },
+    { "label": "Network", "value": "2.5G LAN RJ45 + M.2 2230 WiFi/BT" },
+    { "label": "Power", "value": "350W Internal Flex PSU or 240W DC-IN" }
+  ],
+  "features": [
+    { "icon": "Cpu", "title": "AI Performance", "description": "50 TOPs NPU for edge AI workloads" },
+    { "icon": "Monitor", "title": "Quad Display", "description": "Support up to 4 simultaneous displays" },
+    { "icon": "Zap", "title": "High Speed", "description": "Dual USB4 40Gbps ports" }
+  ],
+  "applications": [
+    { "image": "/Industrial.png", "title": "Industrial Automation", "description": "Reliable computing for factory floors" },
+    { "image": "/desktop.png", "title": "Digital Signage", "description": "Power multi-screen displays" }
+  ],
+  "alibabaUrl": "https://magicchip.en.alibaba.com"
+}

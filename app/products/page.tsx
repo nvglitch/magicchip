@@ -3,6 +3,14 @@
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { motion } from 'framer-motion';
 import { Cpu, Shield, Monitor, Server, ArrowRight, CheckCircle } from 'lucide-react';
+import Link from 'next/link';
+
+const categoryLinks: Record<string, string> = {
+  'Industrial Mini PC': '/products/industrial-mini-pc',
+  'Firewall Mini PC': '/products/firewall-mini-pc',
+  'Desktop Mini PC': '/products/desktop-mini-pc',
+  '1U/2U Firewall Server PC': '/products/firewall-server',
+};
 
 const productsData = {
   en: {
@@ -16,28 +24,28 @@ const productsData = {
         description: 'Fanless, compact industrial computers designed for harsh environments and 24/7 operation.',
         features: ['Fanless cooling system', 'Wide temperature range', 'Intel N-series/Core processors', 'Multi-port connectivity'],
         icon: Cpu,
-        href: 'https://magicchip.en.alibaba.com/productgrouplist-933739702/Industrial_PC.html?spm=a2700.shop_plgr.88.23.79c77121OixJyz'
+        href: '/products/industrial-mini-pc'
       },
       {
         title: 'Firewall Mini PC',
         description: 'Network security appliances with advanced firewall capabilities and multi-Gigabit ports.',
         features: ['2.5GbE/10GbE ports', 'Advanced firewall software', 'VPN support', 'Industrial-grade design'],
         icon: Shield,
-        href: 'https://magicchip.en.alibaba.com/productgrouplist-932323740/Firewall_Mini_PC.html?spm=a2700.shop_plgr.88.32.5c807121rnWOr9'
+        href: '/products/firewall-mini-pc'
       },
       {
         title: 'Desktop Mini PC',
         description: 'Compact desktop computers ideal for business, education, and digital signage applications.',
         features: ['Intel N-series processors', '4K display support', 'Low power consumption', 'VESA mount compatible'],
         icon: Monitor,
-        href: 'https://magicchip.en.alibaba.com/productgrouplist-932313801/Dekstop_Mini_PC.html?spm=a2700.shop_plgr.88.28.26c87121PeanxV'
+        href: '/products/desktop-mini-pc'
       },
       {
         title: '1U/2U Firewall Server PC',
         description: 'Rackmount firewall servers for enterprise network security with high throughput.',
         features: ['1U/2U rackmount form factor', 'Multiple LAN ports', 'High-performance routing', 'Enterprise firewall OS support'],
         icon: Server,
-        href: 'https://magicchip.en.alibaba.com/productgrouplist-952444890/1U_2U_Firewall_Server_PC.html?spm=a2700.shop_plgr.88.18.48957121p4KllR'
+        href: '/products/firewall-server'
       }
     ],
     cta: {
@@ -45,7 +53,7 @@ const productsData = {
       description: 'We offer customized semiconductor solutions tailored to your specific requirements.',
       button: 'Contact Sales'
     },
-    learnMore: 'Learn More'
+    learnMore: 'View Products'
   },
   fr: {
     hero: {
@@ -274,15 +282,13 @@ export default function ProductsPage() {
                     ))}
                   </ul>
 
-                  <a
+                  <Link
                     href={category.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="inline-flex items-center text-blue-600 font-semibold group-hover:text-blue-700"
                   >
                     {data.learnMore}
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
-                  </a>
+                  </Link>
                 </div>
               </motion.div>
             ))}
