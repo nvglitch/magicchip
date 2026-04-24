@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LiveChatWidget from "@/components/LiveChatWidget";
+import ScrollToTop from "@/components/ScrollToTop";
 import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 
 const inter = Inter({
@@ -35,6 +36,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <LanguageProvider>
+          <ScrollToTop />
           <Navbar />
           <main className="pt-16">
             {children}

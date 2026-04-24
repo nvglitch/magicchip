@@ -153,17 +153,12 @@ export default function CategoryPage() {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.4 }}
-            className="mb-8"
-          >
+          <div className="mb-8">
             <Link href="/products" className="inline-flex items-center text-gray-400 hover:text-white transition-colors text-sm">
               <ChevronLeft className="w-4 h-4 mr-1" />
               Back to Products
             </Link>
-          </motion.div>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

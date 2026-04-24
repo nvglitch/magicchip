@@ -156,12 +156,7 @@ export default function ProductDetailPage() {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.4 }}
-            className="mb-6"
-          >
+          <div className="mb-6">
             <div className="flex items-center gap-2 text-sm text-gray-400">
               <Link href="/products" className="hover:text-white transition-colors">Products</Link>
               <span>/</span>
@@ -171,7 +166,7 @@ export default function ProductDetailPage() {
               <span>/</span>
               <span className="text-white">{product.name}</span>
             </div>
-          </motion.div>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -187,28 +182,24 @@ export default function ProductDetailPage() {
       {/* Product Overview */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          >
             {/* Product Image */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-gray-100 rounded-2xl aspect-square flex items-center justify-center"
-            >
+            <div className="bg-gray-100 rounded-2xl aspect-square flex items-center justify-center">
               <div className="text-center">
                 <div className={`w-32 h-32 mx-auto mb-4 bg-gradient-to-br ${catInfo?.gradient} rounded-2xl flex items-center justify-center`}>
                   <IconComponent className="w-16 h-16 text-white" />
                 </div>
                 <p className="text-gray-400 text-sm">Product Image Placeholder</p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Product Info */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
+            <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Overview</h2>
               <p className="text-gray-600 text-lg mb-8 leading-relaxed">{product.description}</p>
 
@@ -240,8 +231,8 @@ export default function ProductDetailPage() {
                   View on Alibaba
                 </a>
               </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
