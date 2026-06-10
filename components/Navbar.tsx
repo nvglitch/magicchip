@@ -26,7 +26,7 @@ import {
   Target,
   Factory
 } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { LANGUAGE_NAMES, SUPPORTED_LANGUAGES } from '@/lib/i18n/config';
 
@@ -50,6 +50,14 @@ export default function Navbar() {
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const { t, language, setLanguage } = useLanguage();
+
+  // Scroll progress
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   // 多语言下拉菜单内容 - 使用专业图标
   const getDropdownContent = (): Record<string, DropdownItem[]> => ({
@@ -352,6 +360,12 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Scroll progress bar */}
+      <motion.div
+        className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-500 via-indigo-500 to-blue-400 origin-left"
+        style={{ scaleX }}
+      />
     </nav>
   );
 }

@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --accent: #10b981; /* emerald-500 */
+  --accent-foreground: #ffffff;
 }
 
 @theme inline {

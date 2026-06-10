@@ -89,9 +89,16 @@ export default function Services() {
               whileHover={{ y: -5 }}
               className="bg-gradient-to-br from-white to-blue-50/50 rounded-md p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-blue-100/50"
             >
-              {/* Icon */}
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-md flex items-center justify-center mb-4">
-                <service.icon className="w-6 h-6 text-white" />
+              {/* Icon with subtle gradient shimmer */}
+              <div className="mb-4">
+                <motion.div
+                  className="w-12 h-12 bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-600 rounded-md flex items-center justify-center"
+                  style={{ backgroundSize: '200% 200%' }}
+                  animate={{ backgroundPosition: ['0% 0%', '100% 100%', '0% 0%'] }}
+                  transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut', delay: index * 0.4 }}
+                >
+                  <service.icon className="w-6 h-6 text-white" />
+                </motion.div>
               </div>
 
               {/* Content */}
@@ -113,7 +120,7 @@ export default function Services() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mt-12"
         >
-          <a href="/contact" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors cursor-pointer">
+          <a href="/contact" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-emerald-500 transition-colors duration-300 cursor-pointer">
             {t.services.cta}
           </a>
           <p className="mt-4 text-gray-600">

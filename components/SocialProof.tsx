@@ -1,9 +1,49 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useRef, useEffect } from 'react';
+import { motion, useMotionValue, useTransform, useInView, animate } from 'framer-motion';
 import { Quote } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
+
+// 数字计数器组件 — 进入视口时从 0 滚动到目标值
+function AnimatedCounter({
+  to,
+  prefix = '',
+  suffix = '',
+  decimals = 0,
+  duration = 2,
+  className = '',
+}: {
+  to: number;
+  prefix?: string;
+  suffix?: string;
+  decimals?: number;
+  duration?: number;
+  className?: string;
+}) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const count = useMotionValue(0);
+  const display = useTransform(count, (v) => v.toFixed(decimals));
+
+  useEffect(() => {
+    if (!isInView) return;
+    const ctrl = animate(count, to, {
+      duration,
+      ease: [0.33, 1, 0.68, 1], // easeOutCubic
+    });
+    return () => ctrl.stop();
+  }, [isInView, to, count, duration]);
+
+  return (
+    <span ref={ref} className={className}>
+      {prefix}
+      <motion.span>{display}</motion.span>
+      {suffix}
+    </span>
+  );
+}
 
 // 国家国旗数据 - 使用 flag-icons 库的国家代码
 const countries = [
@@ -160,23 +200,55 @@ export default function SocialProof() {
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
+              {/* Rating — numeric counter */}
               <div className="bg-slate-900/50 rounded-md p-6 shadow-sm border border-slate-600/30">
                 <div className="flex items-baseline mb-1">
                   <span className="text-3xl font-bold text-yellow-400">★</span>
-                  <span className="text-3xl font-bold text-yellow-400 ml-1">{t.social.stats.rating}</span>
+                  <AnimatedCounter
+                    to={parseFloat(t.social.stats.rating) || 5.0}
+                    decimals={1}
+                    duration={0.7}
+                    className="text-3xl font-bold text-yellow-400 ml-1"
+                  />
                 </div>
                 <p className="text-slate-300 text-sm">{t.social.stats.ratingLabel}</p>
               </div>
+              {/* Factory Size — spring scale-in (range text) */}
               <div className="bg-slate-900/50 rounded-md p-6 shadow-sm border border-slate-600/30">
-                <p className="text-2xl font-bold text-blue-400 mb-1">{t.social.stats.factorySize}<span className="text-lg text-slate-400 ml-1">{t.social.stats.factorySizeUnit}</span></p>
+                <motion.p
+                  className="text-2xl font-bold text-blue-400 mb-1"
+                  initial={{ scale: 0.6, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ type: 'spring', stiffness: 180, damping: 14, delay: 0.15 }}
+                >
+                  {t.social.stats.factorySize}
+                  <span className="text-lg text-slate-400 ml-1">{t.social.stats.factorySizeUnit}</span>
+                </motion.p>
                 <p className="text-slate-300 text-sm">{t.social.stats.factorySizeLabel}</p>
               </div>
+              {/* Response Time — numeric counter */}
               <div className="bg-slate-900/50 rounded-md p-6 shadow-sm border border-slate-600/30">
-                <p className="text-3xl font-bold text-emerald-400 mb-1">{t.social.stats.responseTime}</p>
+                <AnimatedCounter
+                  to={parseInt(t.social.stats.responseTime.replace(/[^0-9]/g, '')) || 3}
+                  prefix="≤"
+                  suffix="h"
+                  duration={0.6}
+                  className="text-3xl font-bold text-emerald-400 mb-1 block"
+                />
                 <p className="text-slate-300 text-sm">{t.social.stats.responseTimeLabel}</p>
               </div>
+              {/* Global Reach — spring scale-in (text) */}
               <div className="bg-slate-900/50 rounded-md p-6 shadow-sm border border-slate-600/30">
-                <p className="text-3xl font-bold text-purple-400 mb-1">{t.social.stats.globalReach}</p>
+                <motion.p
+                  className="text-3xl font-bold text-purple-400 mb-1"
+                  initial={{ scale: 0.6, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ type: 'spring', stiffness: 180, damping: 14, delay: 0.3 }}
+                >
+                  {t.social.stats.globalReach}
+                </motion.p>
                 <p className="text-slate-300 text-sm">{t.social.stats.globalReachLabel}</p>
               </div>
             </div>
