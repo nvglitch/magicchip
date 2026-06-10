@@ -9,7 +9,9 @@ export default function FeaturedProduct() {
   const { t } = useLanguage();
 
   return (
-    <section id="solutions" className="py-20 bg-gradient-to-b from-blue-50 via-white to-blue-50">
+    <section id="solutions" className="py-20 bg-gradient-to-b from-blue-50 via-white to-blue-50 relative">
+      {/* Tech pattern overlay — beneath content, above gradient */}
+      <div className="absolute inset-0 tech-pattern-overlay pointer-events-none" style={{ maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)' }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Image Side */}

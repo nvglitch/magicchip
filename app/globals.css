@@ -87,3 +87,27 @@ html {
   background-size: cover;
   background-position: center;
 }
+
+/* ============================================
+   Tech Business Card Pattern
+   Subtle dot-grid + structural accents;
+   barely visible — just enough to kill the
+   "blank sheet of paper" feel on white sections.
+   ============================================ */
+.bg-tech-pattern {
+  background-color: #ffffff;
+  background-image:
+    /* fine dot matrix */
+    radial-gradient(circle at 1px 1px, rgba(59,130,246,0.07) 0.5px, transparent 0.5px),
+    /* sparse anchor dots */
+    radial-gradient(circle at center, rgba(59,130,246,0.035) 1px, transparent 1px);
+  background-size: 16px 16px, 64px 64px;
+}
+
+/* Pattern-only — no background color, for use as overlay on gradients */
+.tech-pattern-overlay {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(59,130,246,0.07) 0.5px, transparent 0.5px),
+    radial-gradient(circle at center, rgba(59,130,246,0.035) 1px, transparent 1px);
+  background-size: 16px 16px, 64px 64px;
+}

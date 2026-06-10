@@ -50,7 +50,7 @@ export default function ProductCategories({ products }: ProductCategoriesProps) 
   });
 
   return (
-    <section id="products" className="py-20 bg-white">
+    <section id="products" className="py-20 bg-tech-pattern">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
