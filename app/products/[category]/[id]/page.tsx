@@ -245,7 +245,7 @@ export default function ProductDetailPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Technical Specifications</h2>
-            <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
+            <div className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100">
               <table className="w-full">
                 <tbody>
                   {product.specs.map((spec, idx) => (
@@ -282,7 +282,7 @@ export default function ProductDetailPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: idx * 0.1 }}
-                    className="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow"
+                    className="bg-gray-50 rounded-xl p-8 text-center hover:shadow-md transition-shadow border border-gray-100"
                   >
                     <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-br ${catInfo?.gradient} rounded-xl flex items-center justify-center`}>
                       <FeatureIcon className="w-8 h-8 text-white" />
@@ -304,7 +304,7 @@ export default function ProductDetailPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-3xl p-10 md:p-16 text-center text-white relative overflow-hidden"
+            className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-xl p-10 md:p-16 text-center text-white relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full -mr-20 -mt-20"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white opacity-10 rounded-full -ml-10 -mb-10"></div>

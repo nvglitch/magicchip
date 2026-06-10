@@ -206,7 +206,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
             <div className="space-y-4">
               <a 
                 href={`mailto:${siteConfig.contact.email}`}
-                className="flex items-center p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow group"
+                className="flex items-center p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 group"
               >
                 <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-100 transition-colors">
                   <Mail className="w-5 h-5 text-blue-600" />
@@ -219,7 +219,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
 
               <a 
                 href="tel:+86075523099863"
-                className="flex items-center p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow group"
+                className="flex items-center p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 group"
               >
                 <div className="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center mr-4 group-hover:bg-green-100 transition-colors">
                   <Phone className="w-5 h-5 text-green-600" />
@@ -234,7 +234,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                 href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, '')}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow group"
+                className="flex items-center p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 group"
               >
                 <div className="w-12 h-12 bg-emerald-50 rounded-lg flex items-center justify-center mr-4 group-hover:bg-emerald-100 transition-colors">
                   <MessageCircle className="w-5 h-5 text-emerald-600" />
@@ -245,7 +245,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                 </div>
               </a>
 
-              <div className="flex items-start p-5 bg-white rounded-xl shadow-sm">
+              <div className="flex items-start p-5 bg-white rounded-xl shadow-sm border border-gray-100">
                 <div className="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                   <MapPin className="w-5 h-5 text-orange-600" />
                 </div>
@@ -275,7 +275,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                  className="bg-white rounded-2xl shadow-lg p-12 text-center"
+                  className="bg-white rounded-xl shadow-lg p-12 text-center border border-gray-100"
                 >
                   <motion.div
                     initial={{ scale: 0 }}
@@ -308,7 +308,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="bg-white rounded-2xl shadow-lg p-8 lg:p-10"
+                  className="bg-white rounded-xl shadow-lg p-8 lg:p-10 border border-gray-100"
                 >
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">

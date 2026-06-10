@@ -68,7 +68,7 @@ export default function LeadGeneration() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="lg:w-1/2 w-full"
             >
-              <div className="bg-white rounded-md p-8 shadow-2xl">
+              <div className="bg-white rounded-xl p-8 border border-gray-100 border-l-4 border-l-blue-500 shadow-sm">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {t.lead.form.title}
                 </h3>
@@ -130,7 +130,7 @@ export default function LeadGeneration() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-md p-8 max-w-md w-full"
+              className="bg-white rounded-xl p-8 max-w-md w-full shadow-lg border border-gray-100 border-l-4 border-l-blue-500"
             >
               {isSubmitted ? (
                 <div className="text-center">

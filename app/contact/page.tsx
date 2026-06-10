@@ -334,7 +334,7 @@ export default function ContactPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="bg-gradient-to-r from-green-500 to-green-600 p-8 rounded-md text-white"
+                className="bg-gradient-to-r from-green-500 to-green-600 p-8 rounded-xl text-white"
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                   <div className="mb-4 md:mb-0">
@@ -363,7 +363,7 @@ export default function ContactPage() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                    className="bg-white p-12 rounded-md shadow-sm text-center"
+                    className="bg-white rounded-xl p-12 shadow-sm text-center border border-gray-100 border-l-4 border-l-blue-500"
                   >
                     <motion.div
                       initial={{ scale: 0 }}
@@ -396,7 +396,7 @@ export default function ContactPage() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="bg-white p-8 rounded-md shadow-sm"
+                    className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 border-l-4 border-l-blue-500"
                   >
                     <h2 className="text-2xl font-bold text-gray-900 mb-6">{data.form.title}</h2>
                     <form onSubmit={handleSubmit} className="space-y-4">

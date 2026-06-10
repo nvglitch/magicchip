@@ -318,7 +318,7 @@ export default function FactoryPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center bg-white p-8 rounded-lg shadow-sm"
+                  className="text-center bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
                 >
                   <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">{stat.value}</div>
                   <div className="text-gray-600">{stat.label}</div>
@@ -341,7 +341,7 @@ export default function FactoryPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-gray-50 p-6 rounded-lg"
+                  className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:shadow-md transition-shadow"
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <item.icon className="w-6 h-6 text-blue-600" />
@@ -367,7 +367,7 @@ export default function FactoryPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-lg overflow-hidden shadow-sm"
+                  className="bg-white rounded-xl overflow-hidden border border-gray-100 border-l-4 border-l-blue-500 shadow-sm"
                 >
                   <div className="h-48 overflow-hidden">
                     <img 
@@ -410,7 +410,7 @@ export default function FactoryPage() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition-shadow"
+                  className="bg-gray-50 rounded-xl p-6 text-center hover:shadow-md transition-shadow border border-gray-100"
                 >
                   <Award className="w-8 h-8 text-blue-600 mx-auto mb-3" />
                   <div className="font-semibold text-gray-900">{cert.name}</div>

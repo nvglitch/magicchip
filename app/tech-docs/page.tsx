@@ -621,7 +621,7 @@ export default function TechDocsPage() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="flex flex-col items-center p-6 bg-gray-50 rounded-md hover:bg-blue-50 hover:shadow-md transition-all group"
+                  className="flex flex-col items-center p-6 bg-gray-50 rounded-xl hover:bg-blue-50 hover:shadow-md transition-all group border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-md flex items-center justify-center mb-3 group-hover:bg-blue-600 transition-colors">
                     <category.icon className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors" />
@@ -658,7 +658,7 @@ export default function TechDocsPage() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.3, delay: index * 0.05 }}
-                          className="bg-white p-6 rounded-md shadow-sm hover:shadow-md transition-shadow border border-gray-100"
+                          className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100"
                         >
                           <div className="flex items-start justify-between">
                             <div className="flex-1">

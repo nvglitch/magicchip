@@ -233,7 +233,7 @@ export default function DocumentsPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-2xl hover:border-blue-100 transition-all duration-300 overflow-hidden"
+                className="group relative bg-gradient-to-br from-white to-gray-50 rounded-xl p-8 border border-gray-100 hover:shadow-md hover:border-blue-100 transition-all duration-300 overflow-hidden"
               >
                 {/* Background decoration */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full -mr-16 -mt-16 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
@@ -277,7 +277,7 @@ export default function DocumentsPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-md p-6 hover:shadow-lg transition-shadow"
+                  className="bg-white rounded-xl p-6 hover:shadow-md transition-shadow border border-gray-100"
                 >
                   <div className="w-10 h-10 bg-blue-100 rounded-md flex items-center justify-center mb-4">
                     <FileCode className="w-5 h-5 text-blue-600" />

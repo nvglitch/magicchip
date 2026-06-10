@@ -87,7 +87,7 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className="bg-gradient-to-br from-white to-blue-50/50 rounded-md p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-blue-100/50"
+              className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100"
             >
               {/* Icon with subtle gradient shimmer */}
               <div className="mb-4">

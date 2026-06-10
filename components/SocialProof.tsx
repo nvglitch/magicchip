@@ -178,7 +178,7 @@ export default function SocialProof() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-md p-8 md:p-12 border border-slate-600/30"
+          className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl p-8 md:p-12 border border-slate-600/30"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Quote */}
@@ -201,7 +201,7 @@ export default function SocialProof() {
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
               {/* Rating — numeric counter */}
-              <div className="bg-slate-900/50 rounded-md p-6 shadow-sm border border-slate-600/30">
+              <div className="bg-slate-900/50 rounded-xl p-6 shadow-sm border border-slate-600/30">
                 <div className="flex items-baseline mb-1">
                   <span className="text-3xl font-bold text-yellow-400">★</span>
                   <AnimatedCounter
@@ -214,7 +214,7 @@ export default function SocialProof() {
                 <p className="text-slate-300 text-sm">{t.social.stats.ratingLabel}</p>
               </div>
               {/* Factory Size — spring scale-in (range text) */}
-              <div className="bg-slate-900/50 rounded-md p-6 shadow-sm border border-slate-600/30">
+              <div className="bg-slate-900/50 rounded-xl p-6 shadow-sm border border-slate-600/30">
                 <motion.p
                   className="text-2xl font-bold text-blue-400 mb-1"
                   initial={{ scale: 0.6, opacity: 0 }}
@@ -228,7 +228,7 @@ export default function SocialProof() {
                 <p className="text-slate-300 text-sm">{t.social.stats.factorySizeLabel}</p>
               </div>
               {/* Response Time — numeric counter */}
-              <div className="bg-slate-900/50 rounded-md p-6 shadow-sm border border-slate-600/30">
+              <div className="bg-slate-900/50 rounded-xl p-6 shadow-sm border border-slate-600/30">
                 <AnimatedCounter
                   to={parseInt(t.social.stats.responseTime.replace(/[^0-9]/g, '')) || 3}
                   prefix="≤"
@@ -239,7 +239,7 @@ export default function SocialProof() {
                 <p className="text-slate-300 text-sm">{t.social.stats.responseTimeLabel}</p>
               </div>
               {/* Global Reach — spring scale-in (text) */}
-              <div className="bg-slate-900/50 rounded-md p-6 shadow-sm border border-slate-600/30">
+              <div className="bg-slate-900/50 rounded-xl p-6 shadow-sm border border-slate-600/30">
                 <motion.p
                   className="text-3xl font-bold text-purple-400 mb-1"
                   initial={{ scale: 0.6, opacity: 0 }}

@@ -260,7 +260,7 @@ export default function ProductsPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-10 border border-gray-100 hover:shadow-2xl hover:border-blue-100 transition-all duration-300 overflow-hidden"
+                className="group relative bg-gradient-to-br from-white to-gray-50 rounded-xl p-10 border border-gray-100 hover:shadow-md hover:border-blue-100 transition-all duration-300 overflow-hidden"
               >
                 {/* Background decoration */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full -mr-16 -mt-16 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
@@ -303,7 +303,7 @@ export default function ProductsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-md p-8 md:p-12 text-white text-center"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 md:p-12 text-white text-center"
           >
             <h2 className="text-3xl font-bold mb-4">{data.cta.title}</h2>
             <p className="text-lg mb-8 opacity-90">{data.cta.description}</p>

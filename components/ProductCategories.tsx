@@ -77,7 +77,7 @@ export default function ProductCategories({ products }: ProductCategoriesProps) 
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative bg-white rounded-md overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300"
+              className="group relative bg-white rounded-xl overflow-hidden border border-gray-100 border-l-4 border-l-blue-500 shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               {/* Image Area */}
               <div className="h-48 relative overflow-hidden bg-gray-100">

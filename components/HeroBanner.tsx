@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence, PanInfo, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence, PanInfo } from 'framer-motion';
 import { Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import Image from 'next/image';
@@ -39,26 +39,6 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [direction, setDirection] = useState(0);
-  const heroRef = useRef<HTMLDivElement>(null);
-
-  // Mouse parallax
-  const rawMouseX = useMotionValue(0.5);
-  const rawMouseY = useMotionValue(0.5);
-  const mouseX = useSpring(rawMouseX, { stiffness: 150, damping: 25 });
-  const mouseY = useSpring(rawMouseY, { stiffness: 150, damping: 25 });
-  // Image shifts opposite to mouse (depth) — small range
-  const imageX = useTransform(mouseX, [0, 1], [12, -12]);
-  const imageY = useTransform(mouseY, [0, 1], [8, -8]);
-  // Content shifts with mouse — even smaller
-  const contentX = useTransform(mouseX, [0, 1], [-6, 6]);
-  const contentY = useTransform(mouseY, [0, 1], [-4, 4]);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = heroRef.current?.getBoundingClientRect();
-    if (!rect) return;
-    rawMouseX.set((e.clientX - rect.left) / rect.width);
-    rawMouseY.set((e.clientY - rect.top) / rect.height);
-  };
 
   const slides = banners.map(banner => ({
     id: banner.id,
@@ -134,11 +114,7 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
   }
 
   return (
-    <section
-      ref={heroRef}
-      onMouseMove={handleMouseMove}
-      className="relative w-full overflow-hidden bg-gray-900"
-    >
+    <section className="relative w-full overflow-hidden bg-gray-900">
       <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-video min-h-[400px] sm:min-h-[500px] max-h-[80vh]">
         <AnimatePresence initial={false} custom={direction} mode="popLayout">
           <motion.div
@@ -159,7 +135,7 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
             className="absolute inset-0 cursor-grab active:cursor-grabbing"
           >
             {slides[currentSlide].image ? (
-              <motion.div className="absolute inset-0" style={{ x: imageX, y: imageY }}>
+              <div className="absolute inset-0">
                 <Image
                   src={slides[currentSlide].image}
                   alt={slides[currentSlide].title}
@@ -183,9 +159,9 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
                 />
                 {/* Constant dark tint for text legibility */}
                 <div className="absolute inset-0 bg-black/40 sm:bg-black/35 lg:bg-black/30" />
-              </motion.div>
+              </div>
             ) : (
-              <motion.div className="absolute inset-0 bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-900" style={{ x: imageX, y: imageY }}>
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-900">
                 <div className="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none">
                   <svg className="w-full h-full">
                     <filter id="noise">
@@ -194,7 +170,7 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
                     <rect width="100%" height="100%" filter="url(#noise)" />
                   </svg>
                 </div>
-              </motion.div>
+              </div>
             )}
           </motion.div>
         </AnimatePresence>
@@ -209,7 +185,6 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
                 animate="center"
                 exit="exit"
                 transition={{ duration: 0.5, ease: 'easeOut' }}
-                style={{ x: contentX, y: contentY }}
                 className="max-w-2xl pointer-events-auto"
               >
                 <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 lg:mb-6 leading-tight">

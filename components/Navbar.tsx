@@ -151,7 +151,7 @@ export default function Navbar() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-1 w-72 bg-white rounded-md shadow-xl border border-gray-100 py-2 z-50"
+                      className="absolute top-full left-0 mt-1 w-72 bg-white rounded-xl shadow-lg border border-gray-100 py-2 z-50"
                     >
                       {item.dropdown.map((dropdownItem, index) => (
                         <a
@@ -222,7 +222,7 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute right-0 top-full mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50"
+                    className="absolute right-0 top-full mt-2 w-48 bg-white rounded-xl shadow-lg border border-gray-100 py-1 z-50"
                   >
                     <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase border-b border-gray-100">
                       {t.language.title}

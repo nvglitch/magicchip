@@ -1,65 +1,26 @@
 'use client';
 
-import { useRef } from 'react';
-import { motion, useMotionValue, useSpring, useTransform, useMotionTemplate } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Check, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function FeaturedProduct() {
   const { t } = useLanguage();
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  // 3D tilt — track normalized mouse position
-  const rawRotateX = useMotionValue(0);
-  const rawRotateY = useMotionValue(0);
-  const rawShineX = useMotionValue(50);
-  const rawShineY = useMotionValue(50);
-  const rotateX = useSpring(rawRotateX, { stiffness: 180, damping: 22 });
-  const rotateY = useSpring(rawRotateY, { stiffness: 180, damping: 22 });
-  const shineX = useSpring(rawShineX, { stiffness: 120, damping: 25 });
-  const shineY = useSpring(rawShineY, { stiffness: 120, damping: 25 });
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = cardRef.current?.getBoundingClientRect();
-    if (!rect) return;
-    const x = (e.clientX - rect.left) / rect.width;   // 0..1
-    const y = (e.clientY - rect.top) / rect.height;    // 0..1
-    rawRotateX.set((y - 0.5) * -16);  // -8° to +8°
-    rawRotateY.set((x - 0.5) * 16);   // -8° to +8°
-    rawShineX.set(x * 100);
-    rawShineY.set(y * 100);
-  };
-
-  const handleMouseLeave = () => {
-    rawRotateX.set(0);
-    rawRotateY.set(0);
-    rawShineX.set(50);
-    rawShineY.set(50);
-  };
-
-  const shineBg = useMotionTemplate`radial-gradient(circle at ${shineX}% ${shineY}%, rgba(255,255,255,0.25) 0%, transparent 60%)`;
 
   return (
     <section id="solutions" className="py-20 bg-gradient-to-b from-blue-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Image Side — 3D tilt */}
+          {/* Image Side */}
           <motion.div
-            ref={cardRef}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="relative"
-            style={{ perspective: 600 }}
           >
-            <motion.div
-              className="relative rounded-lg overflow-hidden bg-gradient-to-br from-blue-100 to-indigo-100 shadow-xl ring-1 ring-blue-900/5"
-              style={{ rotateX, rotateY }}
-            >
+            <div className="relative rounded-lg overflow-hidden bg-gradient-to-br from-blue-100 to-indigo-100 shadow-xl ring-1 ring-blue-900/5">
               <Image
                 src="/MCAI35.png"
                 alt="MCAI35"
@@ -68,12 +29,7 @@ export default function FeaturedProduct() {
                 className="w-full h-auto object-cover"
                 priority
               />
-              {/* Shine overlay — follows mouse */}
-              <motion.div
-                className="absolute inset-0 pointer-events-none"
-                style={{ background: shineBg }}
-              />
-            </motion.div>
+            </div>
             <div className="mt-4 text-center">
               <p className="text-gray-400 text-sm">{t.featured.title}</p>
             </div>

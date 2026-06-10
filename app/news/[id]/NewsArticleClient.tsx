@@ -80,7 +80,7 @@ export default function NewsArticleClient({ article }: NewsArticleClientProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="bg-white rounded-lg shadow-sm overflow-hidden mb-8">
+            <div className="bg-white rounded-xl shadow-sm overflow-hidden mb-8 border border-gray-100 border-l-4 border-l-indigo-500">
               <img
                 src={article.image}
                 alt={title}
@@ -88,7 +88,7 @@ export default function NewsArticleClient({ article }: NewsArticleClientProps) {
               />
             </div>
 
-            <div className="bg-white rounded-lg shadow-sm p-8">
+            <div className="bg-white rounded-xl shadow-sm p-8 border border-gray-100 border-l-4 border-l-indigo-500">
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 leading-relaxed">
                   {excerpt}
