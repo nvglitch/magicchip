@@ -311,7 +311,7 @@ export default function ContactPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center p-6"
+                  className="text-center p-6 rounded-xl border border-blue-100 bg-white transition-all hover:-translate-y-1 hover:border-blue-300 hover:shadow-md"
                 >
                   <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-7 h-7 text-blue-600" />
@@ -334,7 +334,7 @@ export default function ContactPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="bg-gradient-to-r from-green-500 to-green-600 p-8 rounded-xl text-white"
+                className="bg-gradient-to-r from-teal-700 to-emerald-700 p-8 rounded-xl text-white shadow-lg shadow-teal-900/10"
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                   <div className="mb-4 md:mb-0">
@@ -342,11 +342,11 @@ export default function ContactPage() {
                       <MessageCircle className="w-8 h-8 mr-3" />
                       <h2 className="text-2xl font-bold">{data.whatsapp.title}</h2>
                     </div>
-                    <p className="text-green-100">{data.whatsapp.description}</p>
+                    <p className="text-teal-100">{data.whatsapp.description}</p>
                   </div>
                   <a
                     href="https://wa.me/8613392172330"
-                    className="inline-flex items-center px-6 py-3 bg-white text-green-600 font-medium rounded-md hover:bg-green-50 transition-colors self-start md:self-auto"
+                    className="inline-flex items-center px-6 py-3 bg-white text-emerald-700 font-medium rounded-md hover:bg-amber-50 transition-colors self-start md:self-auto"
                   >
                     <MessageSquare className="w-5 h-5 mr-2" />
                     {data.whatsapp.button}
@@ -369,9 +369,9 @@ export default function ContactPage() {
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ delay: 0.2, type: 'spring', stiffness: 200, damping: 15 }}
-                      className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6"
+                      className="w-20 h-20 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6"
                     >
-                      <CheckCircle className="w-10 h-10 text-green-600" />
+                      <CheckCircle className="w-10 h-10 text-teal-700" />
                     </motion.div>
                     <motion.h3
                       initial={{ opacity: 0, y: 10 }}
@@ -569,7 +569,7 @@ export default function ContactPage() {
                         disabled={isSubmitting}
                         whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
                         whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-                        className="w-full flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+                        className="w-full flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed shadow-lg shadow-blue-600/15"
                       >
                         {isSubmitting ? (
                           <motion.div

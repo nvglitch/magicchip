@@ -8,10 +8,10 @@ import { useParams } from 'next/navigation';
 import { useMemo } from 'react';
 
 const categoryData: Record<string, { icon: any; gradient: string; image: string }> = {
-  'industrial-mini-pc': { icon: Cpu, gradient: 'from-blue-600 to-blue-800', image: '/Industrial.png' },
-  'firewall-mini-pc': { icon: Shield, gradient: 'from-red-600 to-red-800', image: '/firewall.png' },
-  'desktop-mini-pc': { icon: Monitor, gradient: 'from-emerald-600 to-emerald-800', image: '/desktop.png' },
-  'firewall-server': { icon: Server, gradient: 'from-purple-600 to-purple-800', image: '/Firewall-Server.png' },
+  'industrial-mini-pc': { icon: Cpu, gradient: 'from-teal-600 to-emerald-700', image: '/Industrial.png' },
+  'firewall-mini-pc': { icon: Shield, gradient: 'from-rose-600 to-red-800', image: '/firewall.png' },
+  'desktop-mini-pc': { icon: Monitor, gradient: 'from-emerald-600 to-teal-800', image: '/desktop.png' },
+  'firewall-server': { icon: Server, gradient: 'from-amber-600 to-orange-800', image: '/Firewall-Server.png' },
 };
 
 const categoryNames: Record<string, Record<string, string>> = {
@@ -160,7 +160,7 @@ export default function CategoryPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#172033] via-[#123b43] to-[#172033] text-white py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full filter blur-3xl"></div>
           <div className="absolute bottom-10 right-20 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl"></div>
@@ -180,7 +180,7 @@ export default function CategoryPage() {
             transition={{ duration: 0.6 }}
             className="flex items-center gap-6"
           >
-            <div className={`w-20 h-20 bg-gradient-to-br ${catInfo?.gradient || 'from-blue-600 to-blue-800'} rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0`}>
+            <div className="w-20 h-20 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg shadow-teal-950/30 flex-shrink-0">
               <IconComponent className="w-10 h-10 text-white" />
             </div>
             <div>
@@ -201,11 +201,11 @@ export default function CategoryPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-gray-100"
+                className={`group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border ${index % 3 === 0 ? 'border-teal-200 hover:border-teal-400' : index % 3 === 1 ? 'border-amber-200 hover:border-amber-400' : 'border-rose-200 hover:border-rose-400'}`}
               >
                 <div className="flex flex-col md:flex-row">
                   {/* Product Image */}
-                  <div className="md:w-2/5 bg-slate-50 flex items-center justify-center p-8">
+                  <div className={`md:w-2/5 flex items-center justify-center p-8 ${index % 3 === 0 ? 'bg-teal-50/50' : index % 3 === 1 ? 'bg-amber-50/50' : 'bg-rose-50/40'}`}>
                     <div className="relative w-full aspect-square max-w-[300px] rounded-lg overflow-hidden bg-white border border-gray-100">
                       {product.image ? (
                         <img
@@ -230,7 +230,7 @@ export default function CategoryPage() {
                       {product.specs.map((spec, idx) => (
                         <span
                           key={idx}
-                          className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium"
+                          className={`px-4 py-2 rounded-lg text-sm font-medium ${idx % 3 === 0 ? 'bg-teal-50 text-teal-800' : idx % 3 === 1 ? 'bg-amber-50 text-amber-800' : 'bg-rose-50 text-rose-800'}`}
                         >
                           {spec}
                         </span>
@@ -239,7 +239,7 @@ export default function CategoryPage() {
 
                     <Link
                       href={`/products/${category}/${product.id}`}
-                      className="inline-flex items-center self-start px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all shadow-lg hover:shadow-xl group"
+                      className="inline-flex items-center self-start px-6 py-3 bg-teal-700 text-white rounded-xl font-semibold hover:bg-teal-800 transition-all shadow-lg shadow-teal-700/20 hover:shadow-xl group"
                     >
                       View Details
                       <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -259,7 +259,7 @@ export default function CategoryPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-xl p-10 md:p-16 text-center text-white relative overflow-hidden"
+            className="bg-gradient-to-br from-[#123b43] via-teal-800 to-[#6e4310] rounded-xl p-10 md:p-16 text-center text-white relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full -mr-20 -mt-20"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white opacity-10 rounded-full -ml-10 -mb-10"></div>
@@ -271,7 +271,7 @@ export default function CategoryPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-teal-800 rounded-xl font-semibold hover:bg-amber-50 transition-colors shadow-lg"
                 >
                   Contact Sales
                 </Link>
@@ -279,7 +279,7 @@ export default function CategoryPage() {
                   href="https://magicchip.en.alibaba.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-blue-500/30 text-white border border-white/30 rounded-xl font-semibold hover:bg-blue-500/50 transition-colors"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-amber-300/15 text-white border border-amber-200/40 rounded-xl font-semibold hover:bg-amber-300/25 transition-colors"
                 >
                   View on Alibaba
                   <ArrowRight className="w-5 h-5 ml-2" />

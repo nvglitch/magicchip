@@ -10,7 +10,7 @@ export default function FeaturedProduct() {
   const { t } = useLanguage();
 
   return (
-    <section id="solutions" className="py-20 bg-gradient-to-b from-blue-50 via-white to-blue-50 relative">
+    <section id="solutions" className="py-20 bg-gradient-to-b from-teal-50 via-white to-amber-50/50 relative">
       {/* Tech pattern overlay — beneath content, above gradient */}
       <div className="absolute inset-0 tech-pattern-overlay pointer-events-none" style={{ maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)' }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,7 +23,7 @@ export default function FeaturedProduct() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative rounded-lg overflow-hidden bg-gradient-to-br from-blue-100 to-indigo-100 shadow-xl ring-1 ring-blue-900/5">
+            <div className="relative rounded-lg overflow-hidden bg-gradient-to-br from-teal-100 via-white to-amber-100 shadow-xl ring-1 ring-teal-900/10">
               <Image
                 src="/MCAI35.png"
                 alt="MCAI35"
@@ -45,7 +45,7 @@ export default function FeaturedProduct() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-blue-600 font-semibold text-sm uppercase tracking-wide">
+            <span className="text-teal-700 font-semibold text-sm uppercase tracking-wide">
               {t.featured.badge}
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4">
@@ -66,7 +66,7 @@ export default function FeaturedProduct() {
                   transition={{ duration: 0.3, delay: index * 0.05 }}
                   className="flex items-center space-x-2"
                 >
-                  <Check className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                  <Check className="w-5 h-5 text-amber-500 flex-shrink-0" />
                   <span className="text-gray-700 text-sm">{feature}</span>
                 </motion.div>
               ))}
@@ -75,7 +75,7 @@ export default function FeaturedProduct() {
             {/* CTA */}
             <Link
               href="/products/desktop-mini-pc/mcai35"
-              className="group inline-flex items-center px-6 py-3 border-2 border-gray-900 text-gray-900 font-semibold rounded-md hover:bg-gray-900 hover:text-white hover:border-emerald-500 transition-all duration-300"
+              className="group inline-flex items-center px-6 py-3 border-2 border-teal-700 text-teal-800 font-semibold rounded-md hover:bg-teal-700 hover:text-white hover:border-teal-700 transition-all duration-300"
             >
               {t.featured.cta}
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />

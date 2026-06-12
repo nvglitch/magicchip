@@ -217,14 +217,50 @@ Content:
 
 Use this general style direction:
 
-- Top hero: dark slate/blue industrial gradient.
+- Top hero: dark ink and deep teal industrial gradient.
 - Other sections: white or light slate backgrounds.
 - Cards: white, thin border, restrained shadow.
 - Corners: use small-to-medium radius, such as `rounded-lg` or `rounded-xl`.
-- Accent color: blue, used sparingly for labels, icons, and hover states.
+- Primary accent: teal, used for technical labels, primary actions, and connectivity.
+- Secondary accent: amber, used for specification field names, operating ranges, and key data.
+- Supporting accent: coral or rose, used sparingly for feature-card differentiation and high-value details.
+- Mint or emerald may be used for reliability and system-status concepts.
 - Avoid large dark sections after the hero.
 - Avoid decorative blobs/orbs.
 - Avoid gray image boxes that do not match image dimensions.
+- Do not use one accent color for every link, icon, border, and button.
+
+## Color System
+
+Recommended semantic roles:
+
+```text
+Ink / dark background: #172033
+Technical teal:        #087f8c
+Soft teal surface:     #e4f5f4
+Specification amber:   #d88a16
+Soft amber surface:    #fff5df
+Supporting coral:      #d95d4f
+Soft coral surface:    #fff0ed
+Reliability mint:      #49a58d
+Neutral surface:       #f5f8f7
+Neutral divider:       #d9e4e1
+```
+
+Color responsibilities:
+
+- Teal: primary actions, category identity, technical/connectivity labels.
+- Amber: specification fields, operating range, highlighted hardware data.
+- Coral/rose: limited supporting emphasis; never dominate the page.
+- Ink: hero backgrounds and specification headers.
+- Light neutral/mint surfaces: separate sections without relying on gray alone.
+
+Specification rows must use color as well as typography:
+
+- Left field-name column: soft amber background, amber divider, dark amber text.
+- Right parameter-value column: very light teal background, dark teal/ink text.
+- Hover: slightly strengthen both surfaces and reveal the amber side accent.
+- Do not rely only on font weight or font size to distinguish field names from values.
 
 ## Image Container Rules
 

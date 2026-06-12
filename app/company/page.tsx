@@ -227,7 +227,7 @@ export default function CompanyPage() {
   return (
     <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
+        <section className="bg-gradient-to-r from-blue-950 via-blue-900 to-blue-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -269,7 +269,7 @@ export default function CompanyPage() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="text-center"
                 >
-                  <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">{stat.value}</div>
+                  <div className="text-4xl md:text-5xl font-bold text-amber-600 mb-2">{stat.value}</div>
                   <div className="text-gray-600">{stat.label}</div>
                 </motion.div>
               ))}
@@ -363,7 +363,7 @@ export default function CompanyPage() {
                     className={`flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                   >
                     <div className="flex-1 md:text-right pr-8">
-                      <div className="text-2xl font-bold text-blue-600">{item.year}</div>
+                      <div className="text-2xl font-bold text-amber-600">{item.year}</div>
                       <div className="font-semibold text-gray-900">{item.title}</div>
                       <div className="text-gray-600 text-sm">{item.description}</div>
                     </div>

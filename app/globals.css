@@ -2,8 +2,18 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --accent: #10b981; /* emerald-500 */
+  --foreground: #172033;
+  --brand-ink: #172033;
+  --brand-teal: #087f8c;
+  --brand-teal-soft: #e4f5f4;
+  --brand-amber: #d88a16;
+  --brand-amber-soft: #fff5df;
+  --brand-coral: #d95d4f;
+  --brand-coral-soft: #fff0ed;
+  --brand-mint: #49a58d;
+  --brand-surface: #f5f8f7;
+  --brand-line: #d9e4e1;
+  --accent: var(--brand-teal);
   --accent-foreground: #ffffff;
 }
 
@@ -57,7 +67,7 @@ html {
 
 /* Selection color */
 ::selection {
-  background: rgba(37, 99, 235, 0.2);
+  background: rgba(8, 127, 140, 0.22);
   color: inherit;
 }
 
@@ -98,16 +108,43 @@ html {
   background-color: #ffffff;
   background-image:
     /* fine dot matrix */
-    radial-gradient(circle at 1px 1px, rgba(59,130,246,0.07) 0.5px, transparent 0.5px),
+    radial-gradient(circle at 1px 1px, rgba(8,127,140,0.08) 0.5px, transparent 0.5px),
     /* sparse anchor dots */
-    radial-gradient(circle at center, rgba(59,130,246,0.035) 1px, transparent 1px);
+    radial-gradient(circle at center, rgba(216,138,22,0.04) 1px, transparent 1px);
   background-size: 16px 16px, 64px 64px;
 }
 
 /* Pattern-only — no background color, for use as overlay on gradients */
 .tech-pattern-overlay {
   background-image:
-    radial-gradient(circle at 1px 1px, rgba(59,130,246,0.07) 0.5px, transparent 0.5px),
-    radial-gradient(circle at center, rgba(59,130,246,0.035) 1px, transparent 1px);
+    radial-gradient(circle at 1px 1px, rgba(73,165,141,0.12) 0.5px, transparent 0.5px),
+    radial-gradient(circle at center, rgba(216,138,22,0.06) 1px, transparent 1px);
   background-size: 16px 16px, 64px 64px;
+}
+
+.brand-kicker {
+  color: var(--brand-teal);
+}
+
+.brand-link {
+  color: var(--brand-teal);
+}
+
+.brand-link:hover {
+  color: #075f69;
+}
+
+.brand-button-primary {
+  background: var(--brand-teal);
+  color: #ffffff;
+}
+
+.brand-button-primary:hover {
+  background: #076b76;
+}
+
+.brand-button-secondary {
+  background: var(--brand-amber-soft);
+  color: #8c5709;
+  border: 1px solid #f0cd8b;
 }

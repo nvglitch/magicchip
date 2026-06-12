@@ -139,7 +139,7 @@ export default function Navbar() {
                   <span className="relative">
                     {item.label}
                     {/* Hover underline effect */}
-                    <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full" />
+                    <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-teal-600 transition-all duration-300 group-hover:w-full" />
                   </span>
                 </a>
 
@@ -161,8 +161,8 @@ export default function Navbar() {
                           rel={dropdownItem.external ? 'noopener noreferrer' : undefined}
                           className={`flex items-start px-4 py-3 transition-colors ${
                             dropdownItem.description
-                              ? 'hover:bg-gray-50'
-                              : 'hover:bg-blue-50 text-blue-600 font-medium border-t border-gray-100 mt-2 pt-3'
+                              ? 'hover:bg-teal-50/70'
+                              : 'hover:bg-amber-50 text-amber-700 font-medium border-t border-gray-100 mt-2 pt-3'
                           }`}
                         >
                           {dropdownItem.icon && (
@@ -181,7 +181,7 @@ export default function Navbar() {
                             )}
                           </div>
                           {!dropdownItem.description && (
-                            <ChevronRight className="w-4 h-4 ml-2 text-blue-600" />
+                            <ChevronRight className="w-4 h-4 ml-2 text-amber-600" />
                           )}
                         </a>
                       ))}
@@ -241,7 +241,7 @@ export default function Navbar() {
                           <span>{lang.label}</span>
                         </span>
                         {language === lang.code && (
-                          <Check className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                          <Check className="w-4 h-4 text-teal-600 flex-shrink-0" />
                         )}
                       </button>
                     ))}
@@ -311,7 +311,7 @@ export default function Navbar() {
                       }}
                       className={`w-full flex items-center justify-between px-3 py-2.5 text-sm rounded-md transition-colors touch-manipulation ${
                         language === lang.code
-                          ? 'bg-blue-50 text-blue-600 font-medium'
+                          ? 'bg-teal-50 text-teal-700 font-medium'
                           : 'text-gray-700 hover:bg-gray-50'
                       }`}
                     >
@@ -343,7 +343,7 @@ export default function Navbar() {
                           href={dropdownItem.href}
                           target={dropdownItem.external ? '_blank' : '_self'}
                           rel={dropdownItem.external ? 'noopener noreferrer' : undefined}
-                          className="flex items-center py-2 text-sm text-gray-600 hover:text-blue-600 transition-colors touch-manipulation"
+                          className="flex items-center py-2 text-sm text-gray-600 hover:text-teal-700 transition-colors touch-manipulation"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
                           {dropdownItem.icon && (
@@ -363,7 +363,7 @@ export default function Navbar() {
 
       {/* Scroll progress bar */}
       <motion.div
-        className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-500 via-indigo-500 to-blue-400 origin-left"
+        className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-teal-500 via-amber-400 to-rose-500 origin-left"
         style={{ scaleX }}
       />
     </nav>

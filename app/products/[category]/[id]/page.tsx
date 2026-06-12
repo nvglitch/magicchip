@@ -42,10 +42,10 @@ const mcipcb12ImageBase = '/MCIPCB12/%E4%B8%BB%E5%9B%BE';
 const mcipcd3ImageBase = '/MCIPCD3/%E4%B8%BB%E5%9B%BE';
 
 const categoryData: Record<string, { icon: keyof typeof iconMap; gradient: string; accent: string }> = {
-  'industrial-mini-pc': { icon: 'Cpu', gradient: 'from-slate-900 via-blue-950 to-slate-900', accent: 'blue' },
-  'firewall-mini-pc': { icon: 'Shield', gradient: 'from-slate-900 via-red-950 to-slate-900', accent: 'red' },
-  'desktop-mini-pc': { icon: 'Monitor', gradient: 'from-slate-900 via-emerald-950 to-slate-900', accent: 'emerald' },
-  'firewall-server': { icon: 'Server', gradient: 'from-slate-900 via-violet-950 to-slate-900', accent: 'violet' },
+  'industrial-mini-pc': { icon: 'Cpu', gradient: 'from-[#172033] via-[#123b43] to-[#172033]', accent: 'teal' },
+  'firewall-mini-pc': { icon: 'Shield', gradient: 'from-[#172033] via-[#543431] to-[#172033]', accent: 'coral' },
+  'desktop-mini-pc': { icon: 'Monitor', gradient: 'from-[#172033] via-[#29473f] to-[#172033]', accent: 'mint' },
+  'firewall-server': { icon: 'Server', gradient: 'from-[#172033] via-[#4b3d2a] to-[#172033]', accent: 'amber' },
 };
 
 const products: Record<string, ProductDetail> = {
@@ -323,7 +323,7 @@ export default function ProductDetailPage() {
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Product Not Found</h1>
-          <Link href="/products" className="text-blue-600 hover:underline">
+          <Link href="/products" className="text-teal-700 hover:underline">
             Back to Products
           </Link>
         </div>
@@ -343,7 +343,7 @@ export default function ProductDetailPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-[1.02fr_0.98fr] gap-10 lg:gap-14 items-center">
             <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }}>
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-blue-100 mb-6">
+              <div className="inline-flex items-center gap-2 rounded-full border border-teal-200/30 bg-teal-300/10 px-4 py-2 text-sm text-teal-100 mb-6">
                 <CategoryIcon className="w-4 h-4" />
                 Industrial Mini PC
               </div>
@@ -353,7 +353,7 @@ export default function ProductDetailPage() {
 
               <div className="grid grid-cols-2 gap-3 mt-8 max-w-2xl">
                 {product.highlights.map((item) => (
-                  <div key={item} className="rounded-lg border border-white/10 bg-white/10 px-4 py-3 text-sm font-medium text-white">
+                  <div key={item} className="rounded-lg border border-amber-200/20 bg-amber-200/10 px-4 py-3 text-sm font-medium text-amber-50">
                     {item}
                   </div>
                 ))}
@@ -365,7 +365,7 @@ export default function ProductDetailPage() {
                 type="button"
                 onClick={() => setPreviewImage(gallery[0])}
                 aria-label={`Enlarge ${product.name} main view`}
-                className="group block w-full cursor-zoom-in rounded-lg bg-white shadow-2xl shadow-blue-950/30 overflow-hidden transition-transform duration-300 hover:scale-[1.015] hover:shadow-blue-950/45"
+                className="group block w-full cursor-zoom-in rounded-lg bg-white shadow-2xl shadow-teal-950/30 ring-1 ring-amber-200/30 overflow-hidden transition-transform duration-300 hover:scale-[1.015] hover:shadow-teal-950/45"
               >
                 <img src={gallery[0]} alt={`${product.name} main view`} className="block w-full h-auto transition-transform duration-500 group-hover:scale-[1.025]" />
               </button>
@@ -375,10 +375,10 @@ export default function ProductDetailPage() {
       </section>
 
       {detailImages.length > 0 && (
-        <section className="py-16 bg-slate-50">
+        <section className="py-16 bg-[#f3f8f6]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-9 text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 mb-3">Product Gallery</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-700 mb-3">Product Gallery</p>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-950">Explore {product.name} from every angle</h2>
               <p className="mt-3 text-slate-600">Different product views highlight the enclosure design, interface layout, and installation details.</p>
             </div>
@@ -389,7 +389,7 @@ export default function ProductDetailPage() {
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.45, delay: index * 0.08 }}
-                  className="rounded-lg border border-slate-200 bg-white shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                  className="rounded-lg border border-teal-100 bg-white shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:shadow-lg"
                 >
                   <button
                     type="button"
@@ -409,33 +409,33 @@ export default function ProductDetailPage() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10 text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 mb-3">Technical Specifications</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-700 mb-3">Technical Specifications</p>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-950">Industrial-grade configuration details</h2>
           </div>
 
-          <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }} className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-lg shadow-slate-200/60">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 bg-slate-950 px-6 md:px-8 py-6 text-white">
+          <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }} className="overflow-hidden rounded-xl border border-teal-200 bg-white shadow-lg shadow-teal-900/10">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 bg-gradient-to-r from-[#172033] via-[#123b43] to-[#172033] px-6 md:px-8 py-6 text-white">
               <div>
-                <p className="text-sm uppercase tracking-[0.18em] text-blue-200 mb-2">{product.name} Specification Matrix</p>
+                <p className="text-sm uppercase tracking-[0.18em] text-teal-200 mb-2">{product.name} Specification Matrix</p>
                 <h3 className="text-2xl font-bold">Brochure-based hardware parameters</h3>
               </div>
-              <div className="rounded-lg border border-white/15 bg-white/10 px-4 py-3 text-left md:text-right">
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-300">Operating Range</p>
-                <p className="text-lg font-semibold">{product.operatingRange || 'Industrial rated'}</p>
+              <div className="rounded-lg border border-amber-300/30 bg-amber-300/10 px-4 py-3 text-left md:text-right">
+                <p className="text-xs uppercase tracking-[0.16em] text-amber-200">Operating Range</p>
+                <p className="text-lg font-semibold text-amber-50">{product.operatingRange || 'Industrial rated'}</p>
               </div>
             </div>
 
             <div>
               {product.specs.map((spec, index) => (
-                <div key={spec.label} className={`group grid grid-cols-1 md:grid-cols-[240px_1fr] border-t border-slate-200 transition-colors hover:bg-blue-50/40 ${index % 2 === 0 ? 'bg-white' : 'bg-slate-50/60'}`}>
-                  <div className="relative flex items-center gap-3 border-b border-slate-100 px-5 py-4 md:border-b-0 md:border-r md:border-slate-200 md:px-6">
-                    <div className="absolute left-0 top-0 h-full w-1 bg-blue-600 opacity-0 transition-opacity group-hover:opacity-100" />
-                    <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-md bg-white text-[11px] font-bold text-slate-500 ring-1 ring-slate-200">
+                <div key={spec.label} className={`group grid grid-cols-1 md:grid-cols-[240px_1fr] border-t border-teal-100 transition-colors ${index % 2 === 0 ? 'bg-white' : 'bg-[#f8fbfa]'}`}>
+                  <div className="relative flex items-center gap-3 border-b border-amber-100 bg-amber-50/80 px-5 py-4 transition-colors group-hover:bg-amber-100/80 md:border-b-0 md:border-r md:border-amber-200 md:px-6">
+                    <div className="absolute left-0 top-0 h-full w-1 bg-amber-500 opacity-60 transition-all group-hover:w-1.5 group-hover:opacity-100" />
+                    <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-md bg-white text-[11px] font-bold text-amber-700 ring-1 ring-amber-200">
                       {String(index + 1).padStart(2, '0')}
                     </span>
-                    <h4 className="text-sm font-bold uppercase tracking-wide text-slate-600">{spec.label}</h4>
+                    <h4 className="text-sm font-bold uppercase tracking-wide text-amber-900">{spec.label}</h4>
                   </div>
-                  <p className="px-5 py-4 text-slate-950 leading-relaxed md:px-7">{spec.value}</p>
+                  <p className="bg-teal-50/35 px-5 py-4 text-[#173f45] leading-relaxed transition-colors group-hover:bg-teal-50 md:px-7">{spec.value}</p>
                 </div>
               ))}
             </div>
@@ -443,11 +443,11 @@ export default function ProductDetailPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-[#f5f8f7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] gap-10 items-start">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 mb-3">Product Advantages</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-700 mb-3">Product Advantages</p>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-950 mb-5">Ready for control cabinets, edge gateways, and machine-side computing</h2>
               <p className="text-slate-600 leading-relaxed">
                 {product.advantageSummary || product.description}
@@ -463,9 +463,9 @@ export default function ProductDetailPage() {
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.45, delay: index * 0.08 }}
-                    className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all"
+                    className="rounded-xl border border-teal-100 bg-white p-6 shadow-sm hover:-translate-y-1 hover:border-amber-300 hover:shadow-md transition-all"
                   >
-                    <div className="w-11 h-11 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center mb-5 ring-1 ring-blue-100">
+                    <div className={`w-11 h-11 rounded-lg flex items-center justify-center mb-5 ring-1 ${index === 0 ? 'bg-teal-50 text-teal-700 ring-teal-200' : index === 1 ? 'bg-amber-50 text-amber-700 ring-amber-200' : 'bg-rose-50 text-rose-700 ring-rose-200'}`}>
                       <FeatureIcon className="w-6 h-6" />
                     </div>
                     <h3 className="text-lg font-bold text-slate-950 mb-2">{feature.title}</h3>
@@ -484,7 +484,7 @@ export default function ProductDetailPage() {
                   initial={{ opacity: 0, y: 18 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                  className={`overflow-hidden rounded-xl border bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${index % 2 === 0 ? 'border-teal-200 hover:border-teal-400' : 'border-amber-200 hover:border-amber-400'}`}
                 >
                   <button
                     type="button"
@@ -510,11 +510,11 @@ export default function ProductDetailPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-950 mb-4">Interested in {product.name}?</h2>
           <p className="text-lg text-slate-600 mb-8">Contact our team for pricing, lifecycle planning, customization, and bulk order support.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/20">
+            <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-teal-700 text-white rounded-lg font-semibold hover:bg-teal-800 transition-colors shadow-lg shadow-teal-700/20">
               Contact Sales
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <a href="https://magicchip.en.alibaba.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 bg-slate-100 text-slate-800 rounded-lg font-semibold hover:bg-slate-200 transition-colors">
+            <a href="https://magicchip.en.alibaba.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 bg-amber-50 text-amber-800 border border-amber-200 rounded-lg font-semibold hover:bg-amber-100 transition-colors">
               View on Alibaba
             </a>
           </div>

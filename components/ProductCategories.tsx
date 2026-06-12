@@ -38,6 +38,12 @@ function getLocalizedText(text: MultiLangText, language: string): string {
 
 export default function ProductCategories({ products }: ProductCategoriesProps) {
   const { t, language } = useLanguage();
+  const accents = [
+    { border: 'border-l-teal-500', link: 'text-teal-700 hover:text-teal-800', wash: 'group-hover:bg-teal-950/10' },
+    { border: 'border-l-amber-500', link: 'text-amber-700 hover:text-amber-800', wash: 'group-hover:bg-amber-950/10' },
+    { border: 'border-l-rose-500', link: 'text-rose-700 hover:text-rose-800', wash: 'group-hover:bg-rose-950/10' },
+    { border: 'border-l-emerald-500', link: 'text-emerald-700 hover:text-emerald-800', wash: 'group-hover:bg-emerald-950/10' },
+  ];
 
   const categories = products.map(product => {
     return {
@@ -77,7 +83,7 @@ export default function ProductCategories({ products }: ProductCategoriesProps) 
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative bg-white rounded-xl overflow-hidden border border-gray-100 border-l-4 border-l-blue-500 shadow-sm hover:shadow-md transition-shadow duration-300"
+              className={`group relative bg-white rounded-xl overflow-hidden border border-gray-100 border-l-4 ${accents[index % accents.length].border} shadow-sm hover:shadow-md transition-shadow duration-300`}
             >
               {/* Image Area */}
               <div className="h-48 relative overflow-hidden bg-gray-100">
@@ -91,7 +97,7 @@ export default function ProductCategories({ products }: ProductCategoriesProps) 
                   />
                 )}
                 {/* Scale effect on hover */}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+                <div className={`absolute inset-0 bg-black/0 ${accents[index % accents.length].wash} transition-colors duration-300`} />
               </div>
 
               {/* Content */}
@@ -104,7 +110,7 @@ export default function ProductCategories({ products }: ProductCategoriesProps) 
                 </p>
                 <Link
                   href={`/products/${category.id}`}
-                  className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors group/link"
+                  className={`inline-flex items-center font-medium transition-colors group/link ${accents[index % accents.length].link}`}
                 >
                   {t.products.learnMore}
                   <ArrowRight className="w-4 h-4 ml-2 transform group-hover/link:translate-x-1 transition-transform" />
