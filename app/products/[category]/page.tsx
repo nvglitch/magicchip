@@ -87,6 +87,13 @@ const categoryDescriptions: Record<string, Record<string, string>> = {
 const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: string; image: string; specs: string[] }>> = {
   'industrial-mini-pc': [
     {
+      id: 'mcipcb13',
+      name: 'MCIPCB13',
+      tagline: 'Compact industrial box PC with flexible Intel Core platform support',
+      image: '/MCIPCB13/%E4%B8%BB%E5%9B%BE/1.jpg',
+      specs: ['4th-13th Gen Intel Core', 'Dual GbE LAN', '8x USB Ports', '-20°C to +60°C'],
+    },
+    {
       id: 'mcai35',
       name: 'MCAI35',
       tagline: 'High-performance AI mini PC powered by Strix Halo platform',
@@ -94,11 +101,11 @@ const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: 
       specs: ['AMD Strix Halo', 'Up to 128GB LPDDR5x', 'Quad-Display Support', '50 TOPs NPU'],
     },
     {
-      id: 'mcai36',
-      name: 'MCAI36',
-      tagline: 'Industrial Edge Computing Mini PC with Intel Core i7',
-      image: '/Industrial.png',
-      specs: ['Intel Core i7-1260P', 'Up to 32GB DDR4', 'Triple Display', '-20°C to 60°C'],
+      id: 'mcipcb12',
+      name: 'MCIPCB12',
+      tagline: 'Compact fanless industrial mini PC with triple-display support',
+      image: '/MCIPCB12/%E4%B8%BB%E5%9B%BE/1.jpg',
+      specs: ['Intel Elkhart Lake / Alder Lake-N', 'Dual GbE LAN', '2x HDMI + 1x DP', '-20°C to +60°C'],
     },
   ],
   'firewall-mini-pc': [
@@ -187,16 +194,23 @@ export default function CategoryPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-gray-100"
+                className="group bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-gray-100"
               >
                 <div className="flex flex-col md:flex-row">
                   {/* Product Image */}
-                  <div className="md:w-2/5 bg-gray-100 flex items-center justify-center p-8">
-                    <div className="relative w-full aspect-square max-w-[280px]">
-                      <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl" />
-                      <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                        <IconComponent className="w-24 h-24 opacity-30" />
-                      </div>
+                  <div className="md:w-2/5 bg-slate-50 flex items-center justify-center p-8">
+                    <div className="relative w-full aspect-square max-w-[300px] rounded-lg overflow-hidden bg-white border border-gray-100">
+                      {product.image ? (
+                        <img
+                          src={product.image}
+                          alt={product.name}
+                          className="h-full w-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 flex items-center justify-center text-gray-400">
+                          <IconComponent className="w-24 h-24 opacity-30" />
+                        </div>
+                      )}
                     </div>
                   </div>
 

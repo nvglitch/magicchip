@@ -1,135 +1,279 @@
 'use client';
 
-import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { motion } from 'framer-motion';
-import { ArrowRight, ChevronLeft, Cpu, Shield, Monitor, Server, CheckCircle, Zap, Layers } from 'lucide-react';
+import {
+  ArrowRight,
+  CheckCircle,
+  ChevronLeft,
+  Cpu,
+  HardDrive,
+  Layers,
+  Monitor,
+  Network,
+  Server,
+  Shield,
+  Thermometer,
+  Usb,
+  Zap,
+} from 'lucide-react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
-const categoryData: Record<string, { icon: any; gradient: string }> = {
-  'industrial-mini-pc': { icon: Cpu, gradient: 'from-blue-600 to-blue-800' },
-  'firewall-mini-pc': { icon: Shield, gradient: 'from-red-600 to-red-800' },
-  'desktop-mini-pc': { icon: Monitor, gradient: 'from-emerald-600 to-emerald-800' },
-  'firewall-server': { icon: Server, gradient: 'from-purple-600 to-purple-800' },
+type ProductSpec = { label: string; value: string };
+type ProductFeature = { icon: keyof typeof iconMap; title: string; description: string };
+type ProductCard = { image: string; title: string; description: string };
+type ProductDetail = {
+  name: string;
+  tagline: string;
+  description: string;
+  images: string[];
+  galleryImages?: string[];
+  specs: ProductSpec[];
+  highlights: string[];
+  features: ProductFeature[];
+  sellingPoints?: ProductCard[];
+  advantageSummary?: string;
+  operatingRange?: string;
 };
 
-const sampleProducts: Record<string, { name: string; tagline: string; description: string; specs: { label: string; value: string }[]; features: { icon: string; title: string; description: string }[] }> = {
-  'mcai35': {
+const mcipcb13ImageBase = '/MCIPCB13/%E4%B8%BB%E5%9B%BE';
+const mcipcb12ImageBase = '/MCIPCB12/%E4%B8%BB%E5%9B%BE';
+
+const categoryData: Record<string, { icon: keyof typeof iconMap; gradient: string; accent: string }> = {
+  'industrial-mini-pc': { icon: 'Cpu', gradient: 'from-slate-900 via-blue-950 to-slate-900', accent: 'blue' },
+  'firewall-mini-pc': { icon: 'Shield', gradient: 'from-slate-900 via-red-950 to-slate-900', accent: 'red' },
+  'desktop-mini-pc': { icon: 'Monitor', gradient: 'from-slate-900 via-emerald-950 to-slate-900', accent: 'emerald' },
+  'firewall-server': { icon: 'Server', gradient: 'from-slate-900 via-violet-950 to-slate-900', accent: 'violet' },
+};
+
+const products: Record<string, ProductDetail> = {
+  mcipcb13: {
+    name: 'MCIPCB13',
+    tagline: 'Industrial Mini PC for dependable multi-I/O edge deployment',
+    description:
+      'MCIPCB13 is a compact industrial box PC built for automation, machine control, embedded gateway, and factory workstation scenarios. It combines broad Intel Core platform compatibility with dual LAN, rich USB and COM connectivity, wide voltage input, and a rugged operating temperature range.',
+    images: [
+      `${mcipcb13ImageBase}/1.jpg`,
+    ],
+    galleryImages: [`${mcipcb13ImageBase}/2.jpg`, `${mcipcb13ImageBase}/3.jpg`, `${mcipcb13ImageBase}/4.jpg`],
+    highlights: ['Intel Core i3/i5/i7 options', '2 x GbE RJ45 LAN', '4 x USB 3.0 + 4 x USB 2.0', '193.9 x 127 x 57.2 mm'],
+    specs: [
+      { label: 'Model', value: 'MCIPCB13' },
+      { label: 'CPU', value: 'Optional Intel 4th/5th/6th/7th/8th/10th Gen Core i3/i5/i7 CPU' },
+      { label: 'Video', value: '1 x HDMI, 1 x VGA (or HDMI)' },
+      { label: 'RAM', value: '4th Gen: 1 x DDR3L SODIMM, up to 8GB; 6th/7th/8th Gen: 1 x DDR4 SODIMM, up to 16GB; 8th/10th Gen: 2 x DDR4 SODIMM, up to 32GB; 12th/13th Gen: 1 x DDR5 SODIMM, up to 64GB' },
+      { label: 'USB', value: '4 x USB 3.0, 4 x USB 2.0' },
+      { label: 'Power Input', value: 'DC 12V-19V power input' },
+      { label: 'NIC', value: '2 x GbE RJ45 Realtek 8111H' },
+      { label: 'COM', value: '2 x DB9 COM' },
+      { label: 'Storage', value: '4th Gen: 1 x mSATA; 6th/7th/8th/10th/12th/13th Gen: 1 x M.2 2280 supporting SATA and NVMe; 1 x 2.5-inch HDD/SSD' },
+      { label: 'Expansion', value: '1 x Mini-PCIe half/full card with SIM slot, supports 3G/4G, WiFi/Bluetooth; supports watchdog and diskless boot' },
+      { label: 'Front I/O', value: '1 x Power button, 4 x USB 3.0, 4 x USB 2.0, 2 x DB9 COM (COM1, COM2)' },
+      { label: 'Rear I/O', value: '1 x DC power input, 2 x GbE RJ45 LAN, 1 x HDMI, 1 x VGA, 1 x earphone jack, 1 x microphone, 2 x antenna connectors for WiFi/3G/4G' },
+      { label: 'System', value: 'Windows 7/8/10, WES 7/10, Linux' },
+      { label: 'Working Environment', value: 'Working temperature: -20°C to +60°C; storage temperature: -30°C to +70°C; storage humidity: 10%-90% @30°C, non-condensing' },
+      { label: 'Size', value: '193.9 x 127 x 57.2 mm' },
+    ],
+    features: [
+      { icon: 'Cpu', title: 'Flexible Intel Core Platform', description: 'Covers multiple Intel Core generations so projects can balance cost, lifecycle, and performance.' },
+      { icon: 'Network', title: 'Industrial Connectivity', description: 'Dual Gigabit LAN, dual DB9 COM, and eight USB ports support controllers, sensors, cameras, and peripherals.' },
+      { icon: 'Thermometer', title: 'Wide Temperature Operation', description: 'Designed for -20°C to +60°C operation in demanding industrial and edge environments.' },
+    ],
+    sellingPoints: [
+      {
+        image: `${mcipcb13ImageBase}/5.jpg`,
+        title: 'Dense I/O in a compact body',
+        description: 'Front and rear interfaces are arranged for practical cabinet, kiosk, and machine-side installation without wasting panel space.',
+      },
+      {
+        image: `${mcipcb13ImageBase}/6.jpg`,
+        title: 'Built for long-running deployments',
+        description: 'Wide-voltage input, expandable storage, wireless expansion, watchdog support, and Linux/Windows compatibility help simplify field maintenance.',
+      },
+    ],
+    advantageSummary: 'MCIPCB13 focuses on the interfaces and durability industrial buyers usually need first: broad CPU options, legacy and modern I/O, resilient environmental ratings, and flexible storage expansion in a compact enclosure.',
+    operatingRange: '-20°C to +60°C',
+  },
+  mcai35: {
     name: 'MCAI35',
     tagline: 'High-performance AI mini PC powered by Strix Halo platform',
-    description: 'The MCAI35 is a flagship AI mini PC featuring AMD\'s Strix Halo platform with integrated graphics and neural processing unit. Designed for edge computing, AI workloads, and high-performance industrial applications.',
+    description: 'A flagship AI mini PC for edge computing, AI workloads, and high-performance industrial applications.',
+    images: ['/MCAI35.png'],
+    highlights: ['AMD Strix Halo', '50 TOPs NPU', 'Quad display', 'Dual USB4'],
     specs: [
       { label: 'Processor', value: 'AMD Strix Halo (120W/132W)' },
-      { label: 'Graphics', value: 'Up to 40 Graphics Cores' },
-      { label: 'NPU', value: '50 TOPs AI Performance' },
+      { label: 'Graphics', value: 'Up to 40 graphics cores' },
+      { label: 'NPU', value: '50 TOPs AI performance' },
       { label: 'Memory', value: 'Up to 128GB LPDDR5x 8000MT/s' },
-      { label: 'Storage', value: 'Dual M.2 2280 PCIe×4 SSD' },
-      { label: 'Display', value: 'Quad-Display: HDMI 2.1 FRL + DP 1.4' },
-      { label: 'USB', value: 'Dual USB4 (40Gbps)' },
+      { label: 'Storage', value: 'Dual M.2 2280 PCIe x4 SSD' },
+      { label: 'Display', value: 'Quad-display: HDMI 2.1 FRL + DP 1.4' },
+      { label: 'USB', value: 'Dual USB4 40Gbps' },
       { label: 'Network', value: '2.5G LAN RJ45 + WiFi/BT' },
-      { label: 'Power', value: '350W Internal Flex PSU' },
+      { label: 'Power', value: '350W internal Flex PSU or 240W DC-IN' },
     ],
     features: [
-      { icon: 'Cpu', title: 'AI Performance', description: '50 TOPs NPU for edge AI workloads' },
-      { icon: 'Monitor', title: 'Quad Display', description: 'Support up to 4 simultaneous displays' },
-      { icon: 'Zap', title: 'High Speed', description: 'Dual USB4 40Gbps ports' },
+      { icon: 'Cpu', title: 'AI Performance', description: '50 TOPs NPU for edge AI workloads.' },
+      { icon: 'Monitor', title: 'Quad Display', description: 'Support up to four simultaneous displays.' },
+      { icon: 'Zap', title: 'High Speed', description: 'Dual USB4 40Gbps ports for demanding peripherals.' },
     ],
   },
-  'mcai36': {
-    name: 'MCAI36',
-    tagline: 'Industrial Edge Computing Mini PC with Intel Core i7',
-    description: 'The MCAI36 is a rugged industrial mini PC powered by Intel Core i7-1260P processor. Built for edge computing, machine vision, and industrial IoT applications.',
+  mcipcb12: {
+    name: 'MCIPCB12',
+    tagline: 'Compact fanless industrial mini PC with rich I/O and triple-display support',
+    description: 'MCIPCB12 is a compact industrial mini PC designed for automation, digital signage, embedded gateways, and machine-side control. It combines efficient Intel Elkhart Lake or Alder Lake-N processors with dual Gigabit LAN, dual RS232, flexible storage, and triple-display output.',
+    images: [`${mcipcb12ImageBase}/1.jpg`],
+    galleryImages: [
+      `${mcipcb12ImageBase}/1.jpg`,
+      `${mcipcb12ImageBase}/2.jpg`,
+      `${mcipcb12ImageBase}/3.jpg`,
+    ],
+    highlights: ['Intel Elkhart Lake / Alder Lake-N', '2 x HDMI + 1 x DP', 'Dual GbE LAN', '135 x 127 x 38.7 mm'],
     specs: [
-      { label: 'Processor', value: 'Intel Core i7-1260P (12C/16T)' },
-      { label: 'Memory', value: 'Up to 32GB DDR4-3200' },
-      { label: 'Storage', value: 'M.2 2280 NVMe SSD' },
-      { label: 'Display', value: 'Triple Display: HDMI 2.0 + DP 1.2 + VGA' },
-      { label: 'USB', value: '4× USB 3.2 Gen2 + 2× USB 2.0' },
-      { label: 'Network', value: 'Dual 2.5G LAN + WiFi 6E' },
-      { label: 'Serial', value: '2× RS232/485 + 1× RS232' },
-      { label: 'Power', value: '12-24V DC Wide Input' },
-      { label: 'Operating Temp', value: '-20°C to 60°C' },
+      { label: 'Model', value: 'MCIPCB12' },
+      { label: 'CPU', value: 'Intel Elkhart Lake J6412/J6413/J6426; Intel Alder Lake-N N95/N100/N200/N300' },
+      { label: 'Video', value: '2 x HDMI 1.4, 1 x DP 1.2' },
+      { label: 'Graphics', value: 'Intel UHD Graphics' },
+      { label: 'RAM', value: '1 x DDR4 SO-DIMM slot, maximum 16GB' },
+      { label: 'USB', value: '2 x USB 3.0, 2 x USB 2.0' },
+      { label: 'Power Input', value: 'DC 12V' },
+      { label: 'NIC', value: '2 x Realtek RTL8111H Gigabit LAN' },
+      { label: 'COM', value: '2 x DB9 RS232 COM' },
+      { label: 'Storage', value: '1 x M.2 2280 NVMe, 1 x SATA 3.0, 1 x mSATA 3.0' },
+      { label: 'Expansion', value: '1 x M.2 2230 supporting WiFi and Bluetooth; watchdog; network wake-up / PXE' },
+      { label: 'Front I/O', value: '2 x USB 3.0, 2 x USB 2.0, 2 x DB9 RS232 COM, 1 x power button' },
+      { label: 'Rear I/O', value: '2 x RJ45 Gigabit LAN, 1 x DC 12V, 2 x HDMI 1.4, 1 x DP 1.2, 1 x microphone, 1 x speaker' },
+      { label: 'Internal I/O', value: '1 x SATA 3.0 slot, 1 x M.2 SSD slot, 1 x mSATA 3.0 slot, 1 x DDR4 SO-DIMM slot, 1 x M.2 2230 slot, 1 x CMOS battery' },
+      { label: 'BIOS', value: 'AMI UEFI BIOS' },
+      { label: 'System', value: 'Windows 10, WES 10, Linux' },
+      { label: 'Working Environment', value: 'Working temperature: -20°C to +60°C; storage temperature: -30°C to +70°C; relative humidity: 10%-90%, non-condensing' },
+      { label: 'Size', value: '135 x 127 x 38.7 mm' },
+      { label: 'Weight', value: 'Net 0.8 kg; gross 1 kg' },
     ],
     features: [
-      { icon: 'Shield', title: 'Fanless Design', description: 'Silent operation with zero dust ingress' },
-      { icon: 'Cpu', title: 'Wide Temperature', description: 'Operates in -20°C to 60°C environments' },
-      { icon: 'Zap', title: 'Dual 2.5G LAN', description: 'High-speed industrial networking' },
+      { icon: 'Monitor', title: 'Triple Display Output', description: 'Dual HDMI and DisplayPort outputs support information displays and multi-screen workstations.' },
+      { icon: 'Network', title: 'Industrial Connectivity', description: 'Dual Gigabit LAN, dual RS232, and four USB ports connect controllers, sensors, and peripherals.' },
+      { icon: 'HardDrive', title: 'Flexible Storage', description: 'M.2 NVMe, SATA 3.0, and mSATA storage options simplify deployment and expansion.' },
     ],
+    sellingPoints: [
+      { image: `${mcipcb12ImageBase}/4.jpg`, title: 'Compact industrial enclosure', description: 'A compact 135 x 127 x 38.7 mm body fits space-constrained cabinets, kiosks, and machine-side installations.' },
+      { image: `${mcipcb12ImageBase}/5.jpg`, title: 'Practical front I/O layout', description: 'USB and dual RS232 interfaces provide convenient access for industrial peripherals and service operations.' },
+      { image: `${mcipcb12ImageBase}/6.jpg`, title: 'Rich display and network connectivity', description: 'Triple-display output and dual Gigabit LAN support signage, monitoring, gateway, and control applications.' },
+      { image: `${mcipcb12ImageBase}/7.jpg`, title: 'Ready for dependable deployment', description: 'Wide-temperature operation, watchdog, PXE, and wireless expansion help support long-running edge workloads.' },
+    ],
+    advantageSummary: 'MCIPCB12 balances compact dimensions with practical industrial connectivity, flexible storage, triple-display output, and efficient processor options for reliable embedded and edge deployments.',
+    operatingRange: '-20°C to +60°C',
   },
-  'fw100': {
+  fw100: {
     name: 'FW-100',
-    tagline: 'Compact network security appliance with 4× 2.5G ports',
-    description: 'The FW-100 is a compact firewall mini PC featuring four 2.5GbE LAN ports and Intel N100 processor. Ideal for small business network security.',
+    tagline: 'Compact network security appliance with 4 x 2.5G ports',
+    description: 'A compact firewall mini PC featuring four 2.5GbE LAN ports and Intel N100 processor for small business network security.',
+    images: ['/firewall.png'],
+    highlights: ['Intel N100', '4 x 2.5GbE LAN', 'VPN ready', 'Low power'],
     specs: [
       { label: 'Processor', value: 'Intel N100 (4C/4T)' },
       { label: 'Memory', value: 'Up to 16GB DDR4-3200' },
       { label: 'Storage', value: 'M.2 2242 SATA SSD' },
-      { label: 'LAN Ports', value: '4× 2.5GbE RJ45' },
-      { label: 'USB', value: '2× USB 3.2 + 1× USB 2.0' },
-      { label: 'Console', value: '1× RJ45 Serial Console' },
-      { label: 'Power', value: '12V DC / 5A Adapter' },
-      { label: 'Dimensions', value: '134×126×40mm' },
+      { label: 'LAN Ports', value: '4 x 2.5GbE RJ45' },
+      { label: 'USB', value: '2 x USB 3.2 + 1 x USB 2.0' },
+      { label: 'Console', value: '1 x RJ45 serial console' },
+      { label: 'Power', value: '12V DC / 5A adapter' },
+      { label: 'Dimensions', value: '134 x 126 x 40 mm' },
     ],
     features: [
-      { icon: 'Shield', title: '4× 2.5G LAN', description: 'High-speed network segmentation' },
-      { icon: 'CheckCircle', title: 'VPN Support', description: 'WireGuard, OpenVPN, IPsec ready' },
-      { icon: 'Zap', title: 'Low Power', description: 'Under 15W typical power consumption' },
+      { icon: 'Shield', title: '4 x 2.5G LAN', description: 'High-speed network segmentation.' },
+      { icon: 'CheckCircle', title: 'VPN Support', description: 'WireGuard, OpenVPN, and IPsec ready.' },
+      { icon: 'Zap', title: 'Low Power', description: 'Under 15W typical power consumption.' },
     ],
   },
-  'dt200': {
+  dt200: {
     name: 'DT-200',
     tagline: 'Ultra-compact desktop mini PC for business and education',
-    description: 'The DT-200 is an ultra-compact desktop mini PC featuring Intel N-series processor and 4K display support. Perfect for office workstations and digital signage.',
+    description: 'An ultra-compact desktop mini PC featuring Intel N-series processor and 4K display support for office workstations and signage.',
+    images: ['/desktop.png'],
+    highlights: ['Intel N200', '4K@60Hz', 'USB-C PD', 'VESA mount'],
     specs: [
       { label: 'Processor', value: 'Intel N200 (4C/4T)' },
       { label: 'Memory', value: 'Up to 16GB DDR4-3200' },
       { label: 'Storage', value: 'M.2 2280 NVMe SSD' },
       { label: 'Display', value: '4K@60Hz via HDMI 2.0 + DP 1.2' },
-      { label: 'USB', value: '4× USB 3.2 Gen2 + 2× USB 2.0' },
-      { label: 'Network', value: '1× 2.5G LAN + WiFi 6' },
-      { label: 'Audio', value: '3.5mm Combo Jack' },
+      { label: 'USB', value: '4 x USB 3.2 Gen2 + 2 x USB 2.0' },
+      { label: 'Network', value: '1 x 2.5G LAN + WiFi 6' },
+      { label: 'Audio', value: '3.5mm combo jack' },
       { label: 'Power', value: '65W USB-C PD' },
-      { label: 'Dimensions', value: '128×128×42mm' },
+      { label: 'Dimensions', value: '128 x 128 x 42 mm' },
     ],
     features: [
-      { icon: 'Monitor', title: '4K Display', description: 'Crystal clear 4K@60Hz output' },
-      { icon: 'Zap', title: 'USB-C PD', description: 'Single cable power and data' },
-      { icon: 'Layers', title: 'VESA Mount', description: 'Mount behind monitor or on wall' },
+      { icon: 'Monitor', title: '4K Display', description: 'Clear 4K@60Hz output.' },
+      { icon: 'Zap', title: 'USB-C PD', description: 'Single-cable power and data.' },
+      { icon: 'Layers', title: 'VESA Mount', description: 'Mount behind a monitor or on a wall.' },
     ],
   },
-  'fs500': {
+  fs500: {
     name: 'FS-500',
-    tagline: '1U rackmount firewall server with 6× 2.5G LAN ports',
-    description: 'The FS-500 is a 1U rackmount firewall server featuring six 2.5GbE LAN ports and Intel Core i5 processor. Designed for enterprise network security.',
+    tagline: '1U rackmount firewall server with 6 x 2.5G LAN ports',
+    description: 'A 1U rackmount firewall server with six 2.5GbE LAN ports and Intel Core i5 processor for enterprise network security.',
+    images: ['/Firewall-Server.png'],
+    highlights: ['1U rackmount', '6 x 2.5GbE LAN', 'IPMI remote', 'Core i5'],
     specs: [
       { label: 'Processor', value: 'Intel Core i5-1240P (12C/16T)' },
       { label: 'Memory', value: 'Up to 64GB DDR4-3200' },
-      { label: 'Storage', value: '2× M.2 2280 NVMe SSD' },
-      { label: 'LAN Ports', value: '6× 2.5GbE RJ45' },
-      { label: 'Management', value: '1× IPMI BMC RJ45' },
-      { label: 'USB', value: '2× USB 3.2 + 2× USB 2.0' },
-      { label: 'Console', value: '1× RJ45 Serial + VGA' },
+      { label: 'Storage', value: '2 x M.2 2280 NVMe SSD' },
+      { label: 'LAN Ports', value: '6 x 2.5GbE RJ45' },
+      { label: 'Management', value: '1 x IPMI BMC RJ45' },
+      { label: 'USB', value: '2 x USB 3.2 + 2 x USB 2.0' },
+      { label: 'Console', value: '1 x RJ45 serial + VGA' },
       { label: 'Power', value: '250W 1U Flex PSU' },
-      { label: 'Form Factor', value: '1U Rackmount, 250mm Depth' },
+      { label: 'Form Factor', value: '1U rackmount, 250mm depth' },
     ],
     features: [
-      { icon: 'Server', title: '6× 2.5G LAN', description: 'High-density network ports' },
-      { icon: 'Shield', title: 'IPMI Remote', description: 'Out-of-band server management' },
-      { icon: 'Zap', title: 'Redundant Power', description: 'Optional dual PSU for reliability' },
+      { icon: 'Server', title: '6 x 2.5G LAN', description: 'High-density network ports.' },
+      { icon: 'Shield', title: 'IPMI Remote', description: 'Out-of-band server management.' },
+      { icon: 'Zap', title: 'Redundant Power', description: 'Optional dual PSU for reliability.' },
     ],
   },
 };
 
-const iconMap: Record<string, any> = { Cpu, Shield, Monitor, Server, Zap, Layers, CheckCircle };
+const iconMap = {
+  Cpu,
+  Shield,
+  Monitor,
+  Server,
+  Zap,
+  Layers,
+  CheckCircle,
+  Network,
+  Usb,
+  HardDrive,
+  Thermometer,
+};
 
 export default function ProductDetailPage() {
-  const { language } = useLanguage();
   const params = useParams();
   const category = params.category as string;
   const productId = params.id as string;
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
+  const product = products[productId];
+  const catInfo = categoryData[category] || categoryData['industrial-mini-pc'];
+  const CategoryIcon = iconMap[catInfo.icon] || Cpu;
+  const gallery = product?.images || [];
+  const detailImages = product?.galleryImages || gallery.slice(1, 4);
 
-  const product = sampleProducts[productId];
-  const catInfo = categoryData[category];
+  useEffect(() => {
+    if (!previewImage) return;
+
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setPreviewImage(null);
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', closeOnEscape);
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', closeOnEscape);
+    };
+  }, [previewImage]);
 
   if (!product) {
     return (
@@ -144,197 +288,210 @@ export default function ProductDetailPage() {
     );
   }
 
-  const IconComponent = catInfo?.icon || Cpu;
-
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-10 right-20 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl"></div>
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Breadcrumb */}
-          <div className="mb-6">
-            <div className="flex items-center gap-2 text-sm text-gray-400">
-              <Link href="/products" className="hover:text-white transition-colors">Products</Link>
-              <span>/</span>
-              <Link href={`/products/${category}`} className="hover:text-white transition-colors capitalize">
-                {category.replace(/-/g, ' ')}
-              </Link>
-              <span>/</span>
-              <span className="text-white">{product.name}</span>
-            </div>
-          </div>
+    <div className="min-h-screen bg-white text-slate-950">
+      <section className={`relative overflow-hidden bg-gradient-to-br ${catInfo.gradient} text-white`}>
+        <div className="absolute inset-0 opacity-20 tech-pattern-overlay" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+          <Link href={`/products/${category}`} className="inline-flex items-center text-sm text-slate-300 hover:text-white transition-colors mb-8">
+            <ChevronLeft className="w-4 h-4 mr-1" />
+            Back to Industrial Mini PC
+          </Link>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-4xl md:text-5xl font-bold mb-3">{product.name}</h1>
-            <p className="text-xl text-gray-300 max-w-2xl">{product.tagline}</p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Product Overview */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-          >
-            {/* Product Image */}
-            <div className="bg-gray-100 rounded-2xl aspect-square flex items-center justify-center">
-              <div className="text-center">
-                <div className={`w-32 h-32 mx-auto mb-4 bg-gradient-to-br ${catInfo?.gradient} rounded-2xl flex items-center justify-center`}>
-                  <IconComponent className="w-16 h-16 text-white" />
-                </div>
-                <p className="text-gray-400 text-sm">Product Image Placeholder</p>
+          <div className="grid grid-cols-1 lg:grid-cols-[1.02fr_0.98fr] gap-10 lg:gap-14 items-center">
+            <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }}>
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-blue-100 mb-6">
+                <CategoryIcon className="w-4 h-4" />
+                Industrial Mini PC
               </div>
-            </div>
+              <h1 className="text-4xl md:text-6xl font-bold tracking-normal mb-5">{product.name}</h1>
+              <p className="text-xl md:text-2xl text-slate-200 mb-6 max-w-2xl">{product.tagline}</p>
+              <p className="text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl">{product.description}</p>
 
-            {/* Product Info */}
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Overview</h2>
-              <p className="text-gray-600 text-lg mb-8 leading-relaxed">{product.description}</p>
-
-              <div className="flex flex-wrap gap-3 mb-8">
-                {product.specs.slice(0, 4).map((spec, idx) => (
-                  <span
-                    key={idx}
-                    className="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg text-sm font-medium"
-                  >
-                    {spec.value.split(' ').slice(0, 3).join(' ')}
-                  </span>
+              <div className="grid grid-cols-2 gap-3 mt-8 max-w-2xl">
+                {product.highlights.map((item) => (
+                  <div key={item} className="rounded-lg border border-white/10 bg-white/10 px-4 py-3 text-sm font-medium text-white">
+                    {item}
+                  </div>
                 ))}
               </div>
+            </motion.div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all shadow-lg"
+            <motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.55, delay: 0.1 }}>
+              <button
+                type="button"
+                onClick={() => setPreviewImage(gallery[0])}
+                aria-label={`Enlarge ${product.name} main view`}
+                className="group block w-full cursor-zoom-in rounded-lg bg-white shadow-2xl shadow-blue-950/30 overflow-hidden transition-transform duration-300 hover:scale-[1.015] hover:shadow-blue-950/45"
+              >
+                <img src={gallery[0]} alt={`${product.name} main view`} className="block w-full h-auto transition-transform duration-500 group-hover:scale-[1.025]" />
+              </button>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {detailImages.length > 0 && (
+        <section className="py-16 bg-slate-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-9 text-center">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 mb-3">Product Gallery</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-950">Explore {product.name} from every angle</h2>
+              <p className="mt-3 text-slate-600">Different product views highlight the enclosure design, interface layout, and installation details.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {detailImages.map((image, index) => (
+                <motion.div
+                  key={image}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.45, delay: index * 0.08 }}
+                  className="rounded-lg border border-slate-200 bg-white shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
-                  Contact Sales
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-                <a
-                  href="https://magicchip.en.alibaba.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-gray-100 text-gray-700 rounded-xl font-semibold hover:bg-gray-200 transition-colors"
-                >
-                  View on Alibaba
-                </a>
+                  <button
+                    type="button"
+                    onClick={() => setPreviewImage(image)}
+                    aria-label={`Enlarge ${product.name} view ${index + 2}`}
+                    className="group block w-full cursor-zoom-in overflow-hidden"
+                  >
+                    <img src={image} alt={`${product.name} view ${index + 2}`} className="block w-full h-auto transition-transform duration-500 group-hover:scale-[1.025]" />
+                  </button>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-10 text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 mb-3">Technical Specifications</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-950">Industrial-grade configuration details</h2>
+          </div>
+
+          <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }} className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-lg shadow-slate-200/60">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 bg-slate-950 px-6 md:px-8 py-6 text-white">
+              <div>
+                <p className="text-sm uppercase tracking-[0.18em] text-blue-200 mb-2">{product.name} Specification Matrix</p>
+                <h3 className="text-2xl font-bold">Brochure-based hardware parameters</h3>
+              </div>
+              <div className="rounded-lg border border-white/15 bg-white/10 px-4 py-3 text-left md:text-right">
+                <p className="text-xs uppercase tracking-[0.16em] text-slate-300">Operating Range</p>
+                <p className="text-lg font-semibold">{product.operatingRange || 'Industrial rated'}</p>
               </div>
             </div>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* Specifications */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Technical Specifications</h2>
-            <div className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100">
-              <table className="w-full">
-                <tbody>
-                  {product.specs.map((spec, idx) => (
-                    <tr
-                      key={idx}
-                      className={idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}
-                    >
-                      <td className="px-6 py-4 font-medium text-gray-700 w-1/3">{spec.label}</td>
-                      <td className="px-6 py-4 text-gray-900">{spec.value}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div>
+              {product.specs.map((spec, index) => (
+                <div key={spec.label} className={`group grid grid-cols-1 md:grid-cols-[240px_1fr] border-t border-slate-200 transition-colors hover:bg-blue-50/40 ${index % 2 === 0 ? 'bg-white' : 'bg-slate-50/60'}`}>
+                  <div className="relative flex items-center gap-3 border-b border-slate-100 px-5 py-4 md:border-b-0 md:border-r md:border-slate-200 md:px-6">
+                    <div className="absolute left-0 top-0 h-full w-1 bg-blue-600 opacity-0 transition-opacity group-hover:opacity-100" />
+                    <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-md bg-white text-[11px] font-bold text-slate-500 ring-1 ring-slate-200">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <h4 className="text-sm font-bold uppercase tracking-wide text-slate-600">{spec.label}</h4>
+                  </div>
+                  <p className="px-5 py-4 text-slate-950 leading-relaxed md:px-7">{spec.value}</p>
+                </div>
+              ))}
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Features */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Key Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {product.features.map((feature, idx) => {
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] gap-10 items-start">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 mb-3">Product Advantages</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-950 mb-5">Ready for control cabinets, edge gateways, and machine-side computing</h2>
+              <p className="text-slate-600 leading-relaxed">
+                {product.advantageSummary || product.description}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {product.features.map((feature, index) => {
                 const FeatureIcon = iconMap[feature.icon] || CheckCircle;
                 return (
                   <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, y: 20 }}
+                    key={feature.title}
+                    initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: idx * 0.1 }}
-                    className="bg-gray-50 rounded-xl p-8 text-center hover:shadow-md transition-shadow border border-gray-100"
+                    transition={{ duration: 0.45, delay: index * 0.08 }}
+                    className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all"
                   >
-                    <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-br ${catInfo?.gradient} rounded-xl flex items-center justify-center`}>
-                      <FeatureIcon className="w-8 h-8 text-white" />
+                    <div className="w-11 h-11 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center mb-5 ring-1 ring-blue-100">
+                      <FeatureIcon className="w-6 h-6" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
-                    <p className="text-gray-600">{feature.description}</p>
+                    <h3 className="text-lg font-bold text-slate-950 mb-2">{feature.title}</h3>
+                    <p className="text-sm leading-relaxed text-slate-600">{feature.description}</p>
                   </motion.div>
                 );
               })}
             </div>
-          </motion.div>
+          </div>
+
+          {product.sellingPoints && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+              {product.sellingPoints.map((point, index) => (
+                <motion.div
+                  key={point.title}
+                  initial={{ opacity: 0, y: 18 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <button
+                    type="button"
+                    onClick={() => setPreviewImage(point.image)}
+                    aria-label={`Enlarge ${point.title}`}
+                    className="group block w-full cursor-zoom-in overflow-hidden"
+                  >
+                    <img src={point.image} alt={point.title} className="block w-full h-auto transition-transform duration-500 group-hover:scale-[1.025]" />
+                  </button>
+                  <div className="p-6 text-slate-950 border-t border-slate-100">
+                    <h3 className="text-xl font-bold mb-2">{point.title}</h3>
+                    <p className="text-slate-600 leading-relaxed">{point.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-xl p-10 md:p-16 text-center text-white relative overflow-hidden"
-          >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full -mr-20 -mt-20"></div>
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-white opacity-10 rounded-full -ml-10 -mb-10"></div>
-            <div className="relative">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Interested in {product.name}?</h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Contact our sales team for pricing, customization options, and bulk orders.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg"
-                >
-                  Contact Sales
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-                <a
-                  href="https://magicchip.en.alibaba.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-blue-500/30 text-white border border-white/30 rounded-xl font-semibold hover:bg-blue-500/50 transition-colors"
-                >
-                  View on Alibaba
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </a>
-              </div>
-            </div>
-          </motion.div>
+      <section className="py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-950 mb-4">Interested in {product.name}?</h2>
+          <p className="text-lg text-slate-600 mb-8">Contact our team for pricing, lifecycle planning, customization, and bulk order support.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/20">
+              Contact Sales
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <a href="https://magicchip.en.alibaba.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 bg-slate-100 text-slate-800 rounded-lg font-semibold hover:bg-slate-200 transition-colors">
+              View on Alibaba
+            </a>
+          </div>
         </div>
       </section>
+
+      {previewImage && (
+        <button
+          type="button"
+          onClick={() => setPreviewImage(null)}
+          aria-label="Close enlarged image"
+          className="fixed inset-0 z-[100] flex cursor-zoom-out items-center justify-center bg-slate-950/85 p-4 md:p-10 backdrop-blur-sm"
+        >
+          <img
+            src={previewImage}
+            alt="Enlarged product view"
+            className="block max-h-full max-w-full object-contain shadow-2xl"
+          />
+        </button>
+      )}
     </div>
   );
 }

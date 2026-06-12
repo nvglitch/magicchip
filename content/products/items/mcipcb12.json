@@ -1,0 +1,18 @@
+{
+  "id": "mcipcb12",
+  "category": "industrial-mini-pc",
+  "name": "MCIPCB12",
+  "tagline": "Compact fanless industrial mini PC with rich I/O and triple-display support",
+  "description": "Compact industrial mini PC with Intel Elkhart Lake or Alder Lake-N processors, dual Gigabit LAN, dual RS232, flexible storage, and triple-display output.",
+  "images": ["/MCIPCB12/%E4%B8%BB%E5%9B%BE/1.jpg"],
+  "specifications": [
+    { "label": "CPU", "value": "Intel Elkhart Lake J6412/J6413/J6426; Intel Alder Lake-N N95/N100/N200/N300" },
+    { "label": "Memory", "value": "1 x DDR4 SO-DIMM, maximum 16GB" },
+    { "label": "Display", "value": "2 x HDMI 1.4, 1 x DP 1.2" },
+    { "label": "Network", "value": "2 x Realtek RTL8111H Gigabit LAN" },
+    { "label": "Storage", "value": "M.2 2280 NVMe, SATA 3.0, mSATA 3.0" },
+    { "label": "Operating Temp", "value": "-20°C to +60°C" },
+    { "label": "Dimensions", "value": "135 x 127 x 38.7 mm" }
+  ],
+  "alibabaUrl": "https://magicchip.en.alibaba.com"
+}
