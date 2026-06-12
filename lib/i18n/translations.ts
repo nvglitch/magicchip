@@ -110,7 +110,7 @@ export const translations = {
         '2.5G LAN RJ45 + M.2 2230 WiFi/BT Module',
         '350W Internal Flex PSU or 240W DC-IN Power Options',
       ],
-      cta: 'View System',
+      cta: 'View Product',
     },
     // Services
     services: {
@@ -344,7 +344,7 @@ export const translations = {
         '2.5G LAN RJ45 + Module M.2 2230 WiFi/BT',
         'Alimentation 350W Flex PSU interne ou 240W DC-IN',
       ],
-      cta: 'Voir le Système',
+      cta: 'Voir le Produit',
     },
     // Services
     services: {
@@ -577,7 +577,7 @@ export const translations = {
         '2.5G LAN RJ45 + M.2 2230 WiFi/BT Modul',
         '350W interner Flex PSU oder 240W DC-IN Netzteil',
       ],
-      cta: 'System anzeigen',
+      cta: 'Produkt anzeigen',
     },
     services: {
       title: 'Enterprise-Dienstleistungen',
@@ -791,7 +791,7 @@ export const translations = {
         '2.5G LAN RJ45 + Modulo M.2 2230 WiFi/BT',
         'Alimentatore 350W Flex PSU interno o 240W DC-IN',
       ],
-      cta: 'Visualizza Sistema',
+      cta: 'Visualizza Prodotto',
     },
     services: {
       title: 'Servizi Enterprise',
@@ -1005,7 +1005,7 @@ export const translations = {
         '2.5G LAN RJ45 + Módulo M.2 2230 WiFi/BT',
         'Fuente de alimentación 350W Flex PSU interna o 240W DC-IN',
       ],
-      cta: 'Ver Sistema',
+      cta: 'Ver Producto',
     },
     services: {
       title: 'Servicios Enterprise',

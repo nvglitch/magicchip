@@ -169,7 +169,7 @@ export const it: TranslationSchema = {
       '2.5G LAN RJ45 + Modulo M.2 2230 WiFi/BT',
       'Alimentatore 350W Flex PSU interno o 240W DC-IN',
     ],
-    cta: 'Visualizza Sistema',
+    cta: 'Visualizza Prodotto',
   },
   services: {
     title: 'Servizi Enterprise',

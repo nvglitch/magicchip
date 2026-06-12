@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Check, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function FeaturedProduct() {
@@ -72,10 +73,13 @@ export default function FeaturedProduct() {
             </div>
 
             {/* CTA */}
-            <button className="inline-flex items-center px-6 py-3 border-2 border-gray-900 text-gray-900 font-semibold rounded-md hover:bg-gray-900 hover:text-white hover:border-emerald-500 transition-all duration-300">
+            <Link
+              href="/products/industrial-mini-pc/mcai35"
+              className="group inline-flex items-center px-6 py-3 border-2 border-gray-900 text-gray-900 font-semibold rounded-md hover:bg-gray-900 hover:text-white hover:border-emerald-500 transition-all duration-300"
+            >
               {t.featured.cta}
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </Link>
           </motion.div>
         </div>
       </div>
