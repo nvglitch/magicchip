@@ -124,8 +124,8 @@ export default function LiveChatWidget() {
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            aria-label="Scroll to top"
-            title="Scroll to top"
+            aria-label={t.chat.scrollToTop}
+            title={t.chat.scrollToTop}
           >
             <ArrowUp className="w-5 h-5" />
           </motion.button>
@@ -240,7 +240,7 @@ export default function LiveChatWidget() {
                       {/* WhatsApp Number */}
                       <div className="space-y-3">
                         <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                          <p className="text-xs text-gray-600 mb-1">WhatsApp</p>
+                          <p className="text-xs text-gray-600 mb-1">{t.chat.whatsapp.label}</p>
                           <p className="text-base font-mono font-medium text-gray-900">
                             {t.chat.whatsapp.number}
                           </p>
@@ -442,7 +442,7 @@ export default function LiveChatWidget() {
                       {/* WhatsApp Number */}
                       <div className="space-y-3">
                         <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                          <p className="text-xs text-gray-600 mb-1">WhatsApp</p>
+                          <p className="text-xs text-gray-600 mb-1">{t.chat.whatsapp.label}</p>
                           <p className="text-base font-mono font-medium text-gray-900">
                             {t.chat.whatsapp.number}
                           </p>

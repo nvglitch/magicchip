@@ -184,7 +184,7 @@ export default function LeadGeneration() {
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
-                        Company
+                        {t.lead.form.company}
                       </label>
                       <input
                         type="text"

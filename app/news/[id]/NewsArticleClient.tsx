@@ -33,7 +33,7 @@ function getLocalizedText(text: MultiLangText, language: string): string {
 }
 
 export default function NewsArticleClient({ article }: NewsArticleClientProps) {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
 
   const title = getLocalizedText(article.title, language);
   const excerpt = getLocalizedText(article.excerpt, language);
@@ -49,7 +49,7 @@ export default function NewsArticleClient({ article }: NewsArticleClientProps) {
             className="inline-flex items-center text-blue-100 hover:text-white mb-6 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to News
+            {t.news.backToList}
           </Link>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -94,8 +94,7 @@ export default function NewsArticleClient({ article }: NewsArticleClientProps) {
                   {excerpt}
                 </p>
                 <p className="text-gray-600 mt-6">
-                  This is a placeholder for the full article content. In a production environment,
-                  you would store the full article content in your JSON files and display it here.
+                  {t.news.placeholderContent}
                 </p>
               </div>
             </div>

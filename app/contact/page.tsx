@@ -254,7 +254,7 @@ const contactData = {
 };
 
 export default function ContactPage() {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
   const dataLanguage = (contactData as any)[language] ? language : 'en';
   const data = (contactData as any)[dataLanguage];
 
@@ -267,7 +267,7 @@ export default function ContactPage() {
     const newErrors: { name?: string; email?: string; company?: string; subject?: string; message?: string } = {};
     if (!formData.name.trim()) newErrors.name = data.form.error;
     if (!formData.email.trim()) newErrors.email = data.form.error;
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = 'Invalid email';
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = t.contactPage.invalidEmail;
     if (!formData.company.trim()) newErrors.company = data.form.error;
     if (!formData.subject.trim()) newErrors.subject = data.form.error;
     if (!formData.message.trim()) newErrors.message = data.form.error;

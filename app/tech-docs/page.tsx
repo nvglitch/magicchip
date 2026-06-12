@@ -588,11 +588,11 @@ const techDocsData = {
 };
 
 export default function TechDocsPage() {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
   const dataLanguage = (techDocsData as any)[language] ? language : 'en';
   const data = (techDocsData as any)[dataLanguage];
-  const pageTitle = 'Technical Documentation';
-  const pageSubtitle = 'Comprehensive technical resources for developers and engineers';
+  const pageTitle = t.techDocs.heroTitle;
+  const pageSubtitle = t.techDocs.heroSubtitle;
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -668,8 +668,8 @@ export default function TechDocsPage() {
                               </h3>
                               <p className="text-gray-600 text-sm mb-3">{doc.description}</p>
                               <div className="flex items-center gap-4 text-xs text-gray-500">
-                                <span>Updated: {doc.updated}</span>
-                                <span>{doc.pages} pages</span>
+                                <span>{t.techDocs.updatedLabel} {doc.updated}</span>
+                                <span>{doc.pages} {t.techDocs.pagesLabel}</span>
                               </div>
                             </div>
                             <a 
@@ -677,7 +677,7 @@ export default function TechDocsPage() {
                               className="ml-4 flex items-center px-4 py-2 bg-gray-100 hover:bg-blue-600 hover:text-white rounded-md transition-colors"
                             >
                               <ExternalLink className="w-4 h-4 mr-2" />
-                              <span>View</span>
+                              <span>{t.techDocs.viewButton}</span>
                               <ChevronRight className="w-4 h-4 ml-1" />
                             </a>
                           </div>

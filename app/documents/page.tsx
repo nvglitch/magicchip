@@ -198,7 +198,7 @@ const documentsData = {
 };
 
 export default function DocumentsPage() {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
   const data = documentsData[language] || documentsData.en;
 
   return (
@@ -251,7 +251,7 @@ export default function DocumentsPage() {
                   </div>
 
                   <span className="inline-flex items-center text-blue-600 font-semibold group-hover:text-blue-700">
-                    {'View'}
+                    {t.documentsPage.viewButton}
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
                   </span>
                 </div>

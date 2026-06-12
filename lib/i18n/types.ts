@@ -55,6 +55,9 @@ export interface TranslationSchema {
     documents: string;
     contact: string;
     searchPlaceholder: string;
+    searchAriaLabel: string;
+    languageAriaLabel: string;
+    menuAriaLabel: string;
   };
   navDropdown: {
     products: {
@@ -91,13 +94,12 @@ export interface TranslationSchema {
       viewAll: string;
     };
     about: {
-      ourStory: string;
-      ourStoryDesc: string;
-      careers: string;
-      careersDesc: string;
-      press: string;
-      pressDesc: string;
+      ourCompany: string;
+      ourCompanyDesc: string;
+      ourFactory: string;
+      ourFactoryDesc: string;
       contactUs: string;
+      contactUsDesc: string;
     };
     documents: {
       news: string;
@@ -133,6 +135,11 @@ export interface TranslationSchema {
       cta: string;
     };
     dragHint: string;
+    previousSlide: string;
+    nextSlide: string;
+    pauseSlideshow: string;
+    playSlideshow: string;
+    goToSlide: string;
   };
   products: {
     title: string;
@@ -156,6 +163,62 @@ export interface TranslationSchema {
       };
     };
     learnMore: string;
+    backToProducts: string;
+    viewDetails: string;
+    ctaTitle: string;
+    ctaDescription: string;
+    ctaButton: string;
+    viewOnAlibaba: string;
+  };
+  productDetail: {
+    productNotFound: string;
+    backToProducts: string;
+    backToCategory: string;
+    productGallery: string;
+    exploreProduct: string;
+    galleryDescription: string;
+    enlargeMainView: string;
+    enlargeView: string;
+    technicalSpecifications: string;
+    industrialConfigDetails: string;
+    specificationMatrix: string;
+    brochureParameters: string;
+    operatingRange: string;
+    industrialRated: string;
+    productAdvantages: string;
+    advantagesHeading: string;
+    enlargeImage: string;
+    interestedIn: string;
+    contactPrompt: string;
+    contactSales: string;
+    viewOnAlibaba: string;
+    closeEnlargedImage: string;
+    enlargedProductView: string;
+  };
+  company: {
+    valuesTitle: string;
+    timelineTitle: string;
+    locationTitle: string;
+  };
+  about: {
+    learnMore: string;
+  };
+  news: {
+    backToList: string;
+    placeholderContent: string;
+  };
+  contactPage: {
+    invalidEmail: string;
+  };
+  techDocs: {
+    heroTitle: string;
+    heroSubtitle: string;
+    updatedLabel: string;
+    pagesLabel: string;
+    viewButton: string;
+  };
+  documentsPage: {
+    viewButton: string;
   };
   featured: {
     badge: string;
@@ -225,6 +288,7 @@ export interface TranslationSchema {
       subtitle: string;
       name: string;
       email: string;
+      company: string;
       cta: string;
       privacy: string;
       successTitle: string;
@@ -297,6 +361,7 @@ export interface TranslationSchema {
     };
   };
   chat: {
+    scrollToTop: string;
     fab: {
       tooltip: string;
     };
@@ -312,6 +377,7 @@ export interface TranslationSchema {
       title: string;
       subtitle: string;
       number: string;
+      label: string;
       copyButton: string;
       copied: string;
       startChat: string;

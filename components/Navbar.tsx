@@ -78,8 +78,8 @@ export default function Navbar() {
       { title: t.navDropdown?.contact?.whatsapp || 'WhatsApp', description: t.navDropdown?.contact?.whatsappDesc || 'Chat with us on WhatsApp', href: 'https://wa.me/8613392172330', icon: MessageCircle, external: true },
     ],
     about: [
-      { title: 'Our Company', description: 'Company history and mission', href: '/company', icon: BookOpen },
-      { title: 'Our Factory', description: 'Manufacturing facilities and capabilities', href: '/factory', icon: Factory },
+      { title: t.navDropdown?.about?.ourCompany || 'Our Company', description: t.navDropdown?.about?.ourCompanyDesc || 'Company history and mission', href: '/company', icon: BookOpen },
+      { title: t.navDropdown?.about?.ourFactory || 'Our Factory', description: t.navDropdown?.about?.ourFactoryDesc || 'Manufacturing facilities and capabilities', href: '/factory', icon: Factory },
     ],
   });
 
@@ -139,7 +139,7 @@ export default function Navbar() {
                   <span className="relative">
                     {item.label}
                     {/* Hover underline effect */}
-                    <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-teal-600 transition-all duration-300 group-hover:w-full" />
+                    <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full" />
                   </span>
                 </a>
 
@@ -198,7 +198,7 @@ export default function Navbar() {
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
               className="p-1.5 md:p-2 text-gray-700 hover:text-gray-900 transition-colors touch-manipulation"
-              aria-label="Search"
+              aria-label={t.nav.searchAriaLabel}
             >
               <Search className="w-5 h-5" />
             </button>
@@ -208,7 +208,7 @@ export default function Navbar() {
               <button
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
                 className="hidden sm:flex items-center gap-1 p-1.5 md:p-2 text-gray-700 hover:text-gray-900 transition-colors touch-manipulation"
-                aria-label="Change language"
+                aria-label={t.nav.languageAriaLabel}
               >
                 <Globe className="w-5 h-5 flex-shrink-0" />
                 <span className="text-xs md:text-sm font-medium uppercase">{language}</span>
@@ -254,7 +254,7 @@ export default function Navbar() {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden p-1.5 md:p-2 text-gray-700 hover:text-gray-900 transition-colors touch-manipulation"
-              aria-label="Menu"
+              aria-label={t.nav.menuAriaLabel}
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>

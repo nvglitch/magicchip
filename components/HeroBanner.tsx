@@ -208,7 +208,7 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
           <button
             onClick={prevSlide}
             className="p-1.5 sm:p-2 text-white/70 hover:text-white transition-colors touch-manipulation"
-            aria-label="Previous slide"
+            aria-label={t.hero.previousSlide}
           >
             <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
@@ -216,7 +216,7 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
           <button
             onClick={() => setIsPlaying(!isPlaying)}
             className="p-2 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors touch-manipulation"
-            aria-label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}
+            aria-label={isPlaying ? t.hero.pauseSlideshow : t.hero.playSlideshow}
           >
             {isPlaying ? <Pause className="w-4 h-4 sm:w-5 sm:h-5" /> : <Play className="w-4 h-4 sm:w-5 sm:h-5" />}
           </button>
@@ -229,7 +229,7 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
                 className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 touch-manipulation ${
                   index === currentSlide ? 'w-6 sm:w-8 bg-white' : 'w-1.5 sm:w-2 bg-white/50 hover:bg-white/70'
                 }`}
-                aria-label={`Go to slide ${index + 1}`}
+                aria-label={t.hero.goToSlide.replace('{n}', String(index + 1))}
               />
             ))}
           </div>
@@ -237,7 +237,7 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
           <button
             onClick={nextSlide}
             className="p-1.5 sm:p-2 text-white/70 hover:text-white transition-colors touch-manipulation"
-            aria-label="Next slide"
+            aria-label={t.hero.nextSlide}
           >
             <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>

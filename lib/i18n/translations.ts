@@ -8,6 +8,9 @@ export const translations = {
       services: 'Services',
       aboutUs: 'About Us',
       searchPlaceholder: 'Search products, solutions...',
+      searchAriaLabel: 'Search',
+      languageAriaLabel: 'Change language',
+      menuAriaLabel: 'Menu',
     },
     // Nav Dropdown
     navDropdown: {
@@ -45,13 +48,12 @@ export const translations = {
         viewAll: 'View All Services',
       },
       about: {
-        ourStory: 'Our Story',
-        ourStoryDesc: 'Company history and mission',
-        careers: 'Careers',
-        careersDesc: 'Join our growing team',
-        press: 'Press & Media',
-        pressDesc: 'News and announcements',
+        ourCompany: 'Our Company',
+        ourCompanyDesc: 'Company history and mission',
+        ourFactory: 'Our Factory',
+        ourFactoryDesc: 'Manufacturing facilities and capabilities',
         contactUs: 'Contact Us',
+        contactUsDesc: 'Get in touch with our team',
       },
     },
     // Hero
@@ -72,6 +74,11 @@ export const translations = {
         cta: 'Learn More',
       },
       dragHint: 'Drag to navigate',
+      previousSlide: 'Previous slide',
+      nextSlide: 'Next slide',
+      pauseSlideshow: 'Pause slideshow',
+      playSlideshow: 'Play slideshow',
+      goToSlide: 'Go to slide {n}',
     },
     // Product Categories
     products: {
@@ -220,6 +227,12 @@ export const translations = {
         download: 'Download',
       },
     },
+    // Company Page
+    company: {
+      valuesTitle: 'Our Core Values',
+      timelineTitle: 'Our Journey',
+      locationTitle: 'Office Location',
+    },
     // Factory Page
     factory: {
       ourFacilities: 'Our Facilities',
@@ -242,6 +255,9 @@ export const translations = {
       services: 'Services',
       aboutUs: 'À Propos',
       searchPlaceholder: 'Rechercher des produits, solutions...',
+      searchAriaLabel: 'Rechercher',
+      languageAriaLabel: 'Changer la langue',
+      menuAriaLabel: 'Menu',
     },
     // Nav Dropdown
     navDropdown: {
@@ -279,13 +295,12 @@ export const translations = {
         viewAll: 'Voir Tous les Services',
       },
       about: {
-        ourStory: 'Notre Histoire',
-        ourStoryDesc: 'Histoire et mission de l\'entreprise',
-        careers: 'Carrières',
-        careersDesc: 'Rejoignez notre équipe en croissance',
-        press: 'Presse et Médias',
-        pressDesc: 'Actualités et annonces',
+        ourCompany: 'Notre Entreprise',
+        ourCompanyDesc: 'Histoire et mission de l\'entreprise',
+        ourFactory: 'Notre Usine',
+        ourFactoryDesc: 'Installations et capacités de fabrication',
         contactUs: 'Nous Contacter',
+        contactUsDesc: 'Contactez notre équipe',
       },
     },
     // Hero
@@ -306,6 +321,11 @@ export const translations = {
         cta: 'En Savoir Plus',
       },
       dragHint: 'Glisser pour naviguer',
+      previousSlide: 'Diapositive précédente',
+      nextSlide: 'Diapositive suivante',
+      pauseSlideshow: 'Mettre en pause',
+      playSlideshow: 'Lancer le diaporama',
+      goToSlide: 'Aller à la diapositive {n}',
     },
     // Product Categories
     products: {
@@ -454,6 +474,12 @@ export const translations = {
         download: 'Télécharger',
       },
     },
+    // Company Page
+    company: {
+      valuesTitle: 'Nos Valeurs Fondamentales',
+      timelineTitle: 'Notre Parcours',
+      locationTitle: 'Emplacement du Bureau',
+    },
     // Factory Page
     factory: {
       ourFacilities: 'Nos Installations',
@@ -476,6 +502,9 @@ export const translations = {
       services: 'Dienstleistungen',
       aboutUs: 'Über Uns',
       searchPlaceholder: 'Produkte, Lösungen suchen...',
+      searchAriaLabel: 'Suchen',
+      languageAriaLabel: 'Sprache ändern',
+      menuAriaLabel: 'Menü',
     },
     // Nav Dropdown
     navDropdown: {
@@ -513,13 +542,12 @@ export const translations = {
         viewAll: 'Alle Dienstleistungen anzeigen',
       },
       about: {
-        ourStory: 'Unsere Geschichte',
-        ourStoryDesc: 'Unternehmensgeschichte und Mission',
-        careers: 'Karriere',
-        careersDesc: 'Werden Sie Teil unseres wachsenden Teams',
-        press: 'Presse & Medien',
-        pressDesc: 'Neuigkeiten und Ankündigungen',
+        ourCompany: 'Unser Unternehmen',
+        ourCompanyDesc: 'Unternehmensgeschichte und Mission',
+        ourFactory: 'Unsere Fabrik',
+        ourFactoryDesc: 'Fertigungseinrichtungen und Kapazitäten',
         contactUs: 'Kontakt',
+        contactUsDesc: 'Kontaktieren Sie unser Team',
       },
     },
     // Hero
@@ -540,6 +568,11 @@ export const translations = {
         cta: 'Mehr erfahren',
       },
       dragHint: 'Ziehen zum Navigieren',
+      previousSlide: 'Vorherige Folie',
+      nextSlide: 'Nächste Folie',
+      pauseSlideshow: 'Diashow pausieren',
+      playSlideshow: 'Diashow abspielen',
+      goToSlide: 'Zu Folie {n} gehen',
     },
     // Product Categories
     products: {
@@ -668,6 +701,12 @@ export const translations = {
         download: 'Herunterladen',
       },
     },
+    // Company Page
+    company: {
+      valuesTitle: 'Unsere Kernwerte',
+      timelineTitle: 'Unsere Reise',
+      locationTitle: 'Bürostandort',
+    },
     // Factory Page
     factory: {
       ourFacilities: 'Unsere Einrichtungen',
@@ -690,6 +729,9 @@ export const translations = {
       services: 'Servizi',
       aboutUs: 'Chi Siamo',
       searchPlaceholder: 'Cerca prodotti, soluzioni...',
+      searchAriaLabel: 'Cerca',
+      languageAriaLabel: 'Cambia lingua',
+      menuAriaLabel: 'Menu',
     },
     // Nav Dropdown
     navDropdown: {
@@ -727,13 +769,12 @@ export const translations = {
         viewAll: 'Visualizza tutti i servizi',
       },
       about: {
-        ourStory: 'La Nostra Storia',
-        ourStoryDesc: 'Storia e missione aziendale',
-        careers: 'Lavora con Noi',
-        careersDesc: 'Unisciti al nostro team in crescita',
-        press: 'Stampa e Media',
-        pressDesc: 'Notizie e annunci',
+        ourCompany: 'La Nostra Azienda',
+        ourCompanyDesc: 'Storia e missione aziendale',
+        ourFactory: 'La Nostra Fabbrica',
+        ourFactoryDesc: 'Impianti e capacità di produzione',
         contactUs: 'Contattaci',
+        contactUsDesc: 'Mettiti in contatto con il nostro team',
       },
     },
     // Hero
@@ -754,6 +795,11 @@ export const translations = {
         cta: 'Per Saperne di Più',
       },
       dragHint: 'Trascina per navigare',
+      previousSlide: 'Diapositiva precedente',
+      nextSlide: 'Diapositiva successiva',
+      pauseSlideshow: 'Metti in pausa',
+      playSlideshow: 'Avvia presentazione',
+      goToSlide: 'Vai alla diapositiva {n}',
     },
     // Product Categories
     products: {
@@ -882,6 +928,12 @@ export const translations = {
         download: 'Scarica',
       },
     },
+    // Company Page
+    company: {
+      valuesTitle: 'I Nostri Valori Fondamentali',
+      timelineTitle: 'Il Nostro Percorso',
+      locationTitle: 'Sede Dell\'Ufficio',
+    },
     // Factory Page
     factory: {
       ourFacilities: 'Le Nostre Strutture',
@@ -904,6 +956,9 @@ export const translations = {
       services: 'Servicios',
       aboutUs: 'Sobre Nosotros',
       searchPlaceholder: 'Buscar productos, soluciones...',
+      searchAriaLabel: 'Buscar',
+      languageAriaLabel: 'Cambiar idioma',
+      menuAriaLabel: 'Menú',
     },
     // Nav Dropdown
     navDropdown: {
@@ -941,13 +996,12 @@ export const translations = {
         viewAll: 'Ver todos los servicios',
       },
       about: {
-        ourStory: 'Nuestra Historia',
-        ourStoryDesc: 'Historia y misión de la empresa',
-        careers: 'Únete a Nosotros',
-        careersDesc: 'Únete a nuestro equipo en crecimiento',
-        press: 'Prensa y Medios',
-        pressDesc: 'Noticias y anuncios',
+        ourCompany: 'Nuestra Empresa',
+        ourCompanyDesc: 'Historia y misión de la empresa',
+        ourFactory: 'Nuestra Fábrica',
+        ourFactoryDesc: 'Instalaciones y capacidades de fabricación',
         contactUs: 'Contáctanos',
+        contactUsDesc: 'Ponte en contacto con nuestro equipo',
       },
     },
     // Hero
@@ -968,6 +1022,11 @@ export const translations = {
         cta: 'Más Información',
       },
       dragHint: 'Arrastra para navegar',
+      previousSlide: 'Diapositiva anterior',
+      nextSlide: 'Diapositiva siguiente',
+      pauseSlideshow: 'Pausar presentación',
+      playSlideshow: 'Reproducir presentación',
+      goToSlide: 'Ir a diapositiva {n}',
     },
     // Product Categories
     products: {
@@ -1095,6 +1154,12 @@ export const translations = {
         size: 'Tamaño',
         download: 'Descargar',
       },
+    },
+    // Company Page
+    company: {
+      valuesTitle: 'Nuestros Valores Fundamentales',
+      timelineTitle: 'Nuestro Trayecto',
+      locationTitle: 'Ubicación de la Oficina',
     },
     // Factory Page
     factory: {

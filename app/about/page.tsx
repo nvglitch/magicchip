@@ -408,7 +408,7 @@ const aboutData = {
 };
 
 export default function AboutPage() {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
   const data = aboutData[language] || aboutData.en;
 
   return (
@@ -466,7 +466,7 @@ export default function AboutPage() {
                   </div>
 
                   <span className="inline-flex items-center text-blue-600 font-semibold group-hover:text-blue-700">
-                    {'Learn More'}
+                    {t.about.learnMore}
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
                   </span>
                 </div>

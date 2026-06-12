@@ -8,9 +8,9 @@ import { useParams } from 'next/navigation';
 import { useMemo } from 'react';
 
 const categoryData: Record<string, { icon: any; gradient: string; image: string }> = {
-  'industrial-mini-pc': { icon: Cpu, gradient: 'from-teal-600 to-emerald-700', image: '/Industrial.png' },
+  'industrial-mini-pc': { icon: Cpu, gradient: 'from-blue-600 to-indigo-700', image: '/Industrial.png' },
   'firewall-mini-pc': { icon: Shield, gradient: 'from-rose-600 to-red-800', image: '/firewall.png' },
-  'desktop-mini-pc': { icon: Monitor, gradient: 'from-emerald-600 to-teal-800', image: '/desktop.png' },
+  'desktop-mini-pc': { icon: Monitor, gradient: 'from-blue-500 to-indigo-600', image: '/desktop.png' },
   'firewall-server': { icon: Server, gradient: 'from-amber-600 to-orange-800', image: '/Firewall-Server.png' },
 };
 
@@ -145,7 +145,7 @@ const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: 
 };
 
 export default function CategoryPage() {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
   const params = useParams();
   const category = params.category as string;
 
@@ -160,7 +160,7 @@ export default function CategoryPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#172033] via-[#123b43] to-[#172033] text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#172033] via-blue-950 to-[#172033] text-white py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full filter blur-3xl"></div>
           <div className="absolute bottom-10 right-20 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl"></div>
@@ -170,7 +170,7 @@ export default function CategoryPage() {
           <div className="mb-8">
             <Link href="/products" className="inline-flex items-center text-gray-400 hover:text-white transition-colors text-sm">
               <ChevronLeft className="w-4 h-4 mr-1" />
-              Back to Products
+              {t.products.backToProducts}
             </Link>
           </div>
 
@@ -180,7 +180,7 @@ export default function CategoryPage() {
             transition={{ duration: 0.6 }}
             className="flex items-center gap-6"
           >
-            <div className="w-20 h-20 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg shadow-teal-950/30 flex-shrink-0">
+            <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-950/30 flex-shrink-0">
               <IconComponent className="w-10 h-10 text-white" />
             </div>
             <div>
@@ -201,11 +201,11 @@ export default function CategoryPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border ${index % 3 === 0 ? 'border-teal-200 hover:border-teal-400' : index % 3 === 1 ? 'border-amber-200 hover:border-amber-400' : 'border-rose-200 hover:border-rose-400'}`}
+                className={`group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border ${index % 3 === 0 ? 'border-blue-200 hover:border-blue-400' : index % 3 === 1 ? 'border-amber-200 hover:border-amber-400' : 'border-rose-200 hover:border-rose-400'}`}
               >
                 <div className="flex flex-col md:flex-row">
                   {/* Product Image */}
-                  <div className={`md:w-2/5 flex items-center justify-center p-8 ${index % 3 === 0 ? 'bg-teal-50/50' : index % 3 === 1 ? 'bg-amber-50/50' : 'bg-rose-50/40'}`}>
+                  <div className={`md:w-2/5 flex items-center justify-center p-8 ${index % 3 === 0 ? 'bg-blue-50/50' : index % 3 === 1 ? 'bg-amber-50/50' : 'bg-rose-50/40'}`}>
                     <div className="relative w-full aspect-square max-w-[300px] rounded-lg overflow-hidden bg-white border border-gray-100">
                       {product.image ? (
                         <img
@@ -230,7 +230,7 @@ export default function CategoryPage() {
                       {product.specs.map((spec, idx) => (
                         <span
                           key={idx}
-                          className={`px-4 py-2 rounded-lg text-sm font-medium ${idx % 3 === 0 ? 'bg-teal-50 text-teal-800' : idx % 3 === 1 ? 'bg-amber-50 text-amber-800' : 'bg-rose-50 text-rose-800'}`}
+                          className={`px-4 py-2 rounded-lg text-sm font-medium ${idx % 3 === 0 ? 'bg-blue-50 text-blue-800' : idx % 3 === 1 ? 'bg-amber-50 text-amber-800' : 'bg-rose-50 text-rose-800'}`}
                         >
                           {spec}
                         </span>
@@ -239,9 +239,9 @@ export default function CategoryPage() {
 
                     <Link
                       href={`/products/${category}/${product.id}`}
-                      className="inline-flex items-center self-start px-6 py-3 bg-teal-700 text-white rounded-xl font-semibold hover:bg-teal-800 transition-all shadow-lg shadow-teal-700/20 hover:shadow-xl group"
+                      className="inline-flex items-center self-start px-6 py-3 bg-blue-700 text-white rounded-xl font-semibold hover:bg-blue-800 transition-all shadow-lg shadow-blue-700/20 hover:shadow-xl group"
                     >
-                      View Details
+                      {t.products.viewDetails}
                       <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
@@ -259,21 +259,21 @@ export default function CategoryPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-[#123b43] via-teal-800 to-[#6e4310] rounded-xl p-10 md:p-16 text-center text-white relative overflow-hidden"
+            className="bg-gradient-to-br from-blue-950 via-blue-800 to-blue-950 rounded-xl p-10 md:p-16 text-center text-white relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full -mr-20 -mt-20"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white opacity-10 rounded-full -ml-10 -mb-10"></div>
             <div className="relative">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Need a Custom Solution?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.products.ctaTitle}</h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                We offer customized solutions tailored to your specific requirements.
+                {t.products.ctaDescription}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-teal-800 rounded-xl font-semibold hover:bg-amber-50 transition-colors shadow-lg"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-800 rounded-xl font-semibold hover:bg-amber-50 transition-colors shadow-lg"
                 >
-                  Contact Sales
+                  {t.products.ctaButton}
                 </Link>
                 <a
                   href="https://magicchip.en.alibaba.com"
@@ -281,7 +281,7 @@ export default function CategoryPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 bg-amber-300/15 text-white border border-amber-200/40 rounded-xl font-semibold hover:bg-amber-300/25 transition-colors"
                 >
-                  View on Alibaba
+                  {t.products.viewOnAlibaba}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
               </div>

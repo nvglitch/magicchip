@@ -139,7 +139,7 @@ const contactData = {
 };
 
 export default function ContactSection({ siteConfig }: ContactSectionProps) {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
   const dataLanguage = (contactData as any)[language] ? language : 'en';
   const data = (contactData as any)[dataLanguage];
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -151,7 +151,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
     const newErrors: { name?: string; email?: string; message?: string } = {};
     if (!formData.name.trim()) newErrors.name = data.form.error;
     if (!formData.email.trim()) newErrors.email = data.form.error;
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = 'Invalid email';
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = t.contactPage.invalidEmail;
     if (!formData.message.trim()) newErrors.message = data.form.error;
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -434,7 +434,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                         href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, '')}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center px-8 py-3 bg-amber-50 text-amber-800 border border-amber-200 font-medium rounded-lg hover:bg-amber-100 transition-colors"
+                        className="flex items-center justify-center px-8 py-3 bg-green-50 text-green-700 border border-green-200 font-medium rounded-lg hover:bg-green-100 transition-colors"
                       >
                         <MessageCircle className="w-4 h-4 mr-2" />
                         {data.whatsapp.button}
