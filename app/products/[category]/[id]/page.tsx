@@ -39,6 +39,7 @@ type ProductDetail = {
 
 const mcipcb13ImageBase = '/MCIPCB13/%E4%B8%BB%E5%9B%BE';
 const mcipcb12ImageBase = '/MCIPCB12/%E4%B8%BB%E5%9B%BE';
+const mcipcd3ImageBase = '/MCIPCD3/%E4%B8%BB%E5%9B%BE';
 
 const categoryData: Record<string, { icon: keyof typeof iconMap; gradient: string; accent: string }> = {
   'industrial-mini-pc': { icon: 'Cpu', gradient: 'from-slate-900 via-blue-950 to-slate-900', accent: 'blue' },
@@ -163,6 +164,48 @@ const products: Record<string, ProductDetail> = {
     ],
     advantageSummary: 'MCIPCB12 balances compact dimensions with practical industrial connectivity, flexible storage, triple-display output, and efficient processor options for reliable embedded and edge deployments.',
     operatingRange: '-20°C to +60°C',
+  },
+  mcipcd3: {
+    name: 'MCIPCD3',
+    tagline: 'Six-LAN industrial network appliance with flexible Intel Core platform support',
+    description: 'MCIPCD3 is a rugged industrial network appliance designed for routing, firewall, gateway, and edge connectivity deployments. It combines flexible Intel processor options with six Intel Gigabit LAN ports, dual serial interfaces, expandable wireless connectivity, and a wide operating temperature range.',
+    images: [`${mcipcd3ImageBase}/1.jpg`],
+    galleryImages: [
+      `${mcipcd3ImageBase}/2.jpg`,
+      `${mcipcd3ImageBase}/3.jpg`,
+      `${mcipcd3ImageBase}/4.jpg`,
+    ],
+    highlights: ['Intel 2955U / Core i3/i5/i7', '6 x Intel GbE LAN', 'Dual RS232', '209 x 150 x 57 mm'],
+    specs: [
+      { label: 'Model', value: 'MCIPCD3' },
+      { label: 'CPU', value: 'Optional Intel 2955U, 4th/6th/7th/8th Gen Core i3/i5/i7 CPU' },
+      { label: 'Video', value: '1 x HDMI' },
+      { label: 'RAM', value: '1 x DDR3L SO-DIMM slot, maximum 16GB' },
+      { label: 'Material', value: 'Aluminum' },
+      { label: 'USB', value: '4 x USB' },
+      { label: 'Power Input', value: '12V DC input' },
+      { label: 'NIC', value: '6 x GbE RJ45 Intel i210/i211' },
+      { label: 'COM', value: '1 x DB-9 RS232, 1 x RJ45 RS232 Cisco standard' },
+      { label: 'Storage', value: '1 x mSATA, 1 x HDD/SSD' },
+      { label: 'Expansion', value: '1 x Mini-PCIe full card with SIM slot supporting 3G/4G, WiFi/Bluetooth; watchdog timer 1-255 seconds' },
+      { label: 'Front I/O', value: '1 x power button, 1 x reset button, 4 x USB, 1 x HDMI, 1 x DB-9 RS232, 1 x RJ45 RS232 Cisco standard' },
+      { label: 'Rear I/O', value: '6 x GbE RJ45 LAN, 1 x 12V DC power input, 2 x antenna connectors, 1 x power LED, 1 x HDD LED' },
+      { label: 'System', value: 'Windows 7/8/10, Linux' },
+      { label: 'Working Environment', value: 'Working temperature: -20°C to +70°C; storage temperature: -30°C to +70°C; storage humidity: 95% @40°C, non-condensing' },
+      { label: 'Size', value: '209 x 150 x 57 mm' },
+      { label: 'Weight', value: '1.35 kg' },
+    ],
+    features: [
+      { icon: 'Network', title: 'Six Intel Gigabit LAN Ports', description: 'Six Intel i210/i211 network interfaces support routing, firewall, gateway, and network segmentation workloads.' },
+      { icon: 'Cpu', title: 'Flexible Intel Platform', description: 'Multiple Intel processor options help balance performance, cost, and project lifecycle requirements.' },
+      { icon: 'Thermometer', title: 'Wide Temperature Operation', description: 'Designed for reliable operation from -20°C to +70°C in demanding edge environments.' },
+    ],
+    sellingPoints: [
+      { image: `${mcipcd3ImageBase}/5.jpg`, title: 'Purpose-built network connectivity', description: 'Six independent Gigabit LAN ports and dual serial interfaces support dense industrial and security network deployments.' },
+      { image: `${mcipcd3ImageBase}/6.jpg`, title: 'Rugged and deployment-ready', description: 'An aluminum enclosure, wireless expansion, watchdog timer, and wide-temperature rating support dependable long-running operation.' },
+    ],
+    advantageSummary: 'MCIPCD3 combines six Intel Gigabit LAN ports, flexible Intel processor choices, legacy serial connectivity, wireless expansion, and a rugged aluminum enclosure for network security and industrial edge deployments.',
+    operatingRange: '-20°C to +70°C',
   },
   fw100: {
     name: 'FW-100',

@@ -94,18 +94,18 @@ const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: 
       specs: ['4th-13th Gen Intel Core', 'Dual GbE LAN', '8x USB Ports', '-20°C to +60°C'],
     },
     {
-      id: 'mcai35',
-      name: 'MCAI35',
-      tagline: 'High-performance AI mini PC powered by Strix Halo platform',
-      image: '/MCAI35.png',
-      specs: ['AMD Strix Halo', 'Up to 128GB LPDDR5x', 'Quad-Display Support', '50 TOPs NPU'],
-    },
-    {
       id: 'mcipcb12',
       name: 'MCIPCB12',
       tagline: 'Compact fanless industrial mini PC with triple-display support',
       image: '/MCIPCB12/%E4%B8%BB%E5%9B%BE/1.jpg',
       specs: ['Intel Elkhart Lake / Alder Lake-N', 'Dual GbE LAN', '2x HDMI + 1x DP', '-20°C to +60°C'],
+    },
+    {
+      id: 'mcipcd3',
+      name: 'MCIPCD3',
+      tagline: 'Six-LAN industrial network appliance with flexible Intel Core options',
+      image: '/MCIPCD3/%E4%B8%BB%E5%9B%BE/1.jpg',
+      specs: ['Intel Core i3/i5/i7 Options', '6x Intel GbE LAN', 'Dual RS232', '-20°C to +70°C'],
     },
   ],
   'firewall-mini-pc': [
@@ -118,6 +118,13 @@ const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: 
     },
   ],
   'desktop-mini-pc': [
+    {
+      id: 'mcai35',
+      name: 'MCAI35',
+      tagline: 'High-performance AI mini PC powered by Strix Halo platform',
+      image: '/MCAI35.png',
+      specs: ['AMD Strix Halo', 'Up to 128GB LPDDR5x', 'Quad-Display Support', '50 TOPs NPU'],
+    },
     {
       id: 'dt200',
       name: 'DT-200',

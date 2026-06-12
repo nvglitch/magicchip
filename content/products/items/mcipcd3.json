@@ -1,0 +1,17 @@
+{
+  "id": "mcipcd3",
+  "category": "industrial-mini-pc",
+  "name": "MCIPCD3",
+  "tagline": "Six-LAN industrial network appliance with flexible Intel Core options",
+  "description": "Industrial network appliance with six Intel Gigabit LAN ports, dual serial interfaces, flexible Intel processors, and wide-temperature operation.",
+  "images": ["/MCIPCD3/%E4%B8%BB%E5%9B%BE/1.jpg"],
+  "specifications": [
+    { "label": "CPU", "value": "Intel 2955U, 4th/6th/7th/8th Gen Core i3/i5/i7" },
+    { "label": "Memory", "value": "1 x DDR3L SO-DIMM, maximum 16GB" },
+    { "label": "Network", "value": "6 x Intel i210/i211 Gigabit LAN" },
+    { "label": "Storage", "value": "1 x mSATA, 1 x HDD/SSD" },
+    { "label": "Operating Temp", "value": "-20°C to +70°C" },
+    { "label": "Dimensions", "value": "209 x 150 x 57 mm" }
+  ],
+  "alibabaUrl": "https://magicchip.en.alibaba.com"
+}

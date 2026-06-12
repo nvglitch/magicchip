@@ -74,7 +74,7 @@ export default function FeaturedProduct() {
 
             {/* CTA */}
             <Link
-              href="/products/industrial-mini-pc/mcai35"
+              href="/products/desktop-mini-pc/mcai35"
               className="group inline-flex items-center px-6 py-3 border-2 border-gray-900 text-gray-900 font-semibold rounded-md hover:bg-gray-900 hover:text-white hover:border-emerald-500 transition-all duration-300"
             >
               {t.featured.cta}
