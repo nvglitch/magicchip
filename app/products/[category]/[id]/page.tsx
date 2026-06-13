@@ -360,6 +360,15 @@ export default function ProductDetailPage() {
                   </div>
                 ))}
               </div>
+
+              <button
+                type="button"
+                onClick={() => document.getElementById('contact-cta')?.scrollIntoView({ behavior: 'smooth' })}
+                className="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-700 hover:bg-blue-50 rounded-full text-sm font-semibold transition-colors shadow-lg shadow-black/20 cursor-pointer"
+              >
+                {t.productDetail.contactSales}
+                <ArrowRight className="w-4 h-4" />
+              </button>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.55, delay: 0.1 }}>
@@ -507,18 +516,15 @@ export default function ProductDetailPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white" id="contact-cta">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-950 mb-4">{t.productDetail.interestedIn.replace('{name}', product.name)}</h2>
           <p className="text-lg text-slate-600 mb-8">{t.productDetail.contactPrompt}</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-blue-700 text-white rounded-lg font-semibold hover:bg-blue-800 transition-colors shadow-lg shadow-blue-700/20">
               {t.productDetail.contactSales}
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <a href="https://magicchip.en.alibaba.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 bg-amber-50 text-amber-800 border border-amber-200 rounded-lg font-semibold hover:bg-amber-100 transition-colors">
-              {t.productDetail.viewOnAlibaba}
-            </a>
           </div>
         </div>
       </section>
