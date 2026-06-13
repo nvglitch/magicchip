@@ -205,13 +205,13 @@ export default function CategoryPage() {
               >
                 <div className="flex flex-col md:flex-row">
                   {/* Product Image */}
-                  <div className={`md:w-2/5 flex items-center justify-center p-8 ${index % 3 === 0 ? 'bg-blue-50/50' : index % 3 === 1 ? 'bg-amber-50/50' : 'bg-rose-50/40'}`}>
-                    <div className="relative w-full aspect-square max-w-[300px] rounded-lg overflow-hidden bg-white border border-gray-100">
+                  <div className={`md:w-2/5 flex items-center justify-center p-0 ${index % 3 === 0 ? 'bg-blue-50/50' : index % 3 === 1 ? 'bg-amber-50/50' : 'bg-rose-50/40'}`}>
+                    <div className="relative w-full rounded-lg overflow-hidden">
                       {product.image ? (
                         <img
                           src={product.image}
                           alt={product.name}
-                          className="h-full w-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+                          className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
                         />
                       ) : (
                         <div className="absolute inset-0 flex items-center justify-center text-gray-400">
