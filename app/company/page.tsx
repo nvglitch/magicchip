@@ -2,7 +2,7 @@
 
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { motion } from 'framer-motion';
-import { Target, Eye, Award, Users, Globe, TrendingUp, MapPin, Calendar, Lightbulb, Star, Handshake } from 'lucide-react';
+import { Target, Eye, Award, Users, Globe, TrendingUp, MapPin, Lightbulb, Star, Handshake } from 'lucide-react';
 
 const companyData = {
   en: {
@@ -220,7 +220,6 @@ const companyData = {
 
 export default function CompanyPage() {
   const { language, t } = useLanguage();
-  // Fallback to English for languages that don't have translations yet
   const dataLanguage = (companyData as any)[language] ? language : 'en';
   const data = (companyData as any)[dataLanguage];
 
@@ -241,18 +240,17 @@ export default function CompanyPage() {
         </section>
 
         {/* Company Introduction */}
-        <section className="py-16 bg-white">
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
               className="max-w-4xl mx-auto text-center"
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-6">{data.intro?.title}</h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                {data.intro?.content}
-              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">{data.intro?.content}</p>
             </motion.div>
           </div>
         </section>
@@ -264,9 +262,10 @@ export default function CompanyPage() {
               {data.stats.map((stat: any, index: number) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true, margin: '-40px' }}
+                  transition={{ duration: 0.5, delay: index * 0.12, type: 'spring', stiffness: 200, damping: 18 }}
                   className="text-center"
                 >
                   <div className="text-4xl md:text-5xl font-bold text-amber-600 mb-2">{stat.value}</div>
@@ -282,10 +281,11 @@ export default function CompanyPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12">
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                className="bg-white rounded-xl p-8 border border-gray-100 border-l-4 border-l-blue-500 shadow-sm"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+                className="bg-white rounded-xl p-8 border border-gray-100 border-l-4 border-l-blue-500 shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                   <Target className="w-6 h-6 text-blue-600" />
@@ -294,10 +294,11 @@ export default function CompanyPage() {
                 <p className="text-gray-600 leading-relaxed">{data.mission.content}</p>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white rounded-xl p-8 border border-gray-100 border-l-4 border-l-blue-500 shadow-sm"
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+                className="bg-white rounded-xl p-8 border border-gray-100 border-l-4 border-l-blue-500 shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                   <Eye className="w-6 h-6 text-blue-600" />
@@ -312,32 +313,38 @@ export default function CompanyPage() {
         {/* Values */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            <motion.h2
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-3xl font-bold text-center text-gray-900 mb-12"
+            >
               {t.company.valuesTitle}
-            </h2>
+            </motion.h2>
             <div className="grid md:grid-cols-4 gap-8">
               {data.values.map((value: any, index: number) => {
-                const iconMap: Record<string, any> = {
-                  Lightbulb,
-                  Star,
-                  Handshake,
-                  Award
-                };
+                const iconMap: Record<string, any> = { Lightbulb, Star, Handshake, Award };
                 const IconComponent = iconMap[value.icon] || Lightbulb;
-
                 return (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="text-center p-6"
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-40px' }}
+                    transition={{ duration: 0.45, delay: index * 0.12, ease: [0.25, 0.1, 0.25, 1] }}
+                    className="text-center p-6 group"
                   >
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <IconComponent className="w-6 h-6 text-blue-600" />
-                    </div>
+                    <motion.div
+                      whileInView={{ scale: [0.6, 1], opacity: [0, 1] }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: index * 0.12 + 0.15, type: 'spring' }}
+                      className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-100 transition-colors"
+                    >
+                      <IconComponent className="w-7 h-7 text-blue-600" />
+                    </motion.div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">{value.title}</h3>
-                    <p className="text-gray-600 text-sm">{value.description}</p>
+                    <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
                   </motion.div>
                 );
               })}
@@ -345,29 +352,58 @@ export default function CompanyPage() {
           </div>
         </section>
 
-        {/* Timeline */}
+        {/* Timeline — Our Journey */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            <motion.h2
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-3xl font-bold text-center text-gray-900 mb-12"
+            >
               {t.company.timelineTitle}
-            </h2>
-            <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-blue-200 hidden md:block" />
-              <div className="space-y-12">
+            </motion.h2>
+            <div className="relative max-w-4xl mx-auto">
+              {/* Center line */}
+              <div className="absolute left-4 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-0.5 bg-blue-100" />
+              <div className="space-y-10">
                 {data.timeline.map((item: any, index: number) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className={`flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-60px' }}
+                    transition={{ duration: 0.55, delay: 0.05, ease: [0.25, 0.1, 0.25, 1] }}
+                    className={`relative flex items-start gap-6 md:gap-0 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                   >
-                    <div className="flex-1 md:text-right pr-8">
-                      <div className="text-2xl font-bold text-amber-600">{item.year}</div>
-                      <div className="font-semibold text-gray-900">{item.title}</div>
-                      <div className="text-gray-600 text-sm">{item.description}</div>
+                    {/* Content */}
+                    <div className={`flex-1 pl-10 md:pl-0 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'}`}>
+                      <motion.span
+                        initial={{ opacity: 0, x: index % 2 === 0 ? -12 : 12 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4, delay: 0.2 }}
+                        className="inline-block text-3xl font-bold text-blue-600 mb-1"
+                      >
+                        {item.year}
+                      </motion.span>
+                      <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
+                      <p className="text-gray-600 text-sm mt-1 max-w-xs inline-block">{item.description}</p>
                     </div>
-                    <div className="w-4 h-4 bg-blue-600 rounded-full flex-shrink-0 mx-4 md:mx-0 relative z-10" />
+
+                    {/* Dot on timeline */}
+                    <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-1.5 z-10">
+                      <motion.div
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.35, delay: 0.25, type: 'spring', stiffness: 300, damping: 15 }}
+                        className="w-4 h-4 bg-blue-600 rounded-full ring-4 ring-blue-50"
+                      />
+                    </div>
+
+                    {/* Spacer for desktop alternating layout */}
                     <div className="flex-1 hidden md:block" />
                   </motion.div>
                 ))}
@@ -379,15 +415,22 @@ export default function CompanyPage() {
         {/* Locations */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            <motion.h2
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-3xl font-bold text-center text-gray-900 mb-12"
+            >
               {t.company.locationTitle}
-            </h2>
+            </motion.h2>
             <div className="flex justify-center">
               {data.locations.map((location: any, index: number) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-40px' }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-gray-50 rounded-xl p-6 border border-gray-100 border-l-4 border-l-blue-500 max-w-md"
                 >

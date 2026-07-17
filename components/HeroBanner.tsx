@@ -187,7 +187,7 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
                 transition={{ duration: 0.5, ease: 'easeOut' }}
                 className="max-w-2xl pointer-events-auto"
               >
-                <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 lg:mb-6 leading-tight">
+                <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 lg:mb-6 leading-tight whitespace-pre-line">
                   {slides[currentSlide].title}
                 </h1>
                 <p className="text-sm sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6 lg:mb-8 line-clamp-3 sm:line-clamp-none">
