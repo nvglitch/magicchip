@@ -1,10 +1,10 @@
 {
-  "id": "mcai35",
+  "id": "mcai2",
   "category": "desktop-mini-pc",
-  "name": "MCAI35",
+  "name": "MCAIPC2",
   "tagline": "High-performance AI mini PC powered by Strix Halo platform",
-  "description": "The MCAI35 is a flagship AI mini PC featuring AMD's Strix Halo platform with integrated graphics and neural processing unit. Designed for edge computing, AI workloads, and high-performance industrial applications.",
-  "images": ["/MCAI35.png"],
+  "description": "The MCAIPC2 is a flagship AI mini PC featuring AMD's Strix Halo platform with integrated graphics and neural processing unit. Designed for edge computing, AI workloads, and high-performance industrial applications.",
+  "images": ["/MCAIPC2.png"],
   "specifications": [
     { "label": "Processor", "value": "AMD Strix Halo (120W/132W)" },
     { "label": "Graphics", "value": "Up to 40 Graphics Cores" },

@@ -119,18 +119,18 @@ const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: 
   ],
   'desktop-mini-pc': [
     {
-      id: 'mcai35',
-      name: 'MCAI35',
+      id: 'mcai2',
+      name: 'MCAIPC2',
       tagline: 'High-performance AI mini PC powered by Strix Halo platform',
       image: '/MCAI35.png',
       specs: ['AMD Strix Halo', 'Up to 128GB LPDDR5x', 'Quad-Display Support', '50 TOPs NPU'],
     },
     {
-      id: 'dt200',
-      name: 'DT-200',
-      tagline: 'Ultra-compact desktop mini PC for business and education',
-      image: '/desktop.png',
-      specs: ['Intel N200', '4K@60Hz Display', 'USB-C PD', 'VESA Mount'],
+      id: 'mcai1',
+      name: 'MCAIPC1',
+      tagline: 'AMD Ryzen AI Max+ 395 — 140W flagship mini PC with quad display',
+      image: '/MCAIPC1/A主图/亚马逊主图横向.jpg',
+      specs: ['AMD Ryzen AI Max+ 395', 'Up to 128GB LPDDR5x', '10G+2.5G Dual LAN', 'Quad M.2 NVMe'],
     },
   ],
   'firewall-server': [

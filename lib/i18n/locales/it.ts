@@ -29,7 +29,7 @@ export const it: TranslationSchema = {
     },
     altTexts: {
       hero: 'Banner principale MagicChip che mostra la tecnologia hardware enterprise',
-      featuredProduct: 'MagicChip MCAI35 mini PC AI di punta',
+      featuredProduct: 'MagicChip MCAIPC2 mini PC AI di punta',
       logo: 'Logo aziendale MagicChip',
       socialProof: 'Testimonianza cliente MagicChip da leader del settore',
       company: 'Sede centrale MagicChip',
@@ -175,7 +175,7 @@ export const it: TranslationSchema = {
     backToProducts: 'Torna ai Prodotti',
     backToCategory: 'Torna a {category}',
     productGallery: 'Galleria del Prodotto',
-    exploreProduct: 'Esplora {name} da ogni angolazione',
+    exploreProduct: '{name} da vicino',
     galleryDescription: 'Diverse viste del prodotto evidenziano il design dell\'involucro, la disposizione delle interfacce e i dettagli di installazione.',
     enlargeMainView: 'Ingrandisci la vista principale di {name}',
     enlargeView: 'Ingrandisci la vista {n} di {name}',
@@ -197,7 +197,7 @@ export const it: TranslationSchema = {
   },
   featured: {
     badge: 'Prodotto di Punta',
-    title: 'MCAI35',
+    title: 'MCAIPC2',
     description: 'Mini PC AI ad alte prestazioni alimentato dalla piattaforma Strix Halo con grafica integrata e unità di elaborazione neurale per il calcolo edge e carichi di lavoro AI.',
     features: [
       'AMD Strix Halo (120W/132W), fino a 40 core grafici + 50 TOPs NPU',

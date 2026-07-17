@@ -29,7 +29,7 @@ export const fr: TranslationSchema = {
     },
     altTexts: {
       hero: 'Bannière principale MagicChip présentant la technologie matérielle enterprise',
-      featuredProduct: 'MagicChip MCAI35 mini PC IA phare',
+      featuredProduct: 'MagicChip MCAIPC2 mini PC IA phare',
       logo: 'Logo de l\'entreprise MagicChip',
       socialProof: 'Témoignage client MagicChip d\'un leader de l\'industrie',
       company: 'Siège social de MagicChip',
@@ -175,7 +175,7 @@ export const fr: TranslationSchema = {
     backToProducts: 'Retour aux Produits',
     backToCategory: 'Retour à {category}',
     productGallery: 'Galerie du Produit',
-    exploreProduct: 'Explorez {name} sous tous les angles',
+    exploreProduct: '{name} de près',
     galleryDescription: 'Les différentes vues du produit mettent en avant le design du boîtier, la disposition des interfaces et les détails d\'installation.',
     enlargeMainView: 'Agrandir la vue principale de {name}',
     enlargeView: 'Agrandir la vue {n} de {name}',
@@ -197,7 +197,7 @@ export const fr: TranslationSchema = {
   },
   featured: {
     badge: 'Produit Phare',
-    title: 'MCAI35',
+    title: 'MCAIPC2',
     description: 'Mini PC IA haute performance alimenté par la plateforme Strix Halo avec graphiques intégrés et unité de traitement neuronal pour le calcul de périphérie et les charges de travail IA.',
     features: [
       'AMD Strix Halo (120W/132W), jusqu\'à 40 cœurs graphiques + 50 TOPs NPU',

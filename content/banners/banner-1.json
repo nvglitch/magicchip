@@ -3,12 +3,12 @@
   "order": 1,
   "image": "/banner1.jpg",
   "title": {
-    "en": "MCAI35 Flagship AI Chip",
-    "zh": "MCAI35 旗舰AI芯片",
-    "fr": "MCAI35 Puce IA Flagship",
-    "de": "MCAI35 Flagship-KI-Chip",
-    "it": "MCAI35 Chip IA Flagship",
-    "es": "MCAI35 Chip IA Flagship"
+    "en": "MCAIPC2 Flagship AI Chip",
+    "zh": "MCAIPC2 旗舰AI芯片",
+    "fr": "MCAIPC2 Puce IA Flagship",
+    "de": "MCAIPC2 Flagship-KI-Chip",
+    "it": "MCAIPC2 Chip IA Flagship",
+    "es": "MCAIPC2 Chip IA Flagship"
   },
   "subtitle": {
     "en": "High-performance AI mini PC powered by Strix Halo platform",

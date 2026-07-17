@@ -23,7 +23,7 @@ import { useEffect, useState } from 'react';
 
 type ProductSpec = { label: string; value: string };
 type ProductFeature = { icon: keyof typeof iconMap; title: string; description: string };
-type ProductCard = { image: string; title: string; description: string };
+type ProductCard = { image: string; title: string; description?: string };
 type ProductDetail = {
   name: string;
   tagline: string;
@@ -97,8 +97,8 @@ const products: Record<string, ProductDetail> = {
     advantageSummary: 'MCIPCB13 focuses on the interfaces and durability industrial buyers usually need first: broad CPU options, legacy and modern I/O, resilient environmental ratings, and flexible storage expansion in a compact enclosure.',
     operatingRange: '-20°C to +60°C',
   },
-  mcai35: {
-    name: 'MCAI35',
+  mcai2: {
+    name: 'MCAIPC2',
     tagline: 'High-performance AI mini PC powered by Strix Halo platform',
     description: 'A flagship AI mini PC for edge computing, AI workloads, and high-performance industrial applications.',
     images: ['/MCAI35.png'],
@@ -230,27 +230,47 @@ const products: Record<string, ProductDetail> = {
       { icon: 'Zap', title: 'Low Power', description: 'Under 15W typical power consumption.' },
     ],
   },
-  dt200: {
-    name: 'DT-200',
-    tagline: 'Ultra-compact desktop mini PC for business and education',
-    description: 'An ultra-compact desktop mini PC featuring Intel N-series processor and 4K display support for office workstations and signage.',
-    images: ['/desktop.png'],
-    highlights: ['Intel N200', '4K@60Hz', 'USB-C PD', 'VESA mount'],
+  mcai1: {
+    name: 'MCAIPC1',
+    tagline: 'AMD Ryzen AI Max+ flagship — 140W desktop performance in a 220mm chassis',
+    description: 'Powered by the AMD Ryzen™ AI Max+ 395 processor with up to 128GB LPDDR5x memory and quad-display support. A 220×220×83mm powerhouse with dual 10G + 2.5G LAN, quad M.2 NVMe, USB4, and PD3.1 — built for AI workloads, edge servers, and professional workstations.',
+    images: ['/MCAIPC1/A主图/亚马逊主图横向.jpg'],
+    galleryImages: [
+      '/MCAIPC1/A主图/1.jpg',
+      '/MCAIPC1/A主图/2.jpg',
+      '/MCAIPC1/A主图/3.jpg',
+      '/MCAIPC1/A主图/4.jpg',
+      '/MCAIPC1/A主图/5.jpg',
+      '/MCAIPC1/A主图/6.jpg',
+      '/MCAIPC1/A主图/7.jpg',
+      '/MCAIPC1/A主图/8.jpg',
+      '/MCAIPC1/A主图/9.jpg',
+    ],
+    highlights: ['AMD Ryzen AI Max+ 395', '140W TDP', 'Quad-Display 4K', 'Dual 10G+2.5G LAN'],
     specs: [
-      { label: 'Processor', value: 'Intel N200 (4C/4T)' },
-      { label: 'Memory', value: 'Up to 16GB DDR4-3200' },
-      { label: 'Storage', value: 'M.2 2280 NVMe SSD' },
-      { label: 'Display', value: '4K@60Hz via HDMI 2.0 + DP 1.2' },
-      { label: 'USB', value: '4 x USB 3.2 Gen2 + 2 x USB 2.0' },
-      { label: 'Network', value: '1 x 2.5G LAN + WiFi 6' },
-      { label: 'Audio', value: '3.5mm combo jack' },
-      { label: 'Power', value: '65W USB-C PD' },
-      { label: 'Dimensions', value: '128 x 128 x 42 mm' },
+      { label: 'Processor', value: 'AMD Ryzen™ AI Max+ 395, TDP up to 140W' },
+      { label: 'Memory', value: 'LPDDR5x 8533MT/s, 256-bit, up to 128GB' },
+      { label: 'Storage', value: '4x M.2 2280 PCIe 4.0 SSD + 4x SATA' },
+      { label: 'Display', value: '1x HDMI 2.1 + 1x DP 2.1 + 2x USB4 (Quad Display)' },
+      { label: 'USB', value: '2x USB4 + 6x USB3.0 (2x Front 10Gbps, 4x Rear)' },
+      { label: 'Network', value: '1x 10G LAN (AQC113) + 1x 2.5G LAN (Intel I226)' },
+      { label: 'Power', value: '8Pin ATX + 19V DC-IN + Type-C PD3.1 28V' },
+      { label: 'Expansion', value: 'M.2 2230 PCIe (WiFi/BT), ARGB Header, FG Header' },
+      { label: 'Dimensions', value: '220 × 220 × 83 mm' },
     ],
     features: [
-      { icon: 'Monitor', title: '4K Display', description: 'Clear 4K@60Hz output.' },
-      { icon: 'Zap', title: 'USB-C PD', description: 'Single-cable power and data.' },
-      { icon: 'Layers', title: 'VESA Mount', description: 'Mount behind a monitor or on a wall.' },
+      { icon: 'Cpu', title: 'AI Max+ Platform', description: 'AMD Ryzen™ AI Max+ 395 with integrated NPU for edge AI inference and real-time workloads.' },
+      { icon: 'Monitor', title: 'Quad 4K Display', description: 'Simultaneous output via HDMI 2.1, DP 2.1, and dual USB4 — ideal for video walls and control rooms.' },
+      { icon: 'HardDrive', title: 'Quad M.2 RAID', description: '4x PCIe 4.0 M.2 slots plus 4x SATA — up to 32TB total storage with flexible RAID configurations.' },
+      { icon: 'Network', title: 'Dual High-Speed LAN', description: '10GbE (AQC113) for backbone throughput plus 2.5GbE (I226) with PXE and WoL for enterprise deployment.' },
+      { icon: 'Zap', title: 'Triple Power Input', description: '8Pin ATX, 19V DC barrel, and USB-C PD3.1 28V — deploy in server rooms, deskside, or mobile workstations.' },
+      { icon: 'Thermometer', title: 'Advanced Cooling', description: 'Dual fan headers (CPU + System) with intelligent PWM curves for sustained 140W operation in a compact chassis.' },
+    ],
+    sellingPoints: [
+      { image: '/MCAIPC1/A+/2.jpg', title: 'AI Max+ Platform' },
+      { image: '/MCAIPC1/A+/5.jpg', title: 'Advanced Cooling' },
+      { image: '/MCAIPC1/A+/6.jpg', title: 'WiFi 7 + Bluetooth 5.4' },
+      { image: '/MCAIPC1/A+/7.jpg', title: 'Quad M.2 Storage Array' },
     ],
   },
   fs500: {
@@ -506,8 +526,10 @@ export default function ProductDetailPage() {
                     <img src={point.image} alt={point.title} className="block w-full h-auto transition-transform duration-500 group-hover:scale-[1.025]" />
                   </button>
                   <div className="p-6 text-slate-950 border-t border-slate-100">
-                    <h3 className="text-xl font-bold mb-2">{point.title}</h3>
-                    <p className="text-slate-600 leading-relaxed">{point.description}</p>
+                    <h3 className="text-xl font-bold">{point.title}</h3>
+                    {point.description && (
+                      <p className="text-slate-600 leading-relaxed mt-2">{point.description}</p>
+                    )}
                   </div>
                 </motion.div>
               ))}

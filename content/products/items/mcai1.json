@@ -1,0 +1,24 @@
+{
+  "id": "mcai1",
+  "category": "desktop-mini-pc",
+  "name": "MCAIPC1",
+  "tagline": "AMD Ryzen AI Max+ 395 — 140W flagship mini PC with quad display",
+  "description": "Powered by the AMD Ryzen AI Max+ 395 processor with up to 128GB LPDDR5x memory and quad-display support. A 220×220×83mm powerhouse with dual 10G + 2.5G LAN, quad M.2 NVMe, USB4, and PD3.1.",
+  "images": ["/MCAIPC1/A主图/1.2.jpg"],
+  "specifications": [
+    { "label": "Processor", "value": "AMD Ryzen™ AI Max+ 395, TDP up to 140W" },
+    { "label": "Memory", "value": "LPDDR5x 8533MT/s, 256-bit, up to 128GB" },
+    { "label": "Storage", "value": "4x M.2 2280 PCIe 4.0 SSD + 4x SATA" },
+    { "label": "Display", "value": "1x HDMI 2.1 + 1x DP 2.1 + 2x USB4 (Quad Display)" },
+    { "label": "USB", "value": "2x USB4 + 6x USB3.0" },
+    { "label": "Network", "value": "1x 10G LAN (AQC113) + 1x 2.5G LAN (I226)" },
+    { "label": "Power", "value": "8Pin ATX + 19V DC-IN + Type-C PD3.1 28V" },
+    { "label": "Dimensions", "value": "220 × 220 × 83 mm" }
+  ],
+  "features": [
+    { "icon": "Cpu", "title": "AI Max+ Platform", "description": "AMD Ryzen AI Max+ 395 with integrated NPU" },
+    { "icon": "Monitor", "title": "Quad 4K Display", "description": "HDMI 2.1 + DP 2.1 + Dual USB4 output" },
+    { "icon": "HardDrive", "title": "Quad M.2 RAID", "description": "4x PCIe 4.0 M.2 + 4x SATA" }
+  ],
+  "alibabaUrl": "https://magicchip.en.alibaba.com"
+}

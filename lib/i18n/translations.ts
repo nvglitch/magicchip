@@ -107,7 +107,7 @@ export const translations = {
     // Featured Product
     featured: {
       badge: 'Flagship Product',
-      title: 'MCAI35',
+      title: 'MCAIPC2',
       description: 'High-performance AI mini PC powered by Strix Halo platform with integrated graphics and neural processing unit for edge computing and AI workloads.',
       features: [
         'AMD Strix Halo (120W/132W), up to 40 Graphics Cores + 50 TOPs NPU',
@@ -354,7 +354,7 @@ export const translations = {
     // Featured Product
     featured: {
       badge: 'Produit Phare',
-      title: 'MCAI35',
+      title: 'MCAIPC2',
       description: 'Mini PC IA haute performance alimenté par la plateforme Strix Halo avec graphiques intégrés et unité de traitement neuronal pour le calcul de périphérie et les charges de travail IA.',
       features: [
         'AMD Strix Halo (120W/132W), jusqu\'à 40 cœurs graphiques + 50 TOPs NPU',
@@ -600,7 +600,7 @@ export const translations = {
     },
     featured: {
       badge: 'Flaggschiff-Produkt',
-      title: 'MCAI35',
+      title: 'MCAIPC2',
       description: 'Hochleistungs-AI-Mini-PC mit Strix Halo-Plattform, integrierter Grafik und neuronaler Verarbeitungseinheit für Edge-Computing und AI-Workloads.',
       features: [
         'AMD Strix Halo (120W/132W), bis zu 40 Grafikkerne + 50 TOPs NPU',
@@ -827,7 +827,7 @@ export const translations = {
     },
     featured: {
       badge: 'Prodotto di Fascia Alta',
-      title: 'MCAI35',
+      title: 'MCAIPC2',
       description: 'Mini PC AI ad alte prestazioni alimentato dalla piattaforma Strix Halo con grafica integrata e unità di elaborazione neurale per il calcolo edge e carichi di lavoro AI.',
       features: [
         'AMD Strix Halo (120W/132W), fino a 40 core grafici + 50 TOPs NPU',
@@ -1054,7 +1054,7 @@ export const translations = {
     },
     featured: {
       badge: 'Producto Flagship',
-      title: 'MCAI35',
+      title: 'MCAIPC2',
       description: 'Mini PC AI de alto rendimiento alimentado por la plataforma Strix Halo con gráficos integrados y unidad de procesamiento neuronal para computación edge y cargas de trabajo AI.',
       features: [
         'AMD Strix Halo (120W/132W), hasta 40 núcleos gráficos + 50 TOPs NPU',
