@@ -230,43 +230,41 @@ export default function ProductsPage() {
   const data = productsData[language] || productsData.en;
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#f3f7f5] text-slate-950">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-24 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-10 right-20 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl"></div>
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">{data.hero.title}</h1>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">{data.hero.subtitle}</p>
+      <section className="relative isolate overflow-hidden bg-[#101827] text-white">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_20%,rgba(37,99,235,0.3),transparent_34%),radial-gradient(circle_at_15%_85%,rgba(245,158,11,0.14),transparent_28%)]" />
+        <div className="absolute inset-0 -z-10 opacity-20 tech-pattern-overlay" />
+        <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 md:py-28 lg:px-8">
+          <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
+            <div className="mb-7 h-px w-24 bg-gradient-to-r from-amber-400 to-transparent" />
+            <h1 className="text-5xl font-bold tracking-tight md:text-7xl">{data.hero.title}</h1>
+            <p className="mt-6 max-w-2xl text-xl leading-relaxed text-slate-300 md:text-2xl">{data.hero.subtitle}</p>
           </motion.div>
         </div>
       </section>
 
       {/* Products Grid */}
-      <section className="py-20 bg-white">
+      <section className="bg-white py-24 md:py-28">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {data.categories.map((category, index) => (
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative bg-gradient-to-br from-white to-gray-50 rounded-xl p-10 border border-gray-100 hover:shadow-md hover:border-blue-100 transition-all duration-300 overflow-hidden"
+                className="h-full"
               >
+                <Link
+                  href={category.href}
+                  className="group relative block h-full overflow-hidden rounded-3xl border border-slate-200 bg-[#f8faf9] p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:bg-white hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-300/60 md:p-10"
+                >
                 {/* Background decoration */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full -mr-16 -mt-16 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
+                <div className="absolute -right-16 -top-16 h-36 w-36 rounded-full bg-blue-100/70 transition-transform duration-500 group-hover:scale-150"></div>
 
                 <div className="relative">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <div className="mb-7 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-600/20 transition-transform duration-300 group-hover:scale-105">
                     <category.icon className="w-8 h-8 text-white" />
                   </div>
 
@@ -282,14 +280,12 @@ export default function ProductsPage() {
                     ))}
                   </ul>
 
-                  <Link
-                    href={category.href}
-                    className="inline-flex items-center text-blue-600 font-semibold group-hover:text-blue-700"
-                  >
+                  <span className="inline-flex items-center font-semibold text-blue-600 group-hover:text-blue-700">
                     {data.learnMore}
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
-                  </Link>
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-2" />
+                  </span>
                 </div>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -297,19 +293,19 @@ export default function ProductsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="bg-[#eaf0ee] py-24 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 md:p-12 text-white text-center"
+            className="relative overflow-hidden rounded-3xl bg-[#101827] p-10 text-center text-white shadow-xl shadow-slate-900/10 md:p-16"
           >
             <h2 className="text-3xl font-bold mb-4">{data.cta.title}</h2>
             <p className="text-lg mb-8 opacity-90">{data.cta.description}</p>
             <a
               href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-md hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center rounded-full bg-blue-600 px-8 py-4 font-semibold text-white shadow-lg shadow-blue-600/20 transition-all hover:-translate-y-0.5 hover:bg-blue-500"
             >
               {data.cta.button}
               <ArrowRight className="w-5 h-5 ml-2" />
