@@ -278,182 +278,94 @@ export default function FactoryPage() {
   const data = (factoryData as any)[dataLanguage];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-950 via-blue-900 to-blue-700 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">{data.hero.title}</h1>
-              <p className="text-xl text-blue-100 max-w-2xl">{data.hero.subtitle}</p>
-            </motion.div>
-          </div>
-        </section>
+    <div className="min-h-screen bg-[#f3f7f5] text-slate-950">
+      <section className="relative isolate flex min-h-[600px] items-end overflow-hidden text-white md:min-h-[680px]">
+        <img src="/assets/factory/facility.jpg" alt={data.hero.title} className="absolute inset-0 -z-20 h-full w-full object-cover" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#0b1424]/95 via-[#0b1424]/75 to-blue-950/35" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#0b1424] via-transparent to-transparent" />
+        <div className="mx-auto w-full max-w-7xl px-4 pb-24 sm:px-6 md:pb-28 lg:px-8">
+          <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-3xl">
+            <div className="mb-7 h-px w-24 bg-gradient-to-r from-amber-400 to-transparent" />
+            <h1 className="text-5xl font-bold tracking-tight md:text-7xl">{data.hero.title}</h1>
+            <p className="mt-6 max-w-2xl text-xl leading-relaxed text-slate-200 md:text-2xl">{data.hero.subtitle}</p>
+          </motion.div>
+        </div>
+      </section>
 
-        {/* Overview */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
-              className="max-w-3xl mx-auto text-center"
-            >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">{data.overview.title}</h2>
-              <p className="text-lg text-gray-600 leading-relaxed">{data.overview.content}</p>
-            </motion.div>
+      <section className="relative z-10 -mt-10 px-4 sm:px-6 lg:px-8">
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="mx-auto grid max-w-7xl overflow-hidden rounded-3xl bg-white shadow-2xl shadow-slate-900/10 ring-1 ring-slate-200 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="p-8 md:p-12 lg:p-14">
+            <h2 className="text-3xl font-bold leading-tight md:text-5xl">{data.overview.title}</h2>
+            <p className="mt-6 text-lg leading-8 text-slate-600">{data.overview.content}</p>
           </div>
-        </section>
+          <div className="grid grid-cols-2 gap-px bg-slate-200">
+            {data.stats.map((stat: any, index: number) => (
+              <motion.div key={index} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: index * 0.08 }} className="flex min-h-40 flex-col justify-center bg-[#f7faf9] p-6 md:p-8">
+                <div className="text-3xl font-bold text-amber-600 md:text-4xl">{stat.value}</div>
+                <div className="mt-2 text-sm leading-relaxed text-slate-600">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
 
-        {/* Stats */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {data.stats.map((stat: any, index: number) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.85 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true, margin: '-40px' }}
-                  transition={{ duration: 0.5, delay: index * 0.1, type: 'spring', stiffness: 200, damping: 18 }}
-                  className="text-center bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
-                >
-                  <div className="text-4xl md:text-5xl font-bold text-amber-600 mb-2">{stat.value}</div>
-                  <div className="text-gray-600">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
+      <section className="relative overflow-hidden py-24 md:py-32">
+        <div className="absolute -left-32 top-20 h-80 w-80 rounded-full border border-blue-200/60" />
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.h2 initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl text-3xl font-bold md:text-5xl">{data.capabilities.title}</motion.h2>
+          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {data.capabilities.items.map((item: any, index: number) => (
+              <motion.article key={index} initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-60px' }} transition={{ duration: 0.55, delay: index * 0.08 }} className="group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-950 text-white transition-colors group-hover:bg-blue-700"><item.icon className="h-6 w-6" /></div>
+                <h3 className="mt-8 text-xl font-bold">{item.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-slate-600">{item.desc}</p>
+              </motion.article>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Capabilities */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.h2
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="text-3xl font-bold text-center text-gray-900 mb-12"
-            >
-              {data.capabilities.title}
-            </motion.h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {data.capabilities.items.map((item: any, index: number) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: '-40px' }}
-                  transition={{ duration: 0.45, delay: index * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
-                  className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:shadow-md transition-shadow group"
-                >
-                  <motion.div
-                    whileInView={{ scale: [0.5, 1], opacity: [0, 1] }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.35, delay: index * 0.1 + 0.1, type: 'spring' }}
-                    className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition-colors"
-                  >
-                    <item.icon className="w-6 h-6 text-blue-600" />
-                  </motion.div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-gray-600 text-sm">{item.desc}</p>
-                </motion.div>
-              ))}
-            </div>
+      <section className="bg-white py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.h2 initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-3xl font-bold md:text-5xl">{t.factory?.ourFacilities || 'Our Facilities'}</motion.h2>
+          <div className="mt-12 grid gap-6 lg:grid-cols-12">
+            {data.facilities.map((facility: any, index: number) => (
+              <motion.article key={index} initial={{ opacity: 0, y: 36 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.65, delay: index * 0.1 }} className={`group relative isolate min-h-[420px] overflow-hidden rounded-3xl bg-slate-900 text-white shadow-lg ${index === 0 ? 'lg:col-span-7 lg:row-span-2 lg:min-h-[620px]' : 'lg:col-span-5 lg:min-h-[297px]'}`}>
+                <img src={facility.image} alt={facility.title} className="absolute inset-0 -z-20 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 -z-10 bg-gradient-to-t from-slate-950 via-slate-950/55 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-7 md:p-9">
+                  <h3 className="text-2xl font-bold md:text-3xl">{facility.title}</h3>
+                  <p className="mt-3 max-w-xl text-sm leading-6 text-slate-200">{facility.description}</p>
+                  <ul className="mt-5 flex flex-wrap gap-2">
+                    {facility.features.map((feature: any, idx: number) => (
+                      <li key={idx} className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 text-xs text-white backdrop-blur-sm">
+                        <CheckCircle className="h-3.5 w-3.5 text-amber-300" />{feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.article>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Facilities */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.h2
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="text-3xl font-bold text-center text-gray-900 mb-12"
-            >
-              {t.factory?.ourFacilities || 'Our Facilities'}
-            </motion.h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {data.facilities.map((facility: any, index: number) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: '-60px' }}
-                  transition={{ duration: 0.5, delay: index * 0.15, ease: [0.25, 0.1, 0.25, 1] }}
-                  className="bg-white rounded-xl overflow-hidden border border-gray-100 border-l-4 border-l-blue-500 shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <div className="h-48 overflow-hidden">
-                    <img 
-                      src={facility.image} 
-                      alt={facility.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{facility.title}</h3>
-                    <p className="text-gray-600 text-sm mb-4">{facility.description}</p>
-                    <ul className="space-y-2">
-                      {facility.features.map((feature: any, idx: number) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-blue-600 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+      <section className="relative overflow-hidden bg-[#101827] py-24 text-white md:py-32">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(37,99,235,0.28),transparent_34%)]" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.h2 initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center text-3xl font-bold md:text-5xl">{t.factory?.certifications || 'Certifications'}</motion.h2>
+          <motion.p initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="mx-auto mt-5 max-w-2xl text-center leading-7 text-slate-300">{t.factory?.certificationsSubtitle || 'Our products meet international quality and safety standards'}</motion.p>
+          <div className="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-white/10 md:grid-cols-3 lg:grid-cols-6">
+            {data.certifications.map((cert: any, index: number) => (
+              <motion.div key={index} initial={{ opacity: 0, scale: 0.88 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.06 }} className="bg-white/[0.055] p-6 text-center transition-colors hover:bg-white/10">
+                <Award className="mx-auto h-8 w-8 text-amber-300" />
+                <div className="mt-4 font-semibold">{cert.name}</div>
+                <div className="mt-2 text-xs leading-5 text-slate-400">{cert.description}</div>
+              </motion.div>
+            ))}
           </div>
-        </section>
-
-        {/* Certifications */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.h2
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="text-3xl font-bold text-center text-gray-900 mb-4"
-            >
-              {t.factory?.certifications || 'Certifications'}
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: 0.1 }}
-              className="text-center text-gray-600 mb-12 max-w-2xl mx-auto"
-            >
-              {t.factory?.certificationsSubtitle || 'Our products meet international quality and safety standards'}
-            </motion.p>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {data.certifications.map((cert: any, index: number) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.85 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true, margin: '-40px' }}
-                  transition={{ duration: 0.35, delay: index * 0.06, type: 'spring', stiffness: 250, damping: 18 }}
-                  className="bg-gray-50 rounded-xl p-6 text-center hover:shadow-md transition-shadow border border-gray-100"
-                >
-                  <Award className="w-8 h-8 text-blue-600 mx-auto mb-3" />
-                  <div className="font-semibold text-gray-900">{cert.name}</div>
-                  <div className="text-xs text-gray-500 mt-1">{cert.description}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+        </div>
+      </section>
     </div>
   );
 }

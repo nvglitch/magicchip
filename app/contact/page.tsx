@@ -286,23 +286,22 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#f3f7f5] text-slate-950">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">{data.hero.title}</h1>
-              <p className="text-xl text-blue-100 max-w-2xl">{data.hero.subtitle}</p>
+        <section className="relative isolate overflow-hidden bg-[#101827] text-white">
+          <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_20%,rgba(37,99,235,0.3),transparent_34%),radial-gradient(circle_at_15%_85%,rgba(245,158,11,0.14),transparent_28%)]" />
+          <div className="absolute inset-0 -z-10 opacity-20 tech-pattern-overlay" />
+          <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 md:py-28 lg:px-8">
+            <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
+              <div className="mb-7 h-px w-24 bg-gradient-to-r from-amber-400 to-transparent" />
+              <h1 className="text-5xl font-bold tracking-tight md:text-7xl">{data.hero.title}</h1>
+              <p className="mt-6 max-w-2xl text-xl leading-relaxed text-slate-300 md:text-2xl">{data.hero.subtitle}</p>
             </motion.div>
           </div>
         </section>
 
         {/* Contact Info */}
-        <section className="py-16 bg-white">
+        <section className="relative z-10 -mt-8 pb-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {data.info.map((item: any, index: number) => (
@@ -311,14 +310,14 @@ export default function ContactPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center p-6 rounded-xl border border-blue-100 bg-white transition-all hover:-translate-y-1 hover:border-blue-300 hover:shadow-md"
+                  className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-lg shadow-slate-900/5 transition-all hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl"
                 >
-                  <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="w-7 h-7 text-blue-600" />
+                  <div className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-600 ring-1 ring-blue-200">
+                    <item.icon className="h-6 w-6" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
                   <p className="text-gray-500 text-sm mb-2">{item.description}</p>
-                  <p className="text-blue-600 font-medium">{item.content}</p>
+                  <p className="font-semibold text-blue-800">{item.content}</p>
                 </motion.div>
               ))}
             </div>
@@ -326,7 +325,7 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Form & WhatsApp - 上下排版 */}
-        <section className="py-16">
+        <section className="bg-[#eaf0ee] py-20 md:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="space-y-8">
               {/* 第一行：WhatsApp 卡片 */}
@@ -334,7 +333,7 @@ export default function ContactPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="bg-gradient-to-r from-teal-700 to-emerald-700 p-8 rounded-xl text-white shadow-lg shadow-teal-900/10"
+                className="overflow-hidden rounded-2xl border border-white/10 bg-[#101827] p-8 text-white shadow-xl shadow-slate-900/10 md:p-10"
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                   <div className="mb-4 md:mb-0">
@@ -342,11 +341,11 @@ export default function ContactPage() {
                       <MessageCircle className="w-8 h-8 mr-3" />
                       <h2 className="text-2xl font-bold">{data.whatsapp.title}</h2>
                     </div>
-                    <p className="text-teal-100">{data.whatsapp.description}</p>
+                    <p className="text-slate-300">{data.whatsapp.description}</p>
                   </div>
                   <a
                     href="https://wa.me/8613392172330"
-                    className="inline-flex items-center px-6 py-3 bg-white text-emerald-700 font-medium rounded-md hover:bg-amber-50 transition-colors self-start md:self-auto"
+                    className="inline-flex items-center self-start rounded-full bg-emerald-500 px-6 py-3 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-emerald-400 md:self-auto"
                   >
                     <MessageSquare className="w-5 h-5 mr-2" />
                     {data.whatsapp.button}
@@ -363,13 +362,13 @@ export default function ContactPage() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                    className="bg-white rounded-xl p-12 shadow-sm text-center border border-gray-100 border-l-4 border-l-blue-500"
+                    className="rounded-3xl border border-slate-200 bg-white p-12 text-center shadow-xl shadow-slate-900/5"
                   >
                     <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ delay: 0.2, type: 'spring', stiffness: 200, damping: 15 }}
-                      className="w-20 h-20 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6"
+                      className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-emerald-100"
                     >
                       <CheckCircle className="w-10 h-10 text-teal-700" />
                     </motion.div>
@@ -396,9 +395,9 @@ export default function ContactPage() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 border-l-4 border-l-blue-500"
+                    className="rounded-3xl border border-slate-200 bg-white p-8 shadow-xl shadow-slate-900/5 md:p-10"
                   >
-                    <h2 className="text-2xl font-bold text-gray-900 mb-6">{data.form.title}</h2>
+                    <h2 className="mb-8 text-3xl font-bold text-slate-950">{data.form.title}</h2>
                     <form onSubmit={handleSubmit} className="space-y-4">
                       <div className="grid md:grid-cols-2 gap-4">
                         <div>
@@ -415,7 +414,7 @@ export default function ContactPage() {
                                 if (errors.name) setErrors({ ...errors, name: undefined });
                               }}
                               className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 transition-all ${
-                                errors.name ? 'border-red-400 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-500'
+                                errors.name ? 'border-red-400 focus:ring-red-300' : 'border-slate-300 focus:border-blue-700 focus:ring-blue-700/20'
                               }`}
                             />
                             <AnimatePresence>
@@ -447,7 +446,7 @@ export default function ContactPage() {
                                 if (errors.email) setErrors({ ...errors, email: undefined });
                               }}
                               className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 transition-all ${
-                                errors.email ? 'border-red-400 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-500'
+                                errors.email ? 'border-red-400 focus:ring-red-300' : 'border-slate-300 focus:border-blue-700 focus:ring-blue-700/20'
                               }`}
                             />
                             <AnimatePresence>
@@ -481,7 +480,7 @@ export default function ContactPage() {
                                 if (errors.company) setErrors({ ...errors, company: undefined });
                               }}
                               className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 transition-all ${
-                                errors.company ? 'border-red-400 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-500'
+                                errors.company ? 'border-red-400 focus:ring-red-300' : 'border-slate-300 focus:border-blue-700 focus:ring-blue-700/20'
                               }`}
                             />
                             <AnimatePresence>
@@ -513,7 +512,7 @@ export default function ContactPage() {
                                 if (errors.subject) setErrors({ ...errors, subject: undefined });
                               }}
                               className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 transition-all ${
-                                errors.subject ? 'border-red-400 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-500'
+                                errors.subject ? 'border-red-400 focus:ring-red-300' : 'border-slate-300 focus:border-blue-700 focus:ring-blue-700/20'
                               }`}
                             />
                             <AnimatePresence>
@@ -546,7 +545,7 @@ export default function ContactPage() {
                               if (errors.message) setErrors({ ...errors, message: undefined });
                             }}
                             className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 transition-all resize-none ${
-                              errors.message ? 'border-red-400 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-500'
+                              errors.message ? 'border-red-400 focus:ring-red-300' : 'border-slate-300 focus:border-blue-700 focus:ring-blue-700/20'
                             }`}
                           />
                           <AnimatePresence>
@@ -569,7 +568,7 @@ export default function ContactPage() {
                         disabled={isSubmitting}
                         whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
                         whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-                        className="w-full flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed shadow-lg shadow-blue-600/15"
+                        className="flex w-full items-center justify-center rounded-xl bg-blue-600 px-6 py-4 font-semibold text-white shadow-lg shadow-blue-600/20 transition-all hover:-translate-y-0.5 hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70"
                       >
                         {isSubmitting ? (
                           <motion.div
