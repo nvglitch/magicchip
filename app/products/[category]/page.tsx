@@ -110,11 +110,11 @@ const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: 
   ],
   'firewall-mini-pc': [
     {
-      id: 'fw100',
-      name: 'FW-100',
-      tagline: 'Compact network security appliance with 4× 2.5G ports',
-      image: '/assets/home/product-categories/firewall-mini-pc.png',
-      specs: ['Intel N100', '4× 2.5GbE LAN', 'VPN Support', '<15W Power'],
+      id: 'mcr20',
+      name: 'MCR20',
+      tagline: 'Fanless Alder Lake-N network appliance with dual 10GbE and dual 2.5GbE',
+      image: '/assets/products/firewall/mcr20/images/1.jpg',
+      specs: ['Intel Alder Lake-N', '2 x 10GbE + 2 x 2.5GbE', 'DDR5 up to 48GB', '0°C to 70°C'],
     },
   ],
   'desktop-mini-pc': [

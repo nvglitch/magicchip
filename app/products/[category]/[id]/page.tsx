@@ -30,6 +30,7 @@ type ProductDetail = {
   description: string;
   images: string[];
   galleryImages?: string[];
+  galleryCards?: ProductCard[];
   specs: ProductSpec[];
   highlights: string[];
   features: ProductFeature[];
@@ -208,27 +209,64 @@ const products: Record<string, ProductDetail> = {
     advantageSummary: 'MCIPCD3 combines six Intel Gigabit LAN ports, flexible Intel processor choices, legacy serial connectivity, wireless expansion, and a rugged aluminum enclosure for network security and industrial edge deployments.',
     operatingRange: '-20°C to +70°C',
   },
-  fw100: {
-    name: 'FW-100',
-    tagline: 'Compact network security appliance with 4 x 2.5G ports',
-    description: 'A compact firewall mini PC featuring four 2.5GbE LAN ports and Intel N100 processor for small business network security.',
-    images: ['/assets/home/product-categories/firewall-mini-pc.png'],
-    highlights: ['Intel N100', '4 x 2.5GbE LAN', 'VPN ready', 'Low power'],
+  mcr20: {
+    name: 'MCR20',
+    tagline: 'Fanless Alder Lake-N network appliance with dual 10GbE and dual 2.5GbE',
+    description: 'MCR20 is a compact network security and edge appliance built for high-throughput routing, firewall, VPN, and gateway deployments. It combines Intel Alder Lake-N processors with dual Intel 2.5GbE, dual 10GbE copper or SFP+ networking, DDR5 memory, flexible storage, and a rugged aluminum enclosure.',
+    images: ['/assets/products/firewall/mcr20/images/1.jpg'],
+    galleryCards: [
+      {
+        image: '/assets/products/firewall/mcr20/images/3.jpg',
+        title: 'Clearly labeled internal expansion',
+        description: 'The motherboard layout identifies DDR5 memory, M.2 NVMe, dual SATA, PCIe expansion, TPM, COM, power, and service connections for straightforward configuration.',
+      },
+      {
+        image: '/assets/products/firewall/mcr20/images/5.jpg',
+        title: 'Purpose-built thermal design',
+        description: 'The high-fin aluminum chassis dissipates processor heat while a dedicated 10G network-card fan manages the higher thermal load of multi-gigabit networking.',
+      },
+    ],
+    highlights: ['Intel Alder Lake-N', '2 x 10GbE + 2 x 2.5GbE', 'DDR5 up to 48GB', 'Triple 4K@60Hz output'],
     specs: [
-      { label: 'Processor', value: 'Intel N100 (4C/4T)' },
-      { label: 'Memory', value: 'Up to 16GB DDR4-3200' },
-      { label: 'Storage', value: 'M.2 2242 SATA SSD' },
-      { label: 'LAN Ports', value: '4 x 2.5GbE RJ45' },
-      { label: 'USB', value: '2 x USB 3.2 + 1 x USB 2.0' },
-      { label: 'Console', value: '1 x RJ45 serial console' },
-      { label: 'Power', value: '12V DC / 5A adapter' },
-      { label: 'Dimensions', value: '134 x 126 x 40 mm' },
+      { label: 'Model', value: 'MCR20' },
+      { label: 'CPU', value: 'Intel Alder Lake-N N95, N97, N100, N200, Core i3-N300, or Core i3-N305' },
+      { label: 'Chipset', value: 'Intel Alder Lake-N' },
+      { label: 'Graphics', value: 'Intel UHD Graphics' },
+      { label: 'Video', value: '2 x HDMI 2.0 and 1 x Type-C, supporting 4K at 60Hz' },
+      { label: 'Memory', value: '1 x SO-DIMM DDR5-4800 slot with DDR5-5200/5600 support, maximum 48GB' },
+      { label: 'Material', value: 'Aluminum alloy' },
+      { label: 'USB', value: '5 x USB 2.0, 1 x USB 3.2 Gen 1 (5Gbps), and 1 x Type-C USB 2.0' },
+      { label: 'Power', value: '12V DC; 5A for N100-N200 configurations or 8A for Core i3-N300/N305 configurations' },
+      { label: 'Network', value: '2 x Intel i226-V 2.5GbE RJ45 plus 2 x Intel X550-T2 10GbE RJ45 or 2 x Intel 82599ES SFP+' },
+      { label: 'Storage', value: '1 x M.2 2280 NVMe PCIe 3.0 x1 and 2 x SATA 3.0 6Gbps' },
+      { label: 'Expansion', value: '1 x TF card slot, 1 x COM header, and 1 x TPM header' },
+      { label: 'Front I/O', value: 'Power button, Clear CMOS, 2 x WiFi antenna holes, TF slot, Type-C, USB 2.0, 2 x HDMI 2.0, power indicator, and storage indicator' },
+      { label: 'Rear I/O', value: '12V DC input, grounding screw, USB 3.2 Gen 1, 3 x USB 2.0, 2 x 2.5GbE RJ45, and either 2 x 10GbE RJ45 or 2 x SFP+' },
+      { label: 'Internal I/O', value: '4-pin power, TPM, SATA power, 2 x SATA, PCIe x8 slot with PCIe 3.0 x4 signal, M.2 NVMe PCIe 3.0 x1, DDR5 SO-DIMM, buzzer, and COM' },
+      { label: 'Dimensions', value: '176.7 x 143.7 x 58.2 mm' },
+      { label: 'TDP', value: '6W or 15W depending on processor' },
+      { label: 'System', value: 'Windows 10, Windows 11, and Linux' },
+      { label: 'Working Environment', value: '0°C to 70°C; 5%-85% relative humidity, non-condensing' },
     ],
     features: [
-      { icon: 'Shield', title: '4 x 2.5G LAN', description: 'High-speed network segmentation.' },
-      { icon: 'CheckCircle', title: 'VPN Support', description: 'WireGuard, OpenVPN, and IPsec ready.' },
-      { icon: 'Zap', title: 'Low Power', description: 'Under 15W typical power consumption.' },
+      { icon: 'Network', title: 'Multi-Gigabit Network Platform', description: 'Dual Intel 2.5GbE plus dual 10GbE copper or SFP+ interfaces support high-throughput routing, firewall, and network segmentation.' },
+      { icon: 'Cpu', title: 'Flexible Alder Lake-N Performance', description: 'Processor options from N95 through Core i3-N305 let projects balance compute performance, power use, and deployment cost.' },
+      { icon: 'HardDrive', title: 'Expandable Storage and I/O', description: 'M.2 NVMe, dual SATA, DDR5 memory, TPM, COM, TF card, and PCIe expansion provide a flexible platform for edge applications.' },
     ],
+    sellingPoints: [
+      {
+        image: '/assets/products/firewall/mcr20/images/a3.jpg',
+        title: 'Complete front and rear interface map',
+        description: 'The labeled panel overview shows display, USB, TF, Type-C, control, status, power, dual 2.5GbE, and dual 10GbE connections at a glance.',
+      },
+      {
+        image: '/assets/products/firewall/mcr20/images/a2.jpg',
+        title: 'Dual Intel 10GbE connectivity',
+        description: 'Two Intel X550-T2 10GbE copper ports deliver high-throughput connectivity, with an Intel 82599ES dual-SFP+ configuration available as an alternative.',
+      },
+    ],
+    advantageSummary: 'MCR20 combines compact fanless edge computing with enterprise-oriented network bandwidth: dual 2.5GbE, optional dual 10GbE copper or SFP+, DDR5 memory, flexible storage, triple-display output, and broad internal expansion in one rugged appliance.',
+    operatingRange: '0°C to 70°C',
   },
   mcai1: {
     name: 'MCAIPC1',
@@ -323,6 +361,7 @@ export default function ProductDetailPage() {
   const CategoryIcon = iconMap[catInfo.icon] || Cpu;
   const gallery = product?.images || [];
   const detailImages = product?.galleryImages || gallery.slice(1, 4);
+  const galleryItems: ProductCard[] = product?.galleryCards || detailImages.map((image) => ({ image, title: product?.name || '' }));
 
   useEffect(() => {
     if (!previewImage) return;
@@ -405,7 +444,7 @@ export default function ProductDetailPage() {
         </div>
       </section>
 
-      {detailImages.length > 0 && (
+      {galleryItems.length > 0 && (
         <section className="py-16 bg-[#f3f8f6]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-9 text-center">
@@ -413,10 +452,10 @@ export default function ProductDetailPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-slate-950">{t.productDetail.exploreProduct.replace('{name}', product.name)}</h2>
               <p className="mt-3 text-slate-600">{t.productDetail.galleryDescription}</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-              {detailImages.map((image, index) => (
+            <div className={`grid grid-cols-1 gap-5 ${product.galleryCards ? 'md:grid-cols-2' : 'md:grid-cols-3'}`}>
+              {galleryItems.map((item, index) => (
                 <motion.div
-                  key={image}
+                  key={item.image}
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.45, delay: index * 0.08 }}
@@ -424,12 +463,18 @@ export default function ProductDetailPage() {
                 >
                   <button
                     type="button"
-                    onClick={() => setPreviewImage(image)}
+                    onClick={() => setPreviewImage(item.image)}
                     aria-label={t.productDetail.enlargeView.replace('{name}', product.name).replace('{n}', String(index + 2))}
                     className="group block w-full cursor-zoom-in overflow-hidden"
                   >
-                    <img src={image} alt={product.name} className="block w-full h-auto transition-transform duration-500 group-hover:scale-[1.025]" />
+                    <img src={item.image} alt={item.title || product.name} className="block w-full h-auto transition-transform duration-500 group-hover:scale-[1.025]" />
                   </button>
+                  {item.description && (
+                    <div className="border-t border-slate-100 p-6 text-left">
+                      <h3 className="text-xl font-bold text-slate-950">{item.title}</h3>
+                      <p className="mt-2 leading-relaxed text-slate-600">{item.description}</p>
+                    </div>
+                  )}
                 </motion.div>
               ))}
             </div>

@@ -1,176 +1,239 @@
-# MagicChip - B2B Brand Showcase Website
+# MagicChip B2B Website
 
-<p align="center">
-  <img src="/logo.png" alt="MagicChip Logo" width="200" />
-</p>
+MagicChip 企业硬件产品展示网站，基于 Next.js App Router 构建，覆盖工业迷你电脑、防火墙设备、桌面迷你电脑、机架式防火墙服务器、公司介绍、工厂展示、新闻、技术资料和联系页面。
 
-MagicChip 是一家专注于高端硬件产品和企业服务的 B2B 品牌展示官网。本项目采用现代化的技术栈构建，旨在提供极致的品牌视觉展示、流畅的交互体验，以及高质量的销售线索收集。
+本文档是项目当前唯一的根目录说明文档。历史实施总结、修复报告和旧版设计方案均已合并或移除；维护时请以代码、`content/` 数据和本 README 为准。
 
 ## 技术栈
 
-| 技术 | 版本 | 说明 |
-|------|------|------|
-| **Next.js** | 16.1.6 | React 全栈框架 (App Router) |
-| **React** | 19.2.3 | UI 库 |
-| **TypeScript** | 5.x | 类型安全 |
-| **Tailwind CSS** | 4 | 原子化 CSS 框架 |
-| **Framer Motion** | 12.x | 动画与交互 |
-| **Lucide React** | 0.577.0 | 图标库 |
-
-## 项目特性
-
-### 核心功能
-- **Hero Banner** - 支持鼠标拖拽切换幻灯片、播放/暂停控制、平滑过渡动画
-- **产品分类** - 展示企业级处理器、AI加速器、网络芯片、安全模块
-- **旗舰产品** - MC-Pro X1 系列展示，包含特性列表
-- **服务矩阵** - 6大企业服务（咨询、实施、培训、支持等）
-- **客户案例** - 客户评价与信任墙，数据统计展示
-- **销售线索收集** - 免费资源下载表单
-- **新闻中心** - 动态新闻列表与详情页，支持分类筛选
-- **关于我们** - 公司介绍、领导团队、工厂展示
-- **产品页面** - 完整的产品展示与技术文档
-- **联系我们** - 多渠道联系方式与在线表单
-- **资源下载** - 技术文档、白皮书等资源下载中心
-
-### 交互设计
-- 滚动动画 (Scroll-triggered animations)
-- 下拉菜单 (悬停展开 + 底部动画下划线)
-- 响应式设计 (桌面端 / 平板 / 移动端)
-- Logo 跑马灯效果
-- 实时聊天组件 (LiveChat Widget)
-- 平滑页面过渡动画
-
-### 国际化
-- 完整的中英文双语支持
-- 语言切换持久化 (localStorage)
-- 导航栏、页脚、全文内容均已翻译
-- AI 辅助翻译脚本 (translate, translate:quick, translate:validate)
-
-## 项目结构
-
-```
-magicchip/
-├── app/                      # Next.js App Router
-│   ├── layout.tsx           # 根布局 (含 LanguageProvider)
-│   ├── page.tsx             # 首页
-│   ├── globals.css          # 全局样式
-│   ├── about/               # 关于我们页面
-│   ├── company/             # 公司介绍页面
-│   ├── contact/             # 联系我们页面
-│   ├── documents/           # 文档页面
-│   ├── downloads/           # 下载中心页面
-│   ├── factory/             # 工厂展示页面
-│   ├── leadership/          # 领导团队页面
-│   ├── news/                # 新闻中心
-│   │   ├── page.tsx        # 新闻列表
-│   │   ├── NewsPageClient.tsx
-│   │   └── [id]/           # 新闻详情页
-│   ├── products/            # 产品页面
-│   └── tech-docs/           # 技术文档页面
-├── components/              # React 组件
-│   ├── Navbar.tsx          # 导航栏 (含下拉菜单、语言切换)
-│   ├── HeroBanner.tsx      # Hero 幻灯片 (拖拽切换)
-│   ├── ProductCategories.tsx  # 产品分类
-│   ├── FeaturedProduct.tsx # 旗舰产品展示
-│   ├── Services.tsx        # 服务矩阵
-│   ├── SocialProof.tsx    # 客户信任墙
-│   ├── LeadGeneration.tsx # 线索收集表单
-│   ├── ContactSection.tsx  # 联系区块
-│   ├── LiveChatWidget.tsx  # 在线聊天组件
-│   └── Footer.tsx          # 页脚
-├── lib/i18n/               # 国际化
-│   ├── translations.ts     # 翻译字典 (中/英)
-│   └── LanguageContext.tsx # 语言上下文
-├── scripts/                # 工具脚本
-│   ├── ai-translate.js     # AI 翻译脚本
-│   ├── quick-translate.js  # 快速翻译
-│   └── validate-translations.js  # 翻译验证
-├── public/                 # 静态资源
-│   └── logo.png           # 网站 Logo
-├── package.json            # 依赖配置
-├── tailwind.config.*       # Tailwind 配置
-└── next.config.*          # Next.js 配置
-```
+- Next.js 16.1.6（App Router / Turbopack）
+- React 18.3.1
+- TypeScript
+- Tailwind CSS 4
+- Framer Motion
+- Lucide React
+- React Simple Maps
 
 ## 快速开始
 
-### 安装依赖
-
 ```bash
 npm install
-```
-
-### 开发模式
-
-```bash
 npm run dev
 ```
 
-访问 http://localhost:3000
+开发服务器启动后访问 `http://localhost:3000`。
 
-### 翻译管理
+常用命令：
 
 ```bash
-# AI 辅助翻译
-npm run translate
-
-# 快速翻译
-npm run translate:quick
-
-# 验证翻译完整性
-npm run translate:validate
+npm run dev                 # 本地开发
+npm run build               # 生产构建及 TypeScript 检查
+npm run start               # 运行生产构建
+npm run lint                # ESLint 检查
+npm run translate           # AI 辅助翻译
+npm run translate:quick     # 快速翻译
+npm run translate:validate  # 翻译完整性检查
 ```
 
-### 构建生产版本
+交付前至少执行：
 
 ```bash
 npm run build
 ```
 
-### 启动生产服务器
+## 页面与路由
 
-```bash
-npm start
+| 路由 | 用途 |
+| --- | --- |
+| `/` | 首页、轮播图、产品分类和联系入口 |
+| `/products` | 产品分类总览 |
+| `/products/[category]` | 分类产品列表 |
+| `/products/[category]/[id]` | 产品详情页 |
+| `/factory` | 工厂与生产能力 |
+| `/company`、`/about` | 公司信息 |
+| `/news`、`/news/[id]` | 新闻列表和详情 |
+| `/documents`、`/downloads`、`/tech-docs` | 文档与技术资料 |
+| `/contact` | 联系方式与询盘入口 |
+
+当前产品分类 ID：
+
+- `industrial-mini-pc`
+- `firewall-mini-pc`
+- `desktop-mini-pc`
+- `firewall-server`
+
+## 项目结构
+
+```text
+app/                         页面与动态路由
+components/                  首页和全站复用组件
+content/
+  banners/                   首页轮播内容
+  news/                      新闻 JSON
+  products/                  产品分类 JSON
+  products/items/            产品条目数据副本
+  site-config.json           联系方式、品牌和社交链接
+lib/
+  content-loader.ts          服务端 JSON 内容读取
+  i18n/                      多语言上下文、翻译和 SEO 配置
+public/assets/
+  brand/                     Logo 与品牌资源
+  common/                    二维码和通用图标
+  factory/                   工厂页面图片
+  home/banners/              首页轮播图
+  home/product-categories/   首页产品分类图
+  products/                  按类别和型号归档的产品资源
+scripts/                     翻译检查与辅助脚本
+types/                       TypeScript 补充类型
 ```
 
-## 页面结构
+## 内容维护
 
-### 首页
-1. **Header** - 固定导航栏，含 Logo、导航项（带下拉菜单）、搜索、语言切换
-2. **Hero Banner** - 3张幻灯片，支持拖拽和自动播放
-3. **Product Categories** - 4个产品类别卡片
-4. **Featured Product** - MC-Pro X1 旗舰产品展示
-5. **Services** - 6项企业服务
-6. **Social Proof** - 客户 Logo 跑马灯 + 案例引用
-7. **Lead Generation** - 免费资源下载表单
-8. **Footer** - 订阅通讯、链接列表、版权信息
+### 首页轮播
 
-### 其他页面
-- **/about** - 关于我们
-- **/company** - 公司介绍
-- **/leadership** - 领导团队
-- **/factory** - 工厂展示
-- **/products** - 产品展示
-- **/news** - 新闻中心（列表与详情）
-- **/contact** - 联系我们
-- **/downloads** - 资源下载中心
-- **/documents** - 文档中心
-- **/tech-docs** - 技术文档
+轮播配置位于 `content/banners/*.json`。常用字段：
 
-## 品牌信息
+- `order`：显示顺序
+- `image`：`public` 下的绝对资源路径
+- `title`、`subtitle`、`ctaText`：多语言文本
+- `ctaLink`：按钮链接
+- `published`：是否显示
 
-- **公司名称**: MagicChip
-- **定位**: 高端硬件产品 & 企业服务提供商
-- **目标客户**: 数据中心、云服务商、AI 企业、 Enterprise 客户
+新增轮播时复制现有 JSON，使用唯一 `id`，添加对应图片，然后运行生产构建。
 
-## 开发规范
+### 新闻
 
-- 使用 TypeScript 进行类型检查
-- 使用 ESLint 进行代码规范检查
-- 组件使用 Framer Motion 处理动画
-- 使用 Tailwind CSS 进行样式开发
-- 所有文本内容通过 i18n 系统管理
+新闻位于 `content/news/*.json`，按日期倒序显示。新增文章时应使用唯一 `id`，填写日期、多语言标题和摘要，并确认图片链接可访问。
 
-## 许可证
+### 站点配置
 
-MIT License
+联系方式、公司信息、Logo 和社交链接位于 `content/site-config.json`。修改 JSON 后必须检查语法并重新构建。
+
+### 产品数据
+
+当前产品系统仍处于“JSON 内容 + 页面内展示数据”并存状态：
+
+- 分类首页内容：`content/products/*.json`
+- 产品条目副本：`content/products/items/*.json`
+- 分类列表实际展示：`app/products/[category]/page.tsx` 中的 `sampleProducts`
+- 详情页实际展示：`app/products/[category]/[id]/page.tsx` 中的 `products`
+
+因此新增或修改产品时，需要同步更新分类列表、详情页数据和 `content/products/items/` 中的 JSON。只修改其中一处可能导致列表与详情不一致。
+
+当前详情页支持：
+
+- 主图和可放大图片
+- 产品亮点
+- 规格矩阵
+- 产品优势卡片
+- 带说明的方图画廊 `galleryCards`
+- 横向卖点图 `sellingPoints`
+- 工作温度与询盘 CTA
+
+### 新增产品建议流程
+
+1. 在 `public/assets/products/<category>/<model>/` 建立型号目录。
+2. 图片放入 `images/`，手册放入 `documents/`。
+3. 文件名优先使用小写英文、数字和连字符，避免空格及中文路径。
+4. 阅读产品手册并核对图片内容，不根据文件名猜测规格。
+5. 在分类页添加产品卡片。
+6. 在详情页添加完整产品数据。
+7. 在 `content/products/items/` 添加或更新对应 JSON。
+8. 检查所有 `/assets/...` 引用确实存在。
+9. 运行 `npm run build`。
+
+## 图片与文档规范
+
+所有网站静态资源统一放在 `public/assets/`，代码中使用以 `/assets/` 开头的路径。
+
+推荐结构：
+
+```text
+public/assets/products/<category>/<model>/
+  images/
+    1.jpg
+    detail-interfaces.jpg
+    detail-cooling.jpg
+  documents/
+    brochure.pdf
+```
+
+页面排版原则：
+
+- 主图优先使用清晰的方图或产品主体图。
+- 方图放在产品画廊中并保持相同尺寸。
+- 横图放在产品优势或卖点区域中并保持相同宽高比。
+- 图片标题和说明必须与图中接口、功能或应用场景一致。
+- 不要直接移动资源而不更新代码引用。
+- 资源整理后应全局搜索旧路径，并执行生产构建。
+
+## 产品详情页设计约定
+
+详情页顺序保持一致：
+
+1. 产品 Hero：分类、型号、简介、核心亮点和主图。
+2. Product Gallery：同类画幅的产品图，可附标题和说明。
+3. Technical Specifications：以手册为依据的规格矩阵。
+4. Product Advantages：三项核心能力卡片。
+5. Selling Points：同类横向详情图及对应说明。
+6. Contact CTA：跳转到询盘页面。
+
+不要在同一行混排明显不同宽高比的图片。图片卡片应完整展示原图，不使用会裁掉文字或接口的强制裁切。
+
+## 多语言
+
+当前界面语言：
+
+- English (`en`，默认)
+- Français (`fr`)
+- Deutsch (`de`)
+- Italiano (`it`)
+- Español (`es`)
+
+核心配置位于 `lib/i18n/config.ts`，翻译位于 `lib/i18n/locales/`。新增界面文案时必须同步添加各语言键，至少保证英文回退内容完整。
+
+项目部分内容类型仍保留可选 `zh` 字段，但中文目前不在 `SUPPORTED_LANGUAGES` 中，不应把它当作已启用的前台语言。
+
+## SEO
+
+SEO 配置位于 `lib/i18n/seo-config.ts` 和各语言文件中。维护时应确保：
+
+- 页面标题和描述与当前产品一致。
+- Open Graph 图片路径真实存在。
+- 图片具有准确的 `alt` 文本。
+- 外部链接使用有效地址。
+- 新增语言时同步更新语言配置和 SEO 元数据。
+
+## 验证与排错
+
+### 图片不显示
+
+1. 确认文件位于 `public/assets/`。
+2. 确认引用以 `/assets/` 开头。
+3. 检查大小写、空格、URL 编码和扩展名。
+4. 全局搜索旧路径。
+5. 运行 `npm run build`。
+
+### JSON 修改后页面无变化
+
+确认页面是否由 `content-loader.ts` 读取。产品分类列表和详情目前主要使用页面文件中的数据，修改产品 JSON 后仍需同步更新对应页面。
+
+### 构建与代码规范
+
+`npm run build` 是当前发布门槛。`npm run lint` 还会报告项目历史代码中的显式 `any`、未使用导入及原生 `<img>` 等问题；这些应逐步修复，但不要用忽略规则掩盖新增错误。
+
+## 开发约定
+
+- 使用 TypeScript，避免新增 `any`。
+- 优先复用现有组件、颜色和间距体系。
+- 不提交 `.next/`、临时渲染文件或本地环境文件。
+- 修改前检查 Git 状态，保留无关的用户改动。
+- 修改图片和产品内容后同时检查桌面端与移动端布局。
+- 产品参数以最新手册和实物图片为准。
+
+## 当前维护重点
+
+- 逐步将产品列表和详情页数据统一到单一数据源，消除重复维护。
+- 修复历史编码异常文本。
+- 清理现有 ESLint 错误和警告。
+- 持续完善多语言产品文案与 SEO 信息。
