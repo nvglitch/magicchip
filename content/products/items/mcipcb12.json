@@ -4,7 +4,7 @@
   "name": "MCIPCB12",
   "tagline": "Compact fanless industrial mini PC with rich I/O and triple-display support",
   "description": "Compact industrial mini PC with Intel Elkhart Lake or Alder Lake-N processors, dual Gigabit LAN, dual RS232, flexible storage, and triple-display output.",
-  "images": ["/MCIPCB12/%E4%B8%BB%E5%9B%BE/1.jpg"],
+  "images": ["/assets/products/industrial/mcipcb12/images/1.jpg"],
   "specifications": [
     { "label": "CPU", "value": "Intel Elkhart Lake J6412/J6413/J6426; Intel Alder Lake-N N95/N100/N200/N300" },
     { "label": "Memory", "value": "1 x DDR4 SO-DIMM, maximum 16GB" },

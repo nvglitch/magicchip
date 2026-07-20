@@ -4,7 +4,7 @@
   "name": "MCIPCD3",
   "tagline": "Six-LAN industrial network appliance with flexible Intel Core options",
   "description": "Industrial network appliance with six Intel Gigabit LAN ports, dual serial interfaces, flexible Intel processors, and wide-temperature operation.",
-  "images": ["/MCIPCD3/%E4%B8%BB%E5%9B%BE/1.jpg"],
+  "images": ["/assets/products/industrial/mcipcd3/images/1.jpg"],
   "specifications": [
     { "label": "CPU", "value": "Intel 2955U, 4th/6th/7th/8th Gen Core i3/i5/i7" },
     { "label": "Memory", "value": "1 x DDR3L SO-DIMM, maximum 16GB" },

@@ -1,7 +1,7 @@
 {
   "id": "banner-3",
   "order": 3,
-  "image": "/banner3.jpg",
+  "image": "/assets/home/banners/banner-3.jpg",
   "title": {
     "en": "MagicChip Technology",
     "zh": "魔芯科技",

@@ -25,7 +25,7 @@ export default function FeaturedProduct() {
           >
             <div className="relative rounded-lg overflow-hidden bg-gradient-to-br from-teal-100 via-white to-amber-100 shadow-xl ring-1 ring-teal-900/10">
               <Image
-                src="/MCAI35.png"
+                src="/assets/products/desktop/mcaipc2/hero.png"
                 alt={t.seo.altTexts.featuredProduct}
                 width={600}
                 height={600}

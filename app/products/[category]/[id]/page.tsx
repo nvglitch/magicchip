@@ -38,9 +38,9 @@ type ProductDetail = {
   operatingRange?: string;
 };
 
-const mcipcb13ImageBase = '/MCIPCB13/%E4%B8%BB%E5%9B%BE';
-const mcipcb12ImageBase = '/MCIPCB12/%E4%B8%BB%E5%9B%BE';
-const mcipcd3ImageBase = '/MCIPCD3/%E4%B8%BB%E5%9B%BE';
+const mcipcb13ImageBase = '/assets/products/industrial/mcipcb13/images';
+const mcipcb12ImageBase = '/assets/products/industrial/mcipcb12/images';
+const mcipcd3ImageBase = '/assets/products/industrial/mcipcd3/images';
 
 const categoryData: Record<string, { name: string; icon: keyof typeof iconMap; gradient: string; accent: string }> = {
   'industrial-mini-pc': { name: 'Industrial Mini PC', icon: 'Cpu', gradient: 'from-[#172033] via-blue-950 to-[#172033]', accent: 'blue' },
@@ -85,13 +85,13 @@ const products: Record<string, ProductDetail> = {
     sellingPoints: [
       {
         image: `${mcipcb13ImageBase}/5.jpg`,
-        title: 'Dense I/O in a compact body',
-        description: 'Front and rear interfaces are arranged for practical cabinet, kiosk, and machine-side installation without wasting panel space.',
+        title: 'Front and rear I/O at a glance',
+        description: 'The illustrated panel map identifies the power button, eight USB ports, dual COM, audio, dual Gigabit LAN, dual display outputs, DC input, and antenna connections.',
       },
       {
         image: `${mcipcb13ImageBase}/6.jpg`,
-        title: 'Built for long-running deployments',
-        description: 'Wide-voltage input, expandable storage, wireless expansion, watchdog support, and Linux/Windows compatibility help simplify field maintenance.',
+        title: 'Fanless reliability for industrial workloads',
+        description: 'A fanless aluminum enclosure, wide-temperature support, dual-display capability, wireless expansion, and 24/7 operation suit demanding automation and edge deployments.',
       },
     ],
     advantageSummary: 'MCIPCB13 focuses on the interfaces and durability industrial buyers usually need first: broad CPU options, legacy and modern I/O, resilient environmental ratings, and flexible storage expansion in a compact enclosure.',
@@ -101,7 +101,7 @@ const products: Record<string, ProductDetail> = {
     name: 'MCAIPC2',
     tagline: 'High-performance AI mini PC powered by Strix Halo platform',
     description: 'A flagship AI mini PC for edge computing, AI workloads, and high-performance industrial applications.',
-    images: ['/MCAI35.png'],
+    images: ['/assets/products/desktop/mcaipc2/hero.png'],
     highlights: ['AMD Strix Halo', '50 TOPs NPU', 'Quad display', 'Dual USB4'],
     specs: [
       { label: 'Processor', value: 'AMD Strix Halo (120W/132W)' },
@@ -158,10 +158,10 @@ const products: Record<string, ProductDetail> = {
       { icon: 'HardDrive', title: 'Flexible Storage', description: 'M.2 NVMe, SATA 3.0, and mSATA storage options simplify deployment and expansion.' },
     ],
     sellingPoints: [
-      { image: `${mcipcb12ImageBase}/4.jpg`, title: 'Compact industrial enclosure', description: 'A compact 135 x 127 x 38.7 mm body fits space-constrained cabinets, kiosks, and machine-side installations.' },
-      { image: `${mcipcb12ImageBase}/5.jpg`, title: 'Practical front I/O layout', description: 'USB and dual RS232 interfaces provide convenient access for industrial peripherals and service operations.' },
-      { image: `${mcipcb12ImageBase}/6.jpg`, title: 'Rich display and network connectivity', description: 'Triple-display output and dual Gigabit LAN support signage, monitoring, gateway, and control applications.' },
-      { image: `${mcipcb12ImageBase}/7.jpg`, title: 'Ready for dependable deployment', description: 'Wide-temperature operation, watchdog, PXE, and wireless expansion help support long-running edge workloads.' },
+      { image: `${mcipcb12ImageBase}/4.jpg`, title: 'Clearly labeled internal expansion', description: 'The internal layout identifies DDR4 memory, M.2 WiFi, mSATA, M.2 NVMe, SATA, speaker, CMOS, and front-panel connections for easier configuration and servicing.' },
+      { image: `${mcipcb12ImageBase}/5.jpg`, title: 'Complete front and rear interface map', description: 'The panel guide shows four USB ports, dual DB9 RS232, dual Gigabit LAN, dual HDMI, DisplayPort, audio, WiFi antenna, and 12V DC input.' },
+      { image: `${mcipcb12ImageBase}/6.jpg`, title: 'Versatile industrial and commercial applications', description: 'Designed for intelligent forklifts, CNC machines, automation, self-service payment equipment, kiosks, and digital signage.' },
+      { image: `${mcipcb12ImageBase}/7.jpg`, title: 'Broad operating system support', description: 'Compatible with Ubuntu, Windows, and Linux environments for flexible software deployment and system integration.' },
     ],
     advantageSummary: 'MCIPCB12 balances compact dimensions with practical industrial connectivity, flexible storage, triple-display output, and efficient processor options for reliable embedded and edge deployments.',
     operatingRange: '-20°C to +60°C',
@@ -202,8 +202,8 @@ const products: Record<string, ProductDetail> = {
       { icon: 'Thermometer', title: 'Wide Temperature Operation', description: 'Designed for reliable operation from -20°C to +70°C in demanding edge environments.' },
     ],
     sellingPoints: [
-      { image: `${mcipcd3ImageBase}/5.jpg`, title: 'Purpose-built network connectivity', description: 'Six independent Gigabit LAN ports and dual serial interfaces support dense industrial and security network deployments.' },
-      { image: `${mcipcd3ImageBase}/6.jpg`, title: 'Rugged and deployment-ready', description: 'An aluminum enclosure, wireless expansion, watchdog timer, and wide-temperature rating support dependable long-running operation.' },
+      { image: `${mcipcd3ImageBase}/5.jpg`, title: 'Front and rear panel overview', description: 'The illustrated interface map identifies USB, HDMI, dual serial ports, six Gigabit LAN ports, reset and power controls, status LEDs, antenna connectors, and 12V DC input.' },
+      { image: `${mcipcd3ImageBase}/6.jpg`, title: 'Six Intel Gigabit LAN ports', description: 'Six 1GbE interfaces powered by Intel i210/i211 controllers provide stable, high-density connectivity for routing, firewall, and network segmentation workloads.' },
     ],
     advantageSummary: 'MCIPCD3 combines six Intel Gigabit LAN ports, flexible Intel processor choices, legacy serial connectivity, wireless expansion, and a rugged aluminum enclosure for network security and industrial edge deployments.',
     operatingRange: '-20°C to +70°C',
@@ -212,7 +212,7 @@ const products: Record<string, ProductDetail> = {
     name: 'FW-100',
     tagline: 'Compact network security appliance with 4 x 2.5G ports',
     description: 'A compact firewall mini PC featuring four 2.5GbE LAN ports and Intel N100 processor for small business network security.',
-    images: ['/firewall.png'],
+    images: ['/assets/home/product-categories/firewall-mini-pc.png'],
     highlights: ['Intel N100', '4 x 2.5GbE LAN', 'VPN ready', 'Low power'],
     specs: [
       { label: 'Processor', value: 'Intel N100 (4C/4T)' },
@@ -234,17 +234,17 @@ const products: Record<string, ProductDetail> = {
     name: 'MCAIPC1',
     tagline: 'AMD Ryzen AI Max+ flagship — 140W desktop performance in a 220mm chassis',
     description: 'Powered by the AMD Ryzen™ AI Max+ 395 processor with up to 128GB LPDDR5x memory and quad-display support. A 220×220×83mm powerhouse with dual 10G + 2.5G LAN, quad M.2 NVMe, USB4, and PD3.1 — built for AI workloads, edge servers, and professional workstations.',
-    images: ['/MCAIPC1/A主图/亚马逊主图横向.jpg'],
+    images: ['/assets/products/desktop/mcaipc1/gallery/亚马逊主图横向.jpg'],
     galleryImages: [
-      '/MCAIPC1/A主图/1.jpg',
-      '/MCAIPC1/A主图/2.jpg',
-      '/MCAIPC1/A主图/3.jpg',
-      '/MCAIPC1/A主图/4.jpg',
-      '/MCAIPC1/A主图/5.jpg',
-      '/MCAIPC1/A主图/6.jpg',
-      '/MCAIPC1/A主图/7.jpg',
-      '/MCAIPC1/A主图/8.jpg',
-      '/MCAIPC1/A主图/9.jpg',
+      '/assets/products/desktop/mcaipc1/gallery/1.jpg',
+      '/assets/products/desktop/mcaipc1/gallery/2.jpg',
+      '/assets/products/desktop/mcaipc1/gallery/3.jpg',
+      '/assets/products/desktop/mcaipc1/gallery/4.jpg',
+      '/assets/products/desktop/mcaipc1/gallery/5.jpg',
+      '/assets/products/desktop/mcaipc1/gallery/6.jpg',
+      '/assets/products/desktop/mcaipc1/gallery/7.jpg',
+      '/assets/products/desktop/mcaipc1/gallery/8.jpg',
+      '/assets/products/desktop/mcaipc1/gallery/9.jpg',
     ],
     highlights: ['AMD Ryzen AI Max+ 395', '140W TDP', 'Quad-Display 4K', 'Dual 10G+2.5G LAN'],
     specs: [
@@ -267,17 +267,17 @@ const products: Record<string, ProductDetail> = {
       { icon: 'Thermometer', title: 'Advanced Cooling', description: 'Dual fan headers (CPU + System) with intelligent PWM curves for sustained 140W operation in a compact chassis.' },
     ],
     sellingPoints: [
-      { image: '/MCAIPC1/A+/2.jpg', title: 'AI Max+ Platform' },
-      { image: '/MCAIPC1/A+/5.jpg', title: 'Advanced Cooling' },
-      { image: '/MCAIPC1/A+/6.jpg', title: 'WiFi 7 + Bluetooth 5.4' },
-      { image: '/MCAIPC1/A+/7.jpg', title: 'Quad M.2 Storage Array' },
+      { image: '/assets/products/desktop/mcaipc1/details/2.jpg', title: 'AI Max+ Platform' },
+      { image: '/assets/products/desktop/mcaipc1/details/5.jpg', title: 'Advanced Cooling' },
+      { image: '/assets/products/desktop/mcaipc1/details/6.jpg', title: 'WiFi 7 + Bluetooth 5.4' },
+      { image: '/assets/products/desktop/mcaipc1/details/7.jpg', title: 'Quad M.2 Storage Array' },
     ],
   },
   fs500: {
     name: 'FS-500',
     tagline: '1U rackmount firewall server with 6 x 2.5G LAN ports',
     description: 'A 1U rackmount firewall server with six 2.5GbE LAN ports and Intel Core i5 processor for enterprise network security.',
-    images: ['/Firewall-Server.png'],
+    images: ['/assets/home/product-categories/firewall-server.png'],
     highlights: ['1U rackmount', '6 x 2.5GbE LAN', 'IPMI remote', 'Core i5'],
     specs: [
       { label: 'Processor', value: 'Intel Core i5-1240P (12C/16T)' },

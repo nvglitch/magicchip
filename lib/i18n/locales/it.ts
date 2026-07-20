@@ -43,7 +43,7 @@ export const it: TranslationSchema = {
   og: {
     title: 'MagicChip - Soluzioni Hardware Enterprise Avanzate',
     description: 'Fornitore leader di processori ad alte prestazioni, acceleratori IA e soluzioni di rete per applicazioni enterprise.',
-    image: '/og-image.jpg',
+    image: '/assets/home/banners/banner-1.jpg',
     url: 'https://magicchip.com/it',
   },
   nav: {

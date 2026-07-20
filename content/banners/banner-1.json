@@ -1,7 +1,7 @@
 {
   "id": "banner-1",
   "order": 1,
-  "image": "/banner1.jpg",
+  "image": "/assets/home/banners/banner-1.jpg",
   "title": {
     "en": "MCAIPC2\nFlagship AI Chip",
     "zh": "MCAIPC2 旗舰AI芯片",

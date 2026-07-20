@@ -24,19 +24,19 @@ const factoryData = {
       {
         title: 'SMT Production Line',
         description: 'Advanced surface-mount technology for motherboard assembly with high precision.',
-        image: '/test1.jpg',
+        image: '/assets/factory/facility.jpg',
         features: ['High-speed placement', 'Multi-layer PCB support', 'Automated inspection']
       },
       {
         title: 'Assembly & Testing',
         description: 'Complete assembly lines with comprehensive testing and quality assurance.',
-        image: '/banner2.jpg',
+        image: '/assets/home/banners/banner-2.jpg',
         features: ['Burn-in testing', 'Thermal testing', 'Functional verification']
       },
       {
         title: 'Customization Center',
         description: 'Flexible OEM/ODM services for custom configurations and branding.',
-        image: '/line.jpg',
+        image: '/assets/factory/production-line.jpg',
         features: ['Custom branding', 'Port configuration', 'Logo printing']
       }
     ],
@@ -77,19 +77,19 @@ const factoryData = {
       {
         title: 'Ligne de Production SMT',
         description: 'Technologie de montage en surface avancée pour l\'assemblage de cartes mères avec haute précision.',
-        image: '/test1.jpg',
+        image: '/assets/factory/facility.jpg',
         features: ['Placement haute vitesse', 'Support PCB multi-couches', 'Inspection automatisée']
       },
       {
         title: 'Assemblage & Test',
         description: 'Lignes d\'assemblage complètes avec tests complets et assurance qualité.',
-        image: '/banner2.jpg',
+        image: '/assets/home/banners/banner-2.jpg',
         features: ['Test burn-in', 'Test thermique', 'Vérification fonctionnelle']
       },
       {
         title: 'Centre de Personnalisation',
         description: 'Services OEM/ODM flexibles pour configurations personnalisées et marquage.',
-        image: '/line.jpg',
+        image: '/assets/factory/production-line.jpg',
         features: ['Marquage personnalisé', 'Configuration ports', 'Impression logo']
       }
     ],
@@ -130,19 +130,19 @@ const factoryData = {
       {
         title: 'SMT Produktionslinie',
         description: 'Fortschrittliche Oberflächenmontagetechnologie für Mainboard-Montage mit hoher Präzision.',
-        image: '/test1.jpg',
+        image: '/assets/factory/facility.jpg',
         features: ['Hochgeschwindigkeitsplatzierung', 'Mehrlagen-PCB-Unterstützung', 'Automatisierte Inspektion']
       },
       {
         title: 'Montage & Test',
         description: 'Komplette Montagelinien mit umfassenden Tests und Qualitätssicherung.',
-        image: '/banner2.jpg',
+        image: '/assets/home/banners/banner-2.jpg',
         features: ['Burn-in-Test', 'Thermotest', 'Funktionsverifikation']
       },
       {
         title: 'Anpassungszentrum',
         description: 'Flexible OEM/ODM-Dienste für kundenspezifische Konfigurationen und Branding.',
-        image: '/line.jpg',
+        image: '/assets/factory/production-line.jpg',
         features: ['Individuelles Branding', 'Port-Konfiguration', 'Logodruck']
       }
     ],
@@ -183,19 +183,19 @@ const factoryData = {
       {
         title: 'Linea di Produzione SMT',
         description: 'Tecnologia avanzata di montaggio superficiale per l\'assemblaggio di schede madre con alta precisione.',
-        image: '/test1.jpg',
+        image: '/assets/factory/facility.jpg',
         features: ['Posizionamento ad alta velocità', 'Supporto PCB multistrato', 'Ispezione automatizzata']
       },
       {
         title: 'Assemblaggio & Test',
         description: 'Linee di assemblaggio complete con test completi e assicurazione qualità.',
-        image: '/banner2.jpg',
+        image: '/assets/home/banners/banner-2.jpg',
         features: ['Test burn-in', 'Test termico', 'Verifica funzionale']
       },
       {
         title: 'Centro di Personalizzazione',
         description: 'Servizi OEM/ODM flessibili per configurazioni personalizzate e branding.',
-        image: '/line.jpg',
+        image: '/assets/factory/production-line.jpg',
         features: ['Branding personalizzato', 'Configurazione porte', 'Stampa logo']
       }
     ],
@@ -236,19 +236,19 @@ const factoryData = {
       {
         title: 'Línea de Producción SMT',
         description: 'Tecnología avanzada de montaje superficial para ensamblaje de placas base con alta precisión.',
-        image: '/test1.jpg',
+        image: '/assets/factory/facility.jpg',
         features: ['Colocación de alta velocidad', 'Soporte PCB multicapa', 'Inspección automatizada']
       },
       {
         title: 'Ensamblaje & Prueba',
         description: 'Líneas de ensamblaje completas con pruebas integrales y aseguramiento de calidad.',
-        image: '/banner2.jpg',
+        image: '/assets/home/banners/banner-2.jpg',
         features: ['Prueba burn-in', 'Prueba térmica', 'Verificación funcional']
       },
       {
         title: 'Centro de Personalización',
         description: 'Servicios OEM/ODM flexibles para configuraciones personalizadas y branding.',
-        image: '/line.jpg',
+        image: '/assets/factory/production-line.jpg',
         features: ['Branding personalizado', 'Configuración de puertos', 'Impresión de logo']
       }
     ],

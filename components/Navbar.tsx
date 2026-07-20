@@ -106,7 +106,7 @@ export default function Navbar() {
           {/* Logo */}
           <a href="/" className="flex items-center flex-shrink-0 h-10 min-w-0 ml-2 md:ml-0">
             <Image
-              src="/magic chip Logo.svg"
+              src="/assets/brand/logo-wordmark.svg"
               alt="MagicChip"
               width={150}
               height={40}
@@ -114,7 +114,7 @@ export default function Navbar() {
               priority
             />
             <Image
-              src="/magic chip Logo.svg"
+              src="/assets/brand/logo-wordmark.svg"
               alt="MagicChip"
               width={150}
               height={40}
