@@ -58,13 +58,13 @@ const countries = [
 ];
 
 // 公开的全球 TopoJSON 数据源
-const geoUrl = 'https://unpkg.com/world-atlas@2.0.2/countries-110m.json';
+const geoUrl = '/assets/common/world-countries-110m.json';
 
 export default function SocialProof() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden relative">
+    <section className="relative overflow-hidden bg-[#101827] py-24 md:py-28">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -73,12 +73,12 @@ export default function SocialProof() {
         }} />
       </div>
       {/* World Map Background using react-simple-maps */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="w-full h-full">
+      <div className="pointer-events-none absolute inset-x-0 top-4 h-[300px] overflow-hidden md:inset-0 md:h-auto">
+        <div className="h-full w-full opacity-75 md:opacity-100">
           <ComposableMap
             projection="geoMercator"
             projectionConfig={{
-              scale: 140,
+              scale: 120,
               center: [0, 20],
             }}
             style={{
@@ -92,20 +92,20 @@ export default function SocialProof() {
                   <Geography
                     key={geo.rsmKey}
                     geography={geo}
-                    fill="#475569"
+                    fill="#64748b"
                     stroke="#334155"
                     strokeWidth={0.5}
                     style={{
                       default: {
-                        fill: '#475569',
+                        fill: '#64748b',
                         outline: 'none',
                       },
                       hover: {
-                        fill: '#475569',
+                        fill: '#64748b',
                         outline: 'none',
                       },
                       pressed: {
-                        fill: '#475569',
+                        fill: '#64748b',
                         outline: 'none',
                       },
                     }}
@@ -116,7 +116,7 @@ export default function SocialProof() {
           </ComposableMap>
         </div>
         {/* Overlay to fade the map into background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-800/70 to-slate-900/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#101827]/15 via-[#101827]/65 to-[#101827] md:bg-gradient-to-br md:from-[#101827]/85 md:via-[#172235]/75 md:to-[#101827]/85" />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -127,7 +127,7 @@ export default function SocialProof() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+          <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">
             {t.social.title}
           </h2>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
@@ -178,7 +178,7 @@ export default function SocialProof() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl p-8 md:p-12 border border-slate-600/30"
+          className="rounded-3xl border border-white/10 bg-white/[0.055] p-8 shadow-xl shadow-black/15 backdrop-blur-sm md:p-12"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Quote */}
@@ -188,7 +188,7 @@ export default function SocialProof() {
                 {t.social.quote}
               </blockquote>
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white font-bold">
                   {t.social.author.charAt(0)}
                 </div>
                 <div>
@@ -201,7 +201,7 @@ export default function SocialProof() {
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
               {/* Rating — numeric counter */}
-              <div className="bg-slate-900/50 rounded-xl p-6 shadow-sm border border-slate-600/30">
+              <div className="rounded-2xl border border-white/10 bg-black/15 p-6 shadow-sm">
                 <div className="flex items-baseline mb-1">
                   <span className="text-3xl font-bold text-yellow-400">★</span>
                   <AnimatedCounter
@@ -214,7 +214,7 @@ export default function SocialProof() {
                 <p className="text-slate-300 text-sm">{t.social.stats.ratingLabel}</p>
               </div>
               {/* Factory Size — spring scale-in (range text) */}
-              <div className="bg-slate-900/50 rounded-xl p-6 shadow-sm border border-slate-600/30">
+              <div className="rounded-2xl border border-white/10 bg-black/15 p-6 shadow-sm">
                 <motion.p
                   className="text-2xl font-bold text-blue-400 mb-1"
                   initial={{ scale: 0.6, opacity: 0 }}
@@ -228,7 +228,7 @@ export default function SocialProof() {
                 <p className="text-slate-300 text-sm">{t.social.stats.factorySizeLabel}</p>
               </div>
               {/* Response Time — numeric counter */}
-              <div className="bg-slate-900/50 rounded-xl p-6 shadow-sm border border-slate-600/30">
+              <div className="rounded-2xl border border-white/10 bg-black/15 p-6 shadow-sm">
                 <AnimatedCounter
                   to={parseInt(t.social.stats.responseTime.replace(/[^0-9]/g, '')) || 3}
                   prefix="≤"
@@ -239,9 +239,9 @@ export default function SocialProof() {
                 <p className="text-slate-300 text-sm">{t.social.stats.responseTimeLabel}</p>
               </div>
               {/* Global Reach — spring scale-in (text) */}
-              <div className="bg-slate-900/50 rounded-xl p-6 shadow-sm border border-slate-600/30">
+              <div className="rounded-2xl border border-white/10 bg-black/15 p-6 shadow-sm">
                 <motion.p
-                  className="text-3xl font-bold text-purple-400 mb-1"
+                  className="mb-1 text-3xl font-bold text-blue-300"
                   initial={{ scale: 0.6, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}

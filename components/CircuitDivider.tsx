@@ -13,7 +13,7 @@ export default function CircuitDivider() {
   const isInView = useInView(ref, { once: false, margin: '-80px' });
 
   return (
-    <div ref={ref} className="relative w-full h-20 sm:h-24 overflow-hidden" aria-hidden="true">
+    <div ref={ref} className="relative h-20 w-full overflow-hidden bg-[#f3f7f5] sm:h-24" aria-hidden="true">
       <svg
         className="absolute inset-0 w-full h-full"
         viewBox="0 0 1440 96"

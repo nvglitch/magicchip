@@ -114,7 +114,7 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
   }
 
   return (
-    <section className="relative w-full overflow-hidden bg-gray-900">
+    <section className="relative w-full overflow-hidden bg-[#101827]">
       <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-video min-h-[400px] sm:min-h-[500px] max-h-[80vh]">
         <AnimatePresence initial={false} custom={direction} mode="popLayout">
           <motion.div
@@ -149,19 +149,19 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
                   className="absolute inset-0"
                   animate={{
                     background: [
-                      'radial-gradient(ellipse at 25% 40%, rgba(59,130,246,0.18) 0%, transparent 55%), radial-gradient(ellipse at 70% 55%, rgba(99,102,241,0.12) 0%, transparent 55%), radial-gradient(ellipse at 50% 80%, rgba(6,182,212,0.08) 0%, transparent 50%)',
-                      'radial-gradient(ellipse at 65% 35%, rgba(59,130,246,0.14) 0%, transparent 55%), radial-gradient(ellipse at 30% 60%, rgba(99,102,241,0.16) 0%, transparent 55%), radial-gradient(ellipse at 55% 20%, rgba(6,182,212,0.06) 0%, transparent 50%)',
-                      'radial-gradient(ellipse at 45% 55%, rgba(99,102,241,0.15) 0%, transparent 55%), radial-gradient(ellipse at 75% 35%, rgba(59,130,246,0.1) 0%, transparent 55%), radial-gradient(ellipse at 20% 70%, rgba(6,182,212,0.1) 0%, transparent 50%)',
-                      'radial-gradient(ellipse at 25% 40%, rgba(59,130,246,0.18) 0%, transparent 55%), radial-gradient(ellipse at 70% 55%, rgba(99,102,241,0.12) 0%, transparent 55%), radial-gradient(ellipse at 50% 80%, rgba(6,182,212,0.08) 0%, transparent 50%)',
+                      'radial-gradient(ellipse at 25% 40%, rgba(37,99,235,0.22) 0%, transparent 55%), radial-gradient(ellipse at 70% 55%, rgba(245,158,11,0.09) 0%, transparent 52%)',
+                      'radial-gradient(ellipse at 65% 35%, rgba(37,99,235,0.2) 0%, transparent 55%), radial-gradient(ellipse at 30% 60%, rgba(245,158,11,0.08) 0%, transparent 52%)',
+                      'radial-gradient(ellipse at 45% 55%, rgba(37,99,235,0.18) 0%, transparent 55%), radial-gradient(ellipse at 75% 35%, rgba(245,158,11,0.08) 0%, transparent 52%)',
+                      'radial-gradient(ellipse at 25% 40%, rgba(37,99,235,0.22) 0%, transparent 55%), radial-gradient(ellipse at 70% 55%, rgba(245,158,11,0.09) 0%, transparent 52%)',
                     ],
                   }}
                   transition={{ repeat: Infinity, duration: 10, ease: 'easeInOut' }}
                 />
                 {/* Constant dark tint for text legibility */}
-                <div className="absolute inset-0 bg-black/40 sm:bg-black/35 lg:bg-black/30" />
+                <div className="absolute inset-0 bg-[#07101f]/55 sm:bg-[#07101f]/50 lg:bg-[#07101f]/45" />
               </div>
             ) : (
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-900">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#101827] via-blue-950 to-[#172235]">
                 <div className="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none">
                   <svg className="w-full h-full">
                     <filter id="noise">
@@ -195,7 +195,7 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
                 </p>
                 <a
                   href={slides[currentSlide].ctaLink}
-                  className="inline-block px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 border-2 border-white text-white text-sm sm:text-base font-semibold rounded-md hover:bg-white/10 hover:border-emerald-400 transition-all duration-300"
+                  className="inline-block rounded-xl border-2 border-white px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-blue-950/20 transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-300 hover:bg-white/10 sm:px-6 sm:py-3 sm:text-base lg:px-8 lg:py-4"
                 >
                   {slides[currentSlide].cta}
                 </a>

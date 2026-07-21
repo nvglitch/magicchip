@@ -170,7 +170,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
   if (!siteConfig) return null;
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-blue-50 via-white to-blue-50 relative overflow-hidden">
+    <section id="contact" className="relative overflow-hidden bg-[#eaf0ee] py-24 md:py-28">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <motion.div
@@ -180,7 +180,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="mb-4 text-4xl font-bold text-slate-950 md:text-5xl">
             {data.hero.title}
           </h2>
           <p className="text-lg text-gray-600 max-w-xl mx-auto">
@@ -201,7 +201,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
             <div className="space-y-4">
               <a 
                 href={`mailto:${siteConfig.contact.email}`}
-                className="flex items-center p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-blue-100 hover:border-blue-300 group"
+                className="group flex items-center rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg"
               >
                 <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-100 transition-colors">
                   <Mail className="w-5 h-5 text-blue-600" />
@@ -214,7 +214,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
 
               <a 
                 href="tel:+86075523099863"
-                className="flex items-center p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-blue-100 hover:border-blue-300 group"
+                className="group flex items-center rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg"
               >
                 <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-100 transition-colors">
                   <Phone className="w-5 h-5 text-blue-600" />
@@ -229,7 +229,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                 href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, '')}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-blue-100 hover:border-blue-300 group"
+                className="group flex items-center rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg"
               >
                 <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center mr-4 group-hover:bg-teal-100 transition-colors">
                   <MessageCircle className="w-5 h-5 text-teal-700" />
@@ -240,7 +240,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                 </div>
               </a>
 
-              <div className="flex items-start p-5 bg-white rounded-xl shadow-sm border border-amber-200">
+              <div className="flex items-start rounded-2xl border border-amber-200 bg-white p-5 shadow-sm">
                 <div className="w-12 h-12 bg-amber-50 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                   <MapPin className="w-5 h-5 text-amber-700" />
                 </div>
@@ -270,7 +270,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                  className="bg-white rounded-xl shadow-lg p-12 text-center border border-blue-100"
+                  className="rounded-3xl border border-slate-200 bg-white p-12 text-center shadow-xl shadow-slate-900/5"
                 >
                   <motion.div
                     initial={{ scale: 0 }}
@@ -303,7 +303,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="bg-white rounded-xl shadow-lg p-8 lg:p-10 border border-blue-100"
+                  className="rounded-3xl border border-slate-200 bg-white p-8 shadow-xl shadow-slate-900/5 lg:p-10"
                 >
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
@@ -414,7 +414,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                         disabled={isSubmitting}
                         whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
                         whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-                        className="flex-1 flex items-center justify-center px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+                        className="flex flex-1 items-center justify-center rounded-xl bg-blue-600 px-8 py-3 font-semibold text-white shadow-lg shadow-blue-600/20 transition-all hover:-translate-y-0.5 hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70"
                       >
                         {isSubmitting ? (
                           <motion.div

@@ -50,7 +50,7 @@ export default function ProductCategories({ products }: ProductCategoriesProps) 
   });
 
   return (
-    <section id="products" className="py-20 bg-tech-pattern">
+    <section id="products" className="bg-[#f3f7f5] py-24 md:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -60,7 +60,7 @@ export default function ProductCategories({ products }: ProductCategoriesProps) 
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="mb-4 text-4xl font-bold text-slate-950 md:text-5xl">
             {t.products.title}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -77,10 +77,10 @@ export default function ProductCategories({ products }: ProductCategoriesProps) 
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative bg-white rounded-xl overflow-hidden border border-gray-100 border-l-4 border-l-blue-500 shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl"
             >
               {/* Image Area */}
-              <div className="h-48 relative overflow-hidden bg-gray-100">
+              <div className="relative h-48 overflow-hidden bg-slate-100">
                 {category.image && (
                   <Image
                     src={category.image}
@@ -95,7 +95,7 @@ export default function ProductCategories({ products }: ProductCategoriesProps) 
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-7">
                 <h3 className="text-xl font-semibold text-slate-900 mb-2">
                   {category.title}
                 </h3>

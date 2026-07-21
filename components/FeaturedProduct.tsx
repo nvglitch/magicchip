@@ -10,7 +10,7 @@ export default function FeaturedProduct() {
   const { t } = useLanguage();
 
   return (
-    <section id="solutions" className="py-20 bg-gradient-to-b from-teal-50 via-white to-amber-50/50 relative">
+    <section id="solutions" className="relative bg-white py-24 md:py-28">
       {/* Tech pattern overlay — beneath content, above gradient */}
       <div className="absolute inset-0 tech-pattern-overlay pointer-events-none" style={{ maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)' }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,7 +23,7 @@ export default function FeaturedProduct() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative rounded-lg overflow-hidden bg-gradient-to-br from-teal-100 via-white to-amber-100 shadow-xl ring-1 ring-teal-900/10">
+            <div className="relative overflow-hidden rounded-3xl bg-[#f3f7f5] shadow-xl shadow-slate-900/10 ring-1 ring-slate-200">
               <Image
                 src="/assets/products/desktop/mcaipc2/hero.png"
                 alt={t.seo.altTexts.featuredProduct}
@@ -45,7 +45,7 @@ export default function FeaturedProduct() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-teal-700 font-semibold text-sm uppercase tracking-wide">
+            <span className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">
               {t.featured.badge}
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4">
@@ -75,7 +75,7 @@ export default function FeaturedProduct() {
             {/* CTA */}
             <Link
               href="/products/desktop-mini-pc/mcai2"
-              className="group inline-flex items-center px-6 py-3 border-2 border-teal-700 text-teal-800 font-semibold rounded-md hover:bg-teal-700 hover:text-white hover:border-teal-700 transition-all duration-300"
+              className="group inline-flex items-center rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700"
             >
               {t.featured.cta}
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
