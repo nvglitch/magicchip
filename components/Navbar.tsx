@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { 
-  Search, 
   Globe, 
   Menu, 
   X, 
@@ -23,7 +22,6 @@ import {
   Mail,
   BookOpen,
   Users,
-  Target,
   Factory
 } from 'lucide-react';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
@@ -45,7 +43,6 @@ interface NavItem {
 }
 
 export default function Navbar() {
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -100,17 +97,17 @@ export default function Navbar() {
   }));
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-slate-200/80 bg-white/90 shadow-[0_1px_0_rgba(15,23,42,0.03)] backdrop-blur-xl">
       <div className="w-full max-w-7xl mx-auto px-3 md:px-4 lg:px-6 xl:px-8">
         <div className="flex items-center justify-between h-16 gap-2 md:gap-3 lg:gap-4">
           {/* Logo */}
-          <a href="/" className="flex items-center flex-shrink-0 h-10 min-w-0 ml-2 md:ml-0">
+          <a href="/" className="group relative flex h-11 min-w-0 flex-shrink-0 items-center rounded-xl px-1.5 ml-1 md:ml-0 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-50/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50">
             <Image
               src="/assets/brand/logo-wordmark.svg"
               alt="MagicChip"
               width={150}
               height={40}
-              className="h-7 md:h-8 lg:h-10 w-auto object-contain md:hidden"
+              className="h-7 w-auto object-contain transition-[filter,transform] duration-300 group-hover:scale-[1.025] group-hover:drop-shadow-[0_5px_10px_rgba(37,99,235,0.2)] md:hidden"
               priority
             />
             <Image
@@ -118,7 +115,7 @@ export default function Navbar() {
               alt="MagicChip"
               width={150}
               height={40}
-              className="hidden md:block h-8 lg:h-10 w-auto object-contain"
+              className="hidden h-8 w-auto object-contain transition-[filter,transform] duration-300 group-hover:scale-[1.025] group-hover:drop-shadow-[0_5px_10px_rgba(37,99,235,0.2)] md:block lg:h-10"
               priority
             />
           </a>
@@ -134,12 +131,12 @@ export default function Navbar() {
               >
                 <a
                   href={item.href}
-                  className="nav-item group relative px-2 lg:px-4 py-2 text-gray-700 hover:text-gray-900 font-medium transition-colors whitespace-nowrap text-sm lg:text-base"
+                  className="nav-item group relative rounded-lg px-2 py-2 text-sm font-medium text-slate-600 transition-colors duration-300 hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 lg:px-4 lg:text-base"
                 >
                   <span className="relative">
                     {item.label}
                     {/* Hover underline effect */}
-                    <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full" />
+                    <span className="absolute -bottom-1 left-1/2 h-0.5 w-0 rounded-full bg-blue-600 transition-all duration-300 group-hover:left-0 group-hover:w-full" />
                   </span>
                 </a>
 
@@ -151,7 +148,7 @@ export default function Navbar() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-1 w-72 bg-white rounded-xl shadow-lg border border-gray-100 py-2 z-50"
+                      className="absolute left-0 top-full z-50 mt-2 w-72 origin-top-left overflow-hidden rounded-2xl border border-slate-200/80 bg-white/95 py-2 shadow-[0_20px_50px_-18px_rgba(15,23,42,0.35)] backdrop-blur-xl"
                     >
                       {item.dropdown.map((dropdownItem, index) => (
                         <a
@@ -161,13 +158,13 @@ export default function Navbar() {
                           rel={dropdownItem.external ? 'noopener noreferrer' : undefined}
                           className={`flex items-start px-4 py-3 transition-colors ${
                             dropdownItem.description
-                              ? 'hover:bg-teal-50/70'
+                              ? 'hover:bg-blue-50/80'
                               : 'hover:bg-amber-50 text-amber-700 font-medium border-t border-gray-100 mt-2 pt-3'
                           }`}
                         >
                           {dropdownItem.icon && (
                             <div className="mr-3 w-5 h-5 flex items-center justify-center flex-shrink-0">
-                              <dropdownItem.icon className="w-5 h-5 text-gray-500" />
+                              <dropdownItem.icon className="h-5 w-5 text-slate-400 transition-all duration-200 group-hover:scale-110 group-hover:text-blue-600" />
                             </div>
                           )}
                           <div className="flex-1">
@@ -193,24 +190,15 @@ export default function Navbar() {
           </div>
 
           {/* Toolbar */}
-          <div className="flex items-center gap-1 md:gap-2 lg:gap-4 flex-shrink-0 ml-auto">
-            {/* Search */}
-            <button
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="p-1.5 md:p-2 text-gray-700 hover:text-gray-900 transition-colors touch-manipulation"
-              aria-label={t.nav.searchAriaLabel}
-            >
-              <Search className="w-5 h-5" />
-            </button>
-
+          <div className="ml-auto flex flex-shrink-0 items-center gap-1 md:gap-2">
             {/* Language/Region Dropdown */}
             <div className="relative">
               <button
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-                className="hidden sm:flex items-center gap-1 p-1.5 md:p-2 text-gray-700 hover:text-gray-900 transition-colors touch-manipulation"
+                className="group hidden items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50/80 px-3 py-2 text-slate-600 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700 hover:shadow-md hover:shadow-blue-100/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 sm:flex"
                 aria-label={t.nav.languageAriaLabel}
               >
-                <Globe className="w-5 h-5 flex-shrink-0" />
+                <Globe className="h-[18px] w-[18px] flex-shrink-0 transition-transform duration-500 group-hover:rotate-[18deg]" />
                 <span className="text-xs md:text-sm font-medium uppercase">{language}</span>
               </button>
 
@@ -222,7 +210,7 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute right-0 top-full mt-2 w-48 bg-white rounded-xl shadow-lg border border-gray-100 py-1 z-50"
+                    className="absolute right-0 top-full z-50 mt-2 w-48 origin-top-right overflow-hidden rounded-2xl border border-slate-200/80 bg-white/95 py-1 shadow-[0_20px_50px_-18px_rgba(15,23,42,0.35)] backdrop-blur-xl"
                   >
                     <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase border-b border-gray-100">
                       {t.language.title}
@@ -241,7 +229,7 @@ export default function Navbar() {
                           <span>{lang.label}</span>
                         </span>
                         {language === lang.code && (
-                          <Check className="w-4 h-4 text-teal-600 flex-shrink-0" />
+                          <Check className="h-4 w-4 flex-shrink-0 text-blue-600" />
                         )}
                       </button>
                     ))}
@@ -253,35 +241,13 @@ export default function Navbar() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-1.5 md:p-2 text-gray-700 hover:text-gray-900 transition-colors touch-manipulation"
+              className="touch-manipulation rounded-xl p-2 text-slate-700 transition-all duration-300 hover:bg-blue-50 hover:text-blue-700 active:scale-95 md:hidden"
               aria-label={t.nav.menuAriaLabel}
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
-
-        {/* Search Bar */}
-        <AnimatePresence>
-          {isSearchOpen && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="overflow-hidden border-t border-gray-200"
-            >
-              <div className="py-3 sm:py-4">
-                <input
-                  type="text"
-                  placeholder={t.nav.searchPlaceholder}
-                  className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
-                  autoFocus
-                />
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
 
       {/* Mobile Menu */}
@@ -363,7 +329,7 @@ export default function Navbar() {
 
       {/* Scroll progress bar */}
       <motion.div
-        className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-teal-500 via-amber-400 to-rose-500 origin-left"
+        className="absolute bottom-0 left-0 right-0 h-[2px] origin-left bg-gradient-to-r from-blue-600 via-cyan-400 to-amber-400"
         style={{ scaleX }}
       />
     </nav>
