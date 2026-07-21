@@ -1,0 +1,29 @@
+{
+  "id": "ai-mini-pc",
+  "order": 2,
+  "icon": "Shield",
+  "gradient": "from-red-600 to-red-800",
+  "image": "/assets/home/categories/ai-mini-pc.png",
+  "url": "https://magicchip.en.alibaba.com/productgrouplist-932323740/Firewall_Mini_PC.html?spm=a2700.shop_plgr.88.32.5c807121rnWOr9",
+  "title": {
+    "en": "AI Mini PC",
+    "zh": "防火墙迷你电脑",
+    "fr": "Mini PC IA",
+    "de": "AI Mini-PC",
+    "it": "Mini PC AI",
+    "es": "Mini PC con IA"
+  },
+  "description": {
+    "en": "High-performance mini PCs designed for AI workloads, edge computing, and professional applications.",
+    "zh": "配备先进防火墙功能和多千兆端口的网络安全设备。",
+    "fr": "Appliances de sécurité réseau avec capacités de firewall avancées et ports multi-Gigabit.",
+    "de": "Netzwerksicherheitsgeräte mit erweiterten Firewall-Funktionen und Multi-Gigabit-Ports.",
+    "it": "Appliance di sicurezza di rete con capacità firewall avanzate e porte multi-Gigabit.",
+    "es": "Appliances de seguridad de red con capacidades avanzadas de firewall y puertos multi-Gigabit."
+  },
+  "features": {
+    "en": ["2.5GbE/10GbE ports", "Advanced firewall software", "VPN support", "Industrial-grade design"],
+    "zh": ["2.5GbE/10GbE端口", "先进防火墙软件", "VPN支持", "工业级设计"]
+  },
+  "published": true
+}

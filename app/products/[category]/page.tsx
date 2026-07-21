@@ -2,88 +2,77 @@
 
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { motion } from 'framer-motion';
-import { ArrowRight, ChevronLeft, Cpu, Shield, Monitor, Server } from 'lucide-react';
+import { ArrowRight, ChevronLeft, Cpu, Shield, Monitor, Brain } from 'lucide-react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import { useMemo } from 'react';
 
 const categoryData: Record<string, { icon: any; gradient: string; image: string }> = {
-  'industrial-mini-pc': { icon: Cpu, gradient: 'from-blue-600 to-indigo-700', image: '/assets/home/product-categories/industrial-mini-pc.png' },
-  'firewall-mini-pc': { icon: Shield, gradient: 'from-rose-600 to-red-800', image: '/assets/home/product-categories/firewall-mini-pc.png' },
-  'desktop-mini-pc': { icon: Monitor, gradient: 'from-blue-500 to-indigo-600', image: '/assets/home/product-categories/desktop-mini-pc.png' },
-  'firewall-server': { icon: Server, gradient: 'from-amber-600 to-orange-800', image: '/assets/home/product-categories/firewall-server.png' },
+  'industrial-mini-pc': { icon: Cpu, gradient: 'from-blue-600 to-indigo-700', image: '/assets/home/categories/industrial-mini-pc.png' },
+  'ai-mini-pc': { icon: Brain, gradient: 'from-violet-600 to-blue-700', image: '/assets/home/categories/ai-mini-pc.png' },
+  'commercial-mini-pc': { icon: Monitor, gradient: 'from-blue-500 to-indigo-600', image: '/assets/home/categories/commercial-mini-pc.png' },
+  'firewall-mini-pc': { icon: Shield, gradient: 'from-rose-600 to-red-800', image: '/assets/home/categories/firewall-mini-pc-server-pc.png' },
 };
 
 const categoryNames: Record<string, Record<string, string>> = {
   'industrial-mini-pc': {
     en: 'Industrial Mini PC',
-    zh: '工业迷你电脑',
     fr: 'Mini PC Industriel',
-    de: 'Industrieller Mini-PC',
+    de: 'Industrie-Mini-PC',
     it: 'Mini PC Industriale',
     es: 'Mini PC Industrial',
   },
+  'ai-mini-pc': {
+    en: 'AI Mini PC',
+    fr: 'Mini PC IA',
+    de: 'AI Mini-PC',
+    it: 'Mini PC AI',
+    es: 'Mini PC con IA',
+  },
+  'commercial-mini-pc': {
+    en: 'Commercial Mini PC',
+    fr: 'Mini PC Commercial',
+    de: 'Kommerzieller Mini-PC',
+    it: 'Mini PC Commerciale',
+    es: 'Mini PC Comercial',
+  },
   'firewall-mini-pc': {
-    en: 'Firewall Mini PC',
-    zh: '防火墙迷你电脑',
-    fr: 'Mini PC Firewall',
-    de: 'Firewall Mini-PC',
-    it: 'Mini PC Firewall',
-    es: 'Mini PC Firewall',
-  },
-  'desktop-mini-pc': {
-    en: 'Desktop Mini PC',
-    zh: '桌面迷你电脑',
-    fr: 'Mini PC de Bureau',
-    de: 'Desktop Mini-PC',
-    it: 'Mini PC da Scrivania',
-    es: 'Mini PC de Escritorio',
-  },
-  'firewall-server': {
-    en: '1U/2U Firewall Server PC',
-    zh: '1U/2U 防火墙服务器',
-    fr: 'Serveur Firewall 1U/2U',
-    de: '1U/2U Firewall Server PC',
-    it: 'Server Firewall 1U/2U',
-    es: 'Servidor Firewall 1U/2U',
+    en: 'Firewall Mini PC / Server PC',
+    fr: 'Mini PC Firewall / Serveur PC',
+    de: 'Firewall Mini-PC / Server-PC',
+    it: 'Mini PC Firewall / Server PC',
+    es: 'Mini PC Firewall / Servidor PC',
   },
 };
-
 const categoryDescriptions: Record<string, Record<string, string>> = {
   'industrial-mini-pc': {
     en: 'Fanless, compact industrial computers designed for harsh environments and 24/7 operation.',
-    zh: '无风扇、紧凑型工业电脑，专为恶劣环境和24/7运行设计。',
-    fr: 'Ordinateurs industriels compacts sans ventilateur conçus pour les environnements difficiles.',
-    de: 'Lüfterlose, kompakte Industriecomputer für raue Umgebungen und 24/7-Betrieb.',
-    it: 'Computer industriali compatti senza ventola progettati per ambienti difficili.',
-    es: 'Computadoras industriales compactas sin ventiladores diseñadas para entornos difíciles.',
+    fr: 'Ordinateurs industriels compacts sans ventilateur conçus pour les environnements exigeants et un fonctionnement 24/7.',
+    de: 'Lüfterlose, kompakte Industriecomputer für anspruchsvolle Umgebungen und den 24/7-Betrieb.',
+    it: 'Computer industriali compatti senza ventola per ambienti difficili e funzionamento 24/7.',
+    es: 'Computadoras industriales compactas sin ventilador para entornos exigentes y funcionamiento 24/7.',
+  },
+  'ai-mini-pc': {
+    en: 'High-performance mini PCs designed for AI workloads, edge computing, and professional applications.',
+    fr: 'Mini PC hautes performances conçus pour les charges de travail IA, le edge computing et les applications professionnelles.',
+    de: 'Leistungsstarke Mini-PCs für KI-Workloads, Edge Computing und professionelle Anwendungen.',
+    it: 'Mini PC ad alte prestazioni per carichi di lavoro AI, edge computing e applicazioni professionali.',
+    es: 'Mini PC de alto rendimiento para cargas de trabajo de IA, edge computing y aplicaciones profesionales.',
+  },
+  'commercial-mini-pc': {
+    en: 'Compact computers for business, education, digital signage, and everyday commercial use.',
+    fr: 'Ordinateurs compacts pour les entreprises, l’éducation, l’affichage dynamique et les usages commerciaux.',
+    de: 'Kompakte Computer für Unternehmen, Bildung, Digital Signage und den kommerziellen Alltag.',
+    it: 'Computer compatti per aziende, istruzione, digital signage e uso commerciale quotidiano.',
+    es: 'Computadoras compactas para empresas, educación, señalización digital y uso comercial cotidiano.',
   },
   'firewall-mini-pc': {
-    en: 'Network security appliances with advanced firewall capabilities and multi-Gigabit ports.',
-    zh: '配备先进防火墙功能和多千兆端口的网络安全设备。',
-    fr: 'Appliances de sécurité réseau avec capacités de firewall avancées.',
-    de: 'Netzwerksicherheitsgeräte mit erweiterten Firewall-Funktionen.',
-    it: 'Appliance di sicurezza di rete con capacità firewall avanzate.',
-    es: 'Appliances de seguridad de red con capacidades avanzadas de firewall.',
-  },
-  'desktop-mini-pc': {
-    en: 'Compact desktop computers ideal for business, education, and digital signage applications.',
-    zh: '紧凑型台式电脑，适用于商业、教育和数字标牌应用。',
-    fr: 'Ordinateurs de bureau compacts idéaux pour les applications commerciales.',
-    de: 'Kompakte Desktop-Computer ideal für Business- und Bildungsanwendungen.',
-    it: 'Computer desktop compatti ideali per applicazioni commerciali e educative.',
-    es: 'Computadoras de escritorio compactas ideales para aplicaciones comerciales y educativas.',
-  },
-  'firewall-server': {
-    en: 'Rackmount firewall servers for enterprise network security with high throughput.',
-    zh: '机架式防火墙服务器，用于企业网络安全，高吞吐量。',
-    fr: 'Serveurs firewall rack pour sécurité réseau d\'entreprise avec haut débit.',
-    de: 'Rackmontierte Firewall-Server für Enterprise-Netzwerksicherheit.',
-    it: 'Server firewall rack per sicurezza di rete aziendale.',
-    es: 'Servidores firewall rack para seguridad de red empresarial.',
+    en: 'Compact and rackmount network appliances for firewall, routing, and enterprise network deployments.',
+    fr: 'Appliances réseau compactes et rackables pour pare-feu, routage et déploiements réseau professionnels.',
+    de: 'Kompakte und rackmontierte Netzwerkgeräte für Firewall-, Routing- und Unternehmensnetzwerke.',
+    it: 'Appliance di rete compatte e rackmount per firewall, routing e reti aziendali.',
+    es: 'Dispositivos de red compactos y para rack destinados a firewall, routing y redes empresariales.',
   },
 };
-
 const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: string; image: string; specs: string[] }>> = {
   'industrial-mini-pc': [
     {
@@ -117,29 +106,29 @@ const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: 
       specs: ['Intel Alder Lake-N', '2 x 10GbE + 2 x 2.5GbE', 'DDR5 up to 48GB', '0°C to 70°C'],
     },
   ],
-  'desktop-mini-pc': [
+  'ai-mini-pc': [
     {
       id: 'mcai2',
       name: 'MCAIPC2',
       tagline: 'High-performance AI mini PC powered by Strix Halo platform',
-      image: '/assets/products/desktop/mcaipc2/hero.png',
+      image: '/assets/products/ai/mcaipc2/hero.png',
       specs: ['AMD Strix Halo', 'Up to 128GB LPDDR5x', 'Quad-Display Support', '50 TOPs NPU'],
     },
     {
       id: 'mcai1',
       name: 'MCAIPC1',
       tagline: 'AMD Ryzen AI Max+ 395 — 140W flagship mini PC with quad display',
-      image: '/assets/products/desktop/mcaipc1/gallery/亚马逊主图横向.jpg',
+      image: '/assets/products/ai/mcaipc1/gallery/hero.jpg',
       specs: ['AMD Ryzen AI Max+ 395', 'Up to 128GB LPDDR5x', '10G+2.5G Dual LAN', 'Quad M.2 NVMe'],
     },
   ],
-  'firewall-server': [
+  'commercial-mini-pc': [
     {
-      id: 'fs500',
-      name: 'FS-500',
-      tagline: '1U rackmount firewall server with 6× 2.5G LAN ports',
-      image: '/assets/home/product-categories/firewall-server.png',
-      specs: ['Intel Core i5-1240P', '6× 2.5GbE LAN', 'IPMI Remote', '1U Rackmount'],
+      id: 'mc15uh',
+      name: 'MC15UH',
+      tagline: 'Intel Core Ultra mini PC with USB4, OCuLink, and dual 2.5GbE',
+      image: '/assets/products/commercial/mc15uh/images/1.jpg',
+      specs: ['Intel Core Ultra 7 / 9', 'Intel Arc 140T Graphics', 'DDR5 up to 128GB', 'USB4 + OCuLink'],
     },
   ],
 };

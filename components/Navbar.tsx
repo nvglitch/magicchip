@@ -21,7 +21,6 @@ import {
   MessageCircle,
   Mail,
   BookOpen,
-  Users,
   Factory
 } from 'lucide-react';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
@@ -60,9 +59,9 @@ export default function Navbar() {
   const getDropdownContent = (): Record<string, DropdownItem[]> => ({
     products: [
       { title: t.navDropdown?.products?.industrialMiniPC || 'Industrial Mini PC', description: t.navDropdown?.products?.industrialMiniPCDesc || 'Fanless compact industrial computers', href: '/products/industrial-mini-pc', icon: Cpu },
-      { title: t.navDropdown?.products?.firewallMiniPC || 'Firewall Mini PC', description: t.navDropdown?.products?.firewallMiniPCDesc || 'Network security appliances', href: '/products/firewall-mini-pc', icon: Shield },
-      { title: t.navDropdown?.products?.desktopMiniPC || 'Desktop Mini PC', description: t.navDropdown?.products?.desktopMiniPCDesc || 'Compact computers for business', href: '/products/desktop-mini-pc', icon: Monitor },
-      { title: t.navDropdown?.products?.firewallServer || '1U/2U Firewall Server', description: t.navDropdown?.products?.firewallServerDesc || 'Rackmount firewall servers', href: '/products/firewall-server', icon: Server },
+      { title: 'AI Mini PC', description: 'High-performance mini PCs for AI workloads', href: '/products/ai-mini-pc', icon: Brain },
+      { title: 'Commercial Mini PC', description: 'Compact computers for business and daily use', href: '/products/commercial-mini-pc', icon: Monitor },
+      { title: 'Firewall Mini PC / Server PC', description: 'Network appliances and rackmount firewall systems', href: '/products/firewall-mini-pc', icon: Shield },
     ],
     documents: [
       { title: t.navDropdown?.documents?.news || 'News', description: t.navDropdown?.documents?.newsDesc || 'Latest updates and announcements', href: '/news', icon: Newspaper },
@@ -101,13 +100,13 @@ export default function Navbar() {
       <div className="w-full max-w-7xl mx-auto px-3 md:px-4 lg:px-6 xl:px-8">
         <div className="flex items-center justify-between h-16 gap-2 md:gap-3 lg:gap-4">
           {/* Logo */}
-          <a href="/" className="group relative flex h-11 min-w-0 flex-shrink-0 items-center rounded-xl px-1.5 ml-1 md:ml-0 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-50/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50">
+          <a href="/" className="group relative flex h-11 min-w-0 flex-shrink-0 items-center rounded-xl px-1.5 ml-1 md:ml-0 transition-all duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50">
             <Image
               src="/assets/brand/logo-wordmark.svg"
               alt="MagicChip"
               width={150}
               height={40}
-              className="h-7 w-auto object-contain transition-[filter,transform] duration-300 group-hover:scale-[1.025] group-hover:drop-shadow-[0_5px_10px_rgba(37,99,235,0.2)] md:hidden"
+              className="h-7 w-auto object-contain transition-[filter,transform] duration-300 group-hover:scale-[1.025] group-hover:drop-shadow-[0_0_1px_rgba(37,99,235,0.95)] md:hidden"
               priority
             />
             <Image
@@ -115,7 +114,7 @@ export default function Navbar() {
               alt="MagicChip"
               width={150}
               height={40}
-              className="hidden h-8 w-auto object-contain transition-[filter,transform] duration-300 group-hover:scale-[1.025] group-hover:drop-shadow-[0_5px_10px_rgba(37,99,235,0.2)] md:block lg:h-10"
+              className="hidden h-8 w-auto object-contain transition-[filter,transform] duration-300 group-hover:scale-[1.025] group-hover:drop-shadow-[0_0_1px_rgba(37,99,235,0.95)] md:block lg:h-10"
               priority
             />
           </a>

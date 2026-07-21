@@ -137,7 +137,7 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
             {slides[currentSlide].image ? (
               <div className="absolute inset-0">
                 <Image
-                  src={slides[currentSlide].image}
+                  src={slides[currentSlide].image!}
                   alt={slides[currentSlide].title}
                   fill
                   className="object-cover object-center"

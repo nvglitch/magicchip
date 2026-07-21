@@ -25,7 +25,7 @@ export default function FeaturedProduct() {
           >
             <div className="relative overflow-hidden rounded-3xl bg-[#f3f7f5] shadow-xl shadow-slate-900/10 ring-1 ring-slate-200">
               <Image
-                src="/assets/products/desktop/mcaipc2/hero.png"
+                src="/assets/products/ai/mcaipc2/hero.png"
                 alt={t.seo.altTexts.featuredProduct}
                 width={600}
                 height={600}
@@ -74,7 +74,7 @@ export default function FeaturedProduct() {
 
             {/* CTA */}
             <Link
-              href="/products/desktop-mini-pc/mcai2"
+              href="/products/ai-mini-pc/mcai2"
               className="group inline-flex items-center rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700"
             >
               {t.featured.cta}

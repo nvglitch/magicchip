@@ -2,15 +2,8 @@
 
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { motion } from 'framer-motion';
-import { Cpu, Shield, Monitor, Server, ArrowRight, CheckCircle } from 'lucide-react';
+import { Cpu, Shield, Monitor, Brain, ArrowRight, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
-
-const categoryLinks: Record<string, string> = {
-  'Industrial Mini PC': '/products/industrial-mini-pc',
-  'Firewall Mini PC': '/products/firewall-mini-pc',
-  'Desktop Mini PC': '/products/desktop-mini-pc',
-  '1U/2U Firewall Server PC': '/products/firewall-server',
-};
 
 const productsData = {
   en: {
@@ -27,25 +20,25 @@ const productsData = {
         href: '/products/industrial-mini-pc'
       },
       {
-        title: 'Firewall Mini PC',
-        description: 'Network security appliances with advanced firewall capabilities and multi-Gigabit ports.',
-        features: ['2.5GbE/10GbE ports', 'Advanced firewall software', 'VPN support', 'Industrial-grade design'],
-        icon: Shield,
-        href: '/products/firewall-mini-pc'
+        title: 'AI Mini PC',
+        description: 'High-performance mini PCs designed for AI workloads, edge computing, and professional applications.',
+        features: ['Dedicated AI processing', 'High-performance AMD platform', 'Large unified memory', 'Multi-display support'],
+        icon: Brain,
+        href: '/products/ai-mini-pc'
       },
       {
-        title: 'Desktop Mini PC',
+        title: 'Commercial Mini PC',
         description: 'Compact desktop computers ideal for business, education, and digital signage applications.',
         features: ['Intel N-series processors', '4K display support', 'Low power consumption', 'VESA mount compatible'],
         icon: Monitor,
-        href: '/products/desktop-mini-pc'
+        href: '/products/commercial-mini-pc'
       },
       {
-        title: '1U/2U Firewall Server PC',
+        title: 'Firewall Mini PC / Server PC',
         description: 'Rackmount firewall servers for enterprise network security with high throughput.',
         features: ['1U/2U rackmount form factor', 'Multiple LAN ports', 'High-performance routing', 'Enterprise firewall OS support'],
-        icon: Server,
-        href: '/products/firewall-server'
+        icon: Shield,
+        href: '/products/firewall-mini-pc'
       }
     ],
     cta: {
@@ -69,25 +62,25 @@ const productsData = {
         href: '/products/industrial-mini-pc'
       },
       {
-        title: 'Mini PC Firewall',
+        title: 'Mini PC IA',
         description: 'Appliances de sécurité réseau avec capacités de firewall avancées et ports multi-Gigabit.',
         features: ['Ports 2.5GbE/10GbE', 'Logiciel firewall avancé', 'Support VPN', 'Design industriel'],
-        icon: Shield,
-        href: '/products/firewall-mini-pc'
+        icon: Brain,
+        href: '/products/ai-mini-pc'
       },
       {
-        title: 'Mini PC de Bureau',
+        title: 'Mini PC Commercial',
         description: 'Ordinateurs de bureau compacts idéaux pour les applications commerciales, éducatives et de signalétique numérique.',
         features: ['Processeurs Intel N-series', 'Support affichage 4K', 'Faible consommation', 'Compatible VESA'],
         icon: Monitor,
-        href: '/products/desktop-mini-pc'
+        href: '/products/commercial-mini-pc'
       },
       {
-        title: 'Serveur Firewall 1U/2U',
+        title: 'Mini PC Firewall / Serveur PC',
         description: 'Serveurs firewall rack pour sécurité réseau d\'entreprise avec haut débit.',
         features: ['Format rack 1U/2U', 'Multiples ports LAN', 'Routage haute performance', 'Support OS firewall entreprise'],
-        icon: Server,
-        href: '/products/firewall-server'
+        icon: Shield,
+        href: '/products/firewall-mini-pc'
       }
     ],
     cta: {
@@ -111,25 +104,25 @@ const productsData = {
         href: '/products/industrial-mini-pc'
       },
       {
-        title: 'Firewall Mini-PC',
+        title: 'AI Mini-PC',
         description: 'Netzwerksicherheitsgeräte mit erweiterten Firewall-Funktionen und Multi-Gigabit-Ports.',
         features: ['2.5GbE/10GbE Ports', 'Erweiterte Firewall-Software', 'VPN-Unterstützung', 'Industrielles Design'],
-        icon: Shield,
-        href: '/products/firewall-mini-pc'
+        icon: Brain,
+        href: '/products/ai-mini-pc'
       },
       {
-        title: 'Desktop Mini-PC',
+        title: 'Kommerzieller Mini-PC',
         description: 'Kompakte Desktop-Computer ideal für Business-, Bildungs- und Digital-Signage-Anwendungen.',
         features: ['Intel N-series Prozessoren', '4K Display-Unterstützung', 'Geringer Stromverbrauch', 'VESA-kompatibel'],
         icon: Monitor,
-        href: '/products/desktop-mini-pc'
+        href: '/products/commercial-mini-pc'
       },
       {
-        title: '1U/2U Firewall Server PC',
+        title: 'Firewall Mini PC / Server PC',
         description: 'Rackmontierte Firewall-Server für Enterprise-Netzwerksicherheit mit hohem Durchsatz.',
         features: ['1U/2U Rackmount-Formfaktor', 'Multiple LAN-Ports', 'Hochleistungs-Routing', 'Enterprise Firewall OS Support'],
-        icon: Server,
-        href: '/products/firewall-server'
+        icon: Shield,
+        href: '/products/firewall-mini-pc'
       }
     ],
     cta: {
@@ -153,25 +146,25 @@ const productsData = {
         href: '/products/industrial-mini-pc'
       },
       {
-        title: 'Mini PC Firewall',
+        title: 'Mini PC IA',
         description: 'Appliance di sicurezza di rete con capacità firewall avanzate e porte multi-Gigabit.',
         features: ['Porte 2.5GbE/10GbE', 'Software firewall avanzato', 'Supporto VPN', 'Design industriale'],
-        icon: Shield,
-        href: '/products/firewall-mini-pc'
+        icon: Brain,
+        href: '/products/ai-mini-pc'
       },
       {
-        title: 'Mini PC da Scrivania',
+        title: 'Mini PC Commerciale',
         description: 'Computer desktop compatti ideali per applicazioni commerciali, educative e digital signage.',
         features: ['Processori Intel N-series', 'Supporto display 4K', 'Basso consumo energetico', 'Compatibile VESA'],
         icon: Monitor,
-        href: '/products/desktop-mini-pc'
+        href: '/products/commercial-mini-pc'
       },
       {
-        title: 'Server Firewall 1U/2U',
+        title: 'Mini PC Firewall / Server PC',
         description: 'Server firewall rack per sicurezza di rete aziendale con alta velocità.',
         features: ['Fattore di forma rack 1U/2U', 'Porte LAN multiple', 'Routing ad alte prestazioni', 'Supporto OS firewall enterprise'],
-        icon: Server,
-        href: '/products/firewall-server'
+        icon: Shield,
+        href: '/products/firewall-mini-pc'
       }
     ],
     cta: {
@@ -195,25 +188,25 @@ const productsData = {
         href: '/products/industrial-mini-pc'
       },
       {
-        title: 'Mini PC Firewall',
+        title: 'Mini PC IA',
         description: 'Appliances de seguridad de red con capacidades avanzadas de firewall y puertos multi-Gigabit.',
         features: ['Puertos 2.5GbE/10GbE', 'Software firewall avanzado', 'Soporte VPN', 'Diseño industrial'],
-        icon: Shield,
-        href: '/products/firewall-mini-pc'
+        icon: Brain,
+        href: '/products/ai-mini-pc'
       },
       {
-        title: 'Mini PC de Escritorio',
+        title: 'Mini PC Comercial',
         description: 'Computadoras de escritorio compactas ideales para aplicaciones comerciales, educativas y de señalización digital.',
         features: ['Procesadores Intel N-series', 'Soporte de pantalla 4K', 'Bajo consumo de energía', 'Compatible con VESA'],
         icon: Monitor,
-        href: '/products/desktop-mini-pc'
+        href: '/products/commercial-mini-pc'
       },
       {
-        title: 'Servidor Firewall 1U/2U',
+        title: 'Mini PC Firewall / Servidor PC',
         description: 'Servidores firewall rack para seguridad de red empresarial con alto rendimiento.',
         features: ['Factor de forma rack 1U/2U', 'Múltiples puertos LAN', 'Enrutamiento de alto rendimiento', 'Soporte SO firewall enterprise'],
-        icon: Server,
-        href: '/products/firewall-server'
+        icon: Shield,
+        href: '/products/firewall-mini-pc'
       }
     ],
     cta: {

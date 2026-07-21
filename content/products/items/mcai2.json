@@ -1,10 +1,10 @@
 {
   "id": "mcai2",
-  "category": "desktop-mini-pc",
+  "category": "ai-mini-pc",
   "name": "MCAIPC2",
   "tagline": "High-performance AI mini PC powered by Strix Halo platform",
   "description": "The MCAIPC2 is a flagship AI mini PC featuring AMD's Strix Halo platform with integrated graphics and neural processing unit. Designed for edge computing, AI workloads, and high-performance industrial applications.",
-  "images": ["/assets/products/desktop/mcaipc2/hero.png"],
+  "images": ["/assets/products/ai/mcaipc2/hero.png"],
   "specifications": [
     { "label": "Processor", "value": "AMD Strix Halo (120W/132W)" },
     { "label": "Graphics", "value": "Up to 40 Graphics Cores" },
@@ -22,8 +22,8 @@
     { "icon": "Zap", "title": "High Speed", "description": "Dual USB4 40Gbps ports" }
   ],
   "applications": [
-    { "image": "/assets/home/product-categories/industrial-mini-pc.png", "title": "Industrial Automation", "description": "Reliable computing for factory floors" },
-    { "image": "/assets/home/product-categories/desktop-mini-pc.png", "title": "Digital Signage", "description": "Power multi-screen displays" }
+    { "image": "/assets/home/categories/industrial-mini-pc.png", "title": "Industrial Automation", "description": "Reliable computing for factory floors" },
+    { "image": "/assets/home/categories/commercial-mini-pc.png", "title": "Digital Signage", "description": "Power multi-screen displays" }
   ],
   "alibabaUrl": "https://magicchip.en.alibaba.com"
 }

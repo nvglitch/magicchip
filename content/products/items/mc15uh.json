@@ -1,0 +1,35 @@
+{
+  "id": "mc15uh",
+  "category": "commercial-mini-pc",
+  "name": "MC15UH",
+  "tagline": "Intel Core Ultra mini PC with USB4, OCuLink, and dual 2.5GbE",
+  "description": "Compact Arrow Lake-H commercial mini PC with Intel Arc 140T graphics, dual DDR5 memory slots, dual NVMe storage, and high-speed external connectivity.",
+  "images": [
+    "/assets/products/commercial/mc15uh/images/1.jpg",
+    "/assets/products/commercial/mc15uh/images/2.jpg",
+    "/assets/products/commercial/mc15uh/images/3.jpg"
+  ],
+  "specifications": [
+    { "label": "CPU", "value": "Intel Core Ultra 7 255H or Intel Core Ultra 9 285H" },
+    { "label": "Graphics", "value": "Intel Arc 140T Graphics" },
+    { "label": "Memory", "value": "2 x SO-DIMM DDR5-5600 slots, up to 128GB" },
+    { "label": "Storage", "value": "2 x M.2 2280 NVMe SSD slots" },
+    { "label": "Display", "value": "HDMI, DisplayPort, and USB4 display output" },
+    { "label": "Network", "value": "2 x Intel i226-V 2.5GbE LAN" },
+    { "label": "Expansion", "value": "USB4 40Gbps and OCuLink" },
+    { "label": "Power", "value": "19V / 6.32A, 120W" },
+    { "label": "Dimensions", "value": "132 x 132 x 50.5 mm" },
+    { "label": "Working Environment", "value": "0°C to 50°C; 5%-90% relative humidity, non-condensing" }
+  ],
+  "features": [
+    { "icon": "Cpu", "title": "Intel Core Ultra Platform", "description": "Arrow Lake-H Core Ultra 7 and Core Ultra 9 processor options" },
+    { "icon": "Zap", "title": "USB4 and OCuLink", "description": "High-speed peripheral, display, and external graphics expansion connectivity" },
+    { "icon": "Network", "title": "Dual 2.5GbE Networking", "description": "Two Intel i226-V 2.5GbE wired network ports" }
+  ],
+  "applications": [
+    { "image": "/assets/products/commercial/mc15uh/images/4.jpg", "title": "Interface Layout", "description": "Clearly labeled front and rear connectivity" },
+    { "image": "/assets/products/commercial/mc15uh/images/6.jpg", "title": "VC Cooling Structure", "description": "Fan and VC heat spreader cooling assembly" }
+  ],
+  "brochure": "/assets/products/commercial/mc15uh/documents/MC15UH brochure.pdf",
+  "alibabaUrl": "https://magicchip.en.alibaba.com"
+}

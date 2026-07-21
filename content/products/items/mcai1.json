@@ -1,10 +1,10 @@
 {
   "id": "mcai1",
-  "category": "desktop-mini-pc",
+  "category": "ai-mini-pc",
   "name": "MCAIPC1",
   "tagline": "AMD Ryzen AI Max+ 395 — 140W flagship mini PC with quad display",
   "description": "Powered by the AMD Ryzen AI Max+ 395 processor with up to 128GB LPDDR5x memory and quad-display support. A 220×220×83mm powerhouse with dual 10G + 2.5G LAN, quad M.2 NVMe, USB4, and PD3.1.",
-  "images": ["/assets/products/desktop/mcaipc1/gallery/1.2.jpg"],
+  "images": ["/assets/products/ai/mcaipc1/gallery/main.jpg"],
   "specifications": [
     { "label": "Processor", "value": "AMD Ryzen™ AI Max+ 395, TDP up to 140W" },
     { "label": "Memory", "value": "LPDDR5x 8533MT/s, 256-bit, up to 128GB" },

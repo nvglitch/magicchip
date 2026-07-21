@@ -45,9 +45,9 @@ const mcipcd3ImageBase = '/assets/products/industrial/mcipcd3/images';
 
 const categoryData: Record<string, { name: string; icon: keyof typeof iconMap; gradient: string; accent: string }> = {
   'industrial-mini-pc': { name: 'Industrial Mini PC', icon: 'Cpu', gradient: 'from-[#172033] via-blue-950 to-[#172033]', accent: 'blue' },
-  'firewall-mini-pc': { name: 'Firewall Mini PC', icon: 'Shield', gradient: 'from-[#172033] via-[#543431] to-[#172033]', accent: 'coral' },
-  'desktop-mini-pc': { name: 'Desktop Mini PC', icon: 'Monitor', gradient: 'from-[#172033] via-[#29473f] to-[#172033]', accent: 'mint' },
-  'firewall-server': { name: '1U/2U Firewall Server', icon: 'Server', gradient: 'from-[#172033] via-[#4b3d2a] to-[#172033]', accent: 'amber' },
+  'firewall-mini-pc': { name: 'Firewall Mini PC / Server PC', icon: 'Shield', gradient: 'from-[#172033] via-[#543431] to-[#172033]', accent: 'coral' },
+  'ai-mini-pc': { name: 'AI Mini PC', icon: 'Cpu', gradient: 'from-[#172033] via-[#35306b] to-[#172033]', accent: 'blue' },
+  'commercial-mini-pc': { name: 'Commercial Mini PC', icon: 'Monitor', gradient: 'from-[#172033] via-[#29473f] to-[#172033]', accent: 'mint' },
 };
 
 const products: Record<string, ProductDetail> = {
@@ -102,7 +102,7 @@ const products: Record<string, ProductDetail> = {
     name: 'MCAIPC2',
     tagline: 'High-performance AI mini PC powered by Strix Halo platform',
     description: 'A flagship AI mini PC for edge computing, AI workloads, and high-performance industrial applications.',
-    images: ['/assets/products/desktop/mcaipc2/hero.png'],
+    images: ['/assets/products/ai/mcaipc2/hero.png'],
     highlights: ['AMD Strix Halo', '50 TOPs NPU', 'Quad display', 'Dual USB4'],
     specs: [
       { label: 'Processor', value: 'AMD Strix Halo (120W/132W)' },
@@ -268,21 +268,80 @@ const products: Record<string, ProductDetail> = {
     advantageSummary: 'MCR20 combines compact fanless edge computing with enterprise-oriented network bandwidth: dual 2.5GbE, optional dual 10GbE copper or SFP+, DDR5 memory, flexible storage, triple-display output, and broad internal expansion in one rugged appliance.',
     operatingRange: '0°C to 70°C',
   },
-  mcai1: {
+  mc15uh: {
+    name: 'MC15UH',
+    tagline: 'Intel Core Ultra performance with USB4, OCuLink, and dual 2.5GbE',
+    description: 'MC15UH is a compact commercial mini PC based on the Intel Arrow Lake-H platform. It combines Intel Core Ultra processing and Intel Arc 140T graphics with dual DDR5 memory slots, two NVMe storage slots, dual 2.5GbE LAN, USB4, and OCuLink connectivity.',
+    images: ['/assets/products/commercial/mc15uh/images/1.jpg'],
+    galleryCards: [
+      {
+        image: '/assets/products/commercial/mc15uh/images/2.jpg',
+        title: 'Front and rear connectivity',
+        description: 'Front USB, USB4, audio, reset, and OCuLink connections are paired with dual 2.5GbE LAN, HDMI, DisplayPort, USB, and DC input on the rear panel.',
+      },
+      {
+        image: '/assets/products/commercial/mc15uh/images/3.jpg',
+        title: 'Compact ventilated enclosure',
+        description: 'The compact chassis uses ventilated side panels and a top intake pattern as part of its cooling design.',
+      },      {
+        image: '/assets/products/commercial/mc15uh/images/5.jpg',
+        title: 'Intel Core Ultra platform',
+        description: 'The Arrow Lake-H platform combines Intel Core Ultra processing with integrated Intel Arc 140T graphics.',
+      },
+    ],
+    highlights: ['Intel Core Ultra 7 / 9', 'Intel Arc 140T Graphics', '2 x DDR5 SO-DIMM, up to 128GB', '132 x 132 x 50.5 mm'],
+    specs: [
+      { label: 'Model', value: 'MC15UH' },
+      { label: 'CPU', value: 'Intel Core Ultra 7 255H or Intel Core Ultra 9 285H processor' },
+      { label: 'Platform', value: 'Intel Arrow Lake-H' },
+      { label: 'Graphics', value: 'Intel Arc 140T Graphics' },
+      { label: 'Memory', value: '2 x SO-DIMM DDR5-5600 slots, supporting up to 128GB' },
+      { label: 'Storage', value: '2 x M.2 2280 NVMe SSD slots' },
+      { label: 'Display', value: '1 x HDMI (up to 8K@60Hz / 4K@120Hz), 1 x DisplayPort (up to 8K@60Hz / 4K@160Hz), and display output through USB4 (up to 4K@120Hz)' },
+      { label: 'Network', value: '2 x Intel i226-V 2.5GbE LAN' },
+      { label: 'Wireless', value: 'Wi-Fi 6E and Bluetooth 5.3' },
+      { label: 'Front I/O', value: '1 x power button, 1 x reset hole, 1 x 3.5 mm combined audio jack, 2 x USB 3.0, 1 x USB4 40Gbps, and 1 x OCuLink connector for an external graphics expansion dock' },
+      { label: 'Rear I/O', value: '1 x DC input, 2 x 2.5GbE LAN, 1 x HDMI 2.1, 1 x DisplayPort 2.1, and 2 x USB 3.0' },
+      { label: 'Power', value: '19V / 6.32A, 120W' },
+      { label: 'BIOS', value: 'AMI BIOS, Legacy or UEFI' },
+      { label: 'System', value: 'Windows 10 or Windows 11' },
+      { label: 'Working Environment', value: '0°C to 50°C; 5%-90% relative humidity, non-condensing' },
+      { label: 'Dimensions', value: '132 x 132 x 50.5 mm' },
+    ],
+    features: [
+      { icon: 'Cpu', title: 'Intel Core Ultra Platform', description: 'Arrow Lake-H Core Ultra 7 255H and Core Ultra 9 285H processor options are paired with Intel Arc 140T graphics.' },
+      { icon: 'Zap', title: 'USB4 and OCuLink', description: 'USB4 40Gbps supports display output, while OCuLink provides a connection for an external graphics expansion dock.' },
+      { icon: 'Network', title: 'Dual 2.5GbE Networking', description: 'Two Intel i226-V 2.5GbE ports provide separate high-speed wired network connections.' },
+    ],
+    sellingPoints: [
+      {
+        image: '/assets/products/commercial/mc15uh/images/4.jpg',
+        title: 'Clearly labeled interface layout',
+        description: 'The panel overview identifies every front and rear connection, including USB4, OCuLink, dual 2.5GbE LAN, HDMI, and DisplayPort.',
+      },
+      {
+        image: '/assets/products/commercial/mc15uh/images/6.jpg',
+        title: 'VC cooling structure',
+        description: 'The cooling assembly combines a fan with a VC heat spreader in the compact enclosure.',
+      },
+    ],
+    advantageSummary: 'MC15UH brings an Intel Core Ultra platform, up to 128GB DDR5 memory, dual NVMe storage, dual 2.5GbE networking, and external expansion through USB4 and OCuLink into a 132 mm square chassis.',
+    operatingRange: '0°C to 50°C',
+  },  mcai1: {
     name: 'MCAIPC1',
     tagline: 'AMD Ryzen AI Max+ flagship — 140W desktop performance in a 220mm chassis',
     description: 'Powered by the AMD Ryzen™ AI Max+ 395 processor with up to 128GB LPDDR5x memory and quad-display support. A 220×220×83mm powerhouse with dual 10G + 2.5G LAN, quad M.2 NVMe, USB4, and PD3.1 — built for AI workloads, edge servers, and professional workstations.',
-    images: ['/assets/products/desktop/mcaipc1/gallery/亚马逊主图横向.jpg'],
+    images: ['/assets/products/ai/mcaipc1/gallery/hero.jpg'],
     galleryImages: [
-      '/assets/products/desktop/mcaipc1/gallery/1.jpg',
-      '/assets/products/desktop/mcaipc1/gallery/2.jpg',
-      '/assets/products/desktop/mcaipc1/gallery/3.jpg',
-      '/assets/products/desktop/mcaipc1/gallery/4.jpg',
-      '/assets/products/desktop/mcaipc1/gallery/5.jpg',
-      '/assets/products/desktop/mcaipc1/gallery/6.jpg',
-      '/assets/products/desktop/mcaipc1/gallery/7.jpg',
-      '/assets/products/desktop/mcaipc1/gallery/8.jpg',
-      '/assets/products/desktop/mcaipc1/gallery/9.jpg',
+      '/assets/products/ai/mcaipc1/gallery/1.jpg',
+      '/assets/products/ai/mcaipc1/gallery/2.jpg',
+      '/assets/products/ai/mcaipc1/gallery/3.jpg',
+      '/assets/products/ai/mcaipc1/gallery/4.jpg',
+      '/assets/products/ai/mcaipc1/gallery/5.jpg',
+      '/assets/products/ai/mcaipc1/gallery/6.jpg',
+      '/assets/products/ai/mcaipc1/gallery/7.jpg',
+      '/assets/products/ai/mcaipc1/gallery/8.jpg',
+      '/assets/products/ai/mcaipc1/gallery/9.jpg',
     ],
     highlights: ['AMD Ryzen AI Max+ 395', '140W TDP', 'Quad-Display 4K', 'Dual 10G+2.5G LAN'],
     specs: [
@@ -305,37 +364,23 @@ const products: Record<string, ProductDetail> = {
       { icon: 'Thermometer', title: 'Advanced Cooling', description: 'Dual fan headers (CPU + System) with intelligent PWM curves for sustained 140W operation in a compact chassis.' },
     ],
     sellingPoints: [
-      { image: '/assets/products/desktop/mcaipc1/details/2.jpg', title: 'AI Max+ Platform' },
-      { image: '/assets/products/desktop/mcaipc1/details/5.jpg', title: 'Advanced Cooling' },
-      { image: '/assets/products/desktop/mcaipc1/details/6.jpg', title: 'WiFi 7 + Bluetooth 5.4' },
-      { image: '/assets/products/desktop/mcaipc1/details/7.jpg', title: 'Quad M.2 Storage Array' },
-    ],
-  },
-  fs500: {
-    name: 'FS-500',
-    tagline: '1U rackmount firewall server with 6 x 2.5G LAN ports',
-    description: 'A 1U rackmount firewall server with six 2.5GbE LAN ports and Intel Core i5 processor for enterprise network security.',
-    images: ['/assets/home/product-categories/firewall-server.png'],
-    highlights: ['1U rackmount', '6 x 2.5GbE LAN', 'IPMI remote', 'Core i5'],
-    specs: [
-      { label: 'Processor', value: 'Intel Core i5-1240P (12C/16T)' },
-      { label: 'Memory', value: 'Up to 64GB DDR4-3200' },
-      { label: 'Storage', value: '2 x M.2 2280 NVMe SSD' },
-      { label: 'LAN Ports', value: '6 x 2.5GbE RJ45' },
-      { label: 'Management', value: '1 x IPMI BMC RJ45' },
-      { label: 'USB', value: '2 x USB 3.2 + 2 x USB 2.0' },
-      { label: 'Console', value: '1 x RJ45 serial + VGA' },
-      { label: 'Power', value: '250W 1U Flex PSU' },
-      { label: 'Form Factor', value: '1U rackmount, 250mm depth' },
-    ],
-    features: [
-      { icon: 'Server', title: '6 x 2.5G LAN', description: 'High-density network ports.' },
-      { icon: 'Shield', title: 'IPMI Remote', description: 'Out-of-band server management.' },
-      { icon: 'Zap', title: 'Redundant Power', description: 'Optional dual PSU for reliability.' },
+      { image: '/assets/products/ai/mcaipc1/details/2.jpg', title: 'AI Max+ Platform' },
+      { image: '/assets/products/ai/mcaipc1/details/5.jpg', title: 'Advanced Cooling' },
+      { image: '/assets/products/ai/mcaipc1/details/6.jpg', title: 'WiFi 7 + Bluetooth 5.4' },
+      { image: '/assets/products/ai/mcaipc1/details/7.jpg', title: 'Quad M.2 Storage Array' },
     ],
   },
 };
 
+const productCategories: Record<string, string> = {
+  mcipcb13: 'industrial-mini-pc',
+  mcipcb12: 'industrial-mini-pc',
+  mcipcd3: 'industrial-mini-pc',
+  mcai1: 'ai-mini-pc',
+  mcai2: 'ai-mini-pc',
+  mcr20: 'firewall-mini-pc',
+  mc15uh: 'commercial-mini-pc',
+};
 const iconMap = {
   Cpu,
   Shield,
@@ -356,7 +401,7 @@ export default function ProductDetailPage() {
   const category = params.category as string;
   const productId = params.id as string;
   const [previewImage, setPreviewImage] = useState<string | null>(null);
-  const product = products[productId];
+  const product = productCategories[productId] === category ? products[productId] : undefined;
   const catInfo = categoryData[category] || categoryData['industrial-mini-pc'];
   const CategoryIcon = iconMap[catInfo.icon] || Cpu;
   const gallery = product?.images || [];
@@ -452,7 +497,7 @@ export default function ProductDetailPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-slate-950">{t.productDetail.exploreProduct.replace('{name}', product.name)}</h2>
               <p className="mt-3 text-slate-600">{t.productDetail.galleryDescription}</p>
             </div>
-            <div className={`grid grid-cols-1 gap-5 ${product.galleryCards ? 'md:grid-cols-2' : 'md:grid-cols-3'}`}>
+            <div className={`grid grid-cols-1 gap-5 ${galleryItems.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'}`}>
               {galleryItems.map((item, index) => (
                 <motion.div
                   key={item.image}
