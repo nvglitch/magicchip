@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { 
   Globe, 
@@ -45,7 +45,28 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const languageMenuRef = useRef<HTMLDivElement>(null);
   const { t, language, setLanguage } = useLanguage();
+
+  useEffect(() => {
+    if (!isLangMenuOpen) return;
+
+    const closeOnOutsideInteraction = (event: PointerEvent) => {
+      if (!languageMenuRef.current?.contains(event.target as Node)) {
+        setIsLangMenuOpen(false);
+      }
+    };
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsLangMenuOpen(false);
+    };
+
+    document.addEventListener('pointerdown', closeOnOutsideInteraction);
+    document.addEventListener('keydown', closeOnEscape);
+    return () => {
+      document.removeEventListener('pointerdown', closeOnOutsideInteraction);
+      document.removeEventListener('keydown', closeOnEscape);
+    };
+  }, [isLangMenuOpen]);
 
   // Scroll progress
   const { scrollYProgress } = useScroll();
@@ -100,13 +121,13 @@ export default function Navbar() {
       <div className="w-full max-w-7xl mx-auto px-3 md:px-4 lg:px-6 xl:px-8">
         <div className="flex items-center justify-between h-16 gap-2 md:gap-3 lg:gap-4">
           {/* Logo */}
-          <a href="/" className="group relative flex h-11 min-w-0 flex-shrink-0 items-center rounded-xl px-1.5 ml-1 md:ml-0 transition-all duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50">
+          <a href="/" className="group relative ml-1 flex h-11 min-w-0 flex-shrink-0 items-center px-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50 md:ml-0">
             <Image
               src="/assets/brand/logo-wordmark.svg"
               alt="MagicChip"
               width={150}
               height={40}
-              className="h-7 w-auto object-contain transition-[filter,transform] duration-300 group-hover:scale-[1.025] group-hover:drop-shadow-[0_0_1px_rgba(37,99,235,0.95)] md:hidden"
+              className="h-7 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02] md:hidden"
               priority
             />
             <Image
@@ -114,7 +135,7 @@ export default function Navbar() {
               alt="MagicChip"
               width={150}
               height={40}
-              className="hidden h-8 w-auto object-contain transition-[filter,transform] duration-300 group-hover:scale-[1.025] group-hover:drop-shadow-[0_0_1px_rgba(37,99,235,0.95)] md:block lg:h-10"
+              className="hidden h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02] md:block lg:h-10"
               priority
             />
           </a>
@@ -191,11 +212,13 @@ export default function Navbar() {
           {/* Toolbar */}
           <div className="ml-auto flex flex-shrink-0 items-center gap-1 md:gap-2">
             {/* Language/Region Dropdown */}
-            <div className="relative">
+            <div ref={languageMenuRef} className="relative">
               <button
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
                 className="group hidden items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50/80 px-3 py-2 text-slate-600 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700 hover:shadow-md hover:shadow-blue-100/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 sm:flex"
                 aria-label={t.nav.languageAriaLabel}
+                aria-expanded={isLangMenuOpen}
+                aria-haspopup="menu"
               >
                 <Globe className="h-[18px] w-[18px] flex-shrink-0 transition-transform duration-500 group-hover:rotate-[18deg]" />
                 <span className="text-xs md:text-sm font-medium uppercase">{language}</span>

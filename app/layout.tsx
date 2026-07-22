@@ -34,7 +34,7 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"
         />
       </head>
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} font-sans antialiased`} suppressHydrationWarning>
         <LanguageProvider>
           <ScrollToTop />
           <Navbar />

@@ -595,25 +595,29 @@ export default function TechDocsPage() {
   const pageSubtitle = t.techDocs.heroSubtitle;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#f3f7f5] text-slate-950">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative isolate overflow-hidden bg-[#101827] text-white">
+          <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_20%,rgba(37,99,235,0.3),transparent_34%),radial-gradient(circle_at_15%_85%,rgba(245,158,11,0.14),transparent_28%)]" />
+          <div className="absolute inset-0 -z-10 opacity-20 tech-pattern-overlay" />
+          <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 md:py-28 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.7 }}
+              className="max-w-3xl"
             >
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">{pageTitle}</h1>
-              <p className="text-xl text-blue-100 max-w-2xl">{pageSubtitle}</p>
+              <div className="mb-7 h-px w-24 bg-gradient-to-r from-amber-400 to-transparent" />
+              <h1 className="text-5xl font-bold tracking-tight md:text-7xl">{pageTitle}</h1>
+              <p className="mt-6 max-w-2xl text-xl leading-relaxed text-slate-300 md:text-2xl">{pageSubtitle}</p>
             </motion.div>
           </div>
         </section>
 
         {/* Categories */}
-        <section className="py-12 bg-white border-b border-gray-200">
+        <section className="border-b border-slate-200 bg-white py-20 md:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
               {data.categories.map((category: any, index: number) => (
                 <motion.a
                   key={category.id}
@@ -621,10 +625,10 @@ export default function TechDocsPage() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="flex flex-col items-center p-6 bg-gray-50 rounded-xl hover:bg-blue-50 hover:shadow-md transition-all group border border-gray-100"
+                  className="group flex flex-col items-center rounded-3xl border border-slate-200 bg-[#f8faf9] p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:bg-white hover:shadow-lg"
                 >
-                  <div className="w-12 h-12 bg-blue-100 rounded-md flex items-center justify-center mb-3 group-hover:bg-blue-600 transition-colors">
-                    <category.icon className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors" />
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-600/20 transition-transform duration-300 group-hover:scale-105">
+                    <category.icon className="h-6 w-6 text-white" />
                   </div>
                   <span className="font-medium text-gray-900 text-center">{category.name}</span>
                   <span className="text-xs text-gray-500 text-center mt-1">{category.description}</span>
@@ -635,18 +639,18 @@ export default function TechDocsPage() {
         </section>
 
         {/* Documents List */}
-        <section className="py-16">
+        <section className="bg-[#f3f7f5] py-24 md:py-28">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="space-y-8">
+            <div className="space-y-14">
               {data.categories.map((category: any) => {
                 const categoryDocs = data.documents.filter((doc: any) => doc.category === category.id);
                 if (categoryDocs.length === 0) return null;
                 
                 return (
                   <div key={category.id} id={category.id}>
-                    <div className="flex items-center mb-6">
-                      <div className="w-10 h-10 bg-blue-100 rounded-md flex items-center justify-center mr-3">
-                        <category.icon className="w-5 h-5 text-blue-600" />
+                    <div className="mb-6 flex items-center">
+                      <div className="mr-3 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white shadow-md shadow-blue-600/15">
+                        <category.icon className="h-5 w-5 text-white" />
                       </div>
                       <h2 className="text-2xl font-bold text-gray-900">{category.name}</h2>
                     </div>
@@ -658,9 +662,9 @@ export default function TechDocsPage() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.3, delay: index * 0.05 }}
-                          className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100"
+                          className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg"
                         >
-                          <div className="flex items-start justify-between">
+                          <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
                             <div className="flex-1">
                               <h3 className="text-lg font-semibold text-gray-900 mb-2 flex items-center">
                                 <FileCode className="w-5 h-5 text-blue-600 mr-2" />
@@ -674,7 +678,7 @@ export default function TechDocsPage() {
                             </div>
                             <a 
                               href="#"
-                              className="ml-4 flex items-center px-4 py-2 bg-gray-100 hover:bg-blue-600 hover:text-white rounded-md transition-colors"
+                              className="inline-flex flex-shrink-0 items-center self-start rounded-xl bg-blue-600 px-4 py-2 font-medium text-white shadow-md shadow-blue-600/20 transition-all hover:-translate-y-0.5 hover:bg-blue-700 sm:ml-4"
                             >
                               <ExternalLink className="w-4 h-4 mr-2" />
                               <span>{t.techDocs.viewButton}</span>
