@@ -45,6 +45,7 @@ export default function ProductCategories({ products }: ProductCategoriesProps) 
       title: getLocalizedText(product.title, language),
       description: getLocalizedText(product.description, language),
       image: product.image || '',
+      mobileImage: '/assets/home/categories/mobile/' + product.id + '.webp',
       url: product.url,
     };
   });
@@ -80,15 +81,24 @@ export default function ProductCategories({ products }: ProductCategoriesProps) 
               className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl"
             >
               {/* Image Area */}
-              <div className="relative h-48 overflow-hidden bg-slate-100">
+              <div className="relative aspect-[4/3] overflow-hidden bg-slate-100 md:h-48 md:aspect-auto">
                 {category.image && (
-                  <Image
-                    src={category.image}
-                    alt={category.title}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
+                  <>
+                    <Image
+                      src={category.mobileImage}
+                      alt={category.title}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105 md:hidden"
+                      sizes="(max-width: 767px) 100vw, 0px"
+                    />
+                    <Image
+                      src={category.image}
+                      alt=""
+                      fill
+                      className="hidden object-cover transition-transform duration-300 group-hover:scale-105 md:block"
+                      sizes="(max-width: 1279px) 50vw, 640px"
+                    />
+                  </>
                 )}
                 {/* Scale effect on hover */}
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-blue-950/10 transition-colors duration-300" />
