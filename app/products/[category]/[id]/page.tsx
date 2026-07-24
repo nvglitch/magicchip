@@ -327,7 +327,69 @@ const products: Record<string, ProductDetail> = {
     ],
     advantageSummary: 'MC15UH brings an Intel Core Ultra platform, up to 128GB DDR5 memory, dual NVMe storage, dual 2.5GbE networking, and external expansion through USB4 and OCuLink into a 132 mm square chassis.',
     operatingRange: '0°C to 50°C',
-  },  mcai1: {
+  },
+  mctar7: {
+    name: 'MCTAR7',
+    tagline: 'Compact AMD Ryzen performance with dual HDMI, full-featured Type-C, and dual storage',
+    description: 'MCTAR7 is a compact commercial mini PC with AMD Ryzen 5 and Ryzen 7 processor options. It combines AMD Radeon graphics with dual DDR4 memory slots, two M.2 storage formats, dual HDMI, full-featured Type-C, Gigabit Ethernet, Wi-Fi 6, and Bluetooth 5.2 in a 105 x 115 x 35 mm chassis.',
+    images: ['/assets/products/commercial/mctar7/images/1.jpg'],
+    galleryCards: [
+      {
+        image: '/assets/products/commercial/mctar7/images/2.jpg',
+        title: 'Compact front-panel design',
+        description: 'The front panel provides two USB 3.1 ports, a power button, and a clean compact enclosure for desk or display-side deployment.',
+      },
+      {
+        image: '/assets/products/commercial/mctar7/images/3.jpg',
+        title: 'Rear connectivity',
+        description: 'The rear panel brings together Gigabit Ethernet, dual HDMI, full-featured Type-C, audio, USB, and DC power connections.',
+      },
+      {
+        image: '/assets/products/commercial/mctar7/images/5.jpg',
+        title: 'AMD Ryzen processor platform',
+        description: 'The available AMD Ryzen processor range includes configurations for responsive multitasking and everyday commercial workloads.',
+      },
+    ],
+    highlights: ['AMD Ryzen 5 / 7 options', '2 x HDMI 1.4 + full-featured Type-C', '2 x DDR4-3200 SO-DIMM, up to 32GB', '105 x 115 x 35 mm'],
+    specs: [
+      { label: 'Model', value: 'MCTAR7' },
+      { label: 'CPU', value: 'AMD Ryzen 7 4700U, Ryzen 5 5600U, Ryzen 7 5800U, Ryzen 7 5825U, Ryzen 5 7535U, or Ryzen 7 7730U processor' },
+      { label: 'Graphics', value: 'AMD Radeon Graphics' },
+      { label: 'Memory', value: '2 x SO-DIMM DDR4-3200 slots, supporting up to 32GB' },
+      { label: 'Storage', value: '1 x M.2 2280 PCIe 3.0 x4 SSD slot and 1 x M.2 2242 NGFF SATA SSD slot, supporting up to 2TB' },
+      { label: 'Display', value: '2 x HDMI 1.4 and 1 x full-featured Type-C' },
+      { label: 'USB', value: '2 x USB 3.1 and 2 x USB 3.0' },
+      { label: 'Network', value: '1 x RJ45 Gigabit Ethernet' },
+      { label: 'Wireless', value: 'Wi-Fi 6 and Bluetooth 5.2' },
+      { label: 'Front I/O', value: '1 x power button and 2 x USB 3.1' },
+      { label: 'Rear I/O', value: '1 x RJ45 Gigabit Ethernet, 1 x full-featured Type-C, 2 x HDMI 1.4, 1 x DC 19V input, 1 x audio jack, and 2 x USB 3.0' },
+      { label: 'Power', value: 'DC 19V / 3.42A adapter' },
+      { label: 'System', value: 'Windows 10 Home or Windows 11 Home' },
+      { label: 'TDP', value: 'Depends on processor' },
+      { label: 'Working Environment', value: '0°C to 50°C; 5%-90% relative humidity, non-condensing' },
+      { label: 'Dimensions', value: '105 x 115 x 35 mm' },
+    ],
+    features: [
+      { icon: 'Cpu', title: 'Flexible AMD Ryzen Options', description: 'Ryzen 5 and Ryzen 7 processor choices support a range of commercial performance requirements.' },
+      { icon: 'Monitor', title: 'Flexible Display Connectivity', description: 'Dual HDMI 1.4 and a full-featured Type-C port provide multiple display connection options.' },
+      { icon: 'HardDrive', title: 'Dual Storage Formats', description: 'M.2 2280 PCIe and M.2 2242 SATA slots support flexible SSD configurations in the compact chassis.' },
+    ],
+    sellingPoints: [
+      {
+        image: '/assets/products/commercial/mctar7/images/4.jpg',
+        title: 'Clearly labeled front and rear interfaces',
+        description: 'The interface map identifies USB 3.1, power, DC input, audio, HDMI, Gigabit Ethernet, USB 3.0, and full-featured Type-C connections.',
+      },
+      {
+        image: '/assets/products/commercial/mctar7/images/6.jpg',
+        title: 'Designed for everyday commercial scenarios',
+        description: 'The provided application examples cover audio-visual entertainment, meetings, remote conferencing, and comfortable office work.',
+      },
+    ],
+    advantageSummary: 'MCTAR7 combines a broad AMD Ryzen processor range, dual DDR4 memory, two SSD formats, multiple display outputs, Wi-Fi 6, and practical commercial connectivity in a compact 105 x 115 x 35 mm enclosure.',
+    operatingRange: '0°C to 50°C',
+  },
+  mcai1: {
     name: 'MCAIPC1',
     tagline: 'AMD Ryzen AI Max+ flagship — 140W desktop performance in a 220mm chassis',
     description: 'Powered by the AMD Ryzen™ AI Max+ 395 processor with up to 128GB LPDDR5x memory and quad-display support. A 220×220×83mm powerhouse with dual 10G + 2.5G LAN, quad M.2 NVMe, USB4, and PD3.1 — built for AI workloads, edge servers, and professional workstations.',
@@ -380,6 +442,7 @@ const productCategories: Record<string, string> = {
   mcai2: 'ai-mini-pc',
   mcr20: 'firewall-mini-pc',
   mc15uh: 'commercial-mini-pc',
+  mctar7: 'commercial-mini-pc',
 };
 const iconMap = {
   Cpu,

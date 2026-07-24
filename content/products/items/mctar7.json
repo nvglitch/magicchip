@@ -1,0 +1,35 @@
+{
+  "id": "mctar7",
+  "category": "commercial-mini-pc",
+  "name": "MCTAR7",
+  "tagline": "Compact AMD Ryzen mini PC with dual HDMI, full-featured Type-C, and dual storage",
+  "description": "Compact commercial mini PC with AMD Ryzen 5 and Ryzen 7 processor options, dual DDR4 memory, two M.2 storage formats, and flexible display connectivity.",
+  "images": [
+    "/assets/products/commercial/mctar7/images/1.jpg",
+    "/assets/products/commercial/mctar7/images/2.jpg",
+    "/assets/products/commercial/mctar7/images/3.jpg"
+  ],
+  "specifications": [
+    { "label": "CPU", "value": "AMD Ryzen 7 4700U, Ryzen 5 5600U, Ryzen 7 5800U, Ryzen 7 5825U, Ryzen 5 7535U, or Ryzen 7 7730U" },
+    { "label": "Graphics", "value": "AMD Radeon Graphics" },
+    { "label": "Memory", "value": "2 x SO-DIMM DDR4-3200 slots, up to 32GB" },
+    { "label": "Storage", "value": "1 x M.2 2280 PCIe 3.0 x4 and 1 x M.2 2242 SATA, up to 2TB" },
+    { "label": "Display", "value": "2 x HDMI 1.4 and 1 x full-featured Type-C" },
+    { "label": "Network", "value": "1 x RJ45 Gigabit Ethernet" },
+    { "label": "Wireless", "value": "Wi-Fi 6 and Bluetooth 5.2" },
+    { "label": "Power", "value": "DC 19V / 3.42A" },
+    { "label": "Dimensions", "value": "105 x 115 x 35 mm" },
+    { "label": "Working Environment", "value": "0°C to 50°C; 5%-90% relative humidity, non-condensing" }
+  ],
+  "features": [
+    { "icon": "Cpu", "title": "Flexible AMD Ryzen Options", "description": "Ryzen 5 and Ryzen 7 processor choices for commercial workloads" },
+    { "icon": "Monitor", "title": "Flexible Display Connectivity", "description": "Dual HDMI 1.4 and full-featured Type-C" },
+    { "icon": "HardDrive", "title": "Dual Storage Formats", "description": "M.2 2280 PCIe and M.2 2242 SATA SSD support" }
+  ],
+  "applications": [
+    { "image": "/assets/products/commercial/mctar7/images/4.jpg", "title": "Interface Layout", "description": "Clearly labeled front and rear connectivity" },
+    { "image": "/assets/products/commercial/mctar7/images/6.jpg", "title": "Commercial Scenarios", "description": "Entertainment, meetings, remote conferencing, and office work" }
+  ],
+  "brochure": "/assets/products/commercial/mctar7/documents/MCTAR7 brochure.pdf",
+  "alibabaUrl": "https://magicchip.en.alibaba.com"
+}

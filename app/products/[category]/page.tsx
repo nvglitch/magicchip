@@ -130,6 +130,13 @@ const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: 
       image: '/assets/products/commercial/mc15uh/images/1.jpg',
       specs: ['Intel Core Ultra 7 / 9', 'Intel Arc 140T Graphics', 'DDR5 up to 128GB', 'USB4 + OCuLink'],
     },
+    {
+      id: 'mctar7',
+      name: 'MCTAR7',
+      tagline: 'Compact AMD Ryzen mini PC with dual HDMI, full-featured Type-C, and dual storage',
+      image: '/assets/products/commercial/mctar7/images/1.jpg',
+      specs: ['AMD Ryzen 5 / 7 Options', '2 x HDMI + Full-featured Type-C', 'DDR4 up to 32GB', 'Dual M.2 Storage'],
+    },
   ],
 };
 
