@@ -105,6 +105,13 @@ const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: 
       image: '/assets/products/firewall/mcr20/images/1.jpg',
       specs: ['Intel Alder Lake-N', '2 x 10GbE + 2 x 2.5GbE', 'DDR5 up to 48GB', '0°C to 70°C'],
     },
+    {
+      id: 'mcsrp6',
+      name: 'MCSRP6',
+      tagline: 'Compact Alder Lake-N and Twin Lake network appliance with dual 2.5GbE',
+      image: '/assets/products/firewall/mcsrp6/images/1.jpg',
+      specs: ['Intel Alder Lake-N / Twin Lake', '2 x Intel 2.5GbE LAN', 'DDR5 up to 48GB', 'DC 12-24V'],
+    },
   ],
   'ai-mini-pc': [
     {
