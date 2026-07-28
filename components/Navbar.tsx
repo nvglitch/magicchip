@@ -113,7 +113,6 @@ export default function Navbar() {
   const languages = SUPPORTED_LANGUAGES.map(code => ({
     code,
     label: LANGUAGE_NAMES[code].native,
-    flag: LANGUAGE_NAMES[code].flag,
   }));
 
   return (
@@ -246,10 +245,7 @@ export default function Navbar() {
                         }}
                         className="w-full flex items-center justify-between px-3 py-2.5 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
                       >
-                        <span className="flex items-center gap-2">
-                          <span className="text-lg">{lang.flag}</span>
-                          <span>{lang.label}</span>
-                        </span>
+                        <span>{lang.label}</span>
                         {language === lang.code && (
                           <Check className="h-4 w-4 flex-shrink-0 text-blue-600" />
                         )}
@@ -303,10 +299,7 @@ export default function Navbar() {
                           : 'text-gray-700 hover:bg-gray-50'
                       }`}
                     >
-                      <span className="flex items-center gap-2">
-                        <span className="text-lg">{lang.flag}</span>
-                        <span>{lang.label}</span>
-                      </span>
+                      <span>{lang.label}</span>
                       {language === lang.code && <Check className="w-4 h-4 flex-shrink-0" />}
                     </button>
                   ))}
