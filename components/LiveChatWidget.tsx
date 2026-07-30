@@ -361,7 +361,7 @@ export default function LiveChatWidget() {
             {/* Desktop: Popover panel */}
             <motion.div
               data-chat-panel
-              className="hidden md:block fixed bottom-24 right-6 w-[380px] bg-white rounded-xl shadow-lg z-[9999] overflow-hidden border border-gray-100 border-l-4 border-l-blue-500"
+              className="hidden md:block fixed bottom-24 right-6 w-[380px] bg-white rounded-xl shadow-lg z-[9999] overflow-hidden border border-gray-100"
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.95 }}
