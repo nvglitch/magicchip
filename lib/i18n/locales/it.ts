@@ -49,7 +49,7 @@ export const it: TranslationSchema = {
   nav: {
     home: 'Home',
     products: 'Prodotti',
-    solutions: 'Soluzioni',
+    solutions: 'Scenari',
     services: 'Servizi',
     aboutUs: 'Chi Siamo',
     documents: 'Documenti',

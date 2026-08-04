@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { 
   Globe, 
   Menu, 
@@ -70,6 +71,7 @@ const megaMenuProducts: Record<string, MegaMenuProduct[]> = {
 };
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -141,10 +143,26 @@ export default function Navbar() {
   const navItems: NavItem[] = [
     { label: t.nav.home, href: '/', dropdown: undefined },
     { label: t.nav.products, href: '/products', dropdown: dropdownContent.products },
+    { label: t.nav.solutions, href: '/scenarios', dropdown: undefined },
     { label: t.nav.documents, href: '/documents', dropdown: dropdownContent.documents },
     { label: t.nav.contact, href: '/contact', dropdown: dropdownContent.contact },
     { label: t.nav.aboutUs, href: '/about', dropdown: dropdownContent.about },
   ];
+
+  const isNavItemActive = (item: NavItem) => {
+    if (item.href === '/') return pathname === '/';
+    if (item.href === '/documents') {
+      return ['/documents', '/downloads', '/tech-docs', '/news'].some(
+        path => pathname === path || pathname.startsWith(`${path}/`),
+      );
+    }
+    if (item.href === '/about') {
+      return ['/about', '/company', '/factory'].some(
+        path => pathname === path || pathname.startsWith(`${path}/`),
+      );
+    }
+    return pathname === item.href || pathname.startsWith(`${item.href}/`);
+  };
 
   const languages = SUPPORTED_LANGUAGES.map(code => ({
     code,
@@ -154,9 +172,9 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-slate-200/80 bg-white/90 shadow-[0_1px_0_rgba(15,23,42,0.03)] backdrop-blur-xl">
       <div className="mx-auto w-full max-w-[1680px] px-3 sm:px-4 lg:px-6 2xl:px-8">
-        <div className="flex items-center justify-between h-16 gap-2 md:gap-3 lg:gap-4">
+        <div className="relative flex h-16 items-center justify-between gap-2 md:gap-3 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-4">
           {/* Logo */}
-          <a href="/" className="group relative ml-1 flex h-11 min-w-0 flex-shrink-0 items-center px-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50 md:ml-0">
+          <a href="/" className="group relative ml-1 flex h-11 min-w-0 flex-shrink-0 items-center px-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50 md:ml-0 lg:justify-self-start">
             <Image
               src="/assets/brand/logo-wordmark.svg"
               alt="MagicChip"
@@ -176,7 +194,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex flex-1 items-center justify-center gap-0 lg:gap-1 xl:gap-2">
+          <div className="hidden items-center justify-center gap-0 lg:flex lg:justify-self-center xl:gap-1 2xl:gap-2">
             {navItems.map((item) => (
               <div
                 key={item.label}
@@ -186,13 +204,14 @@ export default function Navbar() {
               >
                 <a
                   href={item.href}
-                  className="nav-item group relative inline-flex items-center gap-1 rounded-lg px-2 py-2 text-sm font-medium text-slate-600 transition-colors duration-300 hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 lg:px-4 lg:text-base xl:px-5"
+                  aria-current={isNavItemActive(item) ? 'page' : undefined}
+                  className={`nav-item group relative inline-flex items-center gap-1 rounded-lg px-2 py-2 text-sm font-medium transition-colors duration-300 hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 xl:px-4 xl:text-base 2xl:px-5 ${isNavItemActive(item) ? 'text-blue-700' : 'text-slate-600'}`}
                 >
                   <span className="relative">
                     {item.label}
                     {/* Hover underline effect */}
                     <span className={`absolute -bottom-1 h-0.5 rounded-full bg-blue-600 transition-all duration-300 ${
-                      activeDropdown === item.label
+                      isNavItemActive(item) || activeDropdown === item.label
                         ? 'left-0 w-full'
                         : 'left-1/2 w-0 group-hover:left-0 group-hover:w-full'
                     }`} />
@@ -321,7 +340,7 @@ export default function Navbar() {
           </div>
 
           {/* Toolbar */}
-          <div className="ml-auto flex flex-shrink-0 items-center gap-1 md:gap-2">
+          <div className="ml-auto flex flex-shrink-0 items-center gap-1 md:gap-2 lg:ml-0 lg:justify-self-end">
             {/* Language/Region Dropdown */}
             <div ref={languageMenuRef} className="relative">
               <button
@@ -371,7 +390,7 @@ export default function Navbar() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="touch-manipulation rounded-xl p-2 text-slate-700 transition-all duration-300 hover:bg-blue-50 hover:text-blue-700 active:scale-95 md:hidden"
+              className="touch-manipulation rounded-xl p-2 text-slate-700 transition-all duration-300 hover:bg-blue-50 hover:text-blue-700 active:scale-95 lg:hidden"
               aria-label={t.nav.menuAriaLabel}
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -388,7 +407,7 @@ export default function Navbar() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden border-t border-gray-200 bg-white overflow-hidden max-h-[calc(100vh-4rem)] overflow-y-auto"
+            className="lg:hidden border-t border-gray-200 bg-white overflow-hidden max-h-[calc(100vh-4rem)] overflow-y-auto"
           >
             <div className="px-3 sm:px-4 py-4 space-y-3">
               {/* Language Selector - Moved to Top */}
@@ -423,7 +442,8 @@ export default function Navbar() {
                 <div key={item.label} className="space-y-2">
                   <a
                     href={item.href}
-                    className="block py-2 text-gray-700 hover:text-gray-900 font-medium touch-manipulation"
+                    aria-current={isNavItemActive(item) ? 'page' : undefined}
+                    className={`block rounded-lg px-2 py-2 font-medium touch-manipulation ${isNavItemActive(item) ? 'bg-blue-50 text-blue-700' : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'}`}
                     onClick={() => !item.dropdown && setIsMobileMenuOpen(false)}
                   >
                     {item.label}
