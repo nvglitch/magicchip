@@ -1,21 +1,52 @@
+import type { Metadata } from 'next';
 import { getAllNews } from '@/lib/content-loader';
+import { createPageMetadata, serializeJsonLd, SITE_URL } from '@/lib/seo';
 import { notFound } from 'next/navigation';
 import NewsArticleClient from './NewsArticleClient';
 
-export default function NewsArticlePage({ params }: { params: { id: string } }) {
-  const newsArticles = getAllNews();
-  const article = newsArticles.find(a => a.id === params.id);
+type NewsArticlePageProps = {
+  params: Promise<{ id: string }>;
+};
 
-  if (!article) {
-    notFound();
-  }
+export async function generateMetadata({ params }: NewsArticlePageProps): Promise<Metadata> {
+  const { id } = await params;
+  const article = getAllNews().find(item => item.id === id);
 
-  return <NewsArticleClient article={article} />;
+  if (!article) return { title: 'Article Not Found', robots: { index: false, follow: false } };
+
+  return createPageMetadata({
+    name: article.title.en,
+    description: article.excerpt.en,
+    path: `/news/${article.id}`,
+    image: article.image,
+  });
+}
+
+export default async function NewsArticlePage({ params }: NewsArticlePageProps) {
+  const { id } = await params;
+  const article = getAllNews().find(item => item.id === id);
+
+  if (!article) notFound();
+
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline: article.title.en,
+    description: article.excerpt.en,
+    datePublished: article.date,
+    image: [article.image],
+    mainEntityOfPage: `${SITE_URL}/news/${article.id}`,
+    publisher: { '@id': `${SITE_URL}/#organization` },
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleJsonLd) }} />
+      <NewsArticleClient article={article} />
+    </>
+  );
 }
 
 export async function generateStaticParams() {
-  const newsArticles = getAllNews();
-  return newsArticles.map(article => ({
-    id: article.id,
-  }));
+  return getAllNews().map(article => ({ id: article.id }));
 }

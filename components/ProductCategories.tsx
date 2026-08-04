@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import Image from 'next/image';
@@ -51,35 +50,22 @@ export default function ProductCategories({ products }: ProductCategoriesProps) 
   });
 
   return (
-    <section id="products" className="bg-[#f3f7f5] py-24 md:py-28">
+    <section id="products" className="bg-[#f3f7f5] py-16 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-10 md:mb-12">
           <h2 className="mb-4 text-4xl font-bold text-slate-950 md:text-5xl">
             {t.products.title}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             {t.products.subtitle}
           </p>
-        </motion.div>
+        </div>
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {categories.map((category, index) => (
-            <motion.div
-              key={category.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl"
-            >
+          {categories.map((category) => (
+            <div key={category.id} className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl">
               {/* Image Area */}
               <div className="relative aspect-[4/3] overflow-hidden bg-slate-100 md:h-48 md:aspect-auto">
                 {category.image && (
@@ -120,7 +106,7 @@ export default function ProductCategories({ products }: ProductCategoriesProps) 
                   <ArrowRight className="w-4 h-4 ml-2 transform group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

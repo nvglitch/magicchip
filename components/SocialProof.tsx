@@ -1,49 +1,9 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
-import { motion, useMotionValue, useTransform, useInView, animate } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
-
-// 数字计数器组件 — 进入视口时从 0 滚动到目标值
-function AnimatedCounter({
-  to,
-  prefix = '',
-  suffix = '',
-  decimals = 0,
-  duration = 2,
-  className = '',
-}: {
-  to: number;
-  prefix?: string;
-  suffix?: string;
-  decimals?: number;
-  duration?: number;
-  className?: string;
-}) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-50px' });
-  const count = useMotionValue(0);
-  const display = useTransform(count, (v) => v.toFixed(decimals));
-
-  useEffect(() => {
-    if (!isInView) return;
-    const ctrl = animate(count, to, {
-      duration,
-      ease: [0.33, 1, 0.68, 1], // easeOutCubic
-    });
-    return () => ctrl.stop();
-  }, [isInView, to, count, duration]);
-
-  return (
-    <span ref={ref} className={className}>
-      {prefix}
-      <motion.span>{display}</motion.span>
-      {suffix}
-    </span>
-  );
-}
 
 // 国家国旗数据 - 使用 flag-icons 库的国家代码
 const countries = [
@@ -120,66 +80,62 @@ export default function SocialProof() {
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12">
           <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">
             {t.social.title}
           </h2>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
             {t.social.subtitle}
           </p>
-        </motion.div>
+        </div>
+      </div>
 
-        {/* Country Flags Marquee */}
-        <div className="relative mb-16">
-          {/* Scrolling Container */}
+      {/* Full-width country flags marquee */}
+      <div className="relative z-10 mb-16 w-full overflow-hidden">
           <motion.div
             animate={{ x: ['0%', '-50%'] }}
             transition={{
               x: {
                 repeat: Infinity,
                 repeatType: 'loop',
-                duration: 30,
+                duration: 50,
                 ease: 'linear',
               },
             }}
-            className="flex items-center gap-16"
+            className="flex w-[200%]"
           >
-            {/* Triple the countries for seamless loop */}
-            {[...countries, ...countries, ...countries].map((country, index) => (
+            {[0, 1].map((track) => (
               <div
-                key={index}
-                className="flex-shrink-0"
+                key={track}
+                className="grid w-1/2 shrink-0 grid-cols-8 items-center md:grid-cols-[repeat(16,minmax(0,1fr))]"
+                aria-hidden={track === 1}
               >
-                <span 
-                  className={`fi fi-${country.code}`}
-                  style={{ 
-                    width: '48px', 
-                    height: '36px',
-                    display: 'inline-block',
-                    backgroundSize: 'contain',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'center'
-                  }}
-                />
+                {[...countries, ...countries].map((country, index) => (
+                  <div
+                    key={`${track}-${country.code}-${index}`}
+                    className={`flex justify-center ${index >= countries.length ? 'hidden md:flex' : ''}`}
+                  >
+                    <span
+                      className={`fi fi-${country.code}`}
+                      style={{
+                        width: 'clamp(36px, 4vw, 48px)',
+                        aspectRatio: '4 / 3',
+                        display: 'inline-block',
+                        backgroundSize: 'contain',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: 'center',
+                      }}
+                    />
+                  </div>
+                ))}
               </div>
             ))}
           </motion.div>
-        </div>
+      </div>
 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Case Study */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="rounded-3xl border border-white/10 bg-white/[0.055] p-8 shadow-xl shadow-black/15 backdrop-blur-sm md:p-12"
-        >
+        <div className="rounded-3xl border border-white/10 bg-white/[0.055] p-8 shadow-xl shadow-black/15 backdrop-blur-sm md:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Quote */}
             <div>
@@ -200,60 +156,37 @@ export default function SocialProof() {
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
-              {/* Rating — numeric counter */}
+              {/* Rating — static value */}
               <div className="rounded-2xl border border-white/10 bg-black/15 p-6 shadow-sm">
                 <div className="flex items-baseline mb-1">
                   <span className="text-3xl font-bold text-yellow-400">★</span>
-                  <AnimatedCounter
-                    to={parseFloat(t.social.stats.rating) || 5.0}
-                    decimals={1}
-                    duration={0.7}
-                    className="text-3xl font-bold text-yellow-400 ml-1"
-                  />
+                  <span className="ml-1 text-3xl font-bold text-yellow-400">{t.social.stats.rating}</span>
                 </div>
                 <p className="text-slate-300 text-sm">{t.social.stats.ratingLabel}</p>
               </div>
-              {/* Factory Size — spring scale-in (range text) */}
+              {/* Factory Size — static value */}
               <div className="rounded-2xl border border-white/10 bg-black/15 p-6 shadow-sm">
-                <motion.p
-                  className="text-2xl font-bold text-blue-400 mb-1"
-                  initial={{ scale: 0.6, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ type: 'spring', stiffness: 180, damping: 14, delay: 0.15 }}
-                >
+                <p className="text-2xl font-bold text-blue-400 mb-1">
                   {t.social.stats.factorySize}
                   <span className="text-lg text-slate-400 ml-1">{t.social.stats.factorySizeUnit}</span>
-                </motion.p>
+                </p>
                 <p className="text-slate-300 text-sm">{t.social.stats.factorySizeLabel}</p>
               </div>
-              {/* Response Time — numeric counter */}
+              {/* Response Time — static value */}
               <div className="rounded-2xl border border-white/10 bg-black/15 p-6 shadow-sm">
-                <AnimatedCounter
-                  to={parseInt(t.social.stats.responseTime.replace(/[^0-9]/g, '')) || 3}
-                  prefix="≤"
-                  suffix="h"
-                  duration={0.6}
-                  className="text-3xl font-bold text-emerald-400 mb-1 block"
-                />
+                <p className="mb-1 text-3xl font-bold text-emerald-400">{t.social.stats.responseTime}</p>
                 <p className="text-slate-300 text-sm">{t.social.stats.responseTimeLabel}</p>
               </div>
-              {/* Global Reach — spring scale-in (text) */}
+              {/* Global Reach — static value */}
               <div className="rounded-2xl border border-white/10 bg-black/15 p-6 shadow-sm">
-                <motion.p
-                  className="mb-1 text-3xl font-bold text-blue-300"
-                  initial={{ scale: 0.6, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ type: 'spring', stiffness: 180, damping: 14, delay: 0.3 }}
-                >
+                <p className="mb-1 text-3xl font-bold text-blue-300">
                   {t.social.stats.globalReach}
-                </motion.p>
+                </p>
                 <p className="text-slate-300 text-sm">{t.social.stats.globalReachLabel}</p>
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

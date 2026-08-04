@@ -9,7 +9,7 @@ const productsData = {
   en: {
     hero: {
       title: 'Our Products',
-      subtitle: 'Innovative semiconductor solutions powering the future of computing'
+      subtitle: 'Mini PCs and industrial computing systems for edge, business, AI, and network applications'
     },
     categories: [
       {
@@ -35,15 +35,15 @@ const productsData = {
       },
       {
         title: 'Firewall Mini PC / Server PC',
-        description: 'Rackmount firewall servers for enterprise network security with high throughput.',
-        features: ['1U/2U rackmount form factor', 'Multiple LAN ports', 'High-performance routing', 'Enterprise firewall OS support'],
+        description: 'Compact network appliances for firewall, routing, VPN, gateway, and edge-network deployments.',
+        features: ['Multiple Intel LAN ports', '2.5GbE and 10GbE options', 'DDR5 memory options', 'Flexible storage and expansion'],
         icon: Shield,
         href: '/products/firewall-mini-pc'
       }
     ],
     cta: {
       title: 'Need a Custom Solution?',
-      description: 'We offer customized semiconductor solutions tailored to your specific requirements.',
+      description: 'We offer customized Mini PC and industrial computing solutions tailored to your project requirements.',
       button: 'Contact Sales'
     },
     learnMore: 'View Products'

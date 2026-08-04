@@ -170,33 +170,21 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
   if (!siteConfig) return null;
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-[#eaf0ee] py-24 md:py-28">
+    <section id="contact" className="relative overflow-hidden bg-[#eaf0ee] py-16 md:py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-10 md:mb-12">
           <h2 className="mb-4 text-4xl font-bold text-slate-950 md:text-5xl">
             {data.hero.title}
           </h2>
           <p className="text-lg text-gray-600 max-w-xl mx-auto">
             {data.hero.subtitle}
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid lg:grid-cols-5 gap-12">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-10">
           {/* Left - Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-2 space-y-8"
-          >
+          <div className="lg:col-span-2 space-y-8">
             {/* Contact Cards */}
             <div className="space-y-4">
               <a 
@@ -252,16 +240,10 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right - Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="lg:col-span-3"
-          >
+          <div className="lg:col-span-3">
             <AnimatePresence mode="wait">
               {isSubmitted ? (
                 <motion.div
@@ -444,7 +426,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                 </motion.div>
               )}
             </AnimatePresence>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

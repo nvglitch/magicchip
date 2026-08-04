@@ -58,7 +58,7 @@ const techDocsData = {
       {
         id: 3,
         title: 'MC-Network 10G Configuration Guide',
-        description: 'Step-by-step configuration instructions for network chips including VLAN, QoS, and bonding settings.',
+        description: 'Step-by-step configuration instructions for network interfaces including VLAN, QoS, and bonding settings.',
         category: 'network',
         updated: '2026-02-28',
         pages: 156

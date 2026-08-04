@@ -136,21 +136,22 @@ export default function LiveChatWidget() {
       <motion.button
         data-chat-fab
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 md:bottom-6 md:right-6 w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg hover:shadow-xl flex items-center justify-center z-[9999] transition-colors"
+        className="fixed bottom-6 right-6 flex h-14 w-14 items-center justify-center gap-0 rounded-full bg-emerald-600 px-0 text-white shadow-[0_12px_32px_rgba(5,150,105,0.32)] transition-colors hover:bg-emerald-700 hover:shadow-[0_14px_36px_rgba(5,150,105,0.4)] md:w-auto md:min-w-[148px] md:gap-2 md:px-5 z-[9999]"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        animate={{ scale: [1, 1.02, 1] }}
+        animate={{ scale: [1, 1, 1.055, 1], rotate: [0, 0, -2, 0] }}
         transition={{
-          scale: {
-            duration: 2,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          },
+          duration: 1.1,
+          repeat: Infinity,
+          repeatDelay: 7,
+          ease: 'easeInOut',
+          times: [0, 0.45, 0.72, 1],
         }}
         aria-label={t.chat.fab.tooltip}
         title={t.chat.fab.tooltip}
       >
-        <MessageCircle className="w-6 h-6" />
+        <MessageCircle className="h-6 w-6 shrink-0" />
+        <span className="hidden text-sm font-semibold md:inline">{t.chat.fab.tooltip}</span>
       </motion.button>
 
       {/* Chat Panel */}

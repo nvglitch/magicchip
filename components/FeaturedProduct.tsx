@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Check, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,19 +9,13 @@ export default function FeaturedProduct() {
   const { t } = useLanguage();
 
   return (
-    <section id="solutions" className="relative bg-white py-24 md:py-28">
+    <section id="solutions" className="relative bg-white py-16 md:py-20">
       {/* Tech pattern overlay — beneath content, above gradient */}
       <div className="absolute inset-0 tech-pattern-overlay pointer-events-none" style={{ maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)' }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
           {/* Image Side */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative"
-          >
+          <div className="relative">
             <div className="relative overflow-hidden rounded-3xl bg-[#f3f7f5] shadow-xl shadow-slate-900/10 ring-1 ring-slate-200">
               <Image
                 src="/assets/products/ai/mcaipc2/hero.png"
@@ -36,15 +29,10 @@ export default function FeaturedProduct() {
             <div className="mt-4 text-center">
               <p className="text-gray-400 text-sm">{t.featured.title}</p>
             </div>
-          </motion.div>
+          </div>
 
           {/* Content Side */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <span className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">
               {t.featured.badge}
             </span>
@@ -57,18 +45,11 @@ export default function FeaturedProduct() {
 
             {/* Features List */}
             <div className="grid grid-cols-2 gap-3 mb-8">
-              {t.featured.features.map((feature, index) => (
-                <motion.div
-                  key={feature}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="flex items-center space-x-2"
-                >
+              {t.featured.features.map((feature) => (
+                <div key={feature} className="flex items-center space-x-2">
                   <Check className="w-5 h-5 text-amber-500 flex-shrink-0" />
                   <span className="text-gray-700 text-sm">{feature}</span>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -80,7 +61,7 @@ export default function FeaturedProduct() {
               {t.featured.cta}
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

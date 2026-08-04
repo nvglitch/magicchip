@@ -253,23 +253,102 @@ const contactData = {
   }
 };
 
+const formExtras = {
+  en: {
+    eyebrow: 'Project Inquiry',
+    intro: 'Tell us what you are building so our team can respond with the right product and configuration.',
+    inquiryType: 'Inquiry Type',
+    chooseType: 'Select an inquiry type',
+    inquiryOptions: ['Sample evaluation', 'Bulk purchase', 'OEM/ODM customization', 'Technical question'],
+    product: 'Product / Model (optional)',
+    productPlaceholder: 'e.g. MCSRP6 or Industrial Mini PC',
+    quantity: 'Estimated Quantity (optional)',
+    quantityPlaceholder: 'e.g. 1 sample or 100 units',
+    helpfulTitle: 'Helpful details to include',
+    helpfulDetails: ['Product model or CPU platform', 'Expected quantity and timeline', 'Required ports, storage, or branding'],
+    emailPrompt: 'Prefer email?',
+    requiredNote: 'Required fields are marked with *.',
+  },
+  fr: {
+    eyebrow: 'Demande de Projet',
+    intro: 'Décrivez votre projet afin que notre équipe puisse recommander le bon produit et la bonne configuration.',
+    inquiryType: 'Type de Demande',
+    chooseType: 'Sélectionnez un type de demande',
+    inquiryOptions: ['Évaluation d’échantillon', 'Achat en volume', 'Personnalisation OEM/ODM', 'Question technique'],
+    product: 'Produit / Modèle (facultatif)',
+    productPlaceholder: 'ex. MCSRP6 ou Mini PC industriel',
+    quantity: 'Quantité Estimée (facultatif)',
+    quantityPlaceholder: 'ex. 1 échantillon ou 100 unités',
+    helpfulTitle: 'Informations utiles à fournir',
+    helpfulDetails: ['Modèle ou plateforme CPU', 'Quantité et calendrier prévus', 'Ports, stockage ou marquage requis'],
+    emailPrompt: 'Vous préférez l’e-mail ?',
+    requiredNote: 'Les champs obligatoires sont marqués d’un *.',
+  },
+  de: {
+    eyebrow: 'Projektanfrage',
+    intro: 'Beschreiben Sie Ihr Projekt, damit unser Team das passende Produkt und die richtige Konfiguration empfehlen kann.',
+    inquiryType: 'Art der Anfrage',
+    chooseType: 'Art der Anfrage auswählen',
+    inquiryOptions: ['Musterbewertung', 'Mengeneinkauf', 'OEM/ODM-Anpassung', 'Technische Frage'],
+    product: 'Produkt / Modell (optional)',
+    productPlaceholder: 'z. B. MCSRP6 oder Industrie-Mini-PC',
+    quantity: 'Geschätzte Menge (optional)',
+    quantityPlaceholder: 'z. B. 1 Muster oder 100 Stück',
+    helpfulTitle: 'Hilfreiche Projektdetails',
+    helpfulDetails: ['Produktmodell oder CPU-Plattform', 'Erwartete Menge und Zeitplan', 'Benötigte Ports, Speicher oder Branding'],
+    emailPrompt: 'Lieber per E-Mail?',
+    requiredNote: 'Pflichtfelder sind mit * markiert.',
+  },
+  it: {
+    eyebrow: 'Richiesta di Progetto',
+    intro: 'Descrivi il tuo progetto per aiutarci a consigliare il prodotto e la configurazione più adatti.',
+    inquiryType: 'Tipo di Richiesta',
+    chooseType: 'Seleziona un tipo di richiesta',
+    inquiryOptions: ['Valutazione campione', 'Acquisto in volume', 'Personalizzazione OEM/ODM', 'Domanda tecnica'],
+    product: 'Prodotto / Modello (opzionale)',
+    productPlaceholder: 'es. MCSRP6 o Mini PC industriale',
+    quantity: 'Quantità Stimata (opzionale)',
+    quantityPlaceholder: 'es. 1 campione o 100 unità',
+    helpfulTitle: 'Dettagli utili da includere',
+    helpfulDetails: ['Modello o piattaforma CPU', 'Quantità e tempistiche previste', 'Porte, storage o branding richiesti'],
+    emailPrompt: 'Preferisci l’e-mail?',
+    requiredNote: 'I campi obbligatori sono contrassegnati con *.',
+  },
+  es: {
+    eyebrow: 'Consulta de Proyecto',
+    intro: 'Cuéntenos qué está desarrollando para recomendarle el producto y la configuración adecuados.',
+    inquiryType: 'Tipo de Consulta',
+    chooseType: 'Seleccione un tipo de consulta',
+    inquiryOptions: ['Evaluación de muestra', 'Compra por volumen', 'Personalización OEM/ODM', 'Pregunta técnica'],
+    product: 'Producto / Modelo (opcional)',
+    productPlaceholder: 'p. ej. MCSRP6 o Mini PC industrial',
+    quantity: 'Cantidad Estimada (opcional)',
+    quantityPlaceholder: 'p. ej. 1 muestra o 100 unidades',
+    helpfulTitle: 'Detalles útiles para incluir',
+    helpfulDetails: ['Modelo o plataforma de CPU', 'Cantidad y plazo previstos', 'Puertos, almacenamiento o marca requeridos'],
+    emailPrompt: '¿Prefiere el correo?',
+    requiredNote: 'Los campos obligatorios están marcados con *.',
+  },
+};
+
 export default function ContactPage() {
   const { language, t } = useLanguage();
   const dataLanguage = (contactData as any)[language] ? language : 'en';
   const data = (contactData as any)[dataLanguage];
+  const extras = formExtras[dataLanguage as keyof typeof formExtras] || formExtras.en;
 
-  const [formData, setFormData] = useState({ name: '', email: '', company: '', subject: '', message: '' });
-  const [errors, setErrors] = useState<{ name?: string; email?: string; company?: string; subject?: string; message?: string }>({});
+  const [formData, setFormData] = useState({ name: '', email: '', company: '', inquiryType: '', product: '', quantity: '', message: '' });
+  const [errors, setErrors] = useState<{ name?: string; email?: string; company?: string; inquiryType?: string; message?: string }>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validateForm = () => {
-    const newErrors: { name?: string; email?: string; company?: string; subject?: string; message?: string } = {};
+    const newErrors: { name?: string; email?: string; company?: string; inquiryType?: string; message?: string } = {};
     if (!formData.name.trim()) newErrors.name = data.form.error;
     if (!formData.email.trim()) newErrors.email = data.form.error;
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = t.contactPage.invalidEmail;
     if (!formData.company.trim()) newErrors.company = data.form.error;
-    if (!formData.subject.trim()) newErrors.subject = data.form.error;
+    if (!formData.inquiryType.trim()) newErrors.inquiryType = data.form.error;
     if (!formData.message.trim()) newErrors.message = data.form.error;
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -282,7 +361,7 @@ export default function ContactPage() {
     await new Promise(resolve => setTimeout(resolve, 800));
     setIsSubmitting(false);
     setIsSubmitted(true);
-    setFormData({ name: '', email: '', company: '', subject: '', message: '' });
+    setFormData({ name: '', email: '', company: '', inquiryType: '', product: '', quantity: '', message: '' });
   };
 
   return (
@@ -325,269 +404,206 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Form & WhatsApp - 上下排版 */}
-        <section className="bg-[#eaf0ee] py-20 md:py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="space-y-8">
-              {/* 第一行：WhatsApp 卡片 */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="overflow-hidden rounded-2xl border border-white/10 bg-[#101827] p-8 text-white shadow-xl shadow-slate-900/10 md:p-10"
-              >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                  <div className="mb-4 md:mb-0">
-                    <div className="flex items-center mb-2">
-                      <MessageCircle className="w-8 h-8 mr-3" />
-                      <h2 className="text-2xl font-bold">{data.whatsapp.title}</h2>
-                    </div>
-                    <p className="text-slate-300">{data.whatsapp.description}</p>
+        <section className="bg-[#eaf0ee] py-16 md:py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <AnimatePresence mode="wait">
+              {isSubmitted ? (
+                <motion.div
+                  key="success"
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                  className="mx-auto max-w-3xl rounded-[2rem] border border-emerald-200 bg-white p-10 text-center shadow-xl shadow-slate-900/5 md:p-14"
+                >
+                  <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-100">
+                    <CheckCircle className="h-8 w-8 text-emerald-700" />
                   </div>
-                  <a
-                    href="https://wa.me/8613392172330"
-                    className="inline-flex items-center self-start rounded-full bg-emerald-500 px-6 py-3 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-emerald-400 md:self-auto"
-                  >
-                    <MessageSquare className="w-5 h-5 mr-2" />
-                    {data.whatsapp.button}
-                  </a>
-                </div>
-              </motion.div>
-
-              {/* 第二行：联系表单 */}
-              <AnimatePresence mode="wait">
-                {isSubmitted ? (
-                  <motion.div
-                    key="success"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                    className="rounded-3xl border border-slate-200 bg-white p-12 text-center shadow-xl shadow-slate-900/5"
-                  >
-                    <motion.div
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ delay: 0.2, type: 'spring', stiffness: 200, damping: 15 }}
-                      className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-emerald-100"
-                    >
-                      <CheckCircle className="w-10 h-10 text-teal-700" />
-                    </motion.div>
-                    <motion.h3
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.3 }}
-                      className="text-2xl font-bold text-gray-900 mb-2"
-                    >
-                      {data.form.success}
-                    </motion.h3>
-                    <motion.p
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.4 }}
-                      className="text-gray-600"
-                    >
-                      {data.form.successDesc}
-                    </motion.p>
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="form"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="rounded-3xl border border-slate-200 bg-white p-8 shadow-xl shadow-slate-900/5 md:p-10"
-                  >
-                    <h2 className="mb-8 text-3xl font-bold text-slate-950">{data.form.title}</h2>
-                    <form onSubmit={handleSubmit} className="space-y-4">
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.name}</label>
-                          <motion.div
-                            animate={errors.name ? { x: [0, -5, 5, -5, 5, 0] } : { x: 0 }}
-                            transition={{ duration: 0.4 }}
-                          >
-                            <input
-                              type="text"
-                              value={formData.name}
-                              onChange={(e) => {
-                                setFormData({ ...formData, name: e.target.value });
-                                if (errors.name) setErrors({ ...errors, name: undefined });
-                              }}
-                              className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 transition-all ${
-                                errors.name ? 'border-red-400 focus:ring-red-300' : 'border-slate-300 focus:border-blue-700 focus:ring-blue-700/20'
-                              }`}
-                            />
-                            <AnimatePresence>
-                              {errors.name && (
-                                <motion.p
-                                  initial={{ opacity: 0, height: 0 }}
-                                  animate={{ opacity: 1, height: 'auto' }}
-                                  exit={{ opacity: 0, height: 0 }}
-                                  className="text-red-500 text-sm mt-1 flex items-center gap-1"
-                                >
-                                  <AlertCircle className="w-3 h-3" />
-                                  {errors.name}
-                                </motion.p>
-                              )}
-                            </AnimatePresence>
-                          </motion.div>
-                        </div>
-                        <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.email}</label>
-                          <motion.div
-                            animate={errors.email ? { x: [0, -5, 5, -5, 5, 0] } : { x: 0 }}
-                            transition={{ duration: 0.4 }}
-                          >
-                            <input
-                              type="email"
-                              value={formData.email}
-                              onChange={(e) => {
-                                setFormData({ ...formData, email: e.target.value });
-                                if (errors.email) setErrors({ ...errors, email: undefined });
-                              }}
-                              className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 transition-all ${
-                                errors.email ? 'border-red-400 focus:ring-red-300' : 'border-slate-300 focus:border-blue-700 focus:ring-blue-700/20'
-                              }`}
-                            />
-                            <AnimatePresence>
-                              {errors.email && (
-                                <motion.p
-                                  initial={{ opacity: 0, height: 0 }}
-                                  animate={{ opacity: 1, height: 'auto' }}
-                                  exit={{ opacity: 0, height: 0 }}
-                                  className="text-red-500 text-sm mt-1 flex items-center gap-1"
-                                >
-                                  <AlertCircle className="w-3 h-3" />
-                                  {errors.email}
-                                </motion.p>
-                              )}
-                            </AnimatePresence>
-                          </motion.div>
-                        </div>
-                      </div>
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.company}</label>
-                          <motion.div
-                            animate={errors.company ? { x: [0, -5, 5, -5, 5, 0] } : { x: 0 }}
-                            transition={{ duration: 0.4 }}
-                          >
-                            <input
-                              type="text"
-                              value={formData.company}
-                              onChange={(e) => {
-                                setFormData({ ...formData, company: e.target.value });
-                                if (errors.company) setErrors({ ...errors, company: undefined });
-                              }}
-                              className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 transition-all ${
-                                errors.company ? 'border-red-400 focus:ring-red-300' : 'border-slate-300 focus:border-blue-700 focus:ring-blue-700/20'
-                              }`}
-                            />
-                            <AnimatePresence>
-                              {errors.company && (
-                                <motion.p
-                                  initial={{ opacity: 0, height: 0 }}
-                                  animate={{ opacity: 1, height: 'auto' }}
-                                  exit={{ opacity: 0, height: 0 }}
-                                  className="text-red-500 text-sm mt-1 flex items-center gap-1"
-                                >
-                                  <AlertCircle className="w-3 h-3" />
-                                  {errors.company}
-                                </motion.p>
-                              )}
-                            </AnimatePresence>
-                          </motion.div>
-                        </div>
-                        <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.subject}</label>
-                          <motion.div
-                            animate={errors.subject ? { x: [0, -5, 5, -5, 5, 0] } : { x: 0 }}
-                            transition={{ duration: 0.4 }}
-                          >
-                            <input
-                              type="text"
-                              value={formData.subject}
-                              onChange={(e) => {
-                                setFormData({ ...formData, subject: e.target.value });
-                                if (errors.subject) setErrors({ ...errors, subject: undefined });
-                              }}
-                              className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 transition-all ${
-                                errors.subject ? 'border-red-400 focus:ring-red-300' : 'border-slate-300 focus:border-blue-700 focus:ring-blue-700/20'
-                              }`}
-                            />
-                            <AnimatePresence>
-                              {errors.subject && (
-                                <motion.p
-                                  initial={{ opacity: 0, height: 0 }}
-                                  animate={{ opacity: 1, height: 'auto' }}
-                                  exit={{ opacity: 0, height: 0 }}
-                                  className="text-red-500 text-sm mt-1 flex items-center gap-1"
-                                >
-                                  <AlertCircle className="w-3 h-3" />
-                                  {errors.subject}
-                                </motion.p>
-                              )}
-                            </AnimatePresence>
-                          </motion.div>
-                        </div>
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">{data.form.message}</label>
-                        <motion.div
-                          animate={errors.message ? { x: [0, -5, 5, -5, 5, 0] } : { x: 0 }}
-                          transition={{ duration: 0.4 }}
-                        >
-                          <textarea
-                            rows={4}
-                            value={formData.message}
-                            onChange={(e) => {
-                              setFormData({ ...formData, message: e.target.value });
-                              if (errors.message) setErrors({ ...errors, message: undefined });
-                            }}
-                            className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 transition-all resize-none ${
-                              errors.message ? 'border-red-400 focus:ring-red-300' : 'border-slate-300 focus:border-blue-700 focus:ring-blue-700/20'
-                            }`}
-                          />
-                          <AnimatePresence>
-                            {errors.message && (
-                              <motion.p
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: 'auto' }}
-                                exit={{ opacity: 0, height: 0 }}
-                                className="text-red-500 text-sm mt-1 flex items-center gap-1"
-                              >
-                                <AlertCircle className="w-3 h-3" />
-                                {errors.message}
-                              </motion.p>
-                            )}
-                          </AnimatePresence>
-                        </motion.div>
-                      </div>
-                      <motion.button
-                        type="submit"
-                        disabled={isSubmitting}
-                        whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
-                        whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-                        className="flex w-full items-center justify-center rounded-xl bg-blue-600 px-6 py-4 font-semibold text-white shadow-lg shadow-blue-600/20 transition-all hover:-translate-y-0.5 hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70"
+                  <h3 className="text-2xl font-bold text-slate-950">{data.form.success}</h3>
+                  <p className="mt-3 text-slate-600">{data.form.successDesc}</p>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="form"
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="grid overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.1)] lg:grid-cols-[0.78fr_1.22fr]"
+                >
+                  <aside className="relative overflow-hidden bg-[#101827] p-7 text-white sm:p-9 lg:p-10">
+                    <div className="absolute -right-20 -top-20 h-52 w-52 rounded-full bg-emerald-500/15 blur-3xl" />
+                    <div className="absolute -bottom-24 -left-20 h-56 w-56 rounded-full bg-blue-500/15 blur-3xl" />
+                    <div className="relative">
+                      <span className="inline-flex rounded-full border border-emerald-300/25 bg-emerald-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-200">
+                        {extras.eyebrow}
+                      </span>
+                      <h2 className="mt-6 text-3xl font-bold">{data.whatsapp.title}</h2>
+                      <p className="mt-3 max-w-md leading-relaxed text-slate-300">{data.whatsapp.description}</p>
+                      <a
+                        href="https://wa.me/8613392172330"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-7 inline-flex items-center rounded-xl bg-emerald-500 px-5 py-3 font-semibold text-white shadow-lg shadow-emerald-950/25 transition-colors hover:bg-emerald-400"
                       >
-                        {isSubmitting ? (
-                          <motion.div
-                            animate={{ rotate: 360 }}
-                            transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-                            className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
+                        <MessageSquare className="mr-2 h-5 w-5" />
+                        {data.whatsapp.button}
+                      </a>
+
+                      <div className="my-8 h-px bg-white/10" />
+                      <h3 className="font-semibold text-white">{extras.helpfulTitle}</h3>
+                      <ul className="mt-4 space-y-3">
+                        {extras.helpfulDetails.map((detail) => (
+                          <li key={detail} className="flex items-start gap-3 text-sm leading-relaxed text-slate-300">
+                            <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                            <span>{detail}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.055] p-4">
+                        <p className="text-xs uppercase tracking-[0.14em] text-slate-400">{extras.emailPrompt}</p>
+                        <a href="mailto:Contact@szmagicchip.com" className="mt-1 block font-medium text-white hover:text-emerald-300">
+                          Contact@szmagicchip.com
+                        </a>
+                      </div>
+                    </div>
+                  </aside>
+
+                  <div className="p-6 sm:p-9 lg:p-10">
+                    <p className="text-sm font-semibold uppercase tracking-[0.16em] text-blue-700">{extras.eyebrow}</p>
+                    <h2 className="mt-2 text-3xl font-bold text-slate-950">{data.form.title}</h2>
+                    <p className="mt-3 max-w-2xl leading-relaxed text-slate-600">{extras.intro}</p>
+
+                    <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+                      <div className="grid gap-5 md:grid-cols-2">
+                        <div>
+                          <label htmlFor="contact-name" className="mb-2 block text-sm font-semibold text-slate-700">{data.form.name} *</label>
+                          <input
+                            id="contact-name"
+                            type="text"
+                            value={formData.name}
+                            onChange={(e) => {
+                              setFormData({ ...formData, name: e.target.value });
+                              if (errors.name) setErrors({ ...errors, name: undefined });
+                            }}
+                            aria-invalid={Boolean(errors.name)}
+                            className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-slate-950 outline-none transition focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10"
                           />
-                        ) : (
-                          <>
-                            <Send className="w-5 h-5 mr-2" />
-                            {data.form.submit}
-                          </>
-                        )}
-                      </motion.button>
+                          {errors.name && <p className="mt-1.5 text-sm text-red-600">{errors.name}</p>}
+                        </div>
+                        <div>
+                          <label htmlFor="contact-email" className="mb-2 block text-sm font-semibold text-slate-700">{data.form.email} *</label>
+                          <input
+                            id="contact-email"
+                            type="email"
+                            value={formData.email}
+                            onChange={(e) => {
+                              setFormData({ ...formData, email: e.target.value });
+                              if (errors.email) setErrors({ ...errors, email: undefined });
+                            }}
+                            aria-invalid={Boolean(errors.email)}
+                            className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-slate-950 outline-none transition focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10"
+                          />
+                          {errors.email && <p className="mt-1.5 text-sm text-red-600">{errors.email}</p>}
+                        </div>
+                      </div>
+
+                      <div className="grid gap-5 md:grid-cols-2">
+                        <div>
+                          <label htmlFor="contact-company" className="mb-2 block text-sm font-semibold text-slate-700">{data.form.company} *</label>
+                          <input
+                            id="contact-company"
+                            type="text"
+                            value={formData.company}
+                            onChange={(e) => {
+                              setFormData({ ...formData, company: e.target.value });
+                              if (errors.company) setErrors({ ...errors, company: undefined });
+                            }}
+                            aria-invalid={Boolean(errors.company)}
+                            className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-slate-950 outline-none transition focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10"
+                          />
+                          {errors.company && <p className="mt-1.5 text-sm text-red-600">{errors.company}</p>}
+                        </div>
+                        <div>
+                          <label htmlFor="contact-type" className="mb-2 block text-sm font-semibold text-slate-700">{extras.inquiryType} *</label>
+                          <select
+                            id="contact-type"
+                            value={formData.inquiryType}
+                            onChange={(e) => {
+                              setFormData({ ...formData, inquiryType: e.target.value });
+                              if (errors.inquiryType) setErrors({ ...errors, inquiryType: undefined });
+                            }}
+                            aria-invalid={Boolean(errors.inquiryType)}
+                            className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-slate-950 outline-none transition focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10"
+                          >
+                            <option value="">{extras.chooseType}</option>
+                            {extras.inquiryOptions.map((option) => <option key={option} value={option}>{option}</option>)}
+                          </select>
+                          {errors.inquiryType && <p className="mt-1.5 text-sm text-red-600">{errors.inquiryType}</p>}
+                        </div>
+                      </div>
+
+                      <div className="grid gap-5 md:grid-cols-2">
+                        <div>
+                          <label htmlFor="contact-product" className="mb-2 block text-sm font-semibold text-slate-700">{extras.product}</label>
+                          <input
+                            id="contact-product"
+                            type="text"
+                            value={formData.product}
+                            placeholder={extras.productPlaceholder}
+                            onChange={(e) => setFormData({ ...formData, product: e.target.value })}
+                            className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10"
+                          />
+                        </div>
+                        <div>
+                          <label htmlFor="contact-quantity" className="mb-2 block text-sm font-semibold text-slate-700">{extras.quantity}</label>
+                          <input
+                            id="contact-quantity"
+                            type="text"
+                            value={formData.quantity}
+                            placeholder={extras.quantityPlaceholder}
+                            onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
+                            className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label htmlFor="contact-message" className="mb-2 block text-sm font-semibold text-slate-700">{data.form.message} *</label>
+                        <textarea
+                          id="contact-message"
+                          rows={5}
+                          value={formData.message}
+                          onChange={(e) => {
+                            setFormData({ ...formData, message: e.target.value });
+                            if (errors.message) setErrors({ ...errors, message: undefined });
+                          }}
+                          aria-invalid={Boolean(errors.message)}
+                          className="w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-slate-950 outline-none transition focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10"
+                        />
+                        {errors.message && <p className="mt-1.5 text-sm text-red-600">{errors.message}</p>}
+                      </div>
+
+                      <div className="flex flex-col gap-4 border-t border-slate-100 pt-5 sm:flex-row sm:items-center sm:justify-between">
+                        <p className="text-xs text-slate-500">{extras.requiredNote}</p>
+                        <button
+                          type="submit"
+                          disabled={isSubmitting}
+                          className="inline-flex min-w-[190px] items-center justify-center rounded-xl bg-blue-600 px-6 py-3.5 font-semibold text-white shadow-lg shadow-blue-600/20 transition-colors hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70"
+                        >
+                          {isSubmitting ? (
+                            <span className="h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent" />
+                          ) : (
+                            <>
+                              <Send className="mr-2 h-5 w-5" />
+                              {data.form.submit}
+                            </>
+                          )}
+                        </button>
+                      </div>
                     </form>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </section>
     </div>

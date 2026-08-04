@@ -22,7 +22,7 @@
     "es": "Servidores firewall rack para seguridad de red empresarial con alto rendimiento."
   },
   "features": {
-    "en": ["1U/2U rackmount form factor", "Multiple LAN ports", "High-performance routing", "Enterprise firewall OS support"],
+    "en": ["Multiple Intel LAN ports", "2.5GbE and 10GbE options", "DDR5 memory options", "Flexible storage and expansion"],
     "zh": ["1U/2U机架式外形", "多个LAN端口", "高性能路由", "支持企业防火墙操作系统"]
   },
   "published": true

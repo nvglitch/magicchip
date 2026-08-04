@@ -3,12 +3,12 @@
   "order": 1,
   "image": "/assets/home/banners/mcaipc2-hero-banner.jpg",
   "title": {
-    "en": "MCAIPC2\nFlagship AI Chip",
+    "en": "MCAIPC2\nFlagship AI Mini PC",
     "zh": "MCAIPC2 旗舰AI芯片",
-    "fr": "MCAIPC2 Puce IA Flagship",
-    "de": "MCAIPC2 Flagship-KI-Chip",
-    "it": "MCAIPC2 Chip IA Flagship",
-    "es": "MCAIPC2 Chip IA Flagship"
+    "fr": "MCAIPC2 Mini PC IA phare",
+    "de": "MCAIPC2 KI-Mini-PC der Spitzenklasse",
+    "it": "MCAIPC2 Mini PC AI di punta",
+    "es": "MCAIPC2 Mini PC de IA insignia"
   },
   "subtitle": {
     "en": "High-performance AI mini PC powered by Strix Halo platform",
@@ -26,6 +26,6 @@
     "it": "Visualizza Dettagli Prodotto",
     "es": "Ver Detalles del Producto"
   },
-  "ctaLink": "/#solutions",
+  "ctaLink": "/products/ai-mini-pc/mcai2",
   "published": true
 }
