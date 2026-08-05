@@ -51,6 +51,15 @@ type MegaMenuProduct = {
   image: string;
 };
 
+type ScenarioMegaProduct = MegaMenuProduct & {
+  category: string;
+};
+
+type ScenarioMegaItem = DropdownItem & {
+  id: string;
+  products: ScenarioMegaProduct[];
+};
+
 const megaMenuProducts: Record<string, MegaMenuProduct[]> = {
   'industrial-mini-pc': [
     { id: 'mcipcb13', name: 'MCIPCB13', tagline: 'Flexible Intel Core industrial box PC', image: '/assets/products/industrial/mcipcb13/images/1.jpg' },
@@ -71,12 +80,69 @@ const megaMenuProducts: Record<string, MegaMenuProduct[]> = {
   ],
 };
 
+const scenarioProduct = (category: string, id: string): ScenarioMegaProduct => ({
+  ...megaMenuProducts[category].find(product => product.id === id)!,
+  category,
+});
+
+const scenarioMegaItems: ScenarioMegaItem[] = [
+  {
+    id: 'industrialAutomation',
+    title: 'Industrial Automation',
+    description: 'Fanless systems with serial connectivity and rich I/O for machine control.',
+    href: '/scenarios#industrialAutomation',
+    icon: Factory,
+    products: [scenarioProduct('industrial-mini-pc', 'mcipcb13'), scenarioProduct('industrial-mini-pc', 'mcipcb12')],
+  },
+  {
+    id: 'edgeAi',
+    title: 'Edge AI & Local Compute',
+    description: 'High-performance platforms for local AI and professional computing.',
+    href: '/scenarios#edgeAi',
+    icon: Brain,
+    products: [scenarioProduct('ai-mini-pc', 'mcai2'), scenarioProduct('ai-mini-pc', 'mcai1')],
+  },
+  {
+    id: 'networkSecurity',
+    title: 'Network Security & SD-WAN',
+    description: 'Multi-port systems for routing, VPN, firewall, and network edge.',
+    href: '/scenarios#networkSecurity',
+    icon: Shield,
+    products: [scenarioProduct('firewall-mini-pc', 'mcr20'), scenarioProduct('firewall-mini-pc', 'mcsrp6'), scenarioProduct('industrial-mini-pc', 'mcipcd3')],
+  },
+  {
+    id: 'digitalSignage',
+    title: 'Digital Signage & Multi-Display',
+    description: 'Compact systems with multiple display outputs for visual communication.',
+    href: '/scenarios#digitalSignage',
+    icon: Monitor,
+    products: [scenarioProduct('industrial-mini-pc', 'mcipcb12'), scenarioProduct('commercial-mini-pc', 'mc15uh')],
+  },
+  {
+    id: 'businessEducation',
+    title: 'Business & Education',
+    description: 'Compact commercial systems for offices, classrooms, and meeting spaces.',
+    href: '/scenarios#businessEducation',
+    icon: BookOpen,
+    products: [scenarioProduct('commercial-mini-pc', 'mc15uh'), scenarioProduct('commercial-mini-pc', 'mctar7')],
+  },
+  {
+    id: 'iotGateway',
+    title: 'IoT & Edge Gateways',
+    description: 'Flexible network systems for connecting devices and edge services.',
+    href: '/scenarios#iotGateway',
+    icon: Network,
+    products: [scenarioProduct('industrial-mini-pc', 'mcipcd3'), scenarioProduct('firewall-mini-pc', 'mcsrp6'), scenarioProduct('firewall-mini-pc', 'mcr20')],
+  },
+];
+
 export default function Navbar() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [activeProductCategory, setActiveProductCategory] = useState('industrial-mini-pc');
+  const [activeScenario, setActiveScenario] = useState('industrialAutomation');
   const languageMenuRef = useRef<HTMLDivElement>(null);
   const { t, language, setLanguage } = useLanguage();
 
@@ -140,11 +206,12 @@ export default function Navbar() {
     products: megaMenuProducts[productCategoryIds[index]] || [],
   }));
   const activeMegaCategory = productMegaCategories.find(category => category.id === activeProductCategory) || productMegaCategories[0];
+  const activeMegaScenario = scenarioMegaItems.find(scenario => scenario.id === activeScenario) || scenarioMegaItems[0];
 
   const navItems: NavItem[] = [
     { label: t.nav.home, href: '/', dropdown: undefined },
     { label: t.nav.products, href: '/products', dropdown: dropdownContent.products },
-    { label: t.nav.solutions, href: '/scenarios', dropdown: undefined },
+    { label: t.nav.solutions, href: '/scenarios', dropdown: scenarioMegaItems },
     { label: t.nav.documents, href: '/documents', dropdown: dropdownContent.documents },
     { label: t.nav.contact, href: '/contact', dropdown: dropdownContent.contact },
     { label: t.nav.aboutUs, href: '/about', dropdown: dropdownContent.about },
@@ -287,6 +354,86 @@ export default function Navbar() {
                                     <Image
                                       src={product.image}
                                       alt={`${product.name} ${activeMegaCategory.title}`}
+                                      fill
+                                      sizes="(max-width: 1279px) 40vw, 360px"
+                                      className="object-contain scale-[1.16] transition-transform duration-300 group-hover:scale-[1.22] xl:scale-[1.2] xl:group-hover:scale-[1.26]"
+                                    />
+                                  </div>
+                                  <div className="border-t border-slate-100 px-4 py-3.5">
+                                    <div className="flex items-center justify-between gap-3">
+                                      <h4 className="font-bold text-slate-950">{product.name}</h4>
+                                      <ChevronRight className="h-4 w-4 shrink-0 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:text-blue-600" />
+                                    </div>
+                                    <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-slate-500">{product.tagline}</p>
+                                  </div>
+                                </a>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </motion.div>
+                    ) : item.href === '/scenarios' ? (
+                      <motion.div
+                        initial={{ opacity: 0, y: 8, scale: 0.99 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 6, scale: 0.99 }}
+                        transition={{ duration: 0.18, ease: 'easeOut' }}
+                        className="fixed left-1/2 top-16 z-50 w-[calc(100vw-2rem)] max-w-[1600px] -translate-x-1/2 overflow-hidden rounded-3xl border border-slate-200 bg-[#f7f8fa] p-5 shadow-[0_28px_80px_-28px_rgba(15,23,42,0.42)] lg:p-7"
+                      >
+                        <div className="mb-5 flex items-center justify-between border-b border-slate-200 pb-4">
+                          <div>
+                            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-600">Application-based selection</p>
+                            <h2 className="mt-1 text-2xl font-bold text-slate-950 lg:text-3xl">{t.nav.solutions}</h2>
+                          </div>
+                          <a href="/scenarios" className="inline-flex items-center gap-1 text-sm font-semibold text-slate-600 transition-colors hover:text-blue-700">
+                            {t.navDropdown?.solutions?.viewAll || t.products.learnMore}
+                            <ChevronRight className="h-4 w-4" />
+                          </a>
+                        </div>
+
+                        <div className="grid gap-5 md:grid-cols-[240px_1fr] lg:grid-cols-[300px_1fr]">
+                          <div className="rounded-2xl bg-slate-200/65 p-2">
+                            {scenarioMegaItems.map((scenario) => (
+                              <a
+                                key={scenario.id}
+                                href={scenario.href}
+                                onMouseEnter={() => setActiveScenario(scenario.id)}
+                                onFocus={() => setActiveScenario(scenario.id)}
+                                className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold transition-all lg:px-4 ${
+                                  activeMegaScenario.id === scenario.id
+                                    ? 'bg-white text-slate-950 shadow-sm ring-1 ring-slate-200'
+                                    : 'text-slate-600 hover:bg-white/65 hover:text-slate-950'
+                                }`}
+                              >
+                                {scenario.icon && <scenario.icon className={`h-5 w-5 shrink-0 ${activeMegaScenario.id === scenario.id ? 'text-blue-600' : 'text-slate-400'}`} />}
+                                <span className="leading-snug">{scenario.title}</span>
+                                <ChevronRight className="ml-auto h-4 w-4 shrink-0 text-slate-400" />
+                              </a>
+                            ))}
+                          </div>
+
+                          <div className="min-w-0">
+                            <div className="mb-3 flex items-center justify-between gap-4">
+                              <div>
+                                <h3 className="text-xl font-bold text-slate-950">{activeMegaScenario.title}</h3>
+                                <p className="mt-1 hidden text-sm text-slate-500 lg:block">{activeMegaScenario.description}</p>
+                              </div>
+                              <a href={activeMegaScenario.href} className="shrink-0 text-sm font-semibold text-blue-700 hover:text-blue-800">
+                                {t.products.learnMore}
+                              </a>
+                            </div>
+
+                            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                              {activeMegaScenario.products.map((product) => (
+                                <a
+                                  key={`${product.category}-${product.id}`}
+                                  href={`/products/${product.category}/${product.id}`}
+                                  className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg"
+                                >
+                                  <div className="relative aspect-[16/9] overflow-hidden bg-white">
+                                    <Image
+                                      src={product.image}
+                                      alt={`${product.name} for ${activeMegaScenario.title}`}
                                       fill
                                       sizes="(max-width: 1279px) 40vw, 360px"
                                       className="object-contain scale-[1.16] transition-transform duration-300 group-hover:scale-[1.22] xl:scale-[1.2] xl:group-hover:scale-[1.26]"
