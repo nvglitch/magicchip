@@ -228,9 +228,12 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                 </div>
               </a>
 
-              <div className="flex items-start rounded-2xl border border-amber-200 bg-white p-5 shadow-sm">
-                <div className="w-12 h-12 bg-amber-50 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-amber-700" />
+              <a
+                href="/company#office-location"
+                className="group flex items-start rounded-2xl border border-amber-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-amber-400 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/60"
+              >
+                <div className="w-12 h-12 bg-amber-50 rounded-lg flex items-center justify-center mr-4 flex-shrink-0 transition-all group-hover:bg-amber-100 group-hover:scale-105">
+                  <MapPin className="w-5 h-5 text-amber-700 transition-transform group-hover:-translate-y-0.5" />
                 </div>
                 <div>
                   <div className="text-sm text-gray-500">{data.labels.address}</div>
@@ -238,7 +241,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                     {getLocalizedText(siteConfig.contact.address, language)}
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
 

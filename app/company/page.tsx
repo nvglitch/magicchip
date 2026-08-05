@@ -323,7 +323,7 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      <section className="bg-[#eef3f1] py-20 md:py-28">
+      <section id="office-location" className="scroll-mt-16 bg-[#eef3f1] py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.h2 initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-10 text-3xl font-bold md:text-5xl">{t.company.locationTitle}</motion.h2>
           {data.locations.map((location: any, index: number) => {

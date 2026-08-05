@@ -7,6 +7,13 @@ export default function ScrollToTop() {
   const pathname = usePathname();
 
   useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      requestAnimationFrame(() => {
+        document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      return;
+    }
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   }, [pathname]);
 

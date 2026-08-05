@@ -128,7 +128,7 @@ export default function ScenariosPage() {
               const item = text.items[scenario.id];
               const Icon = scenario.icon;
               return (
-                <article key={scenario.id} className="group overflow-hidden rounded-3xl border border-slate-200 bg-[#f8faf9] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:bg-white hover:shadow-xl">
+                <article id={scenario.id} key={scenario.id} className="group scroll-mt-24 overflow-hidden rounded-3xl border border-slate-200 bg-[#f8faf9] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:bg-white hover:shadow-xl">
                   <div className="relative aspect-[16/10] overflow-hidden bg-white">
                     <Image src={scenario.image} alt={`${item.title} recommended Mini PC`} fill sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 420px" className="object-contain p-4 transition-transform duration-300 group-hover:scale-105" />
                     <div className="absolute left-5 top-5 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-900/20">

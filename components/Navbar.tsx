@@ -27,6 +27,7 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import SiteSearch from '@/components/SiteSearch';
 import { LANGUAGE_NAMES, SUPPORTED_LANGUAGES } from '@/lib/i18n/config';
 
 interface DropdownItem {
@@ -341,6 +342,7 @@ export default function Navbar() {
 
           {/* Toolbar */}
           <div className="ml-auto flex flex-shrink-0 items-center gap-1 md:gap-2 lg:ml-0 lg:justify-self-end">
+            <SiteSearch />
             {/* Language/Region Dropdown */}
             <div ref={languageMenuRef} className="relative">
               <button
@@ -410,6 +412,7 @@ export default function Navbar() {
             className="lg:hidden border-t border-gray-200 bg-white overflow-hidden max-h-[calc(100vh-4rem)] overflow-y-auto"
           >
             <div className="px-3 sm:px-4 py-4 space-y-3">
+              <SiteSearch variant="mobile" onNavigate={() => setIsMobileMenuOpen(false)} />
               {/* Language Selector - Moved to Top */}
               <div className="pb-3 border-b border-gray-200">
                 <div className="text-sm font-semibold text-gray-500 mb-2 flex items-center gap-2">
