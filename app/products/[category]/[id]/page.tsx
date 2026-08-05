@@ -577,9 +577,9 @@ export default function ProductDetailPage() {
               <button
                 type="button"
                 onClick={() => document.getElementById('contact-cta')?.scrollIntoView({ behavior: 'smooth' })}
-                className="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-700 hover:bg-blue-50 rounded-full text-sm font-semibold transition-colors shadow-lg shadow-black/20 cursor-pointer"
+                className="liquid-cta liquid-cta-solid mt-6 inline-flex cursor-pointer items-center gap-2 px-6 py-3 text-sm font-semibold"
               >
-                {t.productDetail.contactSales}
+                <span>{t.productDetail.contactSales}</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </motion.div>
@@ -742,8 +742,8 @@ export default function ProductDetailPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-950 mb-4">{t.productDetail.interestedIn.replace('{name}', product.name)}</h2>
           <p className="text-lg text-slate-600 mb-8">{t.productDetail.contactPrompt}</p>
           <div className="flex justify-center">
-            <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-blue-700 text-white rounded-lg font-semibold hover:bg-blue-800 transition-colors shadow-lg shadow-blue-700/20">
-              {t.productDetail.contactSales}
+            <Link href="/contact" className="liquid-cta liquid-cta-solid inline-flex items-center justify-center px-8 py-4 font-semibold">
+              <span>{t.productDetail.contactSales}</span>
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>

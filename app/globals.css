@@ -148,3 +148,78 @@ html {
   color: #8c5709;
   border: 1px solid #f0cd8b;
 }
+/* Liquid fill CTA inspired by the expanding pill interaction. */
+.liquid-cta {
+  --liquid-fill: #ffffff;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 9999px;
+  transform: translateZ(0);
+  transition:
+    color 280ms ease,
+    border-color 280ms ease,
+    box-shadow 280ms ease,
+    transform 280ms ease;
+}
+
+.liquid-cta::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--liquid-fill);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 460ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.liquid-cta > span,
+.liquid-cta > svg {
+  position: relative;
+  z-index: 1;
+}
+
+.liquid-cta:hover::before,
+.liquid-cta:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.liquid-cta:hover,
+.liquid-cta:focus-visible {
+  transform: translateY(-2px);
+}
+
+.liquid-cta-outline {
+  border: 2px solid rgba(255, 255, 255, 0.92);
+  background: transparent;
+  color: #ffffff;
+}
+
+.liquid-cta-outline:hover,
+.liquid-cta-outline:focus-visible {
+  border-color: #ffffff;
+  color: #1d4ed8;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.28);
+}
+
+.liquid-cta-solid {
+  border: 2px solid #1d4ed8;
+  background: #1d4ed8;
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(29, 78, 216, 0.22);
+}
+
+.liquid-cta-solid:hover,
+.liquid-cta-solid:focus-visible {
+  color: #1d4ed8;
+  box-shadow: 0 14px 30px rgba(29, 78, 216, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .liquid-cta,
+  .liquid-cta::before {
+    transition-duration: 1ms;
+  }
+}

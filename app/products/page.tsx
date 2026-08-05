@@ -298,9 +298,9 @@ export default function ProductsPage() {
             <p className="text-lg mb-8 opacity-90">{data.cta.description}</p>
             <a
               href="/contact"
-              className="inline-flex items-center rounded-full bg-blue-600 px-8 py-4 font-semibold text-white shadow-lg shadow-blue-600/20 transition-all hover:-translate-y-0.5 hover:bg-blue-500"
+              className="liquid-cta liquid-cta-solid inline-flex items-center px-8 py-4 font-semibold"
             >
-              {data.cta.button}
+              <span>{data.cta.button}</span>
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
           </motion.div>

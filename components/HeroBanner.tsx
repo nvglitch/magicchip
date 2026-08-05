@@ -195,9 +195,9 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
                 </p>
                 <a
                   href={slides[currentSlide].ctaLink}
-                  className="inline-block rounded-xl border-2 border-white px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-blue-950/20 transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-300 hover:bg-white/10 sm:px-6 sm:py-3 sm:text-base lg:px-8 lg:py-4"
+                  className="liquid-cta liquid-cta-outline inline-flex items-center justify-center px-4 py-2 text-sm font-semibold sm:px-6 sm:py-3 sm:text-base lg:px-8 lg:py-4"
                 >
-                  {slides[currentSlide].cta}
+                  <span>{slides[currentSlide].cta}</span>
                 </a>
               </motion.div>
             </AnimatePresence>
