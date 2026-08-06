@@ -242,13 +242,13 @@ export default function Navbar() {
       <div className="mx-auto w-full max-w-[1680px] px-3 sm:px-4 lg:px-6 2xl:px-8">
         <div className="relative flex h-16 items-center justify-between gap-2 md:gap-3 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-4">
           {/* Logo */}
-          <a href="/" className="group relative ml-1 flex h-11 min-w-0 flex-shrink-0 items-center px-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50 md:ml-0 lg:justify-self-start">
+          <a href="/" className="group relative flex h-12 min-w-0 flex-shrink-0 items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50 md:ml-0 md:h-11 md:px-1.5 lg:justify-self-start">
             <Image
-              src="/assets/brand/logo-wordmark.svg"
+              src="/assets/brand/logo-mark.svg"
               alt="MagicChip"
-              width={150}
-              height={40}
-              className="h-7 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02] md:hidden"
+              width={40}
+              height={38}
+              className="h-9 w-9 object-contain transition-transform duration-300 group-hover:scale-105 md:hidden"
               priority
             />
             <Image
@@ -489,12 +489,17 @@ export default function Navbar() {
 
           {/* Toolbar */}
           <div className="ml-auto flex flex-shrink-0 items-center gap-1 md:gap-2 lg:ml-0 lg:justify-self-end">
-            <SiteSearch />
+            <div onClickCapture={() => setIsMobileMenuOpen(false)}>
+              <SiteSearch />
+            </div>
             {/* Language/Region Dropdown */}
             <div ref={languageMenuRef} className="relative">
               <button
-                onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-                className="group hidden items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50/80 px-3 py-2 text-slate-600 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700 hover:shadow-md hover:shadow-blue-100/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 sm:flex"
+                onClick={() => {
+                  setIsLangMenuOpen(!isLangMenuOpen);
+                  setIsMobileMenuOpen(false);
+                }}
+                className="group flex h-9 items-center gap-1 rounded-full border border-slate-200 bg-slate-50/80 px-2 text-slate-600 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700 hover:shadow-md hover:shadow-blue-100/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 sm:h-auto sm:gap-1.5 sm:px-3 sm:py-2"
                 aria-label={t.nav.languageAriaLabel}
                 aria-expanded={isLangMenuOpen}
                 aria-haspopup="menu"
@@ -538,7 +543,10 @@ export default function Navbar() {
 
             {/* Mobile Menu Toggle */}
             <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              onClick={() => {
+                setIsMobileMenuOpen(!isMobileMenuOpen);
+                setIsLangMenuOpen(false);
+              }}
               className="touch-manipulation rounded-xl p-2 text-slate-700 transition-all duration-300 hover:bg-blue-50 hover:text-blue-700 active:scale-95 lg:hidden"
               aria-label={t.nav.menuAriaLabel}
             >
@@ -559,34 +567,6 @@ export default function Navbar() {
             className="lg:hidden border-t border-gray-200 bg-white overflow-hidden max-h-[calc(100vh-4rem)] overflow-y-auto"
           >
             <div className="px-3 sm:px-4 py-4 space-y-3">
-              <SiteSearch variant="mobile" onNavigate={() => setIsMobileMenuOpen(false)} />
-              {/* Language Selector - Moved to Top */}
-              <div className="pb-3 border-b border-gray-200">
-                <div className="text-sm font-semibold text-gray-500 mb-2 flex items-center gap-2">
-                  <Globe className="w-4 h-4" />
-                  {t.language.title}
-                </div>
-                <div className="space-y-1">
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => {
-                        setLanguage(lang.code);
-                        setIsMobileMenuOpen(false);
-                      }}
-                      className={`w-full flex items-center justify-between px-3 py-2.5 text-sm rounded-md transition-colors touch-manipulation ${
-                        language === lang.code
-                          ? 'bg-teal-50 text-teal-700 font-medium'
-                          : 'text-gray-700 hover:bg-gray-50'
-                      }`}
-                    >
-                      <span>{lang.label}</span>
-                      {language === lang.code && <Check className="w-4 h-4 flex-shrink-0" />}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
               {/* Navigation Items */}
               {navItems.map((item) => (
                 <div key={item.label} className="space-y-2">

@@ -182,14 +182,14 @@ export default function SiteSearch({ variant = 'header', onNavigate }: SiteSearc
           setIsCompactOpen(true);
           setIsOpen(Boolean(query.trim()));
         }}
-        className="hidden h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-600 shadow-sm transition-colors hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700 lg:flex xl:hidden"
+        className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-600 shadow-sm transition-colors hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700 sm:h-10 sm:w-10 xl:hidden"
         aria-label={t.nav.searchAriaLabel}
       >
         <Search className="h-[18px] w-[18px]" />
       </button>
 
       {isCompactOpen && (
-        <div className="fixed inset-0 z-[70] flex items-start justify-center bg-slate-950/35 px-4 pt-24 backdrop-blur-sm xl:hidden">
+        <div className="fixed inset-0 z-[70] flex items-start justify-center bg-slate-950/35 px-4 pt-20 backdrop-blur-sm sm:pt-24 xl:hidden">
           <button type="button" className="absolute inset-0" onClick={() => setIsCompactOpen(false)} aria-label={text.close} />
           <div className="relative w-full max-w-xl rounded-3xl border border-white/70 bg-white p-4 shadow-2xl">
             <div className="flex items-center gap-3">
