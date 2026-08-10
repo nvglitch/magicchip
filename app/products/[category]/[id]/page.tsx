@@ -20,6 +20,7 @@ import Link from 'next/link';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { industrialCatalog, type IndustrialSeriesCode } from '@/lib/industrial-catalog';
 
 type ProductSpec = { label: string; value: string };
 type ProductFeature = { icon: keyof typeof iconMap; title: string; description: string };
@@ -39,12 +40,12 @@ type ProductDetail = {
   operatingRange?: string;
 };
 
-const mcipcb13ImageBase = '/assets/products/industrial/mcipcb13/images';
-const mcipcb12ImageBase = '/assets/products/industrial/mcipcb12/images';
-const mcipcd3ImageBase = '/assets/products/industrial/mcipcd3/images';
-const mcipca2ImageBase = '/assets/products/industrial/mcipca2/images';
-const mcipc9ImageBase = '/assets/products/industrial/mcipc9/images';
-const mctpc1506eImageBase = '/assets/products/industrial/mctpc-1506e/images';
+const mcipcb13ImageBase = '/assets/products/industrial/b-series/mcipcb13/images';
+const mcipcb12ImageBase = '/assets/products/industrial/b-series/mcipcb12/images';
+const mcipcd3ImageBase = '/assets/products/industrial/d-series/mcipcd3/images';
+const mcipca2ImageBase = '/assets/products/industrial/a-series/mcipca2/images';
+const mcipc9ImageBase = '/assets/products/industrial/c-series/mcipc9/images';
+const mctpc1506eImageBase = '/assets/products/industrial/tpc-series/mctpc-1506e/images';
 
 const categoryData: Record<string, { name: string; icon: keyof typeof iconMap; gradient: string; accent: string }> = {
   'industrial-mini-pc': { name: 'Industrial Mini PC', icon: 'Cpu', gradient: 'from-[#172033] via-blue-950 to-[#172033]', accent: 'blue' },
@@ -53,7 +54,80 @@ const categoryData: Record<string, { name: string; icon: keyof typeof iconMap; g
   'commercial-mini-pc': { name: 'Commercial Mini PC', icon: 'Monitor', gradient: 'from-[#172033] via-[#29473f] to-[#172033]', accent: 'mint' },
 };
 
+const industrialSeriesFeatures: Record<IndustrialSeriesCode, ProductFeature[]> = {
+  A: [
+    { icon: 'Cpu', title: 'Compact Industrial Platform', description: 'A-series systems focus on compact deployment with single-COM or COM-less interface architecture.' },
+    { icon: 'Network', title: 'Practical Connectivity', description: 'Available network, USB, display, and expansion interfaces are listed in each supplied product brochure.' },
+    { icon: 'Layers', title: 'Configuration Options', description: 'Processor, memory, storage, and wireless options vary by model and selected platform.' },
+  ],
+  B: [
+    { icon: 'Network', title: 'Dual-LAN Architecture', description: 'B-series systems use dual network interfaces for connected industrial and edge deployments.' },
+    { icon: 'Server', title: 'Dual-COM Connectivity', description: 'Two serial interfaces support compatible controllers, peripherals, and equipment.' },
+    { icon: 'HardDrive', title: 'Flexible Configuration', description: 'Processor, memory, storage, display, and expansion options vary by model.' },
+  ],
+  C: [
+    { icon: 'Server', title: 'Multi-COM Architecture', description: 'C-series systems provide multiple serial interfaces for equipment control and data acquisition.' },
+    { icon: 'Network', title: 'Dual-LAN Connectivity', description: 'Dual network interfaces support connected automation and industrial edge roles.' },
+    { icon: 'Cpu', title: 'Multiple Compute Platforms', description: 'Available processor and memory configurations are listed in the supplied brochure for each model.' },
+  ],
+  D: [
+    { icon: 'Network', title: 'Multi-LAN Architecture', description: 'D-series systems provide multiple dedicated network interfaces for edge and gateway deployments.' },
+    { icon: 'Server', title: 'Serial Equipment Support', description: 'Dual-COM architecture supports compatible serial equipment and management connections.' },
+    { icon: 'Shield', title: 'Edge Network Roles', description: 'Interface layouts suit segmented networks, gateways, routing, and compatible security software.' },
+  ],
+  TPC: [
+    { icon: 'Monitor', title: 'Integrated Industrial Display', description: 'TPC-series systems combine an industrial display and embedded computing in one panel-mount device.' },
+    { icon: 'Network', title: 'Industrial I/O', description: 'Network, serial, USB, display, and expansion interfaces vary by panel size and compute platform.' },
+    { icon: 'Cpu', title: 'Configurable Compute Platform', description: 'Available Intel processor, memory, and storage options are listed for each model.' },
+  ],
+};
+
+const compactCatalogHighlights = (specs: ProductSpec[]) => {
+  const preferredLabels = ['CPU', 'Display', 'Network', 'Serial', 'Dimensions', 'USB'];
+
+  return preferredLabels
+    .map((label) => specs.find((spec) => spec.label === label))
+    .filter((spec): spec is ProductSpec => Boolean(spec))
+    .slice(0, 4)
+    .map(({ label, value }) => {
+      let compact = value.replace(/\s+/g, ' ').trim();
+
+      if (label === 'CPU') {
+        if (/Celeron/i.test(compact) && /Core/i.test(compact)) compact = 'Intel Celeron / Core options';
+        else if (/Core.*i3\/i5\/i7/i.test(compact)) compact = 'Intel Core i3/i5/i7 options';
+        else compact = compact.split(';')[0];
+      } else if (label === 'Display' && /TFT-LCD/i.test(compact)) {
+        const size = compact.match(/(\d+(?:\.\d+)?)"/)?.[1];
+        const resolution = compact.match(/(\d+\s*[x×]\s*\d+)/i)?.[1]?.replace('×', ' x ');
+        compact = [size ? `${size}-inch` : '', resolution || ''].filter(Boolean).join(' ');
+      } else if (label === 'Serial') {
+        compact = compact.split(';').find((part) => /COM|serial/i.test(part))?.trim() || compact.split(';')[0];
+      } else {
+        compact = compact.split(';')[0];
+      }
+
+      compact = compact.replace(/\s*\([^)]{18,}\)\s*/g, ' ').trim();
+      if (compact.length > 44) compact = `${compact.slice(0, 41).replace(/\s+\S*$/, '')}…`;
+      return `${label} · ${compact}`;
+    });
+};
+const catalogIndustrialProducts: Record<string, ProductDetail> = Object.fromEntries(
+  industrialCatalog.map((item) => [
+    item.id,
+    {
+      name: item.name,
+      tagline: item.tagline,
+      description: item.description,
+      images: [item.image],
+      highlights: compactCatalogHighlights(item.specs),
+      specs: item.specs,
+      features: industrialSeriesFeatures[item.series],
+      operatingRange: item.operatingRange,
+    },
+  ]),
+);
 const products: Record<string, ProductDetail> = {
+  ...catalogIndustrialProducts,
   mcipcb13: {
     name: 'MCIPCB13',
     tagline: 'Industrial Mini PC for dependable multi-I/O edge deployment',
@@ -580,6 +654,7 @@ const products: Record<string, ProductDetail> = {
 };
 
 const productCategories: Record<string, string> = {
+  ...Object.fromEntries(industrialCatalog.map((item) => [item.id, 'industrial-mini-pc'])),
   mcipcb13: 'industrial-mini-pc',
   mcipcb12: 'industrial-mini-pc',
   mcipcd3: 'industrial-mini-pc',
@@ -659,7 +734,7 @@ export default function ProductDetailPage() {
             {t.productDetail.backToCategory.replace('{category}', catInfo?.name || category)}
           </Link>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[1.02fr_0.98fr] gap-10 lg:gap-14 items-center">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1.06fr)_minmax(400px,0.94fr)] lg:gap-12">
             <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }}>
               <div className="inline-flex items-center gap-2 rounded-full border border-blue-200/30 bg-blue-300/10 px-4 py-2 text-sm text-blue-100 mb-6">
                 <CategoryIcon className="w-4 h-4" />
@@ -671,8 +746,8 @@ export default function ProductDetailPage() {
 
               <div className="grid grid-cols-2 gap-3 mt-8 max-w-2xl">
                 {product.highlights.map((item) => (
-                  <div key={item} className="rounded-lg border border-amber-200/20 bg-amber-200/10 px-4 py-3 text-sm font-medium text-amber-50">
-                    {item}
+                  <div key={item} className="flex min-h-[68px] items-center rounded-lg border border-amber-200/20 bg-amber-200/10 px-4 py-3 text-sm font-medium leading-5 text-amber-50">
+                    <span className="line-clamp-2">{item}</span>
                   </div>
                 ))}
               </div>
@@ -687,14 +762,14 @@ export default function ProductDetailPage() {
               </button>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.55, delay: 0.1 }}>
+            <motion.div className="mx-auto w-full max-w-[540px] lg:justify-self-end" initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.55, delay: 0.1 }}>
               <button
                 type="button"
                 onClick={() => setPreviewImage(gallery[0])}
                 aria-label={t.productDetail.enlargeMainView.replace('{name}', product.name)}
                 className="group block w-full cursor-zoom-in rounded-lg bg-white shadow-2xl shadow-blue-950/30 ring-1 ring-amber-200/30 overflow-hidden transition-transform duration-300 hover:scale-[1.015] hover:shadow-blue-950/45"
               >
-                <img src={gallery[0]} alt={`${product.name} ${catInfo.name}`} className="block w-full h-auto transition-transform duration-500 group-hover:scale-[1.025]" />
+                <img src={gallery[0]} alt={`${product.name} ${catInfo.name}`} className="aspect-square w-full object-contain transition-transform duration-500 group-hover:scale-[1.025]" />
               </button>
             </motion.div>
           </div>
@@ -724,7 +799,7 @@ export default function ProductDetailPage() {
                     aria-label={t.productDetail.enlargeView.replace('{name}', product.name).replace('{n}', String(index + 2))}
                     className="group block w-full cursor-zoom-in overflow-hidden"
                   >
-                    <img src={item.image} alt={item.title || product.name} className="block w-full h-auto transition-transform duration-500 group-hover:scale-[1.025]" />
+                    <img src={item.image} alt={item.title || product.name} className="aspect-square w-full object-contain transition-transform duration-500 group-hover:scale-[1.025]" />
                   </button>
                   {item.description && (
                     <div className="border-t border-slate-100 p-6 text-left">
@@ -825,7 +900,7 @@ export default function ProductDetailPage() {
                     aria-label={t.productDetail.enlargeImage.replace('{title}', point.title)}
                     className="group block w-full cursor-zoom-in overflow-hidden"
                   >
-                    <img src={point.image} alt={point.title} className="block w-full h-auto transition-transform duration-500 group-hover:scale-[1.025]" />
+                    <img src={point.image} alt={point.title} className="aspect-square w-full object-contain transition-transform duration-500 group-hover:scale-[1.025]" />
                   </button>
                   <div className="p-6 text-slate-950 border-t border-slate-100">
                     <h3 className="text-xl font-bold">{point.title}</h3>

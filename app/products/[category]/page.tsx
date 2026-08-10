@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, ChevronLeft, Cpu, Shield, Monitor, Brain, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
+import { industrialCatalog } from '@/lib/industrial-catalog';
 
 const categoryData: Record<string, { icon: any; gradient: string; image: string }> = {
   'industrial-mini-pc': { icon: Cpu, gradient: 'from-blue-600 to-indigo-700', image: '/assets/home/categories/industrial-mini-pc.png' },
@@ -81,42 +82,42 @@ const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: 
       id: 'mcipca2',
       name: 'MCIPCA2',
       tagline: 'Compact single-COM industrial mini PC with four Intel Gigabit LAN ports',
-      image: '/assets/products/industrial/mcipca2/images/main-square-srgb.jpg',
+      image: '/assets/products/industrial/a-series/mcipca2/images/main-square-srgb.jpg',
       specs: ['Intel Celeron J4125', '4 x Intel GbE LAN', '1 x DB9 RS232 COM', '-20°C to +60°C'],
     },
     {
       id: 'mcipcb13',
       name: 'MCIPCB13',
       tagline: 'Compact industrial box PC with flexible Intel Core platform support',
-      image: '/assets/products/industrial/mcipcb13/images/1.jpg',
+      image: '/assets/products/industrial/b-series/mcipcb13/images/1.jpg',
       specs: ['4th-13th Gen Intel Core', 'Dual GbE LAN', '8x USB Ports', '-20°C to +60°C'],
     },
     {
       id: 'mcipcb12',
       name: 'MCIPCB12',
       tagline: 'Compact fanless industrial mini PC with triple-display support',
-      image: '/assets/products/industrial/mcipcb12/images/1.jpg',
+      image: '/assets/products/industrial/b-series/mcipcb12/images/1.jpg',
       specs: ['Intel Elkhart Lake / Alder Lake-N', 'Dual GbE LAN', '2x HDMI + 1x DP', '-20°C to +60°C'],
     },
     {
       id: 'mcipcd3',
       name: 'MCIPCD3',
       tagline: 'Six-LAN industrial network appliance with flexible Intel Core options',
-      image: '/assets/products/industrial/mcipcd3/images/1.jpg',
+      image: '/assets/products/industrial/d-series/mcipcd3/images/1.jpg',
       specs: ['Intel Core i3/i5/i7 Options', '6x Intel GbE LAN', 'Dual RS232', '-20°C to +70°C'],
     },
     {
       id: 'mcipc9',
       name: 'MCIPC9',
       tagline: 'Six-COM industrial mini PC with Intel Core Ultra and dual LAN',
-      image: '/assets/products/industrial/mcipc9/images/main-square-srgb.jpg',
+      image: '/assets/products/industrial/c-series/mcipc9/images/main-square-srgb.jpg',
       specs: ['Intel Core Ultra 125U-185H', '6 x DB9 COM', 'Dual Intel LAN', 'DC 9-36V'],
     },
     {
       id: 'mctpc-1506e',
       name: 'MCTPC-1506E',
       tagline: '15.6-inch Full HD industrial panel PC with flexible Intel platforms',
-      image: '/assets/products/industrial/mctpc-1506e/images/main-square-srgb.jpg',
+      image: '/assets/products/industrial/tpc-series/mctpc-1506e/images/main-square-srgb.jpg',
       specs: ['15.6-inch Full HD', '2 x 2.5GbE LAN', '2 x RS232/422/485 COM', 'DC 9-36V'],
     },
   ],
@@ -175,41 +176,39 @@ const industrialSeries = [
     code: 'A',
     title: 'A Series',
     description: 'Single COM or COM-less compact industrial computers',
-    image: '/assets/products/industrial/mcipca2/images/main-square-srgb.jpg',
-    models: [{ id: 'mcipca2', name: 'MCIPCA2' }],
+    image: '/assets/products/industrial/a-series/mcipca2/images/main-square-srgb.jpg',
+    models: industrialCatalog.filter((product) => product.series === 'A').map(({ id, name }) => ({ id, name })),
   },
   {
     code: 'B',
     title: 'B Series',
     description: 'Dual-LAN industrial computers with dual COM ports',
-    image: '/assets/products/industrial/mcipcb13/images/1.jpg',
-    models: [
-      { id: 'mcipcb12', name: 'MCIPCB12' },
-      { id: 'mcipcb13', name: 'MCIPCB13' },
-    ],
+    image: '/assets/products/industrial/b-series/mcipcb13/images/1.jpg',
+    models: industrialCatalog.filter((product) => product.series === 'B').map(({ id, name }) => ({ id, name })),
+
   },
   {
     code: 'C',
     title: 'C Series',
     description: 'Multi-COM industrial computers with dual LAN ports',
-    image: '/assets/products/industrial/mcipc9/images/main-square-srgb.jpg',
-    models: [{ id: 'mcipc9', name: 'MCIPC9' }],
+    image: '/assets/products/industrial/c-series/mcipc9/images/main-square-srgb.jpg',
+    models: industrialCatalog.filter((product) => product.series === 'C').map(({ id, name }) => ({ id, name })),
   },
   {
     code: 'D',
     title: 'D Series',
     description: 'Multi-LAN industrial computers with dual COM ports',
-    image: '/assets/products/industrial/mcipcd3/images/1.jpg',
-    models: [{ id: 'mcipcd3', name: 'MCIPCD3' }],
+    image: '/assets/products/industrial/d-series/mcipcd3/images/1.jpg',
+    models: industrialCatalog.filter((product) => product.series === 'D').map(({ id, name }) => ({ id, name })),
   },
   {
     code: 'TPC',
     title: 'TPC Series',
     description: 'Industrial panel PCs with integrated displays',
-    image: '/assets/products/industrial/mctpc-1506e/images/main-square-srgb.jpg',
-    models: [{ id: 'mctpc-1506e', name: 'MCTPC-1506E' }],
+    image: '/assets/products/industrial/tpc-series/mctpc-1506e/images/main-square-srgb.jpg',
+    models: industrialCatalog.filter((product) => product.series === 'TPC').map(({ id, name }) => ({ id, name })),
   },
-] as const;
+];
 const richCategoryData = {
   'industrial-mini-pc': {
     overview: 'Industrial Mini PCs place computing, display, network, and serial connectivity in compact fanless enclosures. The current MagicChip range spans equipment control, multi-display operation, and high-density edge networking without treating every deployment as the same hardware problem.',
@@ -435,27 +434,35 @@ export default function CategoryPage() {
                   key={series.code}
                   className="scroll-mt-28 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl hover:shadow-slate-900/10"
                 >
-                  <div className="grid gap-7 p-6 sm:p-8 md:grid-cols-[190px_minmax(0,1fr)] md:items-center lg:grid-cols-[220px_minmax(0,1fr)_auto] lg:gap-10 lg:p-10">
-                    <div className="relative aspect-square w-full max-w-[190px] justify-self-center overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm md:max-w-[220px]">
-                      <img src={series.image} alt={`${series.title} representative product`} className="h-full w-full object-contain p-3 transition-transform duration-500 hover:scale-105" />
+                  <div className="relative p-6 sm:p-8 lg:p-10">
+                    <div aria-hidden="true" className="pointer-events-none absolute right-8 top-[118px] hidden -translate-y-1/2 select-none text-[9rem] font-black leading-none tracking-[-0.08em] text-slate-950/[0.045] md:block lg:right-12 lg:text-[11rem]">
+                      {series.code}
                     </div>
 
-                    <div className="min-w-0 text-center md:text-left">
-                      <span className="inline-flex rounded-lg bg-slate-950 px-3 py-1.5 text-xs font-bold tracking-wide text-white">{series.code}</span>
-                      <h3 className="mt-3 text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl">{series.title}</h3>
-                      <p className="mt-2 max-w-xl text-base leading-7 text-slate-600">{series.description}</p>
-                      <p className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
-                        {series.models.length} {series.models.length === 1 ? 'current model' : 'current models'}
-                      </p>
+                    <div className="relative grid gap-7 md:grid-cols-[190px_minmax(0,1fr)] md:items-center lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-10">
+                      <div className="relative aspect-square w-full max-w-[190px] justify-self-center overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm md:max-w-[220px]">
+                        <img src={series.image} alt={`${series.title} representative product`} className="h-full w-full object-contain p-3 transition-transform duration-500 hover:scale-105" />
+                      </div>
+
+                      <div className="min-w-0 text-center md:pr-36 md:text-left lg:pr-52">
+                        <h3 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{series.title}</h3>
+                        <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">{series.description}</p>
+                        <p className="mt-5 text-sm font-semibold uppercase tracking-[0.16em] text-slate-400">
+                          {series.models.length} {series.models.length === 1 ? 'current model' : 'current models'}
+                        </p>
+                      </div>
                     </div>
 
-                    <div className="flex flex-wrap justify-center gap-3 md:col-start-2 md:justify-start lg:col-start-auto lg:justify-end">
-                      {series.models.map((model) => (
-                        <Link key={model.id} href={`/products/industrial-mini-pc/${model.id}`} className="group inline-flex items-center rounded-xl border border-blue-200 bg-blue-50 px-5 py-3.5 font-semibold text-blue-800 transition-all hover:-translate-y-0.5 hover:border-blue-400 hover:bg-blue-100 hover:shadow-md">
-                          {model.name}
-                          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                        </Link>
-                      ))}
+                    <div className="mt-8 border-t border-slate-200 pt-6">
+                      <p className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">Available models</p>
+                      <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                        {series.models.map((model) => (
+                          <Link key={model.id} href={`/products/industrial-mini-pc/${model.id}`} className="group inline-flex min-h-12 items-center justify-between rounded-xl border border-blue-200 bg-blue-50 px-4 py-3 font-semibold text-blue-800 transition-all hover:-translate-y-0.5 hover:border-blue-400 hover:bg-blue-100 hover:shadow-md">
+                            {model.name}
+                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </section>

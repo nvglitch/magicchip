@@ -6,7 +6,7 @@ import { ArrowRight, BrainCircuit, BriefcaseBusiness, Factory, MonitorUp, Router
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 const scenarios = [
-  { id: 'industrialAutomation', icon: Factory, image: '/assets/products/industrial/mcipcb13/images/1.jpg', products: [
+  { id: 'industrialAutomation', icon: Factory, image: '/assets/products/industrial/b-series/mcipcb13/images/1.jpg', products: [
     { name: 'MCIPCB13', href: '/products/industrial-mini-pc/mcipcb13' },
     { name: 'MCIPCB12', href: '/products/industrial-mini-pc/mcipcb12' },
   ] },
@@ -19,7 +19,7 @@ const scenarios = [
     { name: 'MCSRP6', href: '/products/firewall-mini-pc/mcsrp6' },
     { name: 'MCIPCD3', href: '/products/industrial-mini-pc/mcipcd3' },
   ] },
-  { id: 'digitalSignage', icon: MonitorUp, image: '/assets/products/industrial/mcipcb12/images/1.jpg', products: [
+  { id: 'digitalSignage', icon: MonitorUp, image: '/assets/products/industrial/b-series/mcipcb12/images/1.jpg', products: [
     { name: 'MCIPCB12', href: '/products/industrial-mini-pc/mcipcb12' },
     { name: 'MC15UH', href: '/products/commercial-mini-pc/mc15uh' },
   ] },
@@ -27,7 +27,7 @@ const scenarios = [
     { name: 'MC15UH', href: '/products/commercial-mini-pc/mc15uh' },
     { name: 'MCTAR7', href: '/products/commercial-mini-pc/mctar7' },
   ] },
-  { id: 'iotGateway', icon: Router, image: '/assets/products/industrial/mcipcd3/images/1.jpg', products: [
+  { id: 'iotGateway', icon: Router, image: '/assets/products/industrial/d-series/mcipcd3/images/1.jpg', products: [
     { name: 'MCIPCD3', href: '/products/industrial-mini-pc/mcipcd3' },
     { name: 'MCSRP6', href: '/products/firewall-mini-pc/mcsrp6' },
     { name: 'MCR20', href: '/products/firewall-mini-pc/mcr20' },

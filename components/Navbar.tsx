@@ -71,9 +71,9 @@ type ScenarioMegaItem = DropdownItem & {
 
 const megaMenuProducts: Record<string, MegaMenuProduct[]> = {
   'industrial-mini-pc': [
-    { id: 'mcipcb13', name: 'MCIPCB13', tagline: 'Flexible Intel Core industrial box PC', image: '/assets/products/industrial/mcipcb13/images/1.jpg' },
-    { id: 'mcipcb12', name: 'MCIPCB12', tagline: 'Fanless triple-display industrial mini PC', image: '/assets/products/industrial/mcipcb12/images/1.jpg' },
-    { id: 'mcipcd3', name: 'MCIPCD3', tagline: 'Six-LAN industrial network appliance', image: '/assets/products/industrial/mcipcd3/images/1.jpg' },
+    { id: 'mcipcb13', name: 'MCIPCB13', tagline: 'Flexible Intel Core industrial box PC', image: '/assets/products/industrial/b-series/mcipcb13/images/1.jpg' },
+    { id: 'mcipcb12', name: 'MCIPCB12', tagline: 'Fanless triple-display industrial mini PC', image: '/assets/products/industrial/b-series/mcipcb12/images/1.jpg' },
+    { id: 'mcipcd3', name: 'MCIPCD3', tagline: 'Six-LAN industrial network appliance', image: '/assets/products/industrial/d-series/mcipcd3/images/1.jpg' },
   ],
   'ai-mini-pc': [
     { id: 'mcai2', name: 'MCAIPC2', tagline: 'Strix Halo high-performance AI mini PC', image: '/assets/products/ai/mcaipc2/hero.png' },
@@ -95,7 +95,7 @@ const industrialMegaSeries: ProductMegaSeries[] = [
     code: 'A',
     title: 'A Series',
     description: 'Single COM or COM-less compact industrial computers',
-    image: '/assets/products/industrial/mcipca2/images/main-square-srgb.jpg',
+    image: '/assets/products/industrial/a-series/mcipca2/images/main-square-srgb.jpg',
     href: '/products/industrial-mini-pc#series-a',
   },
   {
@@ -103,7 +103,7 @@ const industrialMegaSeries: ProductMegaSeries[] = [
     code: 'B',
     title: 'B Series',
     description: 'Dual-LAN industrial computers with dual COM ports',
-    image: '/assets/products/industrial/mcipcb13/images/1.jpg',
+    image: '/assets/products/industrial/b-series/mcipcb13/images/1.jpg',
     href: '/products/industrial-mini-pc#series-b',
   },
   {
@@ -111,7 +111,7 @@ const industrialMegaSeries: ProductMegaSeries[] = [
     code: 'C',
     title: 'C Series',
     description: 'Multi-COM industrial computers with dual LAN ports',
-    image: '/assets/products/industrial/mcipc9/images/main-square-srgb.jpg',
+    image: '/assets/products/industrial/c-series/mcipc9/images/main-square-srgb.jpg',
     href: '/products/industrial-mini-pc#series-c',
   },
   {
@@ -119,7 +119,7 @@ const industrialMegaSeries: ProductMegaSeries[] = [
     code: 'D',
     title: 'D Series',
     description: 'Multi-LAN industrial computers with dual COM ports',
-    image: '/assets/products/industrial/mcipcd3/images/1.jpg',
+    image: '/assets/products/industrial/d-series/mcipcd3/images/1.jpg',
     href: '/products/industrial-mini-pc#series-d',
   },
   {
@@ -127,7 +127,7 @@ const industrialMegaSeries: ProductMegaSeries[] = [
     code: 'TPC',
     title: 'TPC Series',
     description: 'Industrial panel PCs with integrated displays',
-    image: '/assets/products/industrial/mctpc-1506e/images/main-square-srgb.jpg',
+    image: '/assets/products/industrial/tpc-series/mctpc-1506e/images/main-square-srgb.jpg',
     href: '/products/industrial-mini-pc#series-tpc',
   },
 ];

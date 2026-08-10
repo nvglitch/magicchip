@@ -1,3 +1,5 @@
+import { industrialCatalog } from '@/lib/industrial-catalog';
+
 export type SearchEntryType = 'product' | 'category' | 'scenario' | 'page' | 'resource';
 
 export type SearchEntry = {
@@ -9,14 +11,26 @@ export type SearchEntry = {
   image?: string;
 };
 
+const curatedIndustrialSearchIds = new Set(['mcipca2', 'mcipc9', 'mctpc-1506e', 'mcipcb13', 'mcipcb12', 'mcipcd3']);
+const catalogIndustrialSearchEntries: SearchEntry[] = industrialCatalog
+  .filter((item) => !curatedIndustrialSearchIds.has(item.id))
+  .map((item) => ({
+    title: item.name,
+    description: item.tagline,
+    href: `/products/industrial-mini-pc/${item.id}`,
+    type: 'product',
+    keywords: ['industrial mini pc', `${item.series.toLowerCase()} series`, item.name.toLowerCase()],
+    image: item.image,
+  }));
 export const siteSearchIndex: SearchEntry[] = [
+  ...catalogIndustrialSearchEntries,
   {
     title: 'MCIPCA2',
     description: 'Compact A-series industrial Mini PC with one RS232 COM port and four Intel Gigabit LAN ports.',
     href: '/products/industrial-mini-pc/mcipca2',
     type: 'product',
     keywords: ['industrial mini pc', 'a series', 'single com', 'four lan', 'gateway', 'j4125'],
-    image: '/assets/products/industrial/mcipca2/images/main-square-srgb.jpg',
+    image: '/assets/products/industrial/a-series/mcipca2/images/main-square-srgb.jpg',
   },
   {
     title: 'MCIPC9',
@@ -24,7 +38,7 @@ export const siteSearchIndex: SearchEntry[] = [
     href: '/products/industrial-mini-pc/mcipc9',
     type: 'product',
     keywords: ['industrial mini pc', 'c series', 'six com', 'multi serial', 'dual lan', 'core ultra'],
-    image: '/assets/products/industrial/mcipc9/images/main-square-srgb.jpg',
+    image: '/assets/products/industrial/c-series/mcipc9/images/main-square-srgb.jpg',
   },
   {
     title: 'MCTPC-1506E',
@@ -32,7 +46,7 @@ export const siteSearchIndex: SearchEntry[] = [
     href: '/products/industrial-mini-pc/mctpc-1506e',
     type: 'product',
     keywords: ['industrial panel pc', 'tpc series', '15.6 inch', 'hmi display', '2.5gbe'],
-    image: '/assets/products/industrial/mctpc-1506e/images/main-square-srgb.jpg',
+    image: '/assets/products/industrial/tpc-series/mctpc-1506e/images/main-square-srgb.jpg',
   },
   {
     title: 'MCIPCB13',
@@ -40,7 +54,7 @@ export const siteSearchIndex: SearchEntry[] = [
     href: '/products/industrial-mini-pc/mcipcb13',
     type: 'product',
     keywords: ['industrial mini pc', 'fanless', 'automation', 'serial', 'com', 'intel core'],
-    image: '/assets/products/industrial/mcipcb13/images/1.jpg',
+    image: '/assets/products/industrial/b-series/mcipcb13/images/1.jpg',
   },
   {
     title: 'MCIPCB12',
@@ -48,7 +62,7 @@ export const siteSearchIndex: SearchEntry[] = [
     href: '/products/industrial-mini-pc/mcipcb12',
     type: 'product',
     keywords: ['industrial mini pc', 'fanless', 'digital signage', 'triple display', 'rs232'],
-    image: '/assets/products/industrial/mcipcb12/images/1.jpg',
+    image: '/assets/products/industrial/b-series/mcipcb12/images/1.jpg',
   },
   {
     title: 'MCIPCD3',
@@ -56,7 +70,7 @@ export const siteSearchIndex: SearchEntry[] = [
     href: '/products/industrial-mini-pc/mcipcd3',
     type: 'product',
     keywords: ['network appliance', 'six lan', 'iot gateway', 'edge gateway', 'routing'],
-    image: '/assets/products/industrial/mcipcd3/images/1.jpg',
+    image: '/assets/products/industrial/d-series/mcipcd3/images/1.jpg',
   },
   {
     title: 'MCAIPC1',

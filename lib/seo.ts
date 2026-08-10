@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { industrialCatalog } from '@/lib/industrial-catalog';
 
 export const SITE_URL = 'https://szmagicchip.com';
 export const SITE_NAME = 'MagicChip';
@@ -33,47 +34,60 @@ export const categorySeo: Record<string, SeoEntry> = {
   },
 };
 
+const catalogProductSeo: Record<string, SeoEntry & { category: string }> = Object.fromEntries(
+  industrialCatalog.map((item) => [
+    item.id,
+    {
+      name: `${item.name} Industrial Computing Product`,
+      description: item.tagline,
+      path: `/products/industrial-mini-pc/${item.id}`,
+      image: item.image,
+      category: 'industrial-mini-pc',
+    },
+  ]),
+);
 export const productSeo: Record<string, SeoEntry & { category: string }> = {
+  ...catalogProductSeo,
   mcipca2: {
     name: 'MCIPCA2 A-Series Industrial Mini PC',
     description: 'Compact industrial mini PC with Intel J4125, one RS232 COM port, four Intel Gigabit LAN ports, six USB ports, and wireless expansion.',
     path: '/products/industrial-mini-pc/mcipca2',
-    image: '/assets/products/industrial/mcipca2/images/main-square-srgb.jpg',
+    image: '/assets/products/industrial/a-series/mcipca2/images/main-square-srgb.jpg',
     category: 'industrial-mini-pc',
   },
   mcipc9: {
     name: 'MCIPC9 Six-COM Industrial Mini PC',
     description: 'Industrial mini PC with Intel Core Ultra processors, six DB9 serial ports, dual Intel LAN, DDR5 memory, and DC 9-36V input.',
     path: '/products/industrial-mini-pc/mcipc9',
-    image: '/assets/products/industrial/mcipc9/images/main-square-srgb.jpg',
+    image: '/assets/products/industrial/c-series/mcipc9/images/main-square-srgb.jpg',
     category: 'industrial-mini-pc',
   },
   'mctpc-1506e': {
     name: 'MCTPC-1506E Industrial Panel PC',
     description: '15.6-inch Full HD industrial panel PC with flexible Intel processors, dual 2.5GbE, configurable COM ports, and wide-voltage input.',
     path: '/products/industrial-mini-pc/mctpc-1506e',
-    image: '/assets/products/industrial/mctpc-1506e/images/main-square-srgb.jpg',
+    image: '/assets/products/industrial/tpc-series/mctpc-1506e/images/main-square-srgb.jpg',
     category: 'industrial-mini-pc',
   },
   mcipcb13: {
     name: 'MCIPCB13 Industrial Mini PC',
     description: 'Compact industrial box PC with flexible Intel Core platform support, dual Gigabit LAN, eight USB ports, dual COM, and wide-temperature operation.',
     path: '/products/industrial-mini-pc/mcipcb13',
-    image: '/assets/products/industrial/mcipcb13/images/1.jpg',
+    image: '/assets/products/industrial/b-series/mcipcb13/images/1.jpg',
     category: 'industrial-mini-pc',
   },
   mcipcb12: {
     name: 'MCIPCB12 Industrial Mini PC',
     description: 'Compact fanless industrial mini PC with Intel Elkhart Lake or Alder Lake-N processors, triple-display output, dual LAN, dual RS232, and flexible storage.',
     path: '/products/industrial-mini-pc/mcipcb12',
-    image: '/assets/products/industrial/mcipcb12/images/1.jpg',
+    image: '/assets/products/industrial/b-series/mcipcb12/images/1.jpg',
     category: 'industrial-mini-pc',
   },
   mcipcd3: {
     name: 'MCIPCD3 Six-LAN Network Appliance',
     description: 'Rugged industrial network appliance with six Intel Gigabit LAN ports, flexible Intel processor options, dual serial interfaces, and wireless expansion.',
     path: '/products/industrial-mini-pc/mcipcd3',
-    image: '/assets/products/industrial/mcipcd3/images/1.jpg',
+    image: '/assets/products/industrial/d-series/mcipcd3/images/1.jpg',
     category: 'industrial-mini-pc',
   },
   mcai1: {
