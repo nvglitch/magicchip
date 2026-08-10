@@ -1,8 +1,10 @@
 'use client';
 
+import Image from 'next/image';
+
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { motion } from 'framer-motion';
-import { ArrowRight, ChevronLeft, Cpu, Shield, Monitor, Brain } from 'lucide-react';
+import { ArrowRight, ChevronLeft, Cpu, Shield, Monitor, Brain, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 
@@ -147,6 +149,80 @@ const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: 
   ],
 };
 
+const richCategoryData = {
+  'industrial-mini-pc': {
+    overview: 'Industrial Mini PCs place computing, display, network, and serial connectivity in compact fanless enclosures. The current MagicChip range spans equipment control, multi-display operation, and high-density edge networking without treating every deployment as the same hardware problem.',
+    qualifier: 'Processor platforms, interfaces, and operating-temperature ranges vary by model.',
+    capabilities: [
+      { title: 'Fanless operating design', description: 'Aluminum enclosures and fanless thermal designs reduce moving parts for continuous edge deployments.' },
+      { title: 'Practical industrial I/O', description: 'Current models combine serial ports, multiple USB connections, display outputs, and wired networking.' },
+      { title: 'Choose by workload', description: 'Select flexible Intel Core platforms, lower-power processors, triple-display output, or six-LAN connectivity.' },
+    ],
+    sceneImage: '/assets/products/category-scenes/industrial-automation.webp',
+    sceneAlt: 'Industrial robotic automation and machine-vision equipment',
+    photoCredit: 'Testalize.me / Unsplash',
+    photoUrl: 'https://unsplash.com/photos/industrial-robotic-arm-in-blue-lit-factory-9xHsWmh3m_4',
+    scenarios: [
+      { title: 'Automation & equipment control', description: 'Serial connectivity and abundant USB ports support controllers, sensors, peripherals, and production equipment.', products: ['MCIPCB13', 'MCIPCB12'] },
+      { title: 'Digital signage & control displays', description: 'Multiple display outputs suit information screens, dashboards, and compact control-room installations.', products: ['MCIPCB12'] },
+      { title: 'Industrial edge & gateways', description: 'High-density wired networking supports segmented edge networks, gateways, and local data aggregation.', products: ['MCIPCD3'] },
+    ],
+  },
+  'ai-mini-pc': {
+    overview: 'AI Mini PCs bring high-performance AMD compute, large unified-memory options, fast local storage, and multi-display output into a compact workstation format for local AI and demanding professional workloads.',
+    qualifier: 'AI performance depends on the selected processor, memory configuration, software stack, and workload.',
+    capabilities: [
+      { title: 'Local AI acceleration', description: 'The current range includes Ryzen AI and Strix Halo platforms with integrated NPU capability.' },
+      { title: 'Large memory configurations', description: 'Up to 128GB LPDDR5x supports memory-intensive local models and professional applications.' },
+      { title: 'Fast data & display paths', description: 'Multi-display output, high-speed networking, and multiple NVMe options support substantial local workflows.' },
+    ],
+    sceneImage: '/assets/products/category-scenes/edge-ai-robotics.webp',
+    sceneAlt: 'Robotic arm in a modern AI and engineering laboratory',
+    photoCredit: 'Brecht Corbeel / Unsplash',
+    photoUrl: 'https://unsplash.com/photos/a-robotic-arm-in-a-clean-minimalist-laboratory-setting-gEtezQMsu64',
+    scenarios: [
+      { title: 'Local AI development & inference', description: 'Run supported models locally where data proximity, responsiveness, or offline operation matters.', products: ['MCAIPC2', 'MCAIPC1'] },
+      { title: 'Computer-vision development', description: 'Use high-performance compute and external camera connectivity to prototype visual-analysis workflows.', products: ['MCAIPC2', 'MCAIPC1'] },
+      { title: 'Professional multi-display work', description: 'Quad-display support suits engineering, visualization, media, and information-dense workspaces.', products: ['MCAIPC2', 'MCAIPC1'] },
+    ],
+  },
+  'commercial-mini-pc': {
+    overview: 'Commercial Mini PCs deliver desktop-class connectivity in a small footprint for offices, classrooms, meeting spaces, and display installations. The current range covers both high-performance expansion and practical everyday deployment.',
+    qualifier: 'Select processor, memory, expansion, and display configuration according to the intended software and peripherals.',
+    capabilities: [
+      { title: 'Small-footprint deployment', description: 'Compact enclosures simplify desk, display, meeting-room, and other space-constrained installations.' },
+      { title: 'Modern peripheral support', description: 'USB4, OCuLink, Type-C, HDMI, and wired networking options cover varied commercial peripherals.' },
+      { title: 'Flexible performance levels', description: 'Choose Intel Core Ultra or AMD Ryzen platforms according to workload, graphics, and budget.' },
+    ],
+    sceneImage: '/assets/products/category-scenes/commercial-workspace.webp',
+    sceneAlt: 'Modern commercial meeting room with a large presentation display',
+    photoCredit: 'Exospace Bbsr / Unsplash',
+    photoUrl: 'https://unsplash.com/photos/a-modern-empty-meeting-room-with-furniture-ML5m44ZgIsU',
+    scenarios: [
+      { title: 'Office & meeting rooms', description: 'Compact systems support productivity, conferencing, presentation displays, and shared workspaces.', products: ['MC15UH', 'MCTAR7'] },
+      { title: 'Education & laboratories', description: 'Multiple display and peripheral connections suit classrooms, training rooms, and practical labs.', products: ['MC15UH', 'MCTAR7'] },
+      { title: 'Digital signage', description: 'HDMI and Type-C display connectivity supports information displays and commercial visual communication.', products: ['MCTAR7', 'MC15UH'] },
+    ],
+  },
+  'firewall-mini-pc': {
+    overview: 'Firewall Mini PCs are compact x86 network appliances designed around multiple dedicated Ethernet interfaces. Current MagicChip models cover dual-2.5GbE edge deployments and higher-throughput configurations with dual 10GbE plus dual 2.5GbE.',
+    qualifier: 'Firewall, VPN, and routing throughput depends on software, packet size, enabled services, and hardware configuration.',
+    capabilities: [
+      { title: 'Multi-gigabit networking', description: 'Choose dual 2.5GbE or combined dual 10GbE and dual 2.5GbE connectivity by deployment scale.' },
+      { title: 'Purpose-built network roles', description: 'Dedicated interfaces suit firewall, routing, VPN, SD-WAN, segmentation, and gateway configurations.' },
+      { title: 'Compact edge installation', description: 'Fanless enclosures, DDR5 memory, and storage expansion support local network services at the edge.' },
+    ],
+    sceneImage: '/assets/products/category-scenes/network-infrastructure.webp',
+    sceneAlt: 'Organized server racks in a modern network infrastructure room',
+    photoCredit: 'Taylor Vick / Unsplash',
+    photoUrl: 'https://unsplash.com/@tvick',
+    scenarios: [
+      { title: 'Firewall & network segmentation', description: 'Use dedicated ports to separate WAN, LAN, management, and internal network zones.', products: ['MCR20', 'MCSRP6'] },
+      { title: 'VPN & SD-WAN edge', description: 'Compact x86 platforms can host compatible routing, VPN, and branch-network software stacks.', products: ['MCR20', 'MCSRP6'] },
+      { title: 'IoT & edge gateway', description: 'Connect local devices and upstream networks while keeping selected services close to the deployment.', products: ['MCSRP6', 'MCR20'] },
+    ],
+  },
+} as const;
 export default function CategoryPage() {
   const { language, t } = useLanguage();
   const params = useParams();
@@ -154,6 +230,7 @@ export default function CategoryPage() {
 
   const catInfo = categoryData[category];
   const products = sampleProducts[category] || [];
+  const richContent = richCategoryData[category as keyof typeof richCategoryData] || richCategoryData['industrial-mini-pc'];
 
   const categoryName = categoryNames[category]?.[language] || categoryNames[category]?.en || category;
   const categoryDesc = categoryDescriptions[category]?.[language] || categoryDescriptions[category]?.en || '';
@@ -189,14 +266,101 @@ export default function CategoryPage() {
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-3">{categoryName}</h1>
               <p className="text-xl text-gray-300 max-w-2xl">{categoryDesc}</p>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <a href="#models" className="inline-flex items-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-500">
+                  Browse Models <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+                <a href="#applications" className="inline-flex items-center rounded-full border border-white/25 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10">
+                  View Applications
+                </a>
+              </div>
             </div>
           </motion.div>
         </div>
       </section>
 
+
+      <nav aria-label="Category sections" className="sticky top-16 z-30 border-b border-slate-200 bg-white/90 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-7xl gap-7 overflow-x-auto px-4 py-4 text-sm font-semibold text-slate-600 sm:px-6 lg:px-8">
+          <a href="#overview" className="whitespace-nowrap transition-colors hover:text-blue-700">Category Overview</a>
+          <a href="#applications" className="whitespace-nowrap transition-colors hover:text-blue-700">Application Scenarios</a>
+          <a href="#models" className="whitespace-nowrap transition-colors hover:text-blue-700">Current Models</a>
+        </div>
+      </nav>
+
+      <section id="overview" className="scroll-mt-32 bg-white py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">Category Overview</p>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">What defines {categoryName}?</h2>
+            </div>
+            <div>
+              <p className="text-lg leading-8 text-slate-600">{richContent.overview}</p>
+              <p className="mt-4 text-sm text-slate-500">{richContent.qualifier}</p>
+            </div>
+          </div>
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {richContent.capabilities.map((capability) => (
+              <article key={capability.title} className="rounded-2xl border border-slate-200 bg-[#f7faf9] p-6 transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:bg-white hover:shadow-lg">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600"><CheckCircle2 className="h-5 w-5" /></div>
+                <h3 className="mt-5 text-lg font-bold text-slate-950">{capability.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-600">{capability.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="applications" className="scroll-mt-32 bg-[#eaf0ee] py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-10">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">Application Scenarios</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">Where this category fits</h2>
+          </div>
+          <div className="grid overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl shadow-slate-900/10 lg:grid-cols-[1.05fr_0.95fr]">
+            <figure className="relative min-h-[360px] overflow-hidden bg-slate-900 lg:min-h-[600px]">
+              <Image src={richContent.sceneImage} alt={richContent.sceneAlt} fill sizes="(max-width: 1023px) 100vw, 650px" className="object-cover transition-transform duration-700 hover:scale-[1.02]" />
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/75 to-transparent px-6 pb-5 pt-16 text-xs text-white/80">
+                Photo: <a href={richContent.photoUrl} target="_blank" rel="noopener noreferrer" className="underline decoration-white/35 underline-offset-2 hover:text-white">{richContent.photoCredit}</a>
+              </figcaption>
+            </figure>
+            <div className="divide-y divide-slate-200">
+              {richContent.scenarios.map((scenario, index) => (
+                <article key={scenario.title} className="p-6 md:p-8">
+                  <div className="flex gap-4">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-900 text-sm font-bold text-white">0{index + 1}</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-950">{scenario.title}</h3>
+                      <p className="mt-2 text-sm leading-6 text-slate-600">{scenario.description}</p>
+                      <p className="mt-4 text-xs font-semibold uppercase tracking-[0.12em] text-slate-400">Recommended SKUs</p>
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        {scenario.products.map((productName) => {
+                          const product = products.find((item) => item.name === productName);
+                          return product ? (
+                            <Link key={product.id} href={`/products/${category}/${product.id}`} className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-sm font-semibold text-blue-700 transition-colors hover:border-blue-400 hover:bg-blue-100">
+                              {product.name}
+                            </Link>
+                          ) : null;
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Product List */}
-      <section className="py-20 bg-gray-50">
+      <section id="models" className="scroll-mt-32 bg-gray-50 py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-10 max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">Current Models</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">Choose the right configuration</h2>
+            <p className="mt-4 text-base leading-7 text-slate-600">Compare the current models by processor platform, connectivity, expansion, and deployment requirements.</p>
+          </div>
           <div className="space-y-8">
             {products.map((product, index) => (
               <motion.div
@@ -204,11 +368,11 @@ export default function CategoryPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border ${index % 3 === 0 ? 'border-blue-200 hover:border-blue-400' : index % 3 === 1 ? 'border-amber-200 hover:border-amber-400' : 'border-rose-200 hover:border-rose-400'}`}
+                className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-xl hover:shadow-slate-900/10"
               >
                 <div className="flex flex-col md:flex-row">
                   {/* Product Image */}
-                  <div className={`md:w-2/5 flex items-center justify-center p-0 ${index % 3 === 0 ? 'bg-blue-50/50' : index % 3 === 1 ? 'bg-amber-50/50' : 'bg-rose-50/40'}`}>
+                  <div className="flex items-center justify-center bg-[#f4f7f7] p-0 md:w-2/5">
                     <div className="relative w-full rounded-lg overflow-hidden">
                       {product.image ? (
                         <img
@@ -233,7 +397,7 @@ export default function CategoryPage() {
                       {product.specs.map((spec, idx) => (
                         <span
                           key={idx}
-                          className={`px-4 py-2 rounded-lg text-sm font-medium ${idx % 3 === 0 ? 'bg-blue-50 text-blue-800' : idx % 3 === 1 ? 'bg-amber-50 text-amber-800' : 'bg-rose-50 text-rose-800'}`}
+                          className="rounded-lg border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-800"
                         >
                           {spec}
                         </span>
