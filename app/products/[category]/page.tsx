@@ -78,6 +78,13 @@ const categoryDescriptions: Record<string, Record<string, string>> = {
 const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: string; image: string; specs: string[] }>> = {
   'industrial-mini-pc': [
     {
+      id: 'mcipca2',
+      name: 'MCIPCA2',
+      tagline: 'Compact single-COM industrial mini PC with four Intel Gigabit LAN ports',
+      image: '/assets/products/industrial/mcipca2/images/main-square-srgb.jpg',
+      specs: ['Intel Celeron J4125', '4 x Intel GbE LAN', '1 x DB9 RS232 COM', '-20°C to +60°C'],
+    },
+    {
       id: 'mcipcb13',
       name: 'MCIPCB13',
       tagline: 'Compact industrial box PC with flexible Intel Core platform support',
@@ -97,6 +104,20 @@ const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: 
       tagline: 'Six-LAN industrial network appliance with flexible Intel Core options',
       image: '/assets/products/industrial/mcipcd3/images/1.jpg',
       specs: ['Intel Core i3/i5/i7 Options', '6x Intel GbE LAN', 'Dual RS232', '-20°C to +70°C'],
+    },
+    {
+      id: 'mcipc9',
+      name: 'MCIPC9',
+      tagline: 'Six-COM industrial mini PC with Intel Core Ultra and dual LAN',
+      image: '/assets/products/industrial/mcipc9/images/main-square-srgb.jpg',
+      specs: ['Intel Core Ultra 125U-185H', '6 x DB9 COM', 'Dual Intel LAN', 'DC 9-36V'],
+    },
+    {
+      id: 'mctpc-1506e',
+      name: 'MCTPC-1506E',
+      tagline: '15.6-inch Full HD industrial panel PC with flexible Intel platforms',
+      image: '/assets/products/industrial/mctpc-1506e/images/main-square-srgb.jpg',
+      specs: ['15.6-inch Full HD', '2 x 2.5GbE LAN', '2 x RS232/422/485 COM', 'DC 9-36V'],
     },
   ],
   'firewall-mini-pc': [
@@ -149,6 +170,46 @@ const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: 
   ],
 };
 
+const industrialSeries = [
+  {
+    code: 'A',
+    title: 'A Series',
+    description: 'Single COM or COM-less compact industrial computers',
+    image: '/assets/products/industrial/mcipca2/images/main-square-srgb.jpg',
+    models: [{ id: 'mcipca2', name: 'MCIPCA2' }],
+  },
+  {
+    code: 'B',
+    title: 'B Series',
+    description: 'Dual-LAN industrial computers with dual COM ports',
+    image: '/assets/products/industrial/mcipcb13/images/1.jpg',
+    models: [
+      { id: 'mcipcb12', name: 'MCIPCB12' },
+      { id: 'mcipcb13', name: 'MCIPCB13' },
+    ],
+  },
+  {
+    code: 'C',
+    title: 'C Series',
+    description: 'Multi-COM industrial computers with dual LAN ports',
+    image: '/assets/products/industrial/mcipc9/images/main-square-srgb.jpg',
+    models: [{ id: 'mcipc9', name: 'MCIPC9' }],
+  },
+  {
+    code: 'D',
+    title: 'D Series',
+    description: 'Multi-LAN industrial computers with dual COM ports',
+    image: '/assets/products/industrial/mcipcd3/images/1.jpg',
+    models: [{ id: 'mcipcd3', name: 'MCIPCD3' }],
+  },
+  {
+    code: 'TPC',
+    title: 'TPC Series',
+    description: 'Industrial panel PCs with integrated displays',
+    image: '/assets/products/industrial/mctpc-1506e/images/main-square-srgb.jpg',
+    models: [{ id: 'mctpc-1506e', name: 'MCTPC-1506E' }],
+  },
+] as const;
 const richCategoryData = {
   'industrial-mini-pc': {
     overview: 'Industrial Mini PCs place computing, display, network, and serial connectivity in compact fanless enclosures. The current MagicChip range spans equipment control, multi-display operation, and high-density edge networking without treating every deployment as the same hardware problem.',
@@ -359,66 +420,83 @@ export default function CategoryPage() {
           <div className="mb-10 max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">Current Models</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">Choose the right configuration</h2>
-            <p className="mt-4 text-base leading-7 text-slate-600">Compare the current models by processor platform, connectivity, expansion, and deployment requirements.</p>
+            <p className="mt-4 text-base leading-7 text-slate-600">
+              {category === 'industrial-mini-pc'
+                ? 'Select an IPC series by serial, network, and display architecture, then open the available model page.'
+                : 'Compare the current models by processor platform, connectivity, expansion, and deployment requirements.'}
+            </p>
           </div>
-          <div className="space-y-8">
-            {products.map((product, index) => (
-              <motion.div
-                key={product.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-xl hover:shadow-slate-900/10"
-              >
-                <div className="flex flex-col md:flex-row">
-                  {/* Product Image */}
-                  <div className="flex items-center justify-center bg-[#f4f7f7] p-0 md:w-2/5">
-                    <div className="relative w-full rounded-lg overflow-hidden">
-                      {product.image ? (
-                        <img
-                          src={product.image}
-                          alt={product.name}
-                          className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
-                        />
-                      ) : (
-                        <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                          <IconComponent className="w-24 h-24 opacity-30" />
-                        </div>
-                      )}
+
+          {category === 'industrial-mini-pc' ? (
+            <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+              {industrialSeries.map((series, index) => (
+                <section key={series.code} className={`grid gap-6 p-6 md:grid-cols-[minmax(360px,0.8fr)_1fr] md:items-center md:p-8 ${index > 0 ? 'border-t border-slate-200' : ''}`}>
+                  <div className="flex items-center gap-5">
+                    <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+                      <img src={series.image} alt={`${series.title} representative product`} className="h-full w-full object-contain p-2" />
+                    </div>
+                    <div>
+                      <span className="inline-flex rounded-md bg-slate-950 px-2.5 py-1 text-xs font-bold text-white">{series.code}</span>
+                      <h3 className="mt-2 text-xl font-bold text-slate-950">{series.title}</h3>
+                      <p className="mt-1 text-sm leading-5 text-slate-500">{series.description}</p>
                     </div>
                   </div>
-
-                  {/* Product Info */}
-                  <div className="md:w-3/5 p-8 md:p-10 flex flex-col justify-center">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-2">{product.name}</h2>
-                    <p className="text-lg text-gray-600 mb-6">{product.tagline}</p>
-
-                    <div className="flex flex-wrap gap-3 mb-8">
-                      {product.specs.map((spec, idx) => (
-                        <span
-                          key={idx}
-                          className="rounded-lg border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-800"
-                        >
-                          {spec}
-                        </span>
-                      ))}
+                  <div className="flex flex-wrap gap-3 md:justify-end">
+                    {series.models.map((model) => (
+                      <Link key={model.id} href={`/products/industrial-mini-pc/${model.id}`} className="group inline-flex items-center rounded-xl border border-blue-200 bg-blue-50 px-5 py-3 font-semibold text-blue-800 transition-all hover:-translate-y-0.5 hover:border-blue-400 hover:bg-blue-100 hover:shadow-md">
+                        {model.name}
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              ))}
+            </div>
+          ) : (
+            <div className="space-y-8">
+              {products.map((product, index) => (
+                <motion.div
+                  key={product.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-xl hover:shadow-slate-900/10"
+                >
+                  <div className="flex flex-col md:flex-row">
+                    <div className="flex items-center justify-center bg-[#f4f7f7] p-0 md:w-2/5">
+                      <div className="relative w-full overflow-hidden rounded-lg">
+                        {product.image ? (
+                          <img src={product.image} alt={product.name} className="h-auto w-full object-contain transition-transform duration-500 group-hover:scale-105" />
+                        ) : (
+                          <div className="absolute inset-0 flex items-center justify-center text-gray-400">
+                            <IconComponent className="h-24 w-24 opacity-30" />
+                          </div>
+                        )}
+                      </div>
                     </div>
 
-                    <Link
-                      href={`/products/${category}/${product.id}`}
-                      className="inline-flex items-center self-start px-6 py-3 bg-blue-700 text-white rounded-xl font-semibold hover:bg-blue-800 transition-all shadow-lg shadow-blue-700/20 hover:shadow-xl group"
-                    >
-                      {t.products.viewDetails}
-                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Link>
+                    <div className="flex flex-col justify-center p-8 md:w-3/5 md:p-10">
+                      <h2 className="mb-2 text-3xl font-bold text-gray-900">{product.name}</h2>
+                      <p className="mb-6 text-lg text-gray-600">{product.tagline}</p>
+                      <div className="mb-8 flex flex-wrap gap-3">
+                        {product.specs.map((spec, idx) => (
+                          <span key={idx} className="rounded-lg border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-800">
+                            {spec}
+                          </span>
+                        ))}
+                      </div>
+                      <Link href={`/products/${category}/${product.id}`} className="group inline-flex self-start rounded-xl bg-blue-700 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-700/20 transition-all hover:bg-blue-800 hover:shadow-xl">
+                        {t.products.viewDetails}
+                        <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

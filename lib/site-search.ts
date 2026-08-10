@@ -11,6 +11,30 @@ export type SearchEntry = {
 
 export const siteSearchIndex: SearchEntry[] = [
   {
+    title: 'MCIPCA2',
+    description: 'Compact A-series industrial Mini PC with one RS232 COM port and four Intel Gigabit LAN ports.',
+    href: '/products/industrial-mini-pc/mcipca2',
+    type: 'product',
+    keywords: ['industrial mini pc', 'a series', 'single com', 'four lan', 'gateway', 'j4125'],
+    image: '/assets/products/industrial/mcipca2/images/main-square-srgb.jpg',
+  },
+  {
+    title: 'MCIPC9',
+    description: 'C-series industrial Mini PC with Intel Core Ultra, six DB9 COM ports, dual Intel LAN, and wide-voltage input.',
+    href: '/products/industrial-mini-pc/mcipc9',
+    type: 'product',
+    keywords: ['industrial mini pc', 'c series', 'six com', 'multi serial', 'dual lan', 'core ultra'],
+    image: '/assets/products/industrial/mcipc9/images/main-square-srgb.jpg',
+  },
+  {
+    title: 'MCTPC-1506E',
+    description: '15.6-inch Full HD industrial panel PC with dual 2.5GbE, configurable serial ports, and 9-36V input.',
+    href: '/products/industrial-mini-pc/mctpc-1506e',
+    type: 'product',
+    keywords: ['industrial panel pc', 'tpc series', '15.6 inch', 'hmi display', '2.5gbe'],
+    image: '/assets/products/industrial/mctpc-1506e/images/main-square-srgb.jpg',
+  },
+  {
     title: 'MCIPCB13',
     description: 'Industrial box PC with flexible Intel Core platforms, dual LAN, eight USB ports, and dual COM.',
     href: '/products/industrial-mini-pc/mcipcb13',
