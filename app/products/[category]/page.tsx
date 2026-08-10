@@ -219,6 +219,7 @@ const richCategoryData = {
       { title: 'Match the system to the task', description: 'Select the series by serial-port count, network architecture, display needs, compute platform, and panel-mount requirements.' },
     ],
     sceneImage: '/assets/products/category-scenes/industrial-automation.webp',
+    desktopSceneImage: '/assets/products/category-scenes/industrial-automation-desktop.webp',
     sceneAlt: 'Automated robotic production line with conveyors, sensors, and safety systems',
     photoCredit: 'Testalize.me / Unsplash',
     photoUrl: 'https://unsplash.com/photos/industrial-robotic-arm-in-blue-lit-factory-9xHsWmh3m_4',
@@ -294,6 +295,7 @@ export default function CategoryPage() {
     ? industrialCatalog.map(({ id, name, tagline, image, highlights }) => ({ id, name, tagline, image, specs: highlights }))
     : sampleProducts[category] || [];
   const richContent = richCategoryData[category as keyof typeof richCategoryData] || richCategoryData['industrial-mini-pc'];
+  const desktopSceneImage = 'desktopSceneImage' in richContent ? richContent.desktopSceneImage : richContent.sceneImage;
 
   const categoryName = categoryNames[category]?.[language] || categoryNames[category]?.en || category;
   const categoryDesc = categoryDescriptions[category]?.[language] || categoryDescriptions[category]?.en || '';
@@ -390,7 +392,8 @@ export default function CategoryPage() {
           </div>
           <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl shadow-slate-900/10">
             <figure className="relative aspect-[3/2] overflow-hidden bg-slate-900 lg:aspect-video">
-              <Image src={richContent.sceneImage} alt={richContent.sceneAlt} fill sizes="(max-width: 1279px) 100vw, 1280px" className="object-cover transition-transform duration-700 hover:scale-[1.02]" />
+              <Image src={richContent.sceneImage} alt={richContent.sceneAlt} fill sizes="(max-width: 1023px) 100vw, 1px" className="object-cover transition-transform duration-700 hover:scale-[1.02] lg:hidden" />
+              <Image src={desktopSceneImage} alt={richContent.sceneAlt} fill sizes="(max-width: 1023px) 1px, 1280px" className="hidden object-cover transition-transform duration-700 hover:scale-[1.02] lg:block" />
               {category !== 'industrial-mini-pc' && (
                 <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/75 to-transparent px-6 pb-5 pt-16 text-xs text-white/80">
                   Photo: <a href={richContent.photoUrl} target="_blank" rel="noopener noreferrer" className="underline decoration-white/35 underline-offset-2 hover:text-white">{richContent.photoCredit}</a>
