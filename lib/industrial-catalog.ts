@@ -22,7 +22,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "series": "A",
     "tagline": "MCIPCA1 compact A Series industrial computer",
     "description": "MCIPCA1 is a compact industrial computer with a single-COM or COM-less architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
-    "image": "/assets/products/industrial/a-series/mcipca1/images/main-square-srgb.jpg",
+    "image": "/assets/products/industrial/a-series/mcipca1/images/main-transparent.png",
     "highlights": [
       "Onboard Intel Celeron J6412/ Pentium J6426",
       "2 x HDMI;1 x DP",
@@ -221,7 +221,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "series": "B",
     "tagline": "MCIPCB11 dual-LAN, dual-COM industrial computer",
     "description": "MCIPCB11 is an industrial computer with dual-LAN and dual-COM architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
-    "image": "/assets/products/industrial/b-series/mcipcb11/images/main-square-srgb.jpg",
+    "image": "/assets/products/industrial/b-series/mcipcb11/images/main-transparent.png",
     "highlights": [
       "Intel N100",
       "2 x HDMI; 1 x DP; 1 x USB-C(Display supported)",
@@ -810,7 +810,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "series": "B",
     "tagline": "MCIPCB7 dual-LAN, dual-COM industrial computer",
     "description": "MCIPCB7 is an industrial computer with dual-LAN and dual-COM architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
-    "image": "/assets/products/industrial/b-series/mcipcb7/images/main-square-srgb.jpg",
+    "image": "/assets/products/industrial/b-series/mcipcb7/images/main-transparent.png",
     "highlights": [
       "Intel Sky Lake-U Kaby Lake-U Core i3 i5 i7",
       "1 x EDP;1 x HDMI; 1 x VGA",
@@ -871,7 +871,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "series": "B",
     "tagline": "MCIPCB8 dual-LAN, dual-COM industrial computer",
     "description": "MCIPCB8 is an industrial computer with dual-LAN and dual-COM architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
-    "image": "/assets/products/industrial/b-series/mcipcb8/images/main-square-srgb.jpg",
+    "image": "/assets/products/industrial/b-series/mcipcb8/images/main-transparent.png",
     "highlights": [
       "Intel ® Celeron N150 0.8GHz quad-core processor",
       "2 x HDMI(One single-layer HDMI support dual DP)",
@@ -936,7 +936,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "series": "B",
     "tagline": "MCIPCB9 dual-LAN, dual-COM industrial computer",
     "description": "MCIPCB9 is an industrial computer with dual-LAN and dual-COM architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
-    "image": "/assets/products/industrial/b-series/mcipcb9/images/main-square-srgb.jpg",
+    "image": "/assets/products/industrial/b-series/mcipcb9/images/main-transparent.png",
     "highlights": [
       "Intel N2840/ N2930/J1900(2core 2.0GHz)",
       "1 x HDMI; 1 x VGA",
@@ -1058,7 +1058,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "series": "C",
     "tagline": "MCIPC2A multi-COM industrial computer with dual LAN",
     "description": "MCIPC2A is a multi-COM industrial computer with dual-LAN architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
-    "image": "/assets/products/industrial/c-series/mcipc2a/images/main-square-srgb.jpg",
+    "image": "/assets/products/industrial/c-series/mcipc2a/images/main-transparent.png",
     "highlights": [
       "Optional Intel® Atom™ J1900 Quad Core 2.0GHz",
       "HDMI, VGA",
@@ -1123,7 +1123,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "series": "C",
     "tagline": "MCIPC2B multi-COM industrial computer with dual LAN",
     "description": "MCIPC2B is a multi-COM industrial computer with dual-LAN architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
-    "image": "/assets/products/industrial/c-series/mcipc2b/images/main-square-srgb.jpg",
+    "image": "/assets/products/industrial/c-series/mcipc2b/images/main-transparent.png",
     "highlights": [
       "Intel i3-6157U/i3-7100U/i3-8130U",
       "HDMI, VGA",
@@ -1805,7 +1805,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "series": "TPC",
     "tagline": "12.1-inch 1024x768 industrial panel PC",
     "description": "MCTPC-1201E is an industrial panel PC with an integrated display. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
-    "image": "/assets/products/industrial/tpc-series/mctpc-1201e/images/main-square-srgb.jpg",
+    "image": "/assets/products/industrial/tpc-series/mctpc-1201e/images/main-transparent.png",
     "highlights": [
       "Intel Celeron J4125/J6412, Intel Processor N100/N150; Intel Core 8th/10th/11th/12th/13th Gen i3/i5/i7",
       "LCD Type: 12.1\" TFT-LCD; Resolution: 1024x768",
@@ -1874,7 +1874,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "series": "TPC",
     "tagline": "13.3-inch 1920x1080 industrial panel PC",
     "description": "MCTPC-1303E is an industrial panel PC with an integrated display. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
-    "image": "/assets/products/industrial/tpc-series/mctpc-1303e/images/main-square-srgb.jpg",
+    "image": "/assets/products/industrial/tpc-series/mctpc-1303e/images/main-transparent.png",
     "highlights": [
       "Intel Celeron J4125/J6412, Intel Processor N100/N150; Intel Core 8th/10th/11th/12th/13th Gen i3/i5/i7",
       "LCD Type: 13.3\" TFT-LCD; Resolution: 1920x1080",
@@ -1943,7 +1943,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "series": "TPC",
     "tagline": "15.0-inch 1024x768 industrial panel PC",
     "description": "MCTPC-1501B is an industrial panel PC with an integrated display. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
-    "image": "/assets/products/industrial/tpc-series/mctpc-1501b/images/main-square-srgb.jpg",
+    "image": "/assets/products/industrial/tpc-series/mctpc-1501b/images/main-transparent.png",
     "highlights": [
       "Intel Celeron J4125/J6412, Intel Core 8th/10th/11th Gen-U i5/i7",
       "LCD Type: 15.0\" TFT-LCD; Resolution: 1024x768",
@@ -2008,7 +2008,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "series": "TPC",
     "tagline": "15.0-inch 1024x768 industrial panel PC",
     "description": "MCTPC-1501E is an industrial panel PC with an integrated display. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
-    "image": "/assets/products/industrial/tpc-series/mctpc-1501e/images/main-square-srgb.jpg",
+    "image": "/assets/products/industrial/tpc-series/mctpc-1501e/images/main-transparent.png",
     "highlights": [
       "Intel Celeron J4125/J6412, Intel Processor N100/N150; Intel Core 8th/10th/11th/12th/13th Gen i3/i5/i7",
       "LCD Type: 15.0\" TFT-LCD; Resolution: 1024x768",
@@ -2077,7 +2077,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "series": "TPC",
     "tagline": "15.6-inch 1920x1080 industrial panel PC",
     "description": "MCTPC-1506E is an industrial panel PC with an integrated display. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
-    "image": "/assets/products/industrial/tpc-series/mctpc-1506e/images/main-square-srgb.jpg",
+    "image": "/assets/products/industrial/tpc-series/mctpc-1506e/images/main-transparent.png",
     "highlights": [
       "Intel Celeron J4125/J6412, Intel Processor N100/N150; Intel Core 8th/10th/11th/12th/13th Gen i3/i5/i7",
       "LCD Type: 15.6\" TFT-LCD; Resolution: 1920x1080",
@@ -2146,7 +2146,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "series": "TPC",
     "tagline": "18.5-inch 1920x1080 industrial panel PC",
     "description": "MCTPC-1805E is an industrial panel PC with an integrated display. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
-    "image": "/assets/products/industrial/tpc-series/mctpc-1805e/images/main-square-srgb.jpg",
+    "image": "/assets/products/industrial/tpc-series/mctpc-1805e/images/main-transparent.png",
     "highlights": [
       "Intel Celeron J4125/J6412, Intel Processor N100/N150; Intel Core 8th/10th/11th/12th/13th Gen i3/i5/i7",
       "LCD Type: 18.5\" TFT-LCD; Resolution: 1920x1080",
@@ -2215,7 +2215,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "series": "TPC",
     "tagline": "21.5-inch 1920x1080 industrial panel PC",
     "description": "MCTPC-2105E is an industrial panel PC with an integrated display. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
-    "image": "/assets/products/industrial/tpc-series/mctpc-2105e/images/main-square-srgb.jpg",
+    "image": "/assets/products/industrial/tpc-series/mctpc-2105e/images/main-transparent.png",
     "highlights": [
       "Intel Celeron J4125/J6412, Intel Processor N100/N150; Intel Core 8th/10th/11th/12th/13th Gen i3/i5/i7",
       "LCD Type: 21.5\" TFT-LCD; Resolution: 1920x1080",
@@ -2284,7 +2284,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "series": "TPC",
     "tagline": "23.8-inch 1920x1080 industrial panel PC",
     "description": "MCTPC-2308E is an industrial panel PC with an integrated display. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
-    "image": "/assets/products/industrial/tpc-series/mctpc-2308e/images/main-square-srgb.jpg",
+    "image": "/assets/products/industrial/tpc-series/mctpc-2308e/images/main-transparent.png",
     "highlights": [
       "Intel Celeron J4125/J6412, Intel Processor N100/N150; Intel Core 8th/10th/11th/12th/13th Gen i3/i5/i7",
       "LCD Type: 23.8\" TFT-LCD; Resolution: 1920x1080",

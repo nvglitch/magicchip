@@ -111,6 +111,45 @@ const compactCatalogHighlights = (specs: ProductSpec[]) => {
       return `${label} · ${compact}`;
     });
 };
+const getIndustrialGallery = (item: (typeof industrialCatalog)[number]): Pick<ProductDetail, 'galleryImages' | 'galleryCards'> => {
+  const imageBase = item.image.replace(/\/[^/]+$/, '');
+
+  if (item.series === 'TPC') {
+    const galleryImages = [`${imageBase}/enclosure-transparent.png`, `${imageBase}/interface-transparent.png`];
+    return {
+      galleryImages,
+      galleryCards: [
+        { image: galleryImages[0], title: `${item.name} enclosure design`, description: 'Rear enclosure and mounting details for panel integration.' },
+        { image: galleryImages[1], title: `${item.name} interface layout`, description: 'I/O arrangement for connecting power, network, serial devices, and peripherals.' },
+      ],
+    };
+  }
+
+  if (item.id === 'mcipca1') {
+    const galleryImages = [`${imageBase}/rear-transparent.png`, `${imageBase}/internal-transparent.png`];
+    return {
+      galleryImages,
+      galleryCards: [
+        { image: galleryImages[0], title: 'Rear I/O and enclosure layout' },
+        { image: galleryImages[1], title: 'Internal board layout', description: 'The internal hardware is retained as a supporting engineering view rather than the product hero image.' },
+      ],
+    };
+  }
+
+  if (['mcipcb7', 'mcipcb8', 'mcipcb9', 'mcipcb11', 'mcipc2a', 'mcipc2b'].includes(item.id)) {
+    const galleryImages = [`${imageBase}/rear-transparent.png`, `${imageBase}/internal-transparent.png`];
+    return {
+      galleryImages,
+      galleryCards: [
+        { image: galleryImages[0], title: `${item.name} rear I/O and enclosure` },
+        { image: galleryImages[1], title: `${item.name} internal board layout`, description: 'The motherboard is shown as a supporting engineering view, after the complete enclosure views.' },
+      ],
+    };
+  }
+
+  return {};
+};
+
 const catalogIndustrialProducts: Record<string, ProductDetail> = Object.fromEntries(
   industrialCatalog.map((item) => [
     item.id,
@@ -123,6 +162,7 @@ const catalogIndustrialProducts: Record<string, ProductDetail> = Object.fromEntr
       specs: item.specs,
       features: industrialSeriesFeatures[item.series],
       operatingRange: item.operatingRange,
+      ...getIndustrialGallery(item),
     },
   ]),
 );
@@ -580,8 +620,8 @@ const products: Record<string, ProductDetail> = {
     name: 'MCTPC-1506E',
     tagline: '15.6-inch Full HD industrial panel PC with flexible Intel platforms',
     description: 'MCTPC-1506E combines a 15.6-inch Full HD display with industrial computing, multi-serial expansion, dual 2.5GbE networking, and DC 9-36V input. Its configurable processor, memory, storage, and wireless options support machine interfaces, production dashboards, and panel-mounted control applications.',
-    images: [`${mctpc1506eImageBase}/main-square-srgb.jpg`],
-    galleryImages: [`${mctpc1506eImageBase}/view-1-square-srgb.jpg`, `${mctpc1506eImageBase}/view-2-square-srgb.jpg`],
+    images: [`${mctpc1506eImageBase}/main-transparent.png`],
+    galleryImages: [`${mctpc1506eImageBase}/enclosure-transparent.png`, `${mctpc1506eImageBase}/interface-transparent.png`],
     highlights: ['15.6-inch 1920 x 1080 display', '2 x 2.5GbE LAN', '2 x RS232/422/485 COM', 'DC 9-36V input'],
     specs: [
       { label: 'Model', value: 'MCTPC-1506E' },
@@ -689,6 +729,12 @@ export default function ProductDetailPage() {
   const productId = params.id as string;
   const [previewImage, setPreviewImage] = useState<string | null>(null);
   const product = productCategories[productId] === category ? products[productId] : undefined;
+  const industrialSeriesCode = category === 'industrial-mini-pc'
+    ? industrialCatalog.find((item) => item.id === productId)?.series.toLowerCase()
+    : undefined;
+  const backToCategoryHref = industrialSeriesCode
+    ? `/products/${category}#series-${industrialSeriesCode}`
+    : `/products/${category}`;
   const catInfo = categoryData[category] || categoryData['industrial-mini-pc'];
   const CategoryIcon = iconMap[catInfo.icon] || Cpu;
   const gallery = product?.images || [];
@@ -729,7 +775,7 @@ export default function ProductDetailPage() {
       <section className={`relative overflow-hidden bg-gradient-to-br ${catInfo.gradient} text-white`}>
         <div className="absolute inset-0 opacity-20 tech-pattern-overlay" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-          <Link href={`/products/${category}`} className="inline-flex items-center text-sm text-slate-300 hover:text-white transition-colors mb-8">
+          <Link href={backToCategoryHref} className="inline-flex items-center text-sm text-slate-300 hover:text-white transition-colors mb-8">
             <ChevronLeft className="w-4 h-4 mr-1" />
             {t.productDetail.backToCategory.replace('{category}', catInfo?.name || category)}
           </Link>
@@ -769,7 +815,7 @@ export default function ProductDetailPage() {
                 aria-label={t.productDetail.enlargeMainView.replace('{name}', product.name)}
                 className="group block w-full cursor-zoom-in rounded-lg bg-white shadow-2xl shadow-blue-950/30 ring-1 ring-amber-200/30 overflow-hidden transition-transform duration-300 hover:scale-[1.015] hover:shadow-blue-950/45"
               >
-                <img src={gallery[0]} alt={`${product.name} ${catInfo.name}`} className="aspect-square w-full object-contain transition-transform duration-500 group-hover:scale-[1.025]" />
+                <img src={gallery[0]} alt={`${product.name} ${catInfo.name}`} className={`aspect-square w-full object-contain transition-transform duration-500 group-hover:scale-[1.025] ${category === 'industrial-mini-pc' ? 'p-8 sm:p-10 lg:p-12' : ''}`} />
               </button>
             </motion.div>
           </div>

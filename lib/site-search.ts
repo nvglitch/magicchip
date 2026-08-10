@@ -46,7 +46,7 @@ export const siteSearchIndex: SearchEntry[] = [
     href: '/products/industrial-mini-pc/mctpc-1506e',
     type: 'product',
     keywords: ['industrial panel pc', 'tpc series', '15.6 inch', 'hmi display', '2.5gbe'],
-    image: '/assets/products/industrial/tpc-series/mctpc-1506e/images/main-square-srgb.jpg',
+    image: '/assets/products/industrial/tpc-series/mctpc-1506e/images/main-transparent.png',
   },
   {
     title: 'MCIPCB13',

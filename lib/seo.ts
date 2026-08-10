@@ -66,7 +66,7 @@ export const productSeo: Record<string, SeoEntry & { category: string }> = {
     name: 'MCTPC-1506E Industrial Panel PC',
     description: '15.6-inch Full HD industrial panel PC with flexible Intel processors, dual 2.5GbE, configurable COM ports, and wide-voltage input.',
     path: '/products/industrial-mini-pc/mctpc-1506e',
-    image: '/assets/products/industrial/tpc-series/mctpc-1506e/images/main-square-srgb.jpg',
+    image: '/assets/products/industrial/tpc-series/mctpc-1506e/images/main-transparent.png',
     category: 'industrial-mini-pc',
   },
   mcipcb13: {

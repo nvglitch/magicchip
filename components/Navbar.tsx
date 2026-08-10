@@ -127,7 +127,7 @@ const industrialMegaSeries: ProductMegaSeries[] = [
     code: 'TPC',
     title: 'TPC Series',
     description: 'Industrial panel PCs with integrated displays',
-    image: '/assets/products/industrial/tpc-series/mctpc-1506e/images/main-square-srgb.jpg',
+    image: '/assets/products/industrial/tpc-series/mctpc-1506e/images/main-transparent.png',
     href: '/products/industrial-mini-pc#series-tpc',
   },
 ];

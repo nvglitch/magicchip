@@ -117,7 +117,7 @@ const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: 
       id: 'mctpc-1506e',
       name: 'MCTPC-1506E',
       tagline: '15.6-inch Full HD industrial panel PC with flexible Intel platforms',
-      image: '/assets/products/industrial/tpc-series/mctpc-1506e/images/main-square-srgb.jpg',
+      image: '/assets/products/industrial/tpc-series/mctpc-1506e/images/main-transparent.png',
       specs: ['15.6-inch Full HD', '2 x 2.5GbE LAN', '2 x RS232/422/485 COM', 'DC 9-36V'],
     },
   ],
@@ -205,27 +205,28 @@ const industrialSeries = [
     code: 'TPC',
     title: 'TPC Series',
     description: 'Industrial panel PCs with integrated displays',
-    image: '/assets/products/industrial/tpc-series/mctpc-1506e/images/main-square-srgb.jpg',
+    image: '/assets/products/industrial/tpc-series/mctpc-1506e/images/main-transparent.png',
     models: industrialCatalog.filter((product) => product.series === 'TPC').map(({ id, name }) => ({ id, name })),
   },
 ];
 const richCategoryData = {
   'industrial-mini-pc': {
-    overview: 'Industrial Mini PCs place computing, display, network, and serial connectivity in compact fanless enclosures. The current MagicChip range spans equipment control, multi-display operation, and high-density edge networking without treating every deployment as the same hardware problem.',
-    qualifier: 'Processor platforms, interfaces, and operating-temperature ranges vary by model.',
+    overview: 'MagicChip Industrial Mini PCs bring processing, networking, display output, and equipment-facing I/O into compact fanless systems. They can run control software beside a machine, collect data from serial devices, drive production dashboards, or connect local equipment to an industrial edge network.',
+    qualifier: 'Choose from compact A Series systems, dual-LAN B Series, multi-COM C Series, multi-LAN D Series, or integrated-display TPC models according to the interfaces, compute platform, and installation method your project requires.',
     capabilities: [
-      { title: 'Fanless operating design', description: 'Aluminum enclosures and fanless thermal designs reduce moving parts for continuous edge deployments.' },
-      { title: 'Practical industrial I/O', description: 'Current models combine serial ports, multiple USB connections, display outputs, and wired networking.' },
-      { title: 'Choose by workload', description: 'Select flexible Intel Core platforms, lower-power processors, triple-display output, or six-LAN connectivity.' },
+      { title: 'Run beside the equipment', description: 'Compact fanless enclosures support machine-side computing where space is limited and continuous operation matters.' },
+      { title: 'Connect industrial devices', description: 'Serial ports, wired LAN, USB, and display outputs connect controllers, sensors, cameras, peripherals, and operator displays.' },
+      { title: 'Match the system to the task', description: 'Select the series by serial-port count, network architecture, display needs, compute platform, and panel-mount requirements.' },
     ],
     sceneImage: '/assets/products/category-scenes/industrial-automation.webp',
-    sceneAlt: 'Industrial robotic automation and machine-vision equipment',
+    sceneAlt: 'Automated robotic production line with conveyors, sensors, and safety systems',
     photoCredit: 'Testalize.me / Unsplash',
     photoUrl: 'https://unsplash.com/photos/industrial-robotic-arm-in-blue-lit-factory-9xHsWmh3m_4',
     scenarios: [
-      { title: 'Automation & equipment control', description: 'Serial connectivity and abundant USB ports support controllers, sensors, peripherals, and production equipment.', products: ['MCIPCB13', 'MCIPCB12'] },
-      { title: 'Digital signage & control displays', description: 'Multiple display outputs suit information screens, dashboards, and compact control-room installations.', products: ['MCIPCB12'] },
-      { title: 'Industrial edge & gateways', description: 'High-density wired networking supports segmented edge networks, gateways, and local data aggregation.', products: ['MCIPCD3'] },
+      { title: 'Compact machine-side control', description: 'A and B Series systems place control software, display output, USB peripherals, and essential serial connectivity close to the equipment.', products: ['MCIPCA1', 'MCIPCB12'] },
+      { title: 'Serial equipment & data acquisition', description: 'Multi-COM C Series models connect several controllers, instruments, readers, or legacy serial devices through one industrial computer.', products: ['MCIPC1', 'MCIPC9'] },
+      { title: 'Industrial edge & network gateways', description: 'Multi-LAN D Series and expandable box PCs support local data processing, segmented equipment networks, vision systems, and edge gateway roles.', products: ['MCIPCD3', 'MCIPCB13'] },
+      { title: 'Panel HMI & operator stations', description: 'TPC models combine the display and computer in one panel-mount system for production status, equipment operation, and on-site interaction.', products: ['MCTPC-1506E', 'MCTPC-2105E'] },
     ],
   },
   'ai-mini-pc': {
@@ -289,7 +290,9 @@ export default function CategoryPage() {
   const category = params.category as string;
 
   const catInfo = categoryData[category];
-  const products = sampleProducts[category] || [];
+  const products = category === 'industrial-mini-pc'
+    ? industrialCatalog.map(({ id, name, tagline, image, highlights }) => ({ id, name, tagline, image, specs: highlights }))
+    : sampleProducts[category] || [];
   const richContent = richCategoryData[category as keyof typeof richCategoryData] || richCategoryData['industrial-mini-pc'];
 
   const categoryName = categoryNames[category]?.[language] || categoryNames[category]?.en || category;
@@ -353,7 +356,7 @@ export default function CategoryPage() {
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">Category Overview</p>
-              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">What defines {categoryName}?</h2>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">{category === 'industrial-mini-pc' ? 'Compact computers for machines, data, and the industrial edge' : `What defines ${categoryName}?`}</h2>
             </div>
             <div>
               <p className="text-lg leading-8 text-slate-600">{richContent.overview}</p>
@@ -376,18 +379,27 @@ export default function CategoryPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">Application Scenarios</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">Where this category fits</h2>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
+              {category === 'industrial-mini-pc' ? 'From machine control to operator stations' : 'Where this category fits'}
+            </h2>
+            {category === 'industrial-mini-pc' && (
+              <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
+                The expanded range covers four box-PC interface architectures plus integrated-display panel PCs, so customers can start with the deployment task and then narrow the choice by I/O and compute platform.
+              </p>
+            )}
           </div>
-          <div className="grid overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl shadow-slate-900/10 lg:grid-cols-[1.05fr_0.95fr]">
-            <figure className="relative min-h-[360px] overflow-hidden bg-slate-900 lg:min-h-[600px]">
-              <Image src={richContent.sceneImage} alt={richContent.sceneAlt} fill sizes="(max-width: 1023px) 100vw, 650px" className="object-cover transition-transform duration-700 hover:scale-[1.02]" />
-              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/75 to-transparent px-6 pb-5 pt-16 text-xs text-white/80">
-                Photo: <a href={richContent.photoUrl} target="_blank" rel="noopener noreferrer" className="underline decoration-white/35 underline-offset-2 hover:text-white">{richContent.photoCredit}</a>
-              </figcaption>
+          <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl shadow-slate-900/10">
+            <figure className="relative aspect-[3/2] overflow-hidden bg-slate-900 lg:aspect-video">
+              <Image src={richContent.sceneImage} alt={richContent.sceneAlt} fill sizes="(max-width: 1279px) 100vw, 1280px" className="object-cover transition-transform duration-700 hover:scale-[1.02]" />
+              {category !== 'industrial-mini-pc' && (
+                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/75 to-transparent px-6 pb-5 pt-16 text-xs text-white/80">
+                  Photo: <a href={richContent.photoUrl} target="_blank" rel="noopener noreferrer" className="underline decoration-white/35 underline-offset-2 hover:text-white">{richContent.photoCredit}</a>
+                </figcaption>
+              )}
             </figure>
-            <div className="divide-y divide-slate-200">
+            <div className="grid gap-px bg-slate-200 md:grid-cols-2">
               {richContent.scenarios.map((scenario, index) => (
-                <article key={scenario.title} className="p-6 md:p-8">
+                <article key={scenario.title} className="bg-white p-6 md:p-8">
                   <div className="flex gap-4">
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-900 text-sm font-bold text-white">0{index + 1}</div>
                     <div>
