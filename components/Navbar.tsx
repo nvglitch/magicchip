@@ -51,6 +51,15 @@ type MegaMenuProduct = {
   image: string;
 };
 
+type ProductMegaSeries = {
+  id: string;
+  code: string;
+  title: string;
+  description: string;
+  image: string;
+  href: string;
+};
+
 type ScenarioMegaProduct = MegaMenuProduct & {
   category: string;
 };
@@ -78,6 +87,56 @@ const megaMenuProducts: Record<string, MegaMenuProduct[]> = {
     { id: 'mcr20', name: 'MCR20', tagline: 'Dual 10GbE and dual 2.5GbE network appliance', image: '/assets/products/firewall/mcr20/images/1.jpg' },
     { id: 'mcsrp6', name: 'MCSRP6', tagline: 'Compact dual 2.5GbE edge network appliance', image: '/assets/products/firewall/mcsrp6/images/1.jpg' },
   ],
+};
+
+const industrialMegaSeries: ProductMegaSeries[] = [
+  {
+    id: 'series-a',
+    code: 'A',
+    title: 'A Series',
+    description: 'Single COM or COM-less compact industrial computers',
+    image: '/assets/products/industrial/mcipca2/images/main-square-srgb.jpg',
+    href: '/products/industrial-mini-pc#series-a',
+  },
+  {
+    id: 'series-b',
+    code: 'B',
+    title: 'B Series',
+    description: 'Dual-LAN industrial computers with dual COM ports',
+    image: '/assets/products/industrial/mcipcb13/images/1.jpg',
+    href: '/products/industrial-mini-pc#series-b',
+  },
+  {
+    id: 'series-c',
+    code: 'C',
+    title: 'C Series',
+    description: 'Multi-COM industrial computers with dual LAN ports',
+    image: '/assets/products/industrial/mcipc9/images/main-square-srgb.jpg',
+    href: '/products/industrial-mini-pc#series-c',
+  },
+  {
+    id: 'series-d',
+    code: 'D',
+    title: 'D Series',
+    description: 'Multi-LAN industrial computers with dual COM ports',
+    image: '/assets/products/industrial/mcipcd3/images/1.jpg',
+    href: '/products/industrial-mini-pc#series-d',
+  },
+  {
+    id: 'series-tpc',
+    code: 'TPC',
+    title: 'TPC Series',
+    description: 'Industrial panel PCs with integrated displays',
+    image: '/assets/products/industrial/mctpc-1506e/images/main-square-srgb.jpg',
+    href: '/products/industrial-mini-pc#series-tpc',
+  },
+];
+
+const productCategoryImages: Record<string, string> = {
+  'industrial-mini-pc': '/assets/home/categories/industrial-mini-pc.png',
+  'ai-mini-pc': '/assets/home/categories/ai-mini-pc.png',
+  'commercial-mini-pc': '/assets/home/categories/commercial-mini-pc.png',
+  'firewall-mini-pc': '/assets/home/categories/firewall-mini-pc-server-pc.png',
 };
 
 const scenarioProduct = (category: string, id: string): ScenarioMegaProduct => ({
@@ -204,6 +263,7 @@ export default function Navbar() {
     ...item,
     id: productCategoryIds[index],
     products: megaMenuProducts[productCategoryIds[index]] || [],
+    image: productCategoryImages[productCategoryIds[index]],
   }));
   const activeMegaCategory = productMegaCategories.find(category => category.id === activeProductCategory) || productMegaCategories[0];
   const activeMegaScenario = scenarioMegaItems.find(scenario => scenario.id === activeScenario) || scenarioMegaItems[0];
@@ -343,32 +403,63 @@ export default function Navbar() {
                               </a>
                             </div>
 
-                            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                              {activeMegaCategory.products.map((product) => (
-                                <a
-                                  key={product.id}
-                                  href={`/products/${activeMegaCategory.id}/${product.id}`}
-                                  className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg"
-                                >
-                                  <div className="relative aspect-[16/9] overflow-hidden bg-white">
-                                    <Image
-                                      src={product.image}
-                                      alt={`${product.name} ${activeMegaCategory.title}`}
-                                      fill
-                                      sizes="(max-width: 1279px) 40vw, 360px"
-                                      className="object-contain scale-[1.16] transition-transform duration-300 group-hover:scale-[1.22] xl:scale-[1.2] xl:group-hover:scale-[1.26]"
-                                    />
-                                  </div>
-                                  <div className="border-t border-slate-100 px-4 py-3.5">
-                                    <div className="flex items-center justify-between gap-3">
-                                      <h4 className="font-bold text-slate-950">{product.name}</h4>
-                                      <ChevronRight className="h-4 w-4 shrink-0 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:text-blue-600" />
+                            {activeMegaCategory.id === 'industrial-mini-pc' ? (
+                              <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+                                {industrialMegaSeries.map((series) => (
+                                  <a
+                                    key={series.id}
+                                    href={series.href}
+                                    className="group flex min-h-32 items-center gap-4 rounded-2xl border border-slate-200 bg-white p-3 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg"
+                                  >
+                                    <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl bg-slate-50 ring-1 ring-slate-200">
+                                      <Image
+                                        src={series.image}
+                                        alt={`${series.title} representative industrial computer`}
+                                        fill
+                                        sizes="96px"
+                                        className="object-contain p-1.5 transition-transform duration-300 group-hover:scale-105"
+                                      />
                                     </div>
-                                    <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-slate-500">{product.tagline}</p>
-                                  </div>
-                                </a>
-                              ))}
-                            </div>
+                                    <div className="min-w-0">
+                                      <span className="inline-flex rounded-md bg-slate-950 px-2 py-0.5 text-[10px] font-bold text-white">{series.code}</span>
+                                      <div className="mt-1 flex items-center gap-1">
+                                        <h4 className="text-base font-bold text-slate-950">{series.title}</h4>
+                                        <ChevronRight className="h-4 w-4 shrink-0 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:text-blue-600" />
+                                      </div>
+                                      <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-slate-500">{series.description}</p>
+                                    </div>
+                                  </a>
+                                ))}
+                              </div>
+                            ) : (
+                              <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+                                <div className="relative aspect-[4.6/1] min-h-36 overflow-hidden bg-slate-100">
+                                  <Image
+                                    src={activeMegaCategory.image}
+                                    alt={activeMegaCategory.title}
+                                    fill
+                                    sizes="(max-width: 1279px) 70vw, 1100px"
+                                    className="object-cover"
+                                  />
+                                </div>
+                                <div className="grid gap-3 border-t border-slate-100 p-4 md:grid-cols-3">
+                                  {[
+                                    { label: 'Category Overview', hash: 'overview' },
+                                    { label: 'Application Scenarios', hash: 'applications' },
+                                    { label: 'Current Models', hash: 'models' },
+                                  ].map((section) => (
+                                    <a
+                                      key={section.hash}
+                                      href={`${activeMegaCategory.href}#${section.hash}`}
+                                      className="group flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-800 transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
+                                    >
+                                      {section.label}
+                                      <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                                    </a>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
                           </div>
                         </div>
                       </motion.div>

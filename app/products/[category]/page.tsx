@@ -428,26 +428,35 @@ export default function CategoryPage() {
           </div>
 
           {category === 'industrial-mini-pc' ? (
-            <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-              {industrialSeries.map((series, index) => (
-                <section key={series.code} className={`grid gap-6 p-6 md:grid-cols-[minmax(360px,0.8fr)_1fr] md:items-center md:p-8 ${index > 0 ? 'border-t border-slate-200' : ''}`}>
-                  <div className="flex items-center gap-5">
-                    <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-                      <img src={series.image} alt={`${series.title} representative product`} className="h-full w-full object-contain p-2" />
+            <div className="space-y-6 md:space-y-8">
+              {industrialSeries.map((series) => (
+                <section
+                  id={`series-${series.code.toLowerCase()}`}
+                  key={series.code}
+                  className="scroll-mt-28 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl hover:shadow-slate-900/10"
+                >
+                  <div className="grid gap-7 p-6 sm:p-8 md:grid-cols-[190px_minmax(0,1fr)] md:items-center lg:grid-cols-[220px_minmax(0,1fr)_auto] lg:gap-10 lg:p-10">
+                    <div className="relative aspect-square w-full max-w-[190px] justify-self-center overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm md:max-w-[220px]">
+                      <img src={series.image} alt={`${series.title} representative product`} className="h-full w-full object-contain p-3 transition-transform duration-500 hover:scale-105" />
                     </div>
-                    <div>
-                      <span className="inline-flex rounded-md bg-slate-950 px-2.5 py-1 text-xs font-bold text-white">{series.code}</span>
-                      <h3 className="mt-2 text-xl font-bold text-slate-950">{series.title}</h3>
-                      <p className="mt-1 text-sm leading-5 text-slate-500">{series.description}</p>
+
+                    <div className="min-w-0 text-center md:text-left">
+                      <span className="inline-flex rounded-lg bg-slate-950 px-3 py-1.5 text-xs font-bold tracking-wide text-white">{series.code}</span>
+                      <h3 className="mt-3 text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl">{series.title}</h3>
+                      <p className="mt-2 max-w-xl text-base leading-7 text-slate-600">{series.description}</p>
+                      <p className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
+                        {series.models.length} {series.models.length === 1 ? 'current model' : 'current models'}
+                      </p>
                     </div>
-                  </div>
-                  <div className="flex flex-wrap gap-3 md:justify-end">
-                    {series.models.map((model) => (
-                      <Link key={model.id} href={`/products/industrial-mini-pc/${model.id}`} className="group inline-flex items-center rounded-xl border border-blue-200 bg-blue-50 px-5 py-3 font-semibold text-blue-800 transition-all hover:-translate-y-0.5 hover:border-blue-400 hover:bg-blue-100 hover:shadow-md">
-                        {model.name}
-                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                      </Link>
-                    ))}
+
+                    <div className="flex flex-wrap justify-center gap-3 md:col-start-2 md:justify-start lg:col-start-auto lg:justify-end">
+                      {series.models.map((model) => (
+                        <Link key={model.id} href={`/products/industrial-mini-pc/${model.id}`} className="group inline-flex items-center rounded-xl border border-blue-200 bg-blue-50 px-5 py-3.5 font-semibold text-blue-800 transition-all hover:-translate-y-0.5 hover:border-blue-400 hover:bg-blue-100 hover:shadow-md">
+                          {model.name}
+                          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 </section>
               ))}
