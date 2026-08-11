@@ -43,6 +43,7 @@ type ProductInput = {
   dimensions?: string;
   operatingRange?: string;
   galleryCount?: number;
+  includeMainInGallery?: boolean;
   highlights: string[];
 };
 
@@ -68,7 +69,10 @@ const createProduct = (input: ProductInput): FirewallCatalogItem => {
     tagline: input.tagline,
     description: input.description,
     image: `${imageBase}/main-square.png`,
-    galleryImages: Array.from({ length: input.galleryCount ?? 2 }, (_, index) => `${imageBase}/view-${index + 1}.png`),
+    galleryImages: [
+      ...(input.includeMainInGallery ? [`${imageBase}/main-square.png`] : []),
+      ...Array.from({ length: input.galleryCount ?? 2 }, (_, index) => `${imageBase}/view-${index + 1}.png`),
+    ],
     highlights: input.highlights,
     specs,
     operatingRange: input.operatingRange,
@@ -190,7 +194,7 @@ export const firewallCatalog: FirewallCatalogItem[] = [
     description: 'MGSRN100-V1 combines Alder Lake-N processors, four Intel 2.5GbE interfaces, DDR5 memory, HDMI 2.1, DisplayPort 1.4, and PCIe NVMe storage.',
     cpu: 'Intel N100 / N200 / Core i3-N305', memory: 'DDR5, up to 32GB', network: '4 x Intel i226-V 2.5GbE',
     display: 'HDMI 2.1 and DisplayPort 1.4', usb: '4 x USB 2.0', storage: 'M.2 NVMe PCIe x4',
-    expansion: 'M.2 E-Key for Wi-Fi 6', power: 'DC 12V', operatingRange: '0°C to 70°C', galleryCount: 1,
+    expansion: 'M.2 E-Key for Wi-Fi 6', power: 'DC 12V', operatingRange: '0°C to 70°C', galleryCount: 1, includeMainInGallery: true,
     highlights: ['Intel Alder Lake-N', '4 x Intel 2.5GbE', 'DDR5 up to 32GB', 'HDMI 2.1 + DisplayPort 1.4'],
   }),
 
