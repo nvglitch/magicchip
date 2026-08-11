@@ -182,7 +182,7 @@ export interface TranslationSchema {
     technicalSpecifications: string;
     industrialConfigDetails: string;
     specificationMatrix: string;
-    brochureParameters: string;
+    hardwareParameters: string;
     operatingRange: string;
     industrialRated: string;
     productAdvantages: string;

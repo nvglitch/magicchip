@@ -21,6 +21,7 @@ import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { industrialCatalog, type IndustrialSeriesCode } from '@/lib/industrial-catalog';
+import { firewallCatalog, type FirewallSeriesCode } from '@/lib/firewall-catalog';
 
 type ProductSpec = { label: string; value: string };
 type ProductFeature = { icon: keyof typeof iconMap; title: string; description: string };
@@ -57,7 +58,7 @@ const categoryData: Record<string, { name: string; icon: keyof typeof iconMap; g
 const industrialSeriesFeatures: Record<IndustrialSeriesCode, ProductFeature[]> = {
   A: [
     { icon: 'Cpu', title: 'Compact Industrial Platform', description: 'A-series systems focus on compact deployment with single-COM or COM-less interface architecture.' },
-    { icon: 'Network', title: 'Practical Connectivity', description: 'Available network, USB, display, and expansion interfaces are listed in each supplied product brochure.' },
+    { icon: 'Network', title: 'Practical Connectivity', description: 'Network, USB, display, and expansion interfaces vary by model and selected configuration.' },
     { icon: 'Layers', title: 'Configuration Options', description: 'Processor, memory, storage, and wireless options vary by model and selected platform.' },
   ],
   B: [
@@ -68,7 +69,7 @@ const industrialSeriesFeatures: Record<IndustrialSeriesCode, ProductFeature[]> =
   C: [
     { icon: 'Server', title: 'Multi-COM Architecture', description: 'C-series systems provide multiple serial interfaces for equipment control and data acquisition.' },
     { icon: 'Network', title: 'Dual-LAN Connectivity', description: 'Dual network interfaces support connected automation and industrial edge roles.' },
-    { icon: 'Cpu', title: 'Multiple Compute Platforms', description: 'Available processor and memory configurations are listed in the supplied brochure for each model.' },
+    { icon: 'Cpu', title: 'Multiple Compute Platforms', description: 'Processor and memory options vary by model and selected configuration.' },
   ],
   D: [
     { icon: 'Network', title: 'Multi-LAN Architecture', description: 'D-series systems provide multiple dedicated network interfaces for edge and gateway deployments.' },
@@ -82,6 +83,33 @@ const industrialSeriesFeatures: Record<IndustrialSeriesCode, ProductFeature[]> =
   ],
 };
 
+const firewallSeriesFeatures: Record<FirewallSeriesCode, ProductFeature[]> = {
+  '2L': [
+    { icon: 'Network', title: 'Focused Dual-Port Architecture', description: 'Two dedicated Ethernet interfaces suit compact WAN/LAN, firewall, VPN, and edge gateway deployments.' },
+    { icon: 'Cpu', title: 'Compact x86 Platform', description: 'Low-power Intel processor options support compatible network operating systems and local services.' },
+    { icon: 'HardDrive', title: 'Local Storage Options', description: 'Model-specific NVMe, mSATA, and SATA options support the selected software and service configuration.' },
+  ],
+  '4L': [
+    { icon: 'Network', title: 'Four Dedicated Network Ports', description: 'Four-port layouts support multi-WAN routing, network segmentation, and branch gateway configurations.' },
+    { icon: 'Layers', title: 'Wireless and Cellular Expansion', description: 'Selected models provide Mini PCIe or M.2 expansion for compatible Wi-Fi and cellular modules.' },
+    { icon: 'Monitor', title: 'Local Display Connectivity', description: 'HDMI and DisplayPort options simplify setup, diagnostics, and local management where required.' },
+  ],
+  '6L': [
+    { icon: 'Network', title: 'Six-Port Network Architecture', description: 'Six dedicated interfaces provide additional flexibility for branch, SD-WAN, and segmented-network designs.' },
+    { icon: 'Cpu', title: 'Intel Core Performance Options', description: 'Selected models use Intel Core U-series processors with higher memory capacity for more demanding services.' },
+    { icon: 'HardDrive', title: 'Multi-Drive Storage', description: 'NVMe and SATA options support operating systems, logs, local applications, and project-specific storage needs.' },
+  ],
+  '10G': [
+    { icon: 'Zap', title: '10GbE Connectivity', description: 'Selected models combine 10GbE RJ45 or SFP+ links with 2.5GbE interfaces for high-speed network edge designs.' },
+    { icon: 'Network', title: 'Copper and Fiber Options', description: 'Choose the model and interface format that matches the required uplink and local network infrastructure.' },
+    { icon: 'Server', title: 'Purpose-Built Network Platform', description: 'Dedicated multi-port hardware suits compatible routing, firewall, gateway, and network-service software.' },
+  ],
+  '1U': [
+    { icon: 'Server', title: '1U Rackmount Format', description: 'Rackmount chassis and integrated AC power suit equipment rooms, network cabinets, and centralized deployments.' },
+    { icon: 'HardDrive', title: 'Storage and Expansion', description: 'Model-specific SATA, NVMe, PCIe, and wireless or cellular options support varied server and network roles.' },
+    { icon: 'Cpu', title: 'Broad Compute Range', description: 'The series spans low-power Intel platforms, desktop-class processors, and dual Xeon server configurations.' },
+  ],
+};
 const compactCatalogHighlights = (specs: ProductSpec[]) => {
   const preferredLabels = ['CPU', 'Display', 'Network', 'Serial', 'Dimensions', 'USB'];
 
@@ -166,8 +194,29 @@ const catalogIndustrialProducts: Record<string, ProductDetail> = Object.fromEntr
     },
   ]),
 );
+const catalogFirewallProducts: Record<string, ProductDetail> = Object.fromEntries(
+  firewallCatalog.map((item) => [
+    item.id,
+    {
+      name: item.name,
+      tagline: item.tagline,
+      description: item.description,
+      images: [item.image],
+      galleryImages: item.galleryImages,
+      galleryCards: item.galleryImages.map((image, index) => ({
+        image,
+        title: index === 0 ? `${item.name} enclosure and interface view` : `${item.name} product view ${index + 1}`,
+      })),
+      highlights: item.highlights,
+      specs: item.specs,
+      features: firewallSeriesFeatures[item.series],
+      operatingRange: item.operatingRange,
+    },
+  ]),
+);
 const products: Record<string, ProductDetail> = {
   ...catalogIndustrialProducts,
+  ...catalogFirewallProducts,
   mcipcb13: {
     name: 'MCIPCB13',
     tagline: 'Industrial Mini PC for dependable multi-I/O edge deployment',
@@ -426,7 +475,7 @@ const products: Record<string, ProductDetail> = {
       { image: '/assets/products/firewall/mcsrp6/images/6.jpg', title: 'Standard interface layout', description: 'The standard front and rear interface map makes installation planning and cable routing straightforward.' },
       { image: '/assets/products/firewall/mcsrp6/images/7.jpg', title: 'Optional expansion-panel configurations', description: 'Optional rear-panel configurations support additional USB 2.0 connections or SFF-8654 and ATX power expansion with the corresponding parts and cables.' },
       { image: '/assets/products/firewall/mcsrp6/images/5.jpg', title: '80 x 80 mm fan mounting support', description: 'Reserved mounting holes allow an 80 x 80 mm fan to be added when the deployment requires active airflow.' },
-      { image: '/assets/products/firewall/mcsrp6/images/4.jpg', title: 'Broad edge and network applications', description: 'The supplied product material positions MCSRP6 for AI robots, smart homes, smart hardware, soft routers, 3D printers, and education.' },
+      { image: '/assets/products/firewall/mcsrp6/images/4.jpg', title: 'Broad edge and network applications', description: 'MCSRP6 supports varied edge and network deployments, including AI robots, smart homes, smart hardware, soft routers, 3D printers, and education.' },
     ],
     advantageSummary: 'MCSRP6 combines modern low-power Intel processor options, dual 2.5GbE networking, DDR5 memory, 4K dual-display output, and a broad set of internal expansion connections in a compact aluminum-alloy enclosure.',
     operatingRange: '0°C to 75°C',
@@ -695,6 +744,7 @@ const products: Record<string, ProductDetail> = {
 
 const productCategories: Record<string, string> = {
   ...Object.fromEntries(industrialCatalog.map((item) => [item.id, 'industrial-mini-pc'])),
+  ...Object.fromEntries(firewallCatalog.map((item) => [item.id, 'firewall-mini-pc'])),
   mcipcb13: 'industrial-mini-pc',
   mcipcb12: 'industrial-mini-pc',
   mcipcd3: 'industrial-mini-pc',
@@ -732,8 +782,12 @@ export default function ProductDetailPage() {
   const industrialSeriesCode = category === 'industrial-mini-pc'
     ? industrialCatalog.find((item) => item.id === productId)?.series.toLowerCase()
     : undefined;
-  const backToCategoryHref = industrialSeriesCode
-    ? `/products/${category}#series-${industrialSeriesCode}`
+  const firewallSeriesCode = category === 'firewall-mini-pc'
+    ? firewallCatalog.find((item) => item.id === productId)?.series.toLowerCase()
+    : undefined;
+  const categorySeriesCode = industrialSeriesCode || firewallSeriesCode;
+  const backToCategoryHref = categorySeriesCode
+    ? `/products/${category}#series-${categorySeriesCode}`
     : `/products/${category}`;
   const needsHeroImagePadding =
     productId === 'mcipcb7' ||
@@ -875,7 +929,7 @@ export default function ProductDetailPage() {
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 bg-gradient-to-r from-[#172033] via-blue-950 to-[#172033] px-6 md:px-8 py-6 text-white">
               <div>
                 <p className="text-sm uppercase tracking-[0.18em] text-blue-200 mb-2">{t.productDetail.specificationMatrix.replace('{name}', product.name)}</p>
-                <h3 className="text-2xl font-bold">{t.productDetail.brochureParameters}</h3>
+                <h3 className="text-2xl font-bold">{t.productDetail.hardwareParameters}</h3>
               </div>
               <div className="rounded-lg border border-amber-300/30 bg-amber-300/10 px-4 py-3 text-left md:text-right">
                 <p className="text-xs uppercase tracking-[0.16em] text-amber-200">{t.productDetail.operatingRange}</p>

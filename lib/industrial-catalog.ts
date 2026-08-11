@@ -14,14 +14,14 @@ export type IndustrialCatalogItem = {
   operatingRange?: string;
 };
 
-// Product facts are derived from the supplied one-page IPC brochures.
+// Product facts are based on the available source specifications.
 export const industrialCatalog: IndustrialCatalogItem[] = [
   {
     "id": "mcipca1",
     "name": "MCIPCA1",
     "series": "A",
     "tagline": "MCIPCA1 compact A Series industrial computer",
-    "description": "MCIPCA1 is a compact industrial computer with a single-COM or COM-less architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPCA1 is a compact industrial computer with a single-COM or COM-less architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/a-series/mcipca1/images/main-transparent.png",
     "highlights": [
       "Onboard Intel Celeron J6412/ Pentium J6426",
@@ -90,7 +90,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPCA2",
     "series": "A",
     "tagline": "MCIPCA2 compact A Series industrial computer",
-    "description": "MCIPCA2 is a compact industrial computer with a single-COM or COM-less architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPCA2 is a compact industrial computer with a single-COM or COM-less architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/a-series/mcipca2/images/main-square-srgb.jpg",
     "highlights": [
       "Intel® J4125",
@@ -159,7 +159,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPCB10",
     "series": "B",
     "tagline": "MCIPCB10 dual-LAN, dual-COM industrial computer",
-    "description": "MCIPCB10 is an industrial computer with dual-LAN and dual-COM architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPCB10 is an industrial computer with dual-LAN and dual-COM architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/b-series/mcipcb10/images/main-square-srgb.jpg",
     "highlights": [
       "Intel Celeron,Pentium,Core®I3/I5/I7 Haswell/Broadwell-U",
@@ -220,7 +220,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPCB11",
     "series": "B",
     "tagline": "MCIPCB11 dual-LAN, dual-COM industrial computer",
-    "description": "MCIPCB11 is an industrial computer with dual-LAN and dual-COM architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPCB11 is an industrial computer with dual-LAN and dual-COM architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/b-series/mcipcb11/images/main-transparent.png",
     "highlights": [
       "Intel N100",
@@ -285,7 +285,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPCB12",
     "series": "B",
     "tagline": "MCIPCB12 dual-LAN, dual-COM industrial computer",
-    "description": "MCIPCB12 is an industrial computer with dual-LAN and dual-COM architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPCB12 is an industrial computer with dual-LAN and dual-COM architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/b-series/mcipcb12/images/main-square-srgb.jpg",
     "highlights": [
       "Intel® Elkhart Lake J6412/J6413/J6426",
@@ -354,7 +354,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPCB13",
     "series": "B",
     "tagline": "MCIPCB13 dual-LAN, dual-COM industrial computer",
-    "description": "MCIPCB13 is an industrial computer with dual-LAN and dual-COM architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPCB13 is an industrial computer with dual-LAN and dual-COM architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/b-series/mcipcb13/images/main-square-srgb.jpg",
     "highlights": [
       "Optional Intel 4th/5th/6th/7th/8th/10th Gen Core i3/i5/i7 CPU",
@@ -419,7 +419,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPCB2-D3",
     "series": "B",
     "tagline": "MCIPCB2-D3 dual-LAN, dual-COM industrial computer",
-    "description": "MCIPCB2-D3 is an industrial computer with dual-LAN and dual-COM architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPCB2-D3 is an industrial computer with dual-LAN and dual-COM architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/b-series/mcipcb2-d3/images/main-square-srgb.jpg",
     "highlights": [
       "Intel Celeron series",
@@ -488,7 +488,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPCB2-D4",
     "series": "B",
     "tagline": "MCIPCB2-D4 dual-LAN, dual-COM industrial computer",
-    "description": "MCIPCB2-D4 is an industrial computer with dual-LAN and dual-COM architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPCB2-D4 is an industrial computer with dual-LAN and dual-COM architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/b-series/mcipcb2-d4/images/main-square-srgb.jpg",
     "highlights": [
       "Intel Celeron N4000 / J4125",
@@ -557,7 +557,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPCB2-J5005",
     "series": "B",
     "tagline": "MCIPCB2-J5005 dual-LAN, dual-COM industrial computer",
-    "description": "MCIPCB2-J5005 is an industrial computer with dual-LAN and dual-COM architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPCB2-J5005 is an industrial computer with dual-LAN and dual-COM architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/b-series/mcipcb2-j5005/images/main-square-srgb.jpg",
     "highlights": [
       "Intel® Pentium® Silver J5005 Processor",
@@ -626,7 +626,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPCB3",
     "series": "B",
     "tagline": "MCIPCB3 dual-LAN, dual-COM industrial computer",
-    "description": "MCIPCB3 is an industrial computer with dual-LAN and dual-COM architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPCB3 is an industrial computer with dual-LAN and dual-COM architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/b-series/mcipcb3/images/main-square-srgb.jpg",
     "highlights": [
       "Intel N100",
@@ -691,7 +691,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPCB4",
     "series": "B",
     "tagline": "MCIPCB4 dual-LAN, dual-COM industrial computer",
-    "description": "MCIPCB4 is an industrial computer with dual-LAN and dual-COM architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPCB4 is an industrial computer with dual-LAN and dual-COM architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/b-series/mcipcb4/images/main-square-srgb.jpg",
     "highlights": [
       "Intel Celeron N5105",
@@ -752,7 +752,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPCB5",
     "series": "B",
     "tagline": "MCIPCB5 dual-LAN, dual-COM industrial computer",
-    "description": "MCIPCB5 is an industrial computer with dual-LAN and dual-COM architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPCB5 is an industrial computer with dual-LAN and dual-COM architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/b-series/mcipcb5/images/main-square-srgb.jpg",
     "highlights": [
       "Intel Celeron Processor N2840",
@@ -809,7 +809,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPCB7",
     "series": "B",
     "tagline": "MCIPCB7 dual-LAN, dual-COM industrial computer",
-    "description": "MCIPCB7 is an industrial computer with dual-LAN and dual-COM architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPCB7 is an industrial computer with dual-LAN and dual-COM architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/b-series/mcipcb7/images/main-transparent.png",
     "highlights": [
       "Intel Sky Lake-U Kaby Lake-U Core i3 i5 i7",
@@ -870,7 +870,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPCB8",
     "series": "B",
     "tagline": "MCIPCB8 dual-LAN, dual-COM industrial computer",
-    "description": "MCIPCB8 is an industrial computer with dual-LAN and dual-COM architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPCB8 is an industrial computer with dual-LAN and dual-COM architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/b-series/mcipcb8/images/main-transparent.png",
     "highlights": [
       "Intel ® Celeron N150 0.8GHz quad-core processor",
@@ -935,7 +935,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPCB9",
     "series": "B",
     "tagline": "MCIPCB9 dual-LAN, dual-COM industrial computer",
-    "description": "MCIPCB9 is an industrial computer with dual-LAN and dual-COM architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPCB9 is an industrial computer with dual-LAN and dual-COM architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/b-series/mcipcb9/images/main-transparent.png",
     "highlights": [
       "Intel N2840/ N2930/J1900(2core 2.0GHz)",
@@ -992,7 +992,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPC1",
     "series": "C",
     "tagline": "MCIPC1 multi-COM industrial computer with dual LAN",
-    "description": "MCIPC1 is a multi-COM industrial computer with dual-LAN architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPC1 is a multi-COM industrial computer with dual-LAN architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/c-series/mcipc1/images/main-square-srgb.jpg",
     "highlights": [
       "Intel Core i7-1355U 1.7GHz up to 5.0GHz;10 Core 12 threads 12MB cache",
@@ -1057,7 +1057,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPC2A",
     "series": "C",
     "tagline": "MCIPC2A multi-COM industrial computer with dual LAN",
-    "description": "MCIPC2A is a multi-COM industrial computer with dual-LAN architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPC2A is a multi-COM industrial computer with dual-LAN architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/c-series/mcipc2a/images/main-transparent.png",
     "highlights": [
       "Optional Intel® Atom™ J1900 Quad Core 2.0GHz",
@@ -1122,7 +1122,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPC2B",
     "series": "C",
     "tagline": "MCIPC2B multi-COM industrial computer with dual LAN",
-    "description": "MCIPC2B is a multi-COM industrial computer with dual-LAN architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPC2B is a multi-COM industrial computer with dual-LAN architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/c-series/mcipc2b/images/main-transparent.png",
     "highlights": [
       "Intel i3-6157U/i3-7100U/i3-8130U",
@@ -1191,7 +1191,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPC3",
     "series": "C",
     "tagline": "MCIPC3 multi-COM industrial computer with dual LAN",
-    "description": "MCIPC3 is a multi-COM industrial computer with dual-LAN architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPC3 is a multi-COM industrial computer with dual-LAN architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/c-series/mcipc3/images/main-square-srgb.jpg",
     "highlights": [
       "Intel Atom J1900 Processor",
@@ -1260,7 +1260,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPC4",
     "series": "C",
     "tagline": "MCIPC4 multi-COM industrial computer with dual LAN",
-    "description": "MCIPC4 is a multi-COM industrial computer with dual-LAN architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPC4 is a multi-COM industrial computer with dual-LAN architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/c-series/mcipc4/images/main-square-srgb.jpg",
     "highlights": [
       "Intel Core i3-6157U / Intel Atom J4125 / Intel Atom J1900",
@@ -1329,7 +1329,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPC6",
     "series": "C",
     "tagline": "MCIPC6 multi-COM industrial computer with dual LAN",
-    "description": "MCIPC6 is a multi-COM industrial computer with dual-LAN architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPC6 is a multi-COM industrial computer with dual-LAN architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/c-series/mcipc6/images/main-square-srgb.jpg",
     "highlights": [
       "Optional Intel 4th/5th/6th/7th/8th/10th Gen Core i3/i5/i7 CPU",
@@ -1398,7 +1398,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPC7",
     "series": "C",
     "tagline": "MCIPC7 multi-COM industrial computer with dual LAN",
-    "description": "MCIPC7 is a multi-COM industrial computer with dual-LAN architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPC7 is a multi-COM industrial computer with dual-LAN architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/c-series/mcipc7/images/main-square-srgb.jpg",
     "highlights": [
       "Optional Intel 4th Gen Core i3/i5/i7 CPU",
@@ -1467,7 +1467,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPC8",
     "series": "C",
     "tagline": "MCIPC8 multi-COM industrial computer with dual LAN",
-    "description": "MCIPC8 is a multi-COM industrial computer with dual-LAN architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPC8 is a multi-COM industrial computer with dual-LAN architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/c-series/mcipc8/images/main-square-srgb.jpg",
     "highlights": [
       "Optional Intel 4th/5th/6th/7th/8th/10th Gen Core i3/i5/i7 CPU",
@@ -1536,7 +1536,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPC9",
     "series": "C",
     "tagline": "MCIPC9 multi-COM industrial computer with dual LAN",
-    "description": "MCIPC9 is a multi-COM industrial computer with dual-LAN architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPC9 is a multi-COM industrial computer with dual-LAN architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/c-series/mcipc9/images/main-square-srgb.jpg",
     "highlights": [
       "Intel Core 14th Gen Ultra 125U / 125H / 155H / 185H full series processors",
@@ -1601,7 +1601,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPCD1",
     "series": "D",
     "tagline": "MCIPCD1 multi-LAN industrial computer with dual COM",
-    "description": "MCIPCD1 is a multi-LAN industrial computer with dual-COM architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPCD1 is a multi-LAN industrial computer with dual-COM architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/d-series/mcipcd1/images/main-square-srgb.jpg",
     "highlights": [
       "Intel Celeron N5095/N5105 (Select option)",
@@ -1670,7 +1670,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPCD2",
     "series": "D",
     "tagline": "MCIPCD2 multi-LAN industrial computer with dual COM",
-    "description": "MCIPCD2 is a multi-LAN industrial computer with dual-COM architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPCD2 is a multi-LAN industrial computer with dual-COM architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/d-series/mcipcd2/images/main-square-srgb.jpg",
     "highlights": [
       "Intel EHL J6412/J6413/J6426 or Intel ADL-N N95/N100/N200/N300",
@@ -1739,7 +1739,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCIPCD3",
     "series": "D",
     "tagline": "MCIPCD3 multi-LAN industrial computer with dual COM",
-    "description": "MCIPCD3 is a multi-LAN industrial computer with dual-COM architecture. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCIPCD3 is a multi-LAN industrial computer with dual-COM architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/d-series/mcipcd3/images/main-square-srgb.jpg",
     "highlights": [
       "Optional Intel 2955U, 4th/6th/7th/8th Gen Core i3/i5/i7 CPU",
@@ -1804,7 +1804,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCTPC-1201E",
     "series": "TPC",
     "tagline": "12.1-inch 1024x768 industrial panel PC",
-    "description": "MCTPC-1201E is an industrial panel PC with an integrated display. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCTPC-1201E is an industrial panel PC with an integrated display. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/tpc-series/mctpc-1201e/images/main-transparent.png",
     "highlights": [
       "Intel Celeron J4125/J6412, Intel Processor N100/N150; Intel Core 8th/10th/11th/12th/13th Gen i3/i5/i7",
@@ -1873,7 +1873,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCTPC-1303E",
     "series": "TPC",
     "tagline": "13.3-inch 1920x1080 industrial panel PC",
-    "description": "MCTPC-1303E is an industrial panel PC with an integrated display. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCTPC-1303E is an industrial panel PC with an integrated display. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/tpc-series/mctpc-1303e/images/main-transparent.png",
     "highlights": [
       "Intel Celeron J4125/J6412, Intel Processor N100/N150; Intel Core 8th/10th/11th/12th/13th Gen i3/i5/i7",
@@ -1942,7 +1942,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCTPC-1501B",
     "series": "TPC",
     "tagline": "15.0-inch 1024x768 industrial panel PC",
-    "description": "MCTPC-1501B is an industrial panel PC with an integrated display. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCTPC-1501B is an industrial panel PC with an integrated display. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/tpc-series/mctpc-1501b/images/main-transparent.png",
     "highlights": [
       "Intel Celeron J4125/J6412, Intel Core 8th/10th/11th Gen-U i5/i7",
@@ -2007,7 +2007,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCTPC-1501E",
     "series": "TPC",
     "tagline": "15.0-inch 1024x768 industrial panel PC",
-    "description": "MCTPC-1501E is an industrial panel PC with an integrated display. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCTPC-1501E is an industrial panel PC with an integrated display. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/tpc-series/mctpc-1501e/images/main-transparent.png",
     "highlights": [
       "Intel Celeron J4125/J6412, Intel Processor N100/N150; Intel Core 8th/10th/11th/12th/13th Gen i3/i5/i7",
@@ -2076,7 +2076,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCTPC-1506E",
     "series": "TPC",
     "tagline": "15.6-inch 1920x1080 industrial panel PC",
-    "description": "MCTPC-1506E is an industrial panel PC with an integrated display. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCTPC-1506E is an industrial panel PC with an integrated display. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/tpc-series/mctpc-1506e/images/main-transparent.png",
     "highlights": [
       "Intel Celeron J4125/J6412, Intel Processor N100/N150; Intel Core 8th/10th/11th/12th/13th Gen i3/i5/i7",
@@ -2145,7 +2145,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCTPC-1805E",
     "series": "TPC",
     "tagline": "18.5-inch 1920x1080 industrial panel PC",
-    "description": "MCTPC-1805E is an industrial panel PC with an integrated display. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCTPC-1805E is an industrial panel PC with an integrated display. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/tpc-series/mctpc-1805e/images/main-transparent.png",
     "highlights": [
       "Intel Celeron J4125/J6412, Intel Processor N100/N150; Intel Core 8th/10th/11th/12th/13th Gen i3/i5/i7",
@@ -2214,7 +2214,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCTPC-2105E",
     "series": "TPC",
     "tagline": "21.5-inch 1920x1080 industrial panel PC",
-    "description": "MCTPC-2105E is an industrial panel PC with an integrated display. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCTPC-2105E is an industrial panel PC with an integrated display. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/tpc-series/mctpc-2105e/images/main-transparent.png",
     "highlights": [
       "Intel Celeron J4125/J6412, Intel Processor N100/N150; Intel Core 8th/10th/11th/12th/13th Gen i3/i5/i7",
@@ -2283,7 +2283,7 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "name": "MCTPC-2308E",
     "series": "TPC",
     "tagline": "23.8-inch 1920x1080 industrial panel PC",
-    "description": "MCTPC-2308E is an industrial panel PC with an integrated display. Available processor, memory, storage, and interface configurations are listed from the supplied product brochure.",
+    "description": "MCTPC-2308E is an industrial panel PC with an integrated display. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
     "image": "/assets/products/industrial/tpc-series/mctpc-2308e/images/main-transparent.png",
     "highlights": [
       "Intel Celeron J4125/J6412, Intel Processor N100/N150; Intel Core 8th/10th/11th/12th/13th Gen i3/i5/i7",

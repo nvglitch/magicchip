@@ -132,6 +132,48 @@ const industrialMegaSeries: ProductMegaSeries[] = [
   },
 ];
 
+const firewallMegaSeries: ProductMegaSeries[] = [
+  {
+    id: 'series-2l',
+    code: '2L',
+    title: '2-Port Edge Series',
+    description: 'Compact dual-LAN firewall, VPN, and edge gateway appliances',
+    image: '/assets/products/firewall/dual-port-series/mcsrp6/images/main-square.png',
+    href: '/products/firewall-mini-pc#series-2l',
+  },
+  {
+    id: 'series-4l',
+    code: '4L',
+    title: '4-Port Router Series',
+    description: 'Four-port platforms for multi-WAN and segmented networks',
+    image: '/assets/products/firewall/quad-port-series/mc30s-n100/images/main-square.png',
+    href: '/products/firewall-mini-pc#series-4l',
+  },
+  {
+    id: 'series-6l',
+    code: '6L',
+    title: '6-Port Gateway Series',
+    description: 'Six-port appliances for branch gateways and SD-WAN',
+    image: '/assets/products/firewall/six-port-series/mcsr613u/images/main-square.png',
+    href: '/products/firewall-mini-pc#series-6l',
+  },
+  {
+    id: 'series-10g',
+    code: '10G',
+    title: '10GbE & Fiber Series',
+    description: 'High-speed RJ45 and SFP+ network edge platforms',
+    image: '/assets/products/firewall/high-speed-series/mcr20/images/main-square.png',
+    href: '/products/firewall-mini-pc#series-10g',
+  },
+  {
+    id: 'series-1u',
+    code: '1U',
+    title: '1U Server Series',
+    description: 'Rackmount network and server systems with expansion',
+    image: '/assets/products/firewall/server-series/mc14n-1u6l/images/main-square.png',
+    href: '/products/firewall-mini-pc#series-1u',
+  },
+];
 const productCategoryImages: Record<string, string> = {
   'industrial-mini-pc': '/assets/home/categories/industrial-mini-pc.png',
   'ai-mini-pc': '/assets/home/categories/ai-mini-pc.png',
@@ -403,9 +445,9 @@ export default function Navbar() {
                               </a>
                             </div>
 
-                            {activeMegaCategory.id === 'industrial-mini-pc' ? (
+                            {(activeMegaCategory.id === 'industrial-mini-pc' || activeMegaCategory.id === 'firewall-mini-pc') ? (
                               <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-                                {industrialMegaSeries.map((series) => (
+                                {(activeMegaCategory.id === 'industrial-mini-pc' ? industrialMegaSeries : firewallMegaSeries).map((series) => (
                                   <a
                                     key={series.id}
                                     href={series.href}
@@ -414,7 +456,7 @@ export default function Navbar() {
                                     <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl bg-slate-50 ring-1 ring-slate-200">
                                       <Image
                                         src={series.image}
-                                        alt={`${series.title} representative industrial computer`}
+                                        alt={`${series.title} representative product`}
                                         fill
                                         sizes="96px"
                                         className="object-contain p-1.5 transition-transform duration-300 group-hover:scale-105"

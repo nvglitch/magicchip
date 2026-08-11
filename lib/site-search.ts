@@ -1,4 +1,5 @@
 import { industrialCatalog } from '@/lib/industrial-catalog';
+import { firewallCatalog } from '@/lib/firewall-catalog';
 
 export type SearchEntryType = 'product' | 'category' | 'scenario' | 'page' | 'resource';
 
@@ -22,8 +23,26 @@ const catalogIndustrialSearchEntries: SearchEntry[] = industrialCatalog
     keywords: ['industrial mini pc', `${item.series.toLowerCase()} series`, item.name.toLowerCase()],
     image: item.image,
   }));
+const curatedFirewallSearchIds = new Set(['mcr20', 'mcsrp6']);
+const catalogFirewallSearchEntries: SearchEntry[] = firewallCatalog
+  .filter((item) => !curatedFirewallSearchIds.has(item.id))
+  .map((item) => ({
+    title: item.name,
+    description: item.tagline,
+    href: `/products/firewall-mini-pc/${item.id}`,
+    type: 'product',
+    keywords: [
+      'firewall mini pc',
+      'network appliance',
+      `${item.series.toLowerCase()} series`,
+      item.series === '1U' ? 'rackmount server' : 'router gateway',
+      item.name.toLowerCase(),
+    ],
+    image: item.image,
+  }));
 export const siteSearchIndex: SearchEntry[] = [
   ...catalogIndustrialSearchEntries,
+  ...catalogFirewallSearchEntries,
   {
     title: 'MCIPCA2',
     description: 'Compact A-series industrial Mini PC with one RS232 COM port and four Intel Gigabit LAN ports.',

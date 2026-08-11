@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { industrialCatalog } from '@/lib/industrial-catalog';
+import { firewallCatalog } from '@/lib/firewall-catalog';
 
 export const SITE_URL = 'https://szmagicchip.com';
 export const SITE_NAME = 'MagicChip';
@@ -46,8 +47,21 @@ const catalogProductSeo: Record<string, SeoEntry & { category: string }> = Objec
     },
   ]),
 );
+const catalogFirewallProductSeo: Record<string, SeoEntry & { category: string }> = Object.fromEntries(
+  firewallCatalog.map((item) => [
+    item.id,
+    {
+      name: `${item.name} Network Appliance`,
+      description: item.tagline,
+      path: `/products/firewall-mini-pc/${item.id}`,
+      image: item.image,
+      category: 'firewall-mini-pc',
+    },
+  ]),
+);
 export const productSeo: Record<string, SeoEntry & { category: string }> = {
   ...catalogProductSeo,
+  ...catalogFirewallProductSeo,
   mcipca2: {
     name: 'MCIPCA2 A-Series Industrial Mini PC',
     description: 'Compact industrial mini PC with Intel J4125, one RS232 COM port, four Intel Gigabit LAN ports, six USB ports, and wireless expansion.',

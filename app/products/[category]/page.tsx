@@ -8,6 +8,7 @@ import { ArrowRight, ChevronLeft, Cpu, Shield, Monitor, Brain, CheckCircle2 } fr
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { industrialCatalog } from '@/lib/industrial-catalog';
+import { firewallCatalog } from '@/lib/firewall-catalog';
 
 const categoryData: Record<string, { icon: any; gradient: string; image: string }> = {
   'industrial-mini-pc': { icon: Cpu, gradient: 'from-blue-600 to-indigo-700', image: '/assets/home/categories/industrial-mini-pc.png' },
@@ -209,6 +210,43 @@ const industrialSeries = [
     models: industrialCatalog.filter((product) => product.series === 'TPC').map(({ id, name }) => ({ id, name })),
   },
 ];
+const firewallSeries = [
+  {
+    code: '2L',
+    title: '2-Port Edge Series',
+    description: 'Compact dual-LAN appliances for firewall, routing, VPN, and edge gateway deployments',
+    image: '/assets/products/firewall/dual-port-series/mcsrp6/images/main-square.png',
+    models: firewallCatalog.filter((product) => product.series === '2L').map(({ id, name }) => ({ id, name })),
+  },
+  {
+    code: '4L',
+    title: '4-Port Router Series',
+    description: 'Four-port network platforms for multi-WAN routing and segmented networks',
+    image: '/assets/products/firewall/quad-port-series/mc30s-n100/images/main-square.png',
+    models: firewallCatalog.filter((product) => product.series === '4L').map(({ id, name }) => ({ id, name })),
+  },
+  {
+    code: '6L',
+    title: '6-Port Gateway Series',
+    description: 'Six-port appliances for branch gateways, SD-WAN, and denser network segmentation',
+    image: '/assets/products/firewall/six-port-series/mcsr613u/images/main-square.png',
+    models: firewallCatalog.filter((product) => product.series === '6L').map(({ id, name }) => ({ id, name })),
+  },
+  {
+    code: '10G',
+    title: '10GbE & Fiber Series',
+    description: 'High-speed edge platforms with 2.5GbE, 10GbE RJ45, or SFP+ connectivity',
+    image: '/assets/products/firewall/high-speed-series/mcr20/images/main-square.png',
+    models: firewallCatalog.filter((product) => product.series === '10G').map(({ id, name }) => ({ id, name })),
+  },
+  {
+    code: '1U',
+    title: '1U Server Series',
+    description: 'Rackmount network and server platforms with multi-LAN, storage, and expansion options',
+    image: '/assets/products/firewall/server-series/mc14n-1u6l/images/main-square.png',
+    models: firewallCatalog.filter((product) => product.series === '1U').map(({ id, name }) => ({ id, name })),
+  },
+];
 const richCategoryData = {
   'industrial-mini-pc': {
     overview: 'MagicChip Industrial Mini PCs bring processing, networking, display output, and equipment-facing I/O into compact fanless systems. They can run control software beside a machine, collect data from serial devices, drive production dashboards, or connect local equipment to an industrial edge network.',
@@ -267,21 +305,22 @@ const richCategoryData = {
     ],
   },
   'firewall-mini-pc': {
-    overview: 'Firewall Mini PCs are compact x86 network appliances designed around multiple dedicated Ethernet interfaces. Current MagicChip models cover dual-2.5GbE edge deployments and higher-throughput configurations with dual 10GbE plus dual 2.5GbE.',
-    qualifier: 'Firewall, VPN, and routing throughput depends on software, packet size, enabled services, and hardware configuration.',
+    overview: 'MagicChip network appliances range from compact dual-port edge gateways to multi-port 2.5GbE and 10GbE platforms, plus 1U rackmount servers. They provide dedicated interfaces, x86 compute, local storage, and expansion options for firewall, routing, VPN, branch networking, and server deployments.',
+    qualifier: 'Start with the required port count and installation format, then select processor, memory, storage, display, and expansion options for the intended network software and services.',
     capabilities: [
-      { title: 'Multi-gigabit networking', description: 'Choose dual 2.5GbE or combined dual 10GbE and dual 2.5GbE connectivity by deployment scale.' },
-      { title: 'Purpose-built network roles', description: 'Dedicated interfaces suit firewall, routing, VPN, SD-WAN, segmentation, and gateway configurations.' },
-      { title: 'Compact edge installation', description: 'Fanless enclosures, DDR5 memory, and storage expansion support local network services at the edge.' },
+      { title: 'Choose the right port architecture', description: 'Dual-port, four-port, six-port, mixed 10GbE, and rackmount platforms cover different network scales and interface requirements.' },
+      { title: 'Deploy at the edge or in a rack', description: 'Compact fanless appliances suit branch and edge installations, while 1U models add rackmount storage, power, and expansion options.' },
+      { title: 'Configure compute and storage', description: 'The range spans low-power Intel platforms, Core processors, Atom C3000, and dual Xeon servers with model-specific memory and storage options.' },
     ],
     sceneImage: '/assets/products/category-scenes/network-infrastructure.webp',
     sceneAlt: 'Organized server racks in a modern network infrastructure room',
     photoCredit: 'Taylor Vick / Unsplash',
     photoUrl: 'https://unsplash.com/@tvick',
     scenarios: [
-      { title: 'Firewall & network segmentation', description: 'Use dedicated ports to separate WAN, LAN, management, and internal network zones.', products: ['MCR20', 'MCSRP6'] },
-      { title: 'VPN & SD-WAN edge', description: 'Compact x86 platforms can host compatible routing, VPN, and branch-network software stacks.', products: ['MCR20', 'MCSRP6'] },
-      { title: 'IoT & edge gateway', description: 'Connect local devices and upstream networks while keeping selected services close to the deployment.', products: ['MCSRP6', 'MCR20'] },
+      { title: 'Compact firewall & VPN edge', description: 'Dual-port appliances support focused WAN/LAN, firewall, VPN, and local gateway deployments where enclosure size and low-power operation matter.', products: ['MCSRP6', 'MCSRP5'] },
+      { title: 'Branch routing & SD-WAN', description: 'Four-port and six-port systems provide additional dedicated interfaces for multi-WAN routing, segmented branch networks, and compatible SD-WAN software.', products: ['MCSR613U', 'MC30S N100'] },
+      { title: '10GbE & fiber network edge', description: 'Mixed 2.5GbE and 10GbE RJ45 or SFP+ models support higher-speed uplinks and fiber-connected network designs.', products: ['MCR20', 'MCSRH15'] },
+      { title: 'Rackmount network & server roles', description: '1U platforms add integrated AC power, storage, and expansion for equipment rooms, network services, and compute workloads.', products: ['MC14N-1U6L', 'MCE5-1U6L'] },
     ],
   },
 } as const;
@@ -293,7 +332,14 @@ export default function CategoryPage() {
   const catInfo = categoryData[category];
   const products = category === 'industrial-mini-pc'
     ? industrialCatalog.map(({ id, name, tagline, image, highlights }) => ({ id, name, tagline, image, specs: highlights }))
-    : sampleProducts[category] || [];
+    : category === 'firewall-mini-pc'
+      ? firewallCatalog.map(({ id, name, tagline, image, highlights }) => ({ id, name, tagline, image, specs: highlights }))
+      : sampleProducts[category] || [];
+  const activeSeries = category === 'industrial-mini-pc'
+    ? industrialSeries
+    : category === 'firewall-mini-pc'
+      ? firewallSeries
+      : null;
   const richContent = richCategoryData[category as keyof typeof richCategoryData] || richCategoryData['industrial-mini-pc'];
   const desktopSceneImage = 'desktopSceneImage' in richContent ? richContent.desktopSceneImage : richContent.sceneImage;
 
@@ -358,7 +404,11 @@ export default function CategoryPage() {
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">Category Overview</p>
-              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">{category === 'industrial-mini-pc' ? 'Compact computers for machines, data, and the industrial edge' : `What defines ${categoryName}?`}</h2>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">{category === 'industrial-mini-pc'
+                ? 'Compact computers for machines, data, and the industrial edge'
+                : category === 'firewall-mini-pc'
+                  ? 'Network appliances from compact edge gateways to 1U servers'
+                  : `What defines ${categoryName}?`}</h2>
             </div>
             <div>
               <p className="text-lg leading-8 text-slate-600">{richContent.overview}</p>
@@ -382,11 +432,17 @@ export default function CategoryPage() {
           <div className="mb-10">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">Application Scenarios</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
-              {category === 'industrial-mini-pc' ? 'From machine control to operator stations' : 'Where this category fits'}
+              {category === 'industrial-mini-pc'
+                ? 'From machine control to operator stations'
+                : category === 'firewall-mini-pc'
+                  ? 'From branch firewalls to rackmount network platforms'
+                  : 'Where this category fits'}
             </h2>
-            {category === 'industrial-mini-pc' && (
+            {(category === 'industrial-mini-pc' || category === 'firewall-mini-pc') && (
               <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
-                The expanded range covers four box-PC interface architectures plus integrated-display panel PCs, so customers can start with the deployment task and then narrow the choice by I/O and compute platform.
+                {category === 'industrial-mini-pc'
+                  ? 'The expanded range covers four box-PC interface architectures plus integrated-display panel PCs, so customers can start with the deployment task and then narrow the choice by I/O and compute platform.'
+                  : 'The expanded network range covers compact two-, four-, and six-port appliances, high-speed 10GbE platforms, and 1U servers. Start with the deployment format and port architecture, then compare the available compute and expansion options.'}
               </p>
             )}
           </div>
@@ -437,13 +493,15 @@ export default function CategoryPage() {
             <p className="mt-4 text-base leading-7 text-slate-600">
               {category === 'industrial-mini-pc'
                 ? 'Select an IPC series by serial, network, and display architecture, then open the available model page.'
-                : 'Compare the current models by processor platform, connectivity, expansion, and deployment requirements.'}
+                : category === 'firewall-mini-pc'
+                  ? 'Select a series by port count, network speed, and installation format, then open the available model page.'
+                  : 'Compare the current models by processor platform, connectivity, expansion, and deployment requirements.'}
             </p>
           </div>
 
-          {category === 'industrial-mini-pc' ? (
+          {activeSeries ? (
             <div className="space-y-6 md:space-y-8">
-              {industrialSeries.map((series) => (
+              {activeSeries.map((series) => (
                 <section
                   id={`series-${series.code.toLowerCase()}`}
                   key={series.code}
@@ -472,7 +530,7 @@ export default function CategoryPage() {
                       <p className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">Available models</p>
                       <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                         {series.models.map((model) => (
-                          <Link key={model.id} href={`/products/industrial-mini-pc/${model.id}`} className="group inline-flex min-h-12 items-center justify-between rounded-xl border border-blue-200 bg-blue-50 px-4 py-3 font-semibold text-blue-800 transition-all hover:-translate-y-0.5 hover:border-blue-400 hover:bg-blue-100 hover:shadow-md">
+                          <Link key={model.id} href={`/products/${category}/${model.id}`} className="group inline-flex min-h-12 items-center justify-between rounded-xl border border-blue-200 bg-blue-50 px-4 py-3 font-semibold text-blue-800 transition-all hover:-translate-y-0.5 hover:border-blue-400 hover:bg-blue-100 hover:shadow-md">
                             {model.name}
                             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                           </Link>

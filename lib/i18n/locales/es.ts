@@ -182,7 +182,7 @@ export const es: TranslationSchema = {
     technicalSpecifications: 'Especificaciones Técnicas',
     industrialConfigDetails: 'Detalles de configuración de grado industrial',
     specificationMatrix: 'Matriz de Especificaciones de {name}',
-    brochureParameters: 'Parámetros de hardware del folleto',
+    hardwareParameters: 'Configuraciones de hardware disponibles',
     operatingRange: 'Rango Operativo',
     industrialRated: 'Clasificación industrial',
     productAdvantages: 'Ventajas del Producto',
