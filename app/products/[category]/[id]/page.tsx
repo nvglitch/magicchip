@@ -793,11 +793,6 @@ export default function ProductDetailPage() {
     productId === 'mcipcb7' ||
     productId === 'mcipcb9' ||
     (industrialSeriesCode === 'tpc' && productId !== 'mctpc-1501b');
-  const heroImageScale = ['mc30s-ddr4', 'mc30s-n100', 'mc30w-n100'].includes(productId)
-    ? 'scale-[1.42] group-hover:scale-[1.46]'
-    : productId === 'mcsrh30x'
-      ? 'scale-[1.24] group-hover:scale-[1.28]'
-      : 'group-hover:scale-[1.025]';
   const catInfo = categoryData[category] || categoryData['industrial-mini-pc'];
   const CategoryIcon = iconMap[catInfo.icon] || Cpu;
   const gallery = product?.images || [];
@@ -878,7 +873,7 @@ export default function ProductDetailPage() {
                 aria-label={t.productDetail.enlargeMainView.replace('{name}', product.name)}
                 className="group block w-full cursor-zoom-in rounded-lg bg-white shadow-2xl shadow-blue-950/30 ring-1 ring-amber-200/30 overflow-hidden transition-transform duration-300 hover:scale-[1.015] hover:shadow-blue-950/45"
               >
-                <img src={gallery[0]} alt={`${product.name} ${catInfo.name}`} className={`aspect-square w-full object-contain transition-transform duration-500 ${heroImageScale} ${needsHeroImagePadding ? 'p-8 sm:p-10 lg:p-12' : ''}`} />
+                <img src={gallery[0]} alt={`${product.name} ${catInfo.name}`} className={`aspect-square w-full object-contain transition-transform duration-500 group-hover:scale-[1.025] ${needsHeroImagePadding ? 'p-8 sm:p-10 lg:p-12' : ''}`} />
               </button>
             </motion.div>
           </div>

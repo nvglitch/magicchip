@@ -313,9 +313,8 @@ const richCategoryData = {
       { title: 'Configure compute and storage', description: 'The range spans low-power Intel platforms, Core processors, Atom C3000, and dual Xeon servers with model-specific memory and storage options.' },
     ],
     sceneImage: '/assets/products/category-scenes/network-infrastructure.webp',
-    sceneAlt: 'Organized server racks in a modern network infrastructure room',
-    photoCredit: 'Taylor Vick / Unsplash',
-    photoUrl: 'https://unsplash.com/@tvick',
+    desktopSceneImage: '/assets/products/category-scenes/network-infrastructure-desktop.webp',
+    sceneAlt: 'Modern enterprise data center aisle with organized server racks and network infrastructure',
     scenarios: [
       { title: 'Compact firewall & VPN edge', description: 'Dual-port appliances support focused WAN/LAN, firewall, VPN, and local gateway deployments where enclosure size and low-power operation matter.', products: ['MCSRP6', 'MCSRP5'] },
       { title: 'Branch routing & SD-WAN', description: 'Four-port and six-port systems provide additional dedicated interfaces for multi-WAN routing, segmented branch networks, and compatible SD-WAN software.', products: ['MCSR613U', 'MC30S N100'] },
@@ -450,7 +449,7 @@ export default function CategoryPage() {
             <figure className="relative aspect-[3/2] overflow-hidden bg-slate-900 lg:aspect-video">
               <Image src={richContent.sceneImage} alt={richContent.sceneAlt} fill sizes="(max-width: 1023px) 100vw, 1px" className="object-cover transition-transform duration-700 hover:scale-[1.02] lg:hidden" />
               <Image src={desktopSceneImage} alt={richContent.sceneAlt} fill sizes="(max-width: 1023px) 1px, 1280px" className="hidden object-cover transition-transform duration-700 hover:scale-[1.02] lg:block" />
-              {category !== 'industrial-mini-pc' && (
+              {'photoCredit' in richContent && 'photoUrl' in richContent && (
                 <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/75 to-transparent px-6 pb-5 pt-16 text-xs text-white/80">
                   Photo: <a href={richContent.photoUrl} target="_blank" rel="noopener noreferrer" className="underline decoration-white/35 underline-offset-2 hover:text-white">{richContent.photoCredit}</a>
                 </figcaption>

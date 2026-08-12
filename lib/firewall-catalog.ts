@@ -1,3 +1,5 @@
+import { firewallBrochureSpecs } from '@/lib/firewall-brochure-specs';
+
 export type FirewallSeriesCode = '2L' | '4L' | '6L' | '10G' | '1U';
 
 export type FirewallCatalogSpec = {
@@ -74,7 +76,7 @@ const createProduct = (input: ProductInput): FirewallCatalogItem => {
       ...Array.from({ length: input.galleryCount ?? 2 }, (_, index) => `${imageBase}/view-${index + 1}.png`),
     ],
     highlights: input.highlights,
-    specs,
+    specs: firewallBrochureSpecs[input.id] ?? specs,
     operatingRange: input.operatingRange,
   };
 };
