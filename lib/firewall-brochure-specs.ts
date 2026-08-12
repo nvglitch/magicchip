@@ -77,7 +77,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "0?C to 50?C; 0%-95% relative humidity, non-condensing"
+      "value": "0°C to 50°C; 0%-95% relative humidity, non-condensing"
     }
   ],
   "mc30s-n100": [
@@ -155,7 +155,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "0?C to 50?C; 0%-95% relative humidity, non-condensing"
+      "value": "0°C to 50°C; 0%-95% relative humidity, non-condensing"
     }
   ],
   "mc30w-n100": [
@@ -233,7 +233,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "0?C to 50?C; 0%-95% relative humidity, non-condensing"
+      "value": "0°C to 50°C; 0%-95% relative humidity, non-condensing"
     }
   ],
   "mcr10": [
@@ -283,7 +283,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Expansion",
-      "value": "1 x 20Pin COM; 2 x 232/485 COM Suitching Hat; ; 1 x 4Pin SATA 3.0 slot; 2 x 4Pin FAN mount"
+      "value": "1 x 20Pin COM; 2 x 232/485 COM switching header; 1 x 4Pin SATA 3.0 slot; 2 x 4Pin FAN mount"
     },
     {
       "label": "Front I/O",
@@ -295,7 +295,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Internal I/O",
-      "value": "1 x 20Pin COM; ; 2 x 232/485 COM Suitching Hat; ; 1 x 4Pin SATA 3.0 slot; ; 2 x 4Pin FAN mount"
+      "value": "1 x 20Pin COM; 2 x 232/485 COM switching header; 1 x 4Pin SATA 3.0 slot; 2 x 4Pin FAN mount"
     },
     {
       "label": "Dimensions",
@@ -315,7 +315,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "0?C to 70?C; 5%-85% relative humidity, non-condensing"
+      "value": "0°C to 70°C; 5%-85% relative humidity, non-condensing"
     }
   ],
   "mcr20": [
@@ -357,7 +357,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Network",
-      "value": "2 x Intel i226-V 2.5G Ethernet port; ; 2 x Intel X550-T2 10G Ethernet port / 2 x Intel 82599ES SFP+ port"
+      "value": "2 x Intel i226-V 2.5G Ethernet port; 2 x Intel X550-T2 10G Ethernet port / 2 x Intel 82599ES SFP+ port"
     },
     {
       "label": "Storage",
@@ -393,7 +393,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "0?C to 70?C; 5%-85% relative humidity, non-condensing"
+      "value": "0°C to 70°C; 5%-85% relative humidity, non-condensing"
     }
   ],
   "mcsr6n12u": [
@@ -475,7 +475,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "-10?C to 70?C; 5%-95% relative humidity, non-condensing"
+      "value": "-10°C to 70°C; 5%-95% relative humidity, non-condensing"
     }
   ],
   "mcsr6n13u": [
@@ -545,7 +545,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "BIOS",
-      "value": "Supports power-on sele-test, GPIO,wake-on-LAN features"
+      "value": "Supports power-on self-test, GPIO, wake-on-LAN features"
     },
     {
       "label": "TDP",
@@ -557,7 +557,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "0?C to 70?C; 5%-95% relative humidity, non-condensing"
+      "value": "0°C to 70°C; 5%-95% relative humidity, non-condensing"
     }
   ],
   "mcsrg31f": [
@@ -627,7 +627,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "BIOS",
-      "value": "AMI UEFI BIOS; Power-on boot; Scheduled boot; Wake-up on LAN; ; PXE boot; Watchdog"
+      "value": "AMI UEFI BIOS; Power-on boot; Scheduled boot; Wake-up on LAN; PXE boot; Watchdog"
     },
     {
       "label": "TDP",
@@ -639,7 +639,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "0?C to 60?C; 10%-90% relative humidity, non-condensing"
+      "value": "0°C to 60°C; 10%-90% relative humidity, non-condensing"
     }
   ],
   "mcsrg7": [
@@ -721,7 +721,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "-20?C to 60?C; 10%-90% relative humidity, non-condensing"
+      "value": "-20°C to 60°C; 10%-90% relative humidity, non-condensing"
     }
   ],
   "mcsrh15": [
@@ -751,7 +751,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Weight",
-      "value": "Equipment Weight 2.50KG; Package Weight 3.00KG(Includingaccessor"
+      "value": "Equipment: 2.50 kg; package: 3.00 kg (including accessories)"
     },
     {
       "label": "USB",
@@ -767,7 +767,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Storage",
-      "value": "1 x M.2 NVMe (PCIe Gen3 x4)2280; ; 1 x SATA 6.0 Gb/s(Support 2.5inch HDD/SSD)"
+      "value": "1 x M.2 NVMe 2280 (PCIe Gen3 x4); 1 x SATA 6 Gb/s (supports 2.5-inch HDD/SSD)"
     },
     {
       "label": "Expansion",
@@ -775,11 +775,11 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Front I/O",
-      "value": "4 x SFP+ ports; ; 4 x RJ45 Ethernet; ; 2 x USB 3.0; ; 1 x VGA; ; 1 x DC_IN"
+      "value": "4 x SFP+; 4 x RJ45 Ethernet; 2 x USB 3.0; 1 x VGA; 1 x DC input"
     },
     {
       "label": "Rear I/O",
-      "value": "1 x Power Button; ; 2 x USB 2.0; ; 1 x GPIO; ; 1 x RS485 Phoenix terminal; ; 2 x COMRS232; ; 1 x SIM card slot"
+      "value": "1 x power button; 2 x USB 2.0; 1 x GPIO; 1 x RS-485 Phoenix terminal; 2 x RS-232 COM; 1 x SIM card slot"
     },
     {
       "label": "Internal I/O",
@@ -803,7 +803,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "0?C to 50?C; 5%-90% relative humidity, non-condensing"
+      "value": "0°C to 50°C; 5%-90% relative humidity, non-condensing"
     }
   ],
   "mcsrh30x": [
@@ -813,7 +813,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "CPU",
-      "value": "Intel®Celeron N100 0.8GHz 4 Core processor(support Intel®Alder Lake se"
+      "value": "Intel N95 / N100 / N200 / Core i3-N305 (Alder Lake-N)"
     },
     {
       "label": "Chipset",
@@ -853,7 +853,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Expansion",
-      "value": "1 x Mini PCIe Channel for Wi-Fi/Bluetooth/4G; ; Network Wakeup/PXE; Watchdog"
+      "value": "1 x Mini PCIe Channel for Wi-Fi/Bluetooth/4G; Network Wakeup/PXE; Watchdog"
     },
     {
       "label": "Front I/O",
@@ -885,7 +885,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "0?C to 50?C; 5%-90% relative humidity, non-condensing"
+      "value": "0°C to 50°C; 5%-90% relative humidity, non-condensing"
     }
   ],
   "mcsrp1": [
@@ -951,7 +951,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "BIOS",
-      "value": "AMI UEFI BIOS; Wake-up on LAN; PXE boot; ; GPIO"
+      "value": "AMI UEFI BIOS; Wake-up on LAN; PXE boot; GPIO"
     },
     {
       "label": "TDP",
@@ -963,7 +963,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "-20?C to 55?C; 5%-90% relative humidity, non-condensing"
+      "value": "-20°C to 55°C; 5%-90% relative humidity, non-condensing"
     }
   ],
   "mcsrp2": [
@@ -1029,7 +1029,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "BIOS",
-      "value": "AMI UEFI BIOS, PEX, GPIO,wake-on-LAN features"
+      "value": "AMI UEFI BIOS, PEX, GPIO, wake-on-LAN features"
     },
     {
       "label": "TDP",
@@ -1041,7 +1041,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "0?C to 70?C; 5%-85% relative humidity, non-condensing"
+      "value": "0°C to 70°C; 5%-85% relative humidity, non-condensing"
     }
   ],
   "mcsrp2-hdmi": [
@@ -1107,7 +1107,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "BIOS",
-      "value": "AMI UEFI BIOS, PEX, GPIO,wake-on-LAN features"
+      "value": "AMI UEFI BIOS, PEX, GPIO, wake-on-LAN features"
     },
     {
       "label": "TDP",
@@ -1119,7 +1119,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "0?C to 70?C; 5%-85% relative humidity, non-condensing"
+      "value": "0°C to 70°C; 5%-85% relative humidity, non-condensing"
     }
   ],
   "mcsrp3": [
@@ -1197,7 +1197,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "0?C to 70?C; 5%-90% relative humidity"
+      "value": "0°C to 70°C; 5%-90% relative humidity"
     },
     {
       "label": "Color",
@@ -1271,7 +1271,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "-10?C to 60?C; 5%-95% relative humidity, non-condensing"
+      "value": "-10°C to 60°C; 5%-95% relative humidity, non-condensing"
     },
     {
       "label": "Color",
@@ -1353,7 +1353,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "-10?C to 70?C; 5%-90% relative humidity, non-condensing"
+      "value": "-10°C to 70°C; 5%-90% relative humidity, non-condensing"
     },
     {
       "label": "Color",
@@ -1407,7 +1407,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Expansion",
-      "value": "1 * SFF-8654 8i; 1 * ATX-4Pin(12V); 1 * Phoenix Contact; 1 * GPIO; ; 2 USB 2.0; 1 * F_PANEL; 1 * JCOM; 1 * eDP; 2 * 4Pin Fan Pin Head"
+      "value": "1 * SFF-8654 8i; 1 * ATX-4Pin(12V); 1 * Phoenix Contact; 1 * GPIO; 2 USB 2.0; 1 * F_PANEL; 1 * JCOM; 1 * eDP; 2 * 4Pin Fan Pin Head"
     },
     {
       "label": "Front I/O",
@@ -1435,7 +1435,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "0?C to 75?C; 10%-90% relative humidity, non-condensing"
+      "value": "0°C to 75°C; 10%-90% relative humidity, non-condensing"
     },
     {
       "label": "Color",
@@ -1457,7 +1457,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Graphics",
-      "value": "Intel UHD Graghics N100(24EU)/N200(32EU)/i3-N305(32EU)"
+      "value": "Intel UHD Graphics N100(24EU)/N200(32EU)/i3-N305(32EU)"
     },
     {
       "label": "Video",
@@ -1465,7 +1465,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Memory",
-      "value": "1 x SO-DIMM DDR5 4800/5600 MHz Max 32Gb"
+      "value": "1 x SO-DIMM DDR5 4800/5600 MHz maximum 32 GB"
     },
     {
       "label": "Material",
@@ -1485,7 +1485,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Storage",
-      "value": "1 x M.2 NVME x4(Support mutiple M.2 or mSATA/SATA)"
+      "value": "1 x M.2 NVME x4(Support multiple M.2 or mSATA/SATA)"
     },
     {
       "label": "Wireless",
@@ -1509,7 +1509,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "BIOS",
-      "value": "AMI UEFI BIOS supports Auto-Power-On,Wake-On-Lan,PXE"
+      "value": "AMI UEFI BIOS supports Auto-Power-On, Wake-On-Lan, PXE"
     },
     {
       "label": "TDP",
@@ -1521,7 +1521,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "0?C to 70?C; 5%-85% relative humidity, non-condensing"
+      "value": "0°C to 70°C; 5%-85% relative humidity, non-condensing"
     }
   ],
   "mcsr613u": [
@@ -1543,7 +1543,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Video",
-      "value": "HDMI 2.0( @60Hz); DP 1.4( @60Hz); Type-C(USB4:4096x2304@60; 4K 4K"
+      "value": "HDMI 2.0 (4K at 60 Hz); DisplayPort 1.4 (4K at 60 Hz); USB4 Type-C display output"
     },
     {
       "label": "Memory",
@@ -1587,7 +1587,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "BIOS",
-      "value": "Supports power-on sele-test, GPIO,wake-on-LAN features"
+      "value": "Supports power-on self-test, GPIO, wake-on-LAN features"
     },
     {
       "label": "TDP",
@@ -1599,7 +1599,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "0?C to 70?C; 5%-85% relative humidity, non-condensing"
+      "value": "0°C to 70°C; 5%-85% relative humidity, non-condensing"
     },
     {
       "label": "Color",
@@ -1637,7 +1637,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "USB",
-      "value": "1 * USB 2.0 / 1 * USB 3.0(Interface); 2 * USB 2.0(Vertical); 6 * USB 2.0(Array p"
+      "value": "1 x USB 2.0 and 1 x USB 3.0 external port; 2 x vertical USB 2.0 ports; 6 x USB 2.0 array-pin headers"
     },
     {
       "label": "Power",
@@ -1653,7 +1653,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Expansion",
-      "value": "1 x PCIe x8 Slot Gen3 PCIe3.0 x4; 4 * GPIO; 1* RJ45 Console; 2* COM (Array pin); 1 * miniPCIe; NetWork WakeUp / PXE"
+      "value": "1 x PCIe x8 slot (PCIe Gen3 x4 signal); 4 x GPIO; 1 x RJ45 console; 2 x COM array-pin headers; 1 x Mini PCIe; Wake-on-LAN; PXE"
     },
     {
       "label": "Front I/O",
@@ -1665,11 +1665,11 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Internal I/O",
-      "value": "1 x SO-DIMM DDR5 Slot; 1 x mSATA/1 x SATA 3.0/1 x CF Slot; 1 x PCIe x8 Slot Gen3 PCIe3.0 x4; 4 x GPIO Pin; 1 x COM Pin; 1 x JHDMI/1 x VGA/1 x EDP Pin; 6 x USB 2.0 Arraypin)/2 x USB 2.0 Vertical); （ （; 1 x SATA Power; 1 x F_PANEL Pin; 1 x TPM Pin; 1 x SIM/1 x mini PCIe"
+      "value": "1 x DDR5 SO-DIMM slot; 1 x mSATA / SATA 3.0 / CF storage option; 1 x PCIe x8 slot (PCIe Gen3 x4 signal); 4 x GPIO pins; 1 x COM header; JHDMI, VGA and eDP headers; 6 x USB 2.0 array-pin headers; 2 x vertical USB 2.0 ports; SATA power; F_PANEL; TPM; SIM and Mini PCIe"
     },
     {
       "label": "Dimensions",
-      "value": "1U(440mm*320mm*45mm)/2U(435mm*439mm*90mm)"
+      "value": "1U: 440 x 320 x 45 mm; 2U: 435 x 439 x 90 mm"
     },
     {
       "label": "BIOS",
@@ -1681,11 +1681,11 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "System",
-      "value": "Windows10 / 11,Windows Server, Linux"
+      "value": "Windows 10 / 11, Windows Server, Linux"
     },
     {
       "label": "Working Environment",
-      "value": "0?C to 60?C; 10%-90% relative humidity, non-condensing"
+      "value": "0°C to 60°C; 10%-90% relative humidity, non-condensing"
     }
   ],
   "mc12n-1u6l": [
@@ -1707,7 +1707,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Memory",
-      "value": "SO-DIMM DDR5 4800MHz Max48GB"
+      "value": "SO-DIMM DDR5 4800MHz maximum 48 GB"
     },
     {
       "label": "Material",
@@ -1715,7 +1715,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "USB",
-      "value": "2 x USB 3.0(5Gbps) 4 x USB 2.0; ；"
+      "value": "2 x USB 3.0 (5 Gb/s); 4 x USB 2.0"
     },
     {
       "label": "Power",
@@ -1731,7 +1731,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Expansion",
-      "value": "1 x PCIe4.0 Slot Gen3 PCIe3.0x1 (Share signal with M.2 E-Key,Choose 1 out of 2); 8 x Programmable GPIO; 1 x RJ45/1 x JCOM; 1 x M.2 E-Key Wi-Fi; 1 x M.2 B-Key 4G/5G; NetWork WakeUP/PXE"
+      "value": "1 x PCIe slot (PCIe Gen3 x1 signal, shared with M.2 E-Key); 8 x programmable GPIO; RJ45 console / JCOM; M.2 E-Key Wi-Fi; M.2 B-Key 4G/5G; Wake-on-LAN; PXE"
     },
     {
       "label": "Front I/O",
@@ -1743,15 +1743,15 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Internal I/O",
-      "value": "1 x SO-DIMM DDR5 Slot; 1 x mSATA/1 x SATA 3.0; 1 x PCIe 4.0 Slot; 8 x GPIO; 1 x RJ45/1 x JCOM; 1 x M.2 E-Key Wi-Fi; 1 x M.2 E-Key 4G/5G; NetWork WakeUP/PXE"
+      "value": "1 x DDR5 SO-DIMM slot; mSATA and SATA 3.0; 1 x PCIe slot; 8 x GPIO; RJ45 console / JCOM; M.2 E-Key Wi-Fi; M.2 B-Key 4G/5G; Wake-on-LAN; PXE"
     },
     {
       "label": "Dimensions",
-      "value": "Desktop(210 x 201 x 45mm)/1U(440 x 225 x 45mm)/2U(435 x 405 x 90mm)"
+      "value": "Desktop: 210 x 201 x 45 mm; 1U: 440 x 225 x 45 mm; 2U: 435 x 405 x 90 mm"
     },
     {
       "label": "PCB Dimensions",
-      "value": "200mm(W)*180mm(L)"
+      "value": "200 x 180 mm (W x L)"
     },
     {
       "label": "BIOS",
@@ -1767,7 +1767,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "0?C to 60?C; 10%-90% relative humidity, non-condensing"
+      "value": "0°C to 60°C; 10%-90% relative humidity, non-condensing"
     }
   ],
   "mc14n-1u6l": [
@@ -1805,7 +1805,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Power",
-      "value": "100-240V~50 / 60Hz(Mainboard:4Pin 19-24V / DC19-24V 55mm*25mm"
+      "value": "100-240V AC, 50/60 Hz; mainboard input: 4-pin 19-24V or DC 19-24V (5.5 x 2.5 mm)"
     },
     {
       "label": "Network",
@@ -1817,7 +1817,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Expansion",
-      "value": "2LAN * i226 / i211 / 210AT 4LAN * i226/i211 / i210AT 2 * 82599SFP+ / 4 * X710SF; 1* RJ45 Console / 2* COM (Array pin); 1 * M2 B key; 8 * GPIO; NetWorkWakeUP/"
+      "value": "2 x Intel i226/i211/i210AT LAN; 4 x Intel i226/i211/i210AT LAN; optional 2 x Intel 82599 SFP+ or 4 x Intel X710 SFP+; RJ45 console; 2 x COM array-pin headers; M.2 B-Key; 8 x GPIO; Wake-on-LAN; PXE"
     },
     {
       "label": "Front I/O",
@@ -1829,11 +1829,11 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Internal I/O",
-      "value": "2 x SO-DIMM DDR4 Slot; 1 x mSATA/4 x SATA 3.0; 1 * M.2 NVMe 2280 PCIe4.0 x4; 1 * M.2 NVMe 2280 PCIe3.0 x4; 8 x GPIO Pin; 2 x COM Pin; 1 x JHDMI/1 x JVGA Pin; 6 x USB 2.0 Arraypin)/2 x USB 2.0 Upright); （ （; 1 x SATA Power; 1 x F_PANEL Pin"
+      "value": "2 x DDR4 SO-DIMM slots; mSATA; 4 x SATA 3.0; 1 x M.2 NVMe 2280 PCIe 4.0 x4; 1 x M.2 NVMe 2280 PCIe 3.0 x4; 8 x GPIO pins; 2 x COM headers; JHDMI and JVGA headers; 6 x USB 2.0 array-pin headers; 2 x vertical USB 2.0 ports; SATA power; F_PANEL"
     },
     {
       "label": "Dimensions",
-      "value": "1U(440mm*320mm*45mm) / 2U(435mm*440mm*90mm)"
+      "value": "1U: 440 x 320 x 45 mm; 2U: 435 x 440 x 90 mm"
     },
     {
       "label": "BIOS",
@@ -1845,11 +1845,11 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "System",
-      "value": "Windows10/11,WindowsServer,Linux"
+      "value": "Windows 10/11, Windows Server, Linux"
     },
     {
       "label": "Working Environment",
-      "value": "Operating: 0?C to 60?C; storage: -10?C to 70?C; operating humidity: 10%-90%; storage humidity: 5%-95%, non-condensing"
+      "value": "Operating: 0°C to 60°C; storage: -10°C to 70°C; operating humidity: 10%-90%; storage humidity: 5%-95%, non-condensing"
     }
   ],
   "mc23-1u6l": [
@@ -1879,7 +1879,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "USB",
-      "value": "2 x USB 2.0(Interace); 4 x USB 2.0(Header/Pin)"
+      "value": "2 x USB 2.0(Interface); 4 x USB 2.0(Header/Pin)"
     },
     {
       "label": "Power",
@@ -1895,7 +1895,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Expansion",
-      "value": "8 x Programmable GPIO; 1 x RJ45/1 x JCOM; 1 x MiniPCIe Wi-Fi; ; Customizable 4G/5G; NetWork WakeUP/PXE"
+      "value": "8 x programmable GPIO; RJ45 console / JCOM; Mini PCIe Wi-Fi; optional 4G/5G; Wake-on-LAN; PXE"
     },
     {
       "label": "Front I/O",
@@ -1907,15 +1907,15 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Internal I/O",
-      "value": "1 x SO-DIMM DDR5 Slot; 1 x mSATA/1 x SATA 3.0; 1 x PCIe 4.0 Slot; 8 x GPIO; 1 x RJ45/1 x JCOM; 1 x M.2 E-Key Wi-Fi; 1 x M.2 E-Key 4G/5G; NetWork WakeUP/PXE"
+      "value": "mSATA and SATA 3.0 storage; GPIO; RJ45 console / JCOM; Mini PCIe Wi-Fi; optional 4G/5G connectivity; Wake-on-LAN; PXE"
     },
     {
       "label": "Dimensions",
-      "value": "1U(440 x 225 x 45mm)/2U(435 x 405 x 90mm)"
+      "value": "1U: 440 x 225 x 45 mm; 2U: 435 x 405 x 90 mm"
     },
     {
       "label": "PCB Dimensions",
-      "value": "200mm(W)*180mm(L)"
+      "value": "200 x 180 mm (W x L)"
     },
     {
       "label": "BIOS",
@@ -1931,7 +1931,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Working Environment",
-      "value": "0?C to 60?C; 10%-90% relative humidity, non-condensing"
+      "value": "0°C to 60°C; 10%-90% relative humidity, non-condensing"
     }
   ],
   "mce5-1u6l": [
@@ -1965,7 +1965,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "USB",
-      "value": "2 x USB 2.0(Interface)/1 *USB 3.0(Array pin); 2 *USB 2.0(Upright) / 4 *USB 2.0(Array pin)"
+      "value": "2 x external USB 2.0 ports; 1 x USB 3.0 array-pin header; 2 x vertical USB 2.0 ports; 4 x USB 2.0 array-pin headers"
     },
     {
       "label": "Power",
@@ -1973,15 +1973,15 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Network",
-      "value": "1 *RTL-8211E(IPMI)/2 x IntelEthernet Controller 1GRJ45"
+      "value": "1 x Realtek RTL8211E IPMI port; 2 x Intel Gigabit Ethernet RJ45 ports"
     },
     {
       "label": "Storage",
-      "value": "2 *M.2 NVMe PCIe 3.0x4 2280 8 x SATA 3.06Gbps /1 x mSATA/1 x CF; ；"
+      "value": "2 x M.2 NVMe 2280 (PCIe 3.0 x4); 8 x SATA 3.0 6 Gb/s; 1 x mSATA; 1 x CF"
     },
     {
       "label": "Expansion",
-      "value": "3 *PCIe x8 / 1 *PCIe x16; 8* GPIO; 1 *RJ45Console / 2 *COM(Array p; 1 x miniPCIe; IPMI/NetWorkWakeUP/PXE"
+      "value": "3 x PCIe x8; 1 x PCIe x16; 8 x GPIO; RJ45 console; 2 x COM array-pin headers; 1 x Mini PCIe; IPMI; Wake-on-LAN; PXE"
     },
     {
       "label": "Front I/O",
@@ -1989,15 +1989,15 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Rear I/O",
-      "value": "1 x VGA Port; 1 x Power Switch; 1 x Grounding screw; 3 x Ball breaing fan; 1 x AC Outlet; 1 x USB reserved seat"
+      "value": "1 x VGA Port; 1 x Power Switch; 1 x Grounding screw; 3 x Ball bearing fans; 1 x AC Outlet; 1 x USB reserved seat"
     },
     {
       "label": "Internal I/O",
-      "value": "2 x SO-DIMM DDR4 Slot; 1 x mSATA/4 x SATA 3.0; 1 x PCIe x16; 3 x PCIe x8; 8 x GPIO Pin; 2 x COM Pin; 1 x JVGA Pin/1 x CF Slot; 1 x USB 3.0(Array pin)/4 x USB 2.0(Array pin); 2 x USB 2.0(Upright); 1 x SATA Power; 1 x F_PANEL Pin"
+      "value": "mSATA; 4 x SATA 3.0; 1 x PCIe x16; 3 x PCIe x8; 8 x GPIO pins; 2 x COM headers; JVGA header and CF slot; 1 x USB 3.0 array-pin header; 4 x USB 2.0 array-pin headers; 2 x vertical USB 2.0 ports; SATA power; F_PANEL"
     },
     {
       "label": "Dimensions",
-      "value": "1U(440mm*600mm*45mm)/2U(440mm*600mm*90mm)"
+      "value": "1U: 440 x 600 x 45 mm; 2U: 440 x 600 x 90 mm"
     },
     {
       "label": "BIOS",
@@ -2009,11 +2009,11 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "System",
-      "value": "Windows10/11,WindowsServer,Linux"
+      "value": "Windows 10/11, Windows Server, Linux"
     },
     {
       "label": "Working Environment",
-      "value": "Operating: 0?C to 60?C; storage: -10?C to 70?C; operating humidity: 10%-90%; storage humidity: 5%-95%, non-condensing"
+      "value": "Operating: 0°C to 60°C; storage: -10°C to 70°C; operating humidity: 10%-90%; storage humidity: 5%-95%, non-condensing"
     }
   ],
   "mcj6-1u6l": [
@@ -2035,7 +2035,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Memory",
-      "value": "2 x SO-DIMM DDR4 3200Mhz Max 64GB"
+      "value": "2 x SO-DIMM DDR4 3200MHz maximum 64 GB"
     },
     {
       "label": "Material",
@@ -2043,7 +2043,7 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "USB",
-      "value": "2 x USB 3.0(Interface)/6 x USB 2.0 Arraypin)/2 x USB 2.0 Upright); （ （"
+      "value": "2 x external USB 3.0 ports; 6 x USB 2.0 array-pin headers; 2 x vertical USB 2.0 ports"
     },
     {
       "label": "Power",
@@ -2055,11 +2055,11 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Storage",
-      "value": "1 x SATA/1 x mSATA/1 x CF One out of three); （"
+      "value": "1 x SATA / 1 x mSATA / 1 x CF (select one of three)"
     },
     {
       "label": "Expansion",
-      "value": "1 * PCIe x4 Integrated LAN/8 * Programmable GPIO/1 * RJ45 Console; 1 * COM (Array pin)/1 * miniPCIe / 1 * SIM/NetWorkWakeUP/ PXE"
+      "value": "1 x PCIe x4 integrated-LAN slot; 8 x programmable GPIO; RJ45 console; 1 x COM array-pin header; Mini PCIe; SIM; Wake-on-LAN; PXE"
     },
     {
       "label": "Front I/O",
@@ -2071,19 +2071,19 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "Internal I/O",
-      "value": "2 x SO-DIMM DDR4 Slot; 1 x mSATA/1 x SATA 3.0; 1 x PCIe x4 Integrated LAN; 8 x GPIO Pin; 1 x COM Pin; 1 x HDMI/1 x VGA/1 x EDP Pin; 6 x USB 2.0 Arraypin)/2 x USB 2.0 Upright); （ （; 1 x SATA Power; 1 x F_PANEL Pin; 1 x CF Slot"
+      "value": "2 x DDR4 SO-DIMM slots; mSATA and SATA 3.0; 1 x PCIe x4 integrated-LAN slot; 8 x GPIO pins; 1 x COM header; HDMI, VGA and eDP headers; 6 x USB 2.0 array-pin headers; 2 x vertical USB 2.0 ports; SATA power; F_PANEL; CF slot"
     },
     {
       "label": "Dimensions",
-      "value": "1U 440mm*319mm*45mm; （ ）"
+      "value": "1U: 440 x 319 x 45 mm"
     },
     {
       "label": "PCB Dimensions",
-      "value": "223mm W)*180mm L; （ （ ）"
+      "value": "223 x 180 mm (W x L)"
     },
     {
       "label": "BIOS",
-      "value": "AMI 128M BIOS ACPI supported Automatically start after power supply; ， ，"
+      "value": "AMI 128M BIOS with ACPI support and automatic power-on"
     },
     {
       "label": "TDP",
@@ -2091,11 +2091,11 @@ export const firewallBrochureSpecs: Record<string, FirewallCatalogSpec[]> = {
     },
     {
       "label": "System",
-      "value": "Windows10/11,WindowsServer,Linux"
+      "value": "Windows 10/11, Windows Server, Linux"
     },
     {
       "label": "Working Environment",
-      "value": "0?C to 60?C; 10%-90% relative humidity, non-condensing"
+      "value": "0°C to 60°C; 10%-90% relative humidity, non-condensing"
     }
   ]
 };

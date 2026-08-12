@@ -1,0 +1,50 @@
+--- PAGE 1 ---
+SHENZHEN MAGIC CHIP TECHNOLOGY CO.,LTD
+Model MCE5_1U6L
+：
+2*intel Xeon Broadwell E5 V3/V4
+CPU
+Intel® C612 1*IPMI/1*RJ45 Console
+Chipset
+1*Status LED/1*Hard Drive LED
+Depends on CPU Front I/O 2*i210AT Gigabit Ethernet
+Video Card connector 2*USB 2.0
+1 *VGA (Aspeed AST2400)
+Video
+8*ECC/ECC-REG DIMM DDR4 2133P 2400T 2666V 1.2V MAX 256G
+RAM
+1*VGA Port
+Made of aluminum alloy
+Material 1*Power Switch
+1*Grounding screw
+2*USB2.0(Interface)/1 *USB3.0(Array pin)
+USB 2 *USB2.0(Upright) / 4 *USB2.0(Array pin) co R n ea n r e c I/ t O or 3 1 * * B A a C l l O b u re tl a e i t ng fan
+1*USB reserved seat
+100-240V~50 / 60Hz(Mainboard: ATX 24Pin+8Pin+8Pin)
+Power
+1 *RTL-8211E(IPMI)/2*IntelEthernet Contoller 1GRJ45
+NIC
+2 *M.2 NVMe PCle 3.0x4 2280 8*SATA3.06Gbps /1*mSATA/1*CF
+Storage ；
+2*SO-DIMM DDR4 Slot
+3 *PCI-E x8 / 1 *PCI-E x16; 8* GPIO; 1 *RJ45Console / 2 *COM(Array pin); 1*mSATA/4*SATA 3.0
+Expansion 1*miniPCle; IPMI/NetWorkWakeUP/PXE 1*PCle x16
+3*PCIe x8
+1U(440mm*600mm*45mm)/2U(440mm*600mm*90mm) 8*GPIO Pin
+Size
+Internal I/O 2*COM Pin
+BIOS AMI UEFI BIOS EFI connectore 1*JVGA Pin/1*CF Slot
+1*USB3.0(Array pin)/4*USB2.0(Array pin)
+Depends on CPU 2*USB2.0(Upright)
+TDP
+1*SATA Power
+System Windows10/11,WindowsServer,Linux 1*F_PANEL Pin
+Temperature: 0°c~60°c,Storage:-10°c~70°c
+Working
+Humdity: 10%~90%,Storage:5%~95%,ono-Condensing
+Environment
+office:
+mail: web:
+5E, JinDa City, Central Road,
+Contact@szmagicchip.com www.szmagicchip.com Xinqiao Street, Baoan District,
+Shenzhen City, China 518125

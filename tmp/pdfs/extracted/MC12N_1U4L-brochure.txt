@@ -1,0 +1,52 @@
+--- PAGE 1 ---
+SHENZHEN MAGIC CHIP TECHNOLOGY CO.,LTD
+Model MC12N_1U4L
+：
+Intel N100/N95/N305
+CPU
+1*Power Button
+Intel® Alder Lake-N
+Chipset 1*GPIO/1*RJ45 Console
+4*Intel i226V 2.5Gb Ethernet port
+Intel UHD Graphics Front I/O 1*USB 2.0/1*USB 3.0
+Video Card connector 1*Hard disk indicator
+1*Power indicator
+1*J_HDMI; 1*VGA
+Video
+SO-DIMM DDR5 4800MHz MAX 48G
+RAM
+Made of aluminum alloy
+Material
+1*VGA Port
+1 * USB2.0 / 1 * USB3.0(Interface); 2 * USB2.0(Vertical); 6 * USB2.0(Array pin) 3*Ball bearing fans
+USB Rear I/O 1*Grounding screw
+connector
+100-240V~50/60Hz(Mainboard:ATX 4 PIN 12V 55*25) 2*AC Outlets
+Power
+4*Intel i226-V 2.5Gb Ethernet port
+NIC
+1 * SATA3.0 6Gbps / 1 * mSATA / 1 * CF (One out of three)
+Storage
+1*PCI-E x8 Slot Gen3 PCle3.0 x4; 4 * GPIO; 1* RJ45 Console 1*SO-DIMM DDR5 Slot
+Expansion 2* COM (Array pin);1 * miniPCle; NetWork WakeUp / PXE 1*mSATA/1*SATA 3.0/1*CF Slot
+1*PCI-E x8 Slot Gen3 PCle3.0 x4
+1U(440mm*320mm*45mm)/2U(435mm*439mm*90mm) 4*GPIO Pin
+Size 1*COM Pin
+Internal I/O 1*JHDMI/1*VGA/1*EDP Pin
+AMI UEFI BIOS, PEX, WOL, GPIO
+BIOS connectore 6*USB2.0 Arraypin)/2*USB2.0 Vertical)
+（ （
+Depends on CPU 1*SATA Power
+TDP 1*F_PANEL Pin
+Windows10 / 11,Windows Server, Linux 1*TPM Pin
+System
+1*SIM/1*mini PCIe
+0~60 ;10%~90% Relative humidity,
+Working ℃
+(no condensotion)
+Environment
+office:
+mail: web:
+5E, JinDa City, Central Road,
+Contact@szmagicchip.com www.szmagicchip.com Xinqiao Street, Baoan District,
+Shenzhen City, China 518125

@@ -1,0 +1,48 @@
+--- PAGE 1 ---
+SHENZHEN MAGIC CHIP TECHNOLOGY CO.,LTD
+Model MCSRH15
+：
+Intel Atom C3758/C3858/C3958 (Select option)
+CPU
+4*SFP+ ports;
+BKHD-1310NP-4L4S
+Chipset 4*RJ45 Ethernet;
+Front I/O 2*USB3.0;
+Intel® HD Graphics 600 connector 1*VGA;
+Video Card 1*DC_IN
+1*VGA port
+Video
+2*DDR4 SO-DIMM Memory slot, Up to 64GB 2400MHz
+RAM
+Equipment Weight 2.50KG; Package Weight 3.00KG(Includingaccessories)
+Weight 1*Power Button;
+2*USB3.0; 2*USB2.0 2*USB2.0;
+USB 1*GPIO;
+Jack DC 5.5/2.5mm 12V 10A Rear I/O 1*RS485 Phoenix terminal;
+Power connector 2*COMRS232;
+4*Intel i226 2.5GbE; 4*Intel x553 10G SFP+ 1*SIM card slot
+NIC
+1*M.2 NVMe (PCIe Gen3 x4)2280;
+Storage 1*SATA 6.0 Gb/s(Support 2.5inch HDD/SSD)
+1*mPCIe; Auto Power On; Wake-up on LAN; PXE; Watchdog
+Expansion
+197*165*67 (mm)
+Size
+2*F_USB Pin Head
+AMI BIOS (Legacy or UEFI) 1*J_COM Pin Head
+BIOS
+Internal I/O 1*F_PANEL Pin Head
+Depends on CPU connectore 2*CPU/SYS_FAN Slot
+TDP
+1*GPIO Pin Head
+Windows10/Windows11/Linux
+System
+0~50 ;5%~90% Relative humidity,
+Working ℃
+(no condensotion)
+Environment
+office:
+mail: web:
+5E, JinDa City, Central Road,
+Contact@szmagicchip.com www.szmagicchip.com Xinqiao Street, Baoan District,
+Shenzhen City, China 518125

@@ -1,0 +1,43 @@
+--- PAGE 1 ---
+SHENZHEN MAGIC CHIP TECHNOLOGY CO.,LTD
+Model MC12N_1U6L
+：
+Intel N100/N95/N305
+CPU
+Video Card Intel UHD Graphics 1*RJ45 Console/1*JCOM
+Front I/O 6*Intel i226V 2.5Gb Ethernet port
+Video 1*J_HDMI; 1*VGA connector 2*USB 3.0
+SO-DIMM DDR5 4800MHz Max48GB
+RAM
+Made of aluminum alloy
+Material
+2*USB 3.0(5Gbps) 4*USB2.0
+USB ； 1*Switch
+100-240V~50/60Hz(Mainboard:ATX 4 PIN 12V 55*25) Rear I/O 1*DC_IN 100~240V
+Power connector 1*VGA/1*J_HDMI
+6*Intel i226-V 2.5Gb Ethernet port
+NIC
+1*mSATA/1*SATA3.0
+Storage
+1*PCIE4.0 Slot Gen3 PCIE3.0x1 (Share signal with M.2 E-Key,Choose 1 out of 2)
+8*Programmable GPIO; 1*RJ45/1*JCOM; 1*M.2 E-Key WiFi; 1*M.2 B-Key 4G/5G
+Expansion NetWork WakeUP/PXE
+Size Desktop(210*201*45mm)/1U(440*225*45mm)/2U(435*405*90mm) 1*SO-DIMM DDR5 Slot
+1*mSATA/1*SATA 3.0
+BIOS AMI UEFI BIOS, PEX, WOL, GPIO 1*PCIE 4.0 Slot
+8*GPIO
+TDP Depends on CPU Internal I/O 1*RJ45/1*JCOM
+connectore 1*M.2 E-Key WiFi
+System Windows10 / windows11 / Linux 1*M.2 E-Key 4G/5G
+NetWork WakeUP/PXE
+0~60 ;10%~90% Relative humidity,
+Working ℃
+(no condensotion)
+Environment
+200mm(W)*180mm(L)
+PCB Size
+office:
+mail: web:
+5E, JinDa City, Central Road,
+Contact@szmagicchip.com www.szmagicchip.com Xinqiao Street, Baoan District,
+Shenzhen City, China 518125
