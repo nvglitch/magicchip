@@ -174,6 +174,24 @@ const firewallMegaSeries: ProductMegaSeries[] = [
     href: '/products/firewall-mini-pc#series-1u',
   },
 ];
+const commercialMegaSeries: ProductMegaSeries[] = [
+  {
+    id: 'series-dpc',
+    code: 'DPC',
+    title: 'Desktop PC Series',
+    description: 'Compact desktop systems from efficient Intel N-series models to Intel Core and AMD Ryzen platforms',
+    image: '/assets/products/commercial/dpc/mcar9/images/main-square.png',
+    href: '/products/commercial-mini-pc#series-dpc',
+  },
+  {
+    id: 'series-nas',
+    code: 'NAS',
+    title: 'NAS PC Series',
+    description: 'Storage-oriented platforms with multi-drive, 2.5GbE, 10GbE, and expansion options',
+    image: '/assets/products/commercial/nas/mcnas12/images/main-square.png',
+    href: '/products/commercial-mini-pc#series-nas',
+  },
+];
 const productCategoryImages: Record<string, string> = {
   'industrial-mini-pc': '/assets/home/categories/industrial-mini-pc.png',
   'ai-mini-pc': '/assets/home/categories/ai-mini-pc.png',
@@ -445,9 +463,13 @@ export default function Navbar() {
                               </a>
                             </div>
 
-                            {(activeMegaCategory.id === 'industrial-mini-pc' || activeMegaCategory.id === 'firewall-mini-pc') ? (
+                            {(activeMegaCategory.id === 'industrial-mini-pc' || activeMegaCategory.id === 'firewall-mini-pc' || activeMegaCategory.id === 'commercial-mini-pc') ? (
                               <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-                                {(activeMegaCategory.id === 'industrial-mini-pc' ? industrialMegaSeries : firewallMegaSeries).map((series) => (
+                                {(activeMegaCategory.id === 'industrial-mini-pc'
+                                  ? industrialMegaSeries
+                                  : activeMegaCategory.id === 'firewall-mini-pc'
+                                    ? firewallMegaSeries
+                                    : commercialMegaSeries).map((series) => (
                                   <a
                                     key={series.id}
                                     href={series.href}

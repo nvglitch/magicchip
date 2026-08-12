@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { industrialCatalog } from '@/lib/industrial-catalog';
 import { firewallCatalog } from '@/lib/firewall-catalog';
+import { commercialCatalog } from '@/lib/commercial-catalog';
 
 export const SITE_URL = 'https://szmagicchip.com';
 export const SITE_NAME = 'MagicChip';
@@ -25,7 +26,7 @@ export const categorySeo: Record<string, SeoEntry> = {
   },
   'commercial-mini-pc': {
     name: 'Commercial Mini PCs',
-    description: 'Explore compact commercial mini PCs for office, digital signage, education, conferencing, and everyday business deployments.',
+    description: 'Explore compact desktop PCs and NAS PCs for office, education, professional workloads, digital signage, local storage, backup, and network services.',
     path: '/products/commercial-mini-pc',
   },
   'firewall-mini-pc': {
@@ -59,9 +60,22 @@ const catalogFirewallProductSeo: Record<string, SeoEntry & { category: string }>
     },
   ]),
 );
+const catalogCommercialProductSeo: Record<string, SeoEntry & { category: string }> = Object.fromEntries(
+  commercialCatalog.map((item) => [
+    item.id,
+    {
+      name: `${item.name} ${item.series === 'NAS' ? 'NAS PC' : 'Commercial Desktop PC'}`,
+      description: item.tagline,
+      path: `/products/commercial-mini-pc/${item.id}`,
+      image: item.image,
+      category: 'commercial-mini-pc',
+    },
+  ]),
+);
 export const productSeo: Record<string, SeoEntry & { category: string }> = {
   ...catalogProductSeo,
   ...catalogFirewallProductSeo,
+  ...catalogCommercialProductSeo,
   mcipca2: {
     name: 'MCIPCA2 A-Series Industrial Mini PC',
     description: 'Compact industrial mini PC with Intel J4125, one RS232 COM port, four Intel Gigabit LAN ports, six USB ports, and wireless expansion.',

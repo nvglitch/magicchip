@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { industrialCatalog } from '@/lib/industrial-catalog';
 import { firewallCatalog } from '@/lib/firewall-catalog';
+import { commercialCatalog } from '@/lib/commercial-catalog';
 
 const categoryData: Record<string, { icon: any; gradient: string; image: string }> = {
   'industrial-mini-pc': { icon: Cpu, gradient: 'from-blue-600 to-indigo-700', image: '/assets/home/categories/industrial-mini-pc.png' },
@@ -247,6 +248,26 @@ const firewallSeries = [
     models: firewallCatalog.filter((product) => product.series === '1U').map(({ id, name }) => ({ id, name })),
   },
 ];
+const commercialSeries = [
+  {
+    code: 'DPC',
+    title: 'Desktop PC Series',
+    description: 'Compact desktop and mini PC platforms for business, education, professional work, and display deployments',
+    image: '/assets/products/commercial/dpc/mcar9/images/main-square.png',
+    models: [
+      { id: 'mc15uh', name: 'MC15UH' },
+      { id: 'mctar7', name: 'MCTAR7' },
+      ...commercialCatalog.filter((product) => product.series === 'DPC').map(({ id, name }) => ({ id, name })),
+    ],
+  },
+  {
+    code: 'NAS',
+    title: 'NAS PC Series',
+    description: 'Compact storage and network-service platforms with multi-drive, multi-LAN, and high-speed uplink options',
+    image: '/assets/products/commercial/nas/mcnas12/images/main-square.png',
+    models: commercialCatalog.filter((product) => product.series === 'NAS').map(({ id, name }) => ({ id, name })),
+  },
+];
 const richCategoryData = {
   'industrial-mini-pc': {
     overview: 'MagicChip Industrial Mini PCs bring processing, networking, display output, and equipment-facing I/O into compact fanless systems. They can run control software beside a machine, collect data from serial devices, drive production dashboards, or connect local equipment to an industrial edge network.',
@@ -287,21 +308,22 @@ const richCategoryData = {
     ],
   },
   'commercial-mini-pc': {
-    overview: 'Commercial Mini PCs deliver desktop-class connectivity in a small footprint for offices, classrooms, meeting spaces, and display installations. The current range covers both high-performance expansion and practical everyday deployment.',
-    qualifier: 'Select processor, memory, expansion, and display configuration according to the intended software and peripherals.',
+    overview: 'MagicChip Commercial PCs now cover compact desktop systems for office, education, display, and professional workloads, together with NAS-focused platforms for local storage, backup, media libraries, and network services. The range spans low-power Intel N-series systems, Intel Core and AMD Ryzen performance platforms, and multi-LAN storage appliances.',
+    qualifier: 'Start with Desktop PC or NAS PC, then choose the processor, memory, display, network, storage, and expansion configuration required by the deployment.',
     capabilities: [
-      { title: 'Small-footprint deployment', description: 'Compact enclosures simplify desk, display, meeting-room, and other space-constrained installations.' },
-      { title: 'Modern peripheral support', description: 'USB4, OCuLink, Type-C, HDMI, and wired networking options cover varied commercial peripherals.' },
-      { title: 'Flexible performance levels', description: 'Choose Intel Core Ultra or AMD Ryzen platforms according to workload, graphics, and budget.' },
+      { title: 'Desktop systems from efficient to high performance', description: 'Choose compact Intel N-series models, Intel Core platforms, or AMD Ryzen systems according to workload, graphics, memory, and expansion needs.' },
+      { title: 'Modern display and peripheral connectivity', description: 'Model-specific HDMI, DisplayPort, Type-C, USB4, Thunderbolt, OCuLink, and multi-LAN options support varied commercial workspaces.' },
+      { title: 'NAS and local-service platforms', description: 'NAS-focused models add multi-drive storage, 2.5GbE and 10GbE options, and PCIe expansion for backup, media, storage, and network services.' },
     ],
     sceneImage: '/assets/products/category-scenes/commercial-workspace.webp',
     sceneAlt: 'Modern commercial meeting room with a large presentation display',
     photoCredit: 'Exospace Bbsr / Unsplash',
     photoUrl: 'https://unsplash.com/photos/a-modern-empty-meeting-room-with-furniture-ML5m44ZgIsU',
     scenarios: [
-      { title: 'Office & meeting rooms', description: 'Compact systems support productivity, conferencing, presentation displays, and shared workspaces.', products: ['MC15UH', 'MCTAR7'] },
-      { title: 'Education & laboratories', description: 'Multiple display and peripheral connections suit classrooms, training rooms, and practical labs.', products: ['MC15UH', 'MCTAR7'] },
-      { title: 'Digital signage', description: 'HDMI and Type-C display connectivity supports information displays and commercial visual communication.', products: ['MCTAR7', 'MC15UH'] },
+      { title: 'Office, meeting rooms & education', description: 'Compact desktop systems support productivity, conferencing, shared workspaces, classrooms, and training environments.', products: ['MCN5', 'MCTAR7'] },
+      { title: 'Professional desktop workloads', description: 'Intel Core, Core Ultra, and AMD Ryzen platforms provide additional memory, display, networking, and expansion for demanding applications.', products: ['MC15UH', 'MCAR9'] },
+      { title: 'Digital signage & information displays', description: 'Multi-display HDMI, DisplayPort, and Type-C options support commercial visual communication and distributed display installations.', products: ['MCCN51', 'MC12'] },
+      { title: 'Local storage, backup & media services', description: 'NAS-focused platforms combine multi-drive storage with 2.5GbE or 10GbE networking for local data, media, and service workloads.', products: ['MCNAS12', 'MCNAS100'] },
     ],
   },
   'firewall-mini-pc': {
@@ -333,12 +355,19 @@ export default function CategoryPage() {
     ? industrialCatalog.map(({ id, name, tagline, image, highlights }) => ({ id, name, tagline, image, specs: highlights }))
     : category === 'firewall-mini-pc'
       ? firewallCatalog.map(({ id, name, tagline, image, highlights }) => ({ id, name, tagline, image, specs: highlights }))
-      : sampleProducts[category] || [];
+      : category === 'commercial-mini-pc'
+        ? [
+          ...sampleProducts['commercial-mini-pc'],
+          ...commercialCatalog.map(({ id, name, tagline, image, highlights }) => ({ id, name, tagline, image, specs: highlights })),
+        ]
+        : sampleProducts[category] || [];
   const activeSeries = category === 'industrial-mini-pc'
     ? industrialSeries
     : category === 'firewall-mini-pc'
       ? firewallSeries
-      : null;
+      : category === 'commercial-mini-pc'
+        ? commercialSeries
+        : null;
   const richContent = richCategoryData[category as keyof typeof richCategoryData] || richCategoryData['industrial-mini-pc'];
   const desktopSceneImage = 'desktopSceneImage' in richContent ? richContent.desktopSceneImage : richContent.sceneImage;
 
@@ -407,7 +436,9 @@ export default function CategoryPage() {
                 ? 'Compact computers for machines, data, and the industrial edge'
                 : category === 'firewall-mini-pc'
                   ? 'Network appliances from compact edge gateways to 1U servers'
-                  : `What defines ${categoryName}?`}</h2>
+                  : category === 'commercial-mini-pc'
+                    ? 'Compact desktop and NAS platforms for work, displays, and local services'
+                    : `What defines ${categoryName}?`}</h2>
             </div>
             <div>
               <p className="text-lg leading-8 text-slate-600">{richContent.overview}</p>
@@ -435,13 +466,17 @@ export default function CategoryPage() {
                 ? 'From machine control to operator stations'
                 : category === 'firewall-mini-pc'
                   ? 'From branch firewalls to rackmount network platforms'
-                  : 'Where this category fits'}
+                  : category === 'commercial-mini-pc'
+                    ? 'From everyday desktops to compact storage and network services'
+                    : 'Where this category fits'}
             </h2>
-            {(category === 'industrial-mini-pc' || category === 'firewall-mini-pc') && (
+            {(category === 'industrial-mini-pc' || category === 'firewall-mini-pc' || category === 'commercial-mini-pc') && (
               <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
                 {category === 'industrial-mini-pc'
                   ? 'The expanded range covers four box-PC interface architectures plus integrated-display panel PCs, so customers can start with the deployment task and then narrow the choice by I/O and compute platform.'
-                  : 'The expanded network range covers compact two-, four-, and six-port appliances, high-speed 10GbE platforms, and 1U servers. Start with the deployment format and port architecture, then compare the available compute and expansion options.'}
+                  : category === 'firewall-mini-pc'
+                    ? 'The expanded network range covers compact two-, four-, and six-port appliances, high-speed 10GbE platforms, and 1U servers. Start with the deployment format and port architecture, then compare the available compute and expansion options.'
+                    : 'The expanded commercial range now covers compact desktop systems for everyday and professional workloads plus NAS-focused platforms for local storage, backup, media, and network services.'}
               </p>
             )}
           </div>
@@ -494,7 +529,9 @@ export default function CategoryPage() {
                 ? 'Select an IPC series by serial, network, and display architecture, then open the available model page.'
                 : category === 'firewall-mini-pc'
                   ? 'Select a series by port count, network speed, and installation format, then open the available model page.'
-                  : 'Compare the current models by processor platform, connectivity, expansion, and deployment requirements.'}
+                  : category === 'commercial-mini-pc'
+                    ? 'Start with Desktop PC or NAS PC, then compare processor, memory, display, storage, and network options within the selected series.'
+                    : 'Compare the current models by processor platform, connectivity, expansion, and deployment requirements.'}
             </p>
           </div>
 

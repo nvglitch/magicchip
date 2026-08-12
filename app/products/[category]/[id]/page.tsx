@@ -22,6 +22,7 @@ import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { industrialCatalog, type IndustrialSeriesCode } from '@/lib/industrial-catalog';
 import { firewallCatalog, type FirewallSeriesCode } from '@/lib/firewall-catalog';
+import { commercialCatalog, type CommercialSeriesCode } from '@/lib/commercial-catalog';
 
 type ProductSpec = { label: string; value: string };
 type ProductFeature = { icon: keyof typeof iconMap; title: string; description: string };
@@ -108,6 +109,18 @@ const firewallSeriesFeatures: Record<FirewallSeriesCode, ProductFeature[]> = {
     { icon: 'Server', title: '1U Rackmount Format', description: 'Rackmount chassis and integrated AC power suit equipment rooms, network cabinets, and centralized deployments.' },
     { icon: 'HardDrive', title: 'Storage and Expansion', description: 'Model-specific SATA, NVMe, PCIe, and wireless or cellular options support varied server and network roles.' },
     { icon: 'Cpu', title: 'Broad Compute Range', description: 'The series spans low-power Intel platforms, desktop-class processors, and dual Xeon server configurations.' },
+  ],
+};
+const commercialSeriesFeatures: Record<CommercialSeriesCode, ProductFeature[]> = {
+  DPC: [
+    { icon: 'Cpu', title: 'Flexible Compute Platforms', description: 'The desktop range spans efficient Intel N-series systems, Intel Core platforms, and AMD Ryzen performance configurations.' },
+    { icon: 'Monitor', title: 'Display & Peripheral Connectivity', description: 'Model-specific HDMI, DisplayPort, Type-C, USB4, Thunderbolt, and OCuLink options support varied commercial workspaces.' },
+    { icon: 'HardDrive', title: 'Configurable Memory & Storage', description: 'Choose memory capacity, NVMe, SATA, wireless, and network options according to the target workload and deployment.' },
+  ],
+  NAS: [
+    { icon: 'HardDrive', title: 'Storage-Oriented Architecture', description: 'NAS-focused systems provide model-specific NVMe, SATA, TF, and expansion options for local storage and service workloads.' },
+    { icon: 'Network', title: 'Multi-Gigabit Networking', description: 'Selected models combine 2.5GbE interfaces with 10GbE SFP+ or expandable high-speed network options.' },
+    { icon: 'Server', title: 'Compact Local Services', description: 'The platforms suit compatible NAS, backup, media, private-cloud, and other local network-service software.' },
   ],
 };
 const compactCatalogHighlights = (specs: ProductSpec[]) => {
@@ -214,9 +227,30 @@ const catalogFirewallProducts: Record<string, ProductDetail> = Object.fromEntrie
     },
   ]),
 );
+const catalogCommercialProducts: Record<string, ProductDetail> = Object.fromEntries(
+  commercialCatalog.map((item) => [
+    item.id,
+    {
+      name: item.name,
+      tagline: item.tagline,
+      description: item.description,
+      images: [item.image],
+      galleryImages: item.galleryImages,
+      galleryCards: item.galleryImages.map((image, index) => ({
+        image,
+        title: index === 0 ? `${item.name} enclosure and interface view` : `${item.name} product view ${index + 1}`,
+      })),
+      highlights: compactCatalogHighlights(item.specs),
+      specs: item.specs,
+      features: commercialSeriesFeatures[item.series],
+      operatingRange: item.operatingRange,
+    },
+  ]),
+);
 const products: Record<string, ProductDetail> = {
   ...catalogIndustrialProducts,
   ...catalogFirewallProducts,
+  ...catalogCommercialProducts,
   mcipcb13: {
     name: 'MCIPCB13',
     tagline: 'Industrial Mini PC for dependable multi-I/O edge deployment',
@@ -745,6 +779,7 @@ const products: Record<string, ProductDetail> = {
 const productCategories: Record<string, string> = {
   ...Object.fromEntries(industrialCatalog.map((item) => [item.id, 'industrial-mini-pc'])),
   ...Object.fromEntries(firewallCatalog.map((item) => [item.id, 'firewall-mini-pc'])),
+  ...Object.fromEntries(commercialCatalog.map((item) => [item.id, 'commercial-mini-pc'])),
   mcipcb13: 'industrial-mini-pc',
   mcipcb12: 'industrial-mini-pc',
   mcipcd3: 'industrial-mini-pc',
@@ -785,7 +820,11 @@ export default function ProductDetailPage() {
   const firewallSeriesCode = category === 'firewall-mini-pc'
     ? firewallCatalog.find((item) => item.id === productId)?.series.toLowerCase()
     : undefined;
-  const categorySeriesCode = industrialSeriesCode || firewallSeriesCode;
+  const commercialSeriesCode = category === 'commercial-mini-pc'
+    ? commercialCatalog.find((item) => item.id === productId)?.series.toLowerCase()
+      || (['mc15uh', 'mctar7'].includes(productId) ? 'dpc' : undefined)
+    : undefined;
+  const categorySeriesCode = industrialSeriesCode || firewallSeriesCode || commercialSeriesCode;
   const backToCategoryHref = categorySeriesCode
     ? `/products/${category}#series-${categorySeriesCode}`
     : `/products/${category}`;

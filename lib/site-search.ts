@@ -1,5 +1,6 @@
 import { industrialCatalog } from '@/lib/industrial-catalog';
 import { firewallCatalog } from '@/lib/firewall-catalog';
+import { commercialCatalog } from '@/lib/commercial-catalog';
 
 export type SearchEntryType = 'product' | 'category' | 'scenario' | 'page' | 'resource';
 
@@ -40,9 +41,23 @@ const catalogFirewallSearchEntries: SearchEntry[] = firewallCatalog
     ],
     image: item.image,
   }));
+const catalogCommercialSearchEntries: SearchEntry[] = commercialCatalog.map((item) => ({
+  title: item.name,
+  description: item.tagline,
+  href: `/products/commercial-mini-pc/${item.id}`,
+  type: 'product',
+  keywords: [
+    'commercial mini pc',
+    item.series === 'NAS' ? 'nas pc storage server' : 'desktop mini pc',
+    `${item.series.toLowerCase()} series`,
+    item.name.toLowerCase(),
+  ],
+  image: item.image,
+}));
 export const siteSearchIndex: SearchEntry[] = [
   ...catalogIndustrialSearchEntries,
   ...catalogFirewallSearchEntries,
+  ...catalogCommercialSearchEntries,
   {
     title: 'MCIPCA2',
     description: 'Compact A-series industrial Mini PC with one RS232 COM port and four Intel Gigabit LAN ports.',
