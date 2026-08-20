@@ -298,9 +298,8 @@ const richCategoryData = {
       { title: 'Fast data & display paths', description: 'Multi-display output, high-speed networking, and multiple NVMe options support substantial local workflows.' },
     ],
     sceneImage: '/assets/products/category-scenes/edge-ai-robotics.webp',
-    sceneAlt: 'Robotic arm in a modern AI and engineering laboratory',
-    photoCredit: 'Brecht Corbeel / Unsplash',
-    photoUrl: 'https://unsplash.com/photos/a-robotic-arm-in-a-clean-minimalist-laboratory-setting-gEtezQMsu64',
+    desktopSceneImage: '/assets/products/category-scenes/edge-ai-robotics-desktop.webp',
+    sceneAlt: 'Abstract blue and cyan lightscape representing AI computing',
     scenarios: [
       { title: 'Local AI development & inference', description: 'Run supported models locally where data proximity, responsiveness, or offline operation matters.', products: ['MCAIPC2', 'MCAIPC1'] },
       { title: 'Computer-vision development', description: 'Use high-performance compute and external camera connectivity to prototype visual-analysis workflows.', products: ['MCAIPC2', 'MCAIPC1'] },
@@ -316,9 +315,8 @@ const richCategoryData = {
       { title: 'NAS and local-service platforms', description: 'NAS-focused models add multi-drive storage, 2.5GbE and 10GbE options, and PCIe expansion for backup, media, storage, and network services.' },
     ],
     sceneImage: '/assets/products/category-scenes/commercial-workspace.webp',
-    sceneAlt: 'Modern commercial meeting room with a large presentation display',
-    photoCredit: 'Exospace Bbsr / Unsplash',
-    photoUrl: 'https://unsplash.com/photos/a-modern-empty-meeting-room-with-furniture-ML5m44ZgIsU',
+    desktopSceneImage: '/assets/products/category-scenes/commercial-workspace-desktop.webp',
+    sceneAlt: 'Bright modern office workspace for meetings and collaboration',
     scenarios: [
       { title: 'Office, meeting rooms & education', description: 'Compact desktop systems support productivity, conferencing, shared workspaces, classrooms, and training environments.', products: ['MCN5', 'MCTAR7'] },
       { title: 'Professional desktop workloads', description: 'Intel Core, Core Ultra, and AMD Ryzen platforms provide additional memory, display, networking, and expansion for demanding applications.', products: ['MC15UH', 'MCAR9'] },
@@ -369,7 +367,7 @@ export default function CategoryPage() {
         ? commercialSeries
         : null;
   const richContent = richCategoryData[category as keyof typeof richCategoryData] || richCategoryData['industrial-mini-pc'];
-  const desktopSceneImage = 'desktopSceneImage' in richContent ? richContent.desktopSceneImage : richContent.sceneImage;
+  const desktopSceneImage = richContent.desktopSceneImage;
 
   const categoryName = categoryNames[category]?.[language] || categoryNames[category]?.en || category;
   const categoryDesc = categoryDescriptions[category]?.[language] || categoryDescriptions[category]?.en || '';
