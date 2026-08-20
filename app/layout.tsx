@@ -45,10 +45,6 @@ export const metadata: Metadata = {
     images: ["/assets/brand/logo-wordmark.png"],
   },
   robots: { index: true, follow: true },
-  icons: {
-    icon: "/assets/brand/logo-mark.png",
-    apple: "/assets/brand/logo-mark.png",
-  },
 };
 
 const organizationJsonLd = {
