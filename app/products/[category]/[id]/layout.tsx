@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
+import { commercialCatalog } from '@/lib/commercial-catalog';
+import { firewallCatalog } from '@/lib/firewall-catalog';
+import { industrialCatalog } from '@/lib/industrial-catalog';
 import { categorySeo, createPageMetadata, productSeo, serializeJsonLd, SITE_NAME, SITE_URL } from '@/lib/seo';
 
 type ProductLayoutProps = {
@@ -22,6 +25,7 @@ export default async function ProductLayout({ children, params }: ProductLayoutP
   const { category, id } = await params;
   const product = productSeo[id];
   const categoryEntry = categorySeo[category];
+  const catalogItem = [...industrialCatalog, ...firewallCatalog, ...commercialCatalog].find((item) => item.id === id);
   const isValidProduct = product && product.category === category;
 
   if (!isValidProduct) return children;
@@ -29,13 +33,19 @@ export default async function ProductLayout({ children, params }: ProductLayoutP
   const productData = {
     '@context': 'https://schema.org',
     '@type': 'Product',
+    '@id': `${SITE_URL}${product.path}#product`,
     name: product.name,
     description: product.description,
     image: product.image ? [`${SITE_URL}${product.image}`] : undefined,
     url: `${SITE_URL}${product.path}`,
+    sku: catalogItem?.name || id.toUpperCase(),
+    mpn: catalogItem?.name || id.toUpperCase(),
     category: categoryEntry?.name,
     brand: { '@type': 'Brand', name: SITE_NAME },
     manufacturer: { '@id': `${SITE_URL}/#organization` },
+    additionalProperty: catalogItem?.specs
+      .filter((spec) => !['Model', 'Series'].includes(spec.label))
+      .map((spec) => ({ '@type': 'PropertyValue', name: spec.label, value: spec.value })),
   };
   const breadcrumb = {
     '@context': 'https://schema.org',

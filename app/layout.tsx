@@ -6,12 +6,18 @@ import Footer from "@/components/Footer";
 import LiveChatWidget from "@/components/LiveChatWidget";
 import ScrollToTop from "@/components/ScrollToTop";
 import { LanguageProvider } from "@/lib/i18n/LanguageContext";
-import { serializeJsonLd, SITE_NAME, SITE_URL } from "@/lib/seo";
+import { getSiteConfig } from "@/lib/content-loader";
+import { DEFAULT_SOCIAL_IMAGE, serializeJsonLd, SITE_NAME, SITE_URL } from "@/lib/seo";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
+
+const siteConfig = getSiteConfig();
+const socialProfiles = siteConfig
+  ? Object.values(siteConfig.social).filter((url): url is string => Boolean(url))
+  : [];
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -36,13 +42,19 @@ export const metadata: Metadata = {
     url: "/",
     siteName: SITE_NAME,
     type: "website",
-    images: [{ url: "/assets/brand/logo-wordmark.png", alt: "MagicChip Mini PC and industrial computing" }],
+    images: [{
+      url: DEFAULT_SOCIAL_IMAGE,
+      width: 1200,
+      height: 630,
+      type: 'image/png',
+      alt: "MagicChip Mini PC and industrial computing",
+    }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Mini PC & Industrial Computing OEM/ODM Manufacturer | MagicChip",
     description: "Industrial, AI, commercial, and firewall Mini PC solutions with OEM/ODM support.",
-    images: ["/assets/brand/logo-wordmark.png"],
+    images: [DEFAULT_SOCIAL_IMAGE],
   },
   robots: { index: true, follow: true },
 };
@@ -53,7 +65,8 @@ const organizationJsonLd = {
   "@id": `${SITE_URL}/#organization`,
   name: SITE_NAME,
   url: SITE_URL,
-  logo: `${SITE_URL}/assets/brand/logo-wordmark.png`,
+  logo: `${SITE_URL}/assets/brand/logo-mark-512.png`,
+  sameAs: socialProfiles,
   email: "Contact@szmagicchip.com",
   telephone: "+86-0755-23099863",
   address: {

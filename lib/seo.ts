@@ -5,6 +5,9 @@ import { commercialCatalog } from '@/lib/commercial-catalog';
 
 export const SITE_URL = 'https://szmagicchip.com';
 export const SITE_NAME = 'MagicChip';
+// Update this only when the published site or product catalog materially changes.
+export const SITE_CONTENT_LAST_UPDATED = new Date('2026-08-20T00:00:00.000Z');
+export const DEFAULT_SOCIAL_IMAGE = '/assets/brand/og-default.png';
 
 export type SeoEntry = {
   name: string;
@@ -164,6 +167,7 @@ export const productSeo: Record<string, SeoEntry & { category: string }> = {
 
 export function createPageMetadata(entry: SeoEntry): Metadata {
   const brandedTitle = entry.name.includes(SITE_NAME) ? entry.name : `${entry.name} | ${SITE_NAME}`;
+  const socialImage = entry.image || DEFAULT_SOCIAL_IMAGE;
 
   return {
     title: { absolute: brandedTitle },
@@ -174,11 +178,20 @@ export function createPageMetadata(entry: SeoEntry): Metadata {
       description: entry.description,
       url: entry.path,
       type: 'website',
-      images: entry.image ? [{ url: entry.image, alt: entry.name }] : undefined,
+      images: [{
+        url: socialImage,
+        ...(entry.image ? {} : { width: 1200, height: 630, type: 'image/png' }),
+        alt: entry.name,
+      }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: brandedTitle,
+      description: entry.description,
+      images: [socialImage],
     },
   };
 }
-
 export function serializeJsonLd(value: unknown) {
   return JSON.stringify(value).replace(/</g, '\\u003c');
 }

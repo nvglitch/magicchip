@@ -16,7 +16,6 @@ export default function Footer() {
       { label: t.footer.support[0], href: '/tech-docs', key: 'support-0' },
       { label: t.footer.support[1], href: '/downloads', key: 'support-1' },
       { label: t.footer.support[2], href: '/contact', key: 'support-2' },
-      { label: t.footer.support[3], href: '#', key: 'support-3' },
     ],
   };
 
@@ -98,10 +97,6 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
             <p className="text-gray-400">{t.footer.copyright}</p>
-            <div className="flex items-center gap-6">
-              <a href="#" className="hover:text-white transition-colors">{t.footer.privacy}</a>
-              <a href="#" className="hover:text-white transition-colors">{t.footer.terms}</a>
-            </div>
           </div>
         </div>
       </div>
