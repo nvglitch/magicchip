@@ -12,7 +12,7 @@ const aboutData = {
     },
     intro: {
       title: 'Shenzhen Magic Chip Technology Co., Ltd.',
-      content: 'Founded in 2021, Shenzhen Magic Chip Technology Co., Ltd. is a professional manufacturer of mini PCs and industrial computing equipment based in Shenzhen, China. We specialize in R&D, manufacturing, and sales of mini PCs, industrial computers, multi-port industrial hosts, industrial tablets, and laptops. Our products are widely used in intelligent retail, digital signage, financial self-service, industrial automation, education, medical, and IoT fields.',
+      content: 'MagicChip, also known as Magic Chip, is the brand of Shenzhen Magic Chip Technology Co., Ltd., a professional manufacturer of mini PCs and industrial computing equipment based in Shenzhen, China. Founded in 2021, we specialize in R&D, manufacturing, and sales of mini PCs, industrial computers, multi-port industrial hosts, industrial tablets, and laptops. Our products are widely used in intelligent retail, digital signage, financial self-service, industrial automation, education, medical, and IoT fields.',
       highlights: [
         { icon: Cpu, title: 'Intel Processors', desc: 'N-series, 13th/14th Gen Core' },
         { icon: Network, title: 'High-Speed Networking', desc: '2.5GbE/10GbE Multi-Port' },
