@@ -84,6 +84,18 @@ export const commercialCatalog: CommercialCatalogItem[] = [
         "value": "M.2 E-Key 2230 for Wi-Fi / CNVi"
       },
       {
+        "label": "Front I/O",
+        "value": "3 x USB 3.0; 1 x USB Type-C; 1 x audio output; 1 x microphone input; 1 x power button"
+      },
+      {
+        "label": "Rear I/O",
+        "value": "1 x 12V DC input; 2 x Realtek RTL8111H Gigabit Ethernet; 1 x DisplayPort 1.4a; 1 x HDMI 2.1; 1 x power button"
+      },
+      {
+        "label": "Internal I/O",
+        "value": "1 x M.2 E-Key 2230 for Wi-Fi 6; 1 x M.2 storage slot with SATA support; 2 x DDR5 SO-DIMM slots"
+      },
+      {
         "label": "Dimensions",
         "value": "135 x 125 x 49 mm"
       },
@@ -166,7 +178,19 @@ export const commercialCatalog: CommercialCatalogItem[] = [
       },
       {
         "label": "Expansion",
-        "value": "OCuLink for a compatible external graphics dock; Wi-Fi 6E and Bluetooth 5.3"
+        "value": "OCuLink for a compatible external graphics dock"
+      },
+      {
+        "label": "Wireless",
+        "value": "Wi-Fi 6E and Bluetooth 5.3"
+      },
+      {
+        "label": "Front I/O",
+        "value": "1 x power button; 1 x reset pinhole; 2 x USB 3.0; 1 x 3.5 mm combo audio jack; 1 x USB4 40Gbps; 1 x OCuLink"
+      },
+      {
+        "label": "Rear I/O",
+        "value": "1 x 19V DC input; 2 x Intel i226-V 2.5GbE; 1 x HDMI 2.1; 1 x DisplayPort 2.1; 1 x USB 3.0; 1 x USB 2.0"
       },
       {
         "label": "Dimensions",
@@ -250,8 +274,16 @@ export const commercialCatalog: CommercialCatalogItem[] = [
         "value": "1 x M.2 NVMe 2280 PCIe 3.0 x4, up to 2TB"
       },
       {
-        "label": "Expansion",
+        "label": "Wireless",
         "value": "Wi-Fi 6 and Bluetooth 5.2"
+      },
+      {
+        "label": "Front I/O",
+        "value": "3 x USB 3.0; 1 x Type-C; 1 x 3.5 mm audio jack; 1 x power button"
+      },
+      {
+        "label": "Rear I/O",
+        "value": "2 x HDMI 2.0; 2 x USB 2.0; 1 x Gigabit Ethernet; 1 x DC input"
       },
       {
         "label": "Dimensions",
@@ -334,8 +366,16 @@ export const commercialCatalog: CommercialCatalogItem[] = [
         "value": "M.2 2280 SATA / NVMe Gen3 x4; M.2 2280 NVMe PCIe Gen4 x4; optional 2.5-inch SATA drive"
       },
       {
-        "label": "Expansion",
-        "value": "M.2 2230 for Wi-Fi / Bluetooth"
+        "label": "Wireless",
+        "value": "1 x M.2 2230 slot for Wi-Fi / Bluetooth"
+      },
+      {
+        "label": "Front I/O",
+        "value": "1 x power button; 1 x Thunderbolt 4 Type-C with compatible PD input; 4 x USB 3.2 Gen 1; 1 x 3.5 mm headphone jack; 1 x 3.5 mm microphone input"
+      },
+      {
+        "label": "Rear I/O",
+        "value": "1 x 12V-19V DC input; 2 x 2.5GbE RJ45; 2 x HDMI 2.0; 1 x DisplayPort 1.4; 2 x USB 2.0; 2 x Wi-Fi antenna connectors"
       },
       {
         "label": "Dimensions",
@@ -419,6 +459,14 @@ export const commercialCatalog: CommercialCatalogItem[] = [
         "value": "M.2 E-Key Wi-Fi and Bluetooth 5.2; TPM 2.0 integrated in CPU"
       },
       {
+        "label": "Front I/O",
+        "value": "1 x power button; 1 x 3.5 mm audio jack; 1 x USB4 Type-C; 1 x USB 3.2"
+      },
+      {
+        "label": "Rear I/O",
+        "value": "1 x DC input; 2 x HDMI 2.1; 4 x USB 3.2; 1 x 2.5GbE RJ45"
+      },
+      {
         "label": "Dimensions",
         "value": "113 x 113 mm"
       },
@@ -494,6 +542,14 @@ export const commercialCatalog: CommercialCatalogItem[] = [
       {
         "label": "Expansion",
         "value": "M.2 E-Key Wi-Fi and Bluetooth 5.2; TPM 2.0 integrated in CPU"
+      },
+      {
+        "label": "Front I/O",
+        "value": "1 x power button; 1 x 3.5 mm audio jack; 1 x USB4 Type-C; 1 x USB 3.2"
+      },
+      {
+        "label": "Rear I/O",
+        "value": "1 x DC input; 2 x HDMI 2.1; 4 x USB 3.2; 1 x 2.5GbE RJ45"
       },
       {
         "label": "Dimensions",
@@ -575,6 +631,14 @@ export const commercialCatalog: CommercialCatalogItem[] = [
       {
         "label": "Expansion",
         "value": "Wi-Fi 5 / Wi-Fi 6 and Bluetooth 4.2 / 5.2"
+      },
+      {
+        "label": "Front I/O",
+        "value": "1 x power button; 1 x 3.5 mm combo audio jack with Realtek ALC897; 2 x USB 3.2; 1 x Clear CMOS button"
+      },
+      {
+        "label": "Rear I/O",
+        "value": "1 x 12V DC input; 1 x Realtek RTL8111 Gigabit Ethernet; 2 x HDMI; 2 x USB 3.2"
       },
       {
         "label": "Dimensions",
@@ -664,6 +728,14 @@ export const commercialCatalog: CommercialCatalogItem[] = [
       {
         "label": "Expansion",
         "value": "Wi-Fi 5 and Bluetooth 4.2"
+      },
+      {
+        "label": "Front I/O",
+        "value": "1 x power button; 1 x 3.5 mm combo audio jack with Realtek ALC897; 2 x USB 3.2; 1 x Clear CMOS button"
+      },
+      {
+        "label": "Rear I/O",
+        "value": "1 x 12V DC input; 1 x Realtek RTL8111 Gigabit Ethernet; 2 x HDMI; 2 x USB 3.2"
       },
       {
         "label": "Dimensions",
@@ -936,6 +1008,18 @@ export const commercialCatalog: CommercialCatalogItem[] = [
         "value": "Mini PCIe for Wi-Fi / Bluetooth"
       },
       {
+        "label": "Front I/O",
+        "value": "1 x 3.5 mm audio jack; 2 x USB 3.2; 1 x Type-C data port"
+      },
+      {
+        "label": "Rear I/O",
+        "value": "2 x USB 2.0; 1 x HDMI; 1 x DisplayPort; 1 x USB4; 1 x 2.5GbE RJ45; 1 x DC input"
+      },
+      {
+        "label": "Internal I/O",
+        "value": "1 x system-fan connector; 1 x Mini PCIe half-size slot for Wi-Fi / Bluetooth; 2 x M.2 2280 NVMe slots; 1 x SATA 3.0 connector; 2 x DDR5 SO-DIMM slots"
+      },
+      {
         "label": "Dimensions",
         "value": "136 x 123 x 51 mm"
       },
@@ -1024,6 +1108,18 @@ export const commercialCatalog: CommercialCatalogItem[] = [
         "value": "Mini PCIe for Wi-Fi / Bluetooth"
       },
       {
+        "label": "Front I/O",
+        "value": "1 x 3.5 mm audio jack; 2 x USB 3.2; 1 x Type-C data port"
+      },
+      {
+        "label": "Rear I/O",
+        "value": "2 x USB 2.0; 1 x HDMI; 1 x DisplayPort; 1 x USB4; 2 x 2.5GbE RJ45; 1 x DC input"
+      },
+      {
+        "label": "Internal I/O",
+        "value": "1 x system-fan connector; 1 x Mini PCIe half-size slot for Wi-Fi / Bluetooth; 2 x M.2 2280 NVMe slots; 1 x SATA 3.0 connector; 2 x DDR5 SO-DIMM slots"
+      },
+      {
         "label": "Dimensions",
         "value": "136 x 123 x 51 mm"
       },
@@ -1110,6 +1206,18 @@ export const commercialCatalog: CommercialCatalogItem[] = [
         "value": "1 x mSATA and 1 x 2.5-inch SATA 3.0"
       },
       {
+        "label": "Front I/O",
+        "value": "2 x USB 2.0; 4 x USB 3.0; 1 x power button"
+      },
+      {
+        "label": "Rear I/O",
+        "value": "1 x 12V DC input; 2 x USB 2.0; 1 x Realtek RTL8111G/H Gigabit Ethernet; 1 x HDMI; 1 x VGA; 1 x audio port"
+      },
+      {
+        "label": "Internal I/O",
+        "value": "1 x DDR3 SO-DIMM slot; 1 x mSATA slot; 1 x 2.5-inch SATA 3.0 connector"
+      },
+      {
         "label": "Dimensions",
         "value": "126 x 126 x 52 mm"
       },
@@ -1193,6 +1301,18 @@ export const commercialCatalog: CommercialCatalogItem[] = [
       {
         "label": "Storage",
         "value": "M.2 2280 NVMe / NGFF and 2.5-inch SATA 3.0"
+      },
+      {
+        "label": "Front I/O",
+        "value": "1 x dual-function audio jack; 6 x USB 2.0; 1 x power button"
+      },
+      {
+        "label": "Rear I/O",
+        "value": "1 x 12V DC input; 2 x USB 2.0; 2 x Intel i226-V 2.5GbE; 1 x Type-C; 1 x HDMI; 1 x DisplayPort"
+      },
+      {
+        "label": "Internal I/O",
+        "value": "1 x DDR4 SO-DIMM slot; 1 x M.2 2280 M-Key slot; 1 x 2.5-inch SATA 3.0 connector"
       },
       {
         "label": "Dimensions",
@@ -1284,6 +1404,18 @@ export const commercialCatalog: CommercialCatalogItem[] = [
         "value": "M.2 E-Key Wi-Fi; M.2 B-Key 4G/5G; SIM slot"
       },
       {
+        "label": "Front I/O",
+        "value": "1 x combo audio jack; 6 x USB 2.0; 2 x USB 3.0; 1 x HDMI; 1 x power button"
+      },
+      {
+        "label": "Rear I/O",
+        "value": "1 x 12V DC input; 1 x full-featured Type-C; 2 x USB 3.0; 2 x Intel i226-V 2.5GbE; 1 x HDMI; 1 x DisplayPort"
+      },
+      {
+        "label": "Internal I/O",
+        "value": "1 x DDR4 SO-DIMM slot; 1 x M.2 2280 M-Key slot; 1 x 2.5-inch SATA 3.0 connector; 1 x M.2 E-Key 2230 slot for Wi-Fi; 1 x M.2 B-Key slot for 4G/5G; 1 x SIM slot"
+      },
+      {
         "label": "Dimensions",
         "value": "126 x 126 x 47 mm"
       },
@@ -1371,6 +1503,18 @@ export const commercialCatalog: CommercialCatalogItem[] = [
       {
         "label": "Expansion",
         "value": "M.2 E-Key 2230 for Wi-Fi"
+      },
+      {
+        "label": "Front I/O",
+        "value": "1 x audio / microphone combo jack; 4 x USB 2.0; 1 x power button"
+      },
+      {
+        "label": "Rear I/O",
+        "value": "1 x 12V / 19V DC input; 1 x HDMI; 1 x DisplayPort; 4 x USB 3.0; 1 x Gigabit Ethernet"
+      },
+      {
+        "label": "Internal I/O",
+        "value": "2 x DDR4 SO-DIMM slots; 1 x M.2 2280 M-Key slot; 2 x SATA 3.0 connectors; 1 x M.2 E-Key 2230 slot for Wi-Fi"
       },
       {
         "label": "Dimensions",
@@ -1462,6 +1606,18 @@ export const commercialCatalog: CommercialCatalogItem[] = [
         "value": "PCIe x8 slot with PCIe 3.0 x4 signal; Mini PCIe; GPIO; COM; TPM; SIM"
       },
       {
+        "label": "Front I/O",
+        "value": "1 x power button; 1 x Type-C; 1 x audio port; 1 x HDMI 2.0; 1 x USB 3.0; 1 x DisplayPort 1.2; 3 x USB 2.0; 1 x restart button; 1 x SIM slot; 1 x TF card slot"
+      },
+      {
+        "label": "Rear I/O",
+        "value": "2 x USB 2.0; 1 x 12V DC input; 4 x 2.5GbE RJ45; 2 x 10GbE SFP+"
+      },
+      {
+        "label": "Internal I/O",
+        "value": "1 x buzzer; 1 x TPM header; 1 x debug header; 2 x DDR5 memory slots; 1 x Mini PCIe slot with USB 2.0 signal; 1 x Phoenix terminal power connector; 1 x front-panel header; 1 x motherboard battery connector; 1 x jumper header; 1 x PCIe x8 slot with PCIe 3.0 x4 signal; 2 x USB 2.0 headers; 1 x M.2 NVMe slot with PCIe 3.0 x1 signal; 1 x SATA 3.0 connector; 1 x GPIO header; 1 x SATA power connector; 1 x COM header"
+      },
+      {
         "label": "Dimensions",
         "value": "131.7 x 155 x 60 mm"
       },
@@ -1550,6 +1706,18 @@ export const commercialCatalog: CommercialCatalogItem[] = [
         "value": "TF card and F_PANEL header"
       },
       {
+        "label": "Front I/O",
+        "value": "1 x power input; 4 x 2.5GbE RJ45; 2 x 10GbE SFP+; 1 x RJ45 COM"
+      },
+      {
+        "label": "Rear I/O",
+        "value": "1 x Type-C 3.1; 2 x USB 2.0; 1 x USB 3.2; 2 x HDMI with audio; 1 x DisplayPort; 1 x power button; 1 x TF card slot; 1 x antenna connector; 1 x audio jack"
+      },
+      {
+        "label": "Internal I/O",
+        "value": "2 x SATA 3.0 connectors; 1 x M.2 connector; 1 x front-panel header"
+      },
+      {
         "label": "Dimensions",
         "value": "145.4 x 131.7 x 60 mm"
       },
@@ -1633,6 +1801,18 @@ export const commercialCatalog: CommercialCatalogItem[] = [
       {
         "label": "Expansion",
         "value": "PCIe x6 I/O interface for compatible 20Gb / 40Gb SFP+ expansion; M.2 CNVi; GPIO; COM"
+      },
+      {
+        "label": "Front I/O",
+        "value": "2 x USB 3.2; 2 x 2.5GbE RJ45; 1 x HDMI 2.0; 1 x DisplayPort 1.2; 1 x DC input; 1 x USB 2.0; 1 x power button"
+      },
+      {
+        "label": "Rear I/O",
+        "value": "2 or 4 x expandable 10GbE SFP+"
+      },
+      {
+        "label": "Internal I/O",
+        "value": "2 x front USB headers; 1 x COM header; 1 x front-panel header; 2 x CPU / system fan connectors; 1 x GPIO header"
       },
       {
         "label": "Dimensions",
@@ -1724,6 +1904,18 @@ export const commercialCatalog: CommercialCatalogItem[] = [
         "value": "PCIe x8 slot with PCIe 3.0 x4 signal; M.2 3052; M.2 2230; SIM; GPIO; TPM"
       },
       {
+        "label": "Front I/O",
+        "value": "2 x USB 2.0; 4 x 2.5GbE RJ45; 1 x DC input; 1 x DisplayPort; 1 x HDMI"
+      },
+      {
+        "label": "Rear I/O",
+        "value": "2 x USB 3.0; 1 x power button; 1 x Type-C; 1 x SIM slot; 1 x console port"
+      },
+      {
+        "label": "Internal I/O",
+        "value": "1 x SATA connector; 1 x SATA power connector; 2 x DDR5 SO-DIMM slots; 1 x PCIe x8 slot; M.2 slots for Wi-Fi, 3052 expansion, and 2280 storage; 1 x Clear CMOS header; 1 x GPIO header; 1 x front USB header; 1 x TPM header; 1 x CPU fan connector"
+      },
+      {
         "label": "Dimensions",
         "value": "150 x 143 x 84 mm"
       },
@@ -1811,6 +2003,18 @@ export const commercialCatalog: CommercialCatalogItem[] = [
       {
         "label": "Expansion",
         "value": "M.2 E-Key 2230 for Wi-Fi / Bluetooth; GPIO; COM; fan headers"
+      },
+      {
+        "label": "Front I/O",
+        "value": "2 x Intel i226 2.5GbE RJ45; 1 x USB 2.0; 1 x USB 3.2 Gen 2; 1 x HDMI supporting 4K at 60Hz; 1 x DisplayPort; 1 x power button; 1 x 12V DC input"
+      },
+      {
+        "label": "Rear I/O",
+        "value": "1 x 4-pin CPU fan connector"
+      },
+      {
+        "label": "Internal I/O",
+        "value": "2 x front USB headers; 1 x COM header; 1 x front-panel header; 2 x CPU / system fan connectors; 1 x GPIO header"
       },
       {
         "label": "Dimensions",

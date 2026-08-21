@@ -58,6 +58,29 @@ PRODUCTS = [
 ]
 
 
+SPEC_COMPLEMENTS = {
+    "mc12": dict(front_io="3 x USB 3.0; 1 x USB Type-C; 1 x audio output; 1 x microphone input; 1 x power button", rear_io="1 x 12V DC input; 2 x Realtek RTL8111H Gigabit Ethernet; 1 x DisplayPort 1.4a; 1 x HDMI 2.1; 1 x power button", internal_io="1 x M.2 E-Key 2230 for Wi-Fi 6; 1 x M.2 storage slot with SATA support; 2 x DDR5 SO-DIMM slots"),
+    "mcar9": dict(expansion="OCuLink for a compatible external graphics dock", wireless="Wi-Fi 6E and Bluetooth 5.3", front_io="1 x power button; 1 x reset pinhole; 2 x USB 3.0; 1 x 3.5 mm combo audio jack; 1 x USB4 40Gbps; 1 x OCuLink", rear_io="1 x 19V DC input; 2 x Intel i226-V 2.5GbE; 1 x HDMI 2.1; 1 x DisplayPort 2.1; 1 x USB 3.0; 1 x USB 2.0"),
+    "mccn51": dict(expansion=None, wireless="Wi-Fi 6 and Bluetooth 5.2", front_io="3 x USB 3.0; 1 x Type-C; 1 x 3.5 mm audio jack; 1 x power button", rear_io="2 x HDMI 2.0; 2 x USB 2.0; 1 x Gigabit Ethernet; 1 x DC input"),
+    "mcgm13": dict(expansion=None, wireless="1 x M.2 2230 slot for Wi-Fi / Bluetooth", front_io="1 x power button; 1 x Thunderbolt 4 Type-C with compatible PD input; 4 x USB 3.2 Gen 1; 1 x 3.5 mm headphone jack; 1 x 3.5 mm microphone input", rear_io="1 x 12V-19V DC input; 2 x 2.5GbE RJ45; 2 x HDMI 2.0; 1 x DisplayPort 1.4; 2 x USB 2.0; 2 x Wi-Fi antenna connectors"),
+    "mcmq12-13": dict(front_io="1 x power button; 1 x 3.5 mm audio jack; 1 x USB4 Type-C; 1 x USB 3.2", rear_io="1 x DC input; 2 x HDMI 2.1; 4 x USB 3.2; 1 x 2.5GbE RJ45"),
+    "mcmqr-series": dict(front_io="1 x power button; 1 x 3.5 mm audio jack; 1 x USB4 Type-C; 1 x USB 3.2", rear_io="1 x DC input; 2 x HDMI 2.1; 4 x USB 3.2; 1 x 2.5GbE RJ45"),
+    "mcn1": dict(front_io="1 x power button; 1 x 3.5 mm combo audio jack with Realtek ALC897; 2 x USB 3.2; 1 x Clear CMOS button", rear_io="1 x 12V DC input; 1 x Realtek RTL8111 Gigabit Ethernet; 2 x HDMI; 2 x USB 3.2"),
+    "mcn2": dict(front_io="1 x power button; 1 x 3.5 mm combo audio jack with Realtek ALC897; 2 x USB 3.2; 1 x Clear CMOS button", rear_io="1 x 12V DC input; 1 x Realtek RTL8111 Gigabit Ethernet; 2 x HDMI; 2 x USB 3.2"),
+    "mcn7a": dict(front_io="1 x 3.5 mm audio jack; 2 x USB 3.2; 1 x Type-C data port", rear_io="2 x USB 2.0; 1 x HDMI; 1 x DisplayPort; 1 x USB4; 1 x 2.5GbE RJ45; 1 x DC input", internal_io="1 x system-fan connector; 1 x Mini PCIe half-size slot for Wi-Fi / Bluetooth; 2 x M.2 2280 NVMe slots; 1 x SATA 3.0 connector; 2 x DDR5 SO-DIMM slots"),
+    "mcn7p": dict(front_io="1 x 3.5 mm audio jack; 2 x USB 3.2; 1 x Type-C data port", rear_io="2 x USB 2.0; 1 x HDMI; 1 x DisplayPort; 1 x USB4; 2 x 2.5GbE RJ45; 1 x DC input", internal_io="1 x system-fan connector; 1 x Mini PCIe half-size slot for Wi-Fi / Bluetooth; 2 x M.2 2280 NVMe slots; 1 x SATA 3.0 connector; 2 x DDR5 SO-DIMM slots"),
+    "mcnuc-1": dict(front_io="2 x USB 2.0; 4 x USB 3.0; 1 x power button", rear_io="1 x 12V DC input; 2 x USB 2.0; 1 x Realtek RTL8111G/H Gigabit Ethernet; 1 x HDMI; 1 x VGA; 1 x audio port", internal_io="1 x DDR3 SO-DIMM slot; 1 x mSATA slot; 1 x 2.5-inch SATA 3.0 connector"),
+    "mcnuc-2": dict(front_io="1 x dual-function audio jack; 6 x USB 2.0; 1 x power button", rear_io="1 x 12V DC input; 2 x USB 2.0; 2 x Intel i226-V 2.5GbE; 1 x Type-C; 1 x HDMI; 1 x DisplayPort", internal_io="1 x DDR4 SO-DIMM slot; 1 x M.2 2280 M-Key slot; 1 x 2.5-inch SATA 3.0 connector"),
+    "mcnuc-3": dict(front_io="1 x combo audio jack; 6 x USB 2.0; 2 x USB 3.0; 1 x HDMI; 1 x power button", rear_io="1 x 12V DC input; 1 x full-featured Type-C; 2 x USB 3.0; 2 x Intel i226-V 2.5GbE; 1 x HDMI; 1 x DisplayPort", internal_io="1 x DDR4 SO-DIMM slot; 1 x M.2 2280 M-Key slot; 1 x 2.5-inch SATA 3.0 connector; 1 x M.2 E-Key 2230 slot for Wi-Fi; 1 x M.2 B-Key slot for 4G/5G; 1 x SIM slot"),
+    "mcvx4": dict(front_io="1 x audio / microphone combo jack; 4 x USB 2.0; 1 x power button", rear_io="1 x 12V / 19V DC input; 1 x HDMI; 1 x DisplayPort; 4 x USB 3.0; 1 x Gigabit Ethernet", internal_io="2 x DDR4 SO-DIMM slots; 1 x M.2 2280 M-Key slot; 2 x SATA 3.0 connectors; 1 x M.2 E-Key 2230 slot for Wi-Fi"),
+    "mcnas100": dict(front_io="1 x power button; 1 x Type-C; 1 x audio port; 1 x HDMI 2.0; 1 x USB 3.0; 1 x DisplayPort 1.2; 3 x USB 2.0; 1 x restart button; 1 x SIM slot; 1 x TF card slot", rear_io="2 x USB 2.0; 1 x 12V DC input; 4 x 2.5GbE RJ45; 2 x 10GbE SFP+", internal_io="1 x buzzer; 1 x TPM header; 1 x debug header; 2 x DDR5 memory slots; 1 x Mini PCIe slot with USB 2.0 signal; 1 x Phoenix terminal power connector; 1 x front-panel header; 1 x motherboard battery connector; 1 x jumper header; 1 x PCIe x8 slot with PCIe 3.0 x4 signal; 2 x USB 2.0 headers; 1 x M.2 NVMe slot with PCIe 3.0 x1 signal; 1 x SATA 3.0 connector; 1 x GPIO header; 1 x SATA power connector; 1 x COM header"),
+    "mcnas12": dict(front_io="1 x power input; 4 x 2.5GbE RJ45; 2 x 10GbE SFP+; 1 x RJ45 COM", rear_io="1 x Type-C 3.1; 2 x USB 2.0; 1 x USB 3.2; 2 x HDMI with audio; 1 x DisplayPort; 1 x power button; 1 x TF card slot; 1 x antenna connector; 1 x audio jack", internal_io="2 x SATA 3.0 connectors; 1 x M.2 connector; 1 x front-panel header"),
+    "mcnash10": dict(front_io="2 x USB 3.2; 2 x 2.5GbE RJ45; 1 x HDMI 2.0; 1 x DisplayPort 1.2; 1 x DC input; 1 x USB 2.0; 1 x power button", rear_io="2 or 4 x expandable 10GbE SFP+", internal_io="2 x front USB headers; 1 x COM header; 1 x front-panel header; 2 x CPU / system fan connectors; 1 x GPIO header"),
+    "mcnash14": dict(front_io="2 x USB 2.0; 4 x 2.5GbE RJ45; 1 x DC input; 1 x DisplayPort; 1 x HDMI", rear_io="2 x USB 3.0; 1 x power button; 1 x Type-C; 1 x SIM slot; 1 x console port", internal_io="1 x SATA connector; 1 x SATA power connector; 2 x DDR5 SO-DIMM slots; 1 x PCIe x8 slot; M.2 slots for Wi-Fi, 3052 expansion, and 2280 storage; 1 x Clear CMOS header; 1 x GPIO header; 1 x front USB header; 1 x TPM header; 1 x CPU fan connector"),
+    "mcnash9": dict(front_io="2 x Intel i226 2.5GbE RJ45; 1 x USB 2.0; 1 x USB 3.2 Gen 2; 1 x HDMI supporting 4K at 60Hz; 1 x DisplayPort; 1 x power button; 1 x 12V DC input", rear_io="1 x 4-pin CPU fan connector", internal_io="2 x front USB headers; 1 x COM header; 1 x front-panel header; 2 x CPU / system fan connectors; 1 x GPIO header"),
+}
+
+
 EXISTING = {"mc15uh", "mctar7"}
 MAIN_CHOICES = {
     "mc12": 3, "mcar9": 4, "mccn51": 4, "mcgm13": 2, "mcmq12-13": 4,
@@ -148,11 +171,15 @@ def brochure_images(product: dict) -> list[Image.Image]:
 
 
 def clean_specs(product: dict) -> list[dict[str, str]]:
+    product = {**product, **SPEC_COMPLEMENTS.get(product["id"], {})}
     labels = [
         ("Model", "name"), ("CPU", "cpu"), ("Chipset", "chipset"), ("Graphics", "graphics"),
         ("Video", "video"), ("Memory", "memory"), ("USB", "usb"), ("Material", "material"),
         ("Power", "power"), ("Network", "network"), ("Storage", "storage"),
-        ("Expansion", "expansion"), ("Dimensions", "dimensions"), ("Weight", "weight"),
+        ("Expansion", "expansion"), ("Wireless", "wireless"),
+        ("Front I/O", "front_io"), ("Rear I/O", "rear_io"),
+        ("Internal I/O", "internal_io"),
+        ("Dimensions", "dimensions"), ("Weight", "weight"),
         ("BIOS", "bios"), ("TDP", "tdp"), ("System", "system"),
         ("Working Environment", "environment"),
     ]
