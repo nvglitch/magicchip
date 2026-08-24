@@ -30,13 +30,6 @@ interface HeroBannerProps {
   banners: Banner[];
 }
 
-const heroEyebrows: Record<string, string> = {
-  en: 'Mini PC & Industrial Computing Manufacturer',
-  fr: 'Fabricant de mini PC et de systèmes informatiques industriels',
-  de: 'Hersteller von Mini-PCs und Industriecomputern',
-  it: 'Produttore di Mini PC e sistemi informatici industriali',
-  es: 'Fabricante de mini PC y sistemas informáticos industriales',
-};
 
 function getLocalizedText(text: MultiLangText, language: string): string {
   return text[language as keyof MultiLangText] || text.en;
@@ -183,13 +176,6 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
           </motion.div>
         </AnimatePresence>
 
-        <div className="pointer-events-none absolute inset-x-0 top-5 z-20 sm:top-7 lg:top-8">
-          <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="border-l-2 border-blue-400 pl-3 text-xs font-semibold tracking-wide text-white/80 sm:text-sm">
-              {heroEyebrows[language] || heroEyebrows.en}
-            </p>
-          </div>
-        </div>
 
         <div className="absolute inset-0 z-10 flex items-center pointer-events-none">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">

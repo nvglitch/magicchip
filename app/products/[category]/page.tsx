@@ -280,8 +280,6 @@ const richCategoryData = {
     sceneImage: '/assets/products/category-scenes/industrial-automation.webp',
     desktopSceneImage: '/assets/products/category-scenes/industrial-automation-desktop.webp',
     sceneAlt: 'Automated robotic production line with conveyors, sensors, and safety systems',
-    photoCredit: 'Testalize.me / Unsplash',
-    photoUrl: 'https://unsplash.com/photos/industrial-robotic-arm-in-blue-lit-factory-9xHsWmh3m_4',
     scenarios: [
       { title: 'Compact machine-side control', description: 'A and B Series systems place control software, display output, USB peripherals, and essential serial connectivity close to the equipment.', products: ['MCIPCA1', 'MCIPCB12'] },
       { title: 'Serial equipment & data acquisition', description: 'Multi-COM C Series models connect several controllers, instruments, readers, or legacy serial devices through one industrial computer.', products: ['MCIPC1', 'MCIPC9'] },
@@ -482,11 +480,6 @@ export default function CategoryPage() {
             <figure className="relative aspect-[3/2] overflow-hidden bg-slate-900 lg:aspect-video">
               <Image src={richContent.sceneImage} alt={richContent.sceneAlt} fill sizes="(max-width: 1023px) 100vw, 1px" className="object-cover transition-transform duration-700 hover:scale-[1.02] lg:hidden" />
               <Image src={desktopSceneImage} alt={richContent.sceneAlt} fill sizes="(max-width: 1023px) 1px, 1280px" className="hidden object-cover transition-transform duration-700 hover:scale-[1.02] lg:block" />
-              {'photoCredit' in richContent && 'photoUrl' in richContent && (
-                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/75 to-transparent px-6 pb-5 pt-16 text-xs text-white/80">
-                  Photo: <a href={richContent.photoUrl} target="_blank" rel="noopener noreferrer" className="underline decoration-white/35 underline-offset-2 hover:text-white">{richContent.photoCredit}</a>
-                </figcaption>
-              )}
             </figure>
             <div className="grid gap-px bg-slate-200 md:grid-cols-2">
               {richContent.scenarios.map((scenario, index) => (
