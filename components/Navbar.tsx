@@ -422,7 +422,7 @@ export default function Navbar() {
                       >
                         <div className="mb-5 flex items-center justify-between border-b border-slate-200 pb-4">
                           <div>
-                            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-600">MagicChip</p>
+                            <p className="text-xs font-bold uppercase tracking-normal text-blue-600">MagicChip</p>
                             <h2 className="mt-1 text-2xl font-bold text-slate-950 lg:text-3xl">{t.nav.products}</h2>
                           </div>
                           <a href="/products" className="inline-flex items-center gap-1 text-sm font-semibold text-slate-600 transition-colors hover:text-blue-700">
@@ -536,7 +536,7 @@ export default function Navbar() {
                       >
                         <div className="mb-5 flex items-center justify-between border-b border-slate-200 pb-4">
                           <div>
-                            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-600">Application-based selection</p>
+                            <p className="text-xs font-bold uppercase tracking-normal text-blue-600">Application-based selection</p>
                             <h2 className="mt-1 text-2xl font-bold text-slate-950 lg:text-3xl">{t.nav.solutions}</h2>
                           </div>
                           <a href="/scenarios" className="inline-flex items-center gap-1 text-sm font-semibold text-slate-600 transition-colors hover:text-blue-700">

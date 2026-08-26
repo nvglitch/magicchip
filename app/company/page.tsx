@@ -244,7 +244,7 @@ export default function CompanyPage() {
       <section className="relative bg-white py-20 md:py-28">
         <div className="mx-auto grid max-w-7xl gap-14 px-4 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
           <motion.div initial={{ opacity: 0, x: -28 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.7 }}>
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-blue-700">{data.hero.title}</p>
+            <p className="mb-4 text-sm font-bold uppercase tracking-normal text-blue-700">{data.hero.title}</p>
             <h2 className="max-w-3xl text-3xl font-bold leading-tight md:text-5xl">{data.intro?.title}</h2>
             <p className="mt-7 max-w-3xl text-lg leading-8 text-slate-600">{data.intro?.content}</p>
           </motion.div>
@@ -299,7 +299,7 @@ export default function CompanyPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.2),transparent_38%)]" />
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto mb-20 max-w-2xl text-center">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-amber-400">MagicChip</p>
+            <p className="mb-4 text-sm font-bold uppercase tracking-normal text-amber-400">MagicChip</p>
             <h2 className="text-4xl font-bold md:text-6xl">{t.company.timelineTitle}</h2>
           </div>
           <div className="relative">
@@ -336,7 +336,7 @@ export default function CompanyPage() {
                 <div className="flex flex-col justify-between bg-[#101827] p-8 text-white md:p-10 lg:p-12">
                   <div>
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/20 text-blue-300 ring-1 ring-blue-400/20"><MapPin className="h-6 w-6" /></div>
-                    <p className="mt-10 text-sm font-semibold uppercase tracking-[0.2em] text-amber-400">{location.country}</p>
+                    <p className="mt-10 text-sm font-bold uppercase tracking-normal text-amber-400">{location.country}</p>
                     <h3 className="mt-3 text-4xl font-bold">{location.city}</h3>
                     <p className="mt-6 leading-7 text-slate-300">{location.address}</p>
                   </div>

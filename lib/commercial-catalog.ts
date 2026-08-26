@@ -1648,7 +1648,7 @@ export const commercialCatalog: CommercialCatalogItem[] = [
     "description": "MCNAS12 combines 12th and 13th Gen Intel processor options, DDR5 memory, four 2.5GbE ports, dual 10GbE SFP+, NVMe, dual SATA, and triple-display output for compact storage and network services.",
     "image": "/assets/products/commercial/nas/mcnas12/images/main-square.png",
     "galleryImages": [
-      "/assets/products/commercial/nas/mcnas12/images/view-1.png"
+      "/assets/nas12.png"
     ],
     "highlights": [
       "Intel Core i5-1240P / Pentium Gold 8505 / Intel U300E",

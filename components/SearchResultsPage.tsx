@@ -46,7 +46,7 @@ export default function SearchResultsPage() {
       <section className="relative isolate overflow-hidden bg-[#101827] text-white">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_75%_20%,rgba(37,99,235,0.3),transparent_34%),radial-gradient(circle_at_15%_90%,rgba(20,184,166,0.12),transparent_28%)]" />
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
-          <p className="text-sm font-semibold tracking-[0.2em] text-blue-300">{text.eyebrow}</p>
+          <p className="text-sm font-bold tracking-normal text-blue-300">{text.eyebrow}</p>
           <h1 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">{text.title}</h1>
           <p className="mt-4 max-w-2xl text-lg text-slate-300">{text.subtitle}</p>
           <form onSubmit={submit} className="mt-8 flex max-w-3xl items-center rounded-2xl border border-white/20 bg-white p-2 shadow-2xl shadow-slate-950/30">
@@ -79,7 +79,7 @@ export default function SearchResultsPage() {
                           <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600"><Icon className="h-6 w-6" /></div>
                         )}
                         <div className="min-w-0 flex-1">
-                          <span className="rounded-full bg-slate-100 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-slate-500">{text.types[result.type]}</span>
+                          <span className="rounded-full bg-slate-100 px-2.5 py-1 text-[10px] font-bold uppercase tracking-normal text-slate-500">{text.types[result.type]}</span>
                           <h3 className="mt-3 text-lg font-bold text-slate-950 group-hover:text-blue-700">{result.title}</h3>
                           <p className="mt-1 line-clamp-2 text-sm leading-6 text-slate-600">{result.description}</p>
                         </div>

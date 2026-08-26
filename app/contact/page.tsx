@@ -432,7 +432,7 @@ export default function ContactPage() {
                     <div className="absolute -right-20 -top-20 h-52 w-52 rounded-full bg-emerald-500/15 blur-3xl" />
                     <div className="absolute -bottom-24 -left-20 h-56 w-56 rounded-full bg-blue-500/15 blur-3xl" />
                     <div className="relative">
-                      <span className="inline-flex rounded-full border border-emerald-300/25 bg-emerald-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-200">
+                      <span className="inline-flex rounded-full border border-emerald-300/25 bg-emerald-300/10 px-3 py-1 text-xs font-bold uppercase tracking-normal text-emerald-200">
                         {extras.eyebrow}
                       </span>
                       <h2 className="mt-6 text-3xl font-bold">{data.whatsapp.title}</h2>
@@ -459,7 +459,7 @@ export default function ContactPage() {
                       </ul>
 
                       <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.055] p-4">
-                        <p className="text-xs uppercase tracking-[0.14em] text-slate-400">{extras.emailPrompt}</p>
+                        <p className="text-xs font-semibold uppercase tracking-normal text-slate-400">{extras.emailPrompt}</p>
                         <a href="mailto:Contact@szmagicchip.com" className="mt-1 block font-medium text-white hover:text-emerald-300">
                           Contact@szmagicchip.com
                         </a>
@@ -468,7 +468,7 @@ export default function ContactPage() {
                   </aside>
 
                   <div className="p-6 sm:p-9 lg:p-10">
-                    <p className="text-sm font-semibold uppercase tracking-[0.16em] text-blue-700">{extras.eyebrow}</p>
+                    <p className="text-sm font-bold uppercase tracking-normal text-blue-700">{extras.eyebrow}</p>
                     <h2 className="mt-2 text-3xl font-bold text-slate-950">{data.form.title}</h2>
                     <p className="mt-3 max-w-2xl leading-relaxed text-slate-600">{extras.intro}</p>
 

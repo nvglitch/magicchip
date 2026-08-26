@@ -114,7 +114,7 @@ export default function ScenariosPage() {
         <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 md:py-28 lg:px-8">
           <div className="max-w-4xl">
             <div className="mb-7 h-px w-24 bg-gradient-to-r from-amber-400 to-transparent" />
-            <p className="text-sm font-semibold tracking-[0.2em] text-blue-300">{text.eyebrow}</p>
+            <p className="text-sm font-bold tracking-normal text-blue-300">{text.eyebrow}</p>
             <h1 className="mt-4 text-5xl font-bold tracking-tight md:text-7xl">{text.title}</h1>
             <p className="mt-6 max-w-3xl text-xl leading-relaxed text-slate-300 md:text-2xl">{text.subtitle}</p>
           </div>
@@ -139,7 +139,7 @@ export default function ScenariosPage() {
                     <h2 className="text-xl font-bold text-slate-950">{item.title}</h2>
                     <p className="mt-3 min-h-[4.5rem] text-sm leading-6 text-slate-600">{item.description}</p>
                     <div className="mt-6 border-t border-slate-200 pt-5">
-                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">{text.recommended}</p>
+                      <p className="text-xs font-bold uppercase tracking-normal text-slate-500">{text.recommended}</p>
                       <div className="mt-3 flex flex-wrap gap-2">
                         {scenario.products.map((product) => (
                           <Link key={product.href} href={product.href} className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-sm font-semibold text-blue-700 transition-colors hover:border-blue-400 hover:bg-blue-100">

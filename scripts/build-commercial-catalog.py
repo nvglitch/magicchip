@@ -90,6 +90,10 @@ MAIN_CHOICES = {
     "mcnash9": 3,
 }
 
+GALLERY_OVERRIDES = {
+    "mcnas12": ["/assets/nas12.png"],
+}
+
 
 def foreground_bbox(image: Image.Image):
     rgba = image.convert("RGBA")
@@ -227,7 +231,10 @@ def build_catalog() -> None:
             "id": product["id"], "name": product["name"], "series": product["series"],
             "tagline": product["tagline"], "description": product["description"],
             "image": f"{base}/main-square.png",
-            "galleryImages": [f"{base}/view-{index}.png" for index in range(1, gallery_count + 1)],
+            "galleryImages": GALLERY_OVERRIDES.get(
+                product["id"],
+                [f"{base}/view-{index}.png" for index in range(1, gallery_count + 1)],
+            ),
             "highlights": compact_highlights(product), "specs": clean_specs(product),
             "operatingRange": product.get("environment"),
         })
