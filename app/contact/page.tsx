@@ -15,7 +15,7 @@ const contactData = {
       {
         title: 'Email',
         description: 'Send us an email anytime',
-        content: 'Contact@szmagicchip.com',
+        content: 'klauslee@szmagicchip.com',
         icon: Mail
       },
       {
@@ -64,7 +64,7 @@ const contactData = {
       {
         title: 'Email',
         description: 'Envoyez-nous un email à tout moment',
-        content: 'Contact@szmagicchip.com',
+        content: 'klauslee@szmagicchip.com',
         icon: Mail
       },
       {
@@ -113,7 +113,7 @@ const contactData = {
       {
         title: 'E-Mail',
         description: 'Senden Sie uns jederzeit eine E-Mail',
-        content: 'Contact@szmagicchip.com',
+        content: 'klauslee@szmagicchip.com',
         icon: Mail
       },
       {
@@ -162,7 +162,7 @@ const contactData = {
       {
         title: 'Email',
         description: 'Inviaci un\'email in qualsiasi momento',
-        content: 'Contact@szmagicchip.com',
+        content: 'klauslee@szmagicchip.com',
         icon: Mail
       },
       {
@@ -211,7 +211,7 @@ const contactData = {
       {
         title: 'Correo',
         description: 'Envíanos un correo en cualquier momento',
-        content: 'Contact@szmagicchip.com',
+        content: 'klauslee@szmagicchip.com',
         icon: Mail
       },
       {
@@ -460,8 +460,8 @@ export default function ContactPage() {
 
                       <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.055] p-4">
                         <p className="text-xs font-semibold uppercase tracking-normal text-slate-400">{extras.emailPrompt}</p>
-                        <a href="mailto:Contact@szmagicchip.com" className="mt-1 block font-medium text-white hover:text-emerald-300">
-                          Contact@szmagicchip.com
+                        <a href="mailto:klauslee@szmagicchip.com" className="mt-1 block font-medium text-white hover:text-emerald-300">
+                          klauslee@szmagicchip.com
                         </a>
                       </div>
                     </div>

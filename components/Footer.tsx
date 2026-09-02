@@ -20,7 +20,7 @@ export default function Footer() {
   };
 
   const contactLinks = [
-    { key: 'email', href: 'mailto:Contact@szmagicchip.com', icon: Mail },
+    { key: 'email', href: 'mailto:klauslee@szmagicchip.com', icon: Mail },
     { key: 'phone', href: 'tel:+8613392172330', icon: Phone },
     { key: 'whatsapp', href: 'https://wa.me/8613392172330', icon: MessageCircle },
   ];

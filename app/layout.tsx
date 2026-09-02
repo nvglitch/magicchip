@@ -70,7 +70,7 @@ const organizationJsonLd = {
   url: SITE_URL,
   logo: `${SITE_URL}/assets/brand/logo-mark-512.png`,
   sameAs: socialProfiles,
-  email: "Contact@szmagicchip.com",
+  email: "klauslee@szmagicchip.com",
   telephone: "+86-0755-23099863",
   address: {
     "@type": "PostalAddress",
