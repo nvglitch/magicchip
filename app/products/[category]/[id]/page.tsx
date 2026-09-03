@@ -1052,7 +1052,11 @@ export default function ProductDetailPage() {
                     aria-label={t.productDetail.enlargeImage.replace('{title}', point.title)}
                     className="group block w-full cursor-zoom-in overflow-hidden"
                   >
-                    <img src={point.image} alt={point.title} className="aspect-square w-full object-contain transition-transform duration-500 group-hover:scale-[1.025]" />
+                    <img
+                      src={point.image}
+                      alt={point.title}
+                      className={`${productId === 'mcai1' ? 'aspect-[61/25]' : 'aspect-square'} w-full object-contain transition-transform duration-500 group-hover:scale-[1.025]`}
+                    />
                   </button>
                   <div className="p-6 text-slate-950 border-t border-slate-100">
                     <h3 className="text-xl font-bold">{point.title}</h3>
