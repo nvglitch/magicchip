@@ -198,15 +198,15 @@ export const fr: TranslationSchema = {
   featured: {
     badge: 'Produit Phare',
     title: 'MCAIPC2',
-    description: 'Mini PC IA haute performance alimenté par la plateforme Strix Halo avec graphiques intégrés et unité de traitement neuronal pour le calcul de périphérie et les charges de travail IA.',
+    description: "Une famille de PC IA configurable avec trois séries de cartes mères et plusieurs châssis compatibles. Choisissez la mémoire, le réseau, les extensions et l’alimentation adaptés à votre projet.",
     features: [
-      'AMD Strix Halo (120W/132W), jusqu\'à 40 cœurs graphiques + 50 TOPs NPU',
-      'Jusqu\'à 128GB LPDDR5x 8000MT/s Mémoire (8×32 bit canaux)',
-      'Double stockage SSD M.2 2280 PCIe×4',
-      'Dual USB4 (40Gbps) avec support Quad-Display (HDMI 2.1 FRL + DP 1.4)',
-      '2.5G LAN RJ45 + Module M.2 2230 WiFi/BT',
-      'Alimentation 350W Flex PSU interne ou 240W DC-IN',
-    ],
+      "Cartes mères AXB35-02 / AXB35-03 / AEB35-04",
+      "Jusqu’à 128 Go LPDDR5 ; capacité et vitesse selon la série",
+      "RJ45 2,5 GbE ou double 10 GbE selon la carte mère",
+      "HDMI, DisplayPort et deux connexions USB4",
+      "Flex I/O en option sur AXB35-03 ; MCIO sur AEB35-04",
+      "Châssis avec alimentation interne 300/350 W ou adaptateur 240 W"
+],
     cta: 'Voir le Produit',
   },
   services: {

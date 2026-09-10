@@ -1,3 +1,4 @@
+import { aiCatalog } from '@/lib/ai-catalog';
 import { industrialCatalog } from '@/lib/industrial-catalog';
 import { firewallCatalog } from '@/lib/firewall-catalog';
 import { commercialCatalog } from '@/lib/commercial-catalog';
@@ -55,6 +56,7 @@ const catalogCommercialSearchEntries: SearchEntry[] = commercialCatalog.map((ite
   image: item.image,
 }));
 export const siteSearchIndex: SearchEntry[] = [
+  ...aiCatalog.map((item): SearchEntry => ({ title: item.name, description: item.tagline, href: `/products/ai-mini-pc/${item.id}`, type: 'product', keywords: ['ai mini pc', ...item.highlights, ...item.specs.filter((spec) => ['CPU', 'Mainboard series', 'Network', 'High-speed interface'].includes(spec.label)).map((spec) => spec.value)], image: item.image })),
   ...catalogIndustrialSearchEntries,
   ...catalogFirewallSearchEntries,
   ...catalogCommercialSearchEntries,
@@ -113,14 +115,6 @@ export const siteSearchIndex: SearchEntry[] = [
     type: 'product',
     keywords: ['ai mini pc', 'ryzen ai max', 'edge ai', 'local ai', 'workstation'],
     image: '/assets/products/ai/mcaipc1/gallery/hero.jpg',
-  },
-  {
-    title: 'MCAIPC2',
-    description: 'High-performance AMD Strix Halo Mini PC for edge AI and professional computing.',
-    href: '/products/ai-mini-pc/mcai2',
-    type: 'product',
-    keywords: ['ai mini pc', 'strix halo', 'edge ai', 'local ai', 'professional computing'],
-    image: '/assets/products/ai/mcaipc2/hero.png',
   },
   {
     title: 'MC15UH',

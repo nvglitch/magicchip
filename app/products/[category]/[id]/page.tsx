@@ -20,6 +20,8 @@ import Link from 'next/link';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { aiCatalog } from '@/lib/ai-catalog';
+import Mcaipc2Configurations from '@/components/Mcaipc2Configurations';
 import { industrialCatalog, type IndustrialSeriesCode } from '@/lib/industrial-catalog';
 import { firewallCatalog, type FirewallSeriesCode } from '@/lib/firewall-catalog';
 import { commercialCatalog, type CommercialSeriesCode } from '@/lib/commercial-catalog';
@@ -153,6 +155,7 @@ const compactCatalogHighlights = (specs: ProductSpec[]) => {
     });
 };
 const getIndustrialGallery = (item: (typeof industrialCatalog)[number]): Pick<ProductDetail, 'galleryImages' | 'galleryCards'> => {
+  if (item.galleryCards) return { galleryImages: item.galleryImages, galleryCards: item.galleryCards };
   const imageBase = item.image.replace(/\/[^/]+$/, '');
 
   if (item.series === 'TPC') {
@@ -236,7 +239,7 @@ const catalogCommercialProducts: Record<string, ProductDetail> = Object.fromEntr
       description: item.description,
       images: [item.image],
       galleryImages: item.galleryImages,
-      galleryCards: item.galleryImages.map((image, index) => ({
+      galleryCards: item.galleryCards || item.galleryImages.map((image, index) => ({
         image,
         title: index === 0 ? `${item.name} enclosure and interface view` : `${item.name} product view ${index + 1}`,
       })),
@@ -248,6 +251,7 @@ const catalogCommercialProducts: Record<string, ProductDetail> = Object.fromEntr
   ]),
 );
 const products: Record<string, ProductDetail> = {
+  ...Object.fromEntries(aiCatalog.map((item) => [item.id, { ...item, images: [item.image] }])),
   ...catalogIndustrialProducts,
   ...catalogFirewallProducts,
   ...catalogCommercialProducts,
@@ -297,29 +301,6 @@ const products: Record<string, ProductDetail> = {
     ],
     advantageSummary: 'MCIPCB13 focuses on the interfaces and durability industrial buyers usually need first: broad CPU options, legacy and modern I/O, resilient environmental ratings, and flexible storage expansion in a compact enclosure.',
     operatingRange: '-20°C to +60°C',
-  },
-  mcai2: {
-    name: 'MCAIPC2',
-    tagline: 'High-performance AI mini PC powered by Strix Halo platform',
-    description: 'A flagship AI mini PC for edge computing, AI workloads, and high-performance industrial applications.',
-    images: ['/assets/products/ai/mcaipc2/hero.png'],
-    highlights: ['AMD Strix Halo', '50 TOPs NPU', 'Quad display', 'Dual USB4'],
-    specs: [
-      { label: 'Processor', value: 'AMD Strix Halo (120W/132W)' },
-      { label: 'Graphics', value: 'Up to 40 graphics cores' },
-      { label: 'NPU', value: '50 TOPs AI performance' },
-      { label: 'Memory', value: 'Up to 128GB LPDDR5x 8000MT/s' },
-      { label: 'Storage', value: 'Dual M.2 2280 PCIe x4 SSD' },
-      { label: 'Display', value: 'Quad-display: HDMI 2.1 FRL + DP 1.4' },
-      { label: 'USB', value: 'Dual USB4 40Gbps' },
-      { label: 'Network', value: '2.5G LAN RJ45 + WiFi/BT' },
-      { label: 'Power', value: '350W internal Flex PSU or 240W DC-IN' },
-    ],
-    features: [
-      { icon: 'Cpu', title: 'AI Performance', description: '50 TOPs NPU for edge AI workloads.' },
-      { icon: 'Monitor', title: 'Quad Display', description: 'Support up to four simultaneous displays.' },
-      { icon: 'Zap', title: 'High Speed', description: 'Dual USB4 40Gbps ports for demanding peripherals.' },
-    ],
   },
   mcipcb12: {
     name: 'MCIPCB12',
@@ -786,6 +767,7 @@ const products: Record<string, ProductDetail> = {
 };
 
 const productCategories: Record<string, string> = {
+  ...Object.fromEntries(aiCatalog.map((item) => [item.id, 'ai-mini-pc'])),
   ...Object.fromEntries(industrialCatalog.map((item) => [item.id, 'industrial-mini-pc'])),
   ...Object.fromEntries(firewallCatalog.map((item) => [item.id, 'firewall-mini-pc'])),
   ...Object.fromEntries(commercialCatalog.map((item) => [item.id, 'commercial-mini-pc'])),
@@ -953,10 +935,10 @@ export default function ProductDetailPage() {
                   >
                     <img src={item.image} alt={item.title || product.name} className="aspect-square w-full object-contain transition-transform duration-500 group-hover:scale-[1.025]" />
                   </button>
-                  {item.description && (
+                  {(item.title || item.description) && (
                     <div className="border-t border-slate-100 p-6 text-left">
                       <h3 className="text-xl font-bold text-slate-950">{item.title}</h3>
-                      <p className="mt-2 leading-relaxed text-slate-600">{item.description}</p>
+                      {item.description && <p className="mt-2 leading-relaxed text-slate-600">{item.description}</p>}
                     </div>
                   )}
                 </motion.div>
@@ -979,15 +961,15 @@ export default function ProductDetailPage() {
                 <p className="text-sm font-semibold uppercase tracking-normal text-blue-200 mb-2">{t.productDetail.specificationMatrix.replace('{name}', product.name)}</p>
                 <h3 className="text-2xl font-bold">{t.productDetail.hardwareParameters}</h3>
               </div>
-              <div className="rounded-lg border border-amber-300/30 bg-amber-300/10 px-4 py-3 text-left md:text-right">
+              {product.operatingRange && <div className="rounded-lg border border-amber-300/30 bg-amber-300/10 px-4 py-3 text-left md:text-right">
                 <p className="text-xs font-semibold uppercase tracking-normal text-amber-200">{t.productDetail.operatingRange}</p>
-                <p className="text-lg font-semibold text-amber-50">{product.operatingRange || t.productDetail.industrialRated}</p>
-              </div>
+                <p className="text-lg font-semibold text-amber-50">{product.operatingRange}</p>
+              </div>}
             </div>
 
             <div>
               {product.specs.map((spec, index) => (
-                <div key={spec.label} className={`group grid grid-cols-1 md:grid-cols-[240px_1fr] border-t border-blue-100 transition-colors ${index % 2 === 0 ? 'bg-white' : 'bg-blue-50/30'}`}>
+                <div key={`${spec.label}-${index}`} className={`group grid grid-cols-1 md:grid-cols-[240px_1fr] border-t border-blue-100 transition-colors ${index % 2 === 0 ? 'bg-white' : 'bg-blue-50/30'}`}>
                   <div className="relative flex items-center gap-3 border-b border-amber-100 bg-amber-50/80 px-5 py-4 transition-colors group-hover:bg-amber-100/80 md:border-b-0 md:border-r md:border-amber-200 md:px-6">
                     <div className="absolute left-0 top-0 h-full w-1 bg-amber-500 opacity-60 transition-all group-hover:w-1.5 group-hover:opacity-100" />
                     <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-md bg-white text-[11px] font-bold text-amber-700 ring-1 ring-amber-200">
@@ -1002,6 +984,8 @@ export default function ProductDetailPage() {
           </motion.div>
         </div>
       </section>
+
+      {productId === 'mcai2' && <Mcaipc2Configurations onPreview={setPreviewImage} />}
 
       <section className="py-16 bg-[#f5f8f7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

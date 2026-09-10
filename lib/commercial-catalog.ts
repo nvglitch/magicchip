@@ -1,3 +1,5 @@
+import { commercialBrochureProducts } from '@/lib/brochure-products';
+
 export type CommercialSeriesCode = 'DPC' | 'NAS';
 
 export type CommercialCatalogSpec = { label: string; value: string };
@@ -10,6 +12,7 @@ export type CommercialCatalogItem = {
   description: string;
   image: string;
   galleryImages: string[];
+  galleryCards?: { image: string; title: string; description?: string }[];
   highlights: string[];
   specs: CommercialCatalogSpec[];
   operatingRange?: string;
@@ -17,6 +20,7 @@ export type CommercialCatalogItem = {
 
 // Product facts and images are extracted from the supplied product brochures.
 export const commercialCatalog: CommercialCatalogItem[] = [
+  ...commercialBrochureProducts,
   {
     "id": "mc12",
     "name": "MC12",

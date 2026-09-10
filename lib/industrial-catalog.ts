@@ -1,3 +1,5 @@
+import { industrialBrochureProducts } from '@/lib/brochure-products';
+
 export type IndustrialSeriesCode = 'A' | 'B' | 'C' | 'D' | 'TPC';
 
 export type IndustrialCatalogSpec = { label: string; value: string };
@@ -9,6 +11,8 @@ export type IndustrialCatalogItem = {
   tagline: string;
   description: string;
   image: string;
+  galleryImages?: string[];
+  galleryCards?: { image: string; title: string; description?: string }[];
   highlights: string[];
   specs: IndustrialCatalogSpec[];
   operatingRange?: string;
@@ -16,6 +20,7 @@ export type IndustrialCatalogItem = {
 
 // Product facts are based on the available source specifications.
 export const industrialCatalog: IndustrialCatalogItem[] = [
+  ...industrialBrochureProducts,
   {
     "id": "mcipca1",
     "name": "MCIPCA1",

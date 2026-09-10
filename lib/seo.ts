@@ -1,3 +1,4 @@
+import { aiCatalog, mcaipc2 } from '@/lib/ai-catalog';
 import type { Metadata } from 'next';
 import { industrialCatalog } from '@/lib/industrial-catalog';
 import { firewallCatalog } from '@/lib/firewall-catalog';
@@ -6,7 +7,7 @@ import { commercialCatalog } from '@/lib/commercial-catalog';
 export const SITE_URL = 'https://szmagicchip.com';
 export const SITE_NAME = 'MagicChip';
 // Update this only when the published site or product catalog materially changes.
-export const SITE_CONTENT_LAST_UPDATED = new Date('2026-08-20T00:00:00.000Z');
+export const SITE_CONTENT_LAST_UPDATED = new Date('2026-09-09T00:00:00.000Z');
 export const DEFAULT_SOCIAL_IMAGE = '/assets/brand/og-default.png';
 
 export type SeoEntry = {
@@ -76,6 +77,7 @@ const catalogCommercialProductSeo: Record<string, SeoEntry & { category: string 
   ]),
 );
 export const productSeo: Record<string, SeoEntry & { category: string }> = {
+  ...Object.fromEntries(aiCatalog.map((item) => [item.id, { name: `${item.name} AI Mini PC`, description: item.tagline, path: `/products/ai-mini-pc/${item.id}`, image: item.image, category: 'ai-mini-pc' }])),
   ...catalogProductSeo,
   ...catalogFirewallProductSeo,
   ...catalogCommercialProductSeo,
@@ -130,9 +132,9 @@ export const productSeo: Record<string, SeoEntry & { category: string }> = {
   },
   mcai2: {
     name: 'MCAIPC2 AI Mini PC',
-    description: 'High-performance AI mini PC powered by the AMD Strix Halo platform for edge AI, professional computing, and demanding multi-display workloads.',
+    description: mcaipc2.tagline,
     path: '/products/ai-mini-pc/mcai2',
-    image: '/assets/products/ai/mcaipc2/hero.png',
+    image: mcaipc2.image,
     category: 'ai-mini-pc',
   },
   mc15uh: {

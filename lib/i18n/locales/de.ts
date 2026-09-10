@@ -198,15 +198,15 @@ export const de: TranslationSchema = {
   featured: {
     badge: 'Flaggschiff-Produkt',
     title: 'MCAIPC2',
-    description: 'Hochleistungs-AI-Mini-PC mit Strix Halo-Plattform, integrierter Grafik und neuronaler Verarbeitungseinheit für Edge-Computing und AI-Workloads.',
+    description: "Eine konfigurierbare KI-Computerfamilie mit drei Mainboard-Serien und kompatiblen Gehäusen. Wählen Sie Speicher, Netzwerk, Erweiterungen und Stromversorgung passend zu Ihrem Projekt.",
     features: [
-      'AMD Strix Halo (120W/132W), bis zu 40 Grafikkerne + 50 TOPs NPU',
-      'Bis zu 128GB LPDDR5x 8000MT/s Speicher (8×32 Bit Kanäle)',
-      'Dual M.2 2280 PCIe×4 SSD Speicher',
-      'Dual USB4 (40Gbps) mit Quad-Display Support (HDMI 2.1 FRL + DP 1.4)',
-      '2.5G LAN RJ45 + M.2 2230 WiFi/BT Modul',
-      '350W interner Flex PSU oder 240W DC-IN Netzteil',
-    ],
+      "Mainboards AXB35-02 / AXB35-03 / AEB35-04",
+      "Bis zu 128GB LPDDR5; Kapazität und Geschwindigkeit je nach Serie",
+      "2,5GbE oder duales 10GbE RJ45, je nach Mainboard",
+      "HDMI, DisplayPort und zwei USB4-Anschlüsse",
+      "Optionales Flex I/O bei AXB35-03; MCIO bei AEB35-04",
+      "Gehäuse mit internem 300/350-W-Netzteil oder 240-W-Adapter"
+],
     cta: 'System Ansehen',
   },
   services: {

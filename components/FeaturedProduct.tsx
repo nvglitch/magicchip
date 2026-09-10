@@ -18,7 +18,7 @@ export default function FeaturedProduct() {
           <div className="relative">
             <div className="relative overflow-hidden rounded-3xl bg-[#f3f7f5] shadow-xl shadow-slate-900/10 ring-1 ring-slate-200">
               <Image
-                src="/assets/products/ai/mcaipc2/hero.png"
+                src="/assets/products/ai/brochure/mcaipc2/main.webp"
                 alt={t.seo.altTexts.featuredProduct}
                 width={600}
                 height={600}

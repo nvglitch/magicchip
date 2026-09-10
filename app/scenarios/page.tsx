@@ -10,7 +10,7 @@ const scenarios = [
     { name: 'MCIPCB13', href: '/products/industrial-mini-pc/mcipcb13' },
     { name: 'MCIPCB12', href: '/products/industrial-mini-pc/mcipcb12' },
   ] },
-  { id: 'edgeAi', icon: BrainCircuit, image: '/assets/products/ai/mcaipc2/hero.png', products: [
+  { id: 'edgeAi', icon: BrainCircuit, image: '/assets/products/ai/brochure/mcaipc2/main.webp', products: [
     { name: 'MCAIPC2', href: '/products/ai-mini-pc/mcai2' },
     { name: 'MCAIPC1', href: '/products/ai-mini-pc/mcai1' },
   ] },

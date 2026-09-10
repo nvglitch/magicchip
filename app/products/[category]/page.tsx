@@ -1,5 +1,7 @@
 'use client';
 
+import { ModelFamilyLinks, AiFamilyCards } from '@/components/ProductFamilyNavigation';
+
 import Image from 'next/image';
 
 import { useLanguage } from '@/lib/i18n/LanguageContext';
@@ -7,6 +9,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, ChevronLeft, Cpu, Shield, Monitor, Brain, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
+import { aiCatalog } from '@/lib/ai-catalog';
 import { industrialCatalog } from '@/lib/industrial-catalog';
 import { firewallCatalog } from '@/lib/firewall-catalog';
 import { commercialCatalog } from '@/lib/commercial-catalog';
@@ -140,20 +143,8 @@ const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: 
     },
   ],
   'ai-mini-pc': [
-    {
-      id: 'mcai2',
-      name: 'MCAIPC2',
-      tagline: 'High-performance AI mini PC powered by Strix Halo platform',
-      image: '/assets/products/ai/mcaipc2/hero.png',
-      specs: ['AMD Strix Halo', 'Up to 128GB LPDDR5x', 'Quad-Display Support', '50 TOPs NPU'],
-    },
-    {
-      id: 'mcai1',
-      name: 'MCAIPC1',
-      tagline: 'AMD Ryzen AI Max+ 395 — 140W flagship mini PC with quad display',
-      image: '/assets/products/ai/mcaipc1/gallery/hero.jpg',
-      specs: ['AMD Ryzen AI Max+ 395', 'Up to 128GB LPDDR5x', '10G+2.5G Dual LAN', 'Quad M.2 NVMe'],
-    },
+    ...aiCatalog.map(({ id, name, tagline, image, highlights }) => ({ id, name, tagline, image, specs: highlights })),
+    { id: 'mcai1', name: 'MCAIPC1', tagline: 'AMD Ryzen AI Max+ 395 flagship mini PC with quad display', image: '/assets/products/ai/mcaipc1/gallery/hero.jpg', specs: ['AMD Ryzen AI Max+ 395', 'Up to 128GB LPDDR5x', '10G+2.5G Dual LAN', 'Quad M.2 NVMe'] },
   ],
   'commercial-mini-pc': [
     {
@@ -291,8 +282,8 @@ const richCategoryData = {
     overview: 'AI Mini PCs bring high-performance AMD compute, large unified-memory options, fast local storage, and multi-display output into a compact workstation format for local AI and demanding professional workloads.',
     qualifier: 'AI performance depends on the selected processor, memory configuration, software stack, and workload.',
     capabilities: [
-      { title: 'Local AI acceleration', description: 'The current range includes Ryzen AI and Strix Halo platforms with integrated NPU capability.' },
-      { title: 'Large memory configurations', description: 'Up to 128GB LPDDR5x supports memory-intensive local models and professional applications.' },
+      { title: 'Local AI acceleration', description: 'Choose AMD Ryzen / Ryzen AI or Intel Core Ultra platforms. Graphics and AI acceleration capabilities depend on the selected model and configuration.' },
+      { title: 'Large memory configurations', description: 'Model-specific onboard LPDDR5 / LPDDR5x or DDR5 SO-DIMM options support different workloads. MCAIPC2 memory capacity and speed depend on the mainboard series.' },
       { title: 'Fast data & display paths', description: 'Multi-display output, high-speed networking, and multiple NVMe options support substantial local workflows.' },
     ],
     sceneImage: '/assets/products/category-scenes/edge-ai-robotics.webp',
@@ -555,19 +546,14 @@ export default function CategoryPage() {
 
                     <div className="mt-8 border-t border-slate-200 pt-6">
                       <p className="mb-4 text-xs font-bold uppercase tracking-normal text-slate-400">Available models</p>
-                      <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                        {series.models.map((model) => (
-                          <Link key={model.id} href={`/products/${category}/${model.id}`} className="group inline-flex min-h-12 items-center justify-between rounded-xl border border-blue-200 bg-blue-50 px-4 py-3 font-semibold text-blue-800 transition-all hover:-translate-y-0.5 hover:border-blue-400 hover:bg-blue-100 hover:shadow-md">
-                            {model.name}
-                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                          </Link>
-                        ))}
-                      </div>
+                      <ModelFamilyLinks models={series.models} category={category} />
                     </div>
                   </div>
                 </section>
               ))}
             </div>
+          ) : category === 'ai-mini-pc' ? (
+            <AiFamilyCards products={products} />
           ) : (
             <div className="space-y-8">
               {products.map((product, index) => (

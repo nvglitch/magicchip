@@ -27,6 +27,8 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { aiCatalog } from '@/lib/ai-catalog';
+import { AiFamilyCards } from '@/components/ProductFamilyNavigation';
 import SiteSearch from '@/components/SiteSearch';
 import { LANGUAGE_NAMES, SUPPORTED_LANGUAGES } from '@/lib/i18n/config';
 
@@ -76,7 +78,7 @@ const megaMenuProducts: Record<string, MegaMenuProduct[]> = {
     { id: 'mcipcd3', name: 'MCIPCD3', tagline: 'Six-LAN industrial network appliance', image: '/assets/products/industrial/d-series/mcipcd3/images/1.jpg' },
   ],
   'ai-mini-pc': [
-    { id: 'mcai2', name: 'MCAIPC2', tagline: 'Strix Halo high-performance AI mini PC', image: '/assets/products/ai/mcaipc2/hero.png' },
+    ...aiCatalog.map(({ id, name, tagline, image }) => ({ id, name, tagline, image })),
     { id: 'mcai1', name: 'MCAIPC1', tagline: 'Ryzen AI Max+ flagship computing platform', image: '/assets/products/ai/mcaipc1/gallery/hero.jpg' },
   ],
   'commercial-mini-pc': [
@@ -496,32 +498,7 @@ export default function Navbar() {
                                 ))}
                               </div>
                             ) : (
-                              <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                                {activeMegaCategory.products.map((product) => (
-                                  <a
-                                    key={product.id}
-                                    href={`/products/${activeMegaCategory.id}/${product.id}`}
-                                    className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg"
-                                  >
-                                    <div className="relative aspect-[16/9] overflow-hidden bg-white">
-                                      <Image
-                                        src={product.image}
-                                        alt={`${product.name} ${activeMegaCategory.title}`}
-                                        fill
-                                        sizes="(max-width: 1279px) 40vw, 360px"
-                                        className="object-contain scale-[1.16] transition-transform duration-300 group-hover:scale-[1.22] xl:scale-[1.2] xl:group-hover:scale-[1.26]"
-                                      />
-                                    </div>
-                                    <div className="border-t border-slate-100 px-4 py-3.5">
-                                      <div className="flex items-center justify-between gap-3">
-                                        <h4 className="font-bold text-slate-950">{product.name}</h4>
-                                        <ChevronRight className="h-4 w-4 shrink-0 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:text-blue-600" />
-                                      </div>
-                                      <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-slate-500">{product.tagline}</p>
-                                    </div>
-                                  </a>
-                                ))}
-                              </div>
+                              <AiFamilyCards products={activeMegaCategory.products} />
                             )}
                           </div>
                         </div>

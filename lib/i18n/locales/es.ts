@@ -198,15 +198,15 @@ export const es: TranslationSchema = {
   featured: {
     badge: 'Producto Insignia',
     title: 'MCAIPC2',
-    description: 'Mini PC AI de alto rendimiento alimentado por la plataforma Strix Halo con gráficos integrados y unidad de procesamiento neuronal para computación edge y cargas de trabajo AI.',
+    description: "Una familia de ordenadores con IA configurables con tres series de placas y chasis compatibles. Elige memoria, red, expansión y alimentación según tu proyecto.",
     features: [
-      'AMD Strix Halo (120W/132W), hasta 40 núcleos gráficos + 50 TOPs NPU',
-      'Hasta 128GB LPDDR5x 8000MT/s Memoria (8×32 bit canales)',
-      'Doble almacenamiento SSD M.2 2280 PCIe×4',
-      'Dual USB4 (40Gbps) con soporte Quad-Display (HDMI 2.1 FRL + DP 1.4)',
-      '2.5G LAN RJ45 + Módulo M.2 2230 WiFi/BT',
-      'Fuente de alimentación 350W Flex PSU interna o 240W DC-IN',
-    ],
+      "Placas AXB35-02 / AXB35-03 / AEB35-04",
+      "Hasta 128GB LPDDR5; capacidad y velocidad según la serie",
+      "RJ45 de 2,5GbE o doble 10GbE según la placa",
+      "HDMI, DisplayPort y dos conexiones USB4",
+      "Flex I/O opcional en AXB35-03; MCIO en AEB35-04",
+      "Chasis con fuente interna de 300/350 W o adaptador de 240 W"
+],
     cta: 'Ver Producto',
   },
   services: {

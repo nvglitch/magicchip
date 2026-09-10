@@ -108,15 +108,15 @@ export const translations = {
     featured: {
       badge: 'Flagship Product',
       title: 'MCAIPC2',
-      description: 'High-performance AI mini PC powered by Strix Halo platform with integrated graphics and neural processing unit for edge computing and AI workloads.',
+      description: "A configurable AI computer family with three mainboard series and compatible chassis options. Choose the memory, network, expansion, and power configuration that fits your deployment.",
       features: [
-        'AMD Strix Halo (120W/132W), up to 40 Graphics Cores + 50 TOPs NPU',
-        'Up to 128GB LPDDR5x 8000MT/s Memory (8×32 bit channels)',
-        'Dual M.2 2280 PCIe×4 SSD Storage',
-        'Dual USB4 (40Gbps) with Quad-Display Support (HDMI 2.1 FRL + DP 1.4)',
-        '2.5G LAN RJ45 + M.2 2230 WiFi/BT Module',
-        '350W Internal Flex PSU or 240W DC-IN Power Options',
-      ],
+      "AXB35-02 / AXB35-03 / AEB35-04 mainboard series",
+      "Up to 128GB LPDDR5; capacity and speed vary by series",
+      "2.5GbE or dual 10GbE RJ45, depending on mainboard",
+      "HDMI, DisplayPort, and dual USB4 connections",
+      "Optional Flex I/O on AXB35-03; MCIO on AEB35-04",
+      "Compatible chassis with 300/350 W internal PSU or 240 W adapter"
+],
       cta: 'View Product',
     },
     // Services
@@ -355,15 +355,15 @@ export const translations = {
     featured: {
       badge: 'Produit Phare',
       title: 'MCAIPC2',
-      description: 'Mini PC IA haute performance alimenté par la plateforme Strix Halo avec graphiques intégrés et unité de traitement neuronal pour le calcul de périphérie et les charges de travail IA.',
+      description: "Une famille de PC IA configurable avec trois séries de cartes mères et plusieurs châssis compatibles. Choisissez la mémoire, le réseau, les extensions et l’alimentation adaptés à votre projet.",
       features: [
-        'AMD Strix Halo (120W/132W), jusqu\'à 40 cœurs graphiques + 50 TOPs NPU',
-        'Jusqu\'à 128GB LPDDR5x 8000MT/s Mémoire (8×32 bit canaux)',
-        'Double stockage SSD M.2 2280 PCIe×4',
-        'Dual USB4 (40Gbps) avec support Quad-Display (HDMI 2.1 FRL + DP 1.4)',
-        '2.5G LAN RJ45 + Module M.2 2230 WiFi/BT',
-        'Alimentation 350W Flex PSU interne ou 240W DC-IN',
-      ],
+      "Cartes mères AXB35-02 / AXB35-03 / AEB35-04",
+      "Jusqu’à 128 Go LPDDR5 ; capacité et vitesse selon la série",
+      "RJ45 2,5 GbE ou double 10 GbE selon la carte mère",
+      "HDMI, DisplayPort et deux connexions USB4",
+      "Flex I/O en option sur AXB35-03 ; MCIO sur AEB35-04",
+      "Châssis avec alimentation interne 300/350 W ou adaptateur 240 W"
+],
       cta: 'Voir le Produit',
     },
     // Services
@@ -601,15 +601,15 @@ export const translations = {
     featured: {
       badge: 'Flaggschiff-Produkt',
       title: 'MCAIPC2',
-      description: 'Hochleistungs-AI-Mini-PC mit Strix Halo-Plattform, integrierter Grafik und neuronaler Verarbeitungseinheit für Edge-Computing und AI-Workloads.',
+      description: "Eine konfigurierbare KI-Computerfamilie mit drei Mainboard-Serien und kompatiblen Gehäusen. Wählen Sie Speicher, Netzwerk, Erweiterungen und Stromversorgung passend zu Ihrem Projekt.",
       features: [
-        'AMD Strix Halo (120W/132W), bis zu 40 Grafikkerne + 50 TOPs NPU',
-        'Bis zu 128GB LPDDR5x 8000MT/s Speicher (8×32 Bit Kanäle)',
-        'Dual M.2 2280 PCIe×4 SSD Speicher',
-        'Dual USB4 (40Gbps) mit Quad-Display Support (HDMI 2.1 FRL + DP 1.4)',
-        '2.5G LAN RJ45 + M.2 2230 WiFi/BT Modul',
-        '350W interner Flex PSU oder 240W DC-IN Netzteil',
-      ],
+      "Mainboards AXB35-02 / AXB35-03 / AEB35-04",
+      "Bis zu 128GB LPDDR5; Kapazität und Geschwindigkeit je nach Serie",
+      "2,5GbE oder duales 10GbE RJ45, je nach Mainboard",
+      "HDMI, DisplayPort und zwei USB4-Anschlüsse",
+      "Optionales Flex I/O bei AXB35-03; MCIO bei AEB35-04",
+      "Gehäuse mit internem 300/350-W-Netzteil oder 240-W-Adapter"
+],
       cta: 'Produkt anzeigen',
     },
     services: {
@@ -828,15 +828,15 @@ export const translations = {
     featured: {
       badge: 'Prodotto di Fascia Alta',
       title: 'MCAIPC2',
-      description: 'Mini PC AI ad alte prestazioni alimentato dalla piattaforma Strix Halo con grafica integrata e unità di elaborazione neurale per il calcolo edge e carichi di lavoro AI.',
+      description: "Una famiglia di computer AI configurabili con tre serie di schede madri e chassis compatibili. Scegli memoria, rete, espansioni e alimentazione in base al tuo progetto.",
       features: [
-        'AMD Strix Halo (120W/132W), fino a 40 core grafici + 50 TOPs NPU',
-        'Fino a 128GB LPDDR5x 8000MT/s Memoria (8×32 bit canali)',
-        'Doppia memoria SSD M.2 2280 PCIe×4',
-        'Dual USB4 (40Gbps) con supporto Quad-Display (HDMI 2.1 FRL + DP 1.4)',
-        '2.5G LAN RJ45 + Modulo M.2 2230 WiFi/BT',
-        'Alimentatore 350W Flex PSU interno o 240W DC-IN',
-      ],
+      "Schede madri AXB35-02 / AXB35-03 / AEB35-04",
+      "Fino a 128GB LPDDR5; capacità e velocità dipendono dalla serie",
+      "RJ45 2,5GbE o doppia 10GbE in base alla scheda madre",
+      "HDMI, DisplayPort e due connessioni USB4",
+      "Flex I/O opzionale su AXB35-03; MCIO su AEB35-04",
+      "Chassis con alimentatore interno 300/350 W o adattatore 240 W"
+],
       cta: 'Visualizza Prodotto',
     },
     services: {
@@ -1055,15 +1055,15 @@ export const translations = {
     featured: {
       badge: 'Producto Flagship',
       title: 'MCAIPC2',
-      description: 'Mini PC AI de alto rendimiento alimentado por la plataforma Strix Halo con gráficos integrados y unidad de procesamiento neuronal para computación edge y cargas de trabajo AI.',
+      description: "Una familia de ordenadores con IA configurables con tres series de placas y chasis compatibles. Elige memoria, red, expansión y alimentación según tu proyecto.",
       features: [
-        'AMD Strix Halo (120W/132W), hasta 40 núcleos gráficos + 50 TOPs NPU',
-        'Hasta 128GB LPDDR5x 8000MT/s Memoria (8×32 bit canales)',
-        'Doble almacenamiento SSD M.2 2280 PCIe×4',
-        'Dual USB4 (40Gbps) con soporte Quad-Display (HDMI 2.1 FRL + DP 1.4)',
-        '2.5G LAN RJ45 + Módulo M.2 2230 WiFi/BT',
-        'Fuente de alimentación 350W Flex PSU interna o 240W DC-IN',
-      ],
+      "Placas AXB35-02 / AXB35-03 / AEB35-04",
+      "Hasta 128GB LPDDR5; capacidad y velocidad según la serie",
+      "RJ45 de 2,5GbE o doble 10GbE según la placa",
+      "HDMI, DisplayPort y dos conexiones USB4",
+      "Flex I/O opcional en AXB35-03; MCIO en AEB35-04",
+      "Chasis con fuente interna de 300/350 W o adaptador de 240 W"
+],
       cta: 'Ver Producto',
     },
     services: {
