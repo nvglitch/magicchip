@@ -29,6 +29,13 @@ const typeIcons: Record<SearchEntryType, typeof Package> = {
   resource: FileText,
 };
 
+const parameterPlaceholders = {
+  en: 'Model or specs', fr: 'Modèle ou paramètres', de: 'Modell oder technische Daten',
+  it: 'Modello o specifiche', es: 'Modelo o especificaciones',
+};
+
+const requirementExamples = { en: 'wide voltage', fr: 'large plage de tension', de: 'weiter Spannungsbereich', it: 'ampio intervallo di tensione', es: 'amplio rango de tensión' };
+
 export default function SiteSearch({ variant = 'header', onNavigate }: SiteSearchProps) {
   const { t, language } = useLanguage();
   const router = useRouter();
@@ -40,7 +47,8 @@ export default function SiteSearch({ variant = 'header', onNavigate }: SiteSearc
   const [isCompactOpen, setIsCompactOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
   const text = labels[language] || labels.en;
-  const results = useMemo(() => searchSite(query).slice(0, 6), [query]);
+  const allResults = useMemo(() => searchSite(query), [query]);
+  const results = allResults.slice(0, 6);
 
   useEffect(() => setActiveIndex(-1), [query]);
 
@@ -122,7 +130,7 @@ export default function SiteSearch({ variant = 'header', onNavigate }: SiteSearc
             onClick={closeSearch}
             className="flex items-center justify-between border-t border-slate-100 bg-slate-50 px-4 py-3 text-sm font-semibold text-blue-700 transition-colors hover:bg-blue-50"
           >
-            {text.allResults}
+            {text.allResults} ({allResults.length})
             <ArrowRight className="h-4 w-4" />
           </Link>
         </>
@@ -145,7 +153,8 @@ export default function SiteSearch({ variant = 'header', onNavigate }: SiteSearc
         }}
         onFocus={() => query.trim() && setIsOpen(true)}
         onKeyDown={handleKeyDown}
-        placeholder={t.nav.searchPlaceholder}
+        placeholder={parameterPlaceholders[language]}
+        title={`9-36V · Intel · DDR5 · USB4 · ${requirementExamples[language]}`}
         aria-label={t.nav.searchAriaLabel}
         aria-autocomplete="list"
         aria-controls={listId}
@@ -238,6 +247,7 @@ function SearchResult({ result, typeLabel, active, onMouseEnter, onNavigate }: {
           <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-normal text-slate-500">{typeLabel}</span>
         </div>
         <p className="mt-0.5 line-clamp-1 text-xs text-slate-500">{result.description}</p>
+        {result.matchedSpecs?.map(spec => <p key={spec} className="mt-1 line-clamp-2 text-xs leading-relaxed text-blue-700">{spec}</p>)}
       </div>
       <ArrowRight className={`h-4 w-4 shrink-0 transition-transform ${active ? 'translate-x-0.5 text-blue-600' : 'text-slate-300'}`} />
     </Link>

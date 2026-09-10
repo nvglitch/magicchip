@@ -1,0 +1,63 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
+const assert = require('node:assert/strict');
+const ts = require('typescript');
+const cache = new Map();
+function load(filename) {
+  const file = path.resolve(__dirname, '..', filename);
+  if (file.endsWith('.json')) return JSON.parse(fs.readFileSync(file, 'utf8'));
+  if (cache.has(file)) return cache.get(file);
+  const exports = {};
+  cache.set(file, exports);
+  const code = ts.transpileModule(fs.readFileSync(file, 'utf8'), {
+    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020, esModuleInterop: true },
+  }).outputText;
+  vm.runInNewContext(code, { exports, Intl, Map, Set, require(name) {
+    const resolved = name.startsWith('@/') ? name.slice(2) : path.resolve(path.dirname(file), name);
+    return load(resolved.endsWith('.json') ? resolved : `${resolved}.ts`);
+  } });
+  return exports;
+}
+const { searchSite, siteSearchIndex } = load('lib/site-search.ts');
+const { matchSearch } = load('lib/search-matching.ts');
+const fixture = (specs) => ({ title: 'Test PC', description: '', keywords: [], href: '/test', type: 'product', specs });
+const power = value => fixture([{ label: 'Power', value }]);
+assert(matchSearch(power('DC 9V~36V'), '9-36V'));
+assert(matchSearch(power('DC 6-48V'), '9-36V'));
+assert.equal(matchSearch(power('DC 12-36V'), '9-36V'), null);
+assert.equal(matchSearch(power('DC 9-24V'), '9-36V'), null);
+assert.equal(matchSearch(power('19V'), '9-36V'), null);
+assert.equal(matchSearch(fixture([{ label: 'USB output', value: '9-36V' }]), '9-36V'), null);
+assert.equal(matchSearch(power('100-240V AC'), 'wide voltage'), null);
+assert.equal(matchSearch(fixture([{ label: 'CPU', value: 'AMD Ryzen' }, { label: 'Network', value: 'Intel i226' }]), 'Intel'), null);
+assert(matchSearch(fixture([{ label: 'CPU', value: 'Intel Core i5' }]), 'I want an Intel processor'));
+assert(matchSearch(fixture([{ label: 'CPU', value: 'AlderLake-N N100' }]), 'Intel'));
+assert.equal(matchSearch(fixture([{ label: 'USB', value: '4 x USB 2.0' }]), 'USB4'), null);
+assert(matchSearch(fixture([{ label: 'USB', value: 'USB 4.0' }]), 'USB 4.0'));
+assert(matchSearch(fixture([{ label: 'Memory', value: 'DDR5-4800' }]), 'DDR5'));
+assert.equal(matchSearch(fixture([{ label: 'Memory', value: 'DDR4' }]), 'DDR5'), null);
+assert(matchSearch(fixture([{ label: 'Cooling', value: 'fanless' }]), 'fanles'));
+const products = siteSearchIndex.filter(e => e.type === 'product');
+assert.equal(products.length, 113);
+assert(products.every(e => e.specs?.length));
+assert.equal(new Set(products.map(e => e.href)).size, products.length);
+for (const entry of products) assert.equal(searchSite(entry.title)[0]?.href, entry.href);
+const titles = q => Array.from(searchSite(q), e => e.title).sort();
+for (const q of ['9～36 V', '9V-36V', '9 to 36V', '９－３６Ｖ']) assert.deepEqual(titles(q), titles('9-36V'));
+assert(searchSite('9-36V').length > 0);
+for (const query of ['Intel Prozessor', 'processeur Intel', 'processore Intel', 'procesador Intel']) assert.deepEqual(titles(query), titles('Intel'));
+for (const query of ['weiter Spannungsbereich', 'breiter Eingangsspannungsbereich', 'large plage de tension', "large plage de tension d’entrée", 'ampio intervallo di tensione', 'amplio rango de tensión']) assert.deepEqual(titles(query), titles('wide voltage'));
+for (const query of ['lüfterlos', 'sans ventilateur', 'senza ventola', 'sin ventilador']) assert.deepEqual(titles(query), titles('fanless'));
+for (const query of ['Arbeitsspeicher DDR5', 'mémoire DDR5', 'memoria DDR5']) assert.deepEqual(titles(query), titles('memory DDR5'));
+for (const query of ['Ich suche einen Intel Prozessor mit 9 bis 36V', 'Je cherche un processeur Intel avec 9 à 36V', 'Cerco un processore Intel con 9 a 36V', 'Busco un procesador Intel con 9 a 36V']) assert.deepEqual(titles(query), titles('Intel 9-36V'));
+assert.equal(searchSite('宽电压').length, 0);
+assert.equal(searchSite('英特尔').length, 0);
+const intel = titles('Intel'), voltage = titles('9-36V');
+assert.deepEqual(titles('Intel 9-36V'), intel.filter(t => voltage.includes(t)));
+assert(searchSite('Intel').every(e => e.matchedSpecs.some(s => /CPU|Processor|Mainboard series/.test(s))));
+assert.equal(searchSite('').length, 0);
+assert.equal(searchSite('999-1000V').length, 0);
+assert.equal(searchSite('zzzzzznothing').length, 0);
+for (const query of ['9-36V', 'wide voltage', 'Intel', 'Intel 9-36V', 'USB4', 'DDR5']) console.log(`${query}: ${searchSite(query).length} results`);
+console.log('Search regression checks passed: all 113 products, voltage boundaries, CPU scope, spelling, units, compound queries, and exact model links.');

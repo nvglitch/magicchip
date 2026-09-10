@@ -1,3 +1,7 @@
+import { matchSearch } from '@/lib/search-matching';
+import mcai1 from '@/content/products/items/mcai1.json';
+import mc15uh from '@/content/products/items/mc15uh.json';
+import mctar7 from '@/content/products/items/mctar7.json';
 import { aiCatalog } from '@/lib/ai-catalog';
 import { industrialCatalog } from '@/lib/industrial-catalog';
 import { firewallCatalog } from '@/lib/firewall-catalog';
@@ -12,6 +16,8 @@ export type SearchEntry = {
   type: SearchEntryType;
   keywords: string[];
   image?: string;
+  specs?: { label: string; value: string }[];
+  matchedSpecs?: string[];
 };
 
 const curatedIndustrialSearchIds = new Set(['mcipca2', 'mcipc9', 'mctpc-1506e', 'mcipcb13', 'mcipcb12', 'mcipcd3']);
@@ -55,7 +61,7 @@ const catalogCommercialSearchEntries: SearchEntry[] = commercialCatalog.map((ite
   ],
   image: item.image,
 }));
-export const siteSearchIndex: SearchEntry[] = [
+const baseSearchIndex: SearchEntry[] = [
   ...aiCatalog.map((item): SearchEntry => ({ title: item.name, description: item.tagline, href: `/products/ai-mini-pc/${item.id}`, type: 'product', keywords: ['ai mini pc', ...item.highlights, ...item.specs.filter((spec) => ['CPU', 'Mainboard series', 'Network', 'High-speed interface'].includes(spec.label)).map((spec) => spec.value)], image: item.image })),
   ...catalogIndustrialSearchEntries,
   ...catalogFirewallSearchEntries,
@@ -229,31 +235,17 @@ export const siteSearchIndex: SearchEntry[] = [
   { title: 'Contact MagicChip', description: 'Contact our sales team about products, samples, quotations, and projects.', href: '/contact', type: 'page', keywords: ['sales', 'inquiry', 'quote', 'whatsapp', 'email'] },
 ];
 
-function normalize(value: string) {
-  return value.toLocaleLowerCase().replace(/[-_/]+/g, ' ').replace(/\s+/g, ' ').trim();
-}
+// Resolve facts for every product, including the curated search entries.
+const catalogSpecs = new Map<string, { label: string; value: string }[]>(
+  [...industrialCatalog, ...firewallCatalog, ...commercialCatalog, ...aiCatalog].map(item => [item.name, item.specs])
+);
+for (const item of [mcai1, mc15uh, mctar7]) catalogSpecs.set(item.name, item.specifications);
+export const siteSearchIndex: SearchEntry[] = baseSearchIndex.map(entry => ({ ...entry, specs: catalogSpecs.get(entry.title) }));
 
 export function searchSite(query: string): SearchEntry[] {
-  const normalizedQuery = normalize(query);
-  if (!normalizedQuery) return [];
-  const tokens = normalizedQuery.split(' ');
-
-  return siteSearchIndex
-    .map(entry => {
-      const title = normalize(entry.title);
-      const keywords = entry.keywords.map(normalize);
-      const haystack = normalize(`${entry.title} ${entry.description} ${entry.keywords.join(' ')}`);
-      if (!tokens.every(token => haystack.includes(token))) return { entry, score: 0 };
-
-      let score = tokens.reduce((total, token) => total + (title.includes(token) ? 18 : 6), 0);
-      if (title === normalizedQuery) score += 120;
-      else if (title.startsWith(normalizedQuery)) score += 80;
-      else if (title.includes(normalizedQuery)) score += 50;
-      if (keywords.some(keyword => keyword === normalizedQuery)) score += 35;
-      if (entry.type === 'product') score += 8;
-      return { entry, score };
-    })
-    .filter(result => result.score > 0)
-    .sort((a, b) => b.score - a.score || a.entry.title.localeCompare(b.entry.title))
-    .map(result => result.entry);
+  if (!query.trim()) return [];
+  return siteSearchIndex.map(entry => ({ entry, match: matchSearch(entry, query.slice(0, 300)) }))
+    .filter(result => result.match !== null)
+    .sort((a, b) => b.match!.score - a.match!.score || a.entry.title.localeCompare(b.entry.title, 'en', { numeric: true }))
+    .map(({ entry, match }) => ({ ...entry, matchedSpecs: match!.matchedSpecs }));
 }
