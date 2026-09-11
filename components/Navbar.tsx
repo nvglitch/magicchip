@@ -75,7 +75,7 @@ type ScenarioMegaItem = DropdownItem & {
 
 const megaMenuProducts: Record<string, MegaMenuProduct[]> = {
   'industrial-mini-pc': [
-    { id: 'mcipcb13', name: 'MCIPCB13', tagline: 'Flexible Intel Core industrial box PC', image: '/assets/products/industrial/b-series/mcipcb13/images/1.jpg' },
+    { id: 'mcipcb13a', name: 'MCIPCB13A', tagline: 'Flexible Intel Core industrial box PC', image: '/assets/products/industrial/ver2/mcipcb13a/main.webp' },
     { id: 'mcipcb12', name: 'MCIPCB12', tagline: 'Fanless triple-display industrial mini PC', image: '/assets/products/industrial/b-series/mcipcb12/images/1.jpg' },
     { id: 'mcipcd3', name: 'MCIPCD3', tagline: 'Six-LAN industrial network appliance', image: '/assets/products/industrial/d-series/mcipcd3/images/1.jpg' },
   ],
@@ -113,7 +113,7 @@ const industrialMegaSeries: ProductMegaSeries[] = [
     code: 'B',
     title: 'B Series',
     description: 'Dual-LAN industrial computers with dual COM ports',
-    image: '/assets/products/industrial/b-series/mcipcb13/images/1.jpg',
+    image: '/assets/products/industrial/ver2/mcipcb13a/main.webp',
     href: '/products/industrial-mini-pc#series-b',
   },
   {
@@ -227,7 +227,7 @@ const scenarioMegaItems: ScenarioMegaItem[] = [
     description: 'Fanless systems with serial connectivity and rich I/O for machine control.',
     href: '/scenarios#industrialAutomation',
     icon: Factory,
-    products: [scenarioProduct('industrial-mini-pc', 'mcipcb13'), scenarioProduct('industrial-mini-pc', 'mcipcb12')],
+    products: [scenarioProduct('industrial-mini-pc', 'mcipcb13a'), scenarioProduct('industrial-mini-pc', 'mcipcb12')],
   },
   {
     id: 'edgeAi',

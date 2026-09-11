@@ -8,9 +8,9 @@
   "statusCounts": {
     "excluded": 3,
     "pending-confirmation": 9,
-    "source-missing-page-retained": 1,
     "updated": 4,
-    "verified-current": 103
+    "verified-current": 103,
+    "retired-by-user": 1
   },
   "previousObservation": "brochure-history/initial-observation-2026-09-10.json",
   "files": [
@@ -2374,9 +2374,9 @@
       "observedSha256": "adea1072e1bf15bf87e18cc83cd77f5d6dbbec42e54cccdb0ea70e8d0b8710f2",
       "appliedSha256": null,
       "excluded": false,
-      "status": "source-missing-page-retained",
+      "status": "retired-by-user",
       "present": false,
-      "notes": "来源文件消失不代表下架；保留 MCIPCB13 详情和系列入口。",
+      "notes": "用户明确要求移除不带 A/B 的旧 MCIPCB13；已移除详情、搜索、SEO 和导航，保留历史来源记录。",
       "modelIds": [
         "mcipcb13"
       ],

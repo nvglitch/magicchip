@@ -21,7 +21,7 @@ export type SearchEntry = {
   matchedSpecs?: string[];
 };
 
-const curatedIndustrialSearchIds = new Set(['mcipca2', 'mcipc9', 'mctpc-1506e', 'mcipcb13', 'mcipcb12', 'mcipcd3']);
+const curatedIndustrialSearchIds = new Set(['mcipca2', 'mcipc9', 'mctpc-1506e', 'mcipcb12', 'mcipcd3']);
 const catalogIndustrialSearchEntries: SearchEntry[] = industrialCatalog
   .filter((item) => !curatedIndustrialSearchIds.has(item.id))
   .map((item) => ({
@@ -90,14 +90,6 @@ const baseSearchIndex: SearchEntry[] = [
     type: 'product',
     keywords: ['industrial panel pc', 'tpc series', '15.6 inch', 'hmi display', '2.5gbe'],
     image: '/assets/products/industrial/tpc-series/mctpc-1506e/images/main-transparent.png',
-  },
-  {
-    title: 'MCIPCB13',
-    description: 'Industrial box PC with flexible Intel Core platforms, dual LAN, eight USB ports, and dual COM.',
-    href: '/products/industrial-mini-pc/mcipcb13',
-    type: 'product',
-    keywords: ['industrial mini pc', 'fanless', 'automation', 'serial', 'com', 'intel core'],
-    image: '/assets/products/industrial/b-series/mcipcb13/images/1.jpg',
   },
   {
     title: 'MCIPCB12',

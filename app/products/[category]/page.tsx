@@ -93,10 +93,10 @@ const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: 
       specs: ['Intel Celeron J4125', '4 x Intel GbE LAN', '1 x DB9 RS232 COM', '-20°C to +60°C'],
     },
     {
-      id: 'mcipcb13',
-      name: 'MCIPCB13',
+      id: 'mcipcb13a',
+      name: 'MCIPCB13A',
       tagline: 'Compact industrial box PC with flexible Intel Core platform support',
-      image: '/assets/products/industrial/b-series/mcipcb13/images/1.jpg',
+      image: '/assets/products/industrial/ver2/mcipcb13a/main.webp',
       specs: ['4th-13th Gen Intel Core', 'Dual GbE LAN', '8x USB Ports', '-20°C to +60°C'],
     },
     {
@@ -177,14 +177,14 @@ const industrialSeries = [
     title: 'A Series',
     description: 'Single COM or COM-less compact industrial computers',
     image: '/assets/products/industrial/a-series/mcipca2/images/main-square-srgb.jpg',
-    models: industrialCatalog.filter((product) => product.series === 'A').map(({ id, name }) => ({ id, name })),
+    models: industrialCatalog.filter((product) => product.series === 'A').map(({ id, name, image }) => ({ id, name, image })),
   },
   {
     code: 'B',
     title: 'B Series',
     description: 'Dual-LAN industrial computers with dual COM ports',
-    image: '/assets/products/industrial/b-series/mcipcb13/images/1.jpg',
-    models: industrialCatalog.filter((product) => product.series === 'B').map(({ id, name }) => ({ id, name })),
+    image: '/assets/products/industrial/ver2/mcipcb13a/main.webp',
+    models: industrialCatalog.filter((product) => product.series === 'B').map(({ id, name, image }) => ({ id, name, image })),
 
   },
   {
@@ -192,28 +192,28 @@ const industrialSeries = [
     title: 'C Series',
     description: 'Multi-COM industrial computers with dual LAN ports',
     image: '/assets/products/industrial/c-series/mcipc9/images/main-square-srgb.jpg',
-    models: industrialCatalog.filter((product) => product.series === 'C').map(({ id, name }) => ({ id, name })),
+    models: industrialCatalog.filter((product) => product.series === 'C').map(({ id, name, image }) => ({ id, name, image })),
   },
   {
     code: 'D',
     title: 'D Series',
     description: 'Multi-LAN industrial computers with dual COM ports',
     image: '/assets/products/industrial/d-series/mcipcd3/images/1.jpg',
-    models: industrialCatalog.filter((product) => product.series === 'D').map(({ id, name }) => ({ id, name })),
+    models: industrialCatalog.filter((product) => product.series === 'D').map(({ id, name, image }) => ({ id, name, image })),
   },
   {
     code: 'E',
     title: 'E Series',
     description: 'Custom industrial computers with multi-LAN, serial and GPIO connectivity',
     image: '/assets/products/industrial/ver2/mcipce1/main.webp',
-    models: industrialCatalog.filter(product => product.series === 'E').map(({ id, name }) => ({ id, name })),
+    models: industrialCatalog.filter(product => product.series === 'E').map(({ id, name, image }) => ({ id, name, image })),
   },
   {
     code: 'TPC',
     title: 'TPC Series',
     description: 'Industrial panel PCs with integrated displays',
     image: '/assets/products/industrial/tpc-series/mctpc-1506e/images/main-transparent.png',
-    models: industrialCatalog.filter((product) => product.series === 'TPC').map(({ id, name }) => ({ id, name })),
+    models: industrialCatalog.filter((product) => product.series === 'TPC').map(({ id, name, image }) => ({ id, name, image })),
   },
 ];
 const firewallSeries = [
@@ -222,35 +222,35 @@ const firewallSeries = [
     title: '2-Port Edge Series',
     description: 'Compact dual-LAN appliances for firewall, routing, VPN, and edge gateway deployments',
     image: '/assets/products/firewall/dual-port-series/mcsrp6/images/main-square.png',
-    models: firewallCatalog.filter((product) => product.series === '2L').map(({ id, name }) => ({ id, name })),
+    models: firewallCatalog.filter((product) => product.series === '2L').map(({ id, name, image }) => ({ id, name, image })),
   },
   {
     code: '4L',
     title: '4-Port Router Series',
     description: 'Four-port network platforms for multi-WAN routing and segmented networks',
     image: '/assets/products/firewall/quad-port-series/mc30s-n100/images/main-square.png',
-    models: firewallCatalog.filter((product) => product.series === '4L').map(({ id, name }) => ({ id, name })),
+    models: firewallCatalog.filter((product) => product.series === '4L').map(({ id, name, image }) => ({ id, name, image })),
   },
   {
     code: '6L',
     title: '6-Port Gateway Series',
     description: 'Six-port appliances for branch gateways, SD-WAN, and denser network segmentation',
     image: '/assets/products/firewall/six-port-series/mcsr613u/images/main-square.png',
-    models: firewallCatalog.filter((product) => product.series === '6L').map(({ id, name }) => ({ id, name })),
+    models: firewallCatalog.filter((product) => product.series === '6L').map(({ id, name, image }) => ({ id, name, image })),
   },
   {
     code: '10G',
     title: '10GbE & Fiber Series',
     description: 'High-speed edge platforms with 2.5GbE, 10GbE RJ45, or SFP+ connectivity',
     image: '/assets/products/firewall/high-speed-series/mcr20/images/main-square.png',
-    models: firewallCatalog.filter((product) => product.series === '10G').map(({ id, name }) => ({ id, name })),
+    models: firewallCatalog.filter((product) => product.series === '10G').map(({ id, name, image }) => ({ id, name, image })),
   },
   {
     code: '1U',
     title: '1U Server Series',
     description: 'Rackmount network and server platforms with multi-LAN, storage, and expansion options',
     image: '/assets/products/firewall/server-series/mc14n-1u6l/images/main-square.png',
-    models: firewallCatalog.filter((product) => product.series === '1U').map(({ id, name }) => ({ id, name })),
+    models: firewallCatalog.filter((product) => product.series === '1U').map(({ id, name, image }) => ({ id, name, image })),
   },
 ];
 const commercialSeries = [
@@ -260,9 +260,9 @@ const commercialSeries = [
     description: 'Compact desktop and mini PC platforms for business, education, professional work, and display deployments',
     image: '/assets/products/commercial/dpc/mcar9/images/main-square.png',
     models: [
-      { id: 'mc15uh', name: 'MC15UH' },
-      { id: 'mctar7', name: 'MCTAR7' },
-      ...commercialCatalog.filter((product) => product.series === 'DPC').map(({ id, name }) => ({ id, name })),
+      { id: 'mc15uh', name: 'MC15UH', image: '/assets/products/commercial/ver2/mc15uh/main.webp' },
+      { id: 'mctar7', name: 'MCTAR7', image: '/assets/products/commercial/ver2/mctar7/main.webp' },
+      ...commercialCatalog.filter((product) => product.series === 'DPC').map(({ id, name, image }) => ({ id, name, image })),
     ],
   },
   {
@@ -270,7 +270,7 @@ const commercialSeries = [
     title: 'NAS PC Series',
     description: 'Compact storage and network-service platforms with multi-drive, multi-LAN, and high-speed uplink options',
     image: '/assets/products/commercial/nas/mcnas12/images/main-square.png',
-    models: commercialCatalog.filter((product) => product.series === 'NAS').map(({ id, name }) => ({ id, name })),
+    models: commercialCatalog.filter((product) => product.series === 'NAS').map(({ id, name, image }) => ({ id, name, image })),
   },
 ];
 const richCategoryData = {
@@ -288,7 +288,7 @@ const richCategoryData = {
     scenarios: [
       { title: 'Compact machine-side control', description: 'A and B Series systems place control software, display output, USB peripherals, and essential serial connectivity close to the equipment.', products: ['MCIPCA1', 'MCIPCB12'] },
       { title: 'Serial equipment & data acquisition', description: 'Multi-COM C Series models connect several controllers, instruments, readers, or legacy serial devices through one industrial computer.', products: ['MCIPC1', 'MCIPC9'] },
-      { title: 'Industrial edge & network gateways', description: 'Multi-LAN D Series and expandable box PCs support local data processing, segmented equipment networks, vision systems, and edge gateway roles.', products: ['MCIPCD3', 'MCIPCB13'] },
+      { title: 'Industrial edge & network gateways', description: 'Multi-LAN D Series and expandable box PCs support local data processing, segmented equipment networks, vision systems, and edge gateway roles.', products: ['MCIPCD3', 'MCIPCB13A'] },
       { title: 'Panel HMI & operator stations', description: 'TPC models combine the display and computer in one panel-mount system for production status, equipment operation, and on-site interaction.', products: ['MCTPC-1506E', 'MCTPC-2105E'] },
     ],
   },
@@ -537,7 +537,7 @@ export default function CategoryPage() {
                 <section
                   id={`series-${series.code.toLowerCase()}`}
                   key={series.code}
-                  className="scroll-mt-28 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl hover:shadow-slate-900/10"
+                  className="relative hover:z-20 focus-within:z-20 scroll-mt-28 rounded-3xl border border-slate-200 bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl hover:shadow-slate-900/10"
                 >
                   <div className="relative p-6 sm:p-8 lg:p-10">
                     <div aria-hidden="true" className="pointer-events-none absolute right-8 top-[118px] hidden -translate-y-1/2 select-none text-[9rem] font-black leading-none tracking-[-0.08em] text-slate-950/[0.045] md:block lg:right-12 lg:text-[11rem]">

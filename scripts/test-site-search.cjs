@@ -39,7 +39,7 @@ assert(matchSearch(fixture([{ label: 'Memory', value: 'DDR5-4800' }]), 'DDR5'));
 assert.equal(matchSearch(fixture([{ label: 'Memory', value: 'DDR4' }]), 'DDR5'), null);
 assert(matchSearch(fixture([{ label: 'Cooling', value: 'fanless' }]), 'fanles'));
 const products = siteSearchIndex.filter(e => e.type === 'product');
-assert.equal(products.length, 116);
+assert.equal(products.length, 115);
 assert(products.every(e => e.specs?.length));
 assert.equal(new Set(products.map(e => e.href)).size, products.length);
 for (const entry of products) assert.equal(searchSite(entry.title)[0]?.href, entry.href);
@@ -60,7 +60,7 @@ assert.equal(searchSite('').length, 0);
 assert.equal(searchSite('999-1000V').length, 0);
 assert.equal(searchSite('zzzzzznothing').length, 0);
 for (const query of ['9-36V', 'wide voltage', 'Intel', 'Intel 9-36V', 'USB4', 'DDR5']) console.log(`${query}: ${searchSite(query).length} results`);
-console.log('Search regression checks passed: all 116 products, voltage boundaries, CPU scope, spelling, units, compound queries, and exact model links.');
+console.log('Search regression checks passed: all 115 products, voltage boundaries, CPU scope, spelling, units, compound queries, and exact model links.');
 
 assert.equal(searchSite('MCIPCE1')[0]?.href, '/products/industrial-mini-pc/mcipce1');
 assert(searchSite('9-36V').some(item => item.title === 'MCIPCE1'));

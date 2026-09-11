@@ -46,7 +46,6 @@ type ProductDetail = {
   operatingRange?: string;
 };
 
-const mcipcb13ImageBase = '/assets/products/industrial/b-series/mcipcb13/images';
 const mcipcb12ImageBase = '/assets/products/industrial/b-series/mcipcb12/images';
 const mcipcd3ImageBase = '/assets/products/industrial/d-series/mcipcd3/images';
 const mcipca2ImageBase = '/assets/products/industrial/a-series/mcipca2/images';
@@ -262,53 +261,6 @@ const products: Record<string, ProductDetail> = {
   ...catalogIndustrialProducts,
   ...catalogFirewallProducts,
   ...catalogCommercialProducts,
-  mcipcb13: {
-    name: 'MCIPCB13',
-    tagline: 'Industrial Mini PC for dependable multi-I/O edge deployment',
-    description:
-      'MCIPCB13 is a compact industrial box PC built for automation, machine control, embedded gateway, and factory workstation scenarios. It combines broad Intel Core platform compatibility with dual LAN, rich USB and COM connectivity, wide voltage input, and a rugged operating temperature range.',
-    images: [
-      `${mcipcb13ImageBase}/1.jpg`,
-    ],
-    galleryImages: [`${mcipcb13ImageBase}/2.jpg`, `${mcipcb13ImageBase}/3.jpg`, `${mcipcb13ImageBase}/4.jpg`],
-    highlights: ['Intel Core i3/i5/i7 options', '2 x GbE RJ45 LAN', '4 x USB 3.0 + 4 x USB 2.0', '193.9 x 127 x 57.2 mm'],
-    specs: [
-      { label: 'Model', value: 'MCIPCB13' },
-      { label: 'CPU', value: 'Optional Intel 4th/5th/6th/7th/8th/10th Gen Core i3/i5/i7 CPU' },
-      { label: 'Video', value: '1 x HDMI, 1 x VGA (or HDMI)' },
-      { label: 'RAM', value: '4th Gen: 1 x DDR3L SODIMM, up to 8GB; 6th/7th/8th Gen: 1 x DDR4 SODIMM, up to 16GB; 8th/10th Gen: 2 x DDR4 SODIMM, up to 32GB; 12th/13th Gen: 1 x DDR5 SODIMM, up to 64GB' },
-      { label: 'USB', value: '4 x USB 3.0, 4 x USB 2.0' },
-      { label: 'Power Input', value: 'DC 12V-19V power input' },
-      { label: 'NIC', value: '2 x GbE RJ45 Realtek 8111H' },
-      { label: 'COM', value: '2 x DB9 COM' },
-      { label: 'Storage', value: '4th Gen: 1 x mSATA; 6th/7th/8th/10th/12th/13th Gen: 1 x M.2 2280 supporting SATA and NVMe; 1 x 2.5-inch HDD/SSD' },
-      { label: 'Expansion', value: '1 x Mini-PCIe half/full card with SIM slot, supports 3G/4G, WiFi/Bluetooth; supports watchdog and diskless boot' },
-      { label: 'Front I/O', value: '1 x Power button, 4 x USB 3.0, 4 x USB 2.0, 2 x DB9 COM (COM1, COM2)' },
-      { label: 'Rear I/O', value: '1 x DC power input, 2 x GbE RJ45 LAN, 1 x HDMI, 1 x VGA, 1 x earphone jack, 1 x microphone, 2 x antenna connectors for WiFi/3G/4G' },
-      { label: 'System', value: 'Windows 7/8/10, WES 7/10, Linux' },
-      { label: 'Working Environment', value: 'Working temperature: -20°C to +60°C; storage temperature: -30°C to +70°C; storage humidity: 10%-90% @30°C, non-condensing' },
-      { label: 'Size', value: '193.9 x 127 x 57.2 mm' },
-    ],
-    features: [
-      { icon: 'Cpu', title: 'Flexible Intel Core Platform', description: 'Covers multiple Intel Core generations so projects can balance cost, lifecycle, and performance.' },
-      { icon: 'Network', title: 'Industrial Connectivity', description: 'Dual Gigabit LAN, dual DB9 COM, and eight USB ports support controllers, sensors, cameras, and peripherals.' },
-      { icon: 'Thermometer', title: 'Wide Temperature Operation', description: 'Designed for -20°C to +60°C operation in demanding industrial and edge environments.' },
-    ],
-    sellingPoints: [
-      {
-        image: `${mcipcb13ImageBase}/5.jpg`,
-        title: 'Front and rear I/O at a glance',
-        description: 'The illustrated panel map identifies the power button, eight USB ports, dual COM, audio, dual Gigabit LAN, dual display outputs, DC input, and antenna connections.',
-      },
-      {
-        image: `${mcipcb13ImageBase}/6.jpg`,
-        title: 'Fanless reliability for industrial workloads',
-        description: 'A fanless aluminum enclosure, wide-temperature support, dual-display capability, wireless expansion, and 24/7 operation suit demanding automation and edge deployments.',
-      },
-    ],
-    advantageSummary: 'MCIPCB13 focuses on the interfaces and durability industrial buyers usually need first: broad CPU options, legacy and modern I/O, resilient environmental ratings, and flexible storage expansion in a compact enclosure.',
-    operatingRange: '-20°C to +60°C',
-  },
   mcipcb12: {
     name: 'MCIPCB12',
     tagline: 'Compact fanless industrial mini PC with rich I/O and triple-display support',
@@ -787,7 +739,6 @@ const productCategories: Record<string, string> = {
   ...Object.fromEntries(industrialCatalog.map((item) => [item.id, 'industrial-mini-pc'])),
   ...Object.fromEntries(firewallCatalog.map((item) => [item.id, 'firewall-mini-pc'])),
   ...Object.fromEntries(commercialCatalog.map((item) => [item.id, 'commercial-mini-pc'])),
-  mcipcb13: 'industrial-mini-pc',
   mcipcb12: 'industrial-mini-pc',
   mcipcd3: 'industrial-mini-pc',
   mcipca2: 'industrial-mini-pc',

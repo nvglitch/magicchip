@@ -103,13 +103,6 @@ export const productSeo: Record<string, SeoEntry & { category: string }> = {
     image: '/assets/products/industrial/tpc-series/mctpc-1506e/images/main-transparent.png',
     category: 'industrial-mini-pc',
   },
-  mcipcb13: {
-    name: 'MCIPCB13 Industrial Mini PC',
-    description: 'Compact industrial box PC with flexible Intel Core platform support, dual Gigabit LAN, eight USB ports, dual COM, and wide-temperature operation.',
-    path: '/products/industrial-mini-pc/mcipcb13',
-    image: '/assets/products/industrial/b-series/mcipcb13/images/1.jpg',
-    category: 'industrial-mini-pc',
-  },
   mcipcb12: {
     name: 'MCIPCB12 Industrial Mini PC',
     description: 'Compact fanless industrial mini PC with Intel Elkhart Lake or Alder Lake-N processors, triple-display output, dual LAN, dual RS232, and flexible storage.',
