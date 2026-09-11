@@ -8,7 +8,7 @@
   "specifications": [
     { "label": "Processor", "value": "AMD Ryzen™ AI Max+ 395, TDP up to 140W" },
     { "label": "Memory", "value": "LPDDR5x 8533MT/s, 256-bit, up to 128GB" },
-    { "label": "Storage", "value": "4x M.2 2280 PCIe 4.0 SSD + 4x SATA" },
+    { "label": "Storage", "value": "4x M.2 2280 PCIe 4.0 SSD" },
     { "label": "Display", "value": "1x HDMI 2.1 + 1x DP 2.1 + 2x USB4 (Quad Display)" },
     { "label": "USB", "value": "2x USB4 + 6x USB3.0" },
     { "label": "Network", "value": "1x 10G LAN (AQC113) + 1x 2.5G LAN (I226)" },
@@ -18,7 +18,7 @@
   "features": [
     { "icon": "Cpu", "title": "AI Max+ Platform", "description": "AMD Ryzen AI Max+ 395 with integrated NPU" },
     { "icon": "Monitor", "title": "Quad 4K Display", "description": "HDMI 2.1 + DP 2.1 + Dual USB4 output" },
-    { "icon": "HardDrive", "title": "Quad M.2 RAID", "description": "4x PCIe 4.0 M.2 + 4x SATA" }
+    { "icon": "HardDrive", "title": "Quad M.2 RAID", "description": "4x PCIe 4.0 M.2" }
   ],
   "alibabaUrl": "https://magicchip.en.alibaba.com"
 }

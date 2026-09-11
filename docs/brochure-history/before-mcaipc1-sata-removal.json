@@ -16,10 +16,10 @@
   "files": [
     {
       "relativePath": "AIPC/MCAIPC1 brochure.pdf",
-      "sizeBytes": 1385546,
-      "modifiedAtUtc": "2026-09-11T07:48:24.116667+00:00",
-      "observedSha256": "edc2f79d5e31f7f602a2e179c5b62ba32a7be45da4b3aa70431d8dfdb9f8283b",
-      "appliedSha256": "edc2f79d5e31f7f602a2e179c5b62ba32a7be45da4b3aa70431d8dfdb9f8283b",
+      "sizeBytes": 1352509,
+      "modifiedAtUtc": "2026-08-24T10:03:14.905041+00:00",
+      "observedSha256": "d3bd81c2370da5ea3ee8f57f1fea964b07ab5853213fcf940d6727a124ff4eb8",
+      "appliedSha256": "d3bd81c2370da5ea3ee8f57f1fea964b07ab5853213fcf940d6727a124ff4eb8",
       "excluded": false,
       "present": true,
       "status": "verified-current",
@@ -30,11 +30,9 @@
       "hrefs": [
         "/products/ai-mini-pc/mcai1"
       ],
-      "reviewedAtUtc": "2026-09-11T07:49:24.158983+00:00",
-      "appliedAtUtc": "2026-09-11T07:49:24.158983+00:00",
-      "notes": "用户明确确认 MCAIPC1 无 SATA 接口并授权修改源册。已删除册子两处与官网参数/功能描述中的 SATA，完成 PDF 视觉检查、构建和搜索验证。",
-      "previousSha256": "d3bd81c2370da5ea3ee8f57f1fea964b07ab5853213fcf940d6727a124ff4eb8",
-      "sourceBackupPath": "D:\\本地资源库\\电脑相关\\电脑册子归档\\修订备份\\MCAIPC1-before-SATA-removal-20260911-154824.pdf"
+      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "AIPC/MCAIPC2 brochure.pdf",

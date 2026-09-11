@@ -694,7 +694,7 @@ const products: Record<string, ProductDetail> = {
       { label: 'Model', value: 'MCAIPC1' },
       { label: 'Processor', value: 'AMD Ryzen™ AI Max+ 395, TDP up to 140W' },
       { label: 'Memory', value: 'LPDDR5x 8533MT/s, 256-bit, up to 128GB' },
-      { label: 'Storage', value: '4x M.2 2280 PCIe 4.0 SSD + 4x SATA' },
+      { label: 'Storage', value: '4x M.2 2280 PCIe 4.0 SSD' },
       { label: 'Display', value: '1x HDMI 2.1 + 1x DP 2.1 + 2x USB4 (Quad Display)' },
       { label: 'USB', value: '2x USB4 + 6x USB3.0 (2x Front 10Gbps, 4x Rear)' },
       { label: 'Network', value: '1x 10G LAN (AQC113) + 1x 2.5G LAN (Intel I226)' },
@@ -711,7 +711,7 @@ const products: Record<string, ProductDetail> = {
     features: [
       { icon: 'Cpu', title: 'AI Max+ Platform', description: 'AMD Ryzen™ AI Max+ 395 with integrated NPU for edge AI inference and real-time workloads.' },
       { icon: 'Monitor', title: 'Quad 4K Display', description: 'Simultaneous output via HDMI 2.1, DP 2.1, and dual USB4 — ideal for video walls and control rooms.' },
-      { icon: 'HardDrive', title: 'Quad M.2 RAID', description: '4x PCIe 4.0 M.2 slots plus 4x SATA — up to 32TB total storage with flexible RAID configurations.' },
+      { icon: 'HardDrive', title: 'Quad M.2 RAID', description: '4x PCIe 4.0 M.2 slots — up to 32TB total storage with flexible RAID configurations.' },
       { icon: 'Network', title: 'Dual High-Speed LAN', description: '10GbE (AQC113) for backbone throughput plus 2.5GbE (I226) with PXE and WoL for enterprise deployment.' },
       { icon: 'Zap', title: 'Triple Power Input', description: '8Pin ATX, 19V DC barrel, and USB-C PD3.1 28V — deploy in server rooms, deskside, or mobile workstations.' },
       { icon: 'Thermometer', title: 'Advanced Cooling', description: 'Dual fan headers (CPU + System) with intelligent PWM curves for sustained 140W operation in a compact chassis.' },
