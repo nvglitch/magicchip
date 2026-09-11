@@ -932,6 +932,8 @@ const industrialCatalogSource: IndustrialCatalogItem[] = [
   },
   {
     "id": "mcipc1",
+    "galleryImages": ["/assets/products/industrial/c-series/mcipc1/images/view-1.webp", "/assets/products/industrial/c-series/mcipc1/images/view-2.webp"],
+    "galleryCards": [{"image": "/assets/products/industrial/c-series/mcipc1/images/view-1.webp", "title": "MCIPC1 front panel"}, {"image": "/assets/products/industrial/c-series/mcipc1/images/view-2.webp", "title": "MCIPC1 rear panel"}],
     "name": "MCIPC1",
     "series": "C",
     "tagline": "MCIPC1 multi-COM industrial computer with dual LAN",

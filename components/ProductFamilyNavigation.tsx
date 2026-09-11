@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { modelThumbnails } from '@/lib/model-thumbnails';
 import { groupProductNavigation } from '@/lib/product-navigation';
 
 type PreviewModel = { id: string; name: string; image: string };
@@ -6,7 +7,7 @@ type PreviewModel = { id: string; name: string; image: string };
 function ModelPreview({ models }: { models: PreviewModel[] }) {
   return <span aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-full z-30 hidden pb-2 group-hover/preview:block group-focus-visible/preview:block">
     <span className="grid max-h-80 gap-2 overflow-y-auto rounded-xl border border-slate-200 bg-white p-3 shadow-xl">
-      {models.map(model => <span key={model.id} className="block text-center"><img src={model.image} alt="" className="h-28 w-full object-contain" /><span className="mt-1 block text-xs font-semibold text-slate-700">{model.name}</span></span>)}
+      {models.map(model => <span key={model.id} className="block text-center"><img src={modelThumbnails[model.id]?.image ?? model.image} alt="" className="aspect-[8/5] w-full object-contain" /><span className="mt-1 block text-xs font-semibold text-slate-700">{model.name}</span></span>)}
     </span>
   </span>;
 }

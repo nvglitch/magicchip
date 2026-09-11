@@ -121,21 +121,12 @@ def square(image, destination):
 
 
 def images(reader_page, layout_page):
-    extracted = {Path(i.name).stem: i.image for i in reader_page.images}
-    positions = []
-    seen = set()
-    for image in layout_page.images:
-        is_named_product = image["name"].startswith("Product")
-        if (not is_named_product and (image["top"] < 120 or image["bottom"] > 350)) or image["name"] in seen:
-            continue
-        seen.add(image["name"])
-        positions.append((image, extracted[image["name"]]))
-    # The three-view template has front and rear stacked at left, product view right.
-    named_order = {"ProductFront": 0, "ProductRear": 1, "ProductPerspective": 2}
-    positions.sort(key=lambda pair: (named_order.get(pair[0]["name"], 0 if pair[0]["x0"] < 282 else 1), pair[0]["top"], pair[0]["x0"]))
-    if not 2 <= len(positions) <= 3:
-        raise ValueError(f"Expected two or three product images; found {len(positions)}")
-    return [pair[1] for pair in positions]
+    # Render the placed occurrence rather than extracting the uncropped XObject.
+    import importlib.util
+    spec = importlib.util.spec_from_file_location('pdf_product_images', ROOT / 'scripts/pdf-product-images.py')
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module.rendered_images(reader_page)
 
 
 def chassis_images():

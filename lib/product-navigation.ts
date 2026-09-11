@@ -2,6 +2,7 @@ type NamedProduct = { id: string; name: string };
 
 // Explicit navigation families; product records and detail URLs remain independent.
 const families: Record<string, string[]> = {
+  MCIPC2: ['MCIPC2A', 'MCIPC2B'],
   MCIPCB1: ['MCIPCB1A', 'MCIPCB1B', 'MCIPCB1F'],
   MCIPCB2: ['MCIPCB2-D3', 'MCIPCB2-D4', 'MCIPCB2-J5005'],
   MCIPCB6: ['MCIPCB6', 'MCIPCB6-DDR3L', 'MCIPCB6-DDR4'],
