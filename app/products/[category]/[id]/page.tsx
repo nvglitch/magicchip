@@ -1,4 +1,6 @@
 'use client';
+import { brochureSpecCorrections } from '@/lib/brochure-spec-corrections';
+import { brochureUpdates } from '@/lib/brochure-updates';
 
 import { motion } from 'framer-motion';
 import {
@@ -59,6 +61,11 @@ const categoryData: Record<string, { name: string; icon: keyof typeof iconMap; g
 };
 
 const industrialSeriesFeatures: Record<IndustrialSeriesCode, ProductFeature[]> = {
+  E: [
+    { icon: 'Cpu', title: 'Custom Industrial Platform', description: 'Intel Core i7-1360P computing with desktop or wall mounting.' },
+    { icon: 'Network', title: 'Four-Port Networking', description: 'Two Gigabit and two 2.5GbE interfaces connect industrial equipment and upstream networks.' },
+    { icon: 'Server', title: 'Equipment Connectivity', description: 'Six serial ports, 14 GPIO signals and 9–36V input support equipment integration.' },
+  ],
   A: [
     { icon: 'Cpu', title: 'Compact Industrial Platform', description: 'A-series systems focus on compact deployment with single-COM or COM-less interface architecture.' },
     { icon: 'Network', title: 'Practical Connectivity', description: 'Network, USB, display, and expansion interfaces vary by model and selected configuration.' },
@@ -766,6 +773,15 @@ const products: Record<string, ProductDetail> = {
   },
 };
 
+for (const update of brochureUpdates) {
+  if (products[update.id]) products[update.id] = { ...products[update.id], ...update, images: [update.image] };
+}
+for (const item of [...industrialCatalog, ...commercialCatalog, ...firewallCatalog]) {
+  if (brochureSpecCorrections[item.id] && products[item.id]) {
+    products[item.id].specs = item.specs;
+    products[item.id].highlights = compactCatalogHighlights(item.specs);
+  }
+}
 const productCategories: Record<string, string> = {
   ...Object.fromEntries(aiCatalog.map((item) => [item.id, 'ai-mini-pc'])),
   ...Object.fromEntries(industrialCatalog.map((item) => [item.id, 'industrial-mini-pc'])),

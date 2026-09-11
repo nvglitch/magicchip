@@ -2,34 +2,140 @@
   "id": "mc15uh",
   "category": "commercial-mini-pc",
   "name": "MC15UH",
-  "tagline": "Intel Core Ultra mini PC with USB4, OCuLink, and dual 2.5GbE",
-  "description": "Compact Arrow Lake-H commercial mini PC with Intel Arc 140T graphics, dual DDR5 memory slots, dual NVMe storage, and high-speed external connectivity.",
+  "tagline": "Intel Core Ultra desktop PC with USB4, OCuLink and dual 2.5GbE",
+  "description": "MC15UH combines Intel Core Ultra 7 255H or Core Ultra 9 285H, Intel Arc 140T graphics, up to 128GB DDR5, dual NVMe storage, USB4 and OCuLink. HDMI, DisplayPort and USB4 provide display connectivity in a 132 x 132 x 50.5 mm desktop enclosure.",
   "images": [
-    "/assets/products/commercial/mc15uh/images/1.jpg",
-    "/assets/products/commercial/mc15uh/images/2.jpg",
-    "/assets/products/commercial/mc15uh/images/3.jpg"
+    "/assets/products/commercial/ver2/mc15uh/main.webp"
   ],
   "specifications": [
-    { "label": "CPU", "value": "Intel Core Ultra 7 255H or Intel Core Ultra 9 285H" },
-    { "label": "Graphics", "value": "Intel Arc 140T Graphics" },
-    { "label": "Memory", "value": "2 x SO-DIMM DDR5-5600 slots, up to 128GB" },
-    { "label": "Storage", "value": "2 x M.2 2280 NVMe SSD slots" },
-    { "label": "Display", "value": "HDMI, DisplayPort, and USB4 display output" },
-    { "label": "Network", "value": "2 x Intel i226-V 2.5GbE LAN" },
-    { "label": "Expansion", "value": "USB4 40Gbps and OCuLink" },
-    { "label": "Power", "value": "19V / 6.32A, 120W" },
-    { "label": "Dimensions", "value": "132 x 132 x 50.5 mm" },
-    { "label": "Working Environment", "value": "0°C to 50°C; 5%-90% relative humidity, non-condensing" }
+    {
+      "label": "Model",
+      "value": "MC15UH"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel Core Ultra 7 255H / Core Ultra 9 285H"
+    },
+    {
+      "label": "Chipset",
+      "value": "Arrow Lake-H"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel Arc 140T GPU"
+    },
+    {
+      "label": "Display",
+      "value": "1 x HDMI (8k@60Hz/4K@120Hz); 1 x DP (8k@60Hz/4K@160Hz); 1 x USB4 (4K@120Hz)"
+    },
+    {
+      "label": "Memory",
+      "value": "2 x SO-DIMM DDR5 5600MHz Supports up to 128GB"
+    },
+    {
+      "label": "USB",
+      "value": "3 x USB3.0; 1 x USB2.0"
+    },
+    {
+      "label": "Power",
+      "value": "19V/6.32A 120W"
+    },
+    {
+      "label": "Network",
+      "value": "2 x Intel i226V 2.5G Ethernet LAN"
+    },
+    {
+      "label": "Storage",
+      "value": "2 x M.2 2280 NVME SSD hard drive slot"
+    },
+    {
+      "label": "Wireless",
+      "value": "WiFi-6E, Bluetooth 5.3"
+    },
+    {
+      "label": "Dimensions",
+      "value": "132 x 132 x 50.5 mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI BIOS (Legacy or UEFI)"
+    },
+    {
+      "label": "TDP",
+      "value": "Depends on CPU"
+    },
+    {
+      "label": "OS",
+      "value": "Windows10/Windows11"
+    },
+    {
+      "label": "Environment - Operating",
+      "value": "0~50 C; 5%~90% Relative humidity; (no condensation)"
+    },
+    {
+      "label": "Front I/O - Ports",
+      "value": "1 x power button; 1 x RST reset hole; 2 x USB 3.0; 1 x 3.5mm Combined audio interface; 1 x USB4 40Gbps; 1 x OCulink Connect to graphics card expansion dock"
+    },
+    {
+      "label": "Rear I/O - Ports",
+      "value": "1 x DC IN 19V/6.32A; 2 x Intel i226V 2.5G Ethernet LAN; 1 x HDMI 2.1; 1 x DP 2.1"
+    }
   ],
   "features": [
-    { "icon": "Cpu", "title": "Intel Core Ultra Platform", "description": "Arrow Lake-H Core Ultra 7 and Core Ultra 9 processor options" },
-    { "icon": "Zap", "title": "USB4 and OCuLink", "description": "High-speed peripheral, display, and external graphics expansion connectivity" },
-    { "icon": "Network", "title": "Dual 2.5GbE Networking", "description": "Two Intel i226-V 2.5GbE wired network ports" }
+    {
+      "icon": "Cpu",
+      "title": "Intel Core Ultra Platform",
+      "description": "Arrow Lake-H Core Ultra 7 and Core Ultra 9 processor options"
+    },
+    {
+      "icon": "Zap",
+      "title": "USB4 and OCuLink",
+      "description": "High-speed peripheral, display, and external graphics expansion connectivity"
+    },
+    {
+      "icon": "Network",
+      "title": "Dual 2.5GbE Networking",
+      "description": "Two Intel i226-V 2.5GbE wired network ports"
+    }
   ],
   "applications": [
-    { "image": "/assets/products/commercial/mc15uh/images/4.jpg", "title": "Interface Layout", "description": "Clearly labeled front and rear connectivity" },
-    { "image": "/assets/products/commercial/mc15uh/images/6.jpg", "title": "VC Cooling Structure", "description": "Fan and VC heat spreader cooling assembly" }
+    {
+      "image": "/assets/products/commercial/mc15uh/images/4.jpg",
+      "title": "Interface Layout",
+      "description": "Clearly labeled front and rear connectivity"
+    },
+    {
+      "image": "/assets/products/commercial/mc15uh/images/6.jpg",
+      "title": "VC Cooling Structure",
+      "description": "Fan and VC heat spreader cooling assembly"
+    }
   ],
   "brochure": "/assets/products/commercial/mc15uh/documents/MC15UH brochure.pdf",
-  "alibabaUrl": "https://magicchip.en.alibaba.com"
+  "alibabaUrl": "https://magicchip.en.alibaba.com",
+  "highlights": [
+    "Core Ultra 7 / 9",
+    "Up to 128GB DDR5",
+    "Dual 2.5GbE",
+    "USB4 + OCuLink"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/commercial/ver2/mc15uh/view-1.webp",
+      "title": "MC15UH front panel"
+    },
+    {
+      "image": "/assets/products/commercial/ver2/mc15uh/view-2.webp",
+      "title": "MC15UH rear panel"
+    },
+    {
+      "image": "/assets/products/commercial/ver2/mc15uh/view-3.webp",
+      "title": "MC15UH enclosure view"
+    }
+  ],
+  "operatingRange": "0°C to 50°C",
+  "galleryImages": [
+    "/assets/products/commercial/ver2/mc15uh/view-1.webp",
+    "/assets/products/commercial/ver2/mc15uh/view-2.webp",
+    "/assets/products/commercial/ver2/mc15uh/view-3.webp"
+  ]
 }

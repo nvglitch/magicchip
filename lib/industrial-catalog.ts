@@ -1,6 +1,8 @@
+import { applyBrochureSpecCorrections } from '@/lib/brochure-spec-corrections';
+import { brochureUpdates } from '@/lib/brochure-updates';
 import { industrialBrochureProducts } from '@/lib/brochure-products';
 
-export type IndustrialSeriesCode = 'A' | 'B' | 'C' | 'D' | 'TPC';
+export type IndustrialSeriesCode = 'A' | 'B' | 'C' | 'D' | 'E' | 'TPC';
 
 export type IndustrialCatalogSpec = { label: string; value: string };
 
@@ -19,7 +21,8 @@ export type IndustrialCatalogItem = {
 };
 
 // Product facts are based on the available source specifications.
-export const industrialCatalog: IndustrialCatalogItem[] = [
+const industrialCatalogSource: IndustrialCatalogItem[] = [
+  ...(brochureUpdates.filter(item => item.series === 'B' || item.series === 'E') as IndustrialCatalogItem[]),
   ...industrialBrochureProducts,
   {
     "id": "mcipca1",
@@ -2353,3 +2356,4 @@ export const industrialCatalog: IndustrialCatalogItem[] = [
     "operatingRange": "Working Temp: -20°C to +60°C"
   }
 ];
+export const industrialCatalog = industrialCatalogSource.map(applyBrochureSpecCorrections);

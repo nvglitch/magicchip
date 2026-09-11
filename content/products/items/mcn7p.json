@@ -1,0 +1,118 @@
+{
+  "id": "mcn7p",
+  "name": "MCN7P",
+  "tagline": "AMD Ryzen HS desktop PC with USB4 and dual 2.5GbE",
+  "description": "MCN7P combines AMD Ryzen 7 7735HS, Ryzen 7 7840HS or Ryzen 9 7940HS processor options, up to 64GB DDR5, dual 2.5GbE, USB4, dual PCIe 4.0 NVMe slots and SATA storage in a 136 x 123 x 51 mm enclosure.",
+  "highlights": [
+    "AMD Ryzen HS",
+    "Up to 64GB DDR5",
+    "Dual 2.5GbE",
+    "Dual PCIe 4.0 NVMe"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/commercial/ver2/mcn7p/view-1.webp",
+      "title": "MCN7P front panel"
+    },
+    {
+      "image": "/assets/products/commercial/ver2/mcn7p/view-2.webp",
+      "title": "MCN7P rear panel"
+    },
+    {
+      "image": "/assets/products/commercial/ver2/mcn7p/view-3.webp",
+      "title": "MCN7P enclosure view"
+    }
+  ],
+  "operatingRange": "0°C to 60°C",
+  "category": "commercial-mini-pc",
+  "images": [
+    "/assets/products/commercial/ver2/mcn7p/main.webp"
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MCN7P"
+    },
+    {
+      "label": "CPU",
+      "value": "AMD Ryzen 7 7735HS / Ryzen 7 7840HS / Ryzen 9 7940HS"
+    },
+    {
+      "label": "Chipset",
+      "value": "AMD Rembrandt R/Phoenix U/H/HS series"
+    },
+    {
+      "label": "Graphics",
+      "value": "AMD Radeon 680M Graphics"
+    },
+    {
+      "label": "Display",
+      "value": "HDMI+DP+Type-C (USB4) 4K@60Hz"
+    },
+    {
+      "label": "Memory",
+      "value": "2 x SO-DIMM DDR5 4800/5600MHz Slot Support 16/ 32/ 64G"
+    },
+    {
+      "label": "Material",
+      "value": "plastic plus metal"
+    },
+    {
+      "label": "USB",
+      "value": "2 x USB 2.0; 2 x USB 3.0; 1 x USB4"
+    },
+    {
+      "label": "Power",
+      "value": "DC19V 5.26~6.32A"
+    },
+    {
+      "label": "Network",
+      "value": "2 x RJ45 Intel 2.5G LAN"
+    },
+    {
+      "label": "Storage",
+      "value": "2 x M.2 slot for PCIE4.0 x 4 NVME 2280 SSD; 1 x SATA3.0 slot for SATA HDD or SSD"
+    },
+    {
+      "label": "Expansion",
+      "value": "1 x SATA3.0 slot for SATA HDD or SSD; Wi-Fi5+BT4.2/Wi-Fi6+BT5.2"
+    },
+    {
+      "label": "Dimensions",
+      "value": "136mm x 123mm x 51mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI EFI BIOS"
+    },
+    {
+      "label": "TDP",
+      "value": "Depends on CPU"
+    },
+    {
+      "label": "OS",
+      "value": "Win11 64 Bit Ubuntu CentOS"
+    },
+    {
+      "label": "Environment - Operating",
+      "value": "0~60 C; 10%~90% Relative humidity; (no condensation)"
+    },
+    {
+      "label": "Front I/O - Ports",
+      "value": "1 x 3.5 mm audio jack; 2 x USB 3.2; 1 x Type-C (data)"
+    },
+    {
+      "label": "Rear I/O - Ports",
+      "value": "2 x USB 2.0; 1 x HDMI; 1 x DP; 1 x USB4; 2 x RJ45; 1 x DC IN"
+    },
+    {
+      "label": "Internal I/O - Headers",
+      "value": "1 x system cooling fan; 1 x half-size Mini PCIe slot for Wi-Fi/Bluetooth; 2 x M.2 slots for NVMe 2280 SSD; 1 x SATA 3.0 slot for HDD/SSD; 2 x DDR5 SO-DIMM slots"
+    }
+  ],
+  "galleryImages": [
+    "/assets/products/commercial/ver2/mcn7p/view-1.webp",
+    "/assets/products/commercial/ver2/mcn7p/view-2.webp",
+    "/assets/products/commercial/ver2/mcn7p/view-3.webp"
+  ]
+}

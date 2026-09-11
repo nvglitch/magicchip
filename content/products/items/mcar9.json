@@ -1,0 +1,110 @@
+{
+  "id": "mcar9",
+  "name": "MCAR9",
+  "tagline": "AMD Ryzen AI 300 desktop PC with USB4 and OCuLink",
+  "description": "MCAR9 provides AMD Ryzen AI 7 PRO 360, Ryzen AI 9 365 or Ryzen AI 9 HX 370 processor options, Radeon 880M/890M graphics, up to 128GB DDR5, dual 2.5GbE and dual NVMe storage. USB4 and OCuLink support high-speed peripherals and compatible external graphics docks.",
+  "highlights": [
+    "Ryzen AI 300",
+    "Up to 128GB DDR5",
+    "Dual 2.5GbE",
+    "USB4 + OCuLink"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/commercial/ver2/mcar9/view-1.webp",
+      "title": "MCAR9 front panel"
+    },
+    {
+      "image": "/assets/products/commercial/ver2/mcar9/view-2.webp",
+      "title": "MCAR9 rear panel"
+    },
+    {
+      "image": "/assets/products/commercial/ver2/mcar9/view-3.webp",
+      "title": "MCAR9 enclosure view"
+    }
+  ],
+  "operatingRange": "0°C to 50°C",
+  "category": "commercial-mini-pc",
+  "images": [
+    "/assets/products/commercial/ver2/mcar9/main.webp"
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MCAR9"
+    },
+    {
+      "label": "CPU",
+      "value": "AMD Ryzen AI 7 PRO 360 / Ryzen AI 9 365 / Ryzen AI 9 HX 370"
+    },
+    {
+      "label": "Chipset",
+      "value": "Ryzen AI 300"
+    },
+    {
+      "label": "Graphics",
+      "value": "AMD Radeon 880M/AMD Radeon 890M"
+    },
+    {
+      "label": "Display",
+      "value": "1 x HDMI (8k@60Hz/4K@120Hz); 1 x DP (8k@60Hz/4K@160Hz); 1 x USB4 (4K@120Hz)"
+    },
+    {
+      "label": "Memory",
+      "value": "2 x DDR5 SO-DIMM Memory slot, Up to 128GB 5600MHz"
+    },
+    {
+      "label": "USB",
+      "value": "3 x USB3.0; 1 x USB2.0"
+    },
+    {
+      "label": "Power",
+      "value": "19V/6.32A 120W"
+    },
+    {
+      "label": "Network",
+      "value": "2 x Intel i226V 2.5G Ethernet LAN"
+    },
+    {
+      "label": "Storage",
+      "value": "2 x M.2 2280 NVME SSD hard drive slot"
+    },
+    {
+      "label": "Wireless",
+      "value": "WiFi-6E, Bluetooth 5.3"
+    },
+    {
+      "label": "Dimensions",
+      "value": "132 x 132 x 50.5 mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI BIOS (Legacy or UEFI)"
+    },
+    {
+      "label": "TDP",
+      "value": "Depends on CPU"
+    },
+    {
+      "label": "OS",
+      "value": "Windows10/Windows11"
+    },
+    {
+      "label": "Environment - Operating",
+      "value": "0~50 C; 5%~90% Relative humidity; (no condensation)"
+    },
+    {
+      "label": "Front I/O - Ports",
+      "value": "1 x power button; 1 x RST reset hole; 2 x USB 3.0; 1 x 3.5mm Combined audio interface; 1 x USB4 40Gbps; 1 x OCulink Connect to graphics card expansion dock"
+    },
+    {
+      "label": "Rear I/O - Ports",
+      "value": "1 x DC IN 19V/6.32A; 2 x Intel i226V 2.5G Ethernet LAN; 1 x HDMI 2.1; 1 x DP 2.1; 1 x USB3.0; 1 x USB2.0"
+    }
+  ],
+  "galleryImages": [
+    "/assets/products/commercial/ver2/mcar9/view-1.webp",
+    "/assets/products/commercial/ver2/mcar9/view-2.webp",
+    "/assets/products/commercial/ver2/mcar9/view-3.webp"
+  ]
+}

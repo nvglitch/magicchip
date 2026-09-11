@@ -1,0 +1,93 @@
+{
+  "id": "mcipcb13a",
+  "name": "MCIPCB13A",
+  "tagline": "Configurable Intel Core industrial PC with dual LAN and dual COM",
+  "description": "MCIPCB13A provides Intel Core platform options, dual Gigabit Ethernet, two DB9 COM ports, eight USB ports, and 12–19V input in a 193.9 x 127 x 57.2 mm enclosure. Memory and storage depend on the processor configuration.",
+  "highlights": [
+    "Intel Core options",
+    "2 x Gigabit LAN",
+    "2 x DB9 COM",
+    "12–19V DC input"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/industrial/ver2/mcipcb13a/view-1.webp",
+      "title": "MCIPCB13A front panel"
+    },
+    {
+      "image": "/assets/products/industrial/ver2/mcipcb13a/view-2.webp",
+      "title": "MCIPCB13A rear panel"
+    }
+  ],
+  "operatingRange": "-20°C to 60°C",
+  "category": "industrial-mini-pc",
+  "images": [
+    "/assets/products/industrial/ver2/mcipcb13a/main.webp"
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MCIPCB13A"
+    },
+    {
+      "label": "CPU",
+      "value": "Optional Intel 4th/5th/6th/7th/8th/10th Gen Core i3/i5/i7 CPU"
+    },
+    {
+      "label": "Display",
+      "value": "1 x HDMI, 1 x VGA (or HDMI)"
+    },
+    {
+      "label": "Memory",
+      "value": "4th Gen: 1 x DDR3L SODIMM, maximum support 8GB; 6th/7th/8th Gen: 1 x DDR4 SODIMM, maximum support 16GB; 8th/10th Gen: 2 x DDR4 SODIMM, maximum support 32GB"
+    },
+    {
+      "label": "USB",
+      "value": "4 x USB 3.0, 4 x USB 2.0"
+    },
+    {
+      "label": "Power",
+      "value": "DC 12V-19V Power Input"
+    },
+    {
+      "label": "Network",
+      "value": "2 x GbE RJ45 x Realtek 8111H"
+    },
+    {
+      "label": "Serial",
+      "value": "2 x DB9 COM"
+    },
+    {
+      "label": "Storage",
+      "value": "4th Gen: 1 x MSATA; 6th/7th/8th/10th Gen: 1 x M.2 2280 (Supports SATA and NVME); 1 x 2.5\" HDD/SSD"
+    },
+    {
+      "label": "Expansion",
+      "value": "1 x Mini-PCIe half/full card (with SIM slot, supports 3G/4G, Wi-Fi/Bluetooth); Supports Watchdog, Diskless boot"
+    },
+    {
+      "label": "Dimensions",
+      "value": "193.9 x 127 x 57.2 mm"
+    },
+    {
+      "label": "OS",
+      "value": "Windows 7/8/10, WES 7/10, LINUX"
+    },
+    {
+      "label": "Environment - Operating",
+      "value": "Working Temp: -20°C to +60°C; Storage Temp: -30°C to +70°C; Storage Humidity: 10%~90% @30, non-condensing"
+    },
+    {
+      "label": "Front I/O - Ports",
+      "value": "1 x Power Button; 4 x USB 3.0; 4 x USB 2.0; 2 x DB9 COM (COM1, COM2)"
+    },
+    {
+      "label": "Rear I/O - Ports",
+      "value": "1 x DC Power Input (12V-19V); 2 x GbE RJ45 LAN; 1 x HDMI; 1 x VGA; 1 x Earphone jack, 1 x Microphone; 2 x Antenna connectors (for Wi-Fi/3G/4G)"
+    }
+  ],
+  "galleryImages": [
+    "/assets/products/industrial/ver2/mcipcb13a/view-1.webp",
+    "/assets/products/industrial/ver2/mcipcb13a/view-2.webp"
+  ]
+}

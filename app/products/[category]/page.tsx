@@ -1,4 +1,6 @@
 'use client';
+import { industrialESeriesCopy } from '@/lib/industrial-navigation-copy';
+import { brochureUpdates } from '@/lib/brochure-updates';
 
 import { ModelFamilyLinks, AiFamilyCards } from '@/components/ProductFamilyNavigation';
 
@@ -164,6 +166,11 @@ const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: 
   ],
 };
 
+for (const update of brochureUpdates) {
+  const items = sampleProducts['commercial-mini-pc'];
+  const index = items.findIndex(item => item.id === update.id);
+  if (index >= 0) items[index] = { ...update, specs: update.highlights };
+}
 const industrialSeries = [
   {
     code: 'A',
@@ -193,6 +200,13 @@ const industrialSeries = [
     description: 'Multi-LAN industrial computers with dual COM ports',
     image: '/assets/products/industrial/d-series/mcipcd3/images/1.jpg',
     models: industrialCatalog.filter((product) => product.series === 'D').map(({ id, name }) => ({ id, name })),
+  },
+  {
+    code: 'E',
+    title: 'E Series',
+    description: 'Custom industrial computers with multi-LAN, serial and GPIO connectivity',
+    image: '/assets/products/industrial/ver2/mcipce1/main.webp',
+    models: industrialCatalog.filter(product => product.series === 'E').map(({ id, name }) => ({ id, name })),
   },
   {
     code: 'TPC',
@@ -460,7 +474,7 @@ export default function CategoryPage() {
             {(category === 'industrial-mini-pc' || category === 'firewall-mini-pc' || category === 'commercial-mini-pc') && (
               <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
                 {category === 'industrial-mini-pc'
-                  ? 'The expanded range covers four box-PC interface architectures plus integrated-display panel PCs, so customers can start with the deployment task and then narrow the choice by I/O and compute platform.'
+                  ? 'The expanded range covers five box-PC interface architectures plus integrated-display panel PCs, so customers can start with the deployment task and then narrow the choice by I/O and compute platform.'
                   : category === 'firewall-mini-pc'
                     ? 'The expanded network range covers compact two-, four-, and six-port appliances, high-speed 10GbE platforms, and 1U servers. Start with the deployment format and port architecture, then compare the available compute and expansion options.'
                     : 'The expanded commercial range now covers compact desktop systems for everyday and professional workloads plus NAS-focused platforms for local storage, backup, media, and network services.'}
@@ -536,8 +550,8 @@ export default function CategoryPage() {
                       </div>
 
                       <div className="min-w-0 text-center md:pr-36 md:text-left lg:pr-52">
-                        <h3 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{series.title}</h3>
-                        <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">{series.description}</p>
+                        <h3 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{series.code === 'E' ? industrialESeriesCopy[language].title : series.title}</h3>
+                        <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">{series.code === 'E' ? industrialESeriesCopy[language].description : series.description}</p>
                         <p className="mt-5 text-sm font-bold uppercase tracking-normal text-slate-400">
                           {series.models.length} {series.models.length === 1 ? 'current model' : 'current models'}
                         </p>

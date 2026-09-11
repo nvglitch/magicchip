@@ -1,3 +1,4 @@
+import { brochureUpdates } from '@/lib/brochure-updates';
 import { matchSearch } from '@/lib/search-matching';
 import mcai1 from '@/content/products/items/mcai1.json';
 import mc15uh from '@/content/products/items/mc15uh.json';
@@ -240,7 +241,8 @@ const catalogSpecs = new Map<string, { label: string; value: string }[]>(
   [...industrialCatalog, ...firewallCatalog, ...commercialCatalog, ...aiCatalog].map(item => [item.name, item.specs])
 );
 for (const item of [mcai1, mc15uh, mctar7]) catalogSpecs.set(item.name, item.specifications);
-export const siteSearchIndex: SearchEntry[] = baseSearchIndex.map(entry => ({ ...entry, specs: catalogSpecs.get(entry.title) }));
+for (const item of brochureUpdates) catalogSpecs.set(item.name, item.specs);
+export const siteSearchIndex: SearchEntry[] = baseSearchIndex.map(entry => ({ ...entry, ...(brochureUpdates.find(item => item.name === entry.title) ? { image: brochureUpdates.find(item => item.name === entry.title)!.image, description: brochureUpdates.find(item => item.name === entry.title)!.tagline } : {}), specs: catalogSpecs.get(entry.title) }));
 
 export function searchSite(query: string): SearchEntry[] {
   if (!query.trim()) return [];

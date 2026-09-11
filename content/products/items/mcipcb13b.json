@@ -1,0 +1,105 @@
+{
+  "id": "mcipcb13b",
+  "name": "MCIPCB13B",
+  "tagline": "Intel Core Ultra / Core 3 industrial PC with DDR5 and triple display",
+  "description": "MCIPCB13B supports Intel Core Ultra Series 1/2 or Core 3 Series processors, up to 64GB DDR5, dual Gigabit LAN, two RS-232 ports, two HDMI outputs and DisplayPort. USB allocation and 2.5-inch storage availability depend on the selected processor platform.",
+  "highlights": [
+    "Core Ultra / Core 3",
+    "Up to 64GB DDR5",
+    "2 x HDMI + DisplayPort",
+    "12–19V DC input"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/industrial/ver2/mcipcb13b/view-1.webp",
+      "title": "MCIPCB13B front panel"
+    },
+    {
+      "image": "/assets/products/industrial/ver2/mcipcb13b/view-2.webp",
+      "title": "MCIPCB13B rear panel"
+    }
+  ],
+  "operatingRange": "-20°C to 60°C",
+  "category": "industrial-mini-pc",
+  "images": [
+    "/assets/products/industrial/ver2/mcipcb13b/main.webp"
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MCIPCB13B"
+    },
+    {
+      "label": "CPU",
+      "value": "Optional Intel Core Ultra Series 1/2 U5/U7 processors; Intel Core 3 Series 304/305/315/320/330/350/360 processors"
+    },
+    {
+      "label": "Memory",
+      "value": "1 x DDR5 SODIMM, maximum 64 GB"
+    },
+    {
+      "label": "Network",
+      "value": "2 x Realtek RTL8111H Gigabit Ethernet ports"
+    },
+    {
+      "label": "USB",
+      "value": "Core Ultra Series 1/2: 4 x USB 3.0, 4 x USB 2.0; Core 3 Series: 2 x USB 3.0, 6 x USB 2.0"
+    },
+    {
+      "label": "Serial",
+      "value": "2 x DB9 RS-232 ports"
+    },
+    {
+      "label": "Display",
+      "value": "2 x HDMI; 1 x DisplayPort"
+    },
+    {
+      "label": "Ports",
+      "value": "1 x headphone jack; 1 x microphone jack"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x M.2 2280 NVMe SSD; 1 x 2.5-inch HDD/SSD (not supported on Core 3 Series)"
+    },
+    {
+      "label": "Expansion",
+      "value": "1 x M.2 2232 for Wi-Fi; 1 x M.2 3042 for 3G/4G, with onboard SIM slot; 2 x antenna connectors"
+    },
+    {
+      "label": "Power",
+      "value": "12-19 V DC input"
+    },
+    {
+      "label": "OS",
+      "value": "Windows 10; Windows 11; Linux"
+    },
+    {
+      "label": "Material",
+      "value": "Aluminium"
+    },
+    {
+      "label": "Mounting",
+      "value": "Desktop or wall mounting"
+    },
+    {
+      "label": "Dimensions",
+      "value": "193.9 x 127 x 57.2 mm"
+    },
+    {
+      "label": "Weight",
+      "value": "1 kg"
+    },
+    {
+      "label": "Environment - Operating",
+      "value": "Operating temperature: -20 C to +60 C; storage temperature: -30 C to +70 C; storage humidity: 10%~90% at 30 C, non-condensing"
+    },
+    {
+      "label": "Other",
+      "value": "Supports watchdog and diskless boot"
+    }
+  ],
+  "galleryImages": [
+    "/assets/products/industrial/ver2/mcipcb13b/view-1.webp",
+    "/assets/products/industrial/ver2/mcipcb13b/view-2.webp"
+  ]
+}

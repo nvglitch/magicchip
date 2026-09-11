@@ -1,0 +1,117 @@
+{
+  "id": "mcipce1",
+  "name": "MCIPCE1",
+  "tagline": "Intel Core i7-1360P industrial PC with four LAN ports and 9–36V input",
+  "description": "MCIPCE1 combines an Intel Core i7-1360P, up to 32GB DDR4, two Gigabit and two 2.5GbE ports, six serial ports, and 14 GPIO signals. Four serial ports support RS-485/RS-422. A 9–36V Phoenix terminal input, multiple storage interfaces, and desktop or wall mounting support custom industrial deployments.",
+  "highlights": [
+    "Intel Core i7-1360P",
+    "2 x GbE + 2 x 2.5GbE",
+    "6 x COM + 14 GPIO",
+    "9–36V DC input"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/industrial/ver2/mcipce1/view-1.webp",
+      "title": "MCIPCE1 front panel"
+    },
+    {
+      "image": "/assets/products/industrial/ver2/mcipce1/view-2.webp",
+      "title": "MCIPCE1 rear panel"
+    }
+  ],
+  "operatingRange": "-20°C to 60°C",
+  "category": "industrial-mini-pc",
+  "images": [
+    "/assets/products/industrial/ver2/mcipce1/main.webp"
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MCIPCE1"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel® Core™ i7-1360P Processor"
+    },
+    {
+      "label": "Memory",
+      "value": "2 x DDR4 SO-DIMM, up to 32 GB"
+    },
+    {
+      "label": "Display",
+      "value": "1 x HDMI; 1 x VGA"
+    },
+    {
+      "label": "Network",
+      "value": "2 x Intel GbE; 2 x Intel 2.5 GbE"
+    },
+    {
+      "label": "USB",
+      "value": "4 x USB 3.0; 6 x USB 2.0"
+    },
+    {
+      "label": "Serial",
+      "value": "6 x RS-232 COM; 4 ports support RS-485/RS-422"
+    },
+    {
+      "label": "GPIO",
+      "value": "14 x GPIO: 7 inputs and 7 outputs"
+    },
+    {
+      "label": "Other I/O",
+      "value": "1 x PS/2; 1 x headphone; 1 x microphone; 2 x antenna ports"
+    },
+    {
+      "label": "Buttons",
+      "value": "1 x Power; 1 x Reset; 1 x Clear CMOS; 1 x ATX/AT selector"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x mSATA; 1 x M.2 NVMe 2280; 1 x HDD/SSD bay"
+    },
+    {
+      "label": "Expansion",
+      "value": "1 x half-size Mini PCIe; 1 x full-size Mini PCIe with SIM; Wi-Fi/Bluetooth/3G/4G support"
+    },
+    {
+      "label": "Power",
+      "value": "DC 9-36 V via 3-pin Phoenix terminal"
+    },
+    {
+      "label": "Firmware",
+      "value": "Watchdog; one-key recovery; PXE/diskless boot"
+    },
+    {
+      "label": "OS",
+      "value": "Windows 10; Windows Embedded Standard 7/10; Linux"
+    },
+    {
+      "label": "Material",
+      "value": "Aluminum"
+    },
+    {
+      "label": "Installation",
+      "value": "Desktop or wall mount"
+    },
+    {
+      "label": "Dimensions",
+      "value": "248 x 150 x 83 mm"
+    },
+    {
+      "label": "Weight",
+      "value": "1.3 kg"
+    },
+    {
+      "label": "Environment - Operating",
+      "value": "-20 to 60 C"
+    },
+    {
+      "label": "Environment - Storage",
+      "value": "-30 to 70 C; 10%-90% RH at 30 C, non-condensing"
+    }
+  ],
+  "galleryImages": [
+    "/assets/products/industrial/ver2/mcipce1/view-1.webp",
+    "/assets/products/industrial/ver2/mcipce1/view-2.webp"
+  ]
+}

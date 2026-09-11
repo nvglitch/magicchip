@@ -2,34 +2,132 @@
   "id": "mctar7",
   "category": "commercial-mini-pc",
   "name": "MCTAR7",
-  "tagline": "Compact AMD Ryzen mini PC with dual HDMI, full-featured Type-C, and dual storage",
-  "description": "Compact commercial mini PC with AMD Ryzen 5 and Ryzen 7 processor options, dual DDR4 memory, two M.2 storage formats, and flexible display connectivity.",
+  "tagline": "Compact AMD Ryzen desktop PC with dual HDMI and full-featured Type-C",
+  "description": "MCTAR7 offers configurable AMD Ryzen processors, Radeon graphics, DDR4 memory, dual HDMI and full-featured Type-C connectivity. NVMe and SATA M.2 storage, Gigabit Ethernet, Wi-Fi 6 and Bluetooth 5.2 support everyday desktop deployments.",
   "images": [
-    "/assets/products/commercial/mctar7/images/1.jpg",
-    "/assets/products/commercial/mctar7/images/2.jpg",
-    "/assets/products/commercial/mctar7/images/3.jpg"
+    "/assets/products/commercial/ver2/mctar7/main.webp"
   ],
   "specifications": [
-    { "label": "CPU", "value": "AMD Ryzen 7 4700U, Ryzen 5 5600U, Ryzen 7 5800U, Ryzen 7 5825U, Ryzen 5 7535U, or Ryzen 7 7730U" },
-    { "label": "Graphics", "value": "AMD Radeon Graphics" },
-    { "label": "Memory", "value": "2 x SO-DIMM DDR4-3200 slots, up to 32GB" },
-    { "label": "Storage", "value": "1 x M.2 2280 PCIe 3.0 x4 and 1 x M.2 2242 SATA, up to 2TB" },
-    { "label": "Display", "value": "2 x HDMI 1.4 and 1 x full-featured Type-C" },
-    { "label": "Network", "value": "1 x RJ45 Gigabit Ethernet" },
-    { "label": "Wireless", "value": "Wi-Fi 6 and Bluetooth 5.2" },
-    { "label": "Power", "value": "DC 19V / 3.42A" },
-    { "label": "Dimensions", "value": "105 x 115 x 35 mm" },
-    { "label": "Working Environment", "value": "0°C to 50°C; 5%-90% relative humidity, non-condensing" }
+    {
+      "label": "Model",
+      "value": "MCTAR7"
+    },
+    {
+      "label": "CPU",
+      "value": "AMD Ryzen 7 4700U/5 5600U/7 5800U/R7-5825U; R5-7535U/R7-7730U Processor"
+    },
+    {
+      "label": "Graphics",
+      "value": "AMD Radeon Graphics"
+    },
+    {
+      "label": "Display",
+      "value": "2 x HDMI 1.4; 1 x Type-C (Full-featured)"
+    },
+    {
+      "label": "Memory",
+      "value": "2 x SO-DIMM DDR4 3200MHz Supports up to 32GB"
+    },
+    {
+      "label": "USB",
+      "value": "2 x USB3.1; 2 x USB3.0"
+    },
+    {
+      "label": "Power",
+      "value": "DC, 19V/3.42A Adapter"
+    },
+    {
+      "label": "Network",
+      "value": "1 x RJ45 1.0G Network interface"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x M.2 PCIe 3.0 x 4 2280 SSD + 1 x M.2 NGFF SATA 2242 SSD; Supports up to 2TB"
+    },
+    {
+      "label": "Wireless",
+      "value": "WiFi-6, Bluetooth 5.2"
+    },
+    {
+      "label": "Dimensions",
+      "value": "105 x 115 x 35 mm"
+    },
+    {
+      "label": "TDP",
+      "value": "Depends on CPU"
+    },
+    {
+      "label": "OS",
+      "value": "Window 10/11 Home"
+    },
+    {
+      "label": "Environment - Operating",
+      "value": "0~50 C; 5%~90% Relative humidity; (no condensation)"
+    },
+    {
+      "label": "Front I/O - Ports",
+      "value": "1 x power button; 2 x USB 3.1"
+    },
+    {
+      "label": "Rear I/O - Ports",
+      "value": "1 x RJ45 1.0G Network interface; 1 x Type-C (Full-featured); 2 x HDMI 1.4; 1 x DC 19V; 1 x audio jack; 2 x USB3.0"
+    }
   ],
   "features": [
-    { "icon": "Cpu", "title": "Flexible AMD Ryzen Options", "description": "Ryzen 5 and Ryzen 7 processor choices for commercial workloads" },
-    { "icon": "Monitor", "title": "Flexible Display Connectivity", "description": "Dual HDMI 1.4 and full-featured Type-C" },
-    { "icon": "HardDrive", "title": "Dual Storage Formats", "description": "M.2 2280 PCIe and M.2 2242 SATA SSD support" }
+    {
+      "icon": "Cpu",
+      "title": "Flexible AMD Ryzen Options",
+      "description": "Ryzen 5 and Ryzen 7 processor choices for commercial workloads"
+    },
+    {
+      "icon": "Monitor",
+      "title": "Flexible Display Connectivity",
+      "description": "Dual HDMI 1.4 and full-featured Type-C"
+    },
+    {
+      "icon": "HardDrive",
+      "title": "Dual Storage Formats",
+      "description": "M.2 2280 PCIe and M.2 2242 SATA SSD support"
+    }
   ],
   "applications": [
-    { "image": "/assets/products/commercial/mctar7/images/4.jpg", "title": "Interface Layout", "description": "Clearly labeled front and rear connectivity" },
-    { "image": "/assets/products/commercial/mctar7/images/6.jpg", "title": "Commercial Scenarios", "description": "Entertainment, meetings, remote conferencing, and office work" }
+    {
+      "image": "/assets/products/commercial/mctar7/images/4.jpg",
+      "title": "Interface Layout",
+      "description": "Clearly labeled front and rear connectivity"
+    },
+    {
+      "image": "/assets/products/commercial/mctar7/images/6.jpg",
+      "title": "Commercial Scenarios",
+      "description": "Entertainment, meetings, remote conferencing, and office work"
+    }
   ],
   "brochure": "/assets/products/commercial/mctar7/documents/MCTAR7 brochure.pdf",
-  "alibabaUrl": "https://magicchip.en.alibaba.com"
+  "alibabaUrl": "https://magicchip.en.alibaba.com",
+  "highlights": [
+    "AMD Ryzen options",
+    "Up to 32GB DDR4",
+    "Dual HDMI + Type-C",
+    "NVMe + SATA M.2"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/commercial/ver2/mctar7/view-1.webp",
+      "title": "MCTAR7 front panel"
+    },
+    {
+      "image": "/assets/products/commercial/ver2/mctar7/view-2.webp",
+      "title": "MCTAR7 rear panel"
+    },
+    {
+      "image": "/assets/products/commercial/ver2/mctar7/view-3.webp",
+      "title": "MCTAR7 enclosure view"
+    }
+  ],
+  "operatingRange": "0°C to 50°C",
+  "galleryImages": [
+    "/assets/products/commercial/ver2/mctar7/view-1.webp",
+    "/assets/products/commercial/ver2/mctar7/view-2.webp",
+    "/assets/products/commercial/ver2/mctar7/view-3.webp"
+  ]
 }

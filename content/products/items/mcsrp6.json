@@ -11,26 +11,85 @@
     "/assets/products/firewall/mcsrp6/images/8.jpg"
   ],
   "specifications": [
-    { "label": "CPU", "value": "Intel Alder Lake-N N100 / N200 / Core i3-N305; Twin Lake N150 / N250 / Core i3-N355" },
-    { "label": "Memory", "value": "1 x DDR5 SO-DIMM, maximum 48GB" },
-    { "label": "Network", "value": "2 x Intel i226-V 2.5GbE LAN" },
-    { "label": "Storage", "value": "1 x M.2 slot supporting NVMe or NGFF SATA SSD" },
-    { "label": "Display", "value": "1 x HDMI 2.0 and 1 x DisplayPort 1.4, both supporting 4K at 60Hz" },
-    { "label": "USB", "value": "2 x USB 3.2 Gen 2, up to 10Gbps" },
-    { "label": "Power", "value": "DC 12-24V" },
-    { "label": "Dimensions", "value": "115 x 114.3 x 40 mm" },
-    { "label": "Working Environment", "value": "0°C to 75°C; 10%-90% relative humidity, non-condensing" }
+    {
+      "label": "CPU",
+      "value": "Intel Alder Lake-N N100 / N200 / Core i3-N305; Twin Lake N150 / N250 / Core i3-N355"
+    },
+    {
+      "label": "Memory",
+      "value": "1 x DDR5 SO-DIMM, maximum 48GB"
+    },
+    {
+      "label": "Network",
+      "value": "2 x Intel i226-V 2.5GbE LAN"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x M.2 slot supporting NVMe or NGFF SATA SSD"
+    },
+    {
+      "label": "Display",
+      "value": "1 x HDMI 2.0 and 1 x DisplayPort 1.4, both supporting 4K at 60Hz"
+    },
+    {
+      "label": "USB",
+      "value": "2 x USB 3.2 Gen 2, up to 10Gbps"
+    },
+    {
+      "label": "Dimensions",
+      "value": "115 x 114.3 x 40 mm"
+    },
+    {
+      "label": "Working Environment",
+      "value": "0°C to 75°C; 10%-90% relative humidity, non-condensing"
+    },
+    {
+      "label": "Power",
+      "value": "DC 12-24V (5.5 x 2.5 mm)"
+    },
+    {
+      "label": "Front I/O",
+      "value": "1 * DC IN 5.5 x 2.5 mm; 1 * HDMI 2.0; 1 * DP 1.4; 1 * 2.5G Ethernet LAN; 1 * USB 3.2; 1 * Power Button"
+    }
   ],
   "features": [
-    { "icon": "Network", "title": "Dual Intel 2.5GbE Networking", "description": "Two Intel i226-V interfaces for routing and edge-network deployments" },
-    { "icon": "Zap", "title": "Wide-Voltage DC Input", "description": "12-24V DC input for flexible embedded installation" },
-    { "icon": "Layers", "title": "Flexible Expansion", "description": "M.2 storage, M.2 Wi-Fi, SFF-8654, GPIO, COM, eDP, fan, and front-panel connectivity" }
+    {
+      "icon": "Network",
+      "title": "Dual Intel 2.5GbE Networking",
+      "description": "Two Intel i226-V interfaces for routing and edge-network deployments"
+    },
+    {
+      "icon": "Zap",
+      "title": "Wide-Voltage DC Input",
+      "description": "12-24V DC input for flexible embedded installation"
+    },
+    {
+      "icon": "Layers",
+      "title": "Flexible Expansion",
+      "description": "M.2 storage, M.2 Wi-Fi, SFF-8654, GPIO, COM, eDP, fan, and front-panel connectivity"
+    }
   ],
   "applications": [
-    { "image": "/assets/products/firewall/mcsrp6/images/6.jpg", "title": "Standard Interface Layout", "description": "Clearly labeled front and rear connectivity" },
-    { "image": "/assets/products/firewall/mcsrp6/images/7.jpg", "title": "Optional Expansion Panels", "description": "Optional USB 2.0 or SFF-8654 and ATX power configurations" },
-    { "image": "/assets/products/firewall/mcsrp6/images/5.jpg", "title": "Fan Mounting Support", "description": "Reserved mounting holes for an 80 x 80 mm fan" },
-    { "image": "/assets/products/firewall/mcsrp6/images/4.jpg", "title": "Application Scenarios", "description": "AI robots, smart homes, smart hardware, soft routers, 3D printers, and education" }
+    {
+      "image": "/assets/products/firewall/mcsrp6/images/6.jpg",
+      "title": "Standard Interface Layout",
+      "description": "Clearly labeled front and rear connectivity"
+    },
+    {
+      "image": "/assets/products/firewall/mcsrp6/images/7.jpg",
+      "title": "Optional Expansion Panels",
+      "description": "Optional USB 2.0 or SFF-8654 and ATX power configurations"
+    },
+    {
+      "image": "/assets/products/firewall/mcsrp6/images/5.jpg",
+      "title": "Fan Mounting Support",
+      "description": "Reserved mounting holes for an 80 x 80 mm fan"
+    },
+    {
+      "image": "/assets/products/firewall/mcsrp6/images/4.jpg",
+      "title": "Application Scenarios",
+      "description": "AI robots, smart homes, smart hardware, soft routers, 3D printers, and education"
+    }
   ],
   "brochure": "/assets/products/firewall/mcsrp6/documents/MCSRP6 brochure.pdf",
   "alibabaUrl": "https://magicchip.en.alibaba.com"

@@ -10,24 +10,75 @@
     "/assets/products/firewall/mcr20/images/5.jpg"
   ],
   "specifications": [
-    { "label": "CPU", "value": "Intel Alder Lake-N N95, N97, N100, N200, Core i3-N300, or Core i3-N305" },
-    { "label": "Memory", "value": "1 x DDR5 SO-DIMM, maximum 48GB" },
-    { "label": "Network", "value": "2 x Intel i226-V 2.5GbE plus 2 x Intel X550-T2 10GbE RJ45 or 2 x Intel 82599ES SFP+" },
-    { "label": "Storage", "value": "1 x M.2 2280 NVMe PCIe 3.0 x1 and 2 x SATA 3.0" },
-    { "label": "Display", "value": "2 x HDMI 2.0 and 1 x Type-C, supporting 4K at 60Hz" },
-    { "label": "USB", "value": "5 x USB 2.0, 1 x USB 3.2 Gen 1, and 1 x Type-C USB 2.0" },
-    { "label": "Power", "value": "12V DC, 5A or 8A depending on processor" },
-    { "label": "Dimensions", "value": "176.7 x 143.7 x 58.2 mm" },
-    { "label": "Working Environment", "value": "0°C to 70°C; 5%-85% relative humidity, non-condensing" }
+    {
+      "label": "CPU",
+      "value": "Intel Alder Lake-N N95, N97, N100, N200, Core i3-N300, or Core i3-N305"
+    },
+    {
+      "label": "Memory",
+      "value": "1 x DDR5 SO-DIMM, maximum 48GB"
+    },
+    {
+      "label": "Network",
+      "value": "2 x Intel i226-V 2.5GbE plus 2 x Intel X550-T2 10GbE RJ45 or 2 x Intel 82599ES SFP+"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x M.2 2280 NVMe PCIe 3.0 x1 and 2 x SATA 3.0"
+    },
+    {
+      "label": "Display",
+      "value": "2 x HDMI 2.0 and 1 x Type-C, supporting 4K at 60Hz"
+    },
+    {
+      "label": "USB",
+      "value": "5 x USB 2.0, 1 x USB 3.2 Gen 1, and 1 x Type-C USB 2.0"
+    },
+    {
+      "label": "Power",
+      "value": "12V DC, 5A or 8A depending on processor"
+    },
+    {
+      "label": "Dimensions",
+      "value": "176.7 x 143.7 x 58.2 mm"
+    },
+    {
+      "label": "Working Environment",
+      "value": "0°C to 70°C; 5%-85% relative humidity, non-condensing"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "1 * DC-12V 5.5 x 2.5 mm; 1 * grounding screw; 1 * USB 3.0; 3 * USB 2.0; 2 * RJ45 2.5G Ethernet Port; 2 * Intel X550-T2 10G Ethernet port /; 2 * Intel 82599ES SFP+ port"
+    }
   ],
   "features": [
-    { "icon": "Network", "title": "Multi-Gigabit Networking", "description": "Dual 2.5GbE plus dual 10GbE copper or SFP+" },
-    { "icon": "Cpu", "title": "Alder Lake-N Platform", "description": "CPU options from N95 through Core i3-N305" },
-    { "icon": "HardDrive", "title": "Flexible Expansion", "description": "DDR5, NVMe, dual SATA, TPM, COM, TF card, and PCIe" }
+    {
+      "icon": "Network",
+      "title": "Multi-Gigabit Networking",
+      "description": "Dual 2.5GbE plus dual 10GbE copper or SFP+"
+    },
+    {
+      "icon": "Cpu",
+      "title": "Alder Lake-N Platform",
+      "description": "CPU options from N95 through Core i3-N305"
+    },
+    {
+      "icon": "HardDrive",
+      "title": "Flexible Expansion",
+      "description": "DDR5, NVMe, dual SATA, TPM, COM, TF card, and PCIe"
+    }
   ],
   "applications": [
-    { "image": "/assets/products/firewall/mcr20/images/a3.jpg", "title": "Complete Interface Map", "description": "Clearly labeled front and rear connectivity" },
-    { "image": "/assets/products/firewall/mcr20/images/a2.jpg", "title": "10GbE Security Gateway", "description": "High-throughput routing, firewall, and VPN deployments" }
+    {
+      "image": "/assets/products/firewall/mcr20/images/a3.jpg",
+      "title": "Complete Interface Map",
+      "description": "Clearly labeled front and rear connectivity"
+    },
+    {
+      "image": "/assets/products/firewall/mcr20/images/a2.jpg",
+      "title": "10GbE Security Gateway",
+      "description": "High-throughput routing, firewall, and VPN deployments"
+    }
   ],
   "brochure": "/assets/products/firewall/mcr20/documents/MCR20 brochure.pdf",
   "alibabaUrl": "https://magicchip.en.alibaba.com"

@@ -15,6 +15,7 @@ from PIL import Image, ImageChops
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "public/assets"
+SOURCE_ROOT = Path(r"D:\本地资源库\电脑相关\电脑册子归档\ver2")
 
 # Explicit selection prevents NAS motherboards and revision-only files being added.
 PRODUCTS = {
@@ -51,7 +52,7 @@ PRODUCTS = {
 
 def source_file(model):
     found = [p for folder in ["工控机IPC", "AIPC", "NAS PC", "桌面端DPC"]
-             for p in (ASSETS / folder).rglob("*.pdf")
+             for p in (SOURCE_ROOT / folder).rglob("*.pdf")
              if re.sub(r"\s+brochure$", "", p.stem, flags=re.I).strip() == model]
     if len(found) != 1:
         raise ValueError(f"Expected one source for {model}: {found}")
@@ -65,10 +66,10 @@ def cell_text(page, left, right, top, bottom):
     return " ".join((region.extract_text(x_tolerance=1, y_tolerance=2) or "").split())
 
 
-def specifications(page, model):
+def specifications(page, model, table_bottom=740):
     bounds = sorted({round(l["top"], 3) for l in page.lines
                      if l["x1"] > 560 and l["x0"] < 199
-                     and abs(l["top"] - l["bottom"]) < .1 and 370 < l["top"] < 740})
+                     and abs(l["top"] - l["bottom"]) < .1 and 370 < l["top"] < table_bottom})
     specs = [{"label": "Model", "value": model}]
     for top, bottom in zip(bounds[1:], bounds[2:]):
         groups = [r for r in page.rects if abs(r["x0"] - 34) < 1
@@ -200,7 +201,7 @@ def build():
             for spec in record['specs']:
                 if spec['label'] == 'Dimensions':
                     spec['value'] = 'Chassis-dependent; see the chassis compatibility guide below for dimensions and power options.'
-        record["sourceBrochure"] = str(source.relative_to(ROOT)).replace("\\", "/")
+        record["sourceBrochure"] = source.relative_to(SOURCE_ROOT).as_posix()
         record["sourceSha256"] = hashlib.sha256(source.read_bytes()).hexdigest()
         (industrial if category == "industrial" else ai if category == "ai" else commercial).append(record)
     chassis_images()

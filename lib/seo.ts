@@ -1,3 +1,4 @@
+import { brochureUpdates } from '@/lib/brochure-updates';
 import { aiCatalog, mcaipc2 } from '@/lib/ai-catalog';
 import type { Metadata } from 'next';
 import { industrialCatalog } from '@/lib/industrial-catalog';
@@ -7,7 +8,7 @@ import { commercialCatalog } from '@/lib/commercial-catalog';
 export const SITE_URL = 'https://szmagicchip.com';
 export const SITE_NAME = 'MagicChip';
 // Update this only when the published site or product catalog materially changes.
-export const SITE_CONTENT_LAST_UPDATED = new Date('2026-09-09T00:00:00.000Z');
+export const SITE_CONTENT_LAST_UPDATED = new Date('2026-09-11T00:00:00.000Z');
 export const DEFAULT_SOCIAL_IMAGE = '/assets/brand/og-default.png';
 
 export type SeoEntry = {
@@ -167,6 +168,9 @@ export const productSeo: Record<string, SeoEntry & { category: string }> = {
   },
 };
 
+for (const item of brochureUpdates) {
+  if (productSeo[item.id]) productSeo[item.id] = { ...productSeo[item.id], description: item.description, image: item.image };
+}
 export function createPageMetadata(entry: SeoEntry): Metadata {
   const brandedTitle = entry.name.includes(SITE_NAME) ? entry.name : `${entry.name} | ${SITE_NAME}`;
   const socialImage = entry.image || DEFAULT_SOCIAL_IMAGE;

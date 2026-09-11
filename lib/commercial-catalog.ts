@@ -1,3 +1,5 @@
+import { applyBrochureSpecCorrections } from '@/lib/brochure-spec-corrections';
+import { brochureUpdates } from '@/lib/brochure-updates';
 import { commercialBrochureProducts } from '@/lib/brochure-products';
 
 export type CommercialSeriesCode = 'DPC' | 'NAS';
@@ -2047,4 +2049,4 @@ export const commercialCatalog: CommercialCatalogItem[] = [
     ],
     "operatingRange": "0°C to 50°C; 5% to 90% relative humidity, non-condensing"
   }
-];
+].map(item => (brochureUpdates.find(update => update.id === item.id) || item) as CommercialCatalogItem).map(applyBrochureSpecCorrections);

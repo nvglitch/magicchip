@@ -1,4 +1,5 @@
 'use client';
+import { industrialESeriesCopy } from '@/lib/industrial-navigation-copy';
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
@@ -29,6 +30,7 @@ import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { aiCatalog } from '@/lib/ai-catalog';
 import { AiFamilyCards } from '@/components/ProductFamilyNavigation';
+import { brochureUpdates } from '@/lib/brochure-updates';
 import SiteSearch from '@/components/SiteSearch';
 import { LANGUAGE_NAMES, SUPPORTED_LANGUAGES } from '@/lib/i18n/config';
 
@@ -91,6 +93,12 @@ const megaMenuProducts: Record<string, MegaMenuProduct[]> = {
   ],
 };
 
+for (const items of Object.values(megaMenuProducts)) {
+  for (let i = 0; i < items.length; i++) {
+    const update = brochureUpdates.find(item => item.id === items[i].id);
+    if (update) items[i] = update;
+  }
+}
 const industrialMegaSeries: ProductMegaSeries[] = [
   {
     id: 'series-a',
@@ -123,6 +131,12 @@ const industrialMegaSeries: ProductMegaSeries[] = [
     description: 'Multi-LAN industrial computers with dual COM ports',
     image: '/assets/products/industrial/d-series/mcipcd3/images/1.jpg',
     href: '/products/industrial-mini-pc#series-d',
+  },
+  {
+    id: 'series-e', code: 'E', title: 'E Series',
+    description: 'Custom industrial computers with multi-LAN, serial and GPIO connectivity',
+    image: '/assets/products/industrial/ver2/mcipce1/main.webp',
+    href: '/products/industrial-mini-pc#series-e',
   },
   {
     id: 'series-tpc',
@@ -489,10 +503,10 @@ export default function Navbar() {
                                     <div className="min-w-0">
                                       <span className="inline-flex rounded-md bg-slate-950 px-2 py-0.5 text-[10px] font-bold text-white">{series.code}</span>
                                       <div className="mt-1 flex items-center gap-1">
-                                        <h4 className="text-base font-bold text-slate-950">{series.title}</h4>
+                                        <h4 className="text-base font-bold text-slate-950">{series.code === 'E' ? industrialESeriesCopy[language].title : series.title}</h4>
                                         <ChevronRight className="h-4 w-4 shrink-0 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:text-blue-600" />
                                       </div>
-                                      <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-slate-500">{series.description}</p>
+                                      <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-slate-500">{series.code === 'E' ? industrialESeriesCopy[language].description : series.description}</p>
                                     </div>
                                   </a>
                                 ))}

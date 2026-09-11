@@ -1,0 +1,1063 @@
+{
+  "schemaVersion": 1,
+  "sourceRoot": "D:\\本地资源库\\电脑相关\\电脑册子归档\\ver2",
+  "observedAtUtc": "2026-09-10T05:45:01.3755383Z",
+  "observationOnly": true,
+  "totalPdfCount": 117,
+  "inScopePdfCount": 114,
+  "files": [
+    {
+      "relativePath": "服务器/MC12N_1U4L brochure.pdf",
+      "sizeBytes": 3513401,
+      "modifiedAtUtc": "2026-08-24T10:03:18.2338408Z",
+      "observedSha256": "efcb5b1c49dc1e17d9485d7b50c85f7a46cc7e92a6358a485ed4a6e802ee9dbe",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "服务器/MC12N_1U6L brochure.pdf",
+      "sizeBytes": 703822,
+      "modifiedAtUtc": "2026-08-24T10:03:19.1028407Z",
+      "observedSha256": "f106553cd4ba650164676eb779b97338571cbed857b25abe3097f226b9b92e66",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "服务器/MC14N_1U6L brochure.pdf",
+      "sizeBytes": 1322908,
+      "modifiedAtUtc": "2026-08-24T10:03:22.6619900Z",
+      "observedSha256": "3b7108ff99f4a90aa34306aac6432700d27371bf58f220836e7fcc596f29d4e8",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "服务器/MC23_1U6L brochure.pdf",
+      "sizeBytes": 776752,
+      "modifiedAtUtc": "2026-08-24T10:03:23.5652023Z",
+      "observedSha256": "8735bb70f4d82912e62e061c5d887b6b966abddccbe00bae522d32c81211976f",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "服务器/MCE5_1U6L brochure.pdf",
+      "sizeBytes": 10791222,
+      "modifiedAtUtc": "2026-08-24T10:03:29.6495878Z",
+      "observedSha256": "712abaca17d491b8080edbe43b90dee004c0f8e3ccaee7a9eb0ea97a66e82e53",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "服务器/MCJ6_1U6L brochure.pdf",
+      "sizeBytes": 531886,
+      "modifiedAtUtc": "2026-08-24T10:03:32.4462142Z",
+      "observedSha256": "d322dffbfa72fc5dee417eb6b3824819e54bda08847dd7b6f32289997290409e",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/A系列/MCIPCA1 brochure.pdf",
+      "sizeBytes": 1198567,
+      "modifiedAtUtc": "2026-08-24T10:07:49.2076212Z",
+      "observedSha256": "6d4a39e462bbb90d57f2fb8e078eebb16cfb4ef4bf39bf5d43bddcb92d8eced7",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/A系列/MCIPCA2 brochure.pdf",
+      "sizeBytes": 2368356,
+      "modifiedAtUtc": "2026-08-24T10:07:49.8538950Z",
+      "observedSha256": "0f99677ce83aae1b570431e73880be1529226033c39317e28ca6c456a20d7fea",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB10 brochure.pdf",
+      "sizeBytes": 10171769,
+      "modifiedAtUtc": "2026-08-24T10:07:51.6289814Z",
+      "observedSha256": "db8460af4adac44fe3a10a74b2a8503af1a71b706ab3fe23d6a7dac4ca7da02e",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB11 brochure.pdf",
+      "sizeBytes": 632999,
+      "modifiedAtUtc": "2026-08-24T10:07:52.0596974Z",
+      "observedSha256": "7e4e1dc666ef6080e4918e233dc65803211974a1c5bde422825d6ed7642502c2",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB12 brochure.pdf",
+      "sizeBytes": 27829957,
+      "modifiedAtUtc": "2026-08-24T10:07:56.2227123Z",
+      "observedSha256": "a987e60a47628b6a1778cd89ddfceaabf6ce84a77b67e2a1dbbc5e17969c5503",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB13 brochure.pdf",
+      "sizeBytes": 2713005,
+      "modifiedAtUtc": "2026-08-24T10:07:56.8684215Z",
+      "observedSha256": "adea1072e1bf15bf87e18cc83cd77f5d6dbbec42e54cccdb0ea70e8d0b8710f2",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB14 Brochure.pdf",
+      "sizeBytes": 4602810,
+      "modifiedAtUtc": "2026-08-25T05:56:19.1196081Z",
+      "observedSha256": "9a6fc9a0ba416b19e90cbdcca0d95d0c6a5b4f8dc80e77f4cea7ccceba0c13c8",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB14F Brochure.pdf",
+      "sizeBytes": 5868050,
+      "modifiedAtUtc": "2026-08-25T05:56:20.6254489Z",
+      "observedSha256": "5fb17b9aa3b9d40d1efacd9dbd6ccc587cf900e7c7cfc3c62c7f7ed80b8db7a0",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB15A Brochure.pdf",
+      "sizeBytes": 9954437,
+      "modifiedAtUtc": "2026-08-25T06:10:09.1266181Z",
+      "observedSha256": "db8249fcce882e3503231506de346e415f4c5541d18bcee30334cb23c05cd4f3",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB15B Brochure.pdf",
+      "sizeBytes": 9954189,
+      "modifiedAtUtc": "2026-08-25T06:10:11.9951396Z",
+      "observedSha256": "e19e06311639f721c6763bbb67d9f3ef281aa92ed5d62a9cf6cbe5bf3dbc9deb",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB15C Brochure.pdf",
+      "sizeBytes": 9953994,
+      "modifiedAtUtc": "2026-08-25T06:10:14.8688204Z",
+      "observedSha256": "e07bd6a791dce3ae3df78d1f8adab55dbe0231b76d689e39bf3107fb192c7bd6",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB15D Brochure.pdf",
+      "sizeBytes": 9954017,
+      "modifiedAtUtc": "2026-08-25T06:10:17.7213705Z",
+      "observedSha256": "a22794fabb4d1ccd32d014ed31b95402020dd92efe88807f47c0489788ce7dd4",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB15E Brochure.pdf",
+      "sizeBytes": 10568691,
+      "modifiedAtUtc": "2026-08-25T06:10:20.7491171Z",
+      "observedSha256": "68a639f79061007325a9ccd252e738a317f49eb557bdd56a200097d82117e6eb",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB16A Brochure.pdf",
+      "sizeBytes": 14843723,
+      "modifiedAtUtc": "2026-08-25T07:07:17.1803698Z",
+      "observedSha256": "c30fe46c6ed17189345d73049d6a2c519c65de4ce437c4a9e7b9a3035a070a3d",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB16B Brochure.pdf",
+      "sizeBytes": 14811324,
+      "modifiedAtUtc": "2026-08-25T07:07:21.9846105Z",
+      "observedSha256": "27e63032939e93964f0ded62cdb0a32fb505b57bf8510cb0ee7717337eef7d27",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB1A Brochure.pdf",
+      "sizeBytes": 4925691,
+      "modifiedAtUtc": "2026-08-25T05:46:59.5369757Z",
+      "observedSha256": "4788ff3579eb5a0f6a4df1c96996b5be4f0ee66d872452c696224ec86e682019",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB1B Brochure.pdf",
+      "sizeBytes": 3607090,
+      "modifiedAtUtc": "2026-08-25T05:47:00.6917378Z",
+      "observedSha256": "77d0ef99657e352e783d8120afc33c595ffab155c3eb0e8ece56ee30d1f6ff4d",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB1F Brochure.pdf",
+      "sizeBytes": 5116974,
+      "modifiedAtUtc": "2026-08-25T05:47:02.2816701Z",
+      "observedSha256": "0edeeaa666b449784764bebccbf7aaca39434b98e8d3e393d747265ddba6610e",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB2-D3 Brochure.pdf",
+      "sizeBytes": 1302411,
+      "modifiedAtUtc": "2026-08-24T10:07:57.4644135Z",
+      "observedSha256": "6086cd90a02ac2a5cc0b78bfd70bf30ff06771bd199104ad117446fe6f25f9c0",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB2-D4 Brochure.pdf",
+      "sizeBytes": 1302430,
+      "modifiedAtUtc": "2026-08-24T10:07:58.0930518Z",
+      "observedSha256": "1cba311b70710516e94cccee79d57b1dbceee6caf1111bed0715ea15141cdca1",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB2-J5005 brochure.pdf",
+      "sizeBytes": 951317,
+      "modifiedAtUtc": "2026-08-24T10:07:58.5348648Z",
+      "observedSha256": "a2de7bbf71a809722178ddc48cb903e305df1a526061d5874952e5af1a726be6",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB3 Brochure.pdf",
+      "sizeBytes": 760343,
+      "modifiedAtUtc": "2026-08-24T10:07:58.9608674Z",
+      "observedSha256": "a161b87419f7200b1f50bb23eb743255d817b33467c1600910134f8ac22dfb66",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB4 Brochure.pdf",
+      "sizeBytes": 728196,
+      "modifiedAtUtc": "2026-08-24T10:07:59.3938331Z",
+      "observedSha256": "7c2ea5011824ae87fee0c7706dd78d8dcff120709388a98d0568582ae22a0dc4",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB5 Brochure.pdf",
+      "sizeBytes": 904743,
+      "modifiedAtUtc": "2026-08-24T10:07:59.8711944Z",
+      "observedSha256": "f1f2fa818d6bf6d61c2f8b4e67a63332567271c6fa4efec99f7899b4a63cc2f0",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB6 Brochure.pdf",
+      "sizeBytes": 10029187,
+      "modifiedAtUtc": "2026-08-25T05:35:29.1750799Z",
+      "observedSha256": "8edefbd8135b1e2156f419781672a48819e5cb43ebba463af034ae6e9b79a08e",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB6-DDR3L Brochure.pdf",
+      "sizeBytes": 9989744,
+      "modifiedAtUtc": "2026-08-25T05:35:31.9916889Z",
+      "observedSha256": "e82078eba54256057d7c987f024f39ffb12b57760967a09bb33a5cf3cf41093d",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB6-DDR4 Brochure.pdf",
+      "sizeBytes": 9989730,
+      "modifiedAtUtc": "2026-08-25T05:35:34.9824689Z",
+      "observedSha256": "cd8519bf5704acecfac4b6db73df105feb4d4a3fba254039bed21f885c6bac18",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB7 brochure.pdf",
+      "sizeBytes": 755777,
+      "modifiedAtUtc": "2026-08-24T10:08:01.4998942Z",
+      "observedSha256": "74cf540792ce5a38996877c46d8944969e7b58961bed6c9f6a824ad50e1d20e4",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB8 brochure.pdf",
+      "sizeBytes": 4461600,
+      "modifiedAtUtc": "2026-08-24T10:08:02.5828853Z",
+      "observedSha256": "e2a6593ad7fb555125e0d02b95c8a632ba6b1d1f4fcac7fee3ae062928ba780b",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB9 brochure.pdf",
+      "sizeBytes": 777462,
+      "modifiedAtUtc": "2026-08-24T10:08:03.1024276Z",
+      "observedSha256": "38d04c3c9e5bda92136d4254f94074da821f5a3dd1a78340b007ee620372a847",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/C系列/MCIPC1 Brochure.pdf",
+      "sizeBytes": 805423,
+      "modifiedAtUtc": "2026-08-24T10:08:03.4941096Z",
+      "observedSha256": "43e6eb784fb19e30a827d6a1a56d090e541ff3071b365c5d0a5d91a77d998566",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/C系列/MCIPC2A brochure.pdf",
+      "sizeBytes": 3891865,
+      "modifiedAtUtc": "2026-08-24T10:08:04.3409441Z",
+      "observedSha256": "e58af350e9fada470be8b08b42d2ba6870b1cf41084a849961da53a698dec341",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/C系列/MCIPC2B brochure.pdf",
+      "sizeBytes": 3891659,
+      "modifiedAtUtc": "2026-08-24T10:08:05.2352877Z",
+      "observedSha256": "1497b91430cb3d64f4f642c2fd2d569bcbcba8a9e357f8e882b962893bacda78",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/C系列/MCIPC3 brochure.pdf",
+      "sizeBytes": 13517827,
+      "modifiedAtUtc": "2026-08-24T10:08:08.0158916Z",
+      "observedSha256": "33c53b418d1fa4d812645bf38aa27d6badf7ed0935835e696792ae6efa893b39",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/C系列/MCIPC4 brochure.pdf",
+      "sizeBytes": 4079148,
+      "modifiedAtUtc": "2026-08-24T10:08:08.7836382Z",
+      "observedSha256": "0546a4a2eed13d0df2471ed5ae72b93d03a0ee6356b32c09ce9cab6f32bd53ff",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/C系列/MCIPC6 brochure.pdf",
+      "sizeBytes": 4858942,
+      "modifiedAtUtc": "2026-08-24T10:08:09.6150690Z",
+      "observedSha256": "4f1a8bee8f71cc386f870dc56c0281d54fb8809035b6005e87182e3302ad1e85",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/C系列/MCIPC7 brochure.pdf",
+      "sizeBytes": 4011640,
+      "modifiedAtUtc": "2026-08-24T10:08:10.3083905Z",
+      "observedSha256": "b82f57e56325bfc3df8193364d3ad8f40027a5369b97019c216616b72d97640e",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/C系列/MCIPC8 brochure.pdf",
+      "sizeBytes": 17999284,
+      "modifiedAtUtc": "2026-08-24T10:08:13.2534052Z",
+      "observedSha256": "b5eaa9c8247620f679ab1931c16fe80ec899756003ab8975ef5a1d35ca2dd99e",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/C系列/MCIPC9 brochure.pdf",
+      "sizeBytes": 1278337,
+      "modifiedAtUtc": "2026-08-24T10:08:13.7508631Z",
+      "observedSha256": "9a5d5eed3c096a173883ded5d961b25890bd57994e1f0724b866cc22c86875dd",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/D系列/MCIPCD1 Brochure.pdf",
+      "sizeBytes": 768151,
+      "modifiedAtUtc": "2026-08-24T10:08:14.2208009Z",
+      "observedSha256": "4db1dc1f88c84ac745d63619bff36622ea23118996ee30d49e612aed24ddd0cf",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/D系列/MCIPCD2 brochure.pdf",
+      "sizeBytes": 563020,
+      "modifiedAtUtc": "2026-08-24T10:08:14.6311514Z",
+      "observedSha256": "ed3c46dd80674c8e30fad5db993afa0be79329c596ec038444ff1b2b8efe3112",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/D系列/MCIPCD3 brochure.pdf",
+      "sizeBytes": 4674286,
+      "modifiedAtUtc": "2026-08-24T10:08:15.4974320Z",
+      "observedSha256": "3ca7b8e9be3cb805f87515ac13bb3c3b1ce083f7cec63c92f2032c23002ea721",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/D系列/MCIPCD4 Brochure.pdf",
+      "sizeBytes": 13682384,
+      "modifiedAtUtc": "2026-08-25T05:35:20.6162011Z",
+      "observedSha256": "074573719649838036e7779b3c2e35ef1e4b30c9c90155ec4e1112eecc93190f",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/D系列/MCIPCD5 Brochure.pdf",
+      "sizeBytes": 3389117,
+      "modifiedAtUtc": "2026-08-25T05:35:21.6384029Z",
+      "observedSha256": "d5a4696597b48932a12c2d126443d68e298cc49ed45b7f1ede7cd2ceec90fc90",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/D系列/MCIPCD5F Brochure.pdf",
+      "sizeBytes": 4919633,
+      "modifiedAtUtc": "2026-08-25T05:35:23.0421077Z",
+      "observedSha256": "693b505bbca5dd083c788ae36148c3bc04fd3271500dd784f373586265bbc5a3",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/D系列/MCIPCD6 Brochure.pdf",
+      "sizeBytes": 9920544,
+      "modifiedAtUtc": "2026-08-25T05:35:25.9459485Z",
+      "observedSha256": "b8a64d2d857344a0b1f3636dbf6e028a3d800d562dcadb01891d83c37fe4077e",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/TPC系列/MCTPC-1201E brochure.pdf",
+      "sizeBytes": 3704419,
+      "modifiedAtUtc": "2026-08-24T10:08:16.3985987Z",
+      "observedSha256": "366281f6b1027bceba49c3829c5fc1e02c5048116edae24e65dca6c5927301ee",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/TPC系列/MCTPC-1303E brochure.pdf",
+      "sizeBytes": 3704420,
+      "modifiedAtUtc": "2026-08-24T10:08:17.3074928Z",
+      "observedSha256": "53495c1b137efb013325166fd8b2b48aa9af591341979405a07b011c4a513e97",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/TPC系列/MCTPC-1501B brochure.pdf",
+      "sizeBytes": 1783101,
+      "modifiedAtUtc": "2026-08-24T10:08:17.8299220Z",
+      "observedSha256": "f47d1a9917cda13508e5b6c07e00d7637d2a617d5b5ad139c4514579e63b7dd6",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/TPC系列/MCTPC-1501E brochure.pdf",
+      "sizeBytes": 3704419,
+      "modifiedAtUtc": "2026-08-24T10:08:18.7004053Z",
+      "observedSha256": "af4109a253d0be38c9ab0d0282d9ec5937517fd0845ed41c272c0b39830d1b14",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/TPC系列/MCTPC-1506E brochure.pdf",
+      "sizeBytes": 3704426,
+      "modifiedAtUtc": "2026-08-24T10:08:19.5589287Z",
+      "observedSha256": "e2acd2a91928aa83f1081b507cecf068ac5d89979a32cfed17ed4adec34a0327",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/TPC系列/MCTPC-1805E brochure.pdf",
+      "sizeBytes": 3704424,
+      "modifiedAtUtc": "2026-08-24T10:08:20.3968061Z",
+      "observedSha256": "3b4fc01cdecfce73aca345b21f247e6b638f274048c7e2208877f04d2fd5c77f",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/TPC系列/MCTPC-2105E brochure.pdf",
+      "sizeBytes": 3704426,
+      "modifiedAtUtc": "2026-08-24T10:08:21.3196790Z",
+      "observedSha256": "c4dbc527809098c3d2943599d120ec6f1578b6e3a8f60e4cd255b537ca84eff4",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "工控机IPC/TPC系列/MCTPC-2308E brochure.pdf",
+      "sizeBytes": 3704426,
+      "modifiedAtUtc": "2026-08-24T10:08:22.1901384Z",
+      "observedSha256": "579195cf39f7b3a31270a0534377843e1bd872668f50e0e13ec4f9ca480d233a",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "软路由SR/MC30S_DDR4 brochure.pdf",
+      "sizeBytes": 593670,
+      "modifiedAtUtc": "2026-08-24T10:03:13.8535861Z",
+      "observedSha256": "9e840fc362ab05cf58207640cab7444e0b887e2d410ca3f66bef3a06f78193f4",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "软路由SR/MC30S_N100 brochure.pdf",
+      "sizeBytes": 593690,
+      "modifiedAtUtc": "2026-08-24T10:03:14.3283006Z",
+      "observedSha256": "407025e3982edc643002a16cdf816b98730f84b670449182b9f9e6b5070361b3",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "软路由SR/MC30W_N100 brochure.pdf",
+      "sizeBytes": 641138,
+      "modifiedAtUtc": "2026-08-24T10:03:14.8189814Z",
+      "observedSha256": "52d1a1d9d41ccf934b877c1d2fdd14fc9563eb096d96231ceec6804432aeb83b",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "软路由SR/MCR10 Brochure.pdf",
+      "sizeBytes": 935692,
+      "modifiedAtUtc": "2026-08-24T10:03:15.3913398Z",
+      "observedSha256": "c4bbb835ae2af2d3dec2253fdee39ad7c70f3ddee2fbecdd9cb6c54806648acd",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "软路由SR/MCR20 brochure.pdf",
+      "sizeBytes": 14547739,
+      "modifiedAtUtc": "2026-08-24T10:03:21.6388336Z",
+      "observedSha256": "60c5475b60d70d34c399766887266d874465e040dc2cc8788b9fb090770525b8",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "软路由SR/MCSR613U Brochure.pdf",
+      "sizeBytes": 605907,
+      "modifiedAtUtc": "2026-08-24T10:03:22.1648458Z",
+      "observedSha256": "586603e767faef83b1fcbc8381eb166bdab223476a3d9760b8596429a1f246bf",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "软路由SR/MCSR6N12U Brochure.pdf",
+      "sizeBytes": 797211,
+      "modifiedAtUtc": "2026-08-24T10:03:22.7026049Z",
+      "observedSha256": "9fbbe5ab5762fe6b7b426262d3bc3535f560462e9af6dd7ee69afee5c1f774c1",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "软路由SR/MCSR6N13U Brochure.pdf",
+      "sizeBytes": 805940,
+      "modifiedAtUtc": "2026-08-24T10:03:23.2248018Z",
+      "observedSha256": "e3123e7f403dabeb6eab9deb830b34cb8f87ca03d5ff25cd1cec2bb7da0edfb6",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "软路由SR/MCSRG31F Brochure.pdf",
+      "sizeBytes": 1829927,
+      "modifiedAtUtc": "2026-08-24T10:03:23.7694596Z",
+      "observedSha256": "f30df02145ef6f0e23660f4d94a327a8f9c0522f2173c986c6c9b3d5a15ea35b",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "软路由SR/MCSRG7 brochure.pdf",
+      "sizeBytes": 910294,
+      "modifiedAtUtc": "2026-08-24T10:03:24.2253977Z",
+      "observedSha256": "d3c235aa198d21dad0043d7e9ce0dff66b912ab1f89ba98bc331bc33de7afcab",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "软路由SR/MCSRH15 brochure.pdf",
+      "sizeBytes": 831070,
+      "modifiedAtUtc": "2026-08-24T10:03:24.6741389Z",
+      "observedSha256": "02d4a9412c0ddfd666327fe283a0b7d53eeabd7342d1da7d19d6da5ddce0ea99",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "软路由SR/MCSRH30X brochure.pdf",
+      "sizeBytes": 638283,
+      "modifiedAtUtc": "2026-08-24T10:03:25.1049239Z",
+      "observedSha256": "5308e8a245dfbfdedd8b031482765544230ae099637e37884a389628dd57067f",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "软路由SR/MCSRP1 Brochure.pdf",
+      "sizeBytes": 847588,
+      "modifiedAtUtc": "2026-08-24T10:03:25.5914254Z",
+      "observedSha256": "aa7d8767f57ca1f42f3b9be7168abb11c30a9ea15d0616a781fde58c528d650c",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "软路由SR/MCSRP2 Brochure.pdf",
+      "sizeBytes": 862357,
+      "modifiedAtUtc": "2026-08-24T10:03:26.1372633Z",
+      "observedSha256": "f9f6a083ee396ec06860c5f0776688ec73037ed7a5493471a71a6868498494f8",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "软路由SR/MCSRP2-HDMI Brochure.pdf",
+      "sizeBytes": 1173445,
+      "modifiedAtUtc": "2026-08-24T10:03:26.6973534Z",
+      "observedSha256": "ff0bc90a00687065b4e7b525a0a3159c96b7bd7b347452a946755d35a26bd7c8",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "软路由SR/MCSRP3 brochure.pdf",
+      "sizeBytes": 1107616,
+      "modifiedAtUtc": "2026-08-24T10:03:27.4920655Z",
+      "observedSha256": "757071ea0607c339732c4cd705a525946690dcd4677e4eb0a7586106b29f436a",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "软路由SR/MCSRP4 brochure.pdf",
+      "sizeBytes": 800712,
+      "modifiedAtUtc": "2026-08-24T10:03:28.0706460Z",
+      "observedSha256": "487b84123d5dd6cab22e4d66ebbed688b72907bd387e36e9ed8a61eb7ba3675c",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "软路由SR/MCSRP5 brochure.pdf",
+      "sizeBytes": 1981601,
+      "modifiedAtUtc": "2026-08-24T10:03:29.1703879Z",
+      "observedSha256": "605b8d7abdfd656d89f250781f2da906d964c6d9ddb68efea6e5f31666a6cbea",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "软路由SR/MCSRP6 brochure.pdf",
+      "sizeBytes": 2137502,
+      "modifiedAtUtc": "2026-08-24T10:03:31.9319598Z",
+      "observedSha256": "88bac5828e2cd9368bf527bde2049b16c6685634579291b8a6062241d0681f6b",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "软路由SR/MGSRN100-V1 brochure.pdf",
+      "sizeBytes": 2130577,
+      "modifiedAtUtc": "2026-08-24T10:03:32.5396957Z",
+      "observedSha256": "603933299b5af6db9426753e8d5ca076ef766d2edace333598f19d4341ddf97f",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "软路由SR/New_MCSR613U Brochure.pdf",
+      "sizeBytes": 2376488,
+      "modifiedAtUtc": "2026-08-24T10:05:38.2013721Z",
+      "observedSha256": "0cd6571d968f1082121e98d0d52278348914510e22e824040969bdb9918cb7a5",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "桌面端DPC/MC12 Brochure.pdf",
+      "sizeBytes": 2743990,
+      "modifiedAtUtc": "2026-08-24T10:03:34.4279436Z",
+      "observedSha256": "952c2b247b0785cf259f51bad1f2d54b4e5262df405786b533ed8aae0bd6c532",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "桌面端DPC/MC15UH brochure.pdf",
+      "sizeBytes": 683514,
+      "modifiedAtUtc": "2026-08-24T10:03:34.8975636Z",
+      "observedSha256": "193e6d0163d49be03007093ba5846abaa411d36e43dc8c2bc85bd590fe99f3eb",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "桌面端DPC/MCAR9 brochure.pdf",
+      "sizeBytes": 879008,
+      "modifiedAtUtc": "2026-08-24T10:03:35.3833648Z",
+      "observedSha256": "fec5510ab55f289b561a24d62470f7365b7e126cb13b70f24551693daa465336",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "桌面端DPC/MCCN51 brochure.pdf",
+      "sizeBytes": 1016536,
+      "modifiedAtUtc": "2026-08-24T10:03:35.9172147Z",
+      "observedSha256": "e1983bb540649ebdac6857d0b2ff60cce0010615800bc47e668e78fac42ba7fe",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "桌面端DPC/MCDPC1 Brochure.pdf",
+      "sizeBytes": 859162,
+      "modifiedAtUtc": "2026-08-27T09:48:31.9662120Z",
+      "observedSha256": "f1ff6e89fcc577225881c7c262f1779a682de16360815115cae3f6fb9eef1cfe",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "桌面端DPC/MCGM13 brochure.pdf",
+      "sizeBytes": 9499409,
+      "modifiedAtUtc": "2026-08-24T10:03:38.9189094Z",
+      "observedSha256": "e3ee39823bf4449df560794c72cb03d0123a60aab8eb871f83d87a3afb60a442",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "桌面端DPC/MCMQ12&13 brochure.pdf",
+      "sizeBytes": 662682,
+      "modifiedAtUtc": "2026-08-24T10:03:39.4127956Z",
+      "observedSha256": "87316d214d432d43f2a58571a02876ea0c956b3cf77443b66730b31c7ae86bba",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "桌面端DPC/MCMQRseries brochure.pdf",
+      "sizeBytes": 662215,
+      "modifiedAtUtc": "2026-08-24T10:03:39.9240293Z",
+      "observedSha256": "37ea7feb079a59652be1e474feb359b80c059c71b3d4a3d2386ead2faf302f20",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "桌面端DPC/MCN1 brochure.pdf",
+      "sizeBytes": 3003355,
+      "modifiedAtUtc": "2026-08-24T10:03:40.6505891Z",
+      "observedSha256": "f05c7c3f66f59e541406aa56af7a66b8c85b3d972f94f5675757112ed688aa86",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "桌面端DPC/MCN2 brochure.pdf",
+      "sizeBytes": 1982198,
+      "modifiedAtUtc": "2026-08-24T10:03:41.2992060Z",
+      "observedSha256": "47a8f7b41f3ed343b4905cab3b4c14ac242ba494007b1e2a72af07b0ca3c9fa0",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "桌面端DPC/MCN5 brochure.pdf",
+      "sizeBytes": 7360477,
+      "modifiedAtUtc": "2026-08-24T10:03:42.7008938Z",
+      "observedSha256": "6d64749b4d869e92f9b08445dfa19b0aa9bcc28866756acdd4b0539df633c8b0",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "桌面端DPC/MCN6 brochure.pdf",
+      "sizeBytes": 3647849,
+      "modifiedAtUtc": "2026-08-24T10:03:44.0004153Z",
+      "observedSha256": "2cb23ac81b1efba809f78a023f028313d7ba67f2e2808bf87c3fa6f5ed329e0b",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "桌面端DPC/MCN7A Brochure.pdf",
+      "sizeBytes": 848064,
+      "modifiedAtUtc": "2026-08-24T10:03:44.5650053Z",
+      "observedSha256": "139f90a28a07663eb00738576dca616025988964c7c9d4e24ba997576ffbded2",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "桌面端DPC/MCN7P Brochure.pdf",
+      "sizeBytes": 876402,
+      "modifiedAtUtc": "2026-08-24T10:03:45.0962701Z",
+      "observedSha256": "bf301d67c78f798cdc4047847b4dc1e5d8c56b9bac1bf2c619c23dac52c6fb67",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "桌面端DPC/MCNUC-1 Brochure.pdf",
+      "sizeBytes": 2618984,
+      "modifiedAtUtc": "2026-08-24T10:03:46.7117834Z",
+      "observedSha256": "880b9fda6424eb5ee9ba37ddeb0ac0f5646987d1705f0d8d875d53bc8f5147ac",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "桌面端DPC/MCNUC-2 Brochure.pdf",
+      "sizeBytes": 4051744,
+      "modifiedAtUtc": "2026-08-24T10:03:47.9994737Z",
+      "observedSha256": "ac87704577ac736122cd9ac51d7eca2981c5ffc3be2b2c49439f85c61416ff19",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "桌面端DPC/MCNUC-3 Brochure.pdf",
+      "sizeBytes": 4772683,
+      "modifiedAtUtc": "2026-08-24T10:03:49.3240062Z",
+      "observedSha256": "03394fe272ac2c5c6cbbf9bd2ba48f905cab1e01f2a470ae1d759ad38fbf4e3a",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "桌面端DPC/MCTAR7 brochure.pdf",
+      "sizeBytes": 899045,
+      "modifiedAtUtc": "2026-08-24T10:03:49.7873152Z",
+      "observedSha256": "eaf264146dc5b3f1faa2a8cbd5e20e34599b8399202de5a165adf4dc3e89e586",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "桌面端DPC/MCVX4 brochure.pdf",
+      "sizeBytes": 710789,
+      "modifiedAtUtc": "2026-08-24T10:03:50.4945449Z",
+      "observedSha256": "cd1e68516a54d19c7ff0ae1446ed5599ad6ecefa1d5e5984a5833be26b3307a1",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "AIPC/MCAIPC1 brochure.pdf",
+      "sizeBytes": 1352509,
+      "modifiedAtUtc": "2026-08-24T10:03:14.9050413Z",
+      "observedSha256": "d3bd81c2370da5ea3ee8f57f1fea964b07ab5853213fcf940d6727a124ff4eb8",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "AIPC/MCAIPC2 brochure.pdf",
+      "sizeBytes": 6297975,
+      "modifiedAtUtc": "2026-09-09T02:35:03.9997213Z",
+      "observedSha256": "0483c61c63c7bf5ea0208f296bc2f17d057135816ce144ec3fc89fca1cdd8d34",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "AIPC/MCAIPC3A Brochure.pdf",
+      "sizeBytes": 463729,
+      "modifiedAtUtc": "2026-09-01T08:49:48.9899866Z",
+      "observedSha256": "62d38cd72a83e8864e48b77405ab250ce5fe18ed526889b2d28547eeaa4c769c",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "AIPC/MCAIPC3B Brochure.pdf",
+      "sizeBytes": 655205,
+      "modifiedAtUtc": "2026-09-01T08:49:49.1725435Z",
+      "observedSha256": "e10a5de01ebbf5edc8a770da5bb3cdfaf3ca802cbb9d3eb9cc3e7fdbcab55420",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "AIPC/MCAIPC3C Brochure.pdf",
+      "sizeBytes": 804689,
+      "modifiedAtUtc": "2026-09-01T08:49:49.3974771Z",
+      "observedSha256": "8897c0a5ec17e72b1b6d461134c8c6990889036e326e2f6a3c24a737e92e26df",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "AIPC/MCAIPC3D Brochure.pdf",
+      "sizeBytes": 655117,
+      "modifiedAtUtc": "2026-09-01T08:49:49.6097888Z",
+      "observedSha256": "b21a5ee77ae9cf6c910ab85e6df6dc05cb3cb365293e94a614711bca227129ac",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "NAS PC/MCNAS100 Brochure.pdf",
+      "sizeBytes": 605187,
+      "modifiedAtUtc": "2026-08-24T10:03:16.0242670Z",
+      "observedSha256": "5a19031618c07d60606c5cc60938c6b4d790d4ce0e9cfd059fd1a5a29c1b9a43",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "NAS PC/MCNAS11 Brochure.pdf",
+      "sizeBytes": 1081089,
+      "modifiedAtUtc": "2026-08-31T09:52:27.0631513Z",
+      "observedSha256": "c9de402e10b8d4d8ff0bdfe53ec522a9ef87e4c874e5e21241c72aafb9fe4745",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "NAS PC/MCNAS12 brochure.pdf",
+      "sizeBytes": 1310153,
+      "modifiedAtUtc": "2026-08-26T03:04:21.7305254Z",
+      "observedSha256": "82f6b243c9ced584c9571082fb6ed063427ea9daeed9c3abcd531f4c1d2cf62a",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "NAS PC/MCNAS14A brochure.pdf",
+      "sizeBytes": 1031499,
+      "modifiedAtUtc": "2026-08-19T06:17:35.1392244Z",
+      "observedSha256": "fc7507eb67f0f47af6a6aee5e7b0e79c3633bc4224c914e987c3430977467693",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "NAS PC/MCNAS14B brochure.pdf",
+      "sizeBytes": 1052185,
+      "modifiedAtUtc": "2026-08-19T06:17:35.1728616Z",
+      "observedSha256": "656b4eed8c1ec883f77bd0c0c1c874b6b8dbeeaedc5b819c2230344433631a33",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "NAS PC/MCNASH10 brochure.pdf",
+      "sizeBytes": 727429,
+      "modifiedAtUtc": "2026-08-24T10:03:17.0163487Z",
+      "observedSha256": "85eb3146381f35f6365f496c2e6eb74c5940c92679afb6a1bf245ab076f4381e",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "NAS PC/MCNASH14 brochure.pdf",
+      "sizeBytes": 1899970,
+      "modifiedAtUtc": "2026-08-24T10:03:17.9061790Z",
+      "observedSha256": "f0663fdeb52e95a9d758267548a33933ffeda5fddba2019afe68b21ac0badee1",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "NAS PC/MCNASH9 brochure.pdf",
+      "sizeBytes": 662352,
+      "modifiedAtUtc": "2026-08-24T10:03:18.4394634Z",
+      "observedSha256": "4282397e6476d61e34eb1f4ae93c0244cc9f28482267a21872ce577cea9a7d52",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "not-yet-compared-to-website"
+    },
+    {
+      "relativePath": "NAS主板/NASJ4125 brochure.pdf",
+      "sizeBytes": 874682,
+      "modifiedAtUtc": "2026-08-24T10:03:32.8679076Z",
+      "observedSha256": "03bde987881ecd7ec5ede63c7e9bf9332b3dc7cf3a9d54b3d00f18ef884f9ee2",
+      "appliedSha256": null,
+      "excluded": true,
+      "status": "excluded"
+    },
+    {
+      "relativePath": "NAS主板/NASN100  brochure.pdf",
+      "sizeBytes": 865032,
+      "modifiedAtUtc": "2026-08-24T10:03:33.3350819Z",
+      "observedSha256": "9a832f2152f5c245b630ec33be45f602121c10ff6b783a4cf394af6346792dd8",
+      "appliedSha256": null,
+      "excluded": true,
+      "status": "excluded"
+    },
+    {
+      "relativePath": "NAS主板/NASN150 brochure.pdf",
+      "sizeBytes": 3848548,
+      "modifiedAtUtc": "2026-08-24T10:03:34.0730490Z",
+      "observedSha256": "75eda648f832819def435367d4f5f2f0b337c6f8cc4245aa23204c6bb72f3a65",
+      "appliedSha256": null,
+      "excluded": true,
+      "status": "excluded"
+    }
+  ]
+}

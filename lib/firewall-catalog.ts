@@ -1,3 +1,4 @@
+import { applyBrochureSpecCorrections } from '@/lib/brochure-spec-corrections';
 import { firewallBrochureSpecs } from '@/lib/firewall-brochure-specs';
 
 export type FirewallSeriesCode = '2L' | '4L' | '6L' | '10G' | '1U';
@@ -320,6 +321,6 @@ export const firewallCatalog: FirewallCatalogItem[] = [
     dimensions: '1U, 440 x 319 x 45 mm', operatingRange: '0°C to 60°C', galleryCount: 3,
     highlights: ['Intel Celeron J6412', '6 x Intel 2.5GbE', 'DDR4 up to 64GB', '1U rackmount chassis'],
   }),
-];
+].map(applyBrochureSpecCorrections);
 
 export const firewallSeriesOrder: FirewallSeriesCode[] = ['2L', '4L', '6L', '10G', '1U'];
