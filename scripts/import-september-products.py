@@ -160,7 +160,7 @@ def build():
         titles = ["Front panel", "Rear panel", "Enclosure view"]
         if model == "MCAIPC2":
             titles = ["H04-BQ front view", "H04-BQ enclosure view"]
-        main = len(product_images) - 1 if series == "AI" or model == "MCDPC1" else 0
+        main = 1 if model in ["MCNAS14A", "MCNAS14B"] else len(product_images) - 1 if series == "AI" or model == "MCDPC1" else 0
         square(product_images[main], output / "main.webp")
         cards = []
         for i, image in enumerate(product_images):
