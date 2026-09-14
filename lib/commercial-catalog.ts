@@ -1,3 +1,4 @@
+import { nasSeptemberUpdates } from '@/lib/nas-september-updates';
 import { applyBrochureSpecCorrections } from '@/lib/brochure-spec-corrections';
 import { brochureUpdates } from '@/lib/brochure-updates';
 import { commercialBrochureProducts } from '@/lib/brochure-products';
@@ -23,6 +24,7 @@ export type CommercialCatalogItem = {
 // Product facts and images are extracted from the supplied product brochures.
 export const commercialCatalog: CommercialCatalogItem[] = [
   ...commercialBrochureProducts,
+  ...nasSeptemberUpdates,
   {
     "id": "mc12",
     "name": "MC12",
@@ -1848,107 +1850,6 @@ export const commercialCatalog: CommercialCatalogItem[] = [
     "operatingRange": "0°C to 50°C; 5% to 90% relative humidity, non-condensing"
   },
   {
-    "id": "mcnash14",
-    "name": "MCNASH14",
-    "series": "NAS",
-    "tagline": "Expandable Intel NAS platform with four 2.5GbE ports",
-    "description": "MCNASH14 provides Pentium 8505 or optional Core i7 performance, up to 64GB DDR5, four 2.5GbE ports, NVMe plus SATA storage, PCIe expansion, and optional high-speed network modules.",
-    "image": "/assets/products/commercial/nas/mcnash14/images/main-square.png",
-    "galleryImages": [
-      "/assets/products/commercial/nas/mcnash14/images/view-1.png",
-      "/assets/products/commercial/nas/mcnash14/images/view-2.png"
-    ],
-    "highlights": [
-      "Intel Pentium Gold 8505; optional Core i7-13620H",
-      "2 x DDR5 SO-DIMM, up to 64GB",
-      "4 x Intel i226 2.5GbE; expandable to compatible 20Gb / 40Gb SFP+ or four-LAN modules",
-      "M.2 NVMe 2280 PCIe 4.0 x4 and SATA 3.0"
-    ],
-    "specs": [
-      {
-        "label": "Model",
-        "value": "MCNASH14"
-      },
-      {
-        "label": "CPU",
-        "value": "Intel Pentium Gold 8505; optional Core i7-13620H"
-      },
-      {
-        "label": "Chipset",
-        "value": "Intel 8505 platform"
-      },
-      {
-        "label": "Graphics",
-        "value": "Intel UHD Graphics for 12th Gen processors"
-      },
-      {
-        "label": "Video",
-        "value": "DisplayPort and HDMI"
-      },
-      {
-        "label": "Memory",
-        "value": "2 x DDR5 SO-DIMM, up to 64GB"
-      },
-      {
-        "label": "USB",
-        "value": "2 x USB 3.0 and 2 x USB 2.0"
-      },
-      {
-        "label": "Power",
-        "value": "DC 12V"
-      },
-      {
-        "label": "Network",
-        "value": "4 x Intel i226 2.5GbE; expandable to compatible 20Gb / 40Gb SFP+ or four-LAN modules"
-      },
-      {
-        "label": "Storage",
-        "value": "M.2 NVMe 2280 PCIe 4.0 x4 and SATA 3.0"
-      },
-      {
-        "label": "Expansion",
-        "value": "PCIe x8 slot with PCIe 3.0 x4 signal; M.2 3052; M.2 2230; SIM; GPIO; TPM"
-      },
-      {
-        "label": "Front I/O",
-        "value": "2 x USB 2.0; 4 x 2.5GbE RJ45; 1 x DC input; 1 x DisplayPort; 1 x HDMI"
-      },
-      {
-        "label": "Rear I/O",
-        "value": "2 x USB 3.0; 1 x power button; 1 x Type-C; 1 x SIM slot; 1 x console port"
-      },
-      {
-        "label": "Internal I/O",
-        "value": "1 x SATA connector; 1 x SATA power connector; 2 x DDR5 SO-DIMM slots; 1 x PCIe x8 slot; M.2 slots for Wi-Fi, 3052 expansion, and 2280 storage; 1 x Clear CMOS header; 1 x GPIO header; 1 x front USB header; 1 x TPM header; 1 x CPU fan connector"
-      },
-      {
-        "label": "Dimensions",
-        "value": "150 x 143 x 84 mm"
-      },
-      {
-        "label": "Weight",
-        "value": "1.5 kg net"
-      },
-      {
-        "label": "BIOS",
-        "value": "AMI UEFI BIOS with Wake-on-LAN and PXE"
-      },
-      {
-        "label": "TDP",
-        "value": "Depends on selected processor"
-      },
-      {
-        "label": "System",
-        "value": "Windows 10 / Windows 11 / Linux"
-      },
-      {
-        "label": "Working Environment",
-        "value": "0°C to 50°C; 5% to 90% relative humidity, non-condensing"
-      }
-    ],
-    "operatingRange": "0°C to 50°C; 5% to 90% relative humidity, non-condensing"
-  },
-  {
     "id": "mcnash9",
     "name": "MCNASH9",
     "series": "NAS",
@@ -2049,4 +1950,4 @@ export const commercialCatalog: CommercialCatalogItem[] = [
     ],
     "operatingRange": "0°C to 50°C; 5% to 90% relative humidity, non-condensing"
   }
-].map(item => (brochureUpdates.find(update => update.id === item.id) || item) as CommercialCatalogItem).map(applyBrochureSpecCorrections);
+].map(item => (nasSeptemberUpdates.find(update => update.id === item.id) || brochureUpdates.find(update => update.id === item.id) || item) as CommercialCatalogItem).map(applyBrochureSpecCorrections);

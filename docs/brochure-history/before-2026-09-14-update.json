@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
   "sourceRoot": "D:\\本地资源库\\电脑相关\\电脑册子归档\\ver2",
-  "observedAtUtc": "2026-09-14T01:18:26.161721+00:00",
+  "observedAtUtc": "2026-09-11T01:14:40.127470+00:00",
   "observationOnly": false,
-  "totalPdfCount": 120,
-  "inScopePdfCount": 117,
+  "totalPdfCount": 119,
+  "inScopePdfCount": 116,
   "statusCounts": {
-    "verified-current": 102,
-    "updated": 6,
     "excluded": 3,
     "pending-confirmation": 9,
+    "updated": 4,
+    "verified-current": 103,
     "retired-by-user": 1
   },
-  "previousObservation": "brochure-history/before-2026-09-14-update.json",
+  "previousObservation": "brochure-history/initial-observation-2026-09-10.json",
   "files": [
     {
       "relativePath": "AIPC/MCAIPC1 brochure.pdf",
@@ -258,43 +258,23 @@
     },
     {
       "relativePath": "NAS PC/MCNASH14 brochure.pdf",
-      "sizeBytes": 2285076,
-      "modifiedAtUtc": "2026-09-11T09:37:14.231798+00:00",
-      "observedSha256": "e770b3f2c708e7fcc2654a3aa70ec8e3aa9b686acefbd7fbebd0f634e65bf180",
-      "appliedSha256": "e770b3f2c708e7fcc2654a3aa70ec8e3aa9b686acefbd7fbebd0f634e65bf180",
+      "sizeBytes": 1899970,
+      "modifiedAtUtc": "2026-08-24T10:03:17.906179+00:00",
+      "observedSha256": "f0663fdeb52e95a9d758267548a33933ffeda5fddba2019afe68b21ac0badee1",
+      "appliedSha256": "f0663fdeb52e95a9d758267548a33933ffeda5fddba2019afe68b21ac0badee1",
       "excluded": false,
       "present": true,
-      "status": "updated",
-      "changeSincePreviousObservation": "modified",
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcnash14"
       ],
       "hrefs": [
         "/products/commercial-mini-pc/mcnash14"
       ],
-      "reviewedAtUtc": "2026-09-14T01:18:26.161721+00:00",
-      "appliedAtUtc": "2026-09-14T01:18:26.161721+00:00",
-      "notes": "2026-09-14 已核对来源、参数、裁切图片及缩略图，完成生产构建和搜索验证。面板以接口类型命名，避免册子正反面标签与图片顺序不一致。"
-    },
-    {
-      "appliedSha256": "5931f9dcf3e6a606f4c51e962ea0dc09a9e0e5671abc6db07654c8042e6428fc",
-      "status": "updated",
-      "appliedAtUtc": "2026-09-14T01:18:26.161721+00:00",
-      "reviewedAtUtc": "2026-09-14T01:18:26.161721+00:00",
-      "modelIds": [
-        "mcnash15"
-      ],
-      "hrefs": [
-        "/products/commercial-mini-pc/mcnash15"
-      ],
-      "notes": "2026-09-14 已核对来源、参数、裁切图片及缩略图，完成生产构建和搜索验证。面板以接口类型命名，避免册子正反面标签与图片顺序不一致。",
-      "relativePath": "NAS PC/MCNASH15 brochure.pdf",
-      "present": true,
-      "excluded": false,
-      "sizeBytes": 1174993,
-      "modifiedAtUtc": "2026-09-11T10:13:46.135587+00:00",
-      "observedSha256": "5931f9dcf3e6a606f4c51e962ea0dc09a9e0e5671abc6db07654c8042e6428fc",
-      "changeSincePreviousObservation": "new"
+      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "NAS PC/MCNASH9 brochure.pdf",
@@ -458,7 +438,7 @@
       "excluded": false,
       "present": true,
       "status": "pending-confirmation",
-      "changeSincePreviousObservation": "unchanged",
+      "changeSincePreviousObservation": "added",
       "modelIds": [
         "mcipcb13a"
       ],
@@ -478,7 +458,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "unchanged",
+      "changeSincePreviousObservation": "added",
       "modelIds": [
         "mcipcb13b"
       ],
@@ -1298,7 +1278,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "unchanged",
+      "changeSincePreviousObservation": "added",
       "modelIds": [
         "mcipce1"
       ],
@@ -1618,7 +1598,7 @@
       "excluded": false,
       "present": true,
       "status": "pending-confirmation",
-      "changeSincePreviousObservation": "unchanged",
+      "changeSincePreviousObservation": "modified",
       "modelIds": [
         "mc15uh"
       ],
@@ -1638,7 +1618,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "unchanged",
+      "changeSincePreviousObservation": "modified",
       "modelIds": [
         "mcar9"
       ],
@@ -1838,7 +1818,7 @@
       "excluded": false,
       "present": true,
       "status": "pending-confirmation",
-      "changeSincePreviousObservation": "unchanged",
+      "changeSincePreviousObservation": "modified",
       "modelIds": [
         "mcn7a"
       ],
@@ -1858,7 +1838,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "unchanged",
+      "changeSincePreviousObservation": "modified",
       "modelIds": [
         "mcn7p"
       ],
@@ -1938,7 +1918,7 @@
       "excluded": false,
       "present": true,
       "status": "pending-confirmation",
-      "changeSincePreviousObservation": "unchanged",
+      "changeSincePreviousObservation": "modified",
       "modelIds": [
         "mctar7"
       ],

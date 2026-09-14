@@ -1,0 +1,201 @@
+{
+  "id": "mcnash15",
+  "name": "MCNASH15",
+  "series": "NAS",
+  "tagline": "Intel Core Ultra NAS PC with six 2.5GbE ports and optional 10G SFP+",
+  "description": "MCNASH15 offers Intel Core Ultra 155H / 165H / 185H processor options, up to 96GB DDR5, six Intel i226 2.5GbE ports, dual M.2 PCIe storage and SATA. The standard H15-155H-6L configuration can be ordered with two or four additional 10G SFP+ ports. The 165 x 154 x 78 mm enclosure uses 19V DC input.",
+  "highlights": [
+    "Intel Core Ultra options",
+    "Up to 96GB DDR5",
+    "6 x Intel i226 2.5GbE",
+    "Optional 2 / 4 x 10G SFP+"
+  ],
+  "operatingRange": "0°C to 50°C with commercial HDD; -20°C to 50°C with industrial SSD",
+  "image": "/assets/products/commercial/ver2/mcnash15/main.webp",
+  "galleryImages": [
+    "/assets/products/commercial/ver2/mcnash15/view-1.webp",
+    "/assets/products/commercial/ver2/mcnash15/view-2.webp"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/commercial/ver2/mcnash15/view-1.webp",
+      "title": "MCNASH15 USB and control panel",
+      "description": "Standard H15-155H-6L shown; optional configurations add SFP+ ports."
+    },
+    {
+      "image": "/assets/products/commercial/ver2/mcnash15/view-2.webp",
+      "title": "MCNASH15 network panel",
+      "description": "Standard H15-155H-6L shown; optional configurations add SFP+ ports."
+    }
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCNASH15"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel Core Ultra 155H / 165H / 185H (Meteor Lake)"
+    },
+    {
+      "label": "Chipset",
+      "value": "BKHD-2049-6L-15"
+    },
+    {
+      "label": "Graphics",
+      "value": "Integrated Intel graphics"
+    },
+    {
+      "label": "Display",
+      "value": "1 x HDMI; 1 x DP; 1 x USB Type-C"
+    },
+    {
+      "label": "Memory",
+      "value": "2 x DDR5 SO-DIMM, up to 96 GB, 5600 MHz"
+    },
+    {
+      "label": "Weight",
+      "value": "Net 1.55 kg; gross 2.5 kg; package 295 x 230 x 135 mm"
+    },
+    {
+      "label": "USB",
+      "value": "2 x USB 3.0; 4 x USB 2.0; 1 x USB Type-C"
+    },
+    {
+      "label": "Power",
+      "value": "DC 19 V"
+    },
+    {
+      "label": "Network",
+      "value": "6 x Intel i226 RJ45 2.5 GbE"
+    },
+    {
+      "label": "Storage",
+      "value": "2 x M.2 Key-M PCIe x4; 1 x SATA 3.0"
+    },
+    {
+      "label": "Expansion",
+      "value": "1 x M.2 Key-E; 1 x M.2 Key-B; 1 x Mini PCIe; 1 x PCIe x8"
+    },
+    {
+      "label": "Dimensions",
+      "value": "165 x 154 x 78 mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI BIOS"
+    },
+    {
+      "label": "Certificates",
+      "value": "CE; CCC; FCC Class B; RoHS"
+    },
+    {
+      "label": "Environment - Operating",
+      "value": "0~50 C (commercial HDD); -20~50 C (industrial SSD); 5%~90% RH, non-condensing"
+    },
+    {
+      "label": "Functions",
+      "value": "Auto power-on; Wake-on-LAN; PXE; watchdog"
+    },
+    {
+      "label": "Network panel I/O",
+      "value": "6 x RJ45 2.5 GbE; optional 2 / 4 x 10G SFP+; 1 x COM; 1 x DC input"
+    },
+    {
+      "label": "USB and control panel I/O",
+      "value": "2 x USB 3.0; 4 x USB 2.0; USB Type-C; fan power; 4G SIM; 5G SIM; power button"
+    },
+    {
+      "label": "Configurations",
+      "value": "Standard: H15-155H-6L (6 x 2.5 GbE) Optional: H15-155H-6L-2S (+2 x 10G SFP+) / H15-155H-6L-4S (+4 x 10G SFP+)"
+    }
+  ],
+  "sourceBrochure": "NAS PC/MCNASH15 brochure.pdf",
+  "sourceSha256": "5931f9dcf3e6a606f4c51e962ea0dc09a9e0e5671abc6db07654c8042e6428fc",
+  "category": "commercial-mini-pc",
+  "images": [
+    "/assets/products/commercial/ver2/mcnash15/main.webp"
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MCNASH15"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel Core Ultra 155H / 165H / 185H (Meteor Lake)"
+    },
+    {
+      "label": "Chipset",
+      "value": "BKHD-2049-6L-15"
+    },
+    {
+      "label": "Graphics",
+      "value": "Integrated Intel graphics"
+    },
+    {
+      "label": "Display",
+      "value": "1 x HDMI; 1 x DP; 1 x USB Type-C"
+    },
+    {
+      "label": "Memory",
+      "value": "2 x DDR5 SO-DIMM, up to 96 GB, 5600 MHz"
+    },
+    {
+      "label": "Weight",
+      "value": "Net 1.55 kg; gross 2.5 kg; package 295 x 230 x 135 mm"
+    },
+    {
+      "label": "USB",
+      "value": "2 x USB 3.0; 4 x USB 2.0; 1 x USB Type-C"
+    },
+    {
+      "label": "Power",
+      "value": "DC 19 V"
+    },
+    {
+      "label": "Network",
+      "value": "6 x Intel i226 RJ45 2.5 GbE"
+    },
+    {
+      "label": "Storage",
+      "value": "2 x M.2 Key-M PCIe x4; 1 x SATA 3.0"
+    },
+    {
+      "label": "Expansion",
+      "value": "1 x M.2 Key-E; 1 x M.2 Key-B; 1 x Mini PCIe; 1 x PCIe x8"
+    },
+    {
+      "label": "Dimensions",
+      "value": "165 x 154 x 78 mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI BIOS"
+    },
+    {
+      "label": "Certificates",
+      "value": "CE; CCC; FCC Class B; RoHS"
+    },
+    {
+      "label": "Environment - Operating",
+      "value": "0~50 C (commercial HDD); -20~50 C (industrial SSD); 5%~90% RH, non-condensing"
+    },
+    {
+      "label": "Functions",
+      "value": "Auto power-on; Wake-on-LAN; PXE; watchdog"
+    },
+    {
+      "label": "Network panel I/O",
+      "value": "6 x RJ45 2.5 GbE; optional 2 / 4 x 10G SFP+; 1 x COM; 1 x DC input"
+    },
+    {
+      "label": "USB and control panel I/O",
+      "value": "2 x USB 3.0; 4 x USB 2.0; USB Type-C; fan power; 4G SIM; 5G SIM; power button"
+    },
+    {
+      "label": "Configurations",
+      "value": "Standard: H15-155H-6L (6 x 2.5 GbE) Optional: H15-155H-6L-2S (+2 x 10G SFP+) / H15-155H-6L-4S (+4 x 10G SFP+)"
+    }
+  ]
+}

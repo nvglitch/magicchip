@@ -336,6 +336,14 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
     "image": "/assets/products/thumbnails/mcdpc1.webp",
     "source": "/assets/products/commercial/brochure/mcdpc1/main.webp"
   },
+  "mcnash14": {
+    "image": "/assets/products/thumbnails/mcnash14.webp",
+    "source": "/assets/products/commercial/ver2/mcnash14/main.webp"
+  },
+  "mcnash15": {
+    "image": "/assets/products/thumbnails/mcnash15.webp",
+    "source": "/assets/products/commercial/ver2/mcnash15/main.webp"
+  },
   "mc12": {
     "image": "/assets/products/thumbnails/mc12.webp",
     "source": "/assets/products/commercial/dpc/mc12/images/main-square.png"
@@ -411,10 +419,6 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
   "mcnash10": {
     "image": "/assets/products/thumbnails/mcnash10.webp",
     "source": "/assets/products/commercial/nas/mcnash10/images/main-square.png"
-  },
-  "mcnash14": {
-    "image": "/assets/products/thumbnails/mcnash14.webp",
-    "source": "/assets/products/commercial/nas/mcnash14/images/main-square.png"
   },
   "mcnash9": {
     "image": "/assets/products/thumbnails/mcnash9.webp",
