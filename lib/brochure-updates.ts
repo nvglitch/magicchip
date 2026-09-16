@@ -5,7 +5,7 @@ export const brochureUpdates = [
     "name": "MCIPCB13A",
     "series": "B",
     "tagline": "Configurable Intel Core industrial PC with dual LAN and dual COM",
-    "description": "MCIPCB13A provides Intel Core platform options, dual Gigabit Ethernet, two DB9 COM ports, eight USB ports, and 12–19V input in a 193.9 x 127 x 57.2 mm enclosure. Memory and storage depend on the processor configuration.",
+    "description": "MCIPCB13A offers Intel Core i3/i5/i7 processor options across the 4th, 6th, 7th, 8th, 10th, 12th and 13th generations, with DDR3L, DDR4 or DDR5 memory depending on the platform. The 12th/13th Gen configuration supports up to 64GB DDR5. Dual Gigabit Ethernet, two DB9 COM ports, eight USB ports and 12–19V input fit a 193.9 x 127 x 57.2 mm enclosure.",
     "highlights": [
       "Intel Core options",
       "2 x Gigabit LAN",
@@ -19,7 +19,7 @@ export const brochureUpdates = [
       },
       {
         "label": "CPU",
-        "value": "Optional Intel 4th/5th/6th/7th/8th/10th Gen Core i3/i5/i7 CPU"
+        "value": "Optional Intel 4th/6th/7th/8th/10th/12th/13th Gen Core i3/i5/i7 CPU"
       },
       {
         "label": "Display",
@@ -27,7 +27,7 @@ export const brochureUpdates = [
       },
       {
         "label": "Memory",
-        "value": "4th Gen: 1 x DDR3L SODIMM, maximum support 8GB; 6th/7th/8th Gen: 1 x DDR4 SODIMM, maximum support 16GB; 8th/10th Gen: 2 x DDR4 SODIMM, maximum support 32GB"
+        "value": "4th Gen: 1 x DDR3L SODIMM, maximum support 8GB; 6th/7th/8th Gen: 1 x DDR4 SODIMM, maximum support 16GB; 8th/10th Gen: 2 x DDR4 SODIMM, maximum support 32GB; 12th/13th Gen: 1 x DDR5 SODIMM, maximum support 64GB"
       },
       {
         "label": "USB",
@@ -47,7 +47,7 @@ export const brochureUpdates = [
       },
       {
         "label": "Storage",
-        "value": "4th Gen: 1 x MSATA; 6th/7th/8th/10th Gen: 1 x M.2 2280 (Supports SATA and NVME); 1 x 2.5\" HDD/SSD"
+        "value": "4th Gen: 1 x MSATA; 6th/7th/8th/10th/12th/13th Gen: 1 x M.2 2280 (Supports SATA and NVME); 1 x 2.5\" HDD/SSD"
       },
       {
         "label": "Expansion",
@@ -90,7 +90,7 @@ export const brochureUpdates = [
       }
     ],
     "sourceBrochure": "工控机IPC/B系列/MCIPCB13A brochure.pdf",
-    "sourceSha256": "6b9c629162a2c9af92762125203f94d55ff9d4cfe5adf4c020ed1fc36449606e",
+    "sourceSha256": "363189e22ab6dd228f131176356621199904e7287d98c53414995132eff4d483",
     "operatingRange": "-20°C to 60°C"
   },
   {

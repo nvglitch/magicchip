@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
   "sourceRoot": "D:\\本地资源库\\电脑相关\\电脑册子归档\\ver2",
-  "observedAtUtc": "2026-09-16T06:11:27.014876+00:00",
+  "observedAtUtc": "2026-09-14T01:18:26.161721+00:00",
   "observationOnly": false,
   "totalPdfCount": 120,
   "inScopePdfCount": 117,
   "statusCounts": {
     "verified-current": 102,
-    "updated": 7,
+    "updated": 6,
     "excluded": 3,
-    "pending-confirmation": 8,
+    "pending-confirmation": 9,
     "retired-by-user": 1
   },
-  "previousObservation": "brochure-history/before-2026-09-16-update.json",
+  "previousObservation": "brochure-history/before-2026-09-14-update.json",
   "files": [
     {
       "relativePath": "AIPC/MCAIPC1 brochure.pdf",
@@ -265,7 +265,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "unchanged",
+      "changeSincePreviousObservation": "modified",
       "modelIds": [
         "mcnash14"
       ],
@@ -294,7 +294,7 @@
       "sizeBytes": 1174993,
       "modifiedAtUtc": "2026-09-11T10:13:46.135587+00:00",
       "observedSha256": "5931f9dcf3e6a606f4c51e962ea0dc09a9e0e5671abc6db07654c8042e6428fc",
-      "changeSincePreviousObservation": "unchanged"
+      "changeSincePreviousObservation": "new"
     },
     {
       "relativePath": "NAS PC/MCNASH9 brochure.pdf",
@@ -451,25 +451,23 @@
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB13A brochure.pdf",
-      "sizeBytes": 2832844,
-      "modifiedAtUtc": "2026-09-14T07:18:33.766329+00:00",
-      "observedSha256": "363189e22ab6dd228f131176356621199904e7287d98c53414995132eff4d483",
-      "appliedSha256": "363189e22ab6dd228f131176356621199904e7287d98c53414995132eff4d483",
+      "sizeBytes": 2711372,
+      "modifiedAtUtc": "2026-09-10T07:11:03.729916+00:00",
+      "observedSha256": "6b9c629162a2c9af92762125203f94d55ff9d4cfe5adf4c020ed1fc36449606e",
+      "appliedSha256": null,
       "excluded": false,
       "present": true,
-      "status": "updated",
-      "changeSincePreviousObservation": "modified",
+      "status": "pending-confirmation",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb13a"
       ],
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb13a"
       ],
-      "reviewedAtUtc": "2026-09-16T06:11:27.014876+00:00",
-      "notes": "新版 CPU 行确认第 4/6/7/8/10/12/13 代，移除第 5 代；官网同步 DDR5 最高 64GB 和第 12/13 代存储选项。原 CPU/内存冲突已解决，图片无变化。生产构建和参数搜索验证通过。",
-      "partialUpdate": false,
-      "previousSha256": "6b9c629162a2c9af92762125203f94d55ff9d4cfe5adf4c020ed1fc36449606e",
-      "appliedAtUtc": "2026-09-16T06:11:27.014876+00:00"
+      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "notes": "CPU 行仅列第 4/5/6/7/8/10 代，内存和存储行却含第 12/13 代；暂不发布未获 CPU 行支持的 DDR5/64GB 配置。",
+      "partialUpdate": true
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB13B brochure.pdf",

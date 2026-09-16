@@ -12,7 +12,7 @@ spec = importlib.util.spec_from_file_location('brochures', ROOT / 'scripts/impor
 brochures = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(brochures)
 META = {
-    'MCIPCB13A': ('B', 'Configurable Intel Core industrial PC with dual LAN and dual COM', 'MCIPCB13A provides Intel Core platform options, dual Gigabit Ethernet, two DB9 COM ports, eight USB ports, and 12–19V input in a 193.9 x 127 x 57.2 mm enclosure. Memory and storage depend on the processor configuration.', ['Intel Core options', '2 x Gigabit LAN', '2 x DB9 COM', '12–19V DC input']),
+    'MCIPCB13A': ('B', 'Configurable Intel Core industrial PC with dual LAN and dual COM', 'MCIPCB13A offers Intel Core i3/i5/i7 processor options across the 4th, 6th, 7th, 8th, 10th, 12th and 13th generations, with DDR3L, DDR4 or DDR5 memory depending on the platform. The 12th/13th Gen configuration supports up to 64GB DDR5. Dual Gigabit Ethernet, two DB9 COM ports, eight USB ports and 12–19V input fit a 193.9 x 127 x 57.2 mm enclosure.', ['Intel Core options', '2 x Gigabit LAN', '2 x DB9 COM', '12–19V DC input']),
     'MCIPCB13B': ('B', 'Intel Core Ultra / Core 3 industrial PC with DDR5 and triple display', 'MCIPCB13B supports Intel Core Ultra Series 1/2 or Core 3 Series processors, up to 64GB DDR5, dual Gigabit LAN, two RS-232 ports, two HDMI outputs and DisplayPort. USB allocation and 2.5-inch storage availability depend on the selected processor platform.', ['Core Ultra / Core 3', 'Up to 64GB DDR5', '2 x HDMI + DisplayPort', '12–19V DC input']),
     'MCIPCE1': ('E', 'Intel Core i7-1360P industrial PC with four LAN ports and 9–36V input', 'MCIPCE1 combines an Intel Core i7-1360P, up to 32GB DDR4, two Gigabit and two 2.5GbE ports, six serial ports, and 14 GPIO signals. Four serial ports support RS-485/RS-422. A 9–36V Phoenix terminal input, multiple storage interfaces, and desktop or wall mounting support custom industrial deployments.', ['Intel Core i7-1360P', '2 x GbE + 2 x 2.5GbE', '6 x COM + 14 GPIO', '9–36V DC input']),
     'MC15UH': ('DPC', 'Intel Core Ultra desktop PC with USB4, OCuLink and dual 2.5GbE', 'MC15UH combines Intel Core Ultra 7 255H or Core Ultra 9 285H, Intel Arc 140T graphics, up to 128GB DDR5, dual NVMe storage, USB4 and OCuLink. HDMI, DisplayPort and USB4 provide display connectivity in a 132 x 132 x 50.5 mm desktop enclosure.', ['Core Ultra 7 / 9', 'Up to 128GB DDR5', 'Dual 2.5GbE', 'USB4 + OCuLink']),
@@ -29,6 +29,15 @@ def build():
         with pdfplumber.open(source) as pdf:
             rows = brochures.specifications(pdf.pages[0], model, 815 if model == 'MCIPCE1' else 740)
             views = brochures.images(PdfReader(source).pages[0], pdf.pages[0])
+        if '(cid:' in json.dumps(rows):
+            # Some revised PDFs lack Unicode mappings. Reuse visually reviewed
+            # parameters only for the exact source fingerprint; never publish CID text.
+            reviewed = json.loads((ROOT / 'content/products/items' / f'{model.lower()}.json').read_text(encoding='utf-8'))
+            if reviewed.get('sourceSha256') != hashlib.sha256(source.read_bytes()).hexdigest():
+                raise ValueError(f'{model}: PDF text encoding requires a fresh visual parameter review')
+            rows = reviewed['specifications']
+            if '(cid:' in json.dumps(rows):
+                raise ValueError(f'{model}: reviewed parameters contain invalid PDF text')
         for row in rows:
             row['label'] = {'DC input': 'Power', 'Input': 'Power', 'Outputs': 'Display', 'Slots': 'Expansion', 'Features': 'Firmware'}.get(row['label'], row['label'])
             row['value'] = row['value'].replace('Intel Core Ultra 7255H/UItra 9285H Processor', 'Intel Core Ultra 7 255H / Core Ultra 9 285H')
@@ -44,10 +53,7 @@ def build():
             for row in rows:
                 if row['label'] == 'Internal I/O - Headers': row['value'] = row['value'].replace('; 2 x DDR4 SO-DIMM slots', '')
         if model == 'MCTAR7': rows = [row for row in rows if row['label'] != 'Chipset']
-        if model == 'MCIPCB13A':
-            for row in rows:
-                if row['label'] == 'Memory': row['value'] = row['value'].split('; 12th/13th')[0]
-                if row['label'] == 'Storage': row['value'] = row['value'].replace('/12th/13th', '')
+        # MCIPCB13A: September 16 source now confirms 12th/13th Gen and DDR5.
         category = 'industrial' if series in ['B', 'E'] else 'commercial'
         base = f'/assets/products/{category}/ver2/{model.lower()}'
         main_index = 2 if len(views) == 3 else 0

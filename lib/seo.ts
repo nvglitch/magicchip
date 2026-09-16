@@ -8,7 +8,7 @@ import { commercialCatalog } from '@/lib/commercial-catalog';
 export const SITE_URL = 'https://szmagicchip.com';
 export const SITE_NAME = 'MagicChip';
 // Update this only when the published site or product catalog materially changes.
-export const SITE_CONTENT_LAST_UPDATED = new Date('2026-09-14T00:00:00.000Z');
+export const SITE_CONTENT_LAST_UPDATED = new Date('2026-09-16T00:00:00.000Z');
 export const DEFAULT_SOCIAL_IMAGE = '/assets/brand/og-default.png';
 
 export type SeoEntry = {
