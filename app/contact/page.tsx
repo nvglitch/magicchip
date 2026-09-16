@@ -255,7 +255,6 @@ const contactData = {
 
 const formExtras = {
   en: {
-    eyebrow: 'Project Inquiry',
     intro: 'Tell us what you are building so our team can respond with the right product and configuration.',
     inquiryType: 'Inquiry Type',
     chooseType: 'Select an inquiry type',
@@ -270,7 +269,6 @@ const formExtras = {
     requiredNote: 'Required fields are marked with *.',
   },
   fr: {
-    eyebrow: 'Demande de Projet',
     intro: 'Décrivez votre projet afin que notre équipe puisse recommander le bon produit et la bonne configuration.',
     inquiryType: 'Type de Demande',
     chooseType: 'Sélectionnez un type de demande',
@@ -285,7 +283,6 @@ const formExtras = {
     requiredNote: 'Les champs obligatoires sont marqués d’un *.',
   },
   de: {
-    eyebrow: 'Projektanfrage',
     intro: 'Beschreiben Sie Ihr Projekt, damit unser Team das passende Produkt und die richtige Konfiguration empfehlen kann.',
     inquiryType: 'Art der Anfrage',
     chooseType: 'Art der Anfrage auswählen',
@@ -300,7 +297,6 @@ const formExtras = {
     requiredNote: 'Pflichtfelder sind mit * markiert.',
   },
   it: {
-    eyebrow: 'Richiesta di Progetto',
     intro: 'Descrivi il tuo progetto per aiutarci a consigliare il prodotto e la configurazione più adatti.',
     inquiryType: 'Tipo di Richiesta',
     chooseType: 'Seleziona un tipo di richiesta',
@@ -315,7 +311,6 @@ const formExtras = {
     requiredNote: 'I campi obbligatori sono contrassegnati con *.',
   },
   es: {
-    eyebrow: 'Consulta de Proyecto',
     intro: 'Cuéntenos qué está desarrollando para recomendarle el producto y la configuración adecuados.',
     inquiryType: 'Tipo de Consulta',
     chooseType: 'Seleccione un tipo de consulta',
@@ -428,14 +423,11 @@ export default function ContactPage() {
                   animate={{ opacity: 1, y: 0 }}
                   className="grid overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.1)] lg:grid-cols-[0.78fr_1.22fr]"
                 >
-                  <aside className="relative overflow-hidden bg-[#101827] p-7 text-white sm:p-9 lg:p-10">
+                  <aside className="relative flex flex-col justify-center overflow-hidden bg-[#101827] p-7 text-white sm:p-9 lg:p-10">
                     <div className="absolute -right-20 -top-20 h-52 w-52 rounded-full bg-emerald-500/15 blur-3xl" />
                     <div className="absolute -bottom-24 -left-20 h-56 w-56 rounded-full bg-blue-500/15 blur-3xl" />
                     <div className="relative">
-                      <span className="inline-flex rounded-full border border-emerald-300/25 bg-emerald-300/10 px-3 py-1 text-xs font-bold uppercase tracking-normal text-emerald-200">
-                        {extras.eyebrow}
-                      </span>
-                      <h2 className="mt-6 text-3xl font-bold">{data.whatsapp.title}</h2>
+                      <h2 className="text-3xl font-bold">{data.whatsapp.title}</h2>
                       <p className="mt-3 max-w-md leading-relaxed text-slate-300">{data.whatsapp.description}</p>
                       <a
                         href="https://wa.me/8613392172330"
@@ -467,9 +459,8 @@ export default function ContactPage() {
                     </div>
                   </aside>
 
-                  <div className="p-6 sm:p-9 lg:p-10">
-                    <p className="text-sm font-bold uppercase tracking-normal text-blue-700">{extras.eyebrow}</p>
-                    <h2 className="mt-2 text-3xl font-bold text-slate-950">{data.form.title}</h2>
+                  <div className="flex flex-col justify-center p-6 sm:p-9 lg:p-10">
+                    <h2 className="text-3xl font-bold text-slate-950">{data.form.title}</h2>
                     <p className="mt-3 max-w-2xl leading-relaxed text-slate-600">{extras.intro}</p>
 
                     <form onSubmit={handleSubmit} className="mt-8 space-y-5">
