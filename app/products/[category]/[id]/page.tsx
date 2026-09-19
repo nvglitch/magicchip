@@ -881,7 +881,6 @@ export default function ProductDetailPage() {
         <section className="py-16 bg-[#f3f8f6]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-9 text-center">
-              <p className="text-sm font-bold uppercase tracking-normal text-blue-700 mb-3">{t.productDetail.productGallery}</p>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-950">{t.productDetail.exploreProduct.replace('{name}', product.name)}</h2>
               <p className="mt-3 text-slate-600">{t.productDetail.galleryDescription}</p>
             </div>
@@ -918,14 +917,12 @@ export default function ProductDetailPage() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10 text-center">
-            <p className="text-sm font-bold uppercase tracking-normal text-blue-700 mb-3">{t.productDetail.technicalSpecifications}</p>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-950">{t.productDetail.industrialConfigDetails}</h2>
           </div>
 
           <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }} className="overflow-hidden rounded-xl border border-blue-200 bg-white shadow-lg shadow-blue-900/10">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 bg-gradient-to-r from-[#172033] via-blue-950 to-[#172033] px-6 md:px-8 py-6 text-white">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-normal text-blue-200 mb-2">{t.productDetail.specificationMatrix.replace('{name}', product.name)}</p>
                 <h3 className="text-2xl font-bold">{t.productDetail.hardwareParameters}</h3>
               </div>
               {product.operatingRange && <div className="rounded-lg border border-amber-300/30 bg-amber-300/10 px-4 py-3 text-left md:text-right">
@@ -958,7 +955,6 @@ export default function ProductDetailPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] gap-10 items-start">
             <div>
-              <p className="text-sm font-bold uppercase tracking-normal text-blue-700 mb-3">{t.productDetail.productAdvantages}</p>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-950 mb-5">{t.productDetail.advantagesHeading}</h2>
               <p className="text-slate-600 leading-relaxed">
                 {product.advantageSummary || product.description}

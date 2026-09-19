@@ -33,10 +33,7 @@ export default function FeaturedProduct() {
 
           {/* Content Side */}
           <div>
-            <span className="text-sm font-bold uppercase tracking-normal text-blue-700">
-              {t.featured.badge}
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               {t.featured.title}
             </h2>
             <p className="text-lg text-gray-600 mb-6">

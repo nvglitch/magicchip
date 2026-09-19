@@ -36,7 +36,7 @@ const scenarios = [
 
 const copy = {
   en: {
-    eyebrow: 'APPLICATION-BASED SELECTION', title: 'Deployment Scenarios', subtitle: 'Find suitable MagicChip systems by workload, connectivity, display, and operating-environment requirements.',
+    title: 'Deployment Scenarios', subtitle: 'Find suitable MagicChip systems by workload, connectivity, display, and operating-environment requirements.',
     recommended: 'Recommended SKUs', note: 'Recommendations are based on the published hardware capabilities of our current product lineup.',
     ctaTitle: 'Need help matching hardware to your project?', ctaText: 'Share your I/O, performance, networking, and deployment requirements with our team.', ctaButton: 'Discuss Your Project',
     items: {
@@ -49,7 +49,7 @@ const copy = {
     },
   },
   fr: {
-    eyebrow: 'SÉLECTION PAR APPLICATION', title: 'Scénarios de déploiement', subtitle: 'Trouvez les systèmes MagicChip adaptés selon la charge, la connectivité, l’affichage et l’environnement.',
+    title: 'Scénarios de déploiement', subtitle: 'Trouvez les systèmes MagicChip adaptés selon la charge, la connectivité, l’affichage et l’environnement.',
     recommended: 'SKU recommandés', note: 'Les recommandations reposent sur les capacités matérielles publiées de notre gamme actuelle.',
     ctaTitle: 'Besoin d’aide pour choisir le matériel ?', ctaText: 'Partagez vos besoins en E/S, performances, réseau et déploiement avec notre équipe.', ctaButton: 'Discuter du projet',
     items: {
@@ -62,7 +62,7 @@ const copy = {
     },
   },
   de: {
-    eyebrow: 'ANWENDUNGSBASIERTE AUSWAHL', title: 'Einsatzszenarien', subtitle: 'Finden Sie passende MagicChip-Systeme nach Rechenlast, Konnektivität, Anzeige und Umgebung.',
+    title: 'Einsatzszenarien', subtitle: 'Finden Sie passende MagicChip-Systeme nach Rechenlast, Konnektivität, Anzeige und Umgebung.',
     recommended: 'Empfohlene SKUs', note: 'Die Empfehlungen basieren auf den veröffentlichten Hardwarefähigkeiten des aktuellen Portfolios.',
     ctaTitle: 'Benötigen Sie Hilfe bei der Hardwareauswahl?', ctaText: 'Teilen Sie uns Ihre Anforderungen an I/O, Leistung, Netzwerk und Einsatz mit.', ctaButton: 'Projekt besprechen',
     items: {
@@ -75,7 +75,7 @@ const copy = {
     },
   },
   it: {
-    eyebrow: 'SELEZIONE PER APPLICAZIONE', title: 'Scenari di utilizzo', subtitle: 'Trova i sistemi MagicChip adatti in base a carico, connettività, display e ambiente operativo.',
+    title: 'Scenari di utilizzo', subtitle: 'Trova i sistemi MagicChip adatti in base a carico, connettività, display e ambiente operativo.',
     recommended: 'SKU consigliati', note: 'I consigli si basano sulle capacità hardware pubblicate dell’attuale gamma prodotti.',
     ctaTitle: 'Serve aiuto per scegliere l’hardware?', ctaText: 'Condividi con il nostro team i requisiti di I/O, prestazioni, rete e installazione.', ctaButton: 'Parla del progetto',
     items: {
@@ -88,7 +88,7 @@ const copy = {
     },
   },
   es: {
-    eyebrow: 'SELECCIÓN POR APLICACIÓN', title: 'Escenarios de implementación', subtitle: 'Encuentre sistemas MagicChip según carga, conectividad, visualización y entorno operativo.',
+    title: 'Escenarios de implementación', subtitle: 'Encuentre sistemas MagicChip según carga, conectividad, visualización y entorno operativo.',
     recommended: 'SKU recomendados', note: 'Las recomendaciones se basan en las capacidades de hardware publicadas de la gama actual.',
     ctaTitle: '¿Necesita ayuda para elegir el hardware?', ctaText: 'Comparta con nuestro equipo sus requisitos de E/S, rendimiento, red e implementación.', ctaButton: 'Hablar del proyecto',
     items: {
@@ -114,8 +114,7 @@ export default function ScenariosPage() {
         <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 md:py-28 lg:px-8">
           <div className="max-w-4xl">
             <div className="mb-7 h-px w-24 bg-gradient-to-r from-amber-400 to-transparent" />
-            <p className="text-sm font-bold tracking-normal text-blue-300">{text.eyebrow}</p>
-            <h1 className="mt-4 text-5xl font-bold tracking-tight md:text-7xl">{text.title}</h1>
+            <h1 className="text-5xl font-bold tracking-tight md:text-7xl">{text.title}</h1>
             <p className="mt-6 max-w-3xl text-xl leading-relaxed text-slate-300 md:text-2xl">{text.subtitle}</p>
           </div>
         </div>

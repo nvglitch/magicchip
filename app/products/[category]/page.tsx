@@ -432,8 +432,7 @@ export default function CategoryPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
             <div>
-              <p className="text-sm font-bold uppercase tracking-normal text-blue-700">Category Overview</p>
-              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">{category === 'industrial-mini-pc'
+              <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">{category === 'industrial-mini-pc'
                 ? 'Compact computers for machines, data, and the industrial edge'
                 : category === 'firewall-mini-pc'
                   ? 'Network appliances from compact edge gateways to 1U servers'
@@ -461,8 +460,7 @@ export default function CategoryPage() {
       <section id="applications" className="scroll-mt-32 bg-[#eaf0ee] py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
-            <p className="text-sm font-bold uppercase tracking-normal text-blue-700">Application Scenarios</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
               {category === 'industrial-mini-pc'
                 ? 'From machine control to operator stations'
                 : category === 'firewall-mini-pc'
@@ -518,8 +516,7 @@ export default function CategoryPage() {
       <section id="models" className="scroll-mt-32 bg-gray-50 py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10 max-w-3xl">
-            <p className="text-sm font-bold uppercase tracking-normal text-blue-700">Current Models</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">Choose the right configuration</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">Choose the right configuration</h2>
             <p className="mt-4 text-base leading-7 text-slate-600">
               {category === 'industrial-mini-pc'
                 ? 'Select an IPC series by serial, network, and display architecture, then open the available model page.'
