@@ -4,6 +4,29 @@ import { groupProductNavigation } from '@/lib/product-navigation';
 
 type PreviewModel = { id: string; name: string; image: string };
 
+export function TpcSeriesLinks({ models, category, language }: { models: PreviewModel[]; category: string; language: string }) {
+  const seriesTitle: Record<string, (code: string) => string> = {
+    en: code => `${code} Series`,
+    de: code => `${code}-Serie`,
+    fr: code => `Série ${code}`,
+    it: code => `Serie ${code}`,
+    es: code => `Serie ${code}`,
+  };
+  return <div className="space-y-6">
+    {['B', 'E', 'X'].map(code => {
+      const members = models.filter(model => model.name.endsWith(code));
+      if (!members.length) return null;
+      return <section key={code} aria-label={(seriesTitle[language] ?? seriesTitle.en)(code)} className="border-b border-slate-100 pb-6 last:border-0 last:pb-0">
+        <h4 className="mb-3 flex items-center gap-2 text-sm font-semibold text-slate-700">
+          {(seriesTitle[language] ?? seriesTitle.en)(code)}
+          <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-500">{members.length}</span>
+        </h4>
+        <ModelFamilyLinks models={members} category={category} />
+      </section>;
+    })}
+  </div>;
+}
+
 function ModelPreview({ models }: { models: PreviewModel[] }) {
   return <span aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-full z-30 hidden pb-2 group-hover/preview:block group-focus-visible/preview:block">
     <span className="grid max-h-80 gap-2 overflow-y-auto rounded-xl border border-slate-200 bg-white p-3 shadow-xl">

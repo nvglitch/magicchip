@@ -1,6 +1,7 @@
 import { applyBrochureSpecCorrections } from '@/lib/brochure-spec-corrections';
 import { brochureUpdates } from '@/lib/brochure-updates';
 import { industrialBrochureProducts } from '@/lib/brochure-products';
+import { tpcXProducts } from '@/lib/tpc-x-products';
 
 export type IndustrialSeriesCode = 'A' | 'B' | 'C' | 'D' | 'E' | 'TPC';
 
@@ -22,6 +23,7 @@ export type IndustrialCatalogItem = {
 
 // Product facts are based on the available source specifications.
 const industrialCatalogSource: IndustrialCatalogItem[] = [
+  ...(tpcXProducts as IndustrialCatalogItem[]),
   ...(brochureUpdates.filter(item => item.series === 'B' || item.series === 'E') as IndustrialCatalogItem[]),
   ...industrialBrochureProducts,
   {

@@ -20,6 +20,34 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
     "image": "/assets/products/thumbnails/mcai2.webp",
     "source": "/assets/products/ai/brochure/mcaipc2/main.webp"
   },
+  "mctpc-1004x": {
+    "image": "/assets/products/thumbnails/mctpc-1004x.webp",
+    "source": "/assets/products/industrial/ver2/mctpc-1004x/front.webp"
+  },
+  "mctpc-1201x": {
+    "image": "/assets/products/thumbnails/mctpc-1201x.webp",
+    "source": "/assets/products/industrial/ver2/mctpc-1201x/front.webp"
+  },
+  "mctpc-1501x": {
+    "image": "/assets/products/thumbnails/mctpc-1501x.webp",
+    "source": "/assets/products/industrial/ver2/mctpc-1501x/front.webp"
+  },
+  "mctpc-1506x": {
+    "image": "/assets/products/thumbnails/mctpc-1506x.webp",
+    "source": "/assets/products/industrial/ver2/mctpc-1506x/front.webp"
+  },
+  "mctpc-1701x": {
+    "image": "/assets/products/thumbnails/mctpc-1701x.webp",
+    "source": "/assets/products/industrial/ver2/mctpc-1701x/front.webp"
+  },
+  "mctpc-1901x": {
+    "image": "/assets/products/thumbnails/mctpc-1901x.webp",
+    "source": "/assets/products/industrial/ver2/mctpc-1901x/front.webp"
+  },
+  "mctpc-2105x": {
+    "image": "/assets/products/thumbnails/mctpc-2105x.webp",
+    "source": "/assets/products/industrial/ver2/mctpc-2105x/front.webp"
+  },
   "mcipcb13a": {
     "image": "/assets/products/thumbnails/mcipcb13a.webp",
     "source": "/assets/products/industrial/ver2/mcipcb13a/main.webp"

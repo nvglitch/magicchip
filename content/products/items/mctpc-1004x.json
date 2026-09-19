@@ -1,0 +1,160 @@
+{
+  "id": "mctpc-1004x",
+  "name": "MCTPC-1004X",
+  "tagline": "10.4-inch 1024 x 768 industrial panel PC with four platform options",
+  "description": "MCTPC-1004X combines a 10.4-inch 1024 x 768 capacitive display with Intel J1900 or Core 3rd–8th Gen platform options. Dual Gigabit Ethernet and two RS-232/RS-485 COM ports support equipment integration. The front panel is IP65-rated; standard power is 12V DC, with an optional 9–36V Phoenix terminal. Memory, USB and storage specifications are listed separately for each platform.",
+  "highlights": [
+    "10.4-inch capacitive display",
+    "Four Intel platform options",
+    "Dual Gigabit Ethernet",
+    "IP65 front panel"
+  ],
+  "galleryImages": [
+    "/assets/products/industrial/ver2/mctpc-1004x/rear-core.webp",
+    "/assets/products/industrial/ver2/mctpc-1004x/rear-j1900.webp",
+    "/assets/products/industrial/ver2/mctpc-1004x/dimensions.webp"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/industrial/ver2/mctpc-1004x/rear-core.webp",
+      "title": "MCTPC-1004X rear view — Core platforms"
+    },
+    {
+      "image": "/assets/products/industrial/ver2/mctpc-1004x/rear-j1900.webp",
+      "title": "MCTPC-1004X rear view — J1900"
+    },
+    {
+      "image": "/assets/products/industrial/ver2/mctpc-1004x/dimensions.webp",
+      "title": "MCTPC-1004X dimensions and panel cutout (mm)"
+    }
+  ],
+  "operatingRange": "-10 to 60 °C / 5 to 95%RH, Non-condensing",
+  "sourceBrochure": "工控机IPC/TPC系列/MCTPC-1004X brochure.pdf",
+  "sourceSha256": "cca71518ed25fa2f1911a621ed0498bb99f3d6913150c5279665348baaff5c90",
+  "category": "industrial-mini-pc",
+  "images": [
+    "/assets/products/industrial/ver2/mctpc-1004x/front.webp"
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MCTPC-1004X"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel J1900 or Intel Core 3rd / 4th / 5th / 6th / 7th / 8th Gen; configuration-dependent memory, USB and storage"
+    },
+    {
+      "label": "Display",
+      "value": "10.4-inch TFT-LCD; 1024 x 768 (optional 800 x 600)"
+    },
+    {
+      "label": "Touch",
+      "value": "Projected capacitive touch; 85% transmittance"
+    },
+    {
+      "label": "Color / brightness",
+      "value": "50% sRGB; 300 cd/m² to 450 cd/m²"
+    },
+    {
+      "label": "Viewing angle",
+      "value": "70/70/60/70"
+    },
+    {
+      "label": "Backlight life",
+      "value": "30,000 hours"
+    },
+    {
+      "label": "Display output",
+      "value": "1 x HDMI"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel HD Graphics"
+    },
+    {
+      "label": "Network",
+      "value": "2 x Realtek RTL8111H Gigabit Ethernet ports"
+    },
+    {
+      "label": "Serial",
+      "value": "2 x DB9 COM, RS-232; COM1/COM2 support RS-485"
+    },
+    {
+      "label": "Audio",
+      "value": "3.5 mm audio; Realtek ALC897 codec"
+    },
+    {
+      "label": "Power",
+      "value": "DC 12 V standard, 5.5 x 2.5 mm; optional 9-36 V Phoenix terminal"
+    },
+    {
+      "label": "Environment - Operating",
+      "value": "-10 to 60 °C / 5 to 95%RH, Non-condensing"
+    },
+    {
+      "label": "Environment - Non-operating",
+      "value": "-20 to 70 °C / 5 to 95%RH, Non-condensing"
+    },
+    {
+      "label": "Protection",
+      "value": "IP65-rated front panel only"
+    },
+    {
+      "label": "Dimensions",
+      "value": "276.6 x 221.6 x 56.5 mm"
+    },
+    {
+      "label": "Panel cutout",
+      "value": "267 x 212 mm"
+    },
+    {
+      "label": "Platform - J1900",
+      "value": "Intel J1900; 1 x DDR3L SODIMM, max 8 GB; 1 x USB 3.0 + 3 x USB 2.0; 1 x mSATA (3 Gb/s)"
+    },
+    {
+      "label": "Platform - Core 3rd Gen",
+      "value": "Intel Core 3rd Gen; 1 x DDR3 SODIMM, max 8 GB; 4 x USB 3.0; 1 x mSATA (6 Gb/s)"
+    },
+    {
+      "label": "Platform - Core 4th / 5th Gen",
+      "value": "Intel Core 4th / 5th Gen; 2 x DDR3L SODIMM, max 16 GB; 4 x USB 3.0; 1 x mSATA (6 Gb/s)"
+    },
+    {
+      "label": "Platform - Core 6th / 7th / 8th Gen",
+      "value": "Intel Core 6th / 7th / 8th Gen; 2 x DDR4 SODIMM, max 32 GB; 4 x USB 3.0; 1 x mSATA (6 Gb/s)"
+    },
+    {
+      "label": "Expansion - J1900",
+      "value": "Mini PCIe full-size for Wi-Fi/4G; half-size for Wi-Fi; 1 x Nano SIM"
+    },
+    {
+      "label": "Expansion - Core 3rd Gen",
+      "value": "Mini PCIe half-size for Wi-Fi only; full-size for Wi-Fi/4G; 1 x Nano SIM"
+    },
+    {
+      "label": "Expansion - Core 4th / 5th Gen",
+      "value": "Mini PCIe half-size for Wi-Fi/BT; full-size for Wi-Fi/4G; 1 x Nano SIM"
+    },
+    {
+      "label": "Expansion - Core 6th / 7th / 8th Gen",
+      "value": "Mini PCIe full-size for Wi-Fi/4G and half-size for Wi-Fi/BT; not two Wi-Fi modules at once; 1 x Nano SIM"
+    },
+    {
+      "label": "GPIO",
+      "value": "J1900 / Core 3rd / Core 4th-5th: 4-channel I/O GPIO; Core 6th-8th: 1 x 2-by-5-pin GPIO header"
+    },
+    {
+      "label": "TPM 2.0",
+      "value": "J1900 / Core 3rd / Core 4th-5th: reserved external header, module not fitted; Core 6th-8th: 1 x 2-by-7-pin header"
+    },
+    {
+      "label": "OS",
+      "value": "Core 3rd Gen: Windows XP / 7 / 10 / Linux; other platforms: Windows 7 / 10 / Linux"
+    },
+    {
+      "label": "Configuration",
+      "value": "Wi-Fi, Bluetooth, 4G and 9-36 V terminal are supported/options where stated; not standard installed parts."
+    }
+  ]
+}

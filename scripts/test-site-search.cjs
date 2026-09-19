@@ -39,7 +39,7 @@ assert(matchSearch(fixture([{ label: 'Memory', value: 'DDR5-4800' }]), 'DDR5'));
 assert.equal(matchSearch(fixture([{ label: 'Memory', value: 'DDR4' }]), 'DDR5'), null);
 assert(matchSearch(fixture([{ label: 'Cooling', value: 'fanless' }]), 'fanles'));
 const products = siteSearchIndex.filter(e => e.type === 'product');
-assert.equal(products.length, 116);
+assert.equal(products.length, 123);
 assert(products.every(e => e.specs?.length));
 assert.equal(new Set(products.map(e => e.href)).size, products.length);
 for (const entry of products) assert.equal(searchSite(entry.title)[0]?.href, entry.href);
@@ -60,8 +60,23 @@ assert.equal(searchSite('').length, 0);
 assert.equal(searchSite('999-1000V').length, 0);
 assert.equal(searchSite('zzzzzznothing').length, 0);
 for (const query of ['9-36V', 'wide voltage', 'Intel', 'Intel 9-36V', 'USB4', 'DDR5']) console.log(`${query}: ${searchSite(query).length} results`);
-console.log('Search regression checks passed: all 116 products, voltage boundaries, CPU scope, spelling, units, compound queries, and exact model links.');
+console.log('Search regression checks passed: all 123 products, voltage boundaries, CPU scope, spelling, units, compound queries, and exact model links.');
 
 assert.equal(searchSite('MCIPCE1')[0]?.href, '/products/industrial-mini-pc/mcipce1');
 assert(searchSite('9-36V').some(item => item.title === 'MCIPCE1'));
 for (const name of ['MCIPCB13A', 'MCIPCB13B']) assert.equal(searchSite(name)[0]?.title, name);
+
+// TPC X: preserve platform-dependent facts and optional power qualifiers.
+for (const code of ['1004', '1201', '1501', '1506', '1701', '1901', '2105']) {
+  const name = `MCTPC-${code}X`;
+  const product = searchSite(name)[0];
+  assert.equal(product.href, `/products/industrial-mini-pc/mctpc-${code}x`);
+  for (const query of ['Intel', 'J1900', 'DDR4 32GB', '9-36V']) assert(searchSite(query).some(item => item.title === name));
+  assert(!searchSite('DDR5').some(item => item.title === name));
+  const value = label => product.specs.find(s => s.label === label).value;
+  assert.match(value('Power'), /12 V standard.*optional 9-36 V/);
+  assert.equal(value('Protection'), 'IP65-rated front panel only');
+  const small = ['1004', '1201'].includes(code);
+  assert(value('Platform - J1900').includes(small ? '1 x USB 3.0 + 3 x USB 2.0' : '1 x USB 3.0 + 5 x USB 2.0'));
+  assert.equal(value('Platform - J1900').includes('1 x SATA'), !small);
+}

@@ -2,7 +2,7 @@
 import { industrialESeriesCopy } from '@/lib/industrial-navigation-copy';
 import { brochureUpdates } from '@/lib/brochure-updates';
 
-import { ModelFamilyLinks, AiFamilyCards } from '@/components/ProductFamilyNavigation';
+import { ModelFamilyLinks, AiFamilyCards, TpcSeriesLinks } from '@/components/ProductFamilyNavigation';
 
 import Image from 'next/image';
 
@@ -560,7 +560,9 @@ export default function CategoryPage() {
 
                     <div className="mt-8 border-t border-slate-200 pt-6">
                       <p className="mb-4 text-xs font-bold uppercase tracking-normal text-slate-400">Available models</p>
-                      <ModelFamilyLinks models={series.models} category={category} />
+                      {series.code === 'TPC'
+                        ? <TpcSeriesLinks models={series.models} category={category} language={language} />
+                        : <ModelFamilyLinks models={series.models} category={category} />}
                     </div>
                   </div>
                 </section>
