@@ -1,0 +1,37 @@
+上传附件：assets/product-angle.webp, assets/style-application.jpg。
+可额外上传已生成的01屏，仅作配色/字体参考。参考图片不会通过此电脑路径自动上传。
+以下内容直接复制给生图AI；中文操作说明不要印到画面。
+
+Create ONE finished English ecommerce product-detail panel for MAGIC CHIP MCAIPC2. The confirmed product is the H04-BQ enclosure with AXB35-02 motherboard series. Follow the supplied panel brief and render ONLY the supplied on-image copy. Do not create a full multi-panel page in one image.
+
+Treat product-angle.webp and product-front.webp as the authoritative product identity references. Preserve the exact silver-gray enclosure silhouette, curved perforated front, vertical ports, side-panel design, copper-colored visible detail and original visible markings. Composite or faithfully reproduce the supplied viewing angle. Never mirror the product, invent a rear view, alter port counts, or borrow the enclosure from the old MCAIPC1 style reference. Do not add illuminated parts to the enclosure.
+
+The old MCAIPC1 images are STYLE REFERENCES ONLY. Use their black-and-orange premium hardware advertising language, controlled orange lighting, metallic highlights and strong information hierarchy. Do not copy any old product, product name, CPU number, technical claim or benchmark. Use a near-black background, white main text and orange key numbers. Keep the result polished, readable and product-focused rather than crowded with effects.
+
+Use English text only, with accurate spelling. No decorative eyebrow headings, no factory, OEM/ODM, inquiry, QR code, contact details, fake certification or extra marketing claims. Use the exact copy provided; do not expand it. Keep text inside safe margins. Typography must remain readable when reduced to 750px width. If exact long text cannot be rendered, preserve the layout and provide a clean background for later typography instead of inventing words.
+
+Confirmed facts: AMD Ryzen AI Max 300 Series; AMD integrated graphics; up to 128GB LPDDR5 at 8000 MT/s; two M.2 2280 PCIe 4.0 x4 slots; one 2.5GbE RJ45; HDMI 2.1; DisplayPort 1.4; two USB4 ports total; 203 x 192 x 70 mm; 240W external adapter. These are configurable series specifications, not claims that a fixed amount of RAM or SSD is included.
+
+Never add Ryzen 395, Radeon 8060S, CPU core counts, clock speed, TDP, NPU TOPS, 128GB dedicated VRAM, four SSD slots, 10GbE, DP2.1, Wi-Fi7, Bluetooth5.4, OCuLink, MCIO, 80Gbps USB4, liquid cooling, fan counts, cooling airflow paths, FPS, measured speedups, silent-operation claims, model-size guarantees, simultaneous four-screen claims or 8K claims. Do not show RAM as removable DIMMs. Do not add benchmark charts.
+
+Scenes and software interfaces are conceptual illustrations, not benchmark evidence. Show original generic application screens, not fake benchmark results or unsupported software compatibility logos. Hardware diagrams must be clearly conceptual and must not claim to reveal the actual internal motherboard layout. Render only the current panel, at the requested aspect ratio.
+
+PANEL 05 — AI AND CREATIVE WORKFLOWS. Canvas: 1500 x 2500px, final display 750 x 1250px.
+Create a strong application panel inspired by style-application.jpg. Place the accurate H04-BQ product prominently below the main title. Arrange four large, readable conceptual workflow cards in a two-by-two grid below the product: local AI chat with documents, code editor with AI assistance, 3D scene creation, and an original game environment. Use orange graphic paths to visually unify the cards, but do not draw four physical display cables connected to the PC. Each card has exactly the supplied heading and one short line. The screens are conceptual examples, not demonstrated benchmarks. No model names, parameter counts, FPS, tokens/sec, specific software logos or claims that all functions run on the NPU. Keep the product and each workflow legible at mobile width.
+
+EXACT ON-IMAGE COPY (render only the following text):
+Run AI. Build Apps. Create. Play.
+
+Local AI
+Explore compatible models on your own PC.
+
+AI-Assisted Coding
+Bring local AI tools into your development workflow.
+
+3D Creation
+Move from ideas to visual projects.
+
+Gaming
+Make space for entertainment after work.
+
+Illustrative workflows. Compatible software and configuration required.

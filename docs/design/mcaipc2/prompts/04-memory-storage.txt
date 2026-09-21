@@ -1,0 +1,33 @@
+上传附件：assets/style-memory.jpg。
+可额外上传已生成的01屏，仅作配色/字体参考。参考图片不会通过此电脑路径自动上传。
+以下内容直接复制给生图AI；中文操作说明不要印到画面。
+
+Create ONE finished English ecommerce product-detail panel for MAGIC CHIP MCAIPC2. The confirmed product is the H04-BQ enclosure with AXB35-02 motherboard series. Follow the supplied panel brief and render ONLY the supplied on-image copy. Do not create a full multi-panel page in one image.
+
+Treat product-angle.webp and product-front.webp as the authoritative product identity references. Preserve the exact silver-gray enclosure silhouette, curved perforated front, vertical ports, side-panel design, copper-colored visible detail and original visible markings. Composite or faithfully reproduce the supplied viewing angle. Never mirror the product, invent a rear view, alter port counts, or borrow the enclosure from the old MCAIPC1 style reference. Do not add illuminated parts to the enclosure.
+
+The old MCAIPC1 images are STYLE REFERENCES ONLY. Use their black-and-orange premium hardware advertising language, controlled orange lighting, metallic highlights and strong information hierarchy. Do not copy any old product, product name, CPU number, technical claim or benchmark. Use a near-black background, white main text and orange key numbers. Keep the result polished, readable and product-focused rather than crowded with effects.
+
+Use English text only, with accurate spelling. No decorative eyebrow headings, no factory, OEM/ODM, inquiry, QR code, contact details, fake certification or extra marketing claims. Use the exact copy provided; do not expand it. Keep text inside safe margins. Typography must remain readable when reduced to 750px width. If exact long text cannot be rendered, preserve the layout and provide a clean background for later typography instead of inventing words.
+
+Confirmed facts: AMD Ryzen AI Max 300 Series; AMD integrated graphics; up to 128GB LPDDR5 at 8000 MT/s; two M.2 2280 PCIe 4.0 x4 slots; one 2.5GbE RJ45; HDMI 2.1; DisplayPort 1.4; two USB4 ports total; 203 x 192 x 70 mm; 240W external adapter. These are configurable series specifications, not claims that a fixed amount of RAM or SSD is included.
+
+Never add Ryzen 395, Radeon 8060S, CPU core counts, clock speed, TDP, NPU TOPS, 128GB dedicated VRAM, four SSD slots, 10GbE, DP2.1, Wi-Fi7, Bluetooth5.4, OCuLink, MCIO, 80Gbps USB4, liquid cooling, fan counts, cooling airflow paths, FPS, measured speedups, silent-operation claims, model-size guarantees, simultaneous four-screen claims or 8K claims. Do not show RAM as removable DIMMs. Do not add benchmark charts.
+
+Scenes and software interfaces are conceptual illustrations, not benchmark evidence. Show original generic application screens, not fake benchmark results or unsupported software compatibility logos. Hardware diagrams must be clearly conceptual and must not claim to reveal the actual internal motherboard layout. Render only the current panel, at the requested aspect ratio.
+
+PANEL 04 — MEMORY AND STORAGE. Canvas: 1500 x 2100px, final display 750 x 1050px.
+Divide this panel into two generous stacked zones. Upper zone: large Up to 128GB typography, LPDDR5 and 8000 MT/s, with an abstract flat onboard-memory-chip illustration and subtle layers representing AI models and active projects. Do not show desktop memory sticks. Lower zone: exactly TWO conceptual M.2 2280 SSD modules with orange edge lighting, labeled with the supplied storage copy. Keep RAM visually distinct from SSD storage. These are conceptual component illustrations, not an exact motherboard layout. Do not add capacity labels to SSDs, comparative speed bars, boot time claims, SATA, or a third/fourth drive. Borrow the dramatic hardware texture of style-memory.jpg without borrowing its facts.
+
+EXACT ON-IMAGE COPY (render only the following text):
+Memory for AI. Storage for Your Projects.
+
+Up to 128GB
+LPDDR5 | 8000 MT/s
+Room for compatible local AI workloads and multitasking.
+
+2 x M.2 2280
+PCIe 4.0 x4 SSD Slots
+Plan storage for your system, models and creative files.
+
+Memory and SSD capacities depend on the selected configuration.

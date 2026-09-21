@@ -6,11 +6,11 @@ import { mcaipc2Chassis, mcaipc2Series, type Mcaipc2SeriesId } from '@/lib/ai-ca
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 const copy = {
-  en: { title: 'Choose your MCAIPC2 configuration', intro: 'Compare the three mainboard series, then find a compatible chassis. Memory, networking, display, and expansion options are specific to each series.', chassis: 'Chassis compatibility guide', all: 'All chassis', matching: 'compatible chassis', concept: 'New ID concept', conceptNote: 'Under design. Mainboard compatibility, dimensions, power, and I/O are not yet assigned.' },
-  fr: { title: 'Choisissez votre configuration MCAIPC2', intro: 'Comparez les trois séries de cartes mères, puis trouvez un châssis compatible. Mémoire, réseau, affichage et extensions dépendent de la série.', chassis: 'Compatibilité des châssis', all: 'Tous les châssis', matching: 'châssis compatibles', concept: 'Nouveau concept de design', conceptNote: 'En conception. Compatibilité, dimensions, alimentation et interfaces à définir.' },
-  de: { title: 'Wählen Sie Ihre MCAIPC2-Konfiguration', intro: 'Vergleichen Sie die drei Mainboard-Serien und wählen Sie ein kompatibles Gehäuse. Speicher, Netzwerk, Display und Erweiterungen sind serienabhängig.', chassis: 'Kompatible Gehäuse', all: 'Alle Gehäuse', matching: 'kompatible Gehäuse', concept: 'Neues Designkonzept', conceptNote: 'In Entwicklung. Mainboard-Kompatibilität, Maße, Stromversorgung und Anschlüsse sind noch nicht festgelegt.' },
-  it: { title: 'Scegli la configurazione MCAIPC2', intro: 'Confronta le tre serie di schede madri e trova uno chassis compatibile. Memoria, rete, display ed espansioni dipendono dalla serie.', chassis: 'Compatibilità degli chassis', all: 'Tutti gli chassis', matching: 'chassis compatibili', concept: 'Nuovo concept di design', conceptNote: 'In progettazione. Compatibilità, dimensioni, alimentazione e interfacce da definire.' },
-  es: { title: 'Elige tu configuración MCAIPC2', intro: 'Compara las tres series de placas y elige un chasis compatible. La memoria, red, pantalla y expansión dependen de cada serie.', chassis: 'Compatibilidad de chasis', all: 'Todos los chasis', matching: 'chasis compatibles', concept: 'Nuevo concepto de diseño', conceptNote: 'En desarrollo. Compatibilidad, dimensiones, alimentación e interfaces por definir.' },
+  en: { title: 'Choose your MCAIPC2 configuration', intro: 'Compare the three mainboard series, then find a compatible chassis. Memory, networking, display, and expansion options are specific to each series.', chassis: 'Chassis compatibility guide', all: 'All chassis', matching: 'compatible chassis' },
+  fr: { title: 'Choisissez votre configuration MCAIPC2', intro: 'Comparez les trois séries de cartes mères, puis trouvez un châssis compatible. Mémoire, réseau, affichage et extensions dépendent de la série.', chassis: 'Compatibilité des châssis', all: 'Tous les châssis', matching: 'châssis compatibles' },
+  de: { title: 'Wählen Sie Ihre MCAIPC2-Konfiguration', intro: 'Vergleichen Sie die drei Mainboard-Serien und wählen Sie ein kompatibles Gehäuse. Speicher, Netzwerk, Display und Erweiterungen sind serienabhängig.', chassis: 'Kompatible Gehäuse', all: 'Alle Gehäuse', matching: 'kompatible Gehäuse' },
+  it: { title: 'Scegli la configurazione MCAIPC2', intro: 'Confronta le tre serie di schede madri e trova uno chassis compatibile. Memoria, rete, display ed espansioni dipendono dalla serie.', chassis: 'Compatibilità degli chassis', all: 'Tutti gli chassis', matching: 'chassis compatibili' },
+  es: { title: 'Elige tu configuración MCAIPC2', intro: 'Compara las tres series de placas y elige un chasis compatible. La memoria, red, pantalla y expansión dependen de cada serie.', chassis: 'Compatibilidad de chasis', all: 'Todos los chasis', matching: 'chasis compatibles' },
 };
 
 export default function Mcaipc2Configurations({ onPreview }: { onPreview: (image: string) => void }) {
@@ -50,7 +50,6 @@ export default function Mcaipc2Configurations({ onPreview }: { onPreview: (image
             </article>
           ))}
         </div>
-        {selected === 'all' && <aside className="mt-6 rounded-xl border border-dashed border-slate-300 bg-white p-6"><h4 className="font-bold text-slate-700">{t.concept}</h4><p className="mt-2 text-sm text-slate-600">{t.conceptNote}</p></aside>}
       </div>
     </section>
   );
