@@ -1,0 +1,127 @@
+[
+  {
+    "id": "ce-emc",
+    "title": "CE EMC",
+    "number": "HYC2026090108EV1",
+    "reportNumber": "HYC2026090108E01",
+    "issued": "2026-09-22",
+    "issuer": "Shenzhen HyCert Co., Ltd.",
+    "standards": [
+      "EN 55032:2015+A1:2020",
+      "EN 55035:2017+A1:2020",
+      "EN IEC 61000-3-2:2019+A2:2024",
+      "EN 61000-3-3:2013+A2:2021",
+      "EN IEC 61000-4-2:2025",
+      "EN IEC 61000-4-3:2020",
+      "EN 61000-4-4:2012",
+      "EN 61000-4-5:2014+A1:2017",
+      "EN IEC 61000-4-6:2023",
+      "EN IEC 61000-4-11:2020"
+    ],
+    "certificate": {
+      "href": "/assets/certificates/mcipc8-ce-emc-certificate.pdf",
+      "pages": 1,
+      "bytes": 522766,
+      "sha256": "7b17d42bd2ec7e514762df0add7d7c107cb256662f2bdc36524da84aa06c5b79",
+      "source": "迷你电脑主机 MCIPC8 CEEMC证书正本.pdf"
+    },
+    "image": "/assets/certificates/ce-emc.webp",
+    "models": "MCIPC8, MCIPC, MCIPCA, MCIPCB, MCIPCD, MCIPCE, MCTPC, MCMQ, MCSR, MCNAS12, MCNAS14, MCNAS11, MCAIPC1, MCAIPC2, MCAIPC, MCN5, MCMQ12, MCMQ13, MCMQR, MCMQ, MCVX4, MCNUC, MCNASPC，MCNAS",
+    "report": {
+      "href": "/assets/certificates/mcipc8-ce-emc-report.pdf",
+      "pages": 35,
+      "bytes": 2525484,
+      "sha256": "eb8e230f2e2b613129522ec5cc673de8d32a6c7ac208ccf780eca0bcebf0d47e",
+      "source": "迷你电脑主机 MCIPC8 CEEMC报告正本.pdf"
+    }
+  },
+  {
+    "id": "ce-lvd",
+    "title": "CE LVD",
+    "number": "HYC2026090111SV1",
+    "reportNumber": "HYC2026090111S01",
+    "issued": "2026-09-22",
+    "issuer": "Shenzhen HyCert Co., Ltd.",
+    "standards": [
+      "EN IEC 62368-1:2024 + A11:2024"
+    ],
+    "certificate": {
+      "href": "/assets/certificates/mcipc8-ce-lvd-certificate.pdf",
+      "pages": 1,
+      "bytes": 489263,
+      "sha256": "74be70cfb3f3085517e581a5232c411cdb8c3b755e580332c99927f3a98c1667",
+      "source": "迷你电脑主机 MCIPC8 CELVD证书正本.pdf"
+    },
+    "image": "/assets/certificates/ce-lvd.webp",
+    "models": "MCIPC8, MCIPC, MCIPCA, MCIPCB, MCIPCD, MCIPCE, MCTPC, MCMQ, MCSR, MCNAS12, MCNAS14, MCNAS11, MCAIPC1, MCAIPC2, MCAIPC, MCN5, MCMQ12, MCMQ13, MCMQR, MCMQ, MCVX4, MCNUCM, CNASPC, MCNAS",
+    "report": {
+      "href": "/assets/certificates/mcipc8-ce-lvd-report.pdf",
+      "pages": 79,
+      "bytes": 3599431,
+      "sha256": "3820897e865c4062db33cfe586c5f4e7da508543319acffb9b1ccb55926b116f",
+      "source": "迷你电脑主机 MCIPC8 CELVD报告正本.pdf"
+    }
+  },
+  {
+    "id": "fcc-sdoc",
+    "title": "FCC SDoC",
+    "number": "HYC2026090109EV1",
+    "reportNumber": "HYC2026090109E01",
+    "issued": "2026-09-22",
+    "issuer": "Shenzhen HyCert Co., Ltd.",
+    "standards": [
+      "CFR 47, FCC Part 15 Subpart B",
+      "ANSI C63.4:2014"
+    ],
+    "certificate": {
+      "href": "/assets/certificates/mcipc8-fcc-sdoc-certificate.pdf",
+      "pages": 1,
+      "bytes": 523834,
+      "sha256": "70effc9768cc580fb7effc2998943f1ab3ab36962fb95364d613627fa61a7788",
+      "source": "迷你电脑主机 MCIPC8 FCCSDOC证书正本.pdf"
+    },
+    "image": "/assets/certificates/fcc-sdoc.webp",
+    "models": "MCIPC8, MCIPC, MCIPCA, MCIPCB, MCIPCD, MCIPCE, MCTPC, MCMQ, MCSR, MCNAS12, MCNAS14, MCNAS11, MCAIPC1, MCAIPC2, MCAIPC, MCN5, MCMQ12, MCMQ13, MCMQR, MCMQ, MCVX4, MCNUC, MCNASPC，MCNAS",
+    "report": {
+      "href": "/assets/certificates/mcipc8-fcc-sdoc-report.pdf",
+      "pages": 20,
+      "bytes": 2071223,
+      "sha256": "c2e4d65a5131f7b00a0d6bca8ed9e52d89e0f7af9c3a641683090180789e2490",
+      "source": "迷你电脑主机 MCIPC8 FCCSDOC报告正本.pdf"
+    }
+  },
+  {
+    "id": "rohs",
+    "title": "RoHS",
+    "number": "HYC2026090110RV1",
+    "reportNumber": "HYC2026090110R01",
+    "issued": "2026-09-22",
+    "issuer": "Shenzhen HyCert Co., Ltd.",
+    "standards": [
+      "EN IEC 63000:2018",
+      "IEC 62321-3-1:2026",
+      "IEC 62321-4:2013 + AMD1:2017",
+      "IEC 62321-5:2013",
+      "IEC 62321-6:2015",
+      "IEC 62321-7-1:2015",
+      "IEC 62321-7-2:2017",
+      "IEC 62321-8:2017"
+    ],
+    "certificate": {
+      "href": "/assets/certificates/mcipc8-rohs-certificate.pdf",
+      "pages": 1,
+      "bytes": 593235,
+      "sha256": "3bcaf3c4d2d747bf901567341fed17b8c07ccef5fff17cba09835273158c9c5d",
+      "source": "迷你电脑主机 MCIPC8 ROHS证书正本.pdf"
+    },
+    "image": "/assets/certificates/rohs.webp",
+    "models": "MCIPC8, MCIPC, MCIPCA, MCIPCB, MCIPCD, MCIPCE, MCTPC, MCMQ, MCSR, MCNAS12, MCNAS14, MCNAS11, MCAIPC1, MCAIPC2, MCAIPC, MCN5, MCMQ12, MCMQ13, MCMQR, MCMQ, MCVX4, MCNUC, MCNASPC, MCNAS",
+    "report": {
+      "href": "/assets/certificates/mcipc8-rohs-report.pdf",
+      "pages": 18,
+      "bytes": 1551329,
+      "sha256": "144629a6517a8203ead20cd45b63ffda118972aff69ffa7f5998156b6ba13536",
+      "source": "迷你电脑主机 MCIPC8 ROHS报告正本.pdf"
+    }
+  }
+]

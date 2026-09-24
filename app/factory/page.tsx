@@ -1,8 +1,9 @@
 'use client';
 
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import CertificateLibrary from '@/components/CertificateLibrary';
 import { motion } from 'framer-motion';
-import { Shield, Zap, Award, CheckCircle, Cpu, Settings2, Cable, Palette, Package } from 'lucide-react';
+import { Shield, Zap, CheckCircle, Cpu, Settings2, Cable, Palette, Package } from 'lucide-react';
 
 const factoryData = {
   en: {
@@ -74,14 +75,6 @@ const factoryData = {
         }
     ]
 },
-    certifications: [
-      { name: 'ISO 9001', description: 'Quality Management' },
-      { name: 'ISO 14001', description: 'Environmental Management' },
-      { name: 'CE', description: 'European Conformity' },
-      { name: 'FCC', description: 'US Certification' },
-      { name: 'RoHS', description: 'Hazardous Substances' },
-      { name: 'CCC', description: 'China Compulsory' }
-    ],
     capabilities: {
       title: 'Our Capabilities',
       items: [
@@ -161,14 +154,6 @@ const factoryData = {
         }
     ]
 },
-    certifications: [
-      { name: 'ISO 9001', description: 'Management Qualité' },
-      { name: 'ISO 14001', description: 'Management Environnemental' },
-      { name: 'CE', description: 'Conformité Européenne' },
-      { name: 'FCC', description: 'Certification US' },
-      { name: 'RoHS', description: 'Substances Dangereuses' },
-      { name: 'CCC', description: 'Chine Obligatoire' }
-    ],
     capabilities: {
       title: 'Nos Capacités',
       items: [
@@ -248,14 +233,6 @@ const factoryData = {
         }
     ]
 },
-    certifications: [
-      { name: 'ISO 9001', description: 'Qualitätsmanagement' },
-      { name: 'ISO 14001', description: 'Umweltmanagement' },
-      { name: 'CE', description: 'Europäische Konformität' },
-      { name: 'FCC', description: 'US-Zertifizierung' },
-      { name: 'RoHS', description: 'Gefährliche Stoffe' },
-      { name: 'CCC', description: 'China Zwang' }
-    ],
     capabilities: {
       title: 'Unsere Fähigkeiten',
       items: [
@@ -335,14 +312,6 @@ const factoryData = {
         }
     ]
 },
-    certifications: [
-      { name: 'ISO 9001', description: 'Gestione Qualità' },
-      { name: 'ISO 14001', description: 'Gestione Ambientale' },
-      { name: 'CE', description: 'Conformità Europea' },
-      { name: 'FCC', description: 'Certificazione US' },
-      { name: 'RoHS', description: 'Sostanze Pericolose' },
-      { name: 'CCC', description: 'Cina Obbligatorio' }
-    ],
     capabilities: {
       title: 'Le Nostre Capacità',
       items: [
@@ -422,14 +391,6 @@ const factoryData = {
         }
     ]
 },
-    certifications: [
-      { name: 'ISO 9001', description: 'Gestión de Calidad' },
-      { name: 'ISO 14001', description: 'Gestión Ambiental' },
-      { name: 'CE', description: 'Conformidad Europea' },
-      { name: 'FCC', description: 'Certificación US' },
-      { name: 'RoHS', description: 'Sustancias Peligrosas' },
-      { name: 'CCC', description: 'China Obligatorio' }
-    ],
     capabilities: {
       title: 'Nuestras Capacidades',
       items: [
@@ -537,22 +498,7 @@ export default function FactoryPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#101827] py-24 text-white md:py-32">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(37,99,235,0.28),transparent_34%)]" />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <motion.h2 initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center text-3xl font-bold md:text-5xl">{t.factory?.certifications || 'Certifications'}</motion.h2>
-          <motion.p initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="mx-auto mt-5 max-w-2xl text-center leading-7 text-slate-300">{t.factory?.certificationsSubtitle || 'Our products meet international quality and safety standards'}</motion.p>
-          <div className="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-white/10 md:grid-cols-3 lg:grid-cols-6">
-            {data.certifications.map((cert, index) => (
-              <motion.div key={index} initial={{ opacity: 0, scale: 0.88 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.06 }} className="bg-white/[0.055] p-6 text-center transition-colors hover:bg-white/10">
-                <Award className="mx-auto h-8 w-8 text-amber-300" />
-                <div className="mt-4 font-semibold">{cert.name}</div>
-                <div className="mt-2 text-xs leading-5 text-slate-400">{cert.description}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <CertificateLibrary dark displayOnly />
     </div>
   );
 }

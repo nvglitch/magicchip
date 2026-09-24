@@ -1,0 +1,28 @@
+{
+  "id": "banner-4",
+  "order": 4,
+  "image": "/assets/home/banners/证书.png",
+  "title": {
+    "en": "Product Certificates",
+    "de": "Produktzertifikate",
+    "fr": "Certificats produits",
+    "it": "Certificati di prodotto",
+    "es": "Certificados de producto"
+  },
+  "subtitle": {
+    "en": "View the original certificates and test reports.",
+    "de": "Originalzertifikate und Prüfberichte ansehen.",
+    "fr": "Consultez les certificats et rapports d’essai originaux.",
+    "it": "Consulta i certificati e i rapporti di prova originali.",
+    "es": "Consulta los certificados e informes de ensayo originales."
+  },
+  "ctaText": {
+    "en": "View Certificates",
+    "de": "Zertifikate ansehen",
+    "fr": "Voir les certificats",
+    "it": "Visualizza i certificati",
+    "es": "Ver certificados"
+  },
+  "ctaLink": "/downloads#certificates",
+  "published": true
+}

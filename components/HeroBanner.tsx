@@ -114,6 +114,8 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
     return null;
   }
 
+  const isCertificateSlide = slides[currentSlide].id === 'banner-4';
+
   return (
     <section className="relative w-full overflow-hidden bg-[#101827]">
       <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-video min-h-[400px] sm:min-h-[500px] max-h-[80vh]">
@@ -141,7 +143,7 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
                   src={slides[currentSlide].image!}
                   alt={slides[currentSlide].title}
                   fill
-                  className="object-cover object-center"
+                  className={isCertificateSlide ? 'object-contain object-center' : 'object-cover object-center'}
                   sizes="100vw"
                   priority={currentSlide === 0}
                 />
@@ -179,7 +181,7 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
 
         <div className="absolute inset-0 z-10 flex items-center pointer-events-none">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div className="max-w-2xl pointer-events-auto">
+            <div className={`${isCertificateSlide ? 'max-w-[480px]' : 'max-w-2xl'} pointer-events-auto`}>
 
               <AnimatePresence mode="wait">
                 <motion.div

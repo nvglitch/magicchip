@@ -1,6 +1,8 @@
 'use client';
 
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import CertificateLibrary from '@/components/CertificateLibrary';
+import { certificateCopy, certificateFileCount } from '@/lib/certificates';
 import { motion } from 'framer-motion';
 import { Newspaper, Download, FileCode, ArrowRight } from 'lucide-react';
 
@@ -33,15 +35,6 @@ const documentsData = {
         stats: '48 Documents'
       }
     ],
-    featured: {
-      title: 'Featured Resources',
-      items: [
-        { title: 'Product Brochure 2026', type: 'Brochure', size: '2.4 MB' },
-        { title: 'AI Accelerator Datasheet', type: 'Datasheet', size: '1.8 MB' },
-        { title: 'Enterprise CPU Architecture', type: 'Whitepaper', size: '3.2 MB' },
-        { title: 'Security Module Guide', type: 'Manual', size: '1.2 MB' }
-      ]
-    }
   },
   fr: {
     hero: {
@@ -71,15 +64,6 @@ const documentsData = {
         stats: '48 Documents'
       }
     ],
-    featured: {
-      title: 'Ressources en Vedette',
-      items: [
-        { title: 'Brochure Produit 2026', type: 'Brochure', size: '2.4 MB' },
-        { title: 'Fiche Technique Accélérateur IA', type: 'Fiche Technique', size: '1.8 MB' },
-        { title: 'Architecture CPU Entreprise', type: 'Livre Blanc', size: '3.2 MB' },
-        { title: 'Guide Module de Sécurité', type: 'Manuel', size: '1.2 MB' }
-      ]
-    }
   },
   de: {
     hero: {
@@ -109,15 +93,6 @@ const documentsData = {
         stats: '48 Dokumente'
       }
     ],
-    featured: {
-      title: 'Empfohlene Ressourcen',
-      items: [
-        { title: 'Produktbroschüre 2026', type: 'Broschüre', size: '2.4 MB' },
-        { title: 'KI-Beschleuniger Datenblatt', type: 'Datenblatt', size: '1.8 MB' },
-        { title: 'Enterprise CPU Architektur', type: 'Whitepaper', size: '3.2 MB' },
-        { title: 'Sicherheitsmodul Anleitung', type: 'Handbuch', size: '1.2 MB' }
-      ]
-    }
   },
   it: {
     hero: {
@@ -147,15 +122,6 @@ const documentsData = {
         stats: '48 Documenti'
       }
     ],
-    featured: {
-      title: 'Risorse in Evidenza',
-      items: [
-        { title: 'Brochure Prodotto 2026', type: 'Brochure', size: '2.4 MB' },
-        { title: 'Scheda Tecnica Acceleratore IA', type: 'Scheda Tecnica', size: '1.8 MB' },
-        { title: 'Architettura CPU Enterprise', type: 'Whitepaper', size: '3.2 MB' },
-        { title: 'Guida Modulo di Sicurezza', type: 'Manuale', size: '1.2 MB' }
-      ]
-    }
   },
   es: {
     hero: {
@@ -185,15 +151,6 @@ const documentsData = {
         stats: '48 Documentos'
       }
     ],
-    featured: {
-      title: 'Recursos Destacados',
-      items: [
-        { title: 'Folleto de Producto 2026', type: 'Folleto', size: '2.4 MB' },
-        { title: 'Ficha Técnica Acelerador IA', type: 'Ficha Técnica', size: '1.8 MB' },
-        { title: 'Arquitectura CPU Empresarial', type: 'Whitepaper', size: '3.2 MB' },
-        { title: 'Guía Módulo de Seguridad', type: 'Manual', size: '1.2 MB' }
-      ]
-    }
   }
 };
 
@@ -238,10 +195,10 @@ export default function DocumentsPage() {
                   </div>
 
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{section.title}</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{section.description}</p>
+                  <p className="text-gray-600 mb-6 leading-relaxed">{section.href === '/downloads' ? certificateCopy[language].downloadsIntro : section.description}</p>
 
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-lg font-bold text-blue-600">{section.stats}</span>
+                    <span className="text-lg font-bold text-blue-600">{section.href === '/downloads' ? `${certificateFileCount} ${certificateCopy[language].files}` : section.stats}</span>
                   </div>
 
                   <span className="inline-flex items-center text-blue-600 font-semibold group-hover:text-blue-700">
@@ -255,38 +212,7 @@ export default function DocumentsPage() {
         </div>
       </section>
 
-      {/* Featured Resources */}
-      <section className="bg-[#eaf0ee] py-24 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-2xl font-bold text-gray-900 mb-8">{data.featured.title}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {data.featured.items.map((item, index) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
-                >
-                  <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-100 text-blue-600 ring-1 ring-blue-200">
-                    <FileCode className="w-5 h-5 text-blue-600" />
-                  </div>
-                  <h4 className="font-semibold text-gray-900 mb-2">{item.title}</h4>
-                  <div className="flex items-center justify-between text-sm text-gray-500">
-                    <span>{item.type}</span>
-                    <span>{item.size}</span>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <CertificateLibrary />
     </div>
   );
 }

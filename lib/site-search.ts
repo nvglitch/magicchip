@@ -1,3 +1,4 @@
+import { certificates, certificateCopy } from '@/lib/certificates';
 import { brochureUpdates } from '@/lib/brochure-updates';
 import { matchSearch } from '@/lib/search-matching';
 import mcai1 from '@/content/products/items/mcai1.json';
@@ -63,6 +64,15 @@ const catalogCommercialSearchEntries: SearchEntry[] = commercialCatalog.map((ite
   image: item.image,
 }));
 const baseSearchIndex: SearchEntry[] = [
+  ...certificates.map((cert, index): SearchEntry => ({
+    title: `${cert.title} — ${cert.number}`,
+    description: `${certificateCopy.en.names[index]}. Shenzhen HyCert, ${cert.issued}. Certificate and supporting test report.`,
+    href: `/downloads#${cert.id}`,
+    type: 'resource',
+    image: cert.image,
+    keywords: [cert.reportNumber, cert.models, ...cert.standards, ...Object.values(certificateCopy).map(copy => `${copy.title} ${copy.names[index]}`)],
+  })),
+
   ...aiCatalog.map((item): SearchEntry => ({ title: item.name, description: item.tagline, href: `/products/ai-mini-pc/${item.id}`, type: 'product', keywords: ['ai mini pc', ...item.highlights, ...item.specs.filter((spec) => ['CPU', 'Mainboard series', 'Network', 'High-speed interface'].includes(spec.label)).map((spec) => spec.value)], image: item.image })),
   ...catalogIndustrialSearchEntries,
   ...catalogFirewallSearchEntries,
