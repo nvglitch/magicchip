@@ -3,6 +3,7 @@ type NamedProduct = { id: string; name: string };
 // These remaining families have independent product detail pages.
 const families: Record<string, string[]> = {
   MCIPC2: ['MCIPC2A', 'MCIPC2B'],
+  MCIPCB2: ['MCIPCB2', 'MCIPCB2-J5005'],
   MCIPCD5: ['MCIPCD5', 'MCIPCD5F'],
   MCNAS14: ['MCNAS14A', 'MCNAS14B'],
   MCAIPC3: ['MCAIPC3A', 'MCAIPC3B', 'MCAIPC3C', 'MCAIPC3D'],

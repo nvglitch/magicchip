@@ -180,6 +180,10 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
     "image": "/assets/products/thumbnails/mcipcb2.webp",
     "source": "/assets/products/industrial/merged/mcipcb2/front.webp"
   },
+  "mcipcb2-j5005": {
+    "image": "/assets/products/thumbnails/mcipcb2-j5005.webp",
+    "source": "/assets/products/industrial/b-series/mcipcb2-j5005/images/main-square-srgb.jpg"
+  },
   "mcipcb6": {
     "image": "/assets/products/thumbnails/mcipcb6.webp",
     "source": "/assets/products/industrial/merged/mcipcb6/front.webp"

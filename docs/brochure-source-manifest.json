@@ -878,14 +878,14 @@
       "status": "updated",
       "changeSincePreviousObservation": "changed",
       "modelIds": [
-        "mcipcb2"
+        "mcipcb2-j5005"
       ],
       "hrefs": [
-        "/products/industrial-mini-pc/mcipcb2#sku-j5005"
+        "/products/industrial-mini-pc/mcipcb2-j5005"
       ],
       "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
       "appliedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "notes": "已核对新版册子与官网；无争议的产品参数或系列配置已落实，旧型号入口保持跳转。"
+      "notes": "已核对新版册子与官网；J5005 因独立机箱恢复独立详情页与原有网址。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB3 Brochure.pdf",

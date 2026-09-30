@@ -20,6 +20,8 @@ function load(filename) {
   return exports;
 }
 const { searchSite, siteSearchIndex } = load('lib/site-search.ts');
+const { industrialCatalog } = load('lib/industrial-catalog.ts');
+const { groupProductNavigation } = load('lib/product-navigation.ts');
 const { matchSearch } = load('lib/search-matching.ts');
 const fixture = (specs) => ({ title: 'Test PC', description: '', keywords: [], href: '/test', type: 'product', specs });
 const power = value => fixture([{ label: 'Power', value }]);
@@ -43,6 +45,12 @@ assert.equal(products.length, 130);
 assert(products.every(e => e.specs?.length));
 assert.equal(new Set(products.map(e => e.href)).size, products.length);
 for (const entry of products) assert.equal(searchSite(entry.title)[0]?.href, entry.href);
+const b2 = groupProductNavigation(industrialCatalog.filter(item => item.series === 'B'))
+  .find(group => group.name === 'MCIPCB2');
+assert.deepEqual(Array.from(b2.models, item => item.id), ['mcipcb2', 'mcipcb2-j5005']);
+assert.equal(industrialCatalog.find(item => item.id === 'mcipcb2').skus.length, 2);
+assert.equal(industrialCatalog.find(item => item.id === 'mcipcb2-j5005').skus, undefined);
+assert.equal(searchSite('MCIPCB2-J5005')[0]?.href, '/products/industrial-mini-pc/mcipcb2-j5005');
 const titles = q => Array.from(searchSite(q), e => e.title).sort();
 for (const q of ['9～36 V', '9V-36V', '9 to 36V', '９－３６Ｖ']) assert.deepEqual(titles(q), titles('9-36V'));
 assert(searchSite('9-36V').length > 0);
@@ -66,7 +74,7 @@ assert.equal(searchSite('MCIPCE1')[0]?.href, '/products/industrial-mini-pc/mcipc
 assert(searchSite('9-36V').some(item => item.title === 'MCIPCE1'));
 for (const [name, target] of Object.entries({
   MCIPCB1A: 'mcipcb1#sku-type-a', MCIPCB1B: 'mcipcb1#sku-type-b', MCIPCB1F: 'mcipcb1#sku-fan',
-  'MCIPCB2-D3': 'mcipcb2#sku-type-a', 'MCIPCB2-D4': 'mcipcb2#sku-type-b', 'MCIPCB2-J5005': 'mcipcb2#sku-j5005',
+  'MCIPCB2-D3': 'mcipcb2#sku-type-a', 'MCIPCB2-D4': 'mcipcb2#sku-type-b',
   'MCIPCB6-DDR3L': 'mcipcb6#sku-type-b', 'MCIPCB6-DDR4': 'mcipcb6#sku-type-c',
   MCIPCB13A: 'mcipcb13#sku-type-a', MCIPCB13B: 'mcipcb13#sku-type-b',
   MCIPCB14F: 'mcipcb14#sku-fan',

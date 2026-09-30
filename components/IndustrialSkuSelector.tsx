@@ -22,6 +22,10 @@ export default function IndustrialSkuSelector({ model, skus, onPreview }: { mode
     const pickHash = () => {
       const key = window.location.hash.slice('#sku-'.length);
       if (!window.location.hash.startsWith('#sku-')) return;
+      if (model === 'MCIPCB2' && key === 'j5005') {
+        window.location.replace('/products/industrial-mini-pc/mcipcb2-j5005');
+        return;
+      }
       const index = skus.findIndex(sku => sku.key === key);
       if (index >= 0) {
         setSelected(index);
@@ -31,7 +35,7 @@ export default function IndustrialSkuSelector({ model, skus, onPreview }: { mode
     pickHash();
     window.addEventListener('hashchange', pickHash);
     return () => window.removeEventListener('hashchange', pickHash);
-  }, [skus]);
+  }, [model, skus]);
 
   const active = skus[selected];
   const selectSku = (index: number) => {

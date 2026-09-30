@@ -2,7 +2,7 @@ import { applyBrochureSpecCorrections } from '@/lib/brochure-spec-corrections';
 import { brochureUpdates } from '@/lib/brochure-updates';
 import { industrialBrochureProducts } from '@/lib/brochure-products';
 import { tpcXProducts } from '@/lib/tpc-x-products';
-import { mergedBSeries, type IndustrialSku } from '@/lib/merged-b-series';
+import { mergedBSeries, separateB2J5005, type IndustrialSku } from '@/lib/merged-b-series';
 
 export type IndustrialSeriesCode = 'A' | 'B' | 'C' | 'D' | 'E' | 'TPC';
 
@@ -2298,8 +2298,9 @@ const industrialCatalogSource: IndustrialCatalogItem[] = [
     "operatingRange": "Working Temp: -20°C to +60°C"
   }
 ];
-const replacedBSeriesIds = new Set(mergedBSeries.flatMap(product => [product.id, ...product.skus.flatMap(sku => sku.legacyNames.map(name => name.toLowerCase()))]));
+const replacedBSeriesIds = new Set([separateB2J5005.id, ...mergedBSeries.flatMap(product => [product.id, ...product.skus.flatMap(sku => sku.legacyNames.map(name => name.toLowerCase()))])]);
 export const industrialCatalog = [
   ...industrialCatalogSource.filter(item => !replacedBSeriesIds.has(item.id)),
   ...mergedBSeries,
+  separateB2J5005,
 ].map(applyBrochureSpecCorrections);

@@ -40,20 +40,15 @@ export const mergedBSeries: MergedProduct[] = [
   },
   {
     id: 'mcipcb2', name: 'MCIPCB2', series: 'B',
-    tagline: 'Compact dual-LAN industrial PC in three processor configurations',
-    description: 'Type A and Type B share a 136 × 126 × 40 mm enclosure. The J5005 SKU uses a separate 135 × 127 × 38.7 mm chassis with a different USB layout, storage specification and operating range.',
-    image: view('mcipcb2', 'front'), galleryCards: [
-      ...gallery('mcipcb2'),
-      { image: `${root}/mcipcb2-j5005/front.webp`, title: 'MCIPCB2 J5005 enclosure front' },
-      { image: `${root}/mcipcb2-j5005/rear.webp`, title: 'MCIPCB2 J5005 rear panel' },
-    ],
-    highlights: ['Type A / Type B / J5005', 'Dual Gigabit LAN', 'Dual COM', '12 V DC'],
+    tagline: 'Compact dual-LAN industrial PC with DDR3 and DDR4 platform options',
+    description: 'Type A and Type B share the same 136 × 126 × 40 mm enclosure. Select the DDR3 or DDR4 platform by processor, memory and other configuration details below.',
+    image: view('mcipcb2', 'front'), galleryCards: gallery('mcipcb2'),
+    highlights: ['Type A / Type B', 'Dual Gigabit LAN', 'Dual COM', '12 V DC'],
     specs: [spec('Model', 'MCIPCB2 family'), spec('Series', 'B Series'), spec('Display', 'HDMI + VGA'), spec('Network', '2 × Gigabit RJ45 LAN'), spec('Serial', '2 × COM RS232'), spec('Power', '12 V DC')],
-    sourceBrochures: ['工控机IPC/B系列/MCIPCB2 brochure.pdf', '工控机IPC/B系列/MCIPCB2-J5005 brochure.pdf'],
+    sourceBrochures: ['工控机IPC/B系列/MCIPCB2 brochure.pdf'],
     skus: [
       { key: 'type-a', label: 'Type A · DDR3', legacyNames: ['MCIPCB2-D3'], image: view('mcipcb2', 'rear'), specs: [spec('CPU', 'Intel Celeron N2810 / N2840 / N2910 / 2940 / J1900'), spec('Memory', '1 × DDR3 SO-DIMM; capacity and speed to confirm for the chosen processor'), spec('USB', '2 × USB 3.0 + 4 × USB 2.0'), spec('Storage', 'mSATA SSD + M.2 NVMe 2280 + 2.5-inch HDD / SSD'), spec('Dimensions', '136 × 126 × 40 mm'), spec('Operating Environment', '0°C to +50°C')] },
       { key: 'type-b', label: 'Type B · DDR4', legacyNames: ['MCIPCB2-D4'], image: view('mcipcb2', 'rear'), specs: [spec('CPU', 'Intel Celeron N4000 / J4125'), spec('Memory', '1 × DDR4 SO-DIMM 2400 MHz'), spec('USB', '2 × USB 3.0 + 4 × USB 2.0'), spec('Storage', 'mSATA SSD + M.2 NVMe 2280 + 2.5-inch HDD / SSD'), spec('Dimensions', '136 × 126 × 40 mm'), spec('Operating Environment', '0°C to +50°C')] },
-      { key: 'j5005', label: 'J5005 · separate enclosure', legacyNames: ['MCIPCB2-J5005'], image: `${root}/mcipcb2-j5005/front.webp`, specs: [spec('CPU', 'Intel Pentium Silver J5005'), spec('Memory', '1 × DDR4 SO-DIMM, up to 8 GB'), spec('USB', '1 × USB 3.0 + 3 × USB 2.0'), spec('Storage', '1 × HDD / SSD + 1 × M.2 SSD'), spec('Dimensions', '135 × 127 × 38.7 mm'), spec('Operating Environment', '-20°C to +70°C')] },
     ],
   },
   {
@@ -130,6 +125,29 @@ export const mergedBSeries: MergedProduct[] = [
     ],
   },
 ];
+
+// J5005 has a different enclosure and its own brochure, so it keeps its own detail URL.
+export const separateB2J5005: IndustrialCatalogItem = {
+  id: 'mcipcb2-j5005', name: 'MCIPCB2-J5005', series: 'B',
+  tagline: 'Intel Pentium Silver J5005 industrial PC with a distinct compact enclosure',
+  description: 'MCIPCB2-J5005 uses a separate 135 × 127 × 38.7 mm chassis. Its USB layout, storage options and operating range differ from the MCIPCB2 Type A / Type B enclosure.',
+  image: '/assets/products/industrial/b-series/mcipcb2-j5005/images/main-square-srgb.jpg',
+  galleryCards: [
+    { image: `${root}/mcipcb2-j5005/front.webp`, title: 'MCIPCB2-J5005 network and display panel' },
+    { image: `${root}/mcipcb2-j5005/rear.webp`, title: 'MCIPCB2-J5005 USB and serial panel' },
+  ],
+  highlights: ['Intel Pentium Silver J5005', '1 × DDR4 SO-DIMM, up to 8 GB', 'Dual Gigabit LAN', '-20°C to +70°C'],
+  specs: [
+    spec('Model', 'MCIPCB2-J5005'), spec('Series', 'B Series'),
+    spec('CPU', 'Intel Pentium Silver J5005'), spec('Memory', '1 × DDR4 SO-DIMM, up to 8 GB'),
+    spec('Display', 'HDMI + VGA'), spec('Network', '2 × Gigabit RJ45 LAN'),
+    spec('Serial', '2 × COM RS232'), spec('USB', '1 × USB 3.0 + 3 × USB 2.0'),
+    spec('Storage', '1 × HDD / SSD + 1 × M.2 SSD'), spec('Power', '12 V DC'),
+    spec('Operating Environment', '-20°C to +70°C'), spec('Dimensions', '135 × 127 × 38.7 mm'),
+  ],
+  operatingRange: '-20°C to +70°C',
+  sourceBrochures: ['工控机IPC/B系列/MCIPCB2-J5005 brochure.pdf'],
+};
 
 export const mergedBSeriesAliases: Record<string, string> = Object.fromEntries(
   mergedBSeries.flatMap(product => product.skus.flatMap(sku => sku.legacyNames
