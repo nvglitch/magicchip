@@ -24,7 +24,9 @@ import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { aiCatalog } from '@/lib/ai-catalog';
 import Mcaipc2Configurations from '@/components/Mcaipc2Configurations';
+import IndustrialSkuSelector from '@/components/IndustrialSkuSelector';
 import { industrialCatalog, type IndustrialSeriesCode } from '@/lib/industrial-catalog';
+import type { IndustrialSku } from '@/lib/merged-b-series';
 import { firewallCatalog, type FirewallSeriesCode } from '@/lib/firewall-catalog';
 import { commercialCatalog, type CommercialSeriesCode } from '@/lib/commercial-catalog';
 
@@ -44,6 +46,7 @@ type ProductDetail = {
   sellingPoints?: ProductCard[];
   advantageSummary?: string;
   operatingRange?: string;
+  skus?: IndustrialSku[];
 };
 
 const mcipcb12ImageBase = '/assets/products/industrial/b-series/mcipcb12/images';
@@ -212,6 +215,7 @@ const catalogIndustrialProducts: Record<string, ProductDetail> = Object.fromEntr
       specs: item.specs,
       features: industrialSeriesFeatures[item.series],
       operatingRange: item.operatingRange,
+      skus: item.skus,
       ...getIndustrialGallery(item),
     },
   ]),
@@ -766,7 +770,7 @@ const iconMap = {
 };
 
 export default function ProductDetailPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const params = useParams();
   const category = params.category as string;
   const productId = params.id as string;
@@ -914,6 +918,8 @@ export default function ProductDetailPage() {
         </section>
       )}
 
+      {product.skus && <IndustrialSkuSelector model={product.name} skus={product.skus} onPreview={setPreviewImage} />}
+
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10 text-center">
@@ -923,7 +929,7 @@ export default function ProductDetailPage() {
           <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }} className="overflow-hidden rounded-xl border border-blue-200 bg-white shadow-lg shadow-blue-900/10">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 bg-gradient-to-r from-[#172033] via-blue-950 to-[#172033] px-6 md:px-8 py-6 text-white">
               <div>
-                <h3 className="text-2xl font-bold">{t.productDetail.hardwareParameters}</h3>
+                <h3 className="text-2xl font-bold">{product.skus ? ({ en: 'Shared specifications', de: 'Gemeinsame technische Daten', fr: 'Caractéristiques communes', it: 'Specifiche comuni', es: 'Especificaciones comunes' }[language]) : t.productDetail.hardwareParameters}</h3>
               </div>
               {product.operatingRange && <div className="rounded-lg border border-amber-300/30 bg-amber-300/10 px-4 py-3 text-left md:text-right">
                 <p className="text-xs font-semibold uppercase tracking-normal text-amber-200">{t.productDetail.operatingRange}</p>

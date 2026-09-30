@@ -6,8 +6,8 @@ import { ArrowRight, BrainCircuit, BriefcaseBusiness, Factory, MonitorUp, Router
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 const scenarios = [
-  { id: 'industrialAutomation', icon: Factory, image: '/assets/products/industrial/ver2/mcipcb13a/main.webp', products: [
-    { name: 'MCIPCB13A', href: '/products/industrial-mini-pc/mcipcb13a' },
+  { id: 'industrialAutomation', icon: Factory, image: '/assets/products/industrial/merged/mcipcb13/front.webp', products: [
+    { name: 'MCIPCB13', href: '/products/industrial-mini-pc/mcipcb13' },
     { name: 'MCIPCB12', href: '/products/industrial-mini-pc/mcipcb12' },
   ] },
   { id: 'edgeAi', icon: BrainCircuit, image: '/assets/products/ai/brochure/mcaipc2/main.webp', products: [

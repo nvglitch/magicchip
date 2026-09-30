@@ -110,6 +110,23 @@ export const brochureSpecCorrections: Record<string, { label: string; value: str
       "value": "1 x DDR4 SO-DIMM Slot Max 32GB"
     }
   ],
+  "mcipcb3": [
+    { "label": "Network", "value": "2 × Intel I226-V 2.5GbE RJ45" }
+  ],
+  "mcipcb4": [
+    { "label": "Network", "value": "2 × Intel I226-V 2.5GbE RJ45" },
+    { "label": "Storage", "value": "1 × M.2 NVMe (PCIe 3.0 x1) + 1 × mSATA" }
+  ],
+  "mcipcb8": [
+    { "label": "CPU", "value": "Intel Processor N150" },
+    { "label": "Display", "value": "2 × HDMI (one may be substituted by DP), 1 × DP, 1 × USB Type-C with display support; exact combination follows the selected I/O board" },
+    { "label": "Network", "value": "2 × Realtek Gigabit RJ45, with Wake-on-LAN / PXE" },
+    { "label": "Storage", "value": "1 × SATA 3.0 + 1 × M.2 Key-M 2280 PCIe / SATA SSD" }
+  ],
+  "mcipcb10": [
+    { "label": "Storage", "value": "1 × SATA 3.0 + 1 × mSATA 3.0" },
+    { "label": "Dimensions", "value": "126 × 148 × 56 mm" }
+  ],
   "mcipcb12": [
     {
       "label": "CPU",
@@ -118,7 +135,8 @@ export const brochureSpecCorrections: Record<string, { label: string; value: str
     {
       "label": "Memory",
       "value": "1 x DDR4 SO-DIMM Slot Max 16GB"
-    }
+    },
+    { "label": "Storage", "value": "1 × M.2 2280 NVMe + 1 × SATA 3.0 + 1 × mSATA 3.0" }
   ],
   "mcipc1": [
     {

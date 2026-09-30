@@ -39,7 +39,7 @@ assert(matchSearch(fixture([{ label: 'Memory', value: 'DDR5-4800' }]), 'DDR5'));
 assert.equal(matchSearch(fixture([{ label: 'Memory', value: 'DDR4' }]), 'DDR5'), null);
 assert(matchSearch(fixture([{ label: 'Cooling', value: 'fanless' }]), 'fanles'));
 const products = siteSearchIndex.filter(e => e.type === 'product');
-assert.equal(products.length, 123);
+assert.equal(products.length, 130);
 assert(products.every(e => e.specs?.length));
 assert.equal(new Set(products.map(e => e.href)).size, products.length);
 for (const entry of products) assert.equal(searchSite(entry.title)[0]?.href, entry.href);
@@ -60,11 +60,24 @@ assert.equal(searchSite('').length, 0);
 assert.equal(searchSite('999-1000V').length, 0);
 assert.equal(searchSite('zzzzzznothing').length, 0);
 for (const query of ['9-36V', 'wide voltage', 'Intel', 'Intel 9-36V', 'USB4', 'DDR5']) console.log(`${query}: ${searchSite(query).length} results`);
-console.log('Search regression checks passed: all 123 products, voltage boundaries, CPU scope, spelling, units, compound queries, and exact model links.');
+console.log('Search regression checks passed: all 130 product/SKU entries, voltage boundaries, CPU scope, spelling, units, compound queries, and exact model links.');
 
 assert.equal(searchSite('MCIPCE1')[0]?.href, '/products/industrial-mini-pc/mcipce1');
 assert(searchSite('9-36V').some(item => item.title === 'MCIPCE1'));
-for (const name of ['MCIPCB13A', 'MCIPCB13B']) assert.equal(searchSite(name)[0]?.title, name);
+for (const [name, target] of Object.entries({
+  MCIPCB1A: 'mcipcb1#sku-type-a', MCIPCB1B: 'mcipcb1#sku-type-b', MCIPCB1F: 'mcipcb1#sku-fan',
+  'MCIPCB2-D3': 'mcipcb2#sku-type-a', 'MCIPCB2-D4': 'mcipcb2#sku-type-b', 'MCIPCB2-J5005': 'mcipcb2#sku-j5005',
+  'MCIPCB6-DDR3L': 'mcipcb6#sku-type-b', 'MCIPCB6-DDR4': 'mcipcb6#sku-type-c',
+  MCIPCB13A: 'mcipcb13#sku-type-a', MCIPCB13B: 'mcipcb13#sku-type-b',
+  MCIPCB14F: 'mcipcb14#sku-fan',
+  MCIPCB15A: 'mcipcb15#sku-type-a', MCIPCB15B: 'mcipcb15#sku-type-b', MCIPCB15C: 'mcipcb15#sku-type-c', MCIPCB15D: 'mcipcb15#sku-type-d', MCIPCB15E: 'mcipcb15#sku-fan',
+  MCIPCB16A: 'mcipcb16#sku-type-a', MCIPCB16B: 'mcipcb16#sku-type-b',
+})) assert.equal(searchSite(name)[0]?.href, `/products/industrial-mini-pc/${target}`);
+assert(searchSite('12-19V').some(item => item.href === '/products/industrial-mini-pc/mcipcb15#sku-fan'));
+assert(!searchSite('12-19V').some(item => item.href === '/products/industrial-mini-pc/mcipcb15#sku-type-a'));
+assert(searchSite('DDR5').some(item => item.href === '/products/industrial-mini-pc/mcipcb13#sku-type-b'));
+assert(searchSite('DDR4').some(item => item.href === '/products/industrial-mini-pc/mcipcb1#sku-type-a'));
+assert(!searchSite('DDR4').some(item => item.href === '/products/industrial-mini-pc/mcipcb1#sku-type-b'));
 
 // TPC X: preserve platform-dependent facts and optional power qualifiers.
 for (const code of ['1004', '1201', '1501', '1506', '1701', '1901', '2105']) {

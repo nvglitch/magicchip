@@ -11,7 +11,7 @@ ROOT=Path(__file__).resolve().parents[1]
 subprocess.run(['node', '-e', """
 const fs=require('fs');fs.mkdirSync('node_modules/.cache',{recursive:true});
 const source=fs.readFileSync('scripts/test-site-search.cjs','utf8').split('const { searchSite')[0].replaceAll('__dirname',JSON.stringify(process.cwd()+'/scripts'));
-eval(source+";fs.writeFileSync('node_modules/.cache/preview-products.json',JSON.stringify(load('lib/site-search.ts').siteSearchIndex.filter(x=>x.type==='product')));");
+eval(source+";fs.writeFileSync('node_modules/.cache/preview-products.json',JSON.stringify(load('lib/site-search.ts').siteSearchIndex.filter(x=>x.type==='product'&&!x.href.includes('#sku-'))));");
 """],cwd=ROOT,check=True)
 items=json.loads((ROOT/'node_modules/.cache/preview-products.json').read_text(encoding='utf-8'))
 base=sys.argv[1]

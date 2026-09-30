@@ -25,14 +25,22 @@ export type SearchEntry = {
 const curatedIndustrialSearchIds = new Set(['mcipca2', 'mcipc9', 'mctpc-1506e', 'mcipcb12', 'mcipcd3']);
 const catalogIndustrialSearchEntries: SearchEntry[] = industrialCatalog
   .filter((item) => !curatedIndustrialSearchIds.has(item.id))
-  .map((item) => ({
+  .flatMap((item): SearchEntry[] => [{
     title: item.name,
     description: item.tagline,
     href: `/products/industrial-mini-pc/${item.id}`,
     type: 'product',
     keywords: ['industrial mini pc', `${item.series.toLowerCase()} series`, item.name.toLowerCase()],
     image: item.image,
-  }));
+  }, ...(item.skus?.map((sku): SearchEntry => ({
+    title: `${item.name} — ${sku.label}`,
+    description: `${item.name} ${sku.label} configuration`,
+    href: `/products/industrial-mini-pc/${item.id}#sku-${sku.key}`,
+    type: 'product',
+    keywords: [item.name, sku.label, ...sku.legacyNames],
+    image: sku.image,
+    specs: [...item.specs, ...sku.specs],
+  })) || [])]);
 const curatedFirewallSearchIds = new Set(['mcr20', 'mcsrp6']);
 const catalogFirewallSearchEntries: SearchEntry[] = firewallCatalog
   .filter((item) => !curatedFirewallSearchIds.has(item.id))
@@ -244,7 +252,7 @@ const catalogSpecs = new Map<string, { label: string; value: string }[]>(
 );
 for (const item of [mcai1, mc15uh, mctar7]) catalogSpecs.set(item.name, item.specifications);
 for (const item of brochureUpdates) catalogSpecs.set(item.name, item.specs);
-export const siteSearchIndex: SearchEntry[] = baseSearchIndex.map(entry => ({ ...entry, ...(brochureUpdates.find(item => item.name === entry.title) ? { image: brochureUpdates.find(item => item.name === entry.title)!.image, description: brochureUpdates.find(item => item.name === entry.title)!.tagline } : {}), specs: catalogSpecs.get(entry.title) }));
+export const siteSearchIndex: SearchEntry[] = baseSearchIndex.map(entry => ({ ...entry, ...(brochureUpdates.find(item => item.name === entry.title) ? { image: brochureUpdates.find(item => item.name === entry.title)!.image, description: brochureUpdates.find(item => item.name === entry.title)!.tagline } : {}), specs: entry.specs || catalogSpecs.get(entry.title) }));
 
 export function searchSite(query: string): SearchEntry[] {
   if (!query.trim()) return [];

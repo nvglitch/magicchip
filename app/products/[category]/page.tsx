@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { motion } from 'framer-motion';
-import { ArrowRight, ChevronLeft, Cpu, Shield, Monitor, Brain, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, ChevronLeft, Cpu, Shield, Monitor, Brain, CheckCircle2, type LucideIcon } from 'lucide-react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { aiCatalog } from '@/lib/ai-catalog';
@@ -16,7 +16,7 @@ import { industrialCatalog } from '@/lib/industrial-catalog';
 import { firewallCatalog } from '@/lib/firewall-catalog';
 import { commercialCatalog } from '@/lib/commercial-catalog';
 
-const categoryData: Record<string, { icon: any; gradient: string; image: string }> = {
+const categoryData: Record<string, { icon: LucideIcon; gradient: string; image: string }> = {
   'industrial-mini-pc': { icon: Cpu, gradient: 'from-blue-600 to-indigo-700', image: '/assets/home/categories/industrial-mini-pc.png' },
   'ai-mini-pc': { icon: Brain, gradient: 'from-violet-600 to-blue-700', image: '/assets/home/categories/ai-mini-pc.png' },
   'commercial-mini-pc': { icon: Monitor, gradient: 'from-blue-500 to-indigo-600', image: '/assets/home/categories/commercial-mini-pc.png' },
@@ -93,11 +93,11 @@ const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: 
       specs: ['Intel Celeron J4125', '4 x Intel GbE LAN', '1 x DB9 RS232 COM', '-20°C to +60°C'],
     },
     {
-      id: 'mcipcb13a',
-      name: 'MCIPCB13A',
-      tagline: 'Compact industrial box PC with flexible Intel Core platform support',
-      image: '/assets/products/industrial/ver2/mcipcb13a/main.webp',
-      specs: ['4th-13th Gen Intel Core', 'Dual GbE LAN', '8x USB Ports', '-20°C to +60°C'],
+      id: 'mcipcb13',
+      name: 'MCIPCB13',
+      tagline: 'Industrial box PC with Intel Core and Core Ultra configurations',
+      image: '/assets/products/industrial/merged/mcipcb13/front.webp',
+      specs: ['Intel Core / Core Ultra', 'Dual GbE LAN', 'Type-specific USB', '-20°C to +60°C'],
     },
     {
       id: 'mcipcb12',
@@ -183,7 +183,7 @@ const industrialSeries = [
     code: 'B',
     title: 'B Series',
     description: 'Dual-LAN industrial computers with dual COM ports',
-    image: '/assets/products/industrial/ver2/mcipcb13a/main.webp',
+    image: '/assets/products/industrial/merged/mcipcb13/front.webp',
     models: industrialCatalog.filter((product) => product.series === 'B').map(({ id, name, image }) => ({ id, name, image })),
 
   },

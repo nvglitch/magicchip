@@ -3,6 +3,8 @@ import type { ReactNode } from 'react';
 import { commercialCatalog } from '@/lib/commercial-catalog';
 import { firewallCatalog } from '@/lib/firewall-catalog';
 import { industrialCatalog } from '@/lib/industrial-catalog';
+import { mergedBSeriesAliases } from '@/lib/merged-b-series';
+import { permanentRedirect } from 'next/navigation';
 import { categorySeo, createPageMetadata, productSeo, serializeJsonLd, SITE_NAME, SITE_URL } from '@/lib/seo';
 
 type ProductLayoutProps = {
@@ -23,23 +25,34 @@ export async function generateMetadata({ params }: Omit<ProductLayoutProps, 'chi
 
 export default async function ProductLayout({ children, params }: ProductLayoutProps) {
   const { category, id } = await params;
+  if (category === 'industrial-mini-pc' && mergedBSeriesAliases[id]) permanentRedirect(mergedBSeriesAliases[id]);
   const product = productSeo[id];
   const categoryEntry = categorySeo[category];
   const catalogItem = [...industrialCatalog, ...firewallCatalog, ...commercialCatalog].find((item) => item.id === id);
+  const industrialItem = category === 'industrial-mini-pc' ? industrialCatalog.find(item => item.id === id) : undefined;
   const isValidProduct = product && product.category === category;
 
   if (!isValidProduct) return children;
 
   const productData = {
     '@context': 'https://schema.org',
-    '@type': 'Product',
+    '@type': industrialItem?.skus?.length ? 'ProductGroup' : 'Product',
     '@id': `${SITE_URL}${product.path}#product`,
     name: product.name,
     description: product.description,
     image: product.image ? [`${SITE_URL}${product.image}`] : undefined,
     url: `${SITE_URL}${product.path}`,
-    sku: catalogItem?.name || id.toUpperCase(),
-    mpn: catalogItem?.name || id.toUpperCase(),
+    sku: industrialItem?.skus?.length ? undefined : catalogItem?.name || id.toUpperCase(),
+    mpn: industrialItem?.skus?.length ? undefined : catalogItem?.name || id.toUpperCase(),
+    productGroupID: industrialItem?.skus?.length ? industrialItem.name : undefined,
+    hasVariant: industrialItem?.skus?.map(sku => ({
+      '@type': 'Product',
+      name: `${industrialItem.name} ${sku.label}`,
+      sku: sku.legacyNames[0] || `${industrialItem.name}-${sku.key}`,
+      image: `${SITE_URL}${sku.image}`,
+      url: `${SITE_URL}${product.path}#sku-${sku.key}`,
+      additionalProperty: sku.specs.map(spec => ({ '@type': 'PropertyValue', name: spec.label, value: spec.value })),
+    })),
     category: categoryEntry?.name,
     brand: { '@type': 'Brand', name: SITE_NAME },
     manufacturer: { '@id': `${SITE_URL}/#organization` },

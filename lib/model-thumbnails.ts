@@ -48,77 +48,9 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
     "image": "/assets/products/thumbnails/mctpc-2105x.webp",
     "source": "/assets/products/industrial/ver2/mctpc-2105x/front.webp"
   },
-  "mcipcb13a": {
-    "image": "/assets/products/thumbnails/mcipcb13a.webp",
-    "source": "/assets/products/industrial/ver2/mcipcb13a/main.webp"
-  },
-  "mcipcb13b": {
-    "image": "/assets/products/thumbnails/mcipcb13b.webp",
-    "source": "/assets/products/industrial/ver2/mcipcb13b/main.webp"
-  },
   "mcipce1": {
     "image": "/assets/products/thumbnails/mcipce1.webp",
     "source": "/assets/products/industrial/ver2/mcipce1/main.webp"
-  },
-  "mcipcb1a": {
-    "image": "/assets/products/thumbnails/mcipcb1a.webp",
-    "source": "/assets/products/industrial/brochure/mcipcb1a/main.webp"
-  },
-  "mcipcb1b": {
-    "image": "/assets/products/thumbnails/mcipcb1b.webp",
-    "source": "/assets/products/industrial/brochure/mcipcb1b/main.webp"
-  },
-  "mcipcb1f": {
-    "image": "/assets/products/thumbnails/mcipcb1f.webp",
-    "source": "/assets/products/industrial/brochure/mcipcb1f/main.webp"
-  },
-  "mcipcb6": {
-    "image": "/assets/products/thumbnails/mcipcb6.webp",
-    "source": "/assets/products/industrial/brochure/mcipcb6/main.webp"
-  },
-  "mcipcb6-ddr3l": {
-    "image": "/assets/products/thumbnails/mcipcb6-ddr3l.webp",
-    "source": "/assets/products/industrial/brochure/mcipcb6-ddr3l/main.webp"
-  },
-  "mcipcb6-ddr4": {
-    "image": "/assets/products/thumbnails/mcipcb6-ddr4.webp",
-    "source": "/assets/products/industrial/brochure/mcipcb6-ddr4/main.webp"
-  },
-  "mcipcb14": {
-    "image": "/assets/products/thumbnails/mcipcb14.webp",
-    "source": "/assets/products/industrial/brochure/mcipcb14/main.webp"
-  },
-  "mcipcb14f": {
-    "image": "/assets/products/thumbnails/mcipcb14f.webp",
-    "source": "/assets/products/industrial/brochure/mcipcb14f/main.webp"
-  },
-  "mcipcb15a": {
-    "image": "/assets/products/thumbnails/mcipcb15a.webp",
-    "source": "/assets/products/industrial/brochure/mcipcb15a/main.webp"
-  },
-  "mcipcb15b": {
-    "image": "/assets/products/thumbnails/mcipcb15b.webp",
-    "source": "/assets/products/industrial/brochure/mcipcb15b/main.webp"
-  },
-  "mcipcb15c": {
-    "image": "/assets/products/thumbnails/mcipcb15c.webp",
-    "source": "/assets/products/industrial/brochure/mcipcb15c/main.webp"
-  },
-  "mcipcb15d": {
-    "image": "/assets/products/thumbnails/mcipcb15d.webp",
-    "source": "/assets/products/industrial/brochure/mcipcb15d/main.webp"
-  },
-  "mcipcb15e": {
-    "image": "/assets/products/thumbnails/mcipcb15e.webp",
-    "source": "/assets/products/industrial/brochure/mcipcb15e/main.webp"
-  },
-  "mcipcb16a": {
-    "image": "/assets/products/thumbnails/mcipcb16a.webp",
-    "source": "/assets/products/industrial/brochure/mcipcb16a/main.webp"
-  },
-  "mcipcb16b": {
-    "image": "/assets/products/thumbnails/mcipcb16b.webp",
-    "source": "/assets/products/industrial/brochure/mcipcb16b/main.webp"
   },
   "mcipcd4": {
     "image": "/assets/products/thumbnails/mcipcd4.webp",
@@ -147,18 +79,6 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
   "mcipcb11": {
     "image": "/assets/products/thumbnails/mcipcb11.webp",
     "source": "/assets/products/industrial/b-series/mcipcb11/images/main-transparent.png"
-  },
-  "mcipcb2-d3": {
-    "image": "/assets/products/thumbnails/mcipcb2-d3.webp",
-    "source": "/assets/products/industrial/b-series/mcipcb2-d3/images/main-square-srgb.jpg"
-  },
-  "mcipcb2-d4": {
-    "image": "/assets/products/thumbnails/mcipcb2-d4.webp",
-    "source": "/assets/products/industrial/b-series/mcipcb2-d4/images/main-square-srgb.jpg"
-  },
-  "mcipcb2-j5005": {
-    "image": "/assets/products/thumbnails/mcipcb2-j5005.webp",
-    "source": "/assets/products/industrial/b-series/mcipcb2-j5005/images/main-square-srgb.jpg"
   },
   "mcipcb3": {
     "image": "/assets/products/thumbnails/mcipcb3.webp",
@@ -251,6 +171,34 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
   "mctpc-2308e": {
     "image": "/assets/products/thumbnails/mctpc-2308e.webp",
     "source": "/assets/products/industrial/tpc-series/mctpc-2308e/images/main-transparent.png"
+  },
+  "mcipcb1": {
+    "image": "/assets/products/thumbnails/mcipcb1.webp",
+    "source": "/assets/products/industrial/merged/mcipcb1/front.webp"
+  },
+  "mcipcb2": {
+    "image": "/assets/products/thumbnails/mcipcb2.webp",
+    "source": "/assets/products/industrial/merged/mcipcb2/front.webp"
+  },
+  "mcipcb6": {
+    "image": "/assets/products/thumbnails/mcipcb6.webp",
+    "source": "/assets/products/industrial/merged/mcipcb6/front.webp"
+  },
+  "mcipcb13": {
+    "image": "/assets/products/thumbnails/mcipcb13.webp",
+    "source": "/assets/products/industrial/merged/mcipcb13/front.webp"
+  },
+  "mcipcb14": {
+    "image": "/assets/products/thumbnails/mcipcb14.webp",
+    "source": "/assets/products/industrial/merged/mcipcb14/front.webp"
+  },
+  "mcipcb15": {
+    "image": "/assets/products/thumbnails/mcipcb15.webp",
+    "source": "/assets/products/industrial/merged/mcipcb15/front.webp"
+  },
+  "mcipcb16": {
+    "image": "/assets/products/thumbnails/mcipcb16.webp",
+    "source": "/assets/products/industrial/merged/mcipcb16/front.webp"
   },
   "mcsrp1": {
     "image": "/assets/products/thumbnails/mcsrp1.webp",

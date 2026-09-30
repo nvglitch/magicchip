@@ -3,6 +3,7 @@ import { industrialESeriesCopy } from '@/lib/industrial-navigation-copy';
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { 
   Globe, 
@@ -16,7 +17,6 @@ import {
   Network,
   Shield,
   Monitor,
-  Server,
   Newspaper,
   Download,
   FileCode,
@@ -75,7 +75,7 @@ type ScenarioMegaItem = DropdownItem & {
 
 const megaMenuProducts: Record<string, MegaMenuProduct[]> = {
   'industrial-mini-pc': [
-    { id: 'mcipcb13a', name: 'MCIPCB13A', tagline: 'Flexible Intel Core industrial box PC', image: '/assets/products/industrial/ver2/mcipcb13a/main.webp' },
+    { id: 'mcipcb13', name: 'MCIPCB13', tagline: 'Intel Core and Core Ultra industrial box PC', image: '/assets/products/industrial/merged/mcipcb13/front.webp' },
     { id: 'mcipcb12', name: 'MCIPCB12', tagline: 'Fanless triple-display industrial mini PC', image: '/assets/products/industrial/b-series/mcipcb12/images/1.jpg' },
     { id: 'mcipcd3', name: 'MCIPCD3', tagline: 'Six-LAN industrial network appliance', image: '/assets/products/industrial/d-series/mcipcd3/images/1.jpg' },
   ],
@@ -113,7 +113,7 @@ const industrialMegaSeries: ProductMegaSeries[] = [
     code: 'B',
     title: 'B Series',
     description: 'Dual-LAN industrial computers with dual COM ports',
-    image: '/assets/products/industrial/ver2/mcipcb13a/main.webp',
+    image: '/assets/products/industrial/merged/mcipcb13/front.webp',
     href: '/products/industrial-mini-pc#series-b',
   },
   {
@@ -227,7 +227,7 @@ const scenarioMegaItems: ScenarioMegaItem[] = [
     description: 'Fanless systems with serial connectivity and rich I/O for machine control.',
     href: '/scenarios#industrialAutomation',
     icon: Factory,
-    products: [scenarioProduct('industrial-mini-pc', 'mcipcb13a'), scenarioProduct('industrial-mini-pc', 'mcipcb12')],
+    products: [scenarioProduct('industrial-mini-pc', 'mcipcb13'), scenarioProduct('industrial-mini-pc', 'mcipcb12')],
   },
   {
     id: 'edgeAi',
@@ -378,7 +378,7 @@ export default function Navbar() {
       <div className="mx-auto w-full max-w-[1680px] px-3 sm:px-4 lg:px-6 2xl:px-8">
         <div className="relative flex h-16 items-center justify-between gap-2 md:gap-3 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-4">
           {/* Logo */}
-          <a href="/" className="group relative flex h-12 min-w-0 flex-shrink-0 items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50 md:ml-0 md:h-11 md:px-1.5 lg:justify-self-start">
+          <Link href="/" className="group relative flex h-12 min-w-0 flex-shrink-0 items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50 md:ml-0 md:h-11 md:px-1.5 lg:justify-self-start">
             <Image
               src="/assets/brand/logo-mark.svg"
               alt="MagicChip"
@@ -395,7 +395,7 @@ export default function Navbar() {
               className="hidden h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02] md:block lg:h-10"
               priority
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden items-center justify-center gap-0 lg:flex lg:justify-self-center xl:gap-1 2xl:gap-2">
@@ -440,10 +440,10 @@ export default function Navbar() {
                           <div>
                             <h2 className="text-2xl font-bold text-slate-950 lg:text-3xl">{t.nav.products}</h2>
                           </div>
-                          <a href="/products" className="inline-flex items-center gap-1 text-sm font-semibold text-slate-600 transition-colors hover:text-blue-700">
+                          <Link href="/products" className="inline-flex items-center gap-1 text-sm font-semibold text-slate-600 transition-colors hover:text-blue-700">
                             {t.products.learnMore}
                             <ChevronRight className="h-4 w-4" />
-                          </a>
+                          </Link>
                         </div>
 
                         <div className="grid gap-5 md:grid-cols-[190px_1fr] lg:grid-cols-[230px_1fr]">

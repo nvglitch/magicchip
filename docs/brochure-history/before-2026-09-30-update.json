@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
   "sourceRoot": "D:\\本地资源库\\电脑相关\\电脑册子归档\\ver2",
-  "observedAtUtc": "2026-09-30T04:27:50.166136+00:00",
+  "observedAtUtc": "2026-09-19T02:06:58.923575+00:00",
   "observationOnly": false,
-  "totalPdfCount": 115,
-  "inScopePdfCount": 112,
+  "totalPdfCount": 127,
+  "inScopePdfCount": 124,
   "statusCounts": {
+    "verified-current": 102,
+    "updated": 14,
     "excluded": 3,
-    "pending-confirmation": 15,
-    "superseded-by-merged-brochure": 17,
-    "updated": 22,
-    "verified-current": 75
+    "pending-confirmation": 8,
+    "retired-by-user": 1
   },
-  "previousObservation": "brochure-history/before-2026-09-30-update.json",
+  "previousObservation": "brochure-history/before-2026-09-19-update.json",
   "files": [
     {
       "relativePath": "AIPC/MCAIPC1 brochure.pdf",
@@ -38,23 +38,23 @@
     },
     {
       "relativePath": "AIPC/MCAIPC2 brochure.pdf",
-      "sizeBytes": 6291379,
-      "modifiedAtUtc": "2026-09-20T09:26:30.349085+00:00",
-      "observedSha256": "53d4da6a010c171d7b2f5b05c8face344abede8801d2e16cda294e163f496fdf",
-      "appliedSha256": "53d4da6a010c171d7b2f5b05c8face344abede8801d2e16cda294e163f496fdf",
+      "sizeBytes": 6297975,
+      "modifiedAtUtc": "2026-09-09T02:35:03.999721+00:00",
+      "observedSha256": "0483c61c63c7bf5ea0208f296bc2f17d057135816ce144ec3fc89fca1cdd8d34",
+      "appliedSha256": "0483c61c63c7bf5ea0208f296bc2f17d057135816ce144ec3fc89fca1cdd8d34",
       "excluded": false,
       "present": true,
-      "status": "updated",
-      "changeSincePreviousObservation": "changed",
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcai2"
       ],
       "hrefs": [
         "/products/ai-mini-pc/mcai2"
       ],
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "appliedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "notes": "已核对三主板平台与机箱配置；官网现有内容吻合，新版未要求增加未定稿的 New ID concept。"
+      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "AIPC/MCAIPC3A Brochure.pdf",
@@ -390,102 +390,64 @@
       "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
-      "relativePath": "工控机IPC/B系列/MCIPCB1 brochure.pdf",
-      "appliedSha256": null,
-      "sizeBytes": 9716451,
-      "modifiedAtUtc": "2026-09-30T01:44:02.666060+00:00",
-      "observedSha256": "a6981742c74fcb95c271edf3ae9b373e5298f3d09f92be632f671539584f6978",
-      "present": true,
-      "excluded": false,
-      "changeSincePreviousObservation": "new",
-      "status": "pending-confirmation",
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "notes": "已合并 Type A/B 与 i3-N305 风扇款到同页。HDMI 1.4 的 4K60 表述待确认，网页未承诺该上限。",
-      "modelIds": [
-        "mcipcb1"
-      ],
-      "hrefs": [
-        "/products/industrial-mini-pc/mcipcb1"
-      ]
-    },
-    {
       "relativePath": "工控机IPC/B系列/MCIPCB10 brochure.pdf",
-      "sizeBytes": 10172421,
-      "modifiedAtUtc": "2026-09-30T01:44:35.305654+00:00",
-      "observedSha256": "cd92c6b15e99f783b6c87dc8a56a96e806338a2965b878d6085c26a8eb8676c5",
-      "appliedSha256": "cd92c6b15e99f783b6c87dc8a56a96e806338a2965b878d6085c26a8eb8676c5",
+      "sizeBytes": 10171769,
+      "modifiedAtUtc": "2026-08-24T10:07:51.628981+00:00",
+      "observedSha256": "db8460af4adac44fe3a10a74b2a8503af1a71b706ab3fe23d6a7dac4ca7da02e",
+      "appliedSha256": "db8460af4adac44fe3a10a74b2a8503af1a71b706ab3fe23d6a7dac4ca7da02e",
       "excluded": false,
       "present": true,
-      "status": "updated",
-      "changeSincePreviousObservation": "changed",
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb10"
       ],
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb10"
       ],
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "appliedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "notes": "已核对新版册子与官网；无争议的产品参数或系列配置已落实，旧型号入口保持跳转。"
+      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB11 brochure.pdf",
-      "sizeBytes": 633686,
-      "modifiedAtUtc": "2026-09-30T01:44:35.427382+00:00",
-      "observedSha256": "9845fc0d5add7dc19109c423c471051a9deb471ac1d7de3cbff5fe76abeb7f9c",
+      "sizeBytes": 632999,
+      "modifiedAtUtc": "2026-08-24T10:07:52.059697+00:00",
+      "observedSha256": "7e4e1dc666ef6080e4918e233dc65803211974a1c5bde422825d6ed7642502c2",
       "appliedSha256": null,
       "excluded": false,
       "present": true,
       "status": "pending-confirmation",
-      "changeSincePreviousObservation": "changed",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb11"
       ],
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb11"
       ],
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "notes": "网口规格行写 1 个，背面接口行写 2 个；保留待核实。",
+      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "notes": "Network 行 1 个网口与后面板 2 个网口矛盾；保留既有 2 个，待核实。",
       "partialUpdate": true
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB12 brochure.pdf",
-      "sizeBytes": 27831568,
-      "modifiedAtUtc": "2026-09-30T01:44:35.699558+00:00",
-      "observedSha256": "667311f1b01fdcb5eb4878c11350c7b62a2bddc0de2f3ffc47b3ef2b26195f8e",
-      "appliedSha256": "667311f1b01fdcb5eb4878c11350c7b62a2bddc0de2f3ffc47b3ef2b26195f8e",
+      "sizeBytes": 27829957,
+      "modifiedAtUtc": "2026-08-24T10:07:56.222712+00:00",
+      "observedSha256": "a987e60a47628b6a1778cd89ddfceaabf6ce84a77b67e2a1dbbc5e17969c5503",
+      "appliedSha256": "a987e60a47628b6a1778cd89ddfceaabf6ce84a77b67e2a1dbbc5e17969c5503",
       "excluded": false,
       "present": true,
-      "status": "updated",
-      "changeSincePreviousObservation": "changed",
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb12"
       ],
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb12"
       ],
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "appliedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "notes": "已核对新版册子与官网；无争议的产品参数或系列配置已落实，旧型号入口保持跳转。"
-    },
-    {
-      "relativePath": "工控机IPC/B系列/MCIPCB13 brochure.pdf",
-      "sizeBytes": 2513378,
-      "modifiedAtUtc": "2026-09-30T01:44:09.353590+00:00",
-      "observedSha256": "747e9e9214d76ab83c66e2fb5e187602209091d79eda292e1b8134cd0f5b8c4b",
-      "appliedSha256": null,
-      "excluded": false,
-      "status": "pending-confirmation",
-      "present": true,
-      "notes": "已合并 Type A/B 到同页；8 代平台存在两种内存规格，网页注明选板前确认。",
-      "modelIds": [
-        "mcipcb13"
-      ],
-      "hrefs": [
-        "/products/industrial-mini-pc/mcipcb13"
-      ],
-      "changeSincePreviousObservation": "changed",
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00"
+      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB13A brochure.pdf",
@@ -494,9 +456,9 @@
       "observedSha256": "363189e22ab6dd228f131176356621199904e7287d98c53414995132eff4d483",
       "appliedSha256": "363189e22ab6dd228f131176356621199904e7287d98c53414995132eff4d483",
       "excluded": false,
-      "present": false,
-      "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "present": true,
+      "status": "updated",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb13a"
       ],
@@ -504,7 +466,7 @@
         "/products/industrial-mini-pc/mcipcb13a"
       ],
       "reviewedAtUtc": "2026-09-16T06:11:27.014876+00:00",
-      "notes": "来源已并入系列册子；旧型号网页链接保留并跳转至系列页对应 SKU，不表示下架。",
+      "notes": "新版 CPU 行确认第 4/6/7/8/10/12/13 代，移除第 5 代；官网同步 DDR5 最高 64GB 和第 12/13 代存储选项。原 CPU/内存冲突已解决，图片无变化。生产构建和参数搜索验证通过。",
       "partialUpdate": false,
       "previousSha256": "6b9c629162a2c9af92762125203f94d55ff9d4cfe5adf4c020ed1fc36449606e",
       "appliedAtUtc": "2026-09-16T06:11:27.014876+00:00"
@@ -516,9 +478,9 @@
       "observedSha256": "4c8b5218453dd43168abd6390967541e008a59684668bc0b0dec8596da87f9e0",
       "appliedSha256": "4c8b5218453dd43168abd6390967541e008a59684668bc0b0dec8596da87f9e0",
       "excluded": false,
-      "present": false,
-      "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "present": true,
+      "status": "updated",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb13b"
       ],
@@ -527,27 +489,27 @@
       ],
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "来源已并入系列册子；旧型号网页链接保留并跳转至系列页对应 SKU，不表示下架。"
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB14 Brochure.pdf",
-      "sizeBytes": 10121733,
-      "modifiedAtUtc": "2026-09-30T01:44:14.656868+00:00",
-      "observedSha256": "d6481ef4d6d177534c7c6d950449cb1956187a459b21af9394fba84811a4fc34",
-      "appliedSha256": "d6481ef4d6d177534c7c6d950449cb1956187a459b21af9394fba84811a4fc34",
+      "sizeBytes": 4602810,
+      "modifiedAtUtc": "2026-08-25T05:56:19.119608+00:00",
+      "observedSha256": "9a6fc9a0ba416b19e90cbdcca0d95d0c6a5b4f8dc80e77f4cea7ccceba0c13c8",
+      "appliedSha256": "9a6fc9a0ba416b19e90cbdcca0d95d0c6a5b4f8dc80e77f4cea7ccceba0c13c8",
       "excluded": false,
       "present": true,
-      "status": "updated",
-      "changeSincePreviousObservation": "changed",
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb14"
       ],
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb14"
       ],
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "appliedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "notes": "已核对新版册子与官网；无争议的产品参数或系列配置已落实，旧型号入口保持跳转。"
+      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB14F Brochure.pdf",
@@ -556,9 +518,9 @@
       "observedSha256": "5fb17b9aa3b9d40d1efacd9dbd6ccc587cf900e7c7cfc3c62c7f7ed80b8db7a0",
       "appliedSha256": "5fb17b9aa3b9d40d1efacd9dbd6ccc587cf900e7c7cfc3c62c7f7ed80b8db7a0",
       "excluded": false,
-      "present": false,
-      "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "present": true,
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb14f"
       ],
@@ -567,26 +529,7 @@
       ],
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "来源已并入系列册子；旧型号网页链接保留并跳转至系列页对应 SKU，不表示下架。"
-    },
-    {
-      "relativePath": "工控机IPC/B系列/MCIPCB15 brochure.pdf",
-      "appliedSha256": null,
-      "sizeBytes": 20198479,
-      "modifiedAtUtc": "2026-09-30T01:44:25.613887+00:00",
-      "observedSha256": "12a99512af76fab7c21fb957bb616bee37a22fe90990f9ed41f6ff67fd43f62b",
-      "present": true,
-      "excluded": false,
-      "changeSincePreviousObservation": "new",
-      "status": "pending-confirmation",
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "notes": "已合并 Type A-D 与风扇款到同页；Type A 机箱尺寸比其余型号多 1 mm，按册子区分，实物待确认。",
-      "modelIds": [
-        "mcipcb15"
-      ],
-      "hrefs": [
-        "/products/industrial-mini-pc/mcipcb15"
-      ]
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB15A Brochure.pdf",
@@ -595,9 +538,9 @@
       "observedSha256": "db8249fcce882e3503231506de346e415f4c5541d18bcee30334cb23c05cd4f3",
       "appliedSha256": "db8249fcce882e3503231506de346e415f4c5541d18bcee30334cb23c05cd4f3",
       "excluded": false,
-      "present": false,
-      "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "present": true,
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb15a"
       ],
@@ -606,7 +549,7 @@
       ],
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "来源已并入系列册子；旧型号网页链接保留并跳转至系列页对应 SKU，不表示下架。"
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB15B Brochure.pdf",
@@ -615,9 +558,9 @@
       "observedSha256": "e19e06311639f721c6763bbb67d9f3ef281aa92ed5d62a9cf6cbe5bf3dbc9deb",
       "appliedSha256": "e19e06311639f721c6763bbb67d9f3ef281aa92ed5d62a9cf6cbe5bf3dbc9deb",
       "excluded": false,
-      "present": false,
-      "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "present": true,
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb15b"
       ],
@@ -626,7 +569,7 @@
       ],
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "来源已并入系列册子；旧型号网页链接保留并跳转至系列页对应 SKU，不表示下架。"
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB15C Brochure.pdf",
@@ -635,9 +578,9 @@
       "observedSha256": "e07bd6a791dce3ae3df78d1f8adab55dbe0231b76d689e39bf3107fb192c7bd6",
       "appliedSha256": "e07bd6a791dce3ae3df78d1f8adab55dbe0231b76d689e39bf3107fb192c7bd6",
       "excluded": false,
-      "present": false,
-      "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "present": true,
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb15c"
       ],
@@ -646,7 +589,7 @@
       ],
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "来源已并入系列册子；旧型号网页链接保留并跳转至系列页对应 SKU，不表示下架。"
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB15D Brochure.pdf",
@@ -655,9 +598,9 @@
       "observedSha256": "a22794fabb4d1ccd32d014ed31b95402020dd92efe88807f47c0489788ce7dd4",
       "appliedSha256": "a22794fabb4d1ccd32d014ed31b95402020dd92efe88807f47c0489788ce7dd4",
       "excluded": false,
-      "present": false,
-      "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "present": true,
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb15d"
       ],
@@ -666,7 +609,7 @@
       ],
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "来源已并入系列册子；旧型号网页链接保留并跳转至系列页对应 SKU，不表示下架。"
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB15E Brochure.pdf",
@@ -675,9 +618,9 @@
       "observedSha256": "68a639f79061007325a9ccd252e738a317f49eb557bdd56a200097d82117e6eb",
       "appliedSha256": "68a639f79061007325a9ccd252e738a317f49eb557bdd56a200097d82117e6eb",
       "excluded": false,
-      "present": false,
-      "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "present": true,
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb15e"
       ],
@@ -686,27 +629,7 @@
       ],
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "来源已并入系列册子；旧型号网页链接保留并跳转至系列页对应 SKU，不表示下架。"
-    },
-    {
-      "relativePath": "工控机IPC/B系列/MCIPCB16 brochure.pdf",
-      "appliedSha256": "c10c59ec2959eec6800f73d3264b83829433ed6851511eaceb49a6b0b74af457",
-      "sizeBytes": 14902223,
-      "modifiedAtUtc": "2026-09-30T01:44:34.063389+00:00",
-      "observedSha256": "c10c59ec2959eec6800f73d3264b83829433ed6851511eaceb49a6b0b74af457",
-      "present": true,
-      "excluded": false,
-      "changeSincePreviousObservation": "new",
-      "status": "updated",
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "appliedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "notes": "已核对新版册子与官网；无争议的产品参数或系列配置已落实，旧型号入口保持跳转。",
-      "modelIds": [
-        "mcipcb16"
-      ],
-      "hrefs": [
-        "/products/industrial-mini-pc/mcipcb16"
-      ]
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB16A Brochure.pdf",
@@ -715,9 +638,9 @@
       "observedSha256": "c30fe46c6ed17189345d73049d6a2c519c65de4ce437c4a9e7b9a3035a070a3d",
       "appliedSha256": "c30fe46c6ed17189345d73049d6a2c519c65de4ce437c4a9e7b9a3035a070a3d",
       "excluded": false,
-      "present": false,
-      "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "present": true,
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb16a"
       ],
@@ -726,7 +649,7 @@
       ],
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "来源已并入系列册子；旧型号网页链接保留并跳转至系列页对应 SKU，不表示下架。"
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB16B Brochure.pdf",
@@ -735,9 +658,9 @@
       "observedSha256": "27e63032939e93964f0ded62cdb0a32fb505b57bf8510cb0ee7717337eef7d27",
       "appliedSha256": "27e63032939e93964f0ded62cdb0a32fb505b57bf8510cb0ee7717337eef7d27",
       "excluded": false,
-      "present": false,
-      "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "present": true,
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb16b"
       ],
@@ -746,7 +669,7 @@
       ],
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "来源已并入系列册子；旧型号网页链接保留并跳转至系列页对应 SKU，不表示下架。"
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB1A Brochure.pdf",
@@ -755,9 +678,9 @@
       "observedSha256": "4788ff3579eb5a0f6a4df1c96996b5be4f0ee66d872452c696224ec86e682019",
       "appliedSha256": "4788ff3579eb5a0f6a4df1c96996b5be4f0ee66d872452c696224ec86e682019",
       "excluded": false,
-      "present": false,
-      "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "present": true,
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb1a"
       ],
@@ -766,7 +689,7 @@
       ],
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "来源已并入系列册子；旧型号网页链接保留并跳转至系列页对应 SKU，不表示下架。"
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB1B Brochure.pdf",
@@ -775,9 +698,9 @@
       "observedSha256": "77d0ef99657e352e783d8120afc33c595ffab155c3eb0e8ece56ee30d1f6ff4d",
       "appliedSha256": "77d0ef99657e352e783d8120afc33c595ffab155c3eb0e8ece56ee30d1f6ff4d",
       "excluded": false,
-      "present": false,
-      "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "present": true,
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb1b"
       ],
@@ -786,7 +709,7 @@
       ],
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "来源已并入系列册子；旧型号网页链接保留并跳转至系列页对应 SKU，不表示下架。"
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB1F Brochure.pdf",
@@ -795,9 +718,9 @@
       "observedSha256": "0edeeaa666b449784764bebccbf7aaca39434b98e8d3e393d747265ddba6610e",
       "appliedSha256": "0edeeaa666b449784764bebccbf7aaca39434b98e8d3e393d747265ddba6610e",
       "excluded": false,
-      "present": false,
-      "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "present": true,
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb1f"
       ],
@@ -806,26 +729,7 @@
       ],
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "来源已并入系列册子；旧型号网页链接保留并跳转至系列页对应 SKU，不表示下架。"
-    },
-    {
-      "relativePath": "工控机IPC/B系列/MCIPCB2 brochure.pdf",
-      "appliedSha256": null,
-      "sizeBytes": 1372061,
-      "modifiedAtUtc": "2026-09-30T01:44:03.323970+00:00",
-      "observedSha256": "a4a59d1e4fae612eae9ff07cd8d2c73179e8ce6015ef69e9cdafad556ca26637",
-      "present": true,
-      "excluded": false,
-      "changeSincePreviousObservation": "new",
-      "status": "pending-confirmation",
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "notes": "已合并 Type A/B 与 J5005 到同页；Type A 的 DDR3 2400 MHz 记载待确认，网页未展示速度。",
-      "modelIds": [
-        "mcipcb2"
-      ],
-      "hrefs": [
-        "/products/industrial-mini-pc/mcipcb2"
-      ]
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB2-D3 Brochure.pdf",
@@ -834,9 +738,9 @@
       "observedSha256": "6086cd90a02ac2a5cc0b78bfd70bf30ff06771bd199104ad117446fe6f25f9c0",
       "appliedSha256": "6086cd90a02ac2a5cc0b78bfd70bf30ff06771bd199104ad117446fe6f25f9c0",
       "excluded": false,
-      "present": false,
-      "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "present": true,
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb2-d3"
       ],
@@ -845,7 +749,7 @@
       ],
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "来源已并入系列册子；旧型号网页链接保留并跳转至系列页对应 SKU，不表示下架。"
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB2-D4 Brochure.pdf",
@@ -854,9 +758,9 @@
       "observedSha256": "1cba311b70710516e94cccee79d57b1dbceee6caf1111bed0715ea15141cdca1",
       "appliedSha256": "1cba311b70710516e94cccee79d57b1dbceee6caf1111bed0715ea15141cdca1",
       "excluded": false,
-      "present": false,
-      "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "present": true,
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb2-d4"
       ],
@@ -865,105 +769,107 @@
       ],
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "来源已并入系列册子；旧型号网页链接保留并跳转至系列页对应 SKU，不表示下架。"
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB2-J5005 brochure.pdf",
-      "sizeBytes": 993510,
-      "modifiedAtUtc": "2026-09-30T01:44:34.199160+00:00",
-      "observedSha256": "e220bda2b2add12fe1e7db4635afe98b699b7c734886867ac26d7e294651b1f6",
-      "appliedSha256": "e220bda2b2add12fe1e7db4635afe98b699b7c734886867ac26d7e294651b1f6",
+      "sizeBytes": 951317,
+      "modifiedAtUtc": "2026-08-24T10:07:58.534865+00:00",
+      "observedSha256": "a2de7bbf71a809722178ddc48cb903e305df1a526061d5874952e5af1a726be6",
+      "appliedSha256": "a2de7bbf71a809722178ddc48cb903e305df1a526061d5874952e5af1a726be6",
       "excluded": false,
       "present": true,
-      "status": "updated",
-      "changeSincePreviousObservation": "changed",
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
-        "mcipcb2"
+        "mcipcb2-j5005"
       ],
       "hrefs": [
-        "/products/industrial-mini-pc/mcipcb2#sku-j5005"
+        "/products/industrial-mini-pc/mcipcb2-j5005"
       ],
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "appliedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "notes": "已核对新版册子与官网；无争议的产品参数或系列配置已落实，旧型号入口保持跳转。"
+      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB3 Brochure.pdf",
-      "sizeBytes": 761036,
-      "modifiedAtUtc": "2026-09-30T01:44:34.336541+00:00",
-      "observedSha256": "fe67a65e5204d7b781cabb9456fc18bb39ce969b0654198a238746f48aaee119",
-      "appliedSha256": "fe67a65e5204d7b781cabb9456fc18bb39ce969b0654198a238746f48aaee119",
+      "sizeBytes": 760343,
+      "modifiedAtUtc": "2026-08-24T10:07:58.960867+00:00",
+      "observedSha256": "a161b87419f7200b1f50bb23eb743255d817b33467c1600910134f8ac22dfb66",
+      "appliedSha256": "a161b87419f7200b1f50bb23eb743255d817b33467c1600910134f8ac22dfb66",
       "excluded": false,
       "present": true,
-      "status": "updated",
-      "changeSincePreviousObservation": "changed",
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb3"
       ],
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb3"
       ],
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "appliedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "notes": "已核对新版册子与官网；无争议的产品参数或系列配置已落实，旧型号入口保持跳转。"
+      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB4 Brochure.pdf",
-      "sizeBytes": 728907,
-      "modifiedAtUtc": "2026-09-30T01:44:34.459577+00:00",
-      "observedSha256": "7c437cb781734327e252671d9b9de71833949afa7ebf01ff038b9995df53bb82",
-      "appliedSha256": null,
+      "sizeBytes": 728196,
+      "modifiedAtUtc": "2026-08-24T10:07:59.393833+00:00",
+      "observedSha256": "7c2ea5011824ae87fee0c7706dd78d8dcff120709388a98d0568582ae22a0dc4",
+      "appliedSha256": "7c2ea5011824ae87fee0c7706dd78d8dcff120709388a98d0568582ae22a0dc4",
       "excluded": false,
       "present": true,
-      "status": "pending-confirmation",
-      "changeSincePreviousObservation": "changed",
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb4"
       ],
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb4"
       ],
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "notes": "已同步明确的网口和存储参数；册子将 N5105 芯片组误写为 Alder Lake-N，待来源核实。"
+      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB5 Brochure.pdf",
-      "sizeBytes": 905382,
-      "modifiedAtUtc": "2026-09-30T01:44:34.600769+00:00",
-      "observedSha256": "1aece8ab4d740ddbf4236cc8ca898d608e794d005b3773ce5f5f0fd4b9951341",
-      "appliedSha256": null,
+      "sizeBytes": 904743,
+      "modifiedAtUtc": "2026-08-24T10:07:59.871194+00:00",
+      "observedSha256": "f1f2fa818d6bf6d61c2f8b4e67a63332567271c6fa4efec99f7899b4a63cc2f0",
+      "appliedSha256": "f1f2fa818d6bf6d61c2f8b4e67a63332567271c6fa4efec99f7899b4a63cc2f0",
       "excluded": false,
       "present": true,
-      "status": "pending-confirmation",
-      "changeSincePreviousObservation": "changed",
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb5"
       ],
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb5"
       ],
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "notes": "CPU/平台命名与芯片组表述冲突，未照搬存疑项目。"
+      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB6 Brochure.pdf",
-      "sizeBytes": 9946546,
-      "modifiedAtUtc": "2026-09-30T01:44:08.371413+00:00",
-      "observedSha256": "8323c47042ea526263a7106439cbfad8e5f2a9da26aafd0b1612ef428c63668e",
-      "appliedSha256": "8323c47042ea526263a7106439cbfad8e5f2a9da26aafd0b1612ef428c63668e",
+      "sizeBytes": 10029187,
+      "modifiedAtUtc": "2026-08-25T05:35:29.175080+00:00",
+      "observedSha256": "8edefbd8135b1e2156f419781672a48819e5cb43ebba463af034ae6e9b79a08e",
+      "appliedSha256": "8edefbd8135b1e2156f419781672a48819e5cb43ebba463af034ae6e9b79a08e",
       "excluded": false,
       "present": true,
-      "status": "updated",
-      "changeSincePreviousObservation": "changed",
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb6"
       ],
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb6"
       ],
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "appliedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "notes": "已核对新版册子与官网；无争议的产品参数或系列配置已落实，旧型号入口保持跳转。"
+      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB6-DDR3L Brochure.pdf",
@@ -972,9 +878,9 @@
       "observedSha256": "e82078eba54256057d7c987f024f39ffb12b57760967a09bb33a5cf3cf41093d",
       "appliedSha256": "e82078eba54256057d7c987f024f39ffb12b57760967a09bb33a5cf3cf41093d",
       "excluded": false,
-      "present": false,
-      "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "present": true,
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb6-ddr3l"
       ],
@@ -983,7 +889,7 @@
       ],
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "来源已并入系列册子；旧型号网页链接保留并跳转至系列页对应 SKU，不表示下架。"
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB6-DDR4 Brochure.pdf",
@@ -992,9 +898,9 @@
       "observedSha256": "cd8519bf5704acecfac4b6db73df105feb4d4a3fba254039bed21f885c6bac18",
       "appliedSha256": "cd8519bf5704acecfac4b6db73df105feb4d4a3fba254039bed21f885c6bac18",
       "excluded": false,
-      "present": false,
-      "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "present": true,
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb6-ddr4"
       ],
@@ -1003,66 +909,67 @@
       ],
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "来源已并入系列册子；旧型号网页链接保留并跳转至系列页对应 SKU，不表示下架。"
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB7 brochure.pdf",
-      "sizeBytes": 756397,
-      "modifiedAtUtc": "2026-09-30T01:44:34.763355+00:00",
-      "observedSha256": "578eacb17de17492ef626f77df5c45f358a70cd6fc3ba28fd9389106d9a01571",
-      "appliedSha256": "578eacb17de17492ef626f77df5c45f358a70cd6fc3ba28fd9389106d9a01571",
+      "sizeBytes": 755777,
+      "modifiedAtUtc": "2026-08-24T10:08:01.499894+00:00",
+      "observedSha256": "74cf540792ce5a38996877c46d8944969e7b58961bed6c9f6a824ad50e1d20e4",
+      "appliedSha256": "74cf540792ce5a38996877c46d8944969e7b58961bed6c9f6a824ad50e1d20e4",
       "excluded": false,
       "present": true,
-      "status": "updated",
-      "changeSincePreviousObservation": "changed",
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb7"
       ],
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb7"
       ],
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "appliedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "notes": "已核对新版册子与官网；无争议的产品参数或系列配置已落实，旧型号入口保持跳转。"
+      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB8 brochure.pdf",
-      "sizeBytes": 4501202,
-      "modifiedAtUtc": "2026-09-30T01:44:34.980193+00:00",
-      "observedSha256": "2e015e05ed46cf054bb7db642951dff1849f1e2f2be7d1eaee1327a8e8fed743",
-      "appliedSha256": "2e015e05ed46cf054bb7db642951dff1849f1e2f2be7d1eaee1327a8e8fed743",
+      "sizeBytes": 4461600,
+      "modifiedAtUtc": "2026-08-24T10:08:02.582885+00:00",
+      "observedSha256": "e2a6593ad7fb555125e0d02b95c8a632ba6b1d1f4fcac7fee3ae062928ba780b",
+      "appliedSha256": "e2a6593ad7fb555125e0d02b95c8a632ba6b1d1f4fcac7fee3ae062928ba780b",
       "excluded": false,
       "present": true,
-      "status": "updated",
-      "changeSincePreviousObservation": "changed",
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb8"
       ],
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb8"
       ],
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "appliedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "notes": "已核对新版册子与官网；无争议的产品参数或系列配置已落实，旧型号入口保持跳转。"
+      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB9 brochure.pdf",
-      "sizeBytes": 778071,
-      "modifiedAtUtc": "2026-09-30T01:44:35.115814+00:00",
-      "observedSha256": "fe4734c4f13ddb71ec74157322892b011d9735ded5bc3df374710d103e1ac2cf",
-      "appliedSha256": null,
+      "sizeBytes": 777462,
+      "modifiedAtUtc": "2026-08-24T10:08:03.102427+00:00",
+      "observedSha256": "38d04c3c9e5bda92136d4254f94074da821f5a3dd1a78340b007ee620372a847",
+      "appliedSha256": "38d04c3c9e5bda92136d4254f94074da821f5a3dd1a78340b007ee620372a847",
       "excluded": false,
       "present": true,
-      "status": "pending-confirmation",
-      "changeSincePreviousObservation": "changed",
+      "status": "verified-current",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb9"
       ],
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb9"
       ],
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
-      "notes": "USB 总数与前后面板分项存在冲突，保留待核实。"
+      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
       "relativePath": "工控机IPC/C系列/MCIPC1 Brochure.pdf",
@@ -1405,26 +1312,6 @@
       "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
-      "relativePath": "工控机IPC/TPC系列/MCTPC-1004X brochure.pdf",
-      "appliedSha256": "cca71518ed25fa2f1911a621ed0498bb99f3d6913150c5279665348baaff5c90",
-      "excluded": false,
-      "status": "updated",
-      "changeSincePreviousObservation": "unchanged",
-      "modelIds": [
-        "mctpc-1004x"
-      ],
-      "hrefs": [
-        "/products/industrial-mini-pc/mctpc-1004x"
-      ],
-      "reviewedAtUtc": "2026-09-19T02:06:58.923575+00:00",
-      "appliedAtUtc": "2026-09-19T02:06:58.923575+00:00",
-      "notes": "已对照供应商四组平台参数表审核新册，保留各平台 USB/内存/存储差异与可选电压、前面板 IP65 限定；新增独立详情、正面/Core背面/J1900背面/尺寸图及缩略图，构建与搜索验证通过。",
-      "observedSha256": "cca71518ed25fa2f1911a621ed0498bb99f3d6913150c5279665348baaff5c90",
-      "sizeBytes": 16552868,
-      "modifiedAtUtc": "2026-09-19T01:49:23.858937+00:00",
-      "present": true
-    },
-    {
       "relativePath": "工控机IPC/TPC系列/MCTPC-1201E brochure.pdf",
       "sizeBytes": 3704419,
       "modifiedAtUtc": "2026-08-24T10:08:16.398599+00:00",
@@ -1443,26 +1330,6 @@
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
-    },
-    {
-      "relativePath": "工控机IPC/TPC系列/MCTPC-1201X brochure.pdf",
-      "appliedSha256": "09e44d05e0b385f4e7ca4414f2d84d1c9ed7d3d3c06714908d6b7e0453881527",
-      "excluded": false,
-      "status": "updated",
-      "changeSincePreviousObservation": "unchanged",
-      "modelIds": [
-        "mctpc-1201x"
-      ],
-      "hrefs": [
-        "/products/industrial-mini-pc/mctpc-1201x"
-      ],
-      "reviewedAtUtc": "2026-09-19T02:06:58.923575+00:00",
-      "appliedAtUtc": "2026-09-19T02:06:58.923575+00:00",
-      "notes": "已对照供应商四组平台参数表审核新册，保留各平台 USB/内存/存储差异与可选电压、前面板 IP65 限定；新增独立详情、正面/Core背面/J1900背面/尺寸图及缩略图，构建与搜索验证通过。",
-      "observedSha256": "09e44d05e0b385f4e7ca4414f2d84d1c9ed7d3d3c06714908d6b7e0453881527",
-      "sizeBytes": 9847834,
-      "modifiedAtUtc": "2026-09-19T01:49:28.781252+00:00",
-      "present": true
     },
     {
       "relativePath": "工控机IPC/TPC系列/MCTPC-1303E brochure.pdf",
@@ -1525,26 +1392,6 @@
       "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
-      "relativePath": "工控机IPC/TPC系列/MCTPC-1501X brochure.pdf",
-      "appliedSha256": "03855bcefb40b84df6ca5b127804e5371e8a78936870a5a47084302a99d3b745",
-      "excluded": false,
-      "status": "updated",
-      "changeSincePreviousObservation": "unchanged",
-      "modelIds": [
-        "mctpc-1501x"
-      ],
-      "hrefs": [
-        "/products/industrial-mini-pc/mctpc-1501x"
-      ],
-      "reviewedAtUtc": "2026-09-19T02:06:58.923575+00:00",
-      "appliedAtUtc": "2026-09-19T02:06:58.923575+00:00",
-      "notes": "已对照供应商四组平台参数表审核新册，保留各平台 USB/内存/存储差异与可选电压、前面板 IP65 限定；新增独立详情、正面/Core背面/J1900背面/尺寸图及缩略图，构建与搜索验证通过。",
-      "observedSha256": "03855bcefb40b84df6ca5b127804e5371e8a78936870a5a47084302a99d3b745",
-      "sizeBytes": 10346886,
-      "modifiedAtUtc": "2026-09-19T01:49:33.712043+00:00",
-      "present": true
-    },
-    {
       "relativePath": "工控机IPC/TPC系列/MCTPC-1506E brochure.pdf",
       "sizeBytes": 3704426,
       "modifiedAtUtc": "2026-08-24T10:08:19.558929+00:00",
@@ -1563,46 +1410,6 @@
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
-    },
-    {
-      "relativePath": "工控机IPC/TPC系列/MCTPC-1506X brochure.pdf",
-      "appliedSha256": "e6a272f7729be1051d15cea031921912245daa6f0f6a94dc5753b04d4dbb5a40",
-      "excluded": false,
-      "status": "updated",
-      "changeSincePreviousObservation": "unchanged",
-      "modelIds": [
-        "mctpc-1506x"
-      ],
-      "hrefs": [
-        "/products/industrial-mini-pc/mctpc-1506x"
-      ],
-      "reviewedAtUtc": "2026-09-19T02:06:58.923575+00:00",
-      "appliedAtUtc": "2026-09-19T02:06:58.923575+00:00",
-      "notes": "已对照供应商四组平台参数表审核新册，保留各平台 USB/内存/存储差异与可选电压、前面板 IP65 限定；新增独立详情、正面/Core背面/J1900背面/尺寸图及缩略图，构建与搜索验证通过。",
-      "observedSha256": "e6a272f7729be1051d15cea031921912245daa6f0f6a94dc5753b04d4dbb5a40",
-      "sizeBytes": 8259875,
-      "modifiedAtUtc": "2026-09-19T01:49:37.772310+00:00",
-      "present": true
-    },
-    {
-      "relativePath": "工控机IPC/TPC系列/MCTPC-1701X brochure.pdf",
-      "appliedSha256": "72761fde56fafa176ec888e3559900ade0e9f52769b509c2dd7b9d4ff2ee748d",
-      "excluded": false,
-      "status": "updated",
-      "changeSincePreviousObservation": "unchanged",
-      "modelIds": [
-        "mctpc-1701x"
-      ],
-      "hrefs": [
-        "/products/industrial-mini-pc/mctpc-1701x"
-      ],
-      "reviewedAtUtc": "2026-09-19T02:06:58.923575+00:00",
-      "appliedAtUtc": "2026-09-19T02:06:58.923575+00:00",
-      "notes": "已对照供应商四组平台参数表审核新册，保留各平台 USB/内存/存储差异与可选电压、前面板 IP65 限定；新增独立详情、正面/Core背面/J1900背面/尺寸图及缩略图，构建与搜索验证通过。",
-      "observedSha256": "72761fde56fafa176ec888e3559900ade0e9f52769b509c2dd7b9d4ff2ee748d",
-      "sizeBytes": 9990230,
-      "modifiedAtUtc": "2026-09-19T01:49:42.961375+00:00",
-      "present": true
     },
     {
       "relativePath": "工控机IPC/TPC系列/MCTPC-1805E brochure.pdf",
@@ -1625,26 +1432,6 @@
       "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
-      "relativePath": "工控机IPC/TPC系列/MCTPC-1901X brochure.pdf",
-      "appliedSha256": "1e7a21891debfd28992c88361ba4e6fcf0514ece6a967535f13de8685831ac88",
-      "excluded": false,
-      "status": "updated",
-      "changeSincePreviousObservation": "unchanged",
-      "modelIds": [
-        "mctpc-1901x"
-      ],
-      "hrefs": [
-        "/products/industrial-mini-pc/mctpc-1901x"
-      ],
-      "reviewedAtUtc": "2026-09-19T02:06:58.923575+00:00",
-      "appliedAtUtc": "2026-09-19T02:06:58.923575+00:00",
-      "notes": "已对照供应商四组平台参数表审核新册，保留各平台 USB/内存/存储差异与可选电压、前面板 IP65 限定；新增独立详情、正面/Core背面/J1900背面/尺寸图及缩略图，构建与搜索验证通过。",
-      "observedSha256": "1e7a21891debfd28992c88361ba4e6fcf0514ece6a967535f13de8685831ac88",
-      "sizeBytes": 11258852,
-      "modifiedAtUtc": "2026-09-19T01:49:48.596986+00:00",
-      "present": true
-    },
-    {
       "relativePath": "工控机IPC/TPC系列/MCTPC-2105E brochure.pdf",
       "sizeBytes": 3704426,
       "modifiedAtUtc": "2026-08-24T10:08:21.319679+00:00",
@@ -1663,26 +1450,6 @@
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
-    },
-    {
-      "relativePath": "工控机IPC/TPC系列/MCTPC-2105X brochure.pdf",
-      "appliedSha256": "140fd43161a2d3a70a17352083640580d2f7868af63196f07f0fc021297f0294",
-      "excluded": false,
-      "status": "updated",
-      "changeSincePreviousObservation": "unchanged",
-      "modelIds": [
-        "mctpc-2105x"
-      ],
-      "hrefs": [
-        "/products/industrial-mini-pc/mctpc-2105x"
-      ],
-      "reviewedAtUtc": "2026-09-19T02:06:58.923575+00:00",
-      "appliedAtUtc": "2026-09-19T02:06:58.923575+00:00",
-      "notes": "已对照供应商四组平台参数表审核新册，保留各平台 USB/内存/存储差异与可选电压、前面板 IP65 限定；新增独立详情、正面/Core背面/J1900背面/尺寸图及缩略图，构建与搜索验证通过。",
-      "observedSha256": "140fd43161a2d3a70a17352083640580d2f7868af63196f07f0fc021297f0294",
-      "sizeBytes": 12837005,
-      "modifiedAtUtc": "2026-09-19T01:51:36.239938+00:00",
-      "present": true
     },
     {
       "relativePath": "工控机IPC/TPC系列/MCTPC-2308E brochure.pdf",
@@ -2623,6 +2390,163 @@
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "notes": "MCSR613U 与 New_MCSR613U 两册 CPU、内存等配置存在差异，未擅自选择或合并冲突配置。",
       "partialUpdate": true
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCB13 brochure.pdf",
+      "sizeBytes": 2713005,
+      "modifiedAtUtc": "2026-08-24T10:07:56.8684215Z",
+      "observedSha256": "adea1072e1bf15bf87e18cc83cd77f5d6dbbec42e54cccdb0ea70e8d0b8710f2",
+      "appliedSha256": null,
+      "excluded": false,
+      "status": "retired-by-user",
+      "present": false,
+      "notes": "用户明确要求移除不带 A/B 的旧 MCIPCB13；已移除详情、搜索、SEO 和导航，保留历史来源记录。",
+      "modelIds": [
+        "mcipcb13"
+      ],
+      "hrefs": [
+        "/products/industrial-mini-pc/mcipcb13"
+      ]
+    },
+    {
+      "relativePath": "工控机IPC/TPC系列/MCTPC-1004X brochure.pdf",
+      "appliedSha256": "cca71518ed25fa2f1911a621ed0498bb99f3d6913150c5279665348baaff5c90",
+      "excluded": false,
+      "status": "updated",
+      "changeSincePreviousObservation": "new",
+      "modelIds": [
+        "mctpc-1004x"
+      ],
+      "hrefs": [
+        "/products/industrial-mini-pc/mctpc-1004x"
+      ],
+      "reviewedAtUtc": "2026-09-19T02:06:58.923575+00:00",
+      "appliedAtUtc": "2026-09-19T02:06:58.923575+00:00",
+      "notes": "已对照供应商四组平台参数表审核新册，保留各平台 USB/内存/存储差异与可选电压、前面板 IP65 限定；新增独立详情、正面/Core背面/J1900背面/尺寸图及缩略图，构建与搜索验证通过。",
+      "observedSha256": "cca71518ed25fa2f1911a621ed0498bb99f3d6913150c5279665348baaff5c90",
+      "sizeBytes": 16552868,
+      "modifiedAtUtc": "2026-09-19T01:49:23.858937+00:00",
+      "present": true
+    },
+    {
+      "relativePath": "工控机IPC/TPC系列/MCTPC-1201X brochure.pdf",
+      "appliedSha256": "09e44d05e0b385f4e7ca4414f2d84d1c9ed7d3d3c06714908d6b7e0453881527",
+      "excluded": false,
+      "status": "updated",
+      "changeSincePreviousObservation": "new",
+      "modelIds": [
+        "mctpc-1201x"
+      ],
+      "hrefs": [
+        "/products/industrial-mini-pc/mctpc-1201x"
+      ],
+      "reviewedAtUtc": "2026-09-19T02:06:58.923575+00:00",
+      "appliedAtUtc": "2026-09-19T02:06:58.923575+00:00",
+      "notes": "已对照供应商四组平台参数表审核新册，保留各平台 USB/内存/存储差异与可选电压、前面板 IP65 限定；新增独立详情、正面/Core背面/J1900背面/尺寸图及缩略图，构建与搜索验证通过。",
+      "observedSha256": "09e44d05e0b385f4e7ca4414f2d84d1c9ed7d3d3c06714908d6b7e0453881527",
+      "sizeBytes": 9847834,
+      "modifiedAtUtc": "2026-09-19T01:49:28.781252+00:00",
+      "present": true
+    },
+    {
+      "relativePath": "工控机IPC/TPC系列/MCTPC-1501X brochure.pdf",
+      "appliedSha256": "03855bcefb40b84df6ca5b127804e5371e8a78936870a5a47084302a99d3b745",
+      "excluded": false,
+      "status": "updated",
+      "changeSincePreviousObservation": "new",
+      "modelIds": [
+        "mctpc-1501x"
+      ],
+      "hrefs": [
+        "/products/industrial-mini-pc/mctpc-1501x"
+      ],
+      "reviewedAtUtc": "2026-09-19T02:06:58.923575+00:00",
+      "appliedAtUtc": "2026-09-19T02:06:58.923575+00:00",
+      "notes": "已对照供应商四组平台参数表审核新册，保留各平台 USB/内存/存储差异与可选电压、前面板 IP65 限定；新增独立详情、正面/Core背面/J1900背面/尺寸图及缩略图，构建与搜索验证通过。",
+      "observedSha256": "03855bcefb40b84df6ca5b127804e5371e8a78936870a5a47084302a99d3b745",
+      "sizeBytes": 10346886,
+      "modifiedAtUtc": "2026-09-19T01:49:33.712043+00:00",
+      "present": true
+    },
+    {
+      "relativePath": "工控机IPC/TPC系列/MCTPC-1506X brochure.pdf",
+      "appliedSha256": "e6a272f7729be1051d15cea031921912245daa6f0f6a94dc5753b04d4dbb5a40",
+      "excluded": false,
+      "status": "updated",
+      "changeSincePreviousObservation": "new",
+      "modelIds": [
+        "mctpc-1506x"
+      ],
+      "hrefs": [
+        "/products/industrial-mini-pc/mctpc-1506x"
+      ],
+      "reviewedAtUtc": "2026-09-19T02:06:58.923575+00:00",
+      "appliedAtUtc": "2026-09-19T02:06:58.923575+00:00",
+      "notes": "已对照供应商四组平台参数表审核新册，保留各平台 USB/内存/存储差异与可选电压、前面板 IP65 限定；新增独立详情、正面/Core背面/J1900背面/尺寸图及缩略图，构建与搜索验证通过。",
+      "observedSha256": "e6a272f7729be1051d15cea031921912245daa6f0f6a94dc5753b04d4dbb5a40",
+      "sizeBytes": 8259875,
+      "modifiedAtUtc": "2026-09-19T01:49:37.772310+00:00",
+      "present": true
+    },
+    {
+      "relativePath": "工控机IPC/TPC系列/MCTPC-1701X brochure.pdf",
+      "appliedSha256": "72761fde56fafa176ec888e3559900ade0e9f52769b509c2dd7b9d4ff2ee748d",
+      "excluded": false,
+      "status": "updated",
+      "changeSincePreviousObservation": "new",
+      "modelIds": [
+        "mctpc-1701x"
+      ],
+      "hrefs": [
+        "/products/industrial-mini-pc/mctpc-1701x"
+      ],
+      "reviewedAtUtc": "2026-09-19T02:06:58.923575+00:00",
+      "appliedAtUtc": "2026-09-19T02:06:58.923575+00:00",
+      "notes": "已对照供应商四组平台参数表审核新册，保留各平台 USB/内存/存储差异与可选电压、前面板 IP65 限定；新增独立详情、正面/Core背面/J1900背面/尺寸图及缩略图，构建与搜索验证通过。",
+      "observedSha256": "72761fde56fafa176ec888e3559900ade0e9f52769b509c2dd7b9d4ff2ee748d",
+      "sizeBytes": 9990230,
+      "modifiedAtUtc": "2026-09-19T01:49:42.961375+00:00",
+      "present": true
+    },
+    {
+      "relativePath": "工控机IPC/TPC系列/MCTPC-1901X brochure.pdf",
+      "appliedSha256": "1e7a21891debfd28992c88361ba4e6fcf0514ece6a967535f13de8685831ac88",
+      "excluded": false,
+      "status": "updated",
+      "changeSincePreviousObservation": "new",
+      "modelIds": [
+        "mctpc-1901x"
+      ],
+      "hrefs": [
+        "/products/industrial-mini-pc/mctpc-1901x"
+      ],
+      "reviewedAtUtc": "2026-09-19T02:06:58.923575+00:00",
+      "appliedAtUtc": "2026-09-19T02:06:58.923575+00:00",
+      "notes": "已对照供应商四组平台参数表审核新册，保留各平台 USB/内存/存储差异与可选电压、前面板 IP65 限定；新增独立详情、正面/Core背面/J1900背面/尺寸图及缩略图，构建与搜索验证通过。",
+      "observedSha256": "1e7a21891debfd28992c88361ba4e6fcf0514ece6a967535f13de8685831ac88",
+      "sizeBytes": 11258852,
+      "modifiedAtUtc": "2026-09-19T01:49:48.596986+00:00",
+      "present": true
+    },
+    {
+      "relativePath": "工控机IPC/TPC系列/MCTPC-2105X brochure.pdf",
+      "appliedSha256": "140fd43161a2d3a70a17352083640580d2f7868af63196f07f0fc021297f0294",
+      "excluded": false,
+      "status": "updated",
+      "changeSincePreviousObservation": "new",
+      "modelIds": [
+        "mctpc-2105x"
+      ],
+      "hrefs": [
+        "/products/industrial-mini-pc/mctpc-2105x"
+      ],
+      "reviewedAtUtc": "2026-09-19T02:06:58.923575+00:00",
+      "appliedAtUtc": "2026-09-19T02:06:58.923575+00:00",
+      "notes": "已对照供应商四组平台参数表审核新册，保留各平台 USB/内存/存储差异与可选电压、前面板 IP65 限定；新增独立详情、正面/Core背面/J1900背面/尺寸图及缩略图，构建与搜索验证通过。",
+      "observedSha256": "140fd43161a2d3a70a17352083640580d2f7868af63196f07f0fc021297f0294",
+      "sizeBytes": 12837005,
+      "modifiedAtUtc": "2026-09-19T01:51:36.239938+00:00",
+      "present": true
     }
   ]
 }

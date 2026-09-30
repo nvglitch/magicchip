@@ -1,15 +1,8 @@
 type NamedProduct = { id: string; name: string };
 
-// Explicit navigation families; product records and detail URLs remain independent.
+// These remaining families have independent product detail pages.
 const families: Record<string, string[]> = {
   MCIPC2: ['MCIPC2A', 'MCIPC2B'],
-  MCIPCB1: ['MCIPCB1A', 'MCIPCB1B', 'MCIPCB1F'],
-  MCIPCB2: ['MCIPCB2-D3', 'MCIPCB2-D4', 'MCIPCB2-J5005'],
-  MCIPCB6: ['MCIPCB6', 'MCIPCB6-DDR3L', 'MCIPCB6-DDR4'],
-  MCIPCB13: ['MCIPCB13A', 'MCIPCB13B'],
-  MCIPCB14: ['MCIPCB14', 'MCIPCB14F'],
-  MCIPCB15: ['MCIPCB15A', 'MCIPCB15B', 'MCIPCB15C', 'MCIPCB15D', 'MCIPCB15E'],
-  MCIPCB16: ['MCIPCB16A', 'MCIPCB16B'],
   MCIPCD5: ['MCIPCD5', 'MCIPCD5F'],
   MCNAS14: ['MCNAS14A', 'MCNAS14B'],
   MCAIPC3: ['MCAIPC3A', 'MCAIPC3B', 'MCAIPC3C', 'MCAIPC3D'],
