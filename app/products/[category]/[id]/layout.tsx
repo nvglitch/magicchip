@@ -2,8 +2,7 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { commercialCatalog } from '@/lib/commercial-catalog';
 import { firewallCatalog } from '@/lib/firewall-catalog';
-import { industrialCatalog } from '@/lib/industrial-catalog';
-import { mergedBSeriesAliases } from '@/lib/merged-b-series';
+import { industrialCatalog, industrialProductAliases } from '@/lib/industrial-catalog';
 import { aiCatalog, aiProductAliases } from '@/lib/ai-catalog';
 import { permanentRedirect } from 'next/navigation';
 import { mergeSpecifications } from '@/lib/product-specifications';
@@ -16,6 +15,7 @@ type ProductLayoutProps = {
 
 export async function generateMetadata({ params }: Omit<ProductLayoutProps, 'children'>): Promise<Metadata> {
   const { category, id } = await params;
+  if (category === 'industrial-mini-pc' && industrialProductAliases[id]) permanentRedirect(industrialProductAliases[id]);
   if (category === 'ai-mini-pc' && aiProductAliases[id]) permanentRedirect(aiProductAliases[id]);
   const product = productSeo[id];
 
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Omit<ProductLayoutProps, 'chi
 
 export default async function ProductLayout({ children, params }: ProductLayoutProps) {
   const { category, id } = await params;
-  if (category === 'industrial-mini-pc' && mergedBSeriesAliases[id]) permanentRedirect(mergedBSeriesAliases[id]);
+  if (category === 'industrial-mini-pc' && industrialProductAliases[id]) permanentRedirect(industrialProductAliases[id]);
   if (category === 'ai-mini-pc' && aiProductAliases[id]) permanentRedirect(aiProductAliases[id]);
   const product = productSeo[id];
   const categoryEntry = categorySeo[category];

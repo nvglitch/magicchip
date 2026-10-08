@@ -112,6 +112,10 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
     "image": "/assets/products/thumbnails/mcipc1.webp",
     "source": "/assets/products/industrial/c-series/mcipc1/images/main-square-srgb.jpg"
   },
+  "mcipc2": {
+    "image": "/assets/products/thumbnails/mcipc2a.webp",
+    "source": "/assets/products/industrial/c-series/mcipc2a/images/main-transparent.png"
+  },
   "mcipc2a": {
     "image": "/assets/products/thumbnails/mcipc2a.webp",
     "source": "/assets/products/industrial/c-series/mcipc2a/images/main-transparent.png"

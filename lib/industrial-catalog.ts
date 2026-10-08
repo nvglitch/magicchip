@@ -2,7 +2,8 @@ import { applyBrochureSpecCorrections } from '@/lib/brochure-spec-corrections';
 import { brochureUpdates } from '@/lib/brochure-updates';
 import { industrialBrochureProducts } from '@/lib/brochure-products';
 import { tpcXProducts } from '@/lib/tpc-x-products';
-import { mergedBSeries, separateB2J5005, type IndustrialSku } from '@/lib/merged-b-series';
+import { mergedBSeries, mergedBSeriesAliases, separateB2J5005, type IndustrialSku } from '@/lib/merged-b-series';
+import { industrialFamilySourceIds, mergeIndustrialFamilies } from '@/lib/merged-industrial-families';
 
 export type IndustrialSeriesCode = 'A' | 'B' | 'C' | 'D' | 'E' | 'TPC';
 
@@ -2299,8 +2300,22 @@ const industrialCatalogSource: IndustrialCatalogItem[] = [
   }
 ];
 const replacedBSeriesIds = new Set([separateB2J5005.id, ...mergedBSeries.flatMap(product => [product.id, ...product.skus.flatMap(sku => sku.legacyNames.map(name => name.toLowerCase()))])]);
-export const industrialCatalog = [
+const correctedIndustrialCatalog = [
   ...industrialCatalogSource.filter(item => !replacedBSeriesIds.has(item.id)),
   ...mergedBSeries,
   separateB2J5005,
 ].map(applyBrochureSpecCorrections);
+
+export const industrialFamilyModels = correctedIndustrialCatalog.filter(item => industrialFamilySourceIds.includes(item.id));
+const mergedIndustrialFamilies = mergeIndustrialFamilies(industrialFamilyModels);
+export const industrialCatalog = [
+  ...correctedIndustrialCatalog.filter(item => !industrialFamilySourceIds.includes(item.id)),
+  ...mergedIndustrialFamilies,
+];
+
+export const industrialProductAliases: Record<string, string> = {
+  ...mergedBSeriesAliases,
+  ...Object.fromEntries(mergedIndustrialFamilies.flatMap(product => product.skus!.flatMap(sku => sku.legacyNames
+    .filter(name => name.toLowerCase() !== product.id)
+    .map(name => [name.toLowerCase(), `/products/industrial-mini-pc/${product.id}#sku-${sku.key}`])))),
+};

@@ -38,7 +38,7 @@ const catalogIndustrialSearchEntries: SearchEntry[] = industrialCatalog
     description: `${item.name} ${sku.label} configuration`,
     href: `/products/industrial-mini-pc/${item.id}#sku-${sku.key}`,
     type: 'product',
-    keywords: [item.name, sku.label, ...sku.legacyNames],
+    keywords: [item.name, sku.label, ...Object.values(sku.labelTranslations || {}), ...sku.legacyNames],
     image: sku.image,
     specs: mergeSpecifications(item.specs, sku.specs),
   })) || [])]);

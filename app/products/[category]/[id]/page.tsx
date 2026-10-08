@@ -190,7 +190,7 @@ const getIndustrialGallery = (item: (typeof industrialCatalog)[number]): Pick<Pr
     };
   }
 
-  if (['mcipcb7', 'mcipcb8', 'mcipcb9', 'mcipcb11', 'mcipc2a', 'mcipc2b'].includes(item.id)) {
+  if (['mcipcb7', 'mcipcb8', 'mcipcb9', 'mcipcb11'].includes(item.id)) {
     const galleryImages = [`${imageBase}/rear-transparent.png`, `${imageBase}/internal-transparent.png`];
     return {
       galleryImages,
@@ -212,7 +212,7 @@ const catalogIndustrialProducts: Record<string, ProductDetail> = Object.fromEntr
       tagline: item.tagline,
       description: item.description,
       images: [item.image],
-      highlights: compactCatalogHighlights(item.specs),
+      highlights: item.skus?.some(sku => sku.galleryCards?.length) ? item.highlights : compactCatalogHighlights(item.specs),
       specs: item.specs,
       features: industrialSeriesFeatures[item.series],
       operatingRange: item.operatingRange,
@@ -780,6 +780,7 @@ export default function ProductDetailPage() {
   const activeConfiguration = configurationChoice?.productId === productId ? configurationChoice.configuration : undefined;
   const [previewImage, setPreviewImage] = useState<string | null>(null);
   const product = productCategories[productId] === category ? products[productId] : undefined;
+  const configurationImagesFollowSelection = Boolean(product?.skus?.some(sku => sku.galleryCards?.length));
   const industrialSeriesCode = category === 'industrial-mini-pc'
     ? industrialCatalog.find((item) => item.id === productId)?.series.toLowerCase()
     : undefined;
@@ -926,7 +927,7 @@ export default function ProductDetailPage() {
         </section>
       )}
 
-      {productId === 'mcai2' ? <Mcaipc2Configurations onPreview={setPreviewImage} onConfigurationChange={onConfigurationChange} /> : product.skus && <ProductConfigurationSelector model={product.name} skus={product.skus} sharedSpecs={specifications} referenceImage={productId !== 'mcaipc3'} onPreview={setPreviewImage} onConfigurationChange={productId === 'mcaipc3' ? onConfigurationChange : undefined} />}
+      {productId === 'mcai2' ? <Mcaipc2Configurations onPreview={setPreviewImage} onConfigurationChange={onConfigurationChange} /> : product.skus && <ProductConfigurationSelector key={productId} model={product.name} skus={product.skus} sharedSpecs={specifications} referenceImage={!configurationImagesFollowSelection} onPreview={setPreviewImage} onConfigurationChange={configurationImagesFollowSelection ? onConfigurationChange : undefined} />}
 
       {!product.skus && <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

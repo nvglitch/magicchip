@@ -2,6 +2,7 @@ export type ProductSpecification = { label: string; value: string };
 export type ProductConfiguration = {
   key: string;
   label: string;
+  labelTranslations?: Partial<Record<'de' | 'fr' | 'it' | 'es', string>>;
   legacyNames: string[];
   image: string;
   specs: ProductSpecification[];

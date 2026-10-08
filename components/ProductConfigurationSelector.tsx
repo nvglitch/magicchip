@@ -18,6 +18,7 @@ export default function ProductConfigurationSelector({ model, skus, sharedSpecs,
   const words = copy[language];
   const [selected, setSelected] = useState(0);
   const verticalCards = model === 'MCAIPC3';
+  const configurationLabel = (sku: ProductConfiguration) => language === 'en' ? sku.label : sku.labelTranslations?.[language] || sku.label;
 
   useEffect(() => {
     const pickHash = () => {
@@ -51,7 +52,7 @@ export default function ProductConfigurationSelector({ model, skus, sharedSpecs,
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-slate-950 md:text-4xl">{words.title}</h2>
         <p className="mt-3 text-slate-600">{words.detail}</p>
-        <div role="tablist" aria-label={`${model} ${words.title}`} className={`mt-8 grid gap-3 sm:grid-cols-2 ${verticalCards ? 'lg:grid-cols-4' : skus.length === 4 ? 'lg:grid-cols-2' : 'lg:grid-cols-3'}`}>
+        <div role="tablist" aria-label={`${model} ${words.title}`} className={`mt-8 grid gap-3 sm:grid-cols-2 ${verticalCards ? 'lg:grid-cols-4' : [2, 4].includes(skus.length) ? 'lg:grid-cols-2' : 'lg:grid-cols-3'}`}>
           {skus.map((sku, index) => (
             <button
               key={sku.key}
@@ -64,9 +65,9 @@ export default function ProductConfigurationSelector({ model, skus, sharedSpecs,
               className={`rounded-xl border px-5 py-4 text-left font-semibold transition-all hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-2 focus-visible:outline-blue-600 ${selected === index ? 'border-blue-500 bg-blue-50 text-blue-800 shadow-sm' : 'border-blue-200 bg-white text-slate-800 hover:border-blue-400'}`}
             >
               {verticalCards ? <>
-                <span className="block text-lg">{sku.label.split(' · ')[0]}</span>
-                <span className="mt-2 block text-sm font-medium leading-relaxed">{sku.label.split(' · ').slice(1).join(' · ')}</span>
-              </> : <span className="block">{sku.label}</span>}
+                <span className="block text-lg">{configurationLabel(sku).split(' · ')[0]}</span>
+                <span className="mt-2 block text-sm font-medium leading-relaxed">{configurationLabel(sku).split(' · ').slice(1).join(' · ')}</span>
+              </> : <span className="block">{configurationLabel(sku)}</span>}
               {sku.legacyNames.filter(name => name.toLowerCase() !== model.toLowerCase()).length > 0 && (
                 <span className="mt-1 block text-xs font-normal text-slate-500">{words.sku}: {sku.legacyNames.filter(name => name.toLowerCase() !== model.toLowerCase()).join(', ')}</span>
               )}
@@ -74,7 +75,7 @@ export default function ProductConfigurationSelector({ model, skus, sharedSpecs,
           ))}
         </div>
         <div id="sku-panel" role="tabpanel" aria-labelledby={`sku-tab-${active.key}`} className="mt-6 overflow-hidden rounded-xl border border-blue-200 bg-white">
-          <ConfigurationSpecifications key={active.key} title={`${active.label} · ${words.specification}`} image={active.image} imageAlt={`${model} ${active.label}`} imageCaption={referenceImage ? words.image : undefined} specs={specifications} galleryCards={active.galleryCards} onPreview={onPreview} />
+          <ConfigurationSpecifications key={active.key} title={`${configurationLabel(active)} · ${words.specification}`} image={active.image} imageAlt={`${model} ${configurationLabel(active)}`} imageCaption={referenceImage ? words.image : undefined} specs={specifications} galleryCards={active.galleryCards} onPreview={onPreview} />
         </div>
       </div>
     </section>

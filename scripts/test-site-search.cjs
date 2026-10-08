@@ -20,7 +20,7 @@ function load(filename) {
   return exports;
 }
 const { searchSite, siteSearchIndex } = load('lib/site-search.ts');
-const { industrialCatalog } = load('lib/industrial-catalog.ts');
+const { industrialCatalog, industrialFamilyModels, industrialProductAliases } = load('lib/industrial-catalog.ts');
 const { aiCatalog, aiProductAliases, mcaipc2Configurations, mcaipc3Models } = load('lib/ai-catalog.ts');
 const { groupProductNavigation } = load('lib/product-navigation.ts');
 const { matchSearch } = load('lib/search-matching.ts');
@@ -42,7 +42,7 @@ assert(matchSearch(fixture([{ label: 'Memory', value: 'DDR5-4800' }]), 'DDR5'));
 assert.equal(matchSearch(fixture([{ label: 'Memory', value: 'DDR4' }]), 'DDR5'), null);
 assert(matchSearch(fixture([{ label: 'Cooling', value: 'fanless' }]), 'fanles'));
 const products = siteSearchIndex.filter(e => e.type === 'product');
-assert.equal(products.length, 156);
+assert.equal(products.length, 158);
 assert(products.every(e => e.specs?.length));
 assert.equal(new Set(products.map(e => e.href)).size, products.length);
 for (const entry of products) assert.equal(searchSite(entry.title)[0]?.href, entry.href);
@@ -134,6 +134,50 @@ assert.equal(selectedSpec('aeb35-04-h02', 'Power'), 'Internal 300/350 W Flex PSU
 assert.equal(selectedSpec('aeb35-04-h09', 'Power'), '20 V / 12 A, 240 W external adapter');
 assert.equal(selectedSpec('aeb35-04-h09', 'Dimensions'), '200 x 197.8 x 70 mm');
 console.log('AIPC checks passed: canonical series links, four exact MCAIPC3 configurations and 25 compatible MCAIPC2 combinations.');
+
+// MCIPCD5 and MCIPC2 merge routes, never the original model facts or images.
+for (const [familyId, memberIds] of Object.entries({ mcipcd5: ['mcipcd5', 'mcipcd5f'], mcipc2: ['mcipc2a', 'mcipc2b'] })) {
+  const family = industrialCatalog.find(item => item.id === familyId);
+  assert.equal(family.skus.length, 2);
+  assert.equal(family.galleryCards.length, 0);
+  const navigation = groupProductNavigation(industrialCatalog.filter(item => item.series === family.series));
+  assert.deepEqual(Array.from(navigation.find(group => group.name === family.name).models, item => item.id), [familyId]);
+  for (const modelId of memberIds) {
+    const model = industrialFamilyModels.find(item => item.id === modelId);
+    const sku = family.skus.find(item => item.legacyNames.includes(model.name));
+    const result = searchSite(`${family.name} — ${sku.label}`)[0];
+    assert.equal(result.href, `/products/industrial-mini-pc/${familyId}#sku-${sku.key}`);
+    assert.equal(result.image, model.image);
+    for (const spec of model.specs) assert.equal(result.specs.find(item => item.label === spec.label)?.value, spec.value);
+    assert.equal(sku.galleryCards.length, 2);
+    for (const language of ['de', 'fr', 'it', 'es']) {
+      assert(sku.labelTranslations[language]);
+      assert.equal(searchSite(`${family.name} — ${sku.labelTranslations[language]}`)[0]?.href, result.href);
+    }
+    for (const image of [sku.image, ...sku.galleryCards.map(card => card.image)]) assert(fs.existsSync(path.resolve(__dirname, '..', 'public', image.slice(1))));
+    if (modelId !== familyId) {
+      assert(!industrialCatalog.some(item => item.id === modelId));
+      assert.equal(industrialProductAliases[modelId], result.href);
+      assert.equal(searchSite(model.name)[0]?.href, result.href);
+    }
+  }
+}
+assert.equal(industrialProductAliases.mcipcd5, undefined);
+assert.equal(searchSite('MCIPCD5')[0]?.href, '/products/industrial-mini-pc/mcipcd5');
+const c2a = searchSite('MCIPC2A')[0], c2b = searchSite('MCIPC2B')[0];
+assert.match(c2a.specs.find(spec => spec.label === 'Memory').value, /DDR3L.*8GB/);
+assert.match(c2b.specs.find(spec => spec.label === 'Memory').value, /DDR4.*16GB/);
+assert(!c2a.specs.some(spec => spec.label === 'Storage'));
+assert.match(c2b.specs.find(spec => spec.label === 'Storage').value, /MSATA/);
+assert.match(c2a.specs.find(spec => spec.label === 'Serial').value, /^2x/);
+assert.match(c2b.specs.find(spec => spec.label === 'Serial').value, /^6x/);
+assert.notEqual(c2a.specs.find(spec => spec.label === 'Dimensions').value, c2b.specs.find(spec => spec.label === 'Dimensions').value);
+assert.notEqual(c2a.specs.find(spec => spec.label === 'Operating Environment').value, c2b.specs.find(spec => spec.label === 'Operating Environment').value);
+assert(!searchSite('DDR4').some(item => item.href === c2a.href));
+assert(!searchSite('DDR3L').some(item => item.href === c2b.href));
+assert(!searchSite('fanless').some(item => item.href === '/products/industrial-mini-pc/mcipcd5#sku-fan'));
+assert(searchSite('fanless').some(item => item.href === '/products/industrial-mini-pc/mcipcd5#sku-standard'));
+console.log('Industrial family checks passed: two series pages, four exact configurations, distinct image sets and legacy route aliases.');
 
 // TPC X: preserve platform-dependent facts and optional power qualifiers.
 for (const code of ['1004', '1201', '1501', '1506', '1701', '1901', '2105']) {
