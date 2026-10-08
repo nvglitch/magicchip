@@ -29,6 +29,7 @@ import {
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { aiCatalog } from '@/lib/ai-catalog';
+import { modelThumbnails } from '@/lib/model-thumbnails';
 import { AiFamilyCards } from '@/components/ProductFamilyNavigation';
 import { brochureUpdates } from '@/lib/brochure-updates';
 import SiteSearch from '@/components/SiteSearch';
@@ -215,10 +216,10 @@ const productCategoryImages: Record<string, string> = {
   'firewall-mini-pc': '/assets/home/categories/firewall-mini-pc-server-pc.png',
 };
 
-const scenarioProduct = (category: string, id: string): ScenarioMegaProduct => ({
-  ...megaMenuProducts[category].find(product => product.id === id)!,
-  category,
-});
+const scenarioProduct = (category: string, id: string): ScenarioMegaProduct => {
+  const product = megaMenuProducts[category].find(product => product.id === id)!;
+  return { ...product, image: modelThumbnails[id]?.image ?? product.image, category };
+};
 
 const scenarioMegaItems: ScenarioMegaItem[] = [
   {
@@ -579,7 +580,7 @@ export default function Navbar() {
                                       alt={`${product.name} for ${activeMegaScenario.title}`}
                                       fill
                                       sizes="(max-width: 1279px) 40vw, 360px"
-                                      className="object-contain scale-[1.16] transition-transform duration-300 group-hover:scale-[1.22] xl:scale-[1.2] xl:group-hover:scale-[1.26]"
+                                      className="object-contain p-2 transition-transform duration-300 group-hover:scale-[1.03] motion-reduce:transform-none motion-reduce:transition-none"
                                     />
                                   </div>
                                   <div className="border-t border-slate-100 px-4 py-3.5">
