@@ -8,6 +8,7 @@ import { aiCatalog } from '@/lib/ai-catalog';
 import { industrialCatalog } from '@/lib/industrial-catalog';
 import { firewallCatalog } from '@/lib/firewall-catalog';
 import { commercialCatalog } from '@/lib/commercial-catalog';
+import { mergeSpecifications } from '@/lib/product-specifications';
 
 export type SearchEntryType = 'product' | 'category' | 'scenario' | 'page' | 'resource';
 
@@ -39,7 +40,7 @@ const catalogIndustrialSearchEntries: SearchEntry[] = industrialCatalog
     type: 'product',
     keywords: [item.name, sku.label, ...sku.legacyNames],
     image: sku.image,
-    specs: [...item.specs, ...sku.specs],
+    specs: mergeSpecifications(item.specs, sku.specs),
   })) || [])]);
 const curatedFirewallSearchIds = new Set(['mcr20', 'mcsrp6']);
 const catalogFirewallSearchEntries: SearchEntry[] = firewallCatalog

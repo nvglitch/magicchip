@@ -25,6 +25,7 @@ import { useEffect, useState } from 'react';
 import { aiCatalog } from '@/lib/ai-catalog';
 import Mcaipc2Configurations from '@/components/Mcaipc2Configurations';
 import IndustrialSkuSelector from '@/components/IndustrialSkuSelector';
+import SpecificationTable from '@/components/SpecificationTable';
 import { industrialCatalog, type IndustrialSeriesCode } from '@/lib/industrial-catalog';
 import type { IndustrialSku } from '@/lib/merged-b-series';
 import { firewallCatalog, type FirewallSeriesCode } from '@/lib/firewall-catalog';
@@ -770,7 +771,7 @@ const iconMap = {
 };
 
 export default function ProductDetailPage() {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
   const params = useParams();
   const category = params.category as string;
   const productId = params.id as string;
@@ -828,6 +829,10 @@ export default function ProductDetailPage() {
       </div>
     );
   }
+
+  const specifications = product.operatingRange && !product.specs.some(spec => /operating|temperature|environment/i.test(spec.label))
+    ? [...product.specs, { label: t.productDetail.operatingRange, value: product.operatingRange }]
+    : product.specs;
 
   return (
     <div className="min-h-screen bg-white text-slate-950">
@@ -918,42 +923,19 @@ export default function ProductDetailPage() {
         </section>
       )}
 
-      {product.skus && <IndustrialSkuSelector model={product.name} skus={product.skus} onPreview={setPreviewImage} />}
+      {product.skus && <IndustrialSkuSelector model={product.name} skus={product.skus} sharedSpecs={specifications} onPreview={setPreviewImage} />}
 
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {!product.skus && <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-950">{t.productDetail.industrialConfigDetails}</h2>
           </div>
 
-          <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }} className="overflow-hidden rounded-xl border border-blue-200 bg-white shadow-lg shadow-blue-900/10">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 bg-gradient-to-r from-[#172033] via-blue-950 to-[#172033] px-6 md:px-8 py-6 text-white">
-              <div>
-                <h3 className="text-2xl font-bold">{product.skus ? ({ en: 'Shared specifications', de: 'Gemeinsame technische Daten', fr: 'Caractéristiques communes', it: 'Specifiche comuni', es: 'Especificaciones comunes' }[language]) : t.productDetail.hardwareParameters}</h3>
-              </div>
-              {product.operatingRange && <div className="rounded-lg border border-amber-300/30 bg-amber-300/10 px-4 py-3 text-left md:text-right">
-                <p className="text-xs font-semibold uppercase tracking-normal text-amber-200">{t.productDetail.operatingRange}</p>
-                <p className="text-lg font-semibold text-amber-50">{product.operatingRange}</p>
-              </div>}
-            </div>
-
-            <div>
-              {product.specs.map((spec, index) => (
-                <div key={`${spec.label}-${index}`} className={`group grid grid-cols-1 md:grid-cols-[240px_1fr] border-t border-blue-100 transition-colors ${index % 2 === 0 ? 'bg-white' : 'bg-blue-50/30'}`}>
-                  <div className="relative flex items-center gap-3 border-b border-amber-100 bg-amber-50/80 px-5 py-4 transition-colors group-hover:bg-amber-100/80 md:border-b-0 md:border-r md:border-amber-200 md:px-6">
-                    <div className="absolute left-0 top-0 h-full w-1 bg-amber-500 opacity-60 transition-all group-hover:w-1.5 group-hover:opacity-100" />
-                    <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-md bg-white text-[11px] font-bold text-amber-700 ring-1 ring-amber-200">
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
-                    <h4 className="text-sm font-bold uppercase tracking-normal text-amber-900">{spec.label}</h4>
-                  </div>
-                  <p className="bg-blue-50/35 px-5 py-4 text-blue-900 leading-relaxed transition-colors group-hover:bg-blue-50 md:px-7">{spec.value}</p>
-                </div>
-              ))}
-            </div>
+          <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }}>
+            <SpecificationTable title={t.productDetail.hardwareParameters} specs={specifications} standalone />
           </motion.div>
         </div>
-      </section>
+      </section>}
 
       {productId === 'mcai2' && <Mcaipc2Configurations onPreview={setPreviewImage} />}
 

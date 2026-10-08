@@ -5,6 +5,7 @@ import { firewallCatalog } from '@/lib/firewall-catalog';
 import { industrialCatalog } from '@/lib/industrial-catalog';
 import { mergedBSeriesAliases } from '@/lib/merged-b-series';
 import { permanentRedirect } from 'next/navigation';
+import { mergeSpecifications } from '@/lib/product-specifications';
 import { categorySeo, createPageMetadata, productSeo, serializeJsonLd, SITE_NAME, SITE_URL } from '@/lib/seo';
 
 type ProductLayoutProps = {
@@ -51,7 +52,7 @@ export default async function ProductLayout({ children, params }: ProductLayoutP
       sku: sku.legacyNames[0] || `${industrialItem.name}-${sku.key}`,
       image: `${SITE_URL}${sku.image}`,
       url: `${SITE_URL}${product.path}#sku-${sku.key}`,
-      additionalProperty: sku.specs.map(spec => ({ '@type': 'PropertyValue', name: spec.label, value: spec.value })),
+      additionalProperty: mergeSpecifications(industrialItem.specs, sku.specs).map(spec => ({ '@type': 'PropertyValue', name: spec.label, value: spec.value })),
     })),
     category: categoryEntry?.name,
     brand: { '@type': 'Brand', name: SITE_NAME },

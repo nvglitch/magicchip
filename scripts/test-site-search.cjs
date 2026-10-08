@@ -87,6 +87,17 @@ assert(searchSite('DDR5').some(item => item.href === '/products/industrial-mini-
 assert(searchSite('DDR4').some(item => item.href === '/products/industrial-mini-pc/mcipcb1#sku-type-a'));
 assert(!searchSite('DDR4').some(item => item.href === '/products/industrial-mini-pc/mcipcb1#sku-type-b'));
 
+// Every selected configuration exposes the full facts without duplicate labels.
+const b15aSpecs = searchSite('MCIPCB15A')[0].specs;
+assert.match(b15aSpecs.find(item => item.label === 'Network').value, /RTL8111H/);
+assert.equal(b15aSpecs.find(item => item.label === 'Storage').value, '1 × SATA 3.0');
+assert.equal(b15aSpecs.find(item => item.label === 'Dimensions').value, '148 × 126 × 56 mm');
+assert.equal(searchSite('MCIPCB15E')[0].specs.find(item => item.label === 'Dimensions').value, '148 × 125 × 56 mm');
+assert.match(searchSite('MCIPCB14F')[0].specs.find(item => item.label === 'Memory').value, /DDR5/);
+for (const entry of products.filter(item => item.href.includes('#sku-'))) {
+  assert.equal(new Set(entry.specs.map(item => item.label.toLowerCase())).size, entry.specs.length);
+}
+
 // TPC X: preserve platform-dependent facts and optional power qualifiers.
 for (const code of ['1004', '1201', '1501', '1506', '1701', '1901', '2105']) {
   const name = `MCTPC-${code}X`;

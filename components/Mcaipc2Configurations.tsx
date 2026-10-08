@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { mcaipc2Chassis, mcaipc2Series, type Mcaipc2SeriesId } from '@/lib/ai-catalog';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import SpecificationTable from '@/components/SpecificationTable';
 
 const copy = {
   en: { title: 'Choose your MCAIPC2 configuration', intro: 'Compare the three mainboard series, then find a compatible chassis. Memory, networking, display, and expansion options are specific to each series.', chassis: 'Chassis compatibility guide', all: 'All chassis', matching: 'compatible chassis' },
@@ -25,14 +26,7 @@ export default function Mcaipc2Configurations({ onPreview }: { onPreview: (image
         <p className="mt-4 max-w-3xl text-slate-600">{t.intro}</p>
         <div className="mt-8 grid gap-5 lg:grid-cols-3">
           {mcaipc2Series.map((series) => (
-            <article key={series.id} className="min-w-0 overflow-hidden rounded-xl border border-blue-200 bg-white shadow-sm">
-              <div className="bg-[#172033] p-6 text-white"><h3 className="text-xl font-bold">{series.id}</h3><p className="mt-2 text-sm text-blue-100">{series.platform}</p></div>
-              <dl className="divide-y divide-slate-100 px-6">
-                {Object.entries({ 'Graphics / NPU': series.graphics, Memory: series.memory, Network: series.network, Storage: series.storage, Display: series.display, Expansion: series.expansion, OS: series.system }).map(([label, value]) => (
-                  <div key={label} className="py-4"><dt className="text-xs font-bold uppercase text-blue-700">{label}</dt><dd className="mt-1 break-words text-sm leading-relaxed text-slate-700">{value}</dd></div>
-                ))}
-              </dl>
-            </article>
+            <SpecificationTable key={series.id} title={series.id} subtitle={series.platform} compact specs={Object.entries({ 'Graphics / NPU': series.graphics, Memory: series.memory, Network: series.network, Storage: series.storage, Display: series.display, Expansion: series.expansion, OS: series.system }).map(([label, value]) => ({ label, value }))} />
           ))}
         </div>
         <h3 className="mt-14 text-2xl font-bold text-slate-950">{t.chassis}</h3>
