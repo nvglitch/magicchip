@@ -187,6 +187,7 @@ export const es: TranslationSchema = {
     industrialRated: 'Clasificación industrial',
     productAdvantages: 'Ventajas del Producto',
     advantagesHeading: 'Listo para armarios de control, pasarelas edge y computación junto a máquina',
+    aiAdvantagesHeading: 'Para IA local y aplicaciones de escritorio',
     enlargeImage: 'Ampliar {title}',
     interestedIn: '¿Interesado en {name}?',
     contactPrompt: 'Contacte a nuestro equipo para precios, planificación del ciclo de vida, personalización y soporte para pedidos al por mayor.',

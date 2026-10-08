@@ -1,11 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
-import type { IndustrialSku } from '@/lib/merged-b-series';
-import SpecificationTable from '@/components/SpecificationTable';
-import { mergeSpecifications, type ProductSpecification } from '@/lib/product-specifications';
+import ConfigurationSpecifications from '@/components/ConfigurationSpecifications';
+import { mergeSpecifications, type ProductConfiguration, type ProductSpecification } from '@/lib/product-specifications';
 
 const copy = {
   en: { title: 'Choose a configuration', detail: 'Select a configuration to view its complete specifications.', sku: 'SKU', image: 'Reference view; I/O may differ by Type', specification: 'Configuration specifications' },
@@ -15,10 +13,11 @@ const copy = {
   es: { title: 'Elige una configuración', detail: 'Selecciona una configuración para ver todas sus especificaciones.', sku: 'SKU', image: 'Vista de referencia; los puertos varían según el tipo', specification: 'Especificaciones de la configuración' },
 };
 
-export default function IndustrialSkuSelector({ model, skus, sharedSpecs, onPreview }: { model: string; skus: IndustrialSku[]; sharedSpecs: ProductSpecification[]; onPreview: (image: string) => void }) {
+export default function ProductConfigurationSelector({ model, skus, sharedSpecs, referenceImage = true, onPreview, onConfigurationChange }: { model: string; skus: ProductConfiguration[]; sharedSpecs: ProductSpecification[]; referenceImage?: boolean; onPreview: (image: string) => void; onConfigurationChange?: (configuration: ProductConfiguration) => void }) {
   const { language } = useLanguage();
   const words = copy[language];
   const [selected, setSelected] = useState(0);
+  const verticalCards = model === 'MCAIPC3';
 
   useEffect(() => {
     const pickHash = () => {
@@ -40,6 +39,7 @@ export default function IndustrialSkuSelector({ model, skus, sharedSpecs, onPrev
   }, [model, skus]);
 
   const active = skus[selected];
+  useEffect(() => { onConfigurationChange?.(active); }, [active, onConfigurationChange]);
   const specifications = mergeSpecifications(sharedSpecs, [...active.specs, { label: 'Model', value: active.legacyNames[0] || model }]);
   const selectSku = (index: number) => {
     setSelected(index);
@@ -51,7 +51,7 @@ export default function IndustrialSkuSelector({ model, skus, sharedSpecs, onPrev
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-slate-950 md:text-4xl">{words.title}</h2>
         <p className="mt-3 text-slate-600">{words.detail}</p>
-        <div role="tablist" aria-label={`${model} ${words.title}`} className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div role="tablist" aria-label={`${model} ${words.title}`} className={`mt-8 grid gap-3 sm:grid-cols-2 ${verticalCards ? 'lg:grid-cols-4' : skus.length === 4 ? 'lg:grid-cols-2' : 'lg:grid-cols-3'}`}>
           {skus.map((sku, index) => (
             <button
               key={sku.key}
@@ -63,7 +63,10 @@ export default function IndustrialSkuSelector({ model, skus, sharedSpecs, onPrev
               onClick={() => selectSku(index)}
               className={`rounded-xl border px-5 py-4 text-left font-semibold transition-all hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-2 focus-visible:outline-blue-600 ${selected === index ? 'border-blue-500 bg-blue-50 text-blue-800 shadow-sm' : 'border-blue-200 bg-white text-slate-800 hover:border-blue-400'}`}
             >
-              <span className="block">{sku.label}</span>
+              {verticalCards ? <>
+                <span className="block text-lg">{sku.label.split(' · ')[0]}</span>
+                <span className="mt-2 block text-sm font-medium leading-relaxed">{sku.label.split(' · ').slice(1).join(' · ')}</span>
+              </> : <span className="block">{sku.label}</span>}
               {sku.legacyNames.filter(name => name.toLowerCase() !== model.toLowerCase()).length > 0 && (
                 <span className="mt-1 block text-xs font-normal text-slate-500">{words.sku}: {sku.legacyNames.filter(name => name.toLowerCase() !== model.toLowerCase()).join(', ')}</span>
               )}
@@ -71,17 +74,7 @@ export default function IndustrialSkuSelector({ model, skus, sharedSpecs, onPrev
           ))}
         </div>
         <div id="sku-panel" role="tabpanel" aria-labelledby={`sku-tab-${active.key}`} className="mt-6 overflow-hidden rounded-xl border border-blue-200 bg-white">
-          <div className="grid md:grid-cols-[300px_1fr]">
-            <div className="min-w-0 border-b border-blue-100 p-5 md:border-b-0 md:border-r">
-              <div className="md:sticky md:top-28">
-                <button type="button" onClick={() => onPreview(active.image)} className="group w-full cursor-zoom-in rounded-lg bg-white p-3 focus-visible:outline-2 focus-visible:outline-blue-600">
-                  <Image src={active.image} alt={`${model} ${active.label}`} width={960} height={540} className="aspect-[4/3] w-full object-contain transition-transform group-hover:scale-[1.03]" />
-                </button>
-                <p className="mt-2 text-center text-xs text-slate-500">{words.image}</p>
-              </div>
-            </div>
-            <SpecificationTable title={`${active.label} · ${words.specification}`} specs={specifications} framed={false} />
-          </div>
+          <ConfigurationSpecifications key={active.key} title={`${active.label} · ${words.specification}`} image={active.image} imageAlt={`${model} ${active.label}`} imageCaption={referenceImage ? words.image : undefined} specs={specifications} galleryCards={active.galleryCards} onPreview={onPreview} />
         </div>
       </div>
     </section>

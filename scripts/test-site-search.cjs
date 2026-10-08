@@ -21,6 +21,7 @@ function load(filename) {
 }
 const { searchSite, siteSearchIndex } = load('lib/site-search.ts');
 const { industrialCatalog } = load('lib/industrial-catalog.ts');
+const { aiCatalog, aiProductAliases, mcaipc2Configurations, mcaipc3Models } = load('lib/ai-catalog.ts');
 const { groupProductNavigation } = load('lib/product-navigation.ts');
 const { matchSearch } = load('lib/search-matching.ts');
 const fixture = (specs) => ({ title: 'Test PC', description: '', keywords: [], href: '/test', type: 'product', specs });
@@ -41,7 +42,7 @@ assert(matchSearch(fixture([{ label: 'Memory', value: 'DDR5-4800' }]), 'DDR5'));
 assert.equal(matchSearch(fixture([{ label: 'Memory', value: 'DDR4' }]), 'DDR5'), null);
 assert(matchSearch(fixture([{ label: 'Cooling', value: 'fanless' }]), 'fanles'));
 const products = siteSearchIndex.filter(e => e.type === 'product');
-assert.equal(products.length, 130);
+assert.equal(products.length, 156);
 assert(products.every(e => e.specs?.length));
 assert.equal(new Set(products.map(e => e.href)).size, products.length);
 for (const entry of products) assert.equal(searchSite(entry.title)[0]?.href, entry.href);
@@ -68,7 +69,7 @@ assert.equal(searchSite('').length, 0);
 assert.equal(searchSite('999-1000V').length, 0);
 assert.equal(searchSite('zzzzzznothing').length, 0);
 for (const query of ['9-36V', 'wide voltage', 'Intel', 'Intel 9-36V', 'USB4', 'DDR5']) console.log(`${query}: ${searchSite(query).length} results`);
-console.log('Search regression checks passed: all 130 product/SKU entries, voltage boundaries, CPU scope, spelling, units, compound queries, and exact model links.');
+console.log(`Search regression checks passed: all ${products.length} product/SKU entries, voltage boundaries, CPU scope, spelling, units, compound queries, and exact model links.`);
 
 assert.equal(searchSite('MCIPCE1')[0]?.href, '/products/industrial-mini-pc/mcipce1');
 assert(searchSite('9-36V').some(item => item.title === 'MCIPCE1'));
@@ -97,6 +98,42 @@ assert.match(searchSite('MCIPCB14F')[0].specs.find(item => item.label === 'Memor
 for (const entry of products.filter(item => item.href.includes('#sku-'))) {
   assert.equal(new Set(entry.specs.map(item => item.label.toLowerCase())).size, entry.specs.length);
 }
+
+// AIPC family routes retain exact model facts and configuration-specific images.
+assert.deepEqual(Array.from(aiCatalog, item => item.id).sort(), ['mcai2', 'mcaipc3']);
+for (const model of mcaipc3Models) {
+  const result = searchSite(model.name)[0];
+  assert.equal(result.href, aiProductAliases[model.id]);
+  assert.equal(result.image, model.image);
+  for (const spec of model.specs) assert.equal(result.specs.find(item => item.label === spec.label)?.value, spec.value);
+}
+assert(searchSite('Intel').some(item => item.title === 'MCAIPC3C'));
+assert(searchSite('Intel').some(item => item.title === 'MCAIPC3D'));
+assert(!searchSite('Intel').some(item => ['MCAIPC3A', 'MCAIPC3B'].includes(item.title)));
+assert.match(searchSite('MCAIPC3A')[0].specs.find(item => item.label === 'Memory').value, /LPDDR5/);
+assert.match(searchSite('MCAIPC3B')[0].specs.find(item => item.label === 'Memory').value, /SO-DIMM/);
+
+// Every MCAIPC2 combination must be compatible and expose its own I/O, power and size.
+assert.equal(mcaipc2Configurations.length, 25);
+for (const [series, count] of Object.entries({ 'AXB35-02': 14, 'AXB35-03': 9, 'AEB35-04': 2 })) {
+  assert.equal(mcaipc2Configurations.filter(item => item.seriesId === series).length, count);
+}
+assert.deepEqual(Array.from(mcaipc2Configurations.filter(item => item.seriesId === 'AEB35-04'), item => item.chassisId).sort(), ['H02', 'H09']);
+for (const configuration of mcaipc2Configurations) {
+  const result = searchSite(`MCAIPC2 — ${configuration.label}`)[0];
+  assert.equal(result.href, `/products/ai-mini-pc/mcai2#sku-${configuration.key}`);
+  assert.equal(result.image, configuration.image);
+  assert.equal(result.specs.length, 17);
+  assert.equal(result.specs.find(item => item.label === 'Mainboard series').value, configuration.seriesId);
+  assert.equal(result.specs.find(item => item.label === 'Chassis').value, configuration.chassisId);
+}
+const selectedSpec = (key, label) => mcaipc2Configurations.find(item => item.key === key).specs.find(item => item.label === label).value;
+assert.equal(selectedSpec('axb35-02-h04-bq', 'Network'), '1 x RJ45 2.5GbE');
+assert.equal(selectedSpec('axb35-03-h04-bq', 'Network'), '2 x RJ45 10GbE');
+assert.equal(selectedSpec('aeb35-04-h02', 'Power'), 'Internal 300/350 W Flex PSU');
+assert.equal(selectedSpec('aeb35-04-h09', 'Power'), '20 V / 12 A, 240 W external adapter');
+assert.equal(selectedSpec('aeb35-04-h09', 'Dimensions'), '200 x 197.8 x 70 mm');
+console.log('AIPC checks passed: canonical series links, four exact MCAIPC3 configurations and 25 compatible MCAIPC2 combinations.');
 
 // TPC X: preserve platform-dependent facts and optional power qualifiers.
 for (const code of ['1004', '1201', '1501', '1506', '1701', '1901', '2105']) {

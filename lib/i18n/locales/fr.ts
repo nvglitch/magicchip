@@ -187,6 +187,7 @@ export const fr: TranslationSchema = {
     industrialRated: 'Homologué industriel',
     productAdvantages: 'Avantages du Produit',
     advantagesHeading: 'Prêt pour les armoires de commande, les passerelles edge et le calcul côté machine',
+    aiAdvantagesHeading: 'Pour l’IA locale et les applications de bureau',
     enlargeImage: 'Agrandir {title}',
     interestedIn: 'Intéressé par {name} ?',
     contactPrompt: 'Contactez notre équipe pour les tarifs, la planification du cycle de vie, la personnalisation et le support des commandes en gros.',

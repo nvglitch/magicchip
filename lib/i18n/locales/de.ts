@@ -187,6 +187,7 @@ export const de: TranslationSchema = {
     industrialRated: 'Industriell ausgelegt',
     productAdvantages: 'Produktvorteile',
     advantagesHeading: 'Bereit für Schaltschränke, Edge-Gateways und maschinennahes Computing',
+    aiAdvantagesHeading: 'Für lokale KI und Desktop-Anwendungen',
     enlargeImage: '{title} vergrößern',
     interestedIn: 'Interessiert an {name}?',
     contactPrompt: 'Kontaktieren Sie unser Team für Preise, Lebenszyklusplanung, Anpassung und Großbestellungen.',

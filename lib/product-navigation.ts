@@ -6,7 +6,6 @@ const families: Record<string, string[]> = {
   MCIPCB2: ['MCIPCB2', 'MCIPCB2-J5005'],
   MCIPCD5: ['MCIPCD5', 'MCIPCD5F'],
   MCNAS14: ['MCNAS14A', 'MCNAS14B'],
-  MCAIPC3: ['MCAIPC3A', 'MCAIPC3B', 'MCAIPC3C', 'MCAIPC3D'],
 };
 
 const modelOrder = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });

@@ -1,5 +1,9 @@
 // Generated from detail hero images by scripts/build-model-thumbnails.py.
 export const modelThumbnails: Record<string, { image: string; source: string }> = {
+  "mcaipc3": {
+    "image": "/assets/products/thumbnails/mcaipc3a.webp",
+    "source": "/assets/products/ai/brochure/mcaipc3a/main.webp"
+  },
   "mcaipc3a": {
     "image": "/assets/products/thumbnails/mcaipc3a.webp",
     "source": "/assets/products/ai/brochure/mcaipc3a/main.webp"

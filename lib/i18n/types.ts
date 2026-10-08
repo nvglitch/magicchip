@@ -187,6 +187,7 @@ export interface TranslationSchema {
     industrialRated: string;
     productAdvantages: string;
     advantagesHeading: string;
+    aiAdvantagesHeading: string;
     enlargeImage: string;
     interestedIn: string;
     contactPrompt: string;

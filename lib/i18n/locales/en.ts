@@ -187,6 +187,7 @@ export const en: TranslationSchema = {
     industrialRated: 'Industrial rated',
     productAdvantages: 'Product Advantages',
     advantagesHeading: 'Ready for control cabinets, edge gateways, and machine-side computing',
+    aiAdvantagesHeading: 'Built for local AI and desktop computing',
     enlargeImage: 'Enlarge {title}',
     interestedIn: 'Interested in {name}?',
     contactPrompt: 'Contact our team for pricing, lifecycle planning, customization, and bulk order support.',

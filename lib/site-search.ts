@@ -82,7 +82,13 @@ const baseSearchIndex: SearchEntry[] = [
     keywords: [cert.reportNumber, cert.models, ...cert.standards, ...Object.values(certificateCopy).map(copy => `${copy.title} ${copy.names[index]}`)],
   })),
 
-  ...aiCatalog.map((item): SearchEntry => ({ title: item.name, description: item.tagline, href: `/products/ai-mini-pc/${item.id}`, type: 'product', keywords: ['ai mini pc', ...item.highlights, ...item.specs.filter((spec) => ['CPU', 'Mainboard series', 'Network', 'High-speed interface'].includes(spec.label)).map((spec) => spec.value)], image: item.image })),
+  ...aiCatalog.flatMap((item): SearchEntry[] => [{ title: item.name, description: item.tagline, href: `/products/ai-mini-pc/${item.id}`, type: 'product', keywords: ['ai mini pc', ...item.highlights, ...item.specs.filter((spec) => ['CPU', 'Mainboard series', 'Network', 'High-speed interface'].includes(spec.label)).map((spec) => spec.value)], image: item.image }, ...(item.skus?.map((sku): SearchEntry => ({
+    title: sku.legacyNames[0] || `${item.name} — ${sku.label}`,
+    description: `${item.name} ${sku.label} configuration`,
+    href: `/products/ai-mini-pc/${item.id}#sku-${sku.key}`,
+    type: 'product', keywords: [item.name, sku.label, ...sku.legacyNames], image: sku.image,
+    specs: item.id === 'mcai2' ? sku.specs : mergeSpecifications(item.specs, sku.specs),
+  })) || [])]),
   ...catalogIndustrialSearchEntries,
   ...catalogFirewallSearchEntries,
   ...catalogCommercialSearchEntries,

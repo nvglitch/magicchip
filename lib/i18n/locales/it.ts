@@ -187,6 +187,7 @@ export const it: TranslationSchema = {
     industrialRated: 'Grado industriale',
     productAdvantages: 'Vantaggi del Prodotto',
     advantagesHeading: 'Pronto per quadri di controllo, gateway edge e calcolo a bordo macchina',
+    aiAdvantagesHeading: 'Per l’IA locale e le applicazioni desktop',
     enlargeImage: 'Ingrandisci {title}',
     interestedIn: 'Interessato a {name}?',
     contactPrompt: 'Contatta il nostro team per prezzi, pianificazione del ciclo di vita, personalizzazione e supporto per ordini all\'ingrosso.',

@@ -21,13 +21,13 @@ import {
 import Link from 'next/link';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { useParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { aiCatalog } from '@/lib/ai-catalog';
 import Mcaipc2Configurations from '@/components/Mcaipc2Configurations';
-import IndustrialSkuSelector from '@/components/IndustrialSkuSelector';
+import ProductConfigurationSelector from '@/components/ProductConfigurationSelector';
 import SpecificationTable from '@/components/SpecificationTable';
+import type { ProductConfiguration } from '@/lib/product-specifications';
 import { industrialCatalog, type IndustrialSeriesCode } from '@/lib/industrial-catalog';
-import type { IndustrialSku } from '@/lib/merged-b-series';
 import { firewallCatalog, type FirewallSeriesCode } from '@/lib/firewall-catalog';
 import { commercialCatalog, type CommercialSeriesCode } from '@/lib/commercial-catalog';
 
@@ -47,7 +47,7 @@ type ProductDetail = {
   sellingPoints?: ProductCard[];
   advantageSummary?: string;
   operatingRange?: string;
-  skus?: IndustrialSku[];
+  skus?: ProductConfiguration[];
 };
 
 const mcipcb12ImageBase = '/assets/products/industrial/b-series/mcipcb12/images';
@@ -775,6 +775,9 @@ export default function ProductDetailPage() {
   const params = useParams();
   const category = params.category as string;
   const productId = params.id as string;
+  const [configurationChoice, setConfigurationChoice] = useState<{ productId: string; configuration: ProductConfiguration } | null>(null);
+  const onConfigurationChange = useCallback((configuration: ProductConfiguration) => setConfigurationChoice({ productId, configuration }), [productId]);
+  const activeConfiguration = configurationChoice?.productId === productId ? configurationChoice.configuration : undefined;
   const [previewImage, setPreviewImage] = useState<string | null>(null);
   const product = productCategories[productId] === category ? products[productId] : undefined;
   const industrialSeriesCode = category === 'industrial-mini-pc'
@@ -797,7 +800,7 @@ export default function ProductDetailPage() {
     (industrialSeriesCode === 'tpc' && productId !== 'mctpc-1501b');
   const catInfo = categoryData[category] || categoryData['industrial-mini-pc'];
   const CategoryIcon = iconMap[catInfo.icon] || Cpu;
-  const gallery = product?.images || [];
+  const gallery = activeConfiguration ? [activeConfiguration.image] : product?.images || [];
   const detailImages = product?.galleryImages || gallery.slice(1, 4);
   const galleryItems: ProductCard[] = product?.galleryCards || detailImages.map((image) => ({ image, title: product?.name || '' }));
 
@@ -923,7 +926,7 @@ export default function ProductDetailPage() {
         </section>
       )}
 
-      {product.skus && <IndustrialSkuSelector model={product.name} skus={product.skus} sharedSpecs={specifications} onPreview={setPreviewImage} />}
+      {productId === 'mcai2' ? <Mcaipc2Configurations onPreview={setPreviewImage} onConfigurationChange={onConfigurationChange} /> : product.skus && <ProductConfigurationSelector model={product.name} skus={product.skus} sharedSpecs={specifications} referenceImage={productId !== 'mcaipc3'} onPreview={setPreviewImage} onConfigurationChange={productId === 'mcaipc3' ? onConfigurationChange : undefined} />}
 
       {!product.skus && <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -937,13 +940,11 @@ export default function ProductDetailPage() {
         </div>
       </section>}
 
-      {productId === 'mcai2' && <Mcaipc2Configurations onPreview={setPreviewImage} />}
-
       <section className="py-16 bg-[#f5f8f7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] gap-10 items-start">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-950 mb-5">{t.productDetail.advantagesHeading}</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-950 mb-5">{category === 'ai-mini-pc' ? t.productDetail.aiAdvantagesHeading : t.productDetail.advantagesHeading}</h2>
               <p className="text-slate-600 leading-relaxed">
                 {product.advantageSummary || product.description}
               </p>

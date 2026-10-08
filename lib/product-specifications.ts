@@ -1,10 +1,18 @@
 export type ProductSpecification = { label: string; value: string };
+export type ProductConfiguration = {
+  key: string;
+  label: string;
+  legacyNames: string[];
+  image: string;
+  specs: ProductSpecification[];
+  galleryCards?: { image: string; title: string; description?: string }[];
+};
 
 const specificationOrder = [
-  'Model', 'Series', 'CPU', 'Memory', 'Graphics', 'Graphics / NPU',
+  'Model', 'Series', 'Mainboard series', 'CPU', 'Memory', 'Graphics', 'Graphics / NPU',
   'Display', 'DisplayPort', 'Network', 'USB', 'Serial',
   'Storage', 'Storage expansion', 'Expansion', 'Power', 'Power connector',
-  'Cooling', 'System', 'OS', 'Operating Environment', 'Dimensions',
+  'Cooling', 'System', 'OS', 'Operating Environment', 'Chassis', 'Dimensions',
 ];
 
 // A selected Type overrides the shared row with the same label.

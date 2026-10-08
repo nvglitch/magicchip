@@ -1,4 +1,5 @@
 import { aiBrochureProducts } from '@/lib/brochure-products';
+import type { ProductConfiguration } from '@/lib/product-specifications';
 
 type AiFeature = {
   icon: 'Cpu' | 'Network' | 'HardDrive' | 'Layers';
@@ -12,7 +13,7 @@ const mcaipc2Features: AiFeature[] = [
   { icon: 'Layers', title: 'Chassis and Power Options', description: 'Match the selected mainboard to a compatible chassis, with an internal 300/350 W Flex PSU or a 240 W external adapter. Fingerprint, lighting, and cooling options vary by enclosure.' },
 ];
 
-export const aiCatalog = aiBrochureProducts.map((item) => {
+const aiModels = aiBrochureProducts.map((item) => {
   const flagship = item.id === 'mcai2';
   const features: AiFeature[] = flagship ? mcaipc2Features : [
     { icon: 'Cpu', title: 'Configurable Computing Platform', description: `${item.highlights[0]}. Processor and graphics configuration follows the selected model and order specification.` },
@@ -30,8 +31,6 @@ export const aiCatalog = aiBrochureProducts.map((item) => {
     features,
   };
 });
-
-export const mcaipc2 = aiCatalog.find((item) => item.id === 'mcai2')!;
 
 export const mcaipc2Series = [
   {
@@ -78,3 +77,85 @@ export const mcaipc2Chassis: {
   { id: 'H08', series: ['AXB35-02'], dimensions: '187 x 196.5 x 55.6 mm', details: '240 W external adapter; optional fingerprint; audio jack', image: 'h08' },
   { id: 'H10', series: ['AXB35-02'], dimensions: '200 x 197.8 x 70 mm', details: '240 W external adapter; optional fingerprint; audio jack', image: 'h10' },
 ].map((chassis) => ({ ...chassis, series: chassis.series as Mcaipc2SeriesId[], image: `/assets/products/ai/brochure/mcaipc2/chassis/${chassis.image}.webp` }));
+
+// Keep the original model facts and images intact; the family page selects them.
+export const mcaipc3Models = aiModels.filter(item => item.id.startsWith('mcaipc3'));
+const mcaipc3Labels = [
+  'Type A · AMD · LPDDR5 · MCIO',
+  'Type B · AMD · DDR5 · OCuLink',
+  'Type C · Intel Core Ultra · DDR5',
+  'Type D · Intel Core Ultra · LPDDR5',
+];
+export const mcaipc3Configurations: ProductConfiguration[] = mcaipc3Models.map((item, index) => ({
+  key: `type-${item.name.slice(-1).toLowerCase()}`,
+  label: mcaipc3Labels[index],
+  legacyNames: [item.name],
+  image: item.image,
+  specs: item.specs,
+  galleryCards: item.galleryCards,
+}));
+export const aiProductAliases: Record<string, string> = Object.fromEntries(mcaipc3Models.map((item, index) => [
+  item.id, `/products/ai-mini-pc/mcaipc3#sku-${mcaipc3Configurations[index].key}`,
+]));
+
+export const mcaipc2Configurations = mcaipc2Series.flatMap(series => mcaipc2Chassis
+  .filter(chassis => chassis.series.includes(series.id))
+  .map(chassis => {
+    const firstSeries = series.id === 'AXB35-02';
+    const medusa = series.id === 'AEB35-04';
+    const internalPower = chassis.details.startsWith('Internal');
+    return {
+      key: `${series.id.toLowerCase()}-${chassis.id.toLowerCase()}`,
+      label: `${series.id} · ${chassis.id}`,
+      legacyNames: [] as string[],
+      seriesId: series.id,
+      chassisId: chassis.id,
+      image: chassis.image,
+      galleryCards: chassis.id === 'H04-BQ' ? aiModels.find(item => item.id === 'mcai2')!.galleryCards : [],
+      specs: [
+        { label: 'Model', value: 'MCAIPC2' },
+        { label: 'Mainboard series', value: series.id },
+        { label: 'CPU', value: series.platform },
+        { label: 'Graphics / NPU', value: series.graphics },
+        { label: 'Memory', value: series.memory },
+        { label: 'Storage', value: series.storage },
+        { label: 'Network', value: series.network },
+        { label: 'USB', value: `Front: 2 x USB 3.2 Gen 2 Type-A and 1 x USB4; rear: ${firstSeries ? '1 x USB 3.2 Gen 2, 2 x USB 2.0 and 1 x USB4' : '1 x USB 3.2, 1 x USB 2.0 and 1 x USB4'}` },
+        { label: 'Audio', value: medusa ? '1 x combo jack' : 'Front and rear combo jacks' },
+        { label: 'Display', value: series.display },
+        { label: 'Expansion', value: series.expansion },
+        { label: 'Wi-Fi / Bluetooth', value: `M.2 2230 PCIe/USB module; ${firstSeries ? '2.4/5 GHz' : '2.4/5/6 GHz'}; Bluetooth 5.0 or later` },
+        { label: 'Power', value: internalPower ? 'Internal 300/350 W Flex PSU' : '20 V / 12 A, 240 W external adapter' },
+        { label: 'OS', value: series.system },
+        { label: 'Chassis', value: chassis.id },
+        { label: 'Dimensions', value: chassis.dimensions },
+        { label: 'Chassis options', value: chassis.details.split('; ').filter(detail => !/PSU|adapter/i.test(detail)).join('; ') },
+      ],
+    };
+  }));
+export const defaultMcaipc2Configuration = mcaipc2Configurations.find(item => item.seriesId === 'AXB35-02' && item.chassisId === 'H04-BQ')!;
+
+const mcaipc3SharedSpecs = mcaipc3Models[0].specs.filter(spec => spec.label !== 'Model' && mcaipc3Models.every(item => item.specs.some(other => other.label === spec.label && other.value === spec.value)));
+export const mcaipc3 = {
+  ...mcaipc3Models[0],
+  id: 'mcaipc3', name: 'MCAIPC3',
+  sourceBrochures: mcaipc3Models.map(item => item.sourceBrochure),
+  tagline: 'Compact AI PC with four AMD and Intel configurations',
+  description: 'Choose MCAIPC3A, B, C or D by processor platform, memory and expansion. All four configurations have dual 2.5GbE LAN and two PCIe 4.0 M.2 SSD slots in a 132 x 132 x 50.5 mm enclosure. CPU, graphics, onboard LPDDR5 or DDR5 SO-DIMM memory, front and rear I/O, and MCIO or OCuLink follow the selected configuration.',
+  highlights: ['Four AMD / Intel configurations', 'Up to 64GB, configuration-dependent', 'Dual 2.5GbE LAN', 'Dual M.2 PCIe 4.0 SSD'],
+  specs: [{ label: 'Model', value: 'MCAIPC3' }, ...mcaipc3SharedSpecs],
+  galleryImages: [], galleryCards: [],
+  skus: mcaipc3Configurations,
+  features: [
+    { icon: 'Cpu', title: 'AMD and Intel Platform Options', description: 'Select A or B for AMD Ryzen / Ryzen AI options, or C or D for Intel Core Ultra. Processor and graphics options follow the selected SKU.' },
+    { icon: 'Network', title: 'Dual 2.5GbE and Display I/O', description: 'Dual 2.5GbE LAN, HDMI 2.1, DisplayPort 2.1 and USB4 display output connect desktop, network and display workloads.' },
+    { icon: 'HardDrive', title: 'Memory and Expansion Choices', description: 'A and D use onboard LPDDR5; B and C use DDR5 SO-DIMM slots. A provides MCIO, while B, C and D provide OCuLink. All four support two PCIe 4.0 M.2 SSDs.' },
+  ] as AiFeature[],
+};
+export const aiCatalog = [mcaipc3, ...aiModels.filter(item => !item.id.startsWith('mcaipc3')).map(item => ({
+  ...item,
+  galleryCards: item.id === 'mcai2' ? [] : item.galleryCards,
+  galleryImages: item.id === 'mcai2' ? [] : item.galleryImages,
+  skus: item.id === 'mcai2' ? mcaipc2Configurations : undefined,
+}))];
+export const mcaipc2 = aiCatalog.find(item => item.id === 'mcai2')!;

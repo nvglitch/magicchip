@@ -1,12 +1,7 @@
 import type { IndustrialCatalogItem, IndustrialCatalogSpec } from '@/lib/industrial-catalog';
+import type { ProductConfiguration } from '@/lib/product-specifications';
 
-export type IndustrialSku = {
-  key: string;
-  label: string;
-  legacyNames: string[];
-  image: string;
-  specs: IndustrialCatalogSpec[];
-};
+export type IndustrialSku = ProductConfiguration;
 
 type MergedProduct = IndustrialCatalogItem & { skus: IndustrialSku[]; sourceBrochures: string[] };
 const root = '/assets/products/industrial/merged';
