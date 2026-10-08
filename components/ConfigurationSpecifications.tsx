@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import SpecificationTable from '@/components/SpecificationTable';
+import ConfigurationImageZoom from '@/components/ConfigurationImageZoom';
 import type { ProductConfiguration, ProductSpecification } from '@/lib/product-specifications';
 
 export default function ConfigurationSpecifications({ title, image, imageAlt, imageCaption, specs, galleryCards = [], onPreview }: {
@@ -22,9 +23,7 @@ export default function ConfigurationSpecifications({ title, image, imageAlt, im
     <div className="grid md:grid-cols-[300px_1fr]">
       <div className="min-w-0 border-b border-blue-100 p-5 md:border-b-0 md:border-r">
         <div className="md:sticky md:top-28">
-          <button type="button" onClick={() => onPreview(activeView.image)} aria-label={activeView.title} className="group w-full cursor-zoom-in rounded-lg bg-white p-3 focus-visible:outline-2 focus-visible:outline-blue-600">
-            <Image src={activeView.image} alt={activeView.title} width={960} height={540} className="aspect-[4/3] w-full object-contain transition-transform group-hover:scale-[1.03]" />
-          </button>
+          <ConfigurationImageZoom key={activeView.image} image={activeView.image} title={activeView.title} onPreview={onPreview} />
           {views.length > 1 && <div className="mt-3 grid grid-cols-2 gap-2">
             {views.map(view => <button key={view.image} type="button" aria-label={view.title} aria-pressed={view.image === activeView.image} onClick={() => setSelectedView(view.image)} className={`overflow-hidden rounded-lg border p-1 focus-visible:outline-2 focus-visible:outline-blue-600 ${view.image === activeView.image ? 'border-blue-500 bg-blue-50' : 'border-blue-100 hover:border-blue-400'}`}>
               <Image src={view.image} alt="" width={200} height={125} className="aspect-[8/5] w-full object-contain" />
