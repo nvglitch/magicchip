@@ -1,3 +1,5 @@
+import { scenarios } from '@/lib/scenarios';
+import { scenarioCopy } from '@/lib/scenario-copy';
 import { certificates, certificateCopy } from '@/lib/certificates';
 import { brochureUpdates } from '@/lib/brochure-updates';
 import { matchSearch } from '@/lib/search-matching';
@@ -200,48 +202,20 @@ const baseSearchIndex: SearchEntry[] = [
     type: 'category',
     keywords: ['network appliance', 'router', 'vpn', 'gateway', 'server pc'],
   },
-  {
-    title: 'Industrial Automation',
-    description: 'Systems selected for machine control, serial connectivity, rich I/O, and industrial edge use.',
-    href: '/scenarios#industrialAutomation',
+  ...scenarios.map((scenario): SearchEntry => ({
+    title: scenarioCopy.en.items[scenario.id].title,
+    description: scenarioCopy.en.items[scenario.id].description,
+    href: `/scenarios#${scenario.id}`,
     type: 'scenario',
-    keywords: ['machine control', 'factory', 'automation', 'industrial edge'],
-  },
-  {
-    title: 'Edge AI & Local Compute',
-    description: 'Systems selected for local AI, high-performance computing, memory, and multi-display workflows.',
-    href: '/scenarios#edgeAi',
-    type: 'scenario',
-    keywords: ['ai workstation', 'local model', 'edge inference', 'professional compute'],
-  },
-  {
-    title: 'Network Security & SD-WAN',
-    description: 'Systems selected for multi-port networking, routing, VPN, and firewall deployments.',
-    href: '/scenarios#networkSecurity',
-    type: 'scenario',
-    keywords: ['network security', 'router', 'vpn', 'firewall', 'sd-wan'],
-  },
-  {
-    title: 'Digital Signage & Multi-Display',
-    description: 'Compact systems selected for information displays and multi-screen deployments.',
-    href: '/scenarios#digitalSignage',
-    type: 'scenario',
-    keywords: ['display', 'signage', 'multi screen', 'kiosk'],
-  },
-  {
-    title: 'Business & Education',
-    description: 'Compact systems selected for office productivity, classrooms, and meeting spaces.',
-    href: '/scenarios#businessEducation',
-    type: 'scenario',
-    keywords: ['office', 'classroom', 'meeting', 'desktop'],
-  },
-  {
-    title: 'IoT & Edge Gateways',
-    description: 'Systems selected for connecting local devices, upstream networks, and edge services.',
-    href: '/scenarios#iotGateway',
-    type: 'scenario',
-    keywords: ['iot', 'gateway', 'edge network', 'connectivity'],
-  },
+    image: scenario.products[0].image,
+    keywords: [
+      ...scenario.keywords,
+      ...Object.values(scenarioCopy).flatMap(copy => {
+        const item = copy.items[scenario.id];
+        return [item.title, item.description, ...item.applications];
+      }),
+    ],
+  })),
   { title: 'All Products', description: 'Browse all MagicChip Mini PC and industrial computing categories.', href: '/products', type: 'page', keywords: ['catalog', 'product range'] },
   { title: 'Application Scenarios', description: 'Browse products by deployment scenario and workload.', href: '/scenarios', type: 'page', keywords: ['solutions', 'applications', 'use cases'] },
   { title: 'Documents & Resources', description: 'Access product news, downloads, and technical information.', href: '/documents', type: 'resource', keywords: ['resources', 'support', 'manuals'] },

@@ -14,7 +14,6 @@ import {
   ChevronDown,
   Cpu,
   Brain,
-  Network,
   Shield,
   Monitor,
   Newspaper,
@@ -29,7 +28,9 @@ import {
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { aiCatalog } from '@/lib/ai-catalog';
-import { modelThumbnails } from '@/lib/model-thumbnails';
+import { scenarios, type ScenarioProduct } from '@/lib/scenarios';
+import { scenarioCopy } from '@/lib/scenario-copy';
+import { scenarioIcons } from '@/lib/scenario-icons';
 import { AiFamilyCards } from '@/components/ProductFamilyNavigation';
 import { brochureUpdates } from '@/lib/brochure-updates';
 import SiteSearch from '@/components/SiteSearch';
@@ -65,9 +66,7 @@ type ProductMegaSeries = {
   href: string;
 };
 
-type ScenarioMegaProduct = MegaMenuProduct & {
-  category: string;
-};
+type ScenarioMegaProduct = ScenarioProduct & { tagline: string };
 
 type ScenarioMegaItem = DropdownItem & {
   id: string;
@@ -216,62 +215,6 @@ const productCategoryImages: Record<string, string> = {
   'firewall-mini-pc': '/assets/home/categories/firewall-mini-pc-server-pc.png',
 };
 
-const scenarioProduct = (category: string, id: string): ScenarioMegaProduct => {
-  const product = megaMenuProducts[category].find(product => product.id === id)!;
-  return { ...product, image: modelThumbnails[id]?.image ?? product.image, category };
-};
-
-const scenarioMegaItems: ScenarioMegaItem[] = [
-  {
-    id: 'industrialAutomation',
-    title: 'Industrial Automation',
-    description: 'Fanless systems with serial connectivity and rich I/O for machine control.',
-    href: '/scenarios#industrialAutomation',
-    icon: Factory,
-    products: [scenarioProduct('industrial-mini-pc', 'mcipcb13'), scenarioProduct('industrial-mini-pc', 'mcipcb12')],
-  },
-  {
-    id: 'edgeAi',
-    title: 'Edge AI & Local Compute',
-    description: 'High-performance platforms for local AI and professional computing.',
-    href: '/scenarios#edgeAi',
-    icon: Brain,
-    products: [scenarioProduct('ai-mini-pc', 'mcai2'), scenarioProduct('ai-mini-pc', 'mcai1')],
-  },
-  {
-    id: 'networkSecurity',
-    title: 'Network Security & SD-WAN',
-    description: 'Multi-port systems for routing, VPN, firewall, and network edge.',
-    href: '/scenarios#networkSecurity',
-    icon: Shield,
-    products: [scenarioProduct('firewall-mini-pc', 'mcr20'), scenarioProduct('firewall-mini-pc', 'mcsrp6'), scenarioProduct('industrial-mini-pc', 'mcipcd3')],
-  },
-  {
-    id: 'digitalSignage',
-    title: 'Digital Signage & Multi-Display',
-    description: 'Compact systems with multiple display outputs for visual communication.',
-    href: '/scenarios#digitalSignage',
-    icon: Monitor,
-    products: [scenarioProduct('industrial-mini-pc', 'mcipcb12'), scenarioProduct('commercial-mini-pc', 'mc15uh')],
-  },
-  {
-    id: 'businessEducation',
-    title: 'Business & Education',
-    description: 'Compact commercial systems for offices, classrooms, and meeting spaces.',
-    href: '/scenarios#businessEducation',
-    icon: BookOpen,
-    products: [scenarioProduct('commercial-mini-pc', 'mc15uh'), scenarioProduct('commercial-mini-pc', 'mctar7')],
-  },
-  {
-    id: 'iotGateway',
-    title: 'IoT & Edge Gateways',
-    description: 'Flexible network systems for connecting devices and edge services.',
-    href: '/scenarios#iotGateway',
-    icon: Network,
-    products: [scenarioProduct('industrial-mini-pc', 'mcipcd3'), scenarioProduct('firewall-mini-pc', 'mcsrp6'), scenarioProduct('firewall-mini-pc', 'mcr20')],
-  },
-];
-
 export default function Navbar() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -343,6 +286,15 @@ export default function Navbar() {
     image: productCategoryImages[productCategoryIds[index]],
   }));
   const activeMegaCategory = productMegaCategories.find(category => category.id === activeProductCategory) || productMegaCategories[0];
+  const scenarioText = scenarioCopy[language];
+  const scenarioMegaItems: ScenarioMegaItem[] = scenarios.map(scenario => ({
+    id: scenario.id,
+    title: scenarioText.items[scenario.id].title,
+    description: scenarioText.items[scenario.id].description,
+    href: `/scenarios#${scenario.id}`,
+    icon: scenarioIcons[scenario.id],
+    products: scenario.products.map((product, index) => ({ ...product, tagline: scenarioText.items[scenario.id].reasons[index] })),
+  }));
   const activeMegaScenario = scenarioMegaItems.find(scenario => scenario.id === activeScenario) || scenarioMegaItems[0];
 
   const navItems: NavItem[] = [
@@ -523,7 +475,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 6, scale: 0.99 }}
                         transition={{ duration: 0.18, ease: 'easeOut' }}
-                        className="fixed left-1/2 top-16 z-50 w-[calc(100vw-2rem)] max-w-[1600px] -translate-x-1/2 overflow-hidden rounded-3xl border border-slate-200 bg-[#f7f8fa] p-5 shadow-[0_28px_80px_-28px_rgba(15,23,42,0.42)] lg:p-7"
+                        className="fixed left-1/2 top-16 z-50 w-[calc(100vw-2rem)] max-w-[1600px] max-h-[calc(100dvh-5rem)] -translate-x-1/2 overflow-y-auto rounded-3xl border border-slate-200 bg-[#f7f8fa] p-5 shadow-[0_28px_80px_-28px_rgba(15,23,42,0.42)] lg:p-7"
                       >
                         <div className="mb-5 flex items-center justify-between border-b border-slate-200 pb-4">
                           <div>
@@ -571,7 +523,7 @@ export default function Navbar() {
                               {activeMegaScenario.products.map((product) => (
                                 <a
                                   key={`${product.category}-${product.id}`}
-                                  href={`/products/${product.category}/${product.id}`}
+                                  href={product.href}
                                   className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg"
                                 >
                                   <div className="relative aspect-[16/9] overflow-hidden bg-white">

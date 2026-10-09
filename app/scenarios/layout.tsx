@@ -3,7 +3,7 @@ import { createPageMetadata } from '@/lib/seo';
 
 export const metadata = createPageMetadata({
   name: 'Mini PC Application Scenarios',
-  description: 'Match MagicChip industrial, AI, commercial, and firewall Mini PCs to automation, edge AI, networking, digital signage, business, and IoT deployments.',
+  description: 'Compare MagicChip systems for industrial automation, local AI, network security, digital signage, office computing, IoT, panel PC / HMI and NAS storage. Explore uses, selection checks and recommended models.',
   path: '/scenarios',
 });
 

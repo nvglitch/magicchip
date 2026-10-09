@@ -24,6 +24,37 @@ const { industrialCatalog, industrialFamilyModels, industrialProductAliases } = 
 const { aiCatalog, aiProductAliases, mcaipc2Configurations, mcaipc3Models } = load('lib/ai-catalog.ts');
 const { groupProductNavigation } = load('lib/product-navigation.ts');
 const { matchSearch } = load('lib/search-matching.ts');
+const { scenarios, scenarioIds } = load('lib/scenarios.ts');
+const { scenarioCopy } = load('lib/scenario-copy.ts');
+
+// Scenario recommendations must open current product pages (or an exact Type),
+// with existing local images and complete text in every supported language.
+assert.deepEqual(Array.from(scenarioIds).slice(0, 6), ['industrialAutomation', 'edgeAi', 'networkSecurity', 'digitalSignage', 'businessEducation', 'iotGateway']);
+assert.equal(scenarios.length, 8);
+assert.equal(new Set(scenarios.map(item => item.id)).size, scenarios.length);
+for (const scenario of scenarios) {
+  const href = `/scenarios#${scenario.id}`;
+  assert(siteSearchIndex.some(entry => entry.type === 'scenario' && entry.href === href));
+  for (const product of scenario.products) {
+    assert(siteSearchIndex.some(entry => entry.type === 'product' && entry.href === product.href), `Missing canonical product/Type: ${product.href}`);
+    assert(fs.existsSync(path.join(__dirname, '..', 'public', product.image)), `Missing scenario image: ${product.image}`);
+  }
+  for (const [language, copy] of Object.entries(scenarioCopy)) {
+    const item = copy.items[scenario.id];
+    assert(item.title && item.description && item.applications.length && item.selection.length, `${language}/${scenario.id} incomplete`);
+    assert.equal(item.reasons.length, scenario.products.length);
+    assert(item.reasons.every(Boolean));
+    assert(searchSite(item.title).some(entry => entry.type === 'scenario' && entry.href === href), `Scenario not searchable: ${language}/${item.title}`);
+  }
+}
+for (const [query, id] of [['HMI', 'panelPc'], ['IHM', 'panelPc'], ['operator terminal', 'panelPc'], ['local storage', 'nasStorage'], ['SPS-Kommunikation', 'industrialAutomation'], ['copias de seguridad', 'nasStorage']]) {
+  assert(searchSite(query).some(entry => entry.type === 'scenario' && entry.href === `/scenarios#${id}`), `Scenario query failed: ${query}`);
+}
+assert.equal(scenarios.find(item => item.id === 'industrialAutomation').products[2].href, '/products/industrial-mini-pc/mcipc2#sku-type-b');
+assert.equal(scenarios.find(item => item.id === 'industrialAutomation').products[2].name, 'MCIPC2B');
+assert.equal(scenarios.find(item => item.id === 'industrialAutomation').products[2].image, load('lib/model-thumbnails.ts').modelThumbnails.mcipc2b.image);
+assert.equal(scenarios.find(item => item.id === 'edgeAi').products[2].href, '/products/ai-mini-pc/mcaipc3');
+console.log('Scenario checks passed: eight stable anchors, canonical recommendations, local images and five-language search.');
 const fixture = (specs) => ({ title: 'Test PC', description: '', keywords: [], href: '/test', type: 'product', specs });
 const power = value => fixture([{ label: 'Power', value }]);
 assert(matchSearch(power('DC 9V~36V'), '9-36V'));
