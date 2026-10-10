@@ -613,40 +613,16 @@ export default function CategoryPage() {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-blue-950 via-blue-800 to-blue-950 rounded-xl p-10 md:p-16 text-center text-white relative overflow-hidden"
-          >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full -mr-20 -mt-20"></div>
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-white opacity-10 rounded-full -ml-10 -mb-10"></div>
-            <div className="relative">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.products.ctaTitle}</h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                {t.products.ctaDescription}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-800 rounded-xl font-semibold hover:bg-amber-50 transition-colors shadow-lg"
-                >
-                  {t.products.ctaButton}
-                </Link>
-                <a
-                  href="https://magicchip.en.alibaba.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-amber-300/15 text-white border border-amber-200/40 rounded-xl font-semibold hover:bg-amber-300/25 transition-colors"
-                >
-                  {t.products.viewOnAlibaba}
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </a>
-              </div>
-            </div>
-          </motion.div>
+      <section className="bg-white py-16">
+        <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+          <h2 className="mb-4 text-3xl font-bold text-slate-950 md:text-4xl">{t.products.ctaTitle}</h2>
+          <p className="mb-8 text-lg text-slate-600">{t.products.ctaDescription}</p>
+          <div className="flex justify-center">
+            <Link href="/contact" className="liquid-cta liquid-cta-solid inline-flex items-center justify-center px-8 py-4 font-semibold">
+              <span>{t.products.ctaButton}</span>
+              <ArrowRight aria-hidden="true" className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
         </div>
       </section>
     </div>
