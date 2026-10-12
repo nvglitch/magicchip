@@ -43,3 +43,13 @@ next-env.d.ts
 # large files
 *.psd
 *.pdf
+
+# Published certificates and supporting reports used by the website downloads.
+!/public/assets/certificates/mcipc8-ce-emc-certificate.pdf
+!/public/assets/certificates/mcipc8-ce-emc-report.pdf
+!/public/assets/certificates/mcipc8-ce-lvd-certificate.pdf
+!/public/assets/certificates/mcipc8-ce-lvd-report.pdf
+!/public/assets/certificates/mcipc8-fcc-sdoc-certificate.pdf
+!/public/assets/certificates/mcipc8-fcc-sdoc-report.pdf
+!/public/assets/certificates/mcipc8-rohs-certificate.pdf
+!/public/assets/certificates/mcipc8-rohs-report.pdf
