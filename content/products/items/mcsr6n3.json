@@ -1,0 +1,191 @@
+{
+  "id": "mcsr6n3",
+  "name": "MCSR6N3",
+  "series": "6L",
+  "tagline": "12th / 13th Gen Intel six-port appliance with DDR5",
+  "description": "MCSR6N3 combines Intel 12th / 13th Gen platform options, up to 64GB DDR5, six Intel i226-V 2.5GbE ports, dual M.2 NVMe and dual SATA. DC 12–19V and Type-C PD 19V / 65W input support different power arrangements.",
+  "highlights": [
+    "12th / 13th Gen Intel options",
+    "DDR5 up to 64GB",
+    "6 x Intel 2.5GbE",
+    "Dual NVMe + dual SATA"
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCSR6N3"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel 12th Alder Lake-U i3-1215U/i5-1235U/i7-1265U; Intel 13th Raptor Lake-U i3-1315U/i5-1335U/i7-1355U/i7-1370P; Intel Pentium Gold 8505"
+    },
+    {
+      "label": "Chipset",
+      "value": "Intel Alder Lake/Raptor Lake-U"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel XE/UHD Graphics"
+    },
+    {
+      "label": "Display",
+      "value": "1 x HDMI 2.0; 1 x DP1.4; 1 x Type-C"
+    },
+    {
+      "label": "Memory",
+      "value": "2 x SO-DIMM DDR5 5600/5200/4800 MHz, max 64 GB"
+    },
+    {
+      "label": "USB",
+      "value": "2 x USB 3.2; 3 x USB 2.0"
+    },
+    {
+      "label": "Power",
+      "value": "DC12~19V Wide Voltage Supply(5.5 x 2.5 mm); 4Pin Type-C PD 19V 65W"
+    },
+    {
+      "label": "Network",
+      "value": "6 x Intel i226-V 2.5Gb"
+    },
+    {
+      "label": "Expansion",
+      "value": "1 x COM pin; 1 x 4 Pin CPU Fan Pin; 1 x USB 2.0 Pin; 1 x M.2 SSD2 (PCIEx4); M.2 SSD2 slot supports splitting into 4 x 1 signals"
+    },
+    {
+      "label": "Dimensions",
+      "value": "131.7mm x 145.4mm x 60mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI EFI BIOS, supports Power-on after blackout, GPIO, PXE"
+    },
+    {
+      "label": "TDP",
+      "value": "6W~28W"
+    },
+    {
+      "label": "System",
+      "value": "Windows10 / windows11 / Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0~70 C; 5%~85% Relative humidity; (no condensation)"
+    },
+    {
+      "label": "Front I/O",
+      "value": "1 x Power button; 1 x Type-C (USB 4.0); 1 x HDMI 2.0; 2 x USB 3.2; 1 x DP 1.4; 2 x USB 2.0; 1 x CLR CMOS Button; 2 x Wi-Fi antenna reserved hole; 1 x TF Port"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "1 x DC-12V(5.5 x 2.5 mm); 6 x 2.5G Ethernet; 2 x Wi-Fi antenna reserved hole"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "1 x M.2 (PCIE4.0 x 4)NVMe; 1 x M.2 (PCIE3.0 x 4)NVMe; 1 x M.2 E Key WiFi Port; 1 x PANEL POW Pin; 1 x CPU 4Pin Fan Port; 2 x DDR5 RAM Port; 2 x SATA 3.0 Port; 1 x COM Pin; 1 x GPIO Pin"
+    },
+    {
+      "label": "Storage",
+      "value": "2 x M.2 NVMex4; 2 x SATA 3.0; 1 x TF"
+    }
+  ],
+  "image": "/assets/products/firewall/ver2/mcsr6n3/front.webp",
+  "galleryImages": [
+    "/assets/products/firewall/ver2/mcsr6n3/front.webp",
+    "/assets/products/firewall/ver2/mcsr6n3/rear.webp"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/firewall/ver2/mcsr6n3/front.webp",
+      "title": "MCSR6N3 front panel"
+    },
+    {
+      "image": "/assets/products/firewall/ver2/mcsr6n3/rear.webp",
+      "title": "MCSR6N3 rear panel"
+    }
+  ],
+  "sourceBrochure": "软路由SR/MCSR6N3 Brochure.pdf",
+  "sourceSha256": "ae8cbd9d112f04a2230b7b120b0ecbd435ff6ad532dd684d65acaa13f6dee44b",
+  "operatingRange": "0°C to 70°C",
+  "category": "firewall-mini-pc",
+  "images": [
+    "/assets/products/firewall/ver2/mcsr6n3/front.webp"
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MCSR6N3"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel 12th Alder Lake-U i3-1215U/i5-1235U/i7-1265U; Intel 13th Raptor Lake-U i3-1315U/i5-1335U/i7-1355U/i7-1370P; Intel Pentium Gold 8505"
+    },
+    {
+      "label": "Chipset",
+      "value": "Intel Alder Lake/Raptor Lake-U"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel XE/UHD Graphics"
+    },
+    {
+      "label": "Display",
+      "value": "1 x HDMI 2.0; 1 x DP1.4; 1 x Type-C"
+    },
+    {
+      "label": "Memory",
+      "value": "2 x SO-DIMM DDR5 5600/5200/4800 MHz, max 64 GB"
+    },
+    {
+      "label": "USB",
+      "value": "2 x USB 3.2; 3 x USB 2.0"
+    },
+    {
+      "label": "Power",
+      "value": "DC12~19V Wide Voltage Supply(5.5 x 2.5 mm); 4Pin Type-C PD 19V 65W"
+    },
+    {
+      "label": "Network",
+      "value": "6 x Intel i226-V 2.5Gb"
+    },
+    {
+      "label": "Expansion",
+      "value": "1 x COM pin; 1 x 4 Pin CPU Fan Pin; 1 x USB 2.0 Pin; 1 x M.2 SSD2 (PCIEx4); M.2 SSD2 slot supports splitting into 4 x 1 signals"
+    },
+    {
+      "label": "Dimensions",
+      "value": "131.7mm x 145.4mm x 60mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI EFI BIOS, supports Power-on after blackout, GPIO, PXE"
+    },
+    {
+      "label": "TDP",
+      "value": "6W~28W"
+    },
+    {
+      "label": "System",
+      "value": "Windows10 / windows11 / Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0~70 C; 5%~85% Relative humidity; (no condensation)"
+    },
+    {
+      "label": "Front I/O",
+      "value": "1 x Power button; 1 x Type-C (USB 4.0); 1 x HDMI 2.0; 2 x USB 3.2; 1 x DP 1.4; 2 x USB 2.0; 1 x CLR CMOS Button; 2 x Wi-Fi antenna reserved hole; 1 x TF Port"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "1 x DC-12V(5.5 x 2.5 mm); 6 x 2.5G Ethernet; 2 x Wi-Fi antenna reserved hole"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "1 x M.2 (PCIE4.0 x 4)NVMe; 1 x M.2 (PCIE3.0 x 4)NVMe; 1 x M.2 E Key WiFi Port; 1 x PANEL POW Pin; 1 x CPU 4Pin Fan Port; 2 x DDR5 RAM Port; 2 x SATA 3.0 Port; 1 x COM Pin; 1 x GPIO Pin"
+    },
+    {
+      "label": "Storage",
+      "value": "2 x M.2 NVMex4; 2 x SATA 3.0; 1 x TF"
+    }
+  ]
+}

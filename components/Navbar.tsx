@@ -31,6 +31,7 @@ import { aiCatalog } from '@/lib/ai-catalog';
 import { scenarios, type ScenarioProduct } from '@/lib/scenarios';
 import { scenarioCopy } from '@/lib/scenario-copy';
 import { scenarioIcons } from '@/lib/scenario-icons';
+import { nasMotherboardCopy } from '@/lib/nas-motherboard-copy';
 import { AiFamilyCards } from '@/components/ProductFamilyNavigation';
 import { brochureUpdates } from '@/lib/brochure-updates';
 import SiteSearch from '@/components/SiteSearch';
@@ -162,7 +163,7 @@ const firewallMegaSeries: ProductMegaSeries[] = [
     code: '4L',
     title: '4-Port Router Series',
     description: 'Four-port platforms for multi-WAN and segmented networks',
-    image: '/assets/products/firewall/quad-port-series/mc30s-n100/images/main-square.png',
+    image: '/assets/products/firewall/ver2/mc30s/front.webp',
     href: '/products/firewall-mini-pc#series-4l',
   },
   {
@@ -170,7 +171,7 @@ const firewallMegaSeries: ProductMegaSeries[] = [
     code: '6L',
     title: '6-Port Gateway Series',
     description: 'Six-port appliances for branch gateways and SD-WAN',
-    image: '/assets/products/firewall/six-port-series/mcsr613u/images/main-square.png',
+    image: '/assets/products/firewall/ver2/mcsr6n3/front.webp',
     href: '/products/firewall-mini-pc#series-6l',
   },
   {
@@ -206,6 +207,12 @@ const commercialMegaSeries: ProductMegaSeries[] = [
     description: 'Storage-oriented platforms with multi-drive, 2.5GbE, 10GbE, and expansion options',
     image: '/assets/products/commercial/nas/mcnas12/images/main-square.png',
     href: '/products/commercial-mini-pc#series-nas',
+  },
+  {
+    id: 'series-nas-mb', code: 'MB',
+    title: nasMotherboardCopy.en.title, description: nasMotherboardCopy.en.description,
+    image: '/assets/products/commercial/nas-motherboards/nasd2700/top.webp',
+    href: '/products/commercial-mini-pc#series-nas-mb',
   },
 ];
 const productCategoryImages: Record<string, string> = {
@@ -455,10 +462,10 @@ export default function Navbar() {
                                     <div className="min-w-0">
                                       <span className="inline-flex rounded-md bg-slate-950 px-2 py-0.5 text-[10px] font-bold text-white">{series.code}</span>
                                       <div className="mt-1 flex items-center gap-1">
-                                        <h4 className="text-base font-bold text-slate-950">{series.code === 'E' ? industrialESeriesCopy[language].title : series.title}</h4>
+                                        <h4 className="text-base font-bold text-slate-950">{series.id === 'series-nas-mb' ? nasMotherboardCopy[language].title : series.code === 'E' ? industrialESeriesCopy[language].title : series.title}</h4>
                                         <ChevronRight className="h-4 w-4 shrink-0 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:text-blue-600" />
                                       </div>
-                                      <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-slate-500">{series.code === 'E' ? industrialESeriesCopy[language].description : series.description}</p>
+                                      <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-slate-500">{series.id === 'series-nas-mb' ? nasMotherboardCopy[language].description : series.code === 'E' ? industrialESeriesCopy[language].description : series.description}</p>
                                     </div>
                                   </a>
                                 ))}

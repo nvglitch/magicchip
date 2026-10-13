@@ -30,6 +30,7 @@ import type { ProductConfiguration } from '@/lib/product-specifications';
 import { industrialCatalog, type IndustrialSeriesCode } from '@/lib/industrial-catalog';
 import { firewallCatalog, type FirewallSeriesCode } from '@/lib/firewall-catalog';
 import { commercialCatalog, type CommercialSeriesCode } from '@/lib/commercial-catalog';
+import { nasMotherboardCopy } from '@/lib/nas-motherboard-copy';
 
 type ProductSpec = { label: string; value: string };
 type ProductFeature = { icon: keyof typeof iconMap; title: string; description: string };
@@ -124,6 +125,7 @@ const firewallSeriesFeatures: Record<FirewallSeriesCode, ProductFeature[]> = {
   ],
 };
 const commercialSeriesFeatures: Record<CommercialSeriesCode, ProductFeature[]> = {
+  'NAS-MB': nasMotherboardCopy.en.features,
   DPC: [
     { icon: 'Cpu', title: 'Flexible Compute Platforms', description: 'The desktop range spans efficient Intel N-series systems, Intel Core platforms, and AMD Ryzen performance configurations.' },
     { icon: 'Monitor', title: 'Display & Peripheral Connectivity', description: 'Model-specific HDMI, DisplayPort, Type-C, USB4, Thunderbolt, and OCuLink options support varied commercial workspaces.' },
@@ -230,7 +232,7 @@ const catalogFirewallProducts: Record<string, ProductDetail> = Object.fromEntrie
       description: item.description,
       images: [item.image],
       galleryImages: item.galleryImages,
-      galleryCards: item.galleryImages.map((image, index) => ({
+      galleryCards: item.galleryCards || item.galleryImages.map((image, index) => ({
         image,
         title: index === 0 ? `${item.name} enclosure and interface view` : `${item.name} product view ${index + 1}`,
       })),
@@ -238,6 +240,7 @@ const catalogFirewallProducts: Record<string, ProductDetail> = Object.fromEntrie
       specs: item.specs,
       features: firewallSeriesFeatures[item.series],
       operatingRange: item.operatingRange,
+      skus: item.skus,
     },
   ]),
 );
@@ -254,7 +257,7 @@ const catalogCommercialProducts: Record<string, ProductDetail> = Object.fromEntr
         image,
         title: index === 0 ? `${item.name} enclosure and interface view` : `${item.name} product view ${index + 1}`,
       })),
-      highlights: compactCatalogHighlights(item.specs),
+      highlights: item.series === 'NAS-MB' ? item.highlights : compactCatalogHighlights(item.specs),
       specs: item.specs,
       features: commercialSeriesFeatures[item.series],
       operatingRange: item.operatingRange,
@@ -771,7 +774,7 @@ const iconMap = {
 };
 
 export default function ProductDetailPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const params = useParams();
   const category = params.category as string;
   const productId = params.id as string;
@@ -799,7 +802,9 @@ export default function ProductDetailPage() {
     productId === 'mcipcb7' ||
     productId === 'mcipcb9' ||
     (industrialSeriesCode === 'tpc' && productId !== 'mctpc-1501b');
-  const catInfo = categoryData[category] || categoryData['industrial-mini-pc'];
+  const isNasMotherboard = commercialSeriesCode === 'nas-mb';
+  const motherboardWords = nasMotherboardCopy[language];
+  const catInfo = isNasMotherboard ? { ...categoryData['commercial-mini-pc'], name: motherboardWords.label } : categoryData[category] || categoryData['industrial-mini-pc'];
   const CategoryIcon = iconMap[catInfo.icon] || Cpu;
   const gallery = activeConfiguration ? [activeConfiguration.image] : product?.images || [];
   const detailImages = product?.galleryImages || gallery.slice(1, 4);
@@ -895,7 +900,7 @@ export default function ProductDetailPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-9 text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-950">{t.productDetail.exploreProduct.replace('{name}', product.name)}</h2>
-              <p className="mt-3 text-slate-600">{t.productDetail.galleryDescription}</p>
+              <p className="mt-3 text-slate-600">{isNasMotherboard ? motherboardWords.galleryDescription : t.productDetail.galleryDescription}</p>
             </div>
             <div className={`grid grid-cols-1 gap-5 ${galleryItems.length === 1 ? 'mx-auto max-w-xl' : galleryItems.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'}`}>
               {galleryItems.map((item, index) => (
@@ -932,7 +937,7 @@ export default function ProductDetailPage() {
       {!product.skus && <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-950">{t.productDetail.industrialConfigDetails}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-950">{isNasMotherboard ? motherboardWords.specifications : t.productDetail.industrialConfigDetails}</h2>
           </div>
 
           <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }}>
@@ -945,14 +950,14 @@ export default function ProductDetailPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] gap-10 items-start">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-950 mb-5">{category === 'ai-mini-pc' ? t.productDetail.aiAdvantagesHeading : t.productDetail.advantagesHeading}</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-950 mb-5">{isNasMotherboard ? motherboardWords.featureHeading : category === 'ai-mini-pc' ? t.productDetail.aiAdvantagesHeading : t.productDetail.advantagesHeading}</h2>
               <p className="text-slate-600 leading-relaxed">
                 {product.advantageSummary || product.description}
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {product.features.map((feature, index) => {
+              {(isNasMotherboard ? motherboardWords.features : product.features).map((feature, index) => {
                 const FeatureIcon = iconMap[feature.icon] || CheckCircle;
                 return (
                   <motion.div

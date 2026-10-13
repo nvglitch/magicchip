@@ -1,0 +1,191 @@
+{
+  "id": "mcsr6n2",
+  "name": "MCSR6N2",
+  "series": "6L",
+  "tagline": "13th Gen Intel U-series six-port appliance with DDR4",
+  "description": "MCSR6N2 offers Intel U300 / Core i3-1315U / i5-1335U / i7-1355U, up to 64GB DDR4, six Intel i226-V 2.5GbE ports and DC 12–19V input. HDMI, DisplayPort and Type-C provide display connectivity; exact display versions and resolutions require confirmation.",
+  "highlights": [
+    "Intel U300 / 13th Gen Core",
+    "DDR4 up to 64GB",
+    "6 x Intel 2.5GbE",
+    "NVMe + dual SATA"
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCSR6N2"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel 13th U300/i3-1315U/i5-1335U/i7-1355U"
+    },
+    {
+      "label": "Graphics",
+      "value": "13th Intel Integrated Graphics/Intel Iris Xe Graphics"
+    },
+    {
+      "label": "Display",
+      "value": "HDMI + DisplayPort + Type-C (data and display); connector revisions and resolutions require confirmation"
+    },
+    {
+      "label": "Memory",
+      "value": "2 x SO-DIMM DDR4 3200/2666/2400MHz Max 64G"
+    },
+    {
+      "label": "Material",
+      "value": "Made of aluminum alloy"
+    },
+    {
+      "label": "USB",
+      "value": "2 x USB 3.0; 2 x USB 3.2(10Gbps)"
+    },
+    {
+      "label": "Power",
+      "value": "DC12-19V wide voltage Supply(5.5 x 2.5 mm)"
+    },
+    {
+      "label": "Network",
+      "value": "6 x Intel i226-V(2.5Gigabit Ethernet port)"
+    },
+    {
+      "label": "Expansion",
+      "value": "M.2 E-Key WiFi socket can be converted to; M.2 NVMe hard drive signal with an available expansion board."
+    },
+    {
+      "label": "Dimensions",
+      "value": "145.4mm x 131.7mm x 60mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "Supports power-on sele-test, GPIO, wake-on-LAN features"
+    },
+    {
+      "label": "TDP",
+      "value": "15W (Basic), 55W (Turbo)"
+    },
+    {
+      "label": "System",
+      "value": "Windows10 / windows11 / Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0~70 C; 5%~95% Relative humidity; (no condensation)"
+    },
+    {
+      "label": "Front I/O",
+      "value": "1 x Power Button; 1 x HDMI; 1 x DP; 1 x Type-C (data & display); 1 x CLR-CMOS Button; 2 x USB 3.0; 2 x USB 3.2; 1 x TF card"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "1 x DC12-19V Power interface; 6 x Intel 2.5Gb Ethernet port; 1 x Hard disk indicator; 1 x Power indicator"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "2 x SO-DIMM DDR4 memory slots; 1 x M.2 Wi-Fi header (expandable NVMe signals); 1 x M.2 NVMe x4 header; 1 x buzzer; 1 x 4-pin power header; 1 x 12 V CPU fan 4-pin header; 1 x COM header; 1 x USB header; 1 x 2-pin non-standard SATA connector; 1 x F-PANEL header"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x M.2 NVMex4; 2 x SATA (Unstandard 12 Pin 2.5-inch Interface)"
+    }
+  ],
+  "image": "/assets/products/firewall/ver2/mcsr6n2/front.webp",
+  "galleryImages": [
+    "/assets/products/firewall/ver2/mcsr6n2/front.webp",
+    "/assets/products/firewall/ver2/mcsr6n2/rear.webp"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/firewall/ver2/mcsr6n2/front.webp",
+      "title": "MCSR6N2 front panel"
+    },
+    {
+      "image": "/assets/products/firewall/ver2/mcsr6n2/rear.webp",
+      "title": "MCSR6N2 rear panel"
+    }
+  ],
+  "sourceBrochure": "软路由SR/MCSR6N2 Brochure.pdf",
+  "sourceSha256": "3fe84443af20a29701790f9cf21bb02f84502cb1812adf805aeb5c064682802c",
+  "operatingRange": "0°C to 70°C",
+  "category": "firewall-mini-pc",
+  "images": [
+    "/assets/products/firewall/ver2/mcsr6n2/front.webp"
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MCSR6N2"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel 13th U300/i3-1315U/i5-1335U/i7-1355U"
+    },
+    {
+      "label": "Graphics",
+      "value": "13th Intel Integrated Graphics/Intel Iris Xe Graphics"
+    },
+    {
+      "label": "Display",
+      "value": "HDMI + DisplayPort + Type-C (data and display); connector revisions and resolutions require confirmation"
+    },
+    {
+      "label": "Memory",
+      "value": "2 x SO-DIMM DDR4 3200/2666/2400MHz Max 64G"
+    },
+    {
+      "label": "Material",
+      "value": "Made of aluminum alloy"
+    },
+    {
+      "label": "USB",
+      "value": "2 x USB 3.0; 2 x USB 3.2(10Gbps)"
+    },
+    {
+      "label": "Power",
+      "value": "DC12-19V wide voltage Supply(5.5 x 2.5 mm)"
+    },
+    {
+      "label": "Network",
+      "value": "6 x Intel i226-V(2.5Gigabit Ethernet port)"
+    },
+    {
+      "label": "Expansion",
+      "value": "M.2 E-Key WiFi socket can be converted to; M.2 NVMe hard drive signal with an available expansion board."
+    },
+    {
+      "label": "Dimensions",
+      "value": "145.4mm x 131.7mm x 60mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "Supports power-on sele-test, GPIO, wake-on-LAN features"
+    },
+    {
+      "label": "TDP",
+      "value": "15W (Basic), 55W (Turbo)"
+    },
+    {
+      "label": "System",
+      "value": "Windows10 / windows11 / Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0~70 C; 5%~95% Relative humidity; (no condensation)"
+    },
+    {
+      "label": "Front I/O",
+      "value": "1 x Power Button; 1 x HDMI; 1 x DP; 1 x Type-C (data & display); 1 x CLR-CMOS Button; 2 x USB 3.0; 2 x USB 3.2; 1 x TF card"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "1 x DC12-19V Power interface; 6 x Intel 2.5Gb Ethernet port; 1 x Hard disk indicator; 1 x Power indicator"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "2 x SO-DIMM DDR4 memory slots; 1 x M.2 Wi-Fi header (expandable NVMe signals); 1 x M.2 NVMe x4 header; 1 x buzzer; 1 x 4-pin power header; 1 x 12 V CPU fan 4-pin header; 1 x COM header; 1 x USB header; 1 x 2-pin non-standard SATA connector; 1 x F-PANEL header"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x M.2 NVMex4; 2 x SATA (Unstandard 12 Pin 2.5-inch Interface)"
+    }
+  ]
+}

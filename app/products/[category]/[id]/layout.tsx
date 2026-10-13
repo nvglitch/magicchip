@@ -4,6 +4,7 @@ import { commercialCatalog } from '@/lib/commercial-catalog';
 import { firewallCatalog } from '@/lib/firewall-catalog';
 import { industrialCatalog, industrialProductAliases } from '@/lib/industrial-catalog';
 import { aiCatalog, aiProductAliases } from '@/lib/ai-catalog';
+import { firewallProductAliases } from '@/lib/firewall-product-aliases';
 import { permanentRedirect } from 'next/navigation';
 import { mergeSpecifications } from '@/lib/product-specifications';
 import { categorySeo, createPageMetadata, productSeo, serializeJsonLd, SITE_NAME, SITE_URL } from '@/lib/seo';
@@ -17,6 +18,7 @@ export async function generateMetadata({ params }: Omit<ProductLayoutProps, 'chi
   const { category, id } = await params;
   if (category === 'industrial-mini-pc' && industrialProductAliases[id]) permanentRedirect(industrialProductAliases[id]);
   if (category === 'ai-mini-pc' && aiProductAliases[id]) permanentRedirect(aiProductAliases[id]);
+  if (category === 'firewall-mini-pc' && firewallProductAliases[id]) permanentRedirect(firewallProductAliases[id]);
   const product = productSeo[id];
 
   if (!product || product.category !== category) {
@@ -30,10 +32,11 @@ export default async function ProductLayout({ children, params }: ProductLayoutP
   const { category, id } = await params;
   if (category === 'industrial-mini-pc' && industrialProductAliases[id]) permanentRedirect(industrialProductAliases[id]);
   if (category === 'ai-mini-pc' && aiProductAliases[id]) permanentRedirect(aiProductAliases[id]);
+  if (category === 'firewall-mini-pc' && firewallProductAliases[id]) permanentRedirect(firewallProductAliases[id]);
   const product = productSeo[id];
   const categoryEntry = categorySeo[category];
   const catalogItem = [...industrialCatalog, ...firewallCatalog, ...commercialCatalog, ...aiCatalog].find((item) => item.id === id);
-  const configurationProduct = category === 'industrial-mini-pc' ? industrialCatalog.find(item => item.id === id) : category === 'ai-mini-pc' ? aiCatalog.find(item => item.id === id) : undefined;
+  const configurationProduct = category === 'industrial-mini-pc' ? industrialCatalog.find(item => item.id === id) : category === 'ai-mini-pc' ? aiCatalog.find(item => item.id === id) : category === 'firewall-mini-pc' ? firewallCatalog.find(item => item.id === id) : undefined;
   const isValidProduct = product && product.category === category;
 
   if (!isValidProduct) return children;

@@ -8,7 +8,7 @@ import { commercialCatalog } from '@/lib/commercial-catalog';
 export const SITE_URL = 'https://szmagicchip.com';
 export const SITE_NAME = 'MagicChip';
 // Update this only when the published site or product catalog materially changes.
-export const SITE_CONTENT_LAST_UPDATED = new Date('2026-09-30T00:00:00.000Z');
+export const SITE_CONTENT_LAST_UPDATED = new Date('2026-10-13T00:00:00.000Z');
 export const DEFAULT_SOCIAL_IMAGE = '/assets/brand/og-default.png';
 
 export type SeoEntry = {
@@ -31,7 +31,7 @@ export const categorySeo: Record<string, SeoEntry> = {
   },
   'commercial-mini-pc': {
     name: 'Commercial Mini PCs',
-    description: 'Explore compact desktop PCs and NAS PCs for office, education, professional workloads, digital signage, local storage, backup, and network services.',
+    description: 'Explore desktop PCs, enclosed NAS PCs and NAS motherboards for office computing, storage, backup, network services and custom system integration.',
     path: '/products/commercial-mini-pc',
   },
   'firewall-mini-pc': {
@@ -69,7 +69,7 @@ const catalogCommercialProductSeo: Record<string, SeoEntry & { category: string 
   commercialCatalog.map((item) => [
     item.id,
     {
-      name: `${item.name} ${item.series === 'NAS' ? 'NAS PC' : 'Commercial Desktop PC'}`,
+      name: `${item.name} ${item.series === 'NAS-MB' ? 'NAS Motherboard' : item.series === 'NAS' ? 'NAS PC' : 'Commercial Desktop PC'}`,
       description: item.tagline,
       path: `/products/commercial-mini-pc/${item.id}`,
       image: item.image,

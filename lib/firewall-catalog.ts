@@ -1,5 +1,8 @@
 import { applyBrochureSpecCorrections } from '@/lib/brochure-spec-corrections';
 import { firewallBrochureSpecs } from '@/lib/firewall-brochure-specs';
+import { octoberFirewallProducts } from '@/lib/october-network-products';
+import { firewallProductAliases } from '@/lib/firewall-product-aliases';
+import type { ProductConfiguration } from '@/lib/product-specifications';
 
 export type FirewallSeriesCode = '2L' | '4L' | '6L' | '10G' | '1U';
 
@@ -19,6 +22,10 @@ export type FirewallCatalogItem = {
   highlights: string[];
   specs: FirewallCatalogSpec[];
   operatingRange?: string;
+  galleryCards?: { image: string; title: string; description?: string }[];
+  skus?: ProductConfiguration[];
+  sourceBrochure?: string;
+  sourceSha256?: string;
 };
 
 const seriesDirectories: Record<FirewallSeriesCode, string> = {
@@ -321,6 +328,6 @@ export const firewallCatalog: FirewallCatalogItem[] = [
     dimensions: '1U, 440 x 319 x 45 mm', operatingRange: '0°C to 60°C', galleryCount: 3,
     highlights: ['Intel Celeron J6412', '6 x Intel 2.5GbE', 'DDR4 up to 64GB', '1U rackmount chassis'],
   }),
-].map(applyBrochureSpecCorrections);
+].filter(item => !firewallProductAliases[item.id]).concat(octoberFirewallProducts).map(applyBrochureSpecCorrections);
 
 export const firewallSeriesOrder: FirewallSeriesCode[] = ['2L', '4L', '6L', '10G', '1U'];

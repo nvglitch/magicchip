@@ -1,0 +1,191 @@
+{
+  "id": "mcsrp7",
+  "name": "MCSRP7",
+  "series": "4L",
+  "tagline": "Compact Braswell four-port 2.5GbE fanless appliance",
+  "description": "MCSRP7 uses Intel Pentium J3700 / J3710 processors, up to 8GB DDR3L and four Intel i225-V B3 2.5GbE ports. The 120 x 107.5 x 36.5 mm fanless aluminum chassis includes mSATA, SATA, COM, HDMI and DisplayPort.",
+  "highlights": [
+    "Pentium J3700 / J3710",
+    "DDR3L up to 8GB",
+    "4 x Intel i225-V B3",
+    "Fanless aluminum chassis"
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCSRP7"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel Pentium J3700 / J3710 (Braswell; 4 cores, 4 threads)"
+    },
+    {
+      "label": "Graphics",
+      "value": "Integrated Intel graphics"
+    },
+    {
+      "label": "Display",
+      "value": "HDMI 1.4: 1920 x 1080 @ 60 Hz; DP 1.2: 2560 x 1440 @ 60 Hz"
+    },
+    {
+      "label": "Memory",
+      "value": "1 x DDR3L SO-DIMM, 1600 / 1333 MHz, max 8 GB"
+    },
+    {
+      "label": "Network",
+      "value": "4 x Intel i225-V B3 2.5 GbE LAN"
+    },
+    {
+      "label": "USB",
+      "value": "2 x external USB 3.0; 1 x internal USB 2.0 header"
+    },
+    {
+      "label": "Other",
+      "value": "1 x COM; 1 x combo audio jack; Wi-Fi antenna openings"
+    },
+    {
+      "label": "Expansion - Wi-Fi",
+      "value": "1 x mini PCIe slot for 2.4 / 5 GHz Wi-Fi module"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "1 x USB 2.0; 1 x F_PANEL; 1 x SATA power"
+    },
+    {
+      "label": "Power",
+      "value": "12 V DC, 5.5 x 2.5 mm barrel connector"
+    },
+    {
+      "label": "TDP",
+      "value": "6 W"
+    },
+    {
+      "label": "Enclosure",
+      "value": "Aluminum alloy, fanless passive cooling; black"
+    },
+    {
+      "label": "Dimensions",
+      "value": "120 x 107.5 x 36.5 mm; approx. 0.4 kg"
+    },
+    {
+      "label": "Installation",
+      "value": "Desktop or wall mount"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0 to 65 °C; 10% to 90% relative humidity"
+    },
+    {
+      "label": "Front I/O",
+      "value": "Power button; combo audio; 2 x USB 3.0; COM; HDMI 1.4; DP 1.2"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "4 x 2.5 GbE; DC 12 V; power and drive status LEDs"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x mSATA; 1 x SATA 3.0 (6 Gbps)"
+    }
+  ],
+  "image": "/assets/products/firewall/ver2/mcsrp7/front.webp",
+  "galleryImages": [
+    "/assets/products/firewall/ver2/mcsrp7/front.webp",
+    "/assets/products/firewall/ver2/mcsrp7/rear.webp"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/firewall/ver2/mcsrp7/front.webp",
+      "title": "MCSRP7 front panel"
+    },
+    {
+      "image": "/assets/products/firewall/ver2/mcsrp7/rear.webp",
+      "title": "MCSRP7 rear panel"
+    }
+  ],
+  "sourceBrochure": "软路由SR/MCSRP7 brochure.pdf",
+  "sourceSha256": "8538c21f866920d7f824e8a6b48618ce4e829bf8a39d7be06668c1ebc1ef3220",
+  "operatingRange": "0°C to 65°C",
+  "category": "firewall-mini-pc",
+  "images": [
+    "/assets/products/firewall/ver2/mcsrp7/front.webp"
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MCSRP7"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel Pentium J3700 / J3710 (Braswell; 4 cores, 4 threads)"
+    },
+    {
+      "label": "Graphics",
+      "value": "Integrated Intel graphics"
+    },
+    {
+      "label": "Display",
+      "value": "HDMI 1.4: 1920 x 1080 @ 60 Hz; DP 1.2: 2560 x 1440 @ 60 Hz"
+    },
+    {
+      "label": "Memory",
+      "value": "1 x DDR3L SO-DIMM, 1600 / 1333 MHz, max 8 GB"
+    },
+    {
+      "label": "Network",
+      "value": "4 x Intel i225-V B3 2.5 GbE LAN"
+    },
+    {
+      "label": "USB",
+      "value": "2 x external USB 3.0; 1 x internal USB 2.0 header"
+    },
+    {
+      "label": "Other",
+      "value": "1 x COM; 1 x combo audio jack; Wi-Fi antenna openings"
+    },
+    {
+      "label": "Expansion - Wi-Fi",
+      "value": "1 x mini PCIe slot for 2.4 / 5 GHz Wi-Fi module"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "1 x USB 2.0; 1 x F_PANEL; 1 x SATA power"
+    },
+    {
+      "label": "Power",
+      "value": "12 V DC, 5.5 x 2.5 mm barrel connector"
+    },
+    {
+      "label": "TDP",
+      "value": "6 W"
+    },
+    {
+      "label": "Enclosure",
+      "value": "Aluminum alloy, fanless passive cooling; black"
+    },
+    {
+      "label": "Dimensions",
+      "value": "120 x 107.5 x 36.5 mm; approx. 0.4 kg"
+    },
+    {
+      "label": "Installation",
+      "value": "Desktop or wall mount"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0 to 65 °C; 10% to 90% relative humidity"
+    },
+    {
+      "label": "Front I/O",
+      "value": "Power button; combo audio; 2 x USB 3.0; COM; HDMI 1.4; DP 1.2"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "4 x 2.5 GbE; DC 12 V; power and drive status LEDs"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x mSATA; 1 x SATA 3.0 (6 Gbps)"
+    }
+  ]
+}

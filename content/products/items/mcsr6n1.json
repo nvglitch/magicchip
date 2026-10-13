@@ -1,0 +1,199 @@
+{
+  "id": "mcsr6n1",
+  "name": "MCSR6N1",
+  "series": "6L",
+  "tagline": "12th Gen Intel Core six-port appliance with DDR4",
+  "description": "MCSR6N1 offers Intel Core i3-1215U / i5-1235U / i7-1265U, up to 64GB DDR4, six Intel i226-V 2.5GbE ports, NVMe and dual SATA. Its 145.6 x 145.4 x 53.6 mm enclosure uses DC 12–19V input.",
+  "highlights": [
+    "12th Gen Intel Core",
+    "DDR4 up to 64GB",
+    "6 x Intel 2.5GbE",
+    "DC 12–19V"
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCSR6N1"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel 12th Core i3-1215U/i5-1235U/i7-1265U"
+    },
+    {
+      "label": "Chipset",
+      "value": "Intel Alder Lake-U"
+    },
+    {
+      "label": "Graphics",
+      "value": "Iris Xe Graphics 1.10GHz/Iris Xe Graphics 1.20GHz"
+    },
+    {
+      "label": "Display",
+      "value": "1 x HDMI 1.4; 1 x DP 1.4a; 1 x Type-C"
+    },
+    {
+      "label": "Memory",
+      "value": "2 x SO-DIMM DDR4 3200/2666/2400MHz Max 64G"
+    },
+    {
+      "label": "Material",
+      "value": "Made of aluminum alloy"
+    },
+    {
+      "label": "USB",
+      "value": "2 x USB 3.0; 2 x USB 3.2"
+    },
+    {
+      "label": "Power",
+      "value": "DC12-19V wide voltage"
+    },
+    {
+      "label": "Network",
+      "value": "6 x Intel i226-V(2.5Gigabit Ethernet port)"
+    },
+    {
+      "label": "Expansion",
+      "value": "1 x 4Pin CPUFAN; 1 x COM Pin; 1 x USB Pin"
+    },
+    {
+      "label": "Dimensions",
+      "value": "145.6mm x 145.4mm x 53.6mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI EFI BIOS supports auto power on"
+    },
+    {
+      "label": "TDP",
+      "value": "15W"
+    },
+    {
+      "label": "System",
+      "value": "Windows10 / windows11 / Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "-10~70 C; 5%~95% Relative humidity; (no condensation)"
+    },
+    {
+      "label": "Front I/O",
+      "value": "1 x Power button; 1 x HDMI 1.4; 1 x DP 1.4a; 1 x RST Button; 2 x USB 3.0; 1 x USB 3.2; 1 x Type-C; 1 x TF card"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "1 x DC12-19V Power interface; 6 x Intel 2.5Gb Ethernet port; 1 x Hard disk indicator; 1 x Power indicator"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "2 x SO-DIMM DDR4 memory slots; 1 x M.2 Wi-Fi header (expandable NVMe signals); 1 x M.2 NVMe x4 header; 1 x buzzer; 1 x 4-pin power header; 1 x 12 V CPU fan 4-pin header; 1 x COM header; 1 x USB header; 1 x 2-pin non-standard SATA connector; 1 x F-PANEL header"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x M.2 NVMex4; 2 x SATA 3.0"
+    }
+  ],
+  "image": "/assets/products/firewall/ver2/mcsr6n1/front.webp",
+  "galleryImages": [
+    "/assets/products/firewall/ver2/mcsr6n1/front.webp",
+    "/assets/products/firewall/ver2/mcsr6n1/rear.webp"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/firewall/ver2/mcsr6n1/front.webp",
+      "title": "MCSR6N1 front panel"
+    },
+    {
+      "image": "/assets/products/firewall/ver2/mcsr6n1/rear.webp",
+      "title": "MCSR6N1 rear panel"
+    }
+  ],
+  "sourceBrochure": "软路由SR/MCSR6N1 Brochure.pdf",
+  "sourceSha256": "d30bb530243ce1e3e836aeeaa9b0ee2b6238368db454b62bc6e9ef12d6a14707",
+  "operatingRange": "-10°C to 70°C",
+  "category": "firewall-mini-pc",
+  "images": [
+    "/assets/products/firewall/ver2/mcsr6n1/front.webp"
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MCSR6N1"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel 12th Core i3-1215U/i5-1235U/i7-1265U"
+    },
+    {
+      "label": "Chipset",
+      "value": "Intel Alder Lake-U"
+    },
+    {
+      "label": "Graphics",
+      "value": "Iris Xe Graphics 1.10GHz/Iris Xe Graphics 1.20GHz"
+    },
+    {
+      "label": "Display",
+      "value": "1 x HDMI 1.4; 1 x DP 1.4a; 1 x Type-C"
+    },
+    {
+      "label": "Memory",
+      "value": "2 x SO-DIMM DDR4 3200/2666/2400MHz Max 64G"
+    },
+    {
+      "label": "Material",
+      "value": "Made of aluminum alloy"
+    },
+    {
+      "label": "USB",
+      "value": "2 x USB 3.0; 2 x USB 3.2"
+    },
+    {
+      "label": "Power",
+      "value": "DC12-19V wide voltage"
+    },
+    {
+      "label": "Network",
+      "value": "6 x Intel i226-V(2.5Gigabit Ethernet port)"
+    },
+    {
+      "label": "Expansion",
+      "value": "1 x 4Pin CPUFAN; 1 x COM Pin; 1 x USB Pin"
+    },
+    {
+      "label": "Dimensions",
+      "value": "145.6mm x 145.4mm x 53.6mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI EFI BIOS supports auto power on"
+    },
+    {
+      "label": "TDP",
+      "value": "15W"
+    },
+    {
+      "label": "System",
+      "value": "Windows10 / windows11 / Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "-10~70 C; 5%~95% Relative humidity; (no condensation)"
+    },
+    {
+      "label": "Front I/O",
+      "value": "1 x Power button; 1 x HDMI 1.4; 1 x DP 1.4a; 1 x RST Button; 2 x USB 3.0; 1 x USB 3.2; 1 x Type-C; 1 x TF card"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "1 x DC12-19V Power interface; 6 x Intel 2.5Gb Ethernet port; 1 x Hard disk indicator; 1 x Power indicator"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "2 x SO-DIMM DDR4 memory slots; 1 x M.2 Wi-Fi header (expandable NVMe signals); 1 x M.2 NVMe x4 header; 1 x buzzer; 1 x 4-pin power header; 1 x 12 V CPU fan 4-pin header; 1 x COM header; 1 x USB header; 1 x 2-pin non-standard SATA connector; 1 x F-PANEL header"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x M.2 NVMex4; 2 x SATA 3.0"
+    }
+  ]
+}

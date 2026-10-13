@@ -2,8 +2,9 @@ import { nasSeptemberUpdates } from '@/lib/nas-september-updates';
 import { applyBrochureSpecCorrections } from '@/lib/brochure-spec-corrections';
 import { brochureUpdates } from '@/lib/brochure-updates';
 import { commercialBrochureProducts } from '@/lib/brochure-products';
+import { nasMotherboards } from '@/lib/nas-motherboards';
 
-export type CommercialSeriesCode = 'DPC' | 'NAS';
+export type CommercialSeriesCode = 'DPC' | 'NAS' | 'NAS-MB';
 
 export type CommercialCatalogSpec = { label: string; value: string };
 
@@ -19,12 +20,15 @@ export type CommercialCatalogItem = {
   highlights: string[];
   specs: CommercialCatalogSpec[];
   operatingRange?: string;
+  sourceBrochure?: string;
+  sourceSha256?: string;
 };
 
 // Product facts and images are extracted from the supplied product brochures.
 export const commercialCatalog: CommercialCatalogItem[] = [
   ...commercialBrochureProducts,
   ...nasSeptemberUpdates,
+  ...nasMotherboards,
   {
     "id": "mc12",
     "name": "MC12",

@@ -1,0 +1,183 @@
+{
+  "id": "nasd2700",
+  "name": "NASD2700",
+  "series": "NAS-MB",
+  "tagline": "Xeon D-2700 NAS motherboard with 10GbE and IPMI",
+  "description": "NASD2700 is a 244 x 258 mm extended micro-ATX motherboard, shown with Xeon D-2712T. Eight DDR4 ECC UDIMM slots, two 10GbE RJ45 and four 10GbE SFP+ ports, dedicated IPMI LAN, eight NVMe slots and up to twelve SATA connections support storage-system integration. ATX power, a compatible enclosure, cooling, memory and drives must be selected separately.",
+  "highlights": [
+    "Xeon D-2712T standard",
+    "8 DDR4 ECC slots / 4 channels",
+    "2 RJ45 + 4 SFP+ at 10GbE",
+    "IPMI / 8 NVMe / up to 12 SATA"
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "NASD2700"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel Xeon D-2712T: 4 cores / 8 threads; 1.9 to 3.0 GHz; 65 W TDP"
+    },
+    {
+      "label": "CPU options",
+      "value": "D-2733NT / D-2752TER / D-2775TE / D-2796TE; 8 to 20 cores"
+    },
+    {
+      "label": "Memory",
+      "value": "8 x DDR4 ECC U-DIMM; 4 channels; D-2712T: 2667 MT/s, up to 1 TB with qualified DIMMs"
+    },
+    {
+      "label": "Network",
+      "value": "2 x 10GbE RJ45 (AQC113-B1-C); 4 x 10GbE SFP+"
+    },
+    {
+      "label": "Management LAN",
+      "value": "1 x dedicated 1GbE RJ45 for management (RTL8211F)"
+    },
+    {
+      "label": "Expansion - PCIe",
+      "value": "2 x physical x16 slots: one PCIe 4.0 x16, one PCIe 4.0 x8 signal"
+    },
+    {
+      "label": "Expansion - Cellular",
+      "value": "2 x M.2 B-key slots for 4G / 5G modules; 2 x SIM slots"
+    },
+    {
+      "label": "BMC",
+      "value": "ASPEED AST2500; IPMI remote management; onboard status display"
+    },
+    {
+      "label": "Display",
+      "value": "VGA header provided by the BMC"
+    },
+    {
+      "label": "External I/O",
+      "value": "2 x USB 3.0; 2 x 10GbE RJ45; 4 x SFP+; 1 x 1GbE IPMI"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "USB 3.0 socket, Type-E, USB 2.0, COM, GPIO, F_PANEL, SSI AUX"
+    },
+    {
+      "label": "Fans",
+      "value": "Multiple onboard fan power headers"
+    },
+    {
+      "label": "Power",
+      "value": "ATX 24-pin + ATX 8-pin"
+    },
+    {
+      "label": "Dimensions",
+      "value": "White PCB; 244 x 258 mm extended micro-ATX"
+    },
+    {
+      "label": "System",
+      "value": "Windows 10 / 11, Windows Server, Linux; UEFI boot only"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0 to 65 °C; storage -20 to 75 °C; 5%-95% RH, noncondensing"
+    },
+    {
+      "label": "Storage",
+      "value": "8 x M.2 PCIe 3.0 x2: 6 x 2242 and 2 x 2242 / 2280; 3 x SFF-8643 via ASM1166; up to 12 x SATA 3.0; 1 x mSATA slot"
+    }
+  ],
+  "image": "/assets/products/commercial/nas-motherboards/nasd2700/top.webp",
+  "galleryImages": [
+    "/assets/products/commercial/nas-motherboards/nasd2700/top.webp",
+    "/assets/products/commercial/nas-motherboards/nasd2700/bottom.webp"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/commercial/nas-motherboards/nasd2700/top.webp",
+      "title": "NASD2700 top view"
+    },
+    {
+      "image": "/assets/products/commercial/nas-motherboards/nasd2700/bottom.webp",
+      "title": "NASD2700 bottom view"
+    }
+  ],
+  "sourceBrochure": "NAS主板/NASD2700 brochure.pdf",
+  "sourceSha256": "87a63c0d91c7d3c5dc0bbf7d8ce756cda65ba1bb76af819a0edb34bfc593bbc6",
+  "operatingRange": "0°C to 65°C",
+  "category": "commercial-mini-pc",
+  "images": [
+    "/assets/products/commercial/nas-motherboards/nasd2700/top.webp"
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "NASD2700"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel Xeon D-2712T: 4 cores / 8 threads; 1.9 to 3.0 GHz; 65 W TDP"
+    },
+    {
+      "label": "CPU options",
+      "value": "D-2733NT / D-2752TER / D-2775TE / D-2796TE; 8 to 20 cores"
+    },
+    {
+      "label": "Memory",
+      "value": "8 x DDR4 ECC U-DIMM; 4 channels; D-2712T: 2667 MT/s, up to 1 TB with qualified DIMMs"
+    },
+    {
+      "label": "Network",
+      "value": "2 x 10GbE RJ45 (AQC113-B1-C); 4 x 10GbE SFP+"
+    },
+    {
+      "label": "Management LAN",
+      "value": "1 x dedicated 1GbE RJ45 for management (RTL8211F)"
+    },
+    {
+      "label": "Expansion - PCIe",
+      "value": "2 x physical x16 slots: one PCIe 4.0 x16, one PCIe 4.0 x8 signal"
+    },
+    {
+      "label": "Expansion - Cellular",
+      "value": "2 x M.2 B-key slots for 4G / 5G modules; 2 x SIM slots"
+    },
+    {
+      "label": "BMC",
+      "value": "ASPEED AST2500; IPMI remote management; onboard status display"
+    },
+    {
+      "label": "Display",
+      "value": "VGA header provided by the BMC"
+    },
+    {
+      "label": "External I/O",
+      "value": "2 x USB 3.0; 2 x 10GbE RJ45; 4 x SFP+; 1 x 1GbE IPMI"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "USB 3.0 socket, Type-E, USB 2.0, COM, GPIO, F_PANEL, SSI AUX"
+    },
+    {
+      "label": "Fans",
+      "value": "Multiple onboard fan power headers"
+    },
+    {
+      "label": "Power",
+      "value": "ATX 24-pin + ATX 8-pin"
+    },
+    {
+      "label": "Dimensions",
+      "value": "White PCB; 244 x 258 mm extended micro-ATX"
+    },
+    {
+      "label": "System",
+      "value": "Windows 10 / 11, Windows Server, Linux; UEFI boot only"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0 to 65 °C; storage -20 to 75 °C; 5%-95% RH, noncondensing"
+    },
+    {
+      "label": "Storage",
+      "value": "8 x M.2 PCIe 3.0 x2: 6 x 2242 and 2 x 2242 / 2280; 3 x SFF-8643 via ASM1166; up to 12 x SATA 3.0; 1 x mSATA slot"
+    }
+  ]
+}

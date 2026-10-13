@@ -1,0 +1,199 @@
+{
+  "id": "mc30w",
+  "name": "MC30W",
+  "series": "4L",
+  "tagline": "Slim N100 network appliance with four 2.5GbE ports",
+  "description": "MC30W combines Intel N100 processing, up to 16GB DDR5 and four Intel i226 2.5GbE ports in a 136 x 126 x 40 mm enclosure. NVMe, SATA and module slots support configurable storage and connectivity.",
+  "highlights": [
+    "Intel N100",
+    "DDR5 up to 16GB",
+    "4 x Intel 2.5GbE",
+    "136 x 126 x 40 mm"
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MC30W"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel N100 processor 4 Core 3.4GHz"
+    },
+    {
+      "label": "Chipset",
+      "value": "Intel N-series N95/N100/N200/i3-N305"
+    },
+    {
+      "label": "Graphics",
+      "value": "Integrated Intel graphics; exact GPU depends on the selected CPU"
+    },
+    {
+      "label": "Display",
+      "value": "1 x DP port; 1 x HDMI port"
+    },
+    {
+      "label": "Memory",
+      "value": "1 x DDR5 4800MHZ SODIMM Up to 16GB"
+    },
+    {
+      "label": "Serial ports USB",
+      "value": "1 x RJ45 COM 2 x USB3.0; 4 x USB2.0 (Built-in pin)"
+    },
+    {
+      "label": "USB",
+      "value": "2 x USB3.0; 4 x USB2.0 (Built-in pin)"
+    },
+    {
+      "label": "Power",
+      "value": "DC 12V-4A 5.5 x 2.5"
+    },
+    {
+      "label": "Network",
+      "value": "4 x Intel i226 2.5Gigabit Ethernet"
+    },
+    {
+      "label": "Expansion",
+      "value": "1 x Mini pCle Channel for WiFi/Bluetooth/4G; 1 x M.2 2242 (Support 5G Communication)"
+    },
+    {
+      "label": "Dimensions",
+      "value": "136 x 126 x 40mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI UEFI BIOS"
+    },
+    {
+      "label": "TDP",
+      "value": "10-15W"
+    },
+    {
+      "label": "System",
+      "value": "Windows10/Windows11/Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0~50 C; 0%~95% Relative humidity; (no condensation)"
+    },
+    {
+      "label": "Front I/O",
+      "value": "1 x Power Adapter port; 4 x 2.5G Ethernet port; 1 x RJ45 COM"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "2 x USB3.0; 4 x USB2.0; 1 x HDMI (With audio output); 1 x DP; 1 x Power Button; 1 x Power HDD LED; 1 x CLR-CMOS; 1 x 4G SIM Card slot; 1 x 5G SiM Card slot"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "1 x SATA Interface; 1 x M.2 Interface; 1 x Mini PCIE Channel for WiFi/Bluetooth/4G; 1 x F-PANEL pin"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x M.2 NVMe 2280; 1 x SATA3.0 (supports 2.5-inch HDD/SSD)"
+    }
+  ],
+  "image": "/assets/products/firewall/ver2/mc30w/front.webp",
+  "galleryImages": [
+    "/assets/products/firewall/ver2/mc30w/front.webp",
+    "/assets/products/firewall/ver2/mc30w/rear.webp"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/firewall/ver2/mc30w/front.webp",
+      "title": "MC30W front panel"
+    },
+    {
+      "image": "/assets/products/firewall/ver2/mc30w/rear.webp",
+      "title": "MC30W rear panel"
+    }
+  ],
+  "sourceBrochure": "软路由SR/MC30W brochure.pdf",
+  "sourceSha256": "f1662d25c0797279fd375e68448ef509ac17309a549116059e9ebf9f2e7de664",
+  "operatingRange": "0°C to 50°C",
+  "category": "firewall-mini-pc",
+  "images": [
+    "/assets/products/firewall/ver2/mc30w/front.webp"
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MC30W"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel N100 processor 4 Core 3.4GHz"
+    },
+    {
+      "label": "Chipset",
+      "value": "Intel N-series N95/N100/N200/i3-N305"
+    },
+    {
+      "label": "Graphics",
+      "value": "Integrated Intel graphics; exact GPU depends on the selected CPU"
+    },
+    {
+      "label": "Display",
+      "value": "1 x DP port; 1 x HDMI port"
+    },
+    {
+      "label": "Memory",
+      "value": "1 x DDR5 4800MHZ SODIMM Up to 16GB"
+    },
+    {
+      "label": "Serial ports USB",
+      "value": "1 x RJ45 COM 2 x USB3.0; 4 x USB2.0 (Built-in pin)"
+    },
+    {
+      "label": "USB",
+      "value": "2 x USB3.0; 4 x USB2.0 (Built-in pin)"
+    },
+    {
+      "label": "Power",
+      "value": "DC 12V-4A 5.5 x 2.5"
+    },
+    {
+      "label": "Network",
+      "value": "4 x Intel i226 2.5Gigabit Ethernet"
+    },
+    {
+      "label": "Expansion",
+      "value": "1 x Mini pCle Channel for WiFi/Bluetooth/4G; 1 x M.2 2242 (Support 5G Communication)"
+    },
+    {
+      "label": "Dimensions",
+      "value": "136 x 126 x 40mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI UEFI BIOS"
+    },
+    {
+      "label": "TDP",
+      "value": "10-15W"
+    },
+    {
+      "label": "System",
+      "value": "Windows10/Windows11/Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0~50 C; 0%~95% Relative humidity; (no condensation)"
+    },
+    {
+      "label": "Front I/O",
+      "value": "1 x Power Adapter port; 4 x 2.5G Ethernet port; 1 x RJ45 COM"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "2 x USB3.0; 4 x USB2.0; 1 x HDMI (With audio output); 1 x DP; 1 x Power Button; 1 x Power HDD LED; 1 x CLR-CMOS; 1 x 4G SIM Card slot; 1 x 5G SiM Card slot"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "1 x SATA Interface; 1 x M.2 Interface; 1 x Mini PCIE Channel for WiFi/Bluetooth/4G; 1 x F-PANEL pin"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x M.2 NVMe 2280; 1 x SATA3.0 (supports 2.5-inch HDD/SSD)"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "id": "nasn150",
+  "name": "NASN150",
+  "series": "NAS-MB",
+  "tagline": "Mini-ITX Alder / Twin Lake-N NAS motherboard with dual 2.5GbE",
+  "description": "NASN150 is a 170 x 170 mm Mini-ITX motherboard with Intel N100 / i3-N305 / N150 / i3-N355 options, up to 48GB DDR5, dual Intel i226-V 2.5GbE, two M.2 NVMe PCIe 3.0 x1 slots and six SATA ports via ASM1166. A PCIe 3.0 x4 slot and ATX power connectors support system integration. Reserved eMMC solder pads are not populated by default.",
+  "highlights": [
+    "N100 / i3-N305 / N150 / i3-N355",
+    "DDR5 up to 48GB",
+    "2 x Intel 2.5GbE",
+    "6 SATA / PCIe 3.0 x4"
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "NASN150"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel Alder Lake-N N100 / i3-N305; Intel Twin Lake N150 / i3-N355"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel UHD Graphics (N100: 24EU / N305: 32EU)"
+    },
+    {
+      "label": "Display",
+      "value": "HDMI 2.0 support 4K@60Hz; DP 1.4 support 4K@60Hz"
+    },
+    {
+      "label": "Memory",
+      "value": "1 x SO-DIMM DDR5 4800MHz (5200/5600 auto-downclock) Max 48G"
+    },
+    {
+      "label": "Material",
+      "value": "White PCB"
+    },
+    {
+      "label": "Network",
+      "value": "2 x Intel i226-V 2.5G RJ45 Ethernet"
+    },
+    {
+      "label": "Dimensions",
+      "value": "Mini-ITX, 170 x 170 mm (6.7 x 6.7 in); all solid-state capacitors"
+    },
+    {
+      "label": "Base power consumption",
+      "value": "Motherboard base power consumption: 18W-23W (depends on CPU); Whole system base power consumption: 25W-35W; (excluding hard drives, depends on CPU model)"
+    },
+    {
+      "label": "System",
+      "value": "Compatible with Microsoft Windows 10/11 64-bit and Linux; UEFI mode only"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "1 x USB3.0; 3 x USB2.0; 1 x HDMI 2.0; 1 x DP 1.4; 2 x RJ45 2.5GbE; 1 x audio interface"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "1 x SYSFAN1 (supports PWM); 1 x SYSFAN2 (does not support PWM); 1 x 4Pin ATX CPU power supply connector; 1 x 24Pin ATX motherboard power supply connector; 1 x USB 3.0 header; 2 x M.2 NVMe PCIe 3.0 x 1 2280; 1 x SO-DIMM DDR5 single memory slot; 6 x SATA 3.0 (ASM1166); 1 x Power switch header (_FPANEL pin); 1 x Buzzer; 1 x PCIe x4 slot (PCIe 3.0 x 4 signal); 1 x USB 2.0 socket; 1 x USB 3.0 pin header; 1 x GPIO pin header; 1 x 2pin JBAT pin (Clear CMOS)"
+    },
+    {
+      "label": "Storage",
+      "value": "2 x M.2 NVMe PCIe 3.0 x 1 (2280); 6 x SATA3.0 6Gb/s (expanded via ASM1166 chip); 1 x TF card slot; 1 x eMMC storage (not populated by default, solder pads reserved)"
+    }
+  ],
+  "image": "/assets/products/commercial/nas-motherboards/nasn150/top.webp",
+  "galleryImages": [
+    "/assets/products/commercial/nas-motherboards/nasn150/top.webp",
+    "/assets/products/commercial/nas-motherboards/nasn150/bottom.webp"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/commercial/nas-motherboards/nasn150/top.webp",
+      "title": "NASN150 top view"
+    },
+    {
+      "image": "/assets/products/commercial/nas-motherboards/nasn150/bottom.webp",
+      "title": "NASN150 bottom view"
+    }
+  ],
+  "sourceBrochure": "NAS主板/NASN150 brochure.pdf",
+  "sourceSha256": "75eda648f832819def435367d4f5f2f0b337c6f8cc4245aa23204c6bb72f3a65",
+  "category": "commercial-mini-pc",
+  "images": [
+    "/assets/products/commercial/nas-motherboards/nasn150/top.webp"
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "NASN150"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel Alder Lake-N N100 / i3-N305; Intel Twin Lake N150 / i3-N355"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel UHD Graphics (N100: 24EU / N305: 32EU)"
+    },
+    {
+      "label": "Display",
+      "value": "HDMI 2.0 support 4K@60Hz; DP 1.4 support 4K@60Hz"
+    },
+    {
+      "label": "Memory",
+      "value": "1 x SO-DIMM DDR5 4800MHz (5200/5600 auto-downclock) Max 48G"
+    },
+    {
+      "label": "Material",
+      "value": "White PCB"
+    },
+    {
+      "label": "Network",
+      "value": "2 x Intel i226-V 2.5G RJ45 Ethernet"
+    },
+    {
+      "label": "Dimensions",
+      "value": "Mini-ITX, 170 x 170 mm (6.7 x 6.7 in); all solid-state capacitors"
+    },
+    {
+      "label": "Base power consumption",
+      "value": "Motherboard base power consumption: 18W-23W (depends on CPU); Whole system base power consumption: 25W-35W; (excluding hard drives, depends on CPU model)"
+    },
+    {
+      "label": "System",
+      "value": "Compatible with Microsoft Windows 10/11 64-bit and Linux; UEFI mode only"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "1 x USB3.0; 3 x USB2.0; 1 x HDMI 2.0; 1 x DP 1.4; 2 x RJ45 2.5GbE; 1 x audio interface"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "1 x SYSFAN1 (supports PWM); 1 x SYSFAN2 (does not support PWM); 1 x 4Pin ATX CPU power supply connector; 1 x 24Pin ATX motherboard power supply connector; 1 x USB 3.0 header; 2 x M.2 NVMe PCIe 3.0 x 1 2280; 1 x SO-DIMM DDR5 single memory slot; 6 x SATA 3.0 (ASM1166); 1 x Power switch header (_FPANEL pin); 1 x Buzzer; 1 x PCIe x4 slot (PCIe 3.0 x 4 signal); 1 x USB 2.0 socket; 1 x USB 3.0 pin header; 1 x GPIO pin header; 1 x 2pin JBAT pin (Clear CMOS)"
+    },
+    {
+      "label": "Storage",
+      "value": "2 x M.2 NVMe PCIe 3.0 x 1 (2280); 6 x SATA3.0 6Gb/s (expanded via ASM1166 chip); 1 x TF card slot; 1 x eMMC storage (not populated by default, solder pads reserved)"
+    }
+  ]
+}

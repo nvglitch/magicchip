@@ -1,18 +1,19 @@
 {
   "schemaVersion": 2,
   "sourceRoot": "D:\\本地资源库\\电脑相关\\电脑册子归档\\ver2",
-  "observedAtUtc": "2026-09-30T04:27:50.166136+00:00",
+  "observedAtUtc": "2026-10-13T09:54:12.159012+00:00",
   "observationOnly": false,
   "totalPdfCount": 115,
-  "inScopePdfCount": 112,
+  "inScopePdfCount": 114,
   "statusCounts": {
-    "excluded": 3,
-    "pending-confirmation": 15,
-    "superseded-by-merged-brochure": 17,
-    "updated": 22,
-    "verified-current": 75
+    "deferred-by-user": 2,
+    "pending-confirmation": 16,
+    "superseded-by-merged-brochure": 19,
+    "superseded-by-renamed-brochure": 4,
+    "updated": 31,
+    "verified-current": 69
   },
-  "previousObservation": "brochure-history/before-2026-09-30-update.json",
+  "previousObservation": "brochure-history/before-2026-10-13-update.json",
   "files": [
     {
       "relativePath": "AIPC/MCAIPC1 brochure.pdf",
@@ -45,7 +46,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "changed",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcai2"
       ],
@@ -317,6 +318,26 @@
       "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
+      "relativePath": "NAS主板/NASD2700 brochure.pdf",
+      "appliedSha256": "87a63c0d91c7d3c5dc0bbf7d8ce756cda65ba1bb76af819a0edb34bfc593bbc6",
+      "excluded": false,
+      "sizeBytes": 3336385,
+      "modifiedAtUtc": "2026-10-13T08:58:32.961955+00:00",
+      "observedSha256": "87a63c0d91c7d3c5dc0bbf7d8ce756cda65ba1bb76af819a0edb34bfc593bbc6",
+      "present": true,
+      "changeSincePreviousObservation": "new",
+      "modelIds": [
+        "nasd2700"
+      ],
+      "hrefs": [
+        "/products/commercial-mini-pc/nasd2700"
+      ],
+      "reviewedAtUtc": "2026-10-13T09:54:12.159012+00:00",
+      "notes": "用户明确纳入 NAS 主板。新增独立主板页面，保留 CPU/DIMM 内存条件及板型、ATX 供电、接口信息；图片、五语言入口和搜索已验证。",
+      "status": "updated",
+      "appliedAtUtc": "2026-10-13T09:54:12.159012+00:00"
+    },
+    {
       "relativePath": "NAS主板/NASJ4125 brochure.pdf",
       "sizeBytes": 874682,
       "modifiedAtUtc": "2026-08-24T10:03:32.867908+00:00",
@@ -324,30 +345,50 @@
       "appliedSha256": null,
       "excluded": true,
       "present": true,
-      "status": "excluded",
-      "changeSincePreviousObservation": "unchanged"
+      "status": "deferred-by-user",
+      "changeSincePreviousObservation": "unchanged",
+      "reviewedAtUtc": "2026-10-13T09:54:12.159012+00:00",
+      "notes": "用户于 2026-10-13 指示 J4125 暂不处理。内存类型与 CPU 规格冲突，未上架。"
     },
     {
       "relativePath": "NAS主板/NASN100  brochure.pdf",
       "sizeBytes": 865032,
       "modifiedAtUtc": "2026-08-24T10:03:33.335082+00:00",
       "observedSha256": "9a832f2152f5c245b630ec33be45f602121c10ff6b783a4cf394af6346792dd8",
-      "appliedSha256": null,
-      "excluded": true,
+      "appliedSha256": "9a832f2152f5c245b630ec33be45f602121c10ff6b783a4cf394af6346792dd8",
+      "excluded": false,
       "present": true,
-      "status": "excluded",
-      "changeSincePreviousObservation": "unchanged"
+      "status": "updated",
+      "changeSincePreviousObservation": "unchanged",
+      "modelIds": [
+        "nasn100"
+      ],
+      "hrefs": [
+        "/products/commercial-mini-pc/nasn100"
+      ],
+      "reviewedAtUtc": "2026-10-13T09:54:12.159012+00:00",
+      "notes": "用户明确纳入 NAS 主板。首次上架；保留内存模块/运行速率条件、PCIe 与 M.2 共享限制，图片、五语言入口和搜索已验证。",
+      "appliedAtUtc": "2026-10-13T09:54:12.159012+00:00"
     },
     {
       "relativePath": "NAS主板/NASN150 brochure.pdf",
       "sizeBytes": 3848548,
       "modifiedAtUtc": "2026-08-24T10:03:34.073049+00:00",
       "observedSha256": "75eda648f832819def435367d4f5f2f0b337c6f8cc4245aa23204c6bb72f3a65",
-      "appliedSha256": null,
-      "excluded": true,
+      "appliedSha256": "75eda648f832819def435367d4f5f2f0b337c6f8cc4245aa23204c6bb72f3a65",
+      "excluded": false,
       "present": true,
-      "status": "excluded",
-      "changeSincePreviousObservation": "unchanged"
+      "status": "updated",
+      "changeSincePreviousObservation": "unchanged",
+      "modelIds": [
+        "nasn150"
+      ],
+      "hrefs": [
+        "/products/commercial-mini-pc/nasn150"
+      ],
+      "reviewedAtUtc": "2026-10-13T09:54:12.159012+00:00",
+      "notes": "用户明确纳入 NAS 主板。首次上架；保留内存降频、默认未焊 eMMC、基础功耗非 CPU TDP 条件，图片、五语言入口和搜索已验证。",
+      "appliedAtUtc": "2026-10-13T09:54:12.159012+00:00"
     },
     {
       "relativePath": "工控机IPC/A系列/MCIPCA1 brochure.pdf",
@@ -397,7 +438,7 @@
       "observedSha256": "a6981742c74fcb95c271edf3ae9b373e5298f3d09f92be632f671539584f6978",
       "present": true,
       "excluded": false,
-      "changeSincePreviousObservation": "new",
+      "changeSincePreviousObservation": "unchanged",
       "status": "pending-confirmation",
       "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
       "notes": "已合并 Type A/B 与 i3-N305 风扇款到同页。HDMI 1.4 的 4K60 表述待确认，网页未承诺该上限。",
@@ -417,7 +458,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "changed",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb10"
       ],
@@ -437,7 +478,7 @@
       "excluded": false,
       "present": true,
       "status": "pending-confirmation",
-      "changeSincePreviousObservation": "changed",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb11"
       ],
@@ -457,7 +498,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "changed",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb12"
       ],
@@ -484,7 +525,7 @@
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb13"
       ],
-      "changeSincePreviousObservation": "changed",
+      "changeSincePreviousObservation": "unchanged",
       "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00"
     },
     {
@@ -496,7 +537,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcipcb13a"
       ],
@@ -518,7 +559,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcipcb13b"
       ],
@@ -538,7 +579,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "changed",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb14"
       ],
@@ -558,7 +599,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcipcb14f"
       ],
@@ -577,7 +618,7 @@
       "observedSha256": "12a99512af76fab7c21fb957bb616bee37a22fe90990f9ed41f6ff67fd43f62b",
       "present": true,
       "excluded": false,
-      "changeSincePreviousObservation": "new",
+      "changeSincePreviousObservation": "unchanged",
       "status": "pending-confirmation",
       "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
       "notes": "已合并 Type A-D 与风扇款到同页；Type A 机箱尺寸比其余型号多 1 mm，按册子区分，实物待确认。",
@@ -597,7 +638,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcipcb15a"
       ],
@@ -617,7 +658,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcipcb15b"
       ],
@@ -637,7 +678,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcipcb15c"
       ],
@@ -657,7 +698,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcipcb15d"
       ],
@@ -677,7 +718,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcipcb15e"
       ],
@@ -696,7 +737,7 @@
       "observedSha256": "c10c59ec2959eec6800f73d3264b83829433ed6851511eaceb49a6b0b74af457",
       "present": true,
       "excluded": false,
-      "changeSincePreviousObservation": "new",
+      "changeSincePreviousObservation": "unchanged",
       "status": "updated",
       "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
       "appliedAtUtc": "2026-09-30T04:27:50.166136+00:00",
@@ -717,7 +758,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcipcb16a"
       ],
@@ -737,7 +778,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcipcb16b"
       ],
@@ -757,7 +798,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcipcb1a"
       ],
@@ -777,7 +818,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcipcb1b"
       ],
@@ -797,7 +838,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcipcb1f"
       ],
@@ -816,7 +857,7 @@
       "observedSha256": "a4a59d1e4fae612eae9ff07cd8d2c73179e8ce6015ef69e9cdafad556ca26637",
       "present": true,
       "excluded": false,
-      "changeSincePreviousObservation": "new",
+      "changeSincePreviousObservation": "unchanged",
       "status": "pending-confirmation",
       "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
       "notes": "已合并 Type A/B 与 J5005 到同页；Type A 的 DDR3 2400 MHz 记载待确认，网页未展示速度。",
@@ -836,7 +877,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcipcb2-d3"
       ],
@@ -856,7 +897,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcipcb2-d4"
       ],
@@ -876,7 +917,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "changed",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb2-j5005"
       ],
@@ -896,7 +937,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "changed",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb3"
       ],
@@ -916,7 +957,7 @@
       "excluded": false,
       "present": true,
       "status": "pending-confirmation",
-      "changeSincePreviousObservation": "changed",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb4"
       ],
@@ -935,7 +976,7 @@
       "excluded": false,
       "present": true,
       "status": "pending-confirmation",
-      "changeSincePreviousObservation": "changed",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb5"
       ],
@@ -954,7 +995,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "changed",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb6"
       ],
@@ -974,7 +1015,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcipcb6-ddr3l"
       ],
@@ -994,7 +1035,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "removed",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcipcb6-ddr4"
       ],
@@ -1014,7 +1055,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "changed",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb7"
       ],
@@ -1034,7 +1075,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "changed",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb8"
       ],
@@ -1054,7 +1095,7 @@
       "excluded": false,
       "present": true,
       "status": "pending-confirmation",
-      "changeSincePreviousObservation": "changed",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb9"
       ],
@@ -2205,24 +2246,50 @@
       "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
+      "relativePath": "软路由SR/MC30S brochure.pdf",
+      "appliedSha256": "52d5069da09f4c846875e310d3b070705fbd71864841ee9bacb3600395bed016",
+      "excluded": false,
+      "sizeBytes": 1732867,
+      "modifiedAtUtc": "2026-10-13T07:49:15.071537+00:00",
+      "observedSha256": "52d5069da09f4c846875e310d3b070705fbd71864841ee9bacb3600395bed016",
+      "present": true,
+      "changeSincePreviousObservation": "new",
+      "modelIds": [
+        "mc30s"
+      ],
+      "hrefs": [
+        "/products/firewall-mini-pc/mc30s",
+        "/products/firewall-mini-pc/mc30s#sku-ddr4",
+        "/products/firewall-mini-pc/mc30s#sku-ddr5"
+      ],
+      "reviewedAtUtc": "2026-10-13T09:54:12.159012+00:00",
+      "notes": "合并 DDR4/DDR5 同页配置；完整参数、正反面图片、旧路由、菜单、搜索与 SEO 已验证。",
+      "status": "updated",
+      "appliedAtUtc": "2026-10-13T09:54:12.159012+00:00"
+    },
+    {
       "relativePath": "软路由SR/MC30S_DDR4 brochure.pdf",
       "sizeBytes": 593670,
       "modifiedAtUtc": "2026-08-24T10:03:13.853586+00:00",
       "observedSha256": "9e840fc362ab05cf58207640cab7444e0b887e2d410ca3f66bef3a06f78193f4",
       "appliedSha256": "9e840fc362ab05cf58207640cab7444e0b887e2d410ca3f66bef3a06f78193f4",
       "excluded": false,
-      "present": true,
-      "status": "verified-current",
-      "changeSincePreviousObservation": "unchanged",
+      "present": false,
+      "status": "superseded-by-merged-brochure",
+      "changeSincePreviousObservation": "missing",
       "modelIds": [
         "mc30s-ddr4"
       ],
       "hrefs": [
         "/products/firewall-mini-pc/mc30s-ddr4"
       ],
-      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "reviewedAtUtc": "2026-10-13T09:54:12.159012+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
+      "notes": "旧文件名消失；内容已对照 软路由SR/MC30S brochure.pdf 核对。旧路由永久跳转至 /products/firewall-mini-pc/mc30s#sku-ddr4。保留历史应用指纹；新册疑点以其自身记录为准。",
+      "supersededBy": "软路由SR/MC30S brochure.pdf",
+      "canonicalHrefs": [
+        "/products/firewall-mini-pc/mc30s#sku-ddr4"
+      ]
     },
     {
       "relativePath": "软路由SR/MC30S_N100 brochure.pdf",
@@ -2231,18 +2298,42 @@
       "observedSha256": "407025e3982edc643002a16cdf816b98730f84b670449182b9f9e6b5070361b3",
       "appliedSha256": "407025e3982edc643002a16cdf816b98730f84b670449182b9f9e6b5070361b3",
       "excluded": false,
-      "present": true,
-      "status": "verified-current",
-      "changeSincePreviousObservation": "unchanged",
+      "present": false,
+      "status": "superseded-by-merged-brochure",
+      "changeSincePreviousObservation": "missing",
       "modelIds": [
         "mc30s-n100"
       ],
       "hrefs": [
         "/products/firewall-mini-pc/mc30s-n100"
       ],
-      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "reviewedAtUtc": "2026-10-13T09:54:12.159012+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
+      "notes": "旧文件名消失；内容已对照 软路由SR/MC30S brochure.pdf 核对。旧路由永久跳转至 /products/firewall-mini-pc/mc30s#sku-ddr5。保留历史应用指纹；新册疑点以其自身记录为准。",
+      "supersededBy": "软路由SR/MC30S brochure.pdf",
+      "canonicalHrefs": [
+        "/products/firewall-mini-pc/mc30s#sku-ddr5"
+      ]
+    },
+    {
+      "relativePath": "软路由SR/MC30W brochure.pdf",
+      "appliedSha256": "f1662d25c0797279fd375e68448ef509ac17309a549116059e9ebf9f2e7de664",
+      "excluded": false,
+      "sizeBytes": 1755540,
+      "modifiedAtUtc": "2026-10-13T08:06:18.886488+00:00",
+      "observedSha256": "f1662d25c0797279fd375e68448ef509ac17309a549116059e9ebf9f2e7de664",
+      "present": true,
+      "changeSincePreviousObservation": "new",
+      "modelIds": [
+        "mc30w"
+      ],
+      "hrefs": [
+        "/products/firewall-mini-pc/mc30w"
+      ],
+      "reviewedAtUtc": "2026-10-13T09:54:12.159012+00:00",
+      "notes": "原 MC30W N100 改名；新版参数、图片、旧路由及关联入口已验证。",
+      "status": "updated",
+      "appliedAtUtc": "2026-10-13T09:54:12.159012+00:00"
     },
     {
       "relativePath": "软路由SR/MC30W_N100 brochure.pdf",
@@ -2251,18 +2342,22 @@
       "observedSha256": "52d1a1d9d41ccf934b877c1d2fdd14fc9563eb096d96231ceec6804432aeb83b",
       "appliedSha256": "52d1a1d9d41ccf934b877c1d2fdd14fc9563eb096d96231ceec6804432aeb83b",
       "excluded": false,
-      "present": true,
-      "status": "verified-current",
-      "changeSincePreviousObservation": "unchanged",
+      "present": false,
+      "status": "superseded-by-renamed-brochure",
+      "changeSincePreviousObservation": "missing",
       "modelIds": [
         "mc30w-n100"
       ],
       "hrefs": [
         "/products/firewall-mini-pc/mc30w-n100"
       ],
-      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "reviewedAtUtc": "2026-10-13T09:54:12.159012+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
+      "notes": "旧文件名消失；内容已对照 软路由SR/MC30W brochure.pdf 核对。旧路由永久跳转至 /products/firewall-mini-pc/mc30w。保留历史应用指纹；新册疑点以其自身记录为准。",
+      "supersededBy": "软路由SR/MC30W brochure.pdf",
+      "canonicalHrefs": [
+        "/products/firewall-mini-pc/mc30w"
+      ]
     },
     {
       "relativePath": "软路由SR/MCR10 Brochure.pdf",
@@ -2311,9 +2406,9 @@
       "observedSha256": "586603e767faef83b1fcbc8381eb166bdab223476a3d9760b8596429a1f246bf",
       "appliedSha256": null,
       "excluded": false,
-      "present": true,
+      "present": false,
       "status": "pending-confirmation",
-      "changeSincePreviousObservation": "unchanged",
+      "changeSincePreviousObservation": "missing",
       "modelIds": [
         "mcsr613u"
       ],
@@ -2321,8 +2416,28 @@
         "/products/firewall-mini-pc/mcsr613u"
       ],
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "MCSR613U 与 New_MCSR613U 两册 CPU、内存等配置存在差异，未擅自选择或合并冲突配置。",
+      "notes": "MCSR613U 与 New_MCSR613U 两册 CPU、内存等配置存在差异，未擅自选择或合并冲突配置。 2026-10-13：来源文件名已消失，现有 MCSR613U 页面保留；用户暂缓 N4，未据文件删除自动下架或选择冲突配置。",
       "partialUpdate": true
+    },
+    {
+      "relativePath": "软路由SR/MCSR6N1 Brochure.pdf",
+      "appliedSha256": "d30bb530243ce1e3e836aeeaa9b0ee2b6238368db454b62bc6e9ef12d6a14707",
+      "excluded": false,
+      "sizeBytes": 1911368,
+      "modifiedAtUtc": "2026-10-13T08:17:47.996408+00:00",
+      "observedSha256": "d30bb530243ce1e3e836aeeaa9b0ee2b6238368db454b62bc6e9ef12d6a14707",
+      "present": true,
+      "changeSincePreviousObservation": "new",
+      "modelIds": [
+        "mcsr6n1"
+      ],
+      "hrefs": [
+        "/products/firewall-mini-pc/mcsr6n1"
+      ],
+      "reviewedAtUtc": "2026-10-13T09:54:12.159012+00:00",
+      "notes": "原 MCSR6N12U 改名；DDR4、供电、尺寸、温度范围及旧路由已验证。",
+      "status": "updated",
+      "appliedAtUtc": "2026-10-13T09:54:12.159012+00:00"
     },
     {
       "relativePath": "软路由SR/MCSR6N12U Brochure.pdf",
@@ -2331,18 +2446,22 @@
       "observedSha256": "9fbbe5ab5762fe6b7b426262d3bc3535f560462e9af6dd7ee69afee5c1f774c1",
       "appliedSha256": "9fbbe5ab5762fe6b7b426262d3bc3535f560462e9af6dd7ee69afee5c1f774c1",
       "excluded": false,
-      "present": true,
-      "status": "verified-current",
-      "changeSincePreviousObservation": "unchanged",
+      "present": false,
+      "status": "superseded-by-renamed-brochure",
+      "changeSincePreviousObservation": "missing",
       "modelIds": [
         "mcsr6n12u"
       ],
       "hrefs": [
         "/products/firewall-mini-pc/mcsr6n12u"
       ],
-      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "reviewedAtUtc": "2026-10-13T09:54:12.159012+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
+      "notes": "旧文件名消失；内容已对照 软路由SR/MCSR6N1 Brochure.pdf 核对。旧路由永久跳转至 /products/firewall-mini-pc/mcsr6n1。保留历史应用指纹；新册疑点以其自身记录为准。",
+      "supersededBy": "软路由SR/MCSR6N1 Brochure.pdf",
+      "canonicalHrefs": [
+        "/products/firewall-mini-pc/mcsr6n1"
+      ]
     },
     {
       "relativePath": "软路由SR/MCSR6N13U Brochure.pdf",
@@ -2351,18 +2470,77 @@
       "observedSha256": "e3123e7f403dabeb6eab9deb830b34cb8f87ca03d5ff25cd1cec2bb7da0edfb6",
       "appliedSha256": "e3123e7f403dabeb6eab9deb830b34cb8f87ca03d5ff25cd1cec2bb7da0edfb6",
       "excluded": false,
-      "present": true,
-      "status": "verified-current",
-      "changeSincePreviousObservation": "unchanged",
+      "present": false,
+      "status": "superseded-by-renamed-brochure",
+      "changeSincePreviousObservation": "missing",
       "modelIds": [
         "mcsr6n13u"
       ],
       "hrefs": [
         "/products/firewall-mini-pc/mcsr6n13u"
       ],
-      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "reviewedAtUtc": "2026-10-13T09:54:12.159012+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
+      "notes": "旧文件名消失；内容已对照 软路由SR/MCSR6N2 Brochure.pdf 核对。旧路由永久跳转至 /products/firewall-mini-pc/mcsr6n2。保留历史应用指纹；新册疑点以其自身记录为准。",
+      "supersededBy": "软路由SR/MCSR6N2 Brochure.pdf",
+      "canonicalHrefs": [
+        "/products/firewall-mini-pc/mcsr6n2"
+      ]
+    },
+    {
+      "relativePath": "软路由SR/MCSR6N2 Brochure.pdf",
+      "appliedSha256": null,
+      "excluded": false,
+      "sizeBytes": 1920033,
+      "modifiedAtUtc": "2026-10-13T08:17:48.112094+00:00",
+      "observedSha256": "3fe84443af20a29701790f9cf21bb02f84502cb1812adf805aeb5c064682802c",
+      "present": true,
+      "changeSincePreviousObservation": "new",
+      "modelIds": [
+        "mcsr6n2"
+      ],
+      "hrefs": [
+        "/products/firewall-mini-pc/mcsr6n2"
+      ],
+      "reviewedAtUtc": "2026-10-13T09:54:12.159012+00:00",
+      "notes": "仅同步确定字段。CPU/平台名称及 HDMI 1.4 的 4K@60Hz 描述冲突，省略平台、显示版本和分辨率，待核实，不推进应用指纹。旧名称跳转已验证。",
+      "status": "pending-confirmation",
+      "partialUpdate": true,
+      "partialAppliedAtUtc": "2026-10-13T09:54:12.159012+00:00"
+    },
+    {
+      "relativePath": "软路由SR/MCSR6N3 Brochure.pdf",
+      "appliedSha256": "ae8cbd9d112f04a2230b7b120b0ecbd435ff6ad532dd684d65acaa13f6dee44b",
+      "excluded": false,
+      "sizeBytes": 1720457,
+      "modifiedAtUtc": "2026-10-13T08:17:48.223851+00:00",
+      "observedSha256": "ae8cbd9d112f04a2230b7b120b0ecbd435ff6ad532dd684d65acaa13f6dee44b",
+      "present": true,
+      "changeSincePreviousObservation": "new",
+      "modelIds": [
+        "mcsr6n3"
+      ],
+      "hrefs": [
+        "/products/firewall-mini-pc/mcsr6n3"
+      ],
+      "reviewedAtUtc": "2026-10-13T09:54:12.159012+00:00",
+      "notes": "新增独立 DDR5 六口页面，网络、存储、供电、图片与关联入口已验证。",
+      "status": "updated",
+      "appliedAtUtc": "2026-10-13T09:54:12.159012+00:00"
+    },
+    {
+      "relativePath": "软路由SR/MCSR6N4 Brochure.pdf",
+      "appliedSha256": null,
+      "excluded": true,
+      "sizeBytes": 2374849,
+      "modifiedAtUtc": "2026-10-13T08:29:40.323091+00:00",
+      "observedSha256": "b28917ba2e067d155b22814b318d5b598b6e111a22746eb7c753c02751e760c9",
+      "present": false,
+      "changeSincePreviousObservation": "missing-during-update",
+      "lastObservedAtUtc": "2026-10-13T09:10:16.846961+00:00",
+      "status": "deferred-by-user",
+      "reviewedAtUtc": "2026-10-13T09:54:12.159012+00:00",
+      "notes": "用户于 2026-10-13 明确要求暂不上架 N4。册子内存速率及显示版本有冲突，未生成网页、图片或路由。首次扫描曾观察到该文件，最终复核已不在来源目录；保留历史观察记录。"
     },
     {
       "relativePath": "软路由SR/MCSRG31F Brochure.pdf",
@@ -2585,24 +2763,68 @@
       "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
+      "relativePath": "软路由SR/MCSRP7 brochure.pdf",
+      "appliedSha256": "8538c21f866920d7f824e8a6b48618ce4e829bf8a39d7be06668c1ebc1ef3220",
+      "excluded": false,
+      "sizeBytes": 1805810,
+      "modifiedAtUtc": "2026-10-13T08:45:07.915540+00:00",
+      "observedSha256": "8538c21f866920d7f824e8a6b48618ce4e829bf8a39d7be06668c1ebc1ef3220",
+      "present": true,
+      "changeSincePreviousObservation": "new",
+      "modelIds": [
+        "mcsrp7"
+      ],
+      "hrefs": [
+        "/products/firewall-mini-pc/mcsrp7"
+      ],
+      "reviewedAtUtc": "2026-10-13T09:54:12.159012+00:00",
+      "notes": "新增四口页面，按实际网络端口归入 4L；CPU、DDR3L、存储、尺寸与图片已验证。",
+      "status": "updated",
+      "appliedAtUtc": "2026-10-13T09:54:12.159012+00:00"
+    },
+    {
+      "relativePath": "软路由SR/MGSRN100 brochure.pdf",
+      "appliedSha256": "5aafb096c94e4016cc81680ceb5aa865208600e26d2541e359828d4dc7537d7d",
+      "excluded": false,
+      "sizeBytes": 3244830,
+      "modifiedAtUtc": "2026-10-13T08:06:19.005790+00:00",
+      "observedSha256": "5aafb096c94e4016cc81680ceb5aa865208600e26d2541e359828d4dc7537d7d",
+      "present": true,
+      "changeSincePreviousObservation": "new",
+      "modelIds": [
+        "mgsrn100"
+      ],
+      "hrefs": [
+        "/products/firewall-mini-pc/mgsrn100"
+      ],
+      "reviewedAtUtc": "2026-10-13T09:54:12.159012+00:00",
+      "notes": "原 MGSRN100-V1 改名，新版参数、图片、旧路由及关联入口已验证。",
+      "status": "updated",
+      "appliedAtUtc": "2026-10-13T09:54:12.159012+00:00"
+    },
+    {
       "relativePath": "软路由SR/MGSRN100-V1 brochure.pdf",
       "sizeBytes": 2130577,
       "modifiedAtUtc": "2026-08-24T10:03:32.539696+00:00",
       "observedSha256": "603933299b5af6db9426753e8d5ca076ef766d2edace333598f19d4341ddf97f",
       "appliedSha256": "603933299b5af6db9426753e8d5ca076ef766d2edace333598f19d4341ddf97f",
       "excluded": false,
-      "present": true,
-      "status": "verified-current",
-      "changeSincePreviousObservation": "unchanged",
+      "present": false,
+      "status": "superseded-by-renamed-brochure",
+      "changeSincePreviousObservation": "missing",
       "modelIds": [
         "mgsrn100-v1"
       ],
       "hrefs": [
         "/products/firewall-mini-pc/mgsrn100-v1"
       ],
-      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "reviewedAtUtc": "2026-10-13T09:54:12.159012+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
+      "notes": "旧文件名消失；内容已对照 软路由SR/MGSRN100 brochure.pdf 核对。旧路由永久跳转至 /products/firewall-mini-pc/mgsrn100。保留历史应用指纹；新册疑点以其自身记录为准。",
+      "supersededBy": "软路由SR/MGSRN100 brochure.pdf",
+      "canonicalHrefs": [
+        "/products/firewall-mini-pc/mgsrn100"
+      ]
     },
     {
       "relativePath": "软路由SR/New_MCSR613U Brochure.pdf",
@@ -2611,9 +2833,9 @@
       "observedSha256": "0cd6571d968f1082121e98d0d52278348914510e22e824040969bdb9918cb7a5",
       "appliedSha256": null,
       "excluded": false,
-      "present": true,
+      "present": false,
       "status": "pending-confirmation",
-      "changeSincePreviousObservation": "unchanged",
+      "changeSincePreviousObservation": "missing",
       "modelIds": [
         "mcsr613u"
       ],
@@ -2621,7 +2843,7 @@
         "/products/firewall-mini-pc/mcsr613u"
       ],
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "MCSR613U 与 New_MCSR613U 两册 CPU、内存等配置存在差异，未擅自选择或合并冲突配置。",
+      "notes": "MCSR613U 与 New_MCSR613U 两册 CPU、内存等配置存在差异，未擅自选择或合并冲突配置。 2026-10-13：来源文件名已消失，现有 MCSR613U 页面保留；用户暂缓 N4，未据文件删除自动下架或选择冲突配置。",
       "partialUpdate": true
     }
   ]

@@ -11,8 +11,10 @@ spec = importlib.util.spec_from_file_location('brochures', Path(__file__).with_n
 brochures = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(brochures)
 audit = []
+manifest_path = Path(__file__).resolve().parents[1] / 'docs/brochure-source-manifest.json'
+excluded_paths = {item['relativePath'] for item in json.loads(manifest_path.read_text(encoding='utf-8'))['files'] if item.get('excluded')}
 for source in brochures.SOURCE_ROOT.rglob('*.pdf'):
-    if 'NAS主板' in source.parts: continue
+    if source.relative_to(brochures.SOURCE_ROOT).as_posix() in excluded_paths: continue
     model = re.sub(r'\s*brochure$', '', source.stem, flags=re.I)
     key = normalize(model)
     key = {'mcmqrseries': 'mcmqr5r6r7r8', 'newmcsr613u': 'mcsr613u'}.get(key, key)

@@ -39,7 +39,7 @@ function product(category: keyof typeof catalogs, id: string, sku?: string): Sce
   const name = selected?.legacyNames[0] || model.name;
   return {
     id, category, name,
-    image: modelThumbnails[name.toLowerCase()]?.image ?? selected?.image ?? modelThumbnails[id]?.image ?? model.image,
+    image: modelThumbnails[name.toLowerCase().replace(/\s+/g, '-')]?.image ?? modelThumbnails[id]?.image ?? selected?.image ?? model.image,
     href: `/products/${category}/${id}${sku ? `#sku-${sku}` : ''}`,
   };
 }
@@ -59,7 +59,7 @@ export const scenarios: { id: ScenarioId; products: ScenarioProduct[]; keywords:
   },
   {
     id: 'networkSecurity',
-    products: [product('firewall-mini-pc', 'mc30s-n100'), product('firewall-mini-pc', 'mcr20'), product('firewall-mini-pc', 'mc14n-1u6l')],
+    products: [product('firewall-mini-pc', 'mc30s', 'ddr5'), product('firewall-mini-pc', 'mcr20'), product('firewall-mini-pc', 'mc14n-1u6l')],
     keywords: ['network security', 'router', 'vpn', 'firewall', 'sd-wan', 'multi wan', 'rackmount'],
   },
   {

@@ -11,6 +11,8 @@ import { industrialCatalog } from '@/lib/industrial-catalog';
 import { firewallCatalog } from '@/lib/firewall-catalog';
 import { commercialCatalog } from '@/lib/commercial-catalog';
 import { mergeSpecifications } from '@/lib/product-specifications';
+import { firewallLegacyNames } from '@/lib/firewall-product-aliases';
+import { nasMotherboardCopy } from '@/lib/nas-motherboard-copy';
 
 export type SearchEntryType = 'product' | 'category' | 'scenario' | 'page' | 'resource';
 
@@ -47,7 +49,7 @@ const catalogIndustrialSearchEntries: SearchEntry[] = industrialCatalog
 const curatedFirewallSearchIds = new Set(['mcr20', 'mcsrp6']);
 const catalogFirewallSearchEntries: SearchEntry[] = firewallCatalog
   .filter((item) => !curatedFirewallSearchIds.has(item.id))
-  .map((item) => ({
+  .flatMap((item): SearchEntry[] => [{
     title: item.name,
     description: item.tagline,
     href: `/products/firewall-mini-pc/${item.id}`,
@@ -58,9 +60,16 @@ const catalogFirewallSearchEntries: SearchEntry[] = firewallCatalog
       `${item.series.toLowerCase()} series`,
       item.series === '1U' ? 'rackmount server' : 'router gateway',
       item.name.toLowerCase(),
+      ...(item.skus ? [] : firewallLegacyNames[item.id] || []),
     ],
     image: item.image,
-  }));
+  }, ...(item.skus?.map((sku): SearchEntry => ({
+    title: sku.legacyNames[0] || `${item.name} ${sku.label}`,
+    description: `${item.name} ${sku.label} configuration`,
+    href: `/products/firewall-mini-pc/${item.id}#sku-${sku.key}`,
+    type: 'product', keywords: [item.name, sku.label, ...sku.legacyNames],
+    image: sku.image, specs: mergeSpecifications(item.specs, sku.specs),
+  })) || [])]);
 const catalogCommercialSearchEntries: SearchEntry[] = commercialCatalog.map((item) => ({
   title: item.name,
   description: item.tagline,
@@ -68,7 +77,8 @@ const catalogCommercialSearchEntries: SearchEntry[] = commercialCatalog.map((ite
   type: 'product',
   keywords: [
     'commercial mini pc',
-    item.series === 'NAS' ? 'nas pc storage server' : 'desktop mini pc',
+    item.series === 'NAS-MB' ? 'nas motherboard storage system integration' : item.series === 'NAS' ? 'nas pc storage server' : 'desktop mini pc',
+    ...(item.series === 'NAS-MB' ? Object.values(nasMotherboardCopy).flatMap(copy => copy.keywords).filter(keyword => !/mini.?itx/i.test(keyword) || item.specs.some(spec => /mini.?itx/i.test(spec.value))) : []),
     `${item.series.toLowerCase()} series`,
     item.name.toLowerCase(),
   ],

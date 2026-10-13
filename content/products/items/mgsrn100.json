@@ -1,0 +1,199 @@
+{
+  "id": "mgsrn100",
+  "name": "MGSRN100",
+  "series": "4L",
+  "tagline": "DDR5 four-port 2.5GbE Alder Lake-N appliance",
+  "description": "MGSRN100 offers Intel N100 / N200 / i3-N305, up to 32GB DDR5, four Intel i226-V 2.5GbE ports, NVMe and M.2 E-key wireless expansion. The 145.6 x 145.4 x 53.6 mm enclosure uses 12V DC input.",
+  "highlights": [
+    "Intel N100 / N200 / i3-N305",
+    "DDR5 up to 32GB",
+    "4 x Intel 2.5GbE",
+    "12V DC input"
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MGSRN100"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel 12th Gen Alder Lake-N N100/N200/i3-N305"
+    },
+    {
+      "label": "Chipset",
+      "value": "Alder Lake-N"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel UHD Graphics N100(24EU)/N200(32EU)/i3-N305(32EU)"
+    },
+    {
+      "label": "Display",
+      "value": "1 x HDMI 2.1; 1 x DP1.4 (All support 4k@60Hz)"
+    },
+    {
+      "label": "Memory",
+      "value": "1 x SO-DIMM DDR5 4800/5600 MHz Max 32Gb"
+    },
+    {
+      "label": "Material",
+      "value": "Made of aluminum alloy"
+    },
+    {
+      "label": "USB",
+      "value": "4 x USB2.0"
+    },
+    {
+      "label": "Power",
+      "value": "1 x DC-IN 12V(5.5 x 2.5 mm)"
+    },
+    {
+      "label": "Network",
+      "value": "4 x Intel i226-V(2.5G Ethernet port)"
+    },
+    {
+      "label": "Wi-Fi",
+      "value": "1 x M.2KEY-E (Bluetooth & Wi-Fi6)"
+    },
+    {
+      "label": "Dimensions",
+      "value": "145.6mm x 145.4mm x 53.6mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI EFI BIOS supports Auto-Power-On, Wake-On-Lan, PXE"
+    },
+    {
+      "label": "TDP",
+      "value": "6W/15W"
+    },
+    {
+      "label": "System",
+      "value": "WIN10/WIN11/Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "Temperature: 0°c~70°c; Humdity: 5%~85%, no-Condensing"
+    },
+    {
+      "label": "Front I/O",
+      "value": "1 x Power Button; 1 x CLR CMOS; 1 x TF Slot; 2 x WiFi Antennas holes; 2 x USB 2.0"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "1 x DC-IN 12V(5.5 x 2.5 mm); 4 x Intel i226-V 2.5G Ethernet port; 2 x USB2.0; 1 x HDMI 2.1 (Support 4k@60Hz); 1 x DP1.4 (Support 4k@60Hz)"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "2 x 4Pin fan header with temperature control; 1 x COM Pin Head; 1 x USB Pin Head; 1 x SW (Power off and disconnect USB pin)"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x M.2 NVME x4 (Support multiple M.2 or mSATA/SATA)"
+    }
+  ],
+  "image": "/assets/products/firewall/ver2/mgsrn100/front.webp",
+  "galleryImages": [
+    "/assets/products/firewall/ver2/mgsrn100/front.webp",
+    "/assets/products/firewall/ver2/mgsrn100/rear.webp"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/firewall/ver2/mgsrn100/front.webp",
+      "title": "MGSRN100 front panel"
+    },
+    {
+      "image": "/assets/products/firewall/ver2/mgsrn100/rear.webp",
+      "title": "MGSRN100 rear panel"
+    }
+  ],
+  "sourceBrochure": "软路由SR/MGSRN100 brochure.pdf",
+  "sourceSha256": "5aafb096c94e4016cc81680ceb5aa865208600e26d2541e359828d4dc7537d7d",
+  "operatingRange": "0°C to 70°C",
+  "category": "firewall-mini-pc",
+  "images": [
+    "/assets/products/firewall/ver2/mgsrn100/front.webp"
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MGSRN100"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel 12th Gen Alder Lake-N N100/N200/i3-N305"
+    },
+    {
+      "label": "Chipset",
+      "value": "Alder Lake-N"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel UHD Graphics N100(24EU)/N200(32EU)/i3-N305(32EU)"
+    },
+    {
+      "label": "Display",
+      "value": "1 x HDMI 2.1; 1 x DP1.4 (All support 4k@60Hz)"
+    },
+    {
+      "label": "Memory",
+      "value": "1 x SO-DIMM DDR5 4800/5600 MHz Max 32Gb"
+    },
+    {
+      "label": "Material",
+      "value": "Made of aluminum alloy"
+    },
+    {
+      "label": "USB",
+      "value": "4 x USB2.0"
+    },
+    {
+      "label": "Power",
+      "value": "1 x DC-IN 12V(5.5 x 2.5 mm)"
+    },
+    {
+      "label": "Network",
+      "value": "4 x Intel i226-V(2.5G Ethernet port)"
+    },
+    {
+      "label": "Wi-Fi",
+      "value": "1 x M.2KEY-E (Bluetooth & Wi-Fi6)"
+    },
+    {
+      "label": "Dimensions",
+      "value": "145.6mm x 145.4mm x 53.6mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI EFI BIOS supports Auto-Power-On, Wake-On-Lan, PXE"
+    },
+    {
+      "label": "TDP",
+      "value": "6W/15W"
+    },
+    {
+      "label": "System",
+      "value": "WIN10/WIN11/Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "Temperature: 0°c~70°c; Humdity: 5%~85%, no-Condensing"
+    },
+    {
+      "label": "Front I/O",
+      "value": "1 x Power Button; 1 x CLR CMOS; 1 x TF Slot; 2 x WiFi Antennas holes; 2 x USB 2.0"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "1 x DC-IN 12V(5.5 x 2.5 mm); 4 x Intel i226-V 2.5G Ethernet port; 2 x USB2.0; 1 x HDMI 2.1 (Support 4k@60Hz); 1 x DP1.4 (Support 4k@60Hz)"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "2 x 4Pin fan header with temperature control; 1 x COM Pin Head; 1 x USB Pin Head; 1 x SW (Power off and disconnect USB pin)"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x M.2 NVME x4 (Support multiple M.2 or mSATA/SATA)"
+    }
+  ]
+}

@@ -15,6 +15,11 @@ eval(source+";fs.writeFileSync('node_modules/.cache/preview-products.json',JSON.
 """],cwd=ROOT,check=True)
 items=json.loads((ROOT/'node_modules/.cache/preview-products.json').read_text(encoding='utf-8'))
 base=sys.argv[1]
+selected_ids=set(sys.argv[2:])
+if selected_ids:
+    items=[item for item in items if item['href'].split('/')[-1] in selected_ids]
+    if {item['href'].split('/')[-1] for item in items} != selected_ids:
+        raise ValueError('Unknown requested thumbnail model')
 def build(item):
     page=urlopen(base+item['href'],timeout=30).read().decode()
     match=re.search(r'<main\b.*?<img\b[^>]*\bsrc="([^"]+)"',page,re.S)
@@ -31,6 +36,12 @@ def build(item):
     mid=item['href'].split('/')[-1];target=f'/assets/products/thumbnails/{mid}.webp'
     dest=ROOT/'public'/target.lstrip('/');dest.parent.mkdir(parents=True,exist_ok=True);canvas.save(dest,'WEBP',quality=90)
     return mid,dict(image=target,source=source)
-with ThreadPoolExecutor(max_workers=6) as pool: records=dict(pool.map(build,items))
+existing=(ROOT/'lib/model-thumbnails.ts').read_text(encoding='utf-8')
+records=json.loads(existing[existing.index('=',existing.index('export const'))+1:existing.rindex('}')+1])
+with ThreadPoolExecutor(max_workers=6) as pool: updated=dict(pool.map(build,items))
+records.update(updated)
+# Keep legacy preview IDs aligned with their canonical SR pages.
+for alias,target in {'mc30s-ddr4':'mc30s','mc30s-ddr5':'mc30s','mc30s-n100':'mc30s','mc30w-n100':'mc30w','mcsr6n12u':'mcsr6n1','mcsr6n13u':'mcsr6n2','mgsrn100-v1':'mgsrn100'}.items():
+    if target in updated: records[alias]=updated[target]
 (ROOT/'lib/model-thumbnails.ts').write_text('// Generated from detail hero images by scripts/build-model-thumbnails.py.\nexport const modelThumbnails: Record<string, { image: string; source: string }> = '+json.dumps(records,indent=2)+';\n',encoding='utf-8')
-print('Generated',len(records),'thumbnails')
+print('Generated',len(updated),'thumbnails; retained',len(records),'total mappings')

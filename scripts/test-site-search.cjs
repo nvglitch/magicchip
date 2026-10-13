@@ -73,7 +73,7 @@ assert(matchSearch(fixture([{ label: 'Memory', value: 'DDR5-4800' }]), 'DDR5'));
 assert.equal(matchSearch(fixture([{ label: 'Memory', value: 'DDR4' }]), 'DDR5'), null);
 assert(matchSearch(fixture([{ label: 'Cooling', value: 'fanless' }]), 'fanles'));
 const products = siteSearchIndex.filter(e => e.type === 'product');
-assert.equal(products.length, 158);
+assert.equal(products.length, 164);
 assert(products.every(e => e.specs?.length));
 assert.equal(new Set(products.map(e => e.href)).size, products.length);
 for (const entry of products) assert.equal(searchSite(entry.title)[0]?.href, entry.href);
@@ -209,6 +209,42 @@ assert(!searchSite('DDR3L').some(item => item.href === c2b.href));
 assert(!searchSite('fanless').some(item => item.href === '/products/industrial-mini-pc/mcipcd5#sku-fan'));
 assert(searchSite('fanless').some(item => item.href === '/products/industrial-mini-pc/mcipcd5#sku-standard'));
 console.log('Industrial family checks passed: two series pages, four exact configurations, distinct image sets and legacy route aliases.');
+
+// October SR renames / merged configurations and separate NAS motherboard facts.
+const { firewallCatalog } = load('lib/firewall-catalog.ts');
+const { commercialCatalog } = load('lib/commercial-catalog.ts');
+const { firewallProductAliases } = load('lib/firewall-product-aliases.ts');
+const { octoberFirewallProducts } = load('lib/october-network-products.ts');
+const { nasMotherboards } = load('lib/nas-motherboards.ts');
+for (const model of [...octoberFirewallProducts, ...nasMotherboards]) {
+  const entry = searchSite(model.name)[0];
+  assert.equal(entry.href, `/products/${model.series === 'NAS-MB' ? 'commercial-mini-pc' : 'firewall-mini-pc'}/${model.id}`);
+  for (const image of [model.image, ...model.galleryImages]) assert(fs.existsSync(path.join(__dirname, '..', 'public', image)));
+  const cms = load(`content/products/items/${model.id}.json`);
+  assert.equal(cms.sourceSha256, model.sourceSha256);
+}
+for (const [oldId, href] of Object.entries(firewallProductAliases)) {
+  const oldName = oldId === 'mc30s-ddr4' ? 'MC30S DDR4' : oldId === 'mc30s-n100' ? 'MC30S N100' : oldId === 'mc30w-n100' ? 'MC30W N100' : oldId.toUpperCase();
+  assert.equal(searchSite(oldName)[0]?.href, href);
+  assert(!firewallCatalog.some(model => model.id === oldId));
+}
+const mc30sDdr4 = searchSite('MC30S DDR4')[0], mc30sDdr5 = searchSite('MC30S DDR5')[0];
+assert.match(mc30sDdr4.specs.find(row => row.label === 'Memory').value, /DDR4/);
+assert.match(mc30sDdr5.specs.find(row => row.label === 'Memory').value, /DDR5/);
+assert(!searchSite('N100 DDR4').some(entry => entry.href.startsWith('/products/firewall-mini-pc/mc30s')));
+assert.equal(commercialCatalog.filter(model => model.series === 'NAS-MB').length, 3);
+assert(!firewallCatalog.some(model => model.id === 'mcsr6n4'));
+assert(!commercialCatalog.some(model => model.id === 'nasj4125'));
+assert(firewallCatalog.some(model => model.id === 'mcsr613u'));
+for (const query of ['nas motherboard', 'nas mainboard', 'carte mère nas', 'scheda madre nas', 'placa base nas']) {
+  for (const board of nasMotherboards) assert(searchSite(query).some(entry => entry.title === board.name), `${query}: missing ${board.name}`);
+}
+assert(!searchSite('mini itx').some(entry => entry.title === 'NASD2700'));
+assert(searchSite('IPMI').some(entry => entry.title === 'NASD2700'));
+assert.match(searchSite('NASN100')[0].specs.find(row => row.label === 'Internal I/O').value, /Shares with the second M.2/i);
+assert.match(searchSite('NASN150')[0].specs.find(row => row.label === 'Storage').value, /not populated by default/);
+assert.match(searchSite('NASN150')[0].specs.find(row => row.label === 'Base power consumption').value, /excluding hard drives/);
+console.log('October checks passed: ten reviewed products, six legacy redirects, isolated DDR4/DDR5 SKUs, three NAS boards and two deferred models.');
 
 // TPC X: preserve platform-dependent facts and optional power qualifiers.
 for (const code of ['1004', '1201', '1501', '1506', '1701', '1901', '2105']) {

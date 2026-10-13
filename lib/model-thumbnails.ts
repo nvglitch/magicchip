@@ -237,16 +237,16 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
     "source": "/assets/products/firewall/dual-port-series/mcsrp5/images/main-square.png"
   },
   "mc30s-ddr4": {
-    "image": "/assets/products/thumbnails/mc30s-ddr4.webp",
-    "source": "/assets/products/firewall/quad-port-series/mc30s-ddr4/images/main-square.png"
+    "image": "/assets/products/thumbnails/mc30s.webp",
+    "source": "/assets/products/firewall/ver2/mc30s/front.webp"
   },
   "mc30s-n100": {
-    "image": "/assets/products/thumbnails/mc30s-n100.webp",
-    "source": "/assets/products/firewall/quad-port-series/mc30s-n100/images/main-square.png"
+    "image": "/assets/products/thumbnails/mc30s.webp",
+    "source": "/assets/products/firewall/ver2/mc30s/front.webp"
   },
   "mc30w-n100": {
-    "image": "/assets/products/thumbnails/mc30w-n100.webp",
-    "source": "/assets/products/firewall/quad-port-series/mc30w-n100/images/main-square.png"
+    "image": "/assets/products/thumbnails/mc30w.webp",
+    "source": "/assets/products/firewall/ver2/mc30w/front.webp"
   },
   "mcsrg31f": {
     "image": "/assets/products/thumbnails/mcsrg31f.webp",
@@ -257,20 +257,20 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
     "source": "/assets/products/firewall/quad-port-series/mcsrh30x/images/main-square.png"
   },
   "mgsrn100-v1": {
-    "image": "/assets/products/thumbnails/mgsrn100-v1.webp",
-    "source": "/assets/products/firewall/quad-port-series/mgsrn100-v1/images/main-square.png"
+    "image": "/assets/products/thumbnails/mgsrn100.webp",
+    "source": "/assets/products/firewall/ver2/mgsrn100/front.webp"
   },
   "mcsr613u": {
     "image": "/assets/products/thumbnails/mcsr613u.webp",
     "source": "/assets/products/firewall/six-port-series/mcsr613u/images/main-square.png"
   },
   "mcsr6n12u": {
-    "image": "/assets/products/thumbnails/mcsr6n12u.webp",
-    "source": "/assets/products/firewall/six-port-series/mcsr6n12u/images/main-square.png"
+    "image": "/assets/products/thumbnails/mcsr6n1.webp",
+    "source": "/assets/products/firewall/ver2/mcsr6n1/front.webp"
   },
   "mcsr6n13u": {
-    "image": "/assets/products/thumbnails/mcsr6n13u.webp",
-    "source": "/assets/products/firewall/six-port-series/mcsr6n13u/images/main-square.png"
+    "image": "/assets/products/thumbnails/mcsr6n2.webp",
+    "source": "/assets/products/firewall/ver2/mcsr6n2/front.webp"
   },
   "mcsrg7": {
     "image": "/assets/products/thumbnails/mcsrg7.webp",
@@ -451,5 +451,49 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
   "mcsrp6": {
     "image": "/assets/products/thumbnails/mcsrp6.webp",
     "source": "/assets/products/firewall/mcsrp6/images/1.jpg"
+  },
+  "mc30s": {
+    "image": "/assets/products/thumbnails/mc30s.webp",
+    "source": "/assets/products/firewall/ver2/mc30s/front.webp"
+  },
+  "mc30w": {
+    "image": "/assets/products/thumbnails/mc30w.webp",
+    "source": "/assets/products/firewall/ver2/mc30w/front.webp"
+  },
+  "mcsr6n1": {
+    "image": "/assets/products/thumbnails/mcsr6n1.webp",
+    "source": "/assets/products/firewall/ver2/mcsr6n1/front.webp"
+  },
+  "mcsr6n2": {
+    "image": "/assets/products/thumbnails/mcsr6n2.webp",
+    "source": "/assets/products/firewall/ver2/mcsr6n2/front.webp"
+  },
+  "mcsr6n3": {
+    "image": "/assets/products/thumbnails/mcsr6n3.webp",
+    "source": "/assets/products/firewall/ver2/mcsr6n3/front.webp"
+  },
+  "mcsrp7": {
+    "image": "/assets/products/thumbnails/mcsrp7.webp",
+    "source": "/assets/products/firewall/ver2/mcsrp7/front.webp"
+  },
+  "mgsrn100": {
+    "image": "/assets/products/thumbnails/mgsrn100.webp",
+    "source": "/assets/products/firewall/ver2/mgsrn100/front.webp"
+  },
+  "nasd2700": {
+    "image": "/assets/products/thumbnails/nasd2700.webp",
+    "source": "/assets/products/commercial/nas-motherboards/nasd2700/top.webp"
+  },
+  "nasn100": {
+    "image": "/assets/products/thumbnails/nasn100.webp",
+    "source": "/assets/products/commercial/nas-motherboards/nasn100/top.webp"
+  },
+  "nasn150": {
+    "image": "/assets/products/thumbnails/nasn150.webp",
+    "source": "/assets/products/commercial/nas-motherboards/nasn150/top.webp"
+  },
+  "mc30s-ddr5": {
+    "image": "/assets/products/thumbnails/mc30s.webp",
+    "source": "/assets/products/firewall/ver2/mc30s/front.webp"
   }
 };

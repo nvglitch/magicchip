@@ -1,0 +1,242 @@
+{
+  "id": "mc30s",
+  "name": "MC30S",
+  "series": "4L",
+  "tagline": "Four-port 2.5GbE appliance with DDR4 and DDR5 configurations",
+  "description": "Compare DDR4 and DDR5 CPU platforms in the MC30S enclosure. Both configurations provide four Intel i226 2.5GbE ports, HDMI and DisplayPort, RJ45 COM, NVMe and SATA storage. CPU, memory and TDP follow the selected configuration.",
+  "highlights": [
+    "DDR4 / DDR5 configurations",
+    "4 x Intel i226 2.5GbE",
+    "NVMe + SATA",
+    "146 x 133 x 57 mm"
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MC30S"
+    },
+    {
+      "label": "Material",
+      "value": "Aluminium"
+    },
+    {
+      "label": "Graphics",
+      "value": "Integrated Intel graphics; exact GPU depends on the selected CPU"
+    },
+    {
+      "label": "Display",
+      "value": "1 x DP port; 1 x HDMI port"
+    },
+    {
+      "label": "Serial",
+      "value": "1 x RJ45 COM"
+    },
+    {
+      "label": "USB",
+      "value": "2 x USB 3.0; 4 x USB 2.0 (internal pins)"
+    },
+    {
+      "label": "Power",
+      "value": "DC 12 V / 4 A, 5.5 x 2.5 mm jack"
+    },
+    {
+      "label": "Network",
+      "value": "4 x Intel i226 2.5 Gigabit Ethernet"
+    },
+    {
+      "label": "Expansion",
+      "value": "1 x Mini PCIe for Wi-Fi / Bluetooth / 4G; 1 x M.2 2242 for 5G"
+    },
+    {
+      "label": "Dimensions",
+      "value": "146 x 133 x 57 mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI UEFI BIOS"
+    },
+    {
+      "label": "System",
+      "value": "Windows 10 / Windows 11 / Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0-50 C; 0%-95% relative humidity, non-condensing"
+    },
+    {
+      "label": "Front I/O",
+      "value": "Power input; 4 x 2.5 GbE; RJ45 COM; power / HDD LEDs"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "2 x USB 3.0; 2 x USB 2.0; HDMI; DP; power; CLR-CMOS; 4G/5G SIM"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "SATA; M.2; Mini PCIe for Wi-Fi / Bluetooth / 4G; F-PANEL"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x M.2 NVMe 2280; 1 x SATA 3.0 (2.5-inch HDD/SSD)"
+    }
+  ],
+  "image": "/assets/products/firewall/ver2/mc30s/front.webp",
+  "galleryImages": [
+    "/assets/products/firewall/ver2/mc30s/front.webp",
+    "/assets/products/firewall/ver2/mc30s/rear.webp"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/firewall/ver2/mc30s/front.webp",
+      "title": "MC30S front panel"
+    },
+    {
+      "image": "/assets/products/firewall/ver2/mc30s/rear.webp",
+      "title": "MC30S rear panel"
+    }
+  ],
+  "sourceBrochure": "软路由SR/MC30S brochure.pdf",
+  "sourceSha256": "52d5069da09f4c846875e310d3b070705fbd71864841ee9bacb3600395bed016",
+  "operatingRange": "0°C to 50°C",
+  "skus": [
+    {
+      "key": "ddr4",
+      "label": "DDR4 · N6415 / J5005 / J6413 / N5105",
+      "legacyNames": [
+        "MC30S DDR4"
+      ],
+      "image": "/assets/products/firewall/ver2/mc30s/front.webp",
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/ver2/mc30s/front.webp",
+          "title": "MC30S front panel"
+        },
+        {
+          "image": "/assets/products/firewall/ver2/mc30s/rear.webp",
+          "title": "MC30S rear panel"
+        }
+      ],
+      "specs": [
+        {
+          "label": "CPU",
+          "value": "Intel N6415 / J5005 / J6413 / N5105"
+        },
+        {
+          "label": "Memory",
+          "value": "1 x DDR4 SO-DIMM, up to 16GB"
+        },
+        {
+          "label": "TDP",
+          "value": "Depends on the selected CPU"
+        }
+      ]
+    },
+    {
+      "key": "ddr5",
+      "label": "DDR5 · N95 / N100 / N200 / i3-N305",
+      "legacyNames": [
+        "MC30S DDR5",
+        "MC30S N100"
+      ],
+      "image": "/assets/products/firewall/ver2/mc30s/front.webp",
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/ver2/mc30s/front.webp",
+          "title": "MC30S front panel"
+        },
+        {
+          "image": "/assets/products/firewall/ver2/mc30s/rear.webp",
+          "title": "MC30S rear panel"
+        }
+      ],
+      "specs": [
+        {
+          "label": "CPU",
+          "value": "Intel N95 / N100 / N200 / i3-N305; N100: 4 cores, up to 3.4 GHz"
+        },
+        {
+          "label": "Memory",
+          "value": "1 x DDR5-4800 SO-DIMM, up to 16GB"
+        },
+        {
+          "label": "TDP",
+          "value": "N100 configuration: 10–15W; other CPUs depend on configuration"
+        }
+      ]
+    }
+  ],
+  "category": "firewall-mini-pc",
+  "images": [
+    "/assets/products/firewall/ver2/mc30s/front.webp"
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MC30S"
+    },
+    {
+      "label": "Material",
+      "value": "Aluminium"
+    },
+    {
+      "label": "Graphics",
+      "value": "Integrated Intel graphics; exact GPU depends on the selected CPU"
+    },
+    {
+      "label": "Display",
+      "value": "1 x DP port; 1 x HDMI port"
+    },
+    {
+      "label": "Serial",
+      "value": "1 x RJ45 COM"
+    },
+    {
+      "label": "USB",
+      "value": "2 x USB 3.0; 4 x USB 2.0 (internal pins)"
+    },
+    {
+      "label": "Power",
+      "value": "DC 12 V / 4 A, 5.5 x 2.5 mm jack"
+    },
+    {
+      "label": "Network",
+      "value": "4 x Intel i226 2.5 Gigabit Ethernet"
+    },
+    {
+      "label": "Expansion",
+      "value": "1 x Mini PCIe for Wi-Fi / Bluetooth / 4G; 1 x M.2 2242 for 5G"
+    },
+    {
+      "label": "Dimensions",
+      "value": "146 x 133 x 57 mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI UEFI BIOS"
+    },
+    {
+      "label": "System",
+      "value": "Windows 10 / Windows 11 / Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0-50 C; 0%-95% relative humidity, non-condensing"
+    },
+    {
+      "label": "Front I/O",
+      "value": "Power input; 4 x 2.5 GbE; RJ45 COM; power / HDD LEDs"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "2 x USB 3.0; 2 x USB 2.0; HDMI; DP; power; CLR-CMOS; 4G/5G SIM"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "SATA; M.2; Mini PCIe for Wi-Fi / Bluetooth / 4G; F-PANEL"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x M.2 NVMe 2280; 1 x SATA 3.0 (2.5-inch HDD/SSD)"
+    }
+  ]
+}

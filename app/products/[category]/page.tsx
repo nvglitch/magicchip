@@ -15,6 +15,7 @@ import { aiCatalog } from '@/lib/ai-catalog';
 import { industrialCatalog } from '@/lib/industrial-catalog';
 import { firewallCatalog } from '@/lib/firewall-catalog';
 import { commercialCatalog } from '@/lib/commercial-catalog';
+import { nasMotherboardCopy } from '@/lib/nas-motherboard-copy';
 
 const categoryData: Record<string, { icon: LucideIcon; gradient: string; image: string }> = {
   'industrial-mini-pc': { icon: Cpu, gradient: 'from-blue-600 to-indigo-700', image: '/assets/home/categories/industrial-mini-pc.png' },
@@ -228,14 +229,14 @@ const firewallSeries = [
     code: '4L',
     title: '4-Port Router Series',
     description: 'Four-port network platforms for multi-WAN routing and segmented networks',
-    image: '/assets/products/firewall/quad-port-series/mc30s-n100/images/main-square.png',
+    image: '/assets/products/firewall/ver2/mc30s/front.webp',
     models: firewallCatalog.filter((product) => product.series === '4L').map(({ id, name, image }) => ({ id, name, image })),
   },
   {
     code: '6L',
     title: '6-Port Gateway Series',
     description: 'Six-port appliances for branch gateways, SD-WAN, and denser network segmentation',
-    image: '/assets/products/firewall/six-port-series/mcsr613u/images/main-square.png',
+    image: '/assets/products/firewall/ver2/mcsr6n3/front.webp',
     models: firewallCatalog.filter((product) => product.series === '6L').map(({ id, name, image }) => ({ id, name, image })),
   },
   {
@@ -271,6 +272,13 @@ const commercialSeries = [
     description: 'Compact storage and network-service platforms with multi-drive, multi-LAN, and high-speed uplink options',
     image: '/assets/products/commercial/nas/mcnas12/images/main-square.png',
     models: commercialCatalog.filter((product) => product.series === 'NAS').map(({ id, name, image }) => ({ id, name, image })),
+  },
+  {
+    code: 'NAS-MB',
+    title: nasMotherboardCopy.en.title,
+    description: nasMotherboardCopy.en.description,
+    image: '/assets/products/commercial/nas-motherboards/nasd2700/top.webp',
+    models: commercialCatalog.filter((product) => product.series === 'NAS-MB').map(({ id, name, image }) => ({ id, name, image })),
   },
 ];
 const richCategoryData = {
@@ -340,7 +348,7 @@ const richCategoryData = {
     sceneAlt: 'Modern enterprise data center aisle with organized server racks and network infrastructure',
     scenarios: [
       { title: 'Compact firewall & VPN edge', description: 'Dual-port appliances support focused WAN/LAN, firewall, VPN, and local gateway deployments where enclosure size and low-power operation matter.', products: ['MCSRP6', 'MCSRP5'] },
-      { title: 'Branch routing & SD-WAN', description: 'Four-port and six-port systems provide additional dedicated interfaces for multi-WAN routing, segmented branch networks, and compatible SD-WAN software.', products: ['MCSR613U', 'MC30S N100'] },
+      { title: 'Branch routing & SD-WAN', description: 'Four-port and six-port systems provide additional dedicated interfaces for multi-WAN routing, segmented branch networks, and compatible SD-WAN software.', products: ['MCSR6N3', 'MC30S'] },
       { title: '10GbE & fiber network edge', description: 'Mixed 2.5GbE and 10GbE RJ45 or SFP+ models support higher-speed uplinks and fiber-connected network designs.', products: ['MCR20', 'MCSRH15'] },
       { title: 'Rackmount network & server roles', description: '1U platforms add integrated AC power, storage, and expansion for equipment rooms, network services, and compute workloads.', products: ['MC14N-1U6L', 'MCE5-1U6L'] },
     ],
@@ -442,7 +450,7 @@ export default function CategoryPage() {
             </div>
             <div>
               <p className="text-lg leading-8 text-slate-600">{richContent.overview}</p>
-              <p className="mt-4 text-sm text-slate-500">{richContent.qualifier}</p>
+              <p className="mt-4 text-sm text-slate-500">{category === 'commercial-mini-pc' ? nasMotherboardCopy[language].selection : richContent.qualifier}</p>
             </div>
           </div>
           <div className="mt-12 grid gap-5 md:grid-cols-3">
@@ -523,7 +531,7 @@ export default function CategoryPage() {
                 : category === 'firewall-mini-pc'
                   ? 'Select a series by port count, network speed, and installation format, then open the available model page.'
                   : category === 'commercial-mini-pc'
-                    ? 'Start with Desktop PC or NAS PC, then compare processor, memory, display, storage, and network options within the selected series.'
+                    ? nasMotherboardCopy[language].selection
                     : 'Compare the current models by processor platform, connectivity, expansion, and deployment requirements.'}
             </p>
           </div>
@@ -538,7 +546,7 @@ export default function CategoryPage() {
                 >
                   <div className="relative p-6 sm:p-8 lg:p-10">
                     <div aria-hidden="true" className="pointer-events-none absolute right-8 top-[118px] hidden -translate-y-1/2 select-none text-[9rem] font-black leading-none tracking-[-0.08em] text-slate-950/[0.045] md:block lg:right-12 lg:text-[11rem]">
-                      {series.code}
+                      {series.code === 'NAS-MB' ? 'MB' : series.code}
                     </div>
 
                     <div className="relative grid gap-7 md:grid-cols-[190px_minmax(0,1fr)] md:items-center lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-10">
@@ -547,8 +555,8 @@ export default function CategoryPage() {
                       </div>
 
                       <div className="min-w-0 text-center md:pr-36 md:text-left lg:pr-52">
-                        <h3 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{series.code === 'E' ? industrialESeriesCopy[language].title : series.title}</h3>
-                        <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">{series.code === 'E' ? industrialESeriesCopy[language].description : series.description}</p>
+                        <h3 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{series.code === 'NAS-MB' ? nasMotherboardCopy[language].title : series.code === 'E' ? industrialESeriesCopy[language].title : series.title}</h3>
+                        <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">{series.code === 'NAS-MB' ? nasMotherboardCopy[language].description : series.code === 'E' ? industrialESeriesCopy[language].description : series.description}</p>
                         <p className="mt-5 text-sm font-bold uppercase tracking-normal text-slate-400">
                           {series.models.length} {series.models.length === 1 ? 'current model' : 'current models'}
                         </p>
