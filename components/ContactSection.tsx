@@ -1,18 +1,24 @@
 'use client';
 
+import LocalizedLink from '@/components/LocalizedLink';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import EmailDraftNotice from '@/components/EmailDraftNotice';
+import InquiryPrivacyNotice from '@/components/InquiryPrivacyNotice';
+import { createInquiryDraft, emailInquiryCopy, type EmailInquiryDraft } from '@/lib/email-inquiry';
+import { actionButtonStyles } from '@/lib/action-button-styles';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Phone, MapPin, MessageCircle, Send, CheckCircle, AlertCircle } from 'lucide-react';
-import { getSiteConfig } from '@/lib/content-loader';
+import { Mail, Phone, MapPin, MessageCircle, Send, AlertCircle } from 'lucide-react';
+import type { MultiLangText, SiteConfig } from '@/lib/content-loader';
+import type { Language } from '@/lib/i18n/config';
 import { useState, FormEvent } from 'react';
 
 interface ContactSectionProps {
-  siteConfig: ReturnType<typeof getSiteConfig>;
+  siteConfig: SiteConfig | null;
 }
 
-function getLocalizedText(text: any, language: string): string {
+function getLocalizedText(text: string | MultiLangText | undefined, language: Language): string {
   if (typeof text === 'string') return text;
-  return text?.[language as keyof typeof text] || text?.en || '';
+  return text?.[language] || text?.en || '';
 }
 
 const contactData = {
@@ -140,12 +146,12 @@ const contactData = {
 
 export default function ContactSection({ siteConfig }: ContactSectionProps) {
   const { language, t } = useLanguage();
-  const dataLanguage = (contactData as any)[language] ? language : 'en';
-  const data = (contactData as any)[dataLanguage];
+  const dataLanguage = language;
+  const data = contactData[dataLanguage];
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [errors, setErrors] = useState<{ name?: string; email?: string; message?: string }>({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [draft, setDraft] = useState<EmailInquiryDraft | null>(null);
+  const isSubmitted = draft !== null;
 
   const validateForm = () => {
     const newErrors: { name?: string; email?: string; message?: string } = {};
@@ -157,14 +163,12 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!validateForm()) return;
-    setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 800));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormData({ name: '', email: '', message: '' });
+    const prepared = createInquiryDraft(formData, siteConfig?.contact.email);
+    setDraft(prepared);
+    window.location.href = prepared.mailto;
   };
 
   if (!siteConfig) return null;
@@ -187,7 +191,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
           <div className="lg:col-span-2 space-y-8">
             {/* Contact Cards */}
             <div className="space-y-4">
-              <a 
+              <LocalizedLink
                 href={`mailto:${siteConfig.contact.email}`}
                 className="group flex items-center rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg"
               >
@@ -198,9 +202,9 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                   <div className="text-sm text-gray-500">{data.labels.email}</div>
                   <div className="font-medium text-gray-900">{siteConfig.contact.email}</div>
                 </div>
-              </a>
+              </LocalizedLink>
 
-              <a 
+              <LocalizedLink
                 href="tel:+86075523099863"
                 className="group flex items-center rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg"
               >
@@ -211,9 +215,9 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                   <div className="text-sm text-gray-500">{data.labels.phone}</div>
                   <div className="font-medium text-gray-900">+86 0755-23099863</div>
                 </div>
-              </a>
+              </LocalizedLink>
 
-              <a 
+              <LocalizedLink
                 href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, '')}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -226,9 +230,9 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                   <div className="text-sm text-gray-500">{data.labels.whatsapp}</div>
                   <div className="font-medium text-gray-900">{siteConfig.contact.whatsapp}</div>
                 </div>
-              </a>
+              </LocalizedLink>
 
-              <a
+              <LocalizedLink
                 href="/company#office-location"
                 className="group flex items-start rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50"
               >
@@ -241,7 +245,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                     {getLocalizedText(siteConfig.contact.address, language)}
                   </div>
                 </div>
-              </a>
+              </LocalizedLink>
             </div>
           </div>
 
@@ -249,38 +253,8 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
           <div className="lg:col-span-3">
             <AnimatePresence mode="wait">
               {isSubmitted ? (
-                <motion.div
-                  key="success"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                  className="rounded-3xl border border-slate-200 bg-white p-12 text-center shadow-xl shadow-slate-900/5"
-                >
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ delay: 0.2, type: 'spring', stiffness: 200, damping: 15 }}
-                    className="w-20 h-20 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6"
-                  >
-                    <CheckCircle className="w-10 h-10 text-teal-700" />
-                  </motion.div>
-                  <motion.h3
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 }}
-                    className="text-2xl font-bold text-gray-900 mb-2"
-                  >
-                    {data.form.success}
-                  </motion.h3>
-                  <motion.p
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 }}
-                    className="text-gray-600"
-                  >
-                    {data.form.successDesc}
-                  </motion.p>
+                <motion.div key="draft" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="mx-auto max-w-3xl rounded-3xl border border-slate-200 bg-white p-6 sm:p-10">
+                  {draft && <EmailDraftNotice draft={draft} onEdit={() => setDraft(null)} />}
                 </motion.div>
               ) : (
                 <motion.div
@@ -393,37 +367,25 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                       </motion.div>
                     </div>
 
+                    <InquiryPrivacyNotice />
                     <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                      <motion.button
+                      <button
                         type="submit"
-                        disabled={isSubmitting}
-                        whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
-                        whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-                        className="flex flex-1 items-center justify-center rounded-xl bg-blue-600 px-8 py-3 font-semibold text-white shadow-lg shadow-blue-600/20 transition-all hover:-translate-y-0.5 hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70"
+                        className={`${actionButtonStyles.primary} flex-1`}
                       >
-                        {isSubmitting ? (
-                          <motion.div
-                            animate={{ rotate: 360 }}
-                            transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-                            className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
-                          />
-                        ) : (
-                          <>
-                            <Send className="w-4 h-4 mr-2" />
-                            {data.form.button}
-                          </>
-                        )}
-                      </motion.button>
+                        <Send className="w-5 h-5 shrink-0" />
+                        {emailInquiryCopy[language].compose}
+                      </button>
 
-                      <a
+                      <LocalizedLink
                         href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, '')}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center px-8 py-3 bg-green-50 text-green-700 border border-green-200 font-medium rounded-lg hover:bg-green-100 transition-colors"
+                        className={actionButtonStyles.whatsapp}
                       >
-                        <MessageCircle className="w-4 h-4 mr-2" />
+                        <MessageCircle className="w-5 h-5 shrink-0" />
                         {data.whatsapp.button}
-                      </a>
+                      </LocalizedLink>
                     </div>
                   </form>
                 </motion.div>

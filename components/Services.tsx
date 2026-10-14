@@ -1,5 +1,6 @@
 'use client';
 
+import LocalizedLink from '@/components/LocalizedLink';
 import { 
   Target, 
   Cpu, 
@@ -9,6 +10,7 @@ import {
   ShieldCheck 
 } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { actionButtonStyles } from '@/lib/action-button-styles';
 
 export default function Services() {
   const { t } = useLanguage();
@@ -94,9 +96,9 @@ export default function Services() {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <a href="/contact" className="inline-flex cursor-pointer items-center rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700">
+          <LocalizedLink href="/contact" className={actionButtonStyles.primary}>
             {t.services.cta}
-          </a>
+          </LocalizedLink>
           <p className="mt-4 text-gray-600">
             {t.services.customPackage}
           </p>

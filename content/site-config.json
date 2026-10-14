@@ -23,7 +23,7 @@
     }
   },
   "newsletter": {
-    "enabled": true,
+    "enabled": false,
     "apiEndpoint": "/api/newsletter"
   }
 }

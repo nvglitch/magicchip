@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import { isValidLanguage } from '@/lib/i18n/config';
+import { isPagePath, languageFromPath, LANGUAGE_COOKIE, localizedHref, preferredLanguage } from '@/lib/i18n/routing';
 
 const CANONICAL_HOST = 'szmagicchip.com';
 
@@ -15,5 +17,18 @@ export function proxy(request: NextRequest) {
     return NextResponse.redirect(destination, 308);
   }
 
-  return NextResponse.next();
+  const pathname = request.nextUrl.pathname;
+  if (!isPagePath(pathname) || languageFromPath(pathname)) return NextResponse.next();
+  const destination = request.nextUrl.clone();
+  if (pathname === '/') {
+    const saved = request.cookies.get(LANGUAGE_COOKIE)?.value;
+    const language = isValidLanguage(saved || '') ? saved! : preferredLanguage(request.headers.get('accept-language'));
+    destination.pathname = `/${language}`;
+    const response = NextResponse.redirect(destination, 307);
+    response.headers.set('Cache-Control', 'private, no-store');
+    response.headers.set('Vary', 'Cookie, Accept-Language');
+    return response;
+  }
+  destination.pathname = localizedHref(pathname, 'en');
+  return NextResponse.redirect(destination, 308);
 }

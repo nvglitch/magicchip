@@ -1,3 +1,4 @@
+import { legalNavigation, legalPaths, legalRoutes } from '@/lib/legal-navigation';
 import { scenarios } from '@/lib/scenarios';
 import { scenarioCopy } from '@/lib/scenario-copy';
 import { certificates, certificateCopy } from '@/lib/certificates';
@@ -235,6 +236,13 @@ const baseSearchIndex: SearchEntry[] = [
   { title: 'Our Company', description: 'Learn about MagicChip, its history, markets, and operating philosophy.', href: '/company', type: 'page', keywords: ['about', 'manufacturer', 'shenzhen'] },
   { title: 'Our Factory', description: 'Explore MagicChip manufacturing, assembly, testing, and customization capabilities.', href: '/factory', type: 'page', keywords: ['manufacturing', 'production', 'oem', 'odm'] },
   { title: 'Contact MagicChip', description: 'Contact our sales team about products, samples, quotations, and projects.', href: '/contact', type: 'page', keywords: ['sales', 'inquiry', 'quote', 'whatsapp', 'email'] },
+  ...legalRoutes.map(id => ({
+    title: legalNavigation.en[id],
+    description: id === 'privacy' ? 'How MagicChip handles personal information and privacy requests.' : id === 'cookies' ? 'Browser storage, language preferences and optional external services.' : 'Using MagicChip website content and product information.',
+    href: legalPaths[id],
+    type: 'page' as const,
+    keywords: Object.values(legalNavigation).map(copy => copy[id]),
+  })),
 ];
 
 // Resolve facts for every product, including the curated search entries.

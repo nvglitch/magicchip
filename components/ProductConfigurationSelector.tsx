@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { localizedHref } from '@/lib/i18n/routing';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import ConfigurationSpecifications from '@/components/ConfigurationSpecifications';
 import { mergeSpecifications, type ProductConfiguration, type ProductSpecification } from '@/lib/product-specifications';
@@ -25,7 +26,7 @@ export default function ProductConfigurationSelector({ model, skus, sharedSpecs,
       const key = window.location.hash.slice('#sku-'.length);
       if (!window.location.hash.startsWith('#sku-')) return;
       if (model === 'MCIPCB2' && key === 'j5005') {
-        window.location.replace('/products/industrial-mini-pc/mcipcb2-j5005');
+        window.location.replace(localizedHref('/products/industrial-mini-pc/mcipcb2-j5005', language));
         return;
       }
       const index = skus.findIndex(sku => sku.key === key);
@@ -37,7 +38,7 @@ export default function ProductConfigurationSelector({ model, skus, sharedSpecs,
     pickHash();
     window.addEventListener('hashchange', pickHash);
     return () => window.removeEventListener('hashchange', pickHash);
-  }, [model, skus]);
+  }, [model, skus, language]);
 
   const active = skus[selected];
   useEffect(() => { onConfigurationChange?.(active); }, [active, onConfigurationChange]);

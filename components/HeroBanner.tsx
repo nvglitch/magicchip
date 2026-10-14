@@ -1,5 +1,6 @@
 'use client';
 
+import LocalizedLink from '@/components/LocalizedLink';
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence, PanInfo } from 'framer-motion';
 import { Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -204,12 +205,12 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
                   <p className="text-sm sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6 lg:mb-8 line-clamp-3 sm:line-clamp-none">
                     {slides[currentSlide].subtitle}
                   </p>
-                  <a
+                  <LocalizedLink
                     href={slides[currentSlide].ctaLink}
                     className="liquid-cta liquid-cta-outline inline-flex items-center justify-center px-4 py-2 text-sm font-semibold sm:px-6 sm:py-3 sm:text-base lg:px-8 lg:py-4"
                   >
                     <span>{slides[currentSlide].cta}</span>
-                  </a>
+                  </LocalizedLink>
                 </motion.div>
               </AnimatePresence>
             </div>

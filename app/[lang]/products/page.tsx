@@ -1,0 +1,311 @@
+'use client';
+
+import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { motion } from 'framer-motion';
+import { Cpu, Shield, Monitor, Brain, ArrowRight, CheckCircle } from 'lucide-react';
+import Link from '@/components/LocalizedLink';
+
+const productsData = {
+  en: {
+    hero: {
+      title: 'Our Products',
+      subtitle: 'Mini PCs and industrial computing systems for edge, business, AI, and network applications'
+    },
+    categories: [
+      {
+        title: 'Industrial Mini PC',
+        description: 'Fanless, compact industrial computers designed for harsh environments and 24/7 operation.',
+        features: ['Fanless cooling system', 'Wide temperature range', 'Intel N-series/Core processors', 'Multi-port connectivity'],
+        icon: Cpu,
+        href: '/products/industrial-mini-pc'
+      },
+      {
+        title: 'AI Mini PC',
+        description: 'High-performance mini PCs designed for AI workloads, edge computing, and professional applications.',
+        features: ['Dedicated AI processing', 'High-performance AMD platform', 'Large unified memory', 'Multi-display support'],
+        icon: Brain,
+        href: '/products/ai-mini-pc'
+      },
+      {
+        title: 'Commercial Mini PC',
+        description: 'Compact desktop computers ideal for business, education, and digital signage applications.',
+        features: ['Intel N-series processors', '4K display support', 'Low power consumption', 'VESA mount compatible'],
+        icon: Monitor,
+        href: '/products/commercial-mini-pc'
+      },
+      {
+        title: 'Firewall Mini PC / Server PC',
+        description: 'Compact network appliances for firewall, routing, VPN, gateway, and edge-network deployments.',
+        features: ['Multiple Intel LAN ports', '2.5GbE and 10GbE options', 'DDR5 memory options', 'Flexible storage and expansion'],
+        icon: Shield,
+        href: '/products/firewall-mini-pc'
+      }
+    ],
+    cta: {
+      title: 'Need a Custom Solution?',
+      description: 'We offer customized Mini PC and industrial computing solutions tailored to your project requirements.',
+      button: 'Contact Sales'
+    },
+    learnMore: 'View Products'
+  },
+  fr: {
+    hero: {
+      title: 'Nos Produits',
+      subtitle: 'Solutions informatiques innovantes pour l\'avenir de l\'industrie'
+    },
+    categories: [
+      {
+        title: 'Mini PC Industriel',
+        description: 'Ordinateurs industriels compacts sans ventilateur conçus pour les environnements difficiles et le fonctionnement 24/7.',
+        features: ['Système de refroidissement sans ventilateur', 'Large plage de température', 'Processeurs Intel N-series/Core', 'Connectivité multi-ports'],
+        icon: Cpu,
+        href: '/products/industrial-mini-pc'
+      },
+      {
+        title: 'Mini PC IA',
+        description: 'Appliances de sécurité réseau avec capacités de firewall avancées et ports multi-Gigabit.',
+        features: ['Ports 2.5GbE/10GbE', 'Logiciel firewall avancé', 'Support VPN', 'Design industriel'],
+        icon: Brain,
+        href: '/products/ai-mini-pc'
+      },
+      {
+        title: 'Mini PC Commercial',
+        description: 'Ordinateurs de bureau compacts idéaux pour les applications commerciales, éducatives et de signalétique numérique.',
+        features: ['Processeurs Intel N-series', 'Support affichage 4K', 'Faible consommation', 'Compatible VESA'],
+        icon: Monitor,
+        href: '/products/commercial-mini-pc'
+      },
+      {
+        title: 'Mini PC Firewall / Serveur PC',
+        description: 'Serveurs firewall rack pour sécurité réseau d\'entreprise avec haut débit.',
+        features: ['Format rack 1U/2U', 'Multiples ports LAN', 'Routage haute performance', 'Support OS firewall entreprise'],
+        icon: Shield,
+        href: '/products/firewall-mini-pc'
+      }
+    ],
+    cta: {
+      title: 'Besoin d\'une Solution Personnalisée?',
+      description: 'Nous proposons des solutions personnalisées adaptées à vos besoins spécifiques.',
+      button: 'Contacter les Ventes'
+    },
+    learnMore: 'En Savoir Plus'
+  },
+  de: {
+    hero: {
+      title: 'Unsere Produkte',
+      subtitle: 'Innovative Computerlösungen für die industrielle Zukunft'
+    },
+    categories: [
+      {
+        title: 'Industrieller Mini-PC',
+        description: 'Lüfterlose, kompakte Industriecomputer für raue Umgebungen und 24/7-Betrieb.',
+        features: ['Lüfterloses Kühlsystem', 'Breiter Temperaturbereich', 'Intel N-series/Core Prozessoren', 'Multi-Port Konnektivität'],
+        icon: Cpu,
+        href: '/products/industrial-mini-pc'
+      },
+      {
+        title: 'AI Mini-PC',
+        description: 'Netzwerksicherheitsgeräte mit erweiterten Firewall-Funktionen und Multi-Gigabit-Ports.',
+        features: ['2.5GbE/10GbE Ports', 'Erweiterte Firewall-Software', 'VPN-Unterstützung', 'Industrielles Design'],
+        icon: Brain,
+        href: '/products/ai-mini-pc'
+      },
+      {
+        title: 'Kommerzieller Mini-PC',
+        description: 'Kompakte Desktop-Computer ideal für Business-, Bildungs- und Digital-Signage-Anwendungen.',
+        features: ['Intel N-series Prozessoren', '4K Display-Unterstützung', 'Geringer Stromverbrauch', 'VESA-kompatibel'],
+        icon: Monitor,
+        href: '/products/commercial-mini-pc'
+      },
+      {
+        title: 'Firewall Mini PC / Server PC',
+        description: 'Rackmontierte Firewall-Server für Enterprise-Netzwerksicherheit mit hohem Durchsatz.',
+        features: ['1U/2U Rackmount-Formfaktor', 'Multiple LAN-Ports', 'Hochleistungs-Routing', 'Enterprise Firewall OS Support'],
+        icon: Shield,
+        href: '/products/firewall-mini-pc'
+      }
+    ],
+    cta: {
+      title: 'Benötigen Sie eine Maßgeschneiderte Lösung?',
+      description: 'Wir bieten maßgeschneiderte Lösungen, die auf Ihre spezifischen Anforderungen zugeschnitten sind.',
+      button: 'Vertrieb Kontaktieren'
+    },
+    learnMore: 'Mehr Erfahren'
+  },
+  it: {
+    hero: {
+      title: 'I Nostri Prodotti',
+      subtitle: 'Soluzioni informatiche innovative per il futuro dell\'industria'
+    },
+    categories: [
+      {
+        title: 'Mini PC Industriale',
+        description: 'Computer industriali compatti senza ventola progettati per ambienti difficili e funzionamento 24/7.',
+        features: ['Sistema di raffreddamento senza ventola', 'Ampio range di temperatura', 'Processori Intel N-series/Core', 'Connettività multi-porta'],
+        icon: Cpu,
+        href: '/products/industrial-mini-pc'
+      },
+      {
+        title: 'Mini PC IA',
+        description: 'Appliance di sicurezza di rete con capacità firewall avanzate e porte multi-Gigabit.',
+        features: ['Porte 2.5GbE/10GbE', 'Software firewall avanzato', 'Supporto VPN', 'Design industriale'],
+        icon: Brain,
+        href: '/products/ai-mini-pc'
+      },
+      {
+        title: 'Mini PC Commerciale',
+        description: 'Computer desktop compatti ideali per applicazioni commerciali, educative e digital signage.',
+        features: ['Processori Intel N-series', 'Supporto display 4K', 'Basso consumo energetico', 'Compatibile VESA'],
+        icon: Monitor,
+        href: '/products/commercial-mini-pc'
+      },
+      {
+        title: 'Mini PC Firewall / Server PC',
+        description: 'Server firewall rack per sicurezza di rete aziendale con alta velocità.',
+        features: ['Fattore di forma rack 1U/2U', 'Porte LAN multiple', 'Routing ad alte prestazioni', 'Supporto OS firewall enterprise'],
+        icon: Shield,
+        href: '/products/firewall-mini-pc'
+      }
+    ],
+    cta: {
+      title: 'Hai Bisogno di una Soluzione Personalizzata?',
+      description: 'Offriamo soluzioni personalizzate adattate alle tue esigenze specifiche.',
+      button: 'Contatta le Vendite'
+    },
+    learnMore: 'Scopri di Più'
+  },
+  es: {
+    hero: {
+      title: 'Nuestros Productos',
+      subtitle: 'Soluciones informáticas innovadoras para el futuro de la industria'
+    },
+    categories: [
+      {
+        title: 'Mini PC Industrial',
+        description: 'Computadoras industriales compactas sin ventiladores diseñadas para entornos difíciles y operación 24/7.',
+        features: ['Sistema de refrigeración sin ventiladores', 'Amplio rango de temperatura', 'Procesadores Intel N-series/Core', 'Conectividad multi-puerto'],
+        icon: Cpu,
+        href: '/products/industrial-mini-pc'
+      },
+      {
+        title: 'Mini PC IA',
+        description: 'Appliances de seguridad de red con capacidades avanzadas de firewall y puertos multi-Gigabit.',
+        features: ['Puertos 2.5GbE/10GbE', 'Software firewall avanzado', 'Soporte VPN', 'Diseño industrial'],
+        icon: Brain,
+        href: '/products/ai-mini-pc'
+      },
+      {
+        title: 'Mini PC Comercial',
+        description: 'Computadoras de escritorio compactas ideales para aplicaciones comerciales, educativas y de señalización digital.',
+        features: ['Procesadores Intel N-series', 'Soporte de pantalla 4K', 'Bajo consumo de energía', 'Compatible con VESA'],
+        icon: Monitor,
+        href: '/products/commercial-mini-pc'
+      },
+      {
+        title: 'Mini PC Firewall / Servidor PC',
+        description: 'Servidores firewall rack para seguridad de red empresarial con alto rendimiento.',
+        features: ['Factor de forma rack 1U/2U', 'Múltiples puertos LAN', 'Enrutamiento de alto rendimiento', 'Soporte SO firewall enterprise'],
+        icon: Shield,
+        href: '/products/firewall-mini-pc'
+      }
+    ],
+    cta: {
+      title: '¿Necesitas una Solución Personalizada?',
+      description: 'Ofrecemos soluciones personalizadas adaptadas a tus requisitos específicos.',
+      button: 'Contactar Ventas'
+    },
+    learnMore: 'Más Información'
+  }
+};
+
+export default function ProductsPage() {
+  const { language } = useLanguage();
+  const data = productsData[language] || productsData.en;
+
+  return (
+    <div className="min-h-screen bg-[#f3f7f5] text-slate-950">
+      {/* Hero Section */}
+      <section className="relative isolate overflow-hidden bg-[#101827] text-white">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_20%,rgba(37,99,235,0.3),transparent_34%),radial-gradient(circle_at_15%_85%,rgba(245,158,11,0.14),transparent_28%)]" />
+        <div className="absolute inset-0 -z-10 opacity-20 tech-pattern-overlay" />
+        <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 md:py-28 lg:px-8">
+          <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
+            <div className="mb-7 h-px w-24 bg-gradient-to-r from-amber-400 to-transparent" />
+            <h1 className="text-5xl font-bold tracking-tight md:text-7xl">{data.hero.title}</h1>
+            <p className="mt-6 max-w-2xl text-xl leading-relaxed text-slate-300 md:text-2xl">{data.hero.subtitle}</p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Products Grid */}
+      <section className="bg-white py-24 md:py-28">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            {data.categories.map((category, index) => (
+              <motion.div
+                key={category.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="h-full"
+              >
+                <Link
+                  href={category.href}
+                  className="group relative block h-full overflow-hidden rounded-3xl border border-slate-200 bg-[#f8faf9] p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:bg-white hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-300/60 md:p-10"
+                >
+                {/* Background decoration */}
+                <div className="absolute -right-16 -top-16 h-36 w-36 rounded-full bg-blue-100/70 transition-transform duration-500 group-hover:scale-150"></div>
+
+                <div className="relative">
+                  <div className="mb-7 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-600/20 transition-transform duration-300 group-hover:scale-105">
+                    <category.icon className="w-8 h-8 text-white" />
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">{category.title}</h3>
+                  <p className="text-gray-600 mb-8 leading-relaxed">{category.description}</p>
+
+                  <ul className="space-y-3 mb-8">
+                    {category.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-600">
+                        <CheckCircle className="w-5 h-5 text-blue-500 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <span className="inline-flex items-center font-semibold text-blue-600 group-hover:text-blue-700">
+                    {data.learnMore}
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-2" />
+                  </span>
+                </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-[#eaf0ee] py-24 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative overflow-hidden rounded-3xl bg-[#101827] p-10 text-center text-white shadow-xl shadow-slate-900/10 md:p-16"
+          >
+            <h2 className="text-3xl font-bold mb-4">{data.cta.title}</h2>
+            <p className="text-lg mb-8 opacity-90">{data.cta.description}</p>
+            <Link
+              href="/contact"
+              className="liquid-cta liquid-cta-solid inline-flex items-center px-8 py-4 font-semibold"
+            >
+              <span>{data.cta.button}</span>
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

@@ -1,9 +1,10 @@
 'use client';
 
-import { FormEvent, useEffect, useMemo, useState } from 'react';
+import { FormEvent, useMemo, useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from '@/components/LocalizedLink';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { localizedHref } from '@/lib/i18n/routing';
 import { ArrowRight, FileText, Grid3X3, Map, Package, Search } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { SearchEntryType, searchSite } from '@/lib/site-search';
@@ -29,16 +30,15 @@ export default function SearchResultsPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const query = searchParams.get('q')?.trim() || '';
-  const [input, setInput] = useState(query);
+  const [edit, setEdit] = useState({ query, value: query });
+  const input = edit.query === query ? edit.value : query;
   const text = copy[language] || copy.en;
   const results = useMemo(() => searchSite(query), [query]);
-
-  useEffect(() => setInput(query), [query]);
 
   const submit = (event: FormEvent) => {
     event.preventDefault();
     const nextQuery = input.trim();
-    if (nextQuery) router.push(`/search?q=${encodeURIComponent(nextQuery)}`);
+    if (nextQuery) router.push(localizedHref(`/search?q=${encodeURIComponent(nextQuery)}`, language));
   };
 
   return (
@@ -50,7 +50,7 @@ export default function SearchResultsPage() {
           <p className="mt-4 max-w-2xl text-lg text-slate-300">{text.subtitle}</p>
           <form onSubmit={submit} className="mt-8 flex max-w-3xl items-center rounded-2xl border border-white/20 bg-white p-2 shadow-2xl shadow-slate-950/30">
             <Search className="ml-3 h-5 w-5 shrink-0 text-slate-400" />
-            <input value={input} onChange={event => setInput(event.target.value)} placeholder={t.nav.searchPlaceholder} aria-label={t.nav.searchAriaLabel} className="min-w-0 flex-1 bg-transparent px-3 py-3 text-base text-slate-900 outline-none placeholder:text-slate-400" autoFocus />
+            <input value={input} onChange={event => setEdit({ query, value: event.target.value })} placeholder={t.nav.searchPlaceholder} aria-label={t.nav.searchAriaLabel} className="min-w-0 flex-1 bg-transparent px-3 py-3 text-base text-slate-900 outline-none placeholder:text-slate-400" autoFocus />
             <button type="submit" className="rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-500">{text.title}</button>
           </form>
         </div>

@@ -1,6 +1,10 @@
 import { brochureUpdates } from '@/lib/brochure-updates';
 import { aiCatalog, mcaipc2 } from '@/lib/ai-catalog';
 import type { Metadata } from 'next';
+import { isValidLanguage, SUPPORTED_LANGUAGES } from '@/lib/i18n/config';
+import { localizedHref } from '@/lib/i18n/routing';
+import { dictionaries } from '@/lib/i18n/dictionaries';
+import { legalNavigation } from '@/lib/legal-navigation';
 import { industrialCatalog } from '@/lib/industrial-catalog';
 import { firewallCatalog } from '@/lib/firewall-catalog';
 import { commercialCatalog } from '@/lib/commercial-catalog';
@@ -8,7 +12,7 @@ import { commercialCatalog } from '@/lib/commercial-catalog';
 export const SITE_URL = 'https://szmagicchip.com';
 export const SITE_NAME = 'MagicChip';
 // Update this only when the published site or product catalog materially changes.
-export const SITE_CONTENT_LAST_UPDATED = new Date('2026-10-13T00:00:00.000Z');
+export const SITE_CONTENT_LAST_UPDATED = new Date('2026-10-14T00:00:00.000Z');
 export const DEFAULT_SOCIAL_IMAGE = '/assets/brand/og-default.png';
 
 export type SeoEntry = {
@@ -164,18 +168,32 @@ export const productSeo: Record<string, SeoEntry & { category: string }> = {
 for (const item of brochureUpdates) {
   if (productSeo[item.id]) productSeo[item.id] = { ...productSeo[item.id], description: item.description, image: item.image };
 }
-export function createPageMetadata(entry: SeoEntry): Metadata {
-  const brandedTitle = entry.name.includes(SITE_NAME) ? entry.name : `${entry.name} | ${SITE_NAME}`;
+export function createPageMetadata(entry: SeoEntry, requestedLanguage = 'en'): Metadata {
+  const language = isValidLanguage(requestedLanguage) ? requestedLanguage : 'en';
+  const copy = dictionaries[language];
+  const titles: Record<string, string> = {
+    '/products': copy.nav.products, '/scenarios': copy.nav.solutions, '/about': copy.nav.aboutUs,
+    '/company': copy.footer.about[0], '/factory': copy.footer.about[1], '/news': copy.footer.about[2],
+    '/contact': copy.footer.support[2], '/tech-docs': copy.footer.support[0], '/downloads': copy.footer.support[1],
+    '/documents': copy.nav.documents, '/search': copy.nav.searchAriaLabel,
+    '/privacy-policy': legalNavigation[language].privacy, '/cookie-policy': legalNavigation[language].cookies, '/terms-of-use': legalNavigation[language].terms,
+  };
+  const name = titles[entry.path] || entry.name;
+  const brandedTitle = name.includes(SITE_NAME) ? name : `${name} | ${SITE_NAME}`;
   const socialImage = entry.image || DEFAULT_SOCIAL_IMAGE;
+  const path = localizedHref(entry.path, language);
+  const locales = { en: 'en_US', de: 'de_DE', fr: 'fr_FR', it: 'it_IT', es: 'es_ES' };
 
   return {
     title: { absolute: brandedTitle },
     description: entry.description,
-    alternates: { canonical: entry.path },
+    alternates: { canonical: path, languages: Object.fromEntries([...SUPPORTED_LANGUAGES.map(lang => [lang, localizedHref(entry.path, lang)]), ['x-default', localizedHref(entry.path, 'en')]]) },
     openGraph: {
       title: brandedTitle,
       description: entry.description,
-      url: entry.path,
+      url: path,
+      locale: locales[language],
+      alternateLocale: SUPPORTED_LANGUAGES.filter(lang => lang !== language).map(lang => locales[lang]),
       type: 'website',
       images: [{
         url: socialImage,

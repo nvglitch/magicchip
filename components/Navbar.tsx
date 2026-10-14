@@ -3,8 +3,9 @@ import { industrialESeriesCopy } from '@/lib/industrial-navigation-copy';
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from '@/components/LocalizedLink';
 import { usePathname } from 'next/navigation';
+import { withoutLanguage } from '@/lib/i18n/routing';
 import { 
   Globe, 
   Menu, 
@@ -223,14 +224,14 @@ const productCategoryImages: Record<string, string> = {
 };
 
 export default function Navbar() {
-  const pathname = usePathname();
+  const pathname = withoutLanguage(usePathname());
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [activeProductCategory, setActiveProductCategory] = useState('industrial-mini-pc');
   const [activeScenario, setActiveScenario] = useState('industrialAutomation');
   const languageMenuRef = useRef<HTMLDivElement>(null);
-  const { t, language, setLanguage } = useLanguage();
+  const { t, language, setLanguage, isLoading } = useLanguage();
 
   useEffect(() => {
     if (!isLangMenuOpen) return;
@@ -366,7 +367,7 @@ export default function Navbar() {
                 onMouseEnter={() => item.dropdown && setActiveDropdown(item.label)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <a
+                <Link
                   href={item.href}
                   aria-current={isNavItemActive(item) ? 'page' : undefined}
                   className={`nav-item group relative inline-flex items-center gap-1 rounded-lg px-2 py-2 text-sm font-medium transition-colors duration-300 hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 xl:px-4 xl:text-base 2xl:px-5 ${isNavItemActive(item) ? 'text-blue-700' : 'text-slate-600'}`}
@@ -383,7 +384,7 @@ export default function Navbar() {
                   {item.dropdown && (
                     <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === item.label ? 'rotate-180' : ''}`} />
                   )}
-                </a>
+                </Link>
 
                 {/* Dropdown Menu */}
                 <AnimatePresence>
@@ -409,7 +410,7 @@ export default function Navbar() {
                         <div className="grid gap-5 md:grid-cols-[190px_1fr] lg:grid-cols-[230px_1fr]">
                           <div className="rounded-2xl bg-slate-200/65 p-2">
                             {productMegaCategories.map((category) => (
-                              <a
+                              <Link
                                 key={category.id}
                                 href={category.href}
                                 onMouseEnter={() => setActiveProductCategory(category.id)}
@@ -423,7 +424,7 @@ export default function Navbar() {
                                 {category.icon && <category.icon className={`h-5 w-5 ${activeMegaCategory.id === category.id ? 'text-blue-600' : 'text-slate-400'}`} />}
                                 <span>{category.title}</span>
                                 <ChevronRight className="ml-auto h-4 w-4 text-slate-400" />
-                              </a>
+                              </Link>
                             ))}
                           </div>
 
@@ -433,9 +434,9 @@ export default function Navbar() {
                                 <h3 className="text-xl font-bold text-slate-950">{activeMegaCategory.title}</h3>
                                 <p className="mt-1 hidden text-sm text-slate-500 lg:block">{activeMegaCategory.description}</p>
                               </div>
-                              <a href={activeMegaCategory.href} className="shrink-0 text-sm font-semibold text-blue-700 hover:text-blue-800">
+                              <Link href={activeMegaCategory.href} className="shrink-0 text-sm font-semibold text-blue-700 hover:text-blue-800">
                                 {t.products.learnMore}
-                              </a>
+                              </Link>
                             </div>
 
                             {(activeMegaCategory.id === 'industrial-mini-pc' || activeMegaCategory.id === 'firewall-mini-pc' || activeMegaCategory.id === 'commercial-mini-pc') ? (
@@ -445,7 +446,7 @@ export default function Navbar() {
                                   : activeMegaCategory.id === 'firewall-mini-pc'
                                     ? firewallMegaSeries
                                     : commercialMegaSeries).map((series) => (
-                                  <a
+                                  <Link
                                     key={series.id}
                                     href={series.href}
                                     className="group flex min-h-32 items-center gap-4 rounded-2xl border border-slate-200 bg-white p-3 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg"
@@ -467,7 +468,7 @@ export default function Navbar() {
                                       </div>
                                       <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-slate-500">{series.id === 'series-nas-mb' ? nasMotherboardCopy[language].description : series.code === 'E' ? industrialESeriesCopy[language].description : series.description}</p>
                                     </div>
-                                  </a>
+                                  </Link>
                                 ))}
                               </div>
                             ) : (
@@ -488,16 +489,16 @@ export default function Navbar() {
                           <div>
                             <h2 className="text-2xl font-bold text-slate-950 lg:text-3xl">{t.nav.solutions}</h2>
                           </div>
-                          <a href="/scenarios" className="inline-flex items-center gap-1 text-sm font-semibold text-slate-600 transition-colors hover:text-blue-700">
+                          <Link href="/scenarios" className="inline-flex items-center gap-1 text-sm font-semibold text-slate-600 transition-colors hover:text-blue-700">
                             {t.navDropdown?.solutions?.viewAll || t.products.learnMore}
                             <ChevronRight className="h-4 w-4" />
-                          </a>
+                          </Link>
                         </div>
 
                         <div className="grid gap-5 md:grid-cols-[240px_1fr] lg:grid-cols-[300px_1fr]">
                           <div className="rounded-2xl bg-slate-200/65 p-2">
                             {scenarioMegaItems.map((scenario) => (
-                              <a
+                              <Link
                                 key={scenario.id}
                                 href={scenario.href}
                                 onMouseEnter={() => setActiveScenario(scenario.id)}
@@ -511,7 +512,7 @@ export default function Navbar() {
                                 {scenario.icon && <scenario.icon className={`h-5 w-5 shrink-0 ${activeMegaScenario.id === scenario.id ? 'text-blue-600' : 'text-slate-400'}`} />}
                                 <span className="leading-snug">{scenario.title}</span>
                                 <ChevronRight className="ml-auto h-4 w-4 shrink-0 text-slate-400" />
-                              </a>
+                              </Link>
                             ))}
                           </div>
 
@@ -521,14 +522,14 @@ export default function Navbar() {
                                 <h3 className="text-xl font-bold text-slate-950">{activeMegaScenario.title}</h3>
                                 <p className="mt-1 hidden text-sm text-slate-500 lg:block">{activeMegaScenario.description}</p>
                               </div>
-                              <a href={activeMegaScenario.href} className="shrink-0 text-sm font-semibold text-blue-700 hover:text-blue-800">
+                              <Link href={activeMegaScenario.href} className="shrink-0 text-sm font-semibold text-blue-700 hover:text-blue-800">
                                 {t.products.learnMore}
-                              </a>
+                              </Link>
                             </div>
 
                             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
                               {activeMegaScenario.products.map((product) => (
-                                <a
+                                <Link
                                   key={`${product.category}-${product.id}`}
                                   href={product.href}
                                   className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg"
@@ -549,7 +550,7 @@ export default function Navbar() {
                                     </div>
                                     <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-slate-500">{product.tagline}</p>
                                   </div>
-                                </a>
+                                </Link>
                               ))}
                             </div>
                           </div>
@@ -564,7 +565,7 @@ export default function Navbar() {
                         className="absolute left-0 top-full z-50 mt-2 w-72 origin-top-left overflow-hidden rounded-2xl border border-slate-200/80 bg-white/95 py-2 shadow-[0_20px_50px_-18px_rgba(15,23,42,0.35)] backdrop-blur-xl"
                       >
                         {item.dropdown.map((dropdownItem) => (
-                          <a
+                          <Link
                             key={dropdownItem.href}
                             href={dropdownItem.href}
                             target={dropdownItem.external ? '_blank' : '_self'}
@@ -580,7 +581,7 @@ export default function Navbar() {
                               <div className="text-sm font-medium text-slate-900">{dropdownItem.title}</div>
                               {dropdownItem.description && <div className="mt-0.5 text-xs text-slate-500">{dropdownItem.description}</div>}
                             </div>
-                          </a>
+                          </Link>
                         ))}
                       </motion.div>
                     )
@@ -604,11 +605,14 @@ export default function Navbar() {
                 }}
                 className="group flex h-9 items-center gap-1 rounded-full border border-slate-200 bg-slate-50/80 px-2 text-slate-600 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700 hover:shadow-md hover:shadow-blue-100/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 sm:h-auto sm:gap-1.5 sm:px-3 sm:py-2"
                 aria-label={t.nav.languageAriaLabel}
+                aria-busy={isLoading}
+                disabled={isLoading}
                 aria-expanded={isLangMenuOpen}
                 aria-haspopup="menu"
               >
                 <Globe className="h-[18px] w-[18px] flex-shrink-0 transition-transform duration-500 group-hover:rotate-[18deg]" />
-                <span className="text-xs md:text-sm font-medium uppercase">{language}</span>
+                <span className="hidden text-sm font-medium sm:inline">{LANGUAGE_NAMES[language].native}</span>
+                <span className="text-xs font-medium uppercase sm:hidden">{language}</span>
               </button>
 
               {/* Language Dropdown Menu */}
@@ -673,18 +677,18 @@ export default function Navbar() {
               {/* Navigation Items */}
               {navItems.map((item) => (
                 <div key={item.label} className="space-y-2">
-                  <a
+                  <Link
                     href={item.href}
                     aria-current={isNavItemActive(item) ? 'page' : undefined}
                     className={`block rounded-lg px-2 py-2 font-medium touch-manipulation ${isNavItemActive(item) ? 'bg-blue-50 text-blue-700' : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'}`}
                     onClick={() => !item.dropdown && setIsMobileMenuOpen(false)}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                   {item.dropdown && (
                     <div className="pl-3 sm:pl-4 space-y-1 border-l-2 border-gray-100">
                       {item.dropdown.map((dropdownItem, index) => (
-                        <a
+                        <Link
                           key={index}
                           href={dropdownItem.href}
                           target={dropdownItem.external ? '_blank' : '_self'}
@@ -696,7 +700,7 @@ export default function Navbar() {
                             <dropdownItem.icon className="w-4 h-4 mr-2 flex-shrink-0" />
                           )}
                           <span className="truncate">{dropdownItem.title}</span>
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   )}

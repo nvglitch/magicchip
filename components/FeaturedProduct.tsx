@@ -2,8 +2,9 @@
 
 import { Check, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from '@/components/LocalizedLink';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { actionButtonStyles } from '@/lib/action-button-styles';
 
 export default function FeaturedProduct() {
   const { t } = useLanguage();
@@ -53,10 +54,10 @@ export default function FeaturedProduct() {
             {/* CTA */}
             <Link
               href="/products/ai-mini-pc/mcai2"
-              className="group inline-flex items-center rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700"
+              className={actionButtonStyles.primary}
             >
               {t.featured.cta}
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 shrink-0 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>

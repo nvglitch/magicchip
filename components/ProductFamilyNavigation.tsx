@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '@/components/LocalizedLink';
 import { modelThumbnails } from '@/lib/model-thumbnails';
 import { groupProductNavigation } from '@/lib/product-navigation';
 

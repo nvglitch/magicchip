@@ -2,8 +2,10 @@
 
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { Mail, Phone, MessageCircle } from 'lucide-react';
+import Link from '@/components/LocalizedLink';
+import { legalNavigation, legalPaths, legalRoutes } from '@/lib/legal-navigation';
 
-export default function Footer() {
+export default function Footer({ newsletterEnabled = false }: { newsletterEnabled?: boolean }) {
   const { t, language } = useLanguage();
 
   const footerLinks = {
@@ -28,7 +30,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
       {/* Newsletter Section */}
-      <div className="border-b border-gray-800">
+      {newsletterEnabled && <div className="border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
@@ -47,7 +49,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-      </div>
+      </div>}
 
       {/* Links Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -57,9 +59,9 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.about.map((link) => (
                 <li key={link.key}>
-                  <a href={link.href} className="hover:text-white transition-colors">
+                  <Link href={link.href} className="hover:text-white transition-colors">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -69,9 +71,9 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.key}>
-                  <a href={link.href} className="hover:text-white transition-colors">
+                  <Link href={link.href} className="hover:text-white transition-colors">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -81,10 +83,10 @@ export default function Footer() {
             <ul className="space-y-3">
               {contactLinks.map((link) => (
                 <li key={link.key}>
-                  <a href={link.href} className="flex items-center hover:text-white transition-colors">
+                  <Link href={link.href} className="flex items-center hover:text-white transition-colors">
                     <link.icon className="w-4 h-4 mr-2 flex-shrink-0" />
                     {t.footer.contact[link.key === 'email' ? 0 : link.key === 'phone' ? 1 : 2]}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -94,9 +96,16 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-40 md:pb-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm md:pr-44">
             <p className="text-gray-400">{t.footer.copyright}</p>
+            <nav aria-label={legalNavigation[language].navigation} className="flex flex-wrap justify-center gap-x-6 gap-y-3 md:justify-end">
+              {legalRoutes.map(id => (
+                <Link key={id} href={legalPaths[id]} className="text-gray-400 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+                  {legalNavigation[language][id]}
+                </Link>
+              ))}
+            </nav>
           </div>
         </div>
       </div>

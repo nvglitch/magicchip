@@ -4,14 +4,18 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, Copy, Check, ExternalLink, ArrowUp } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import EmailDraftNotice from '@/components/EmailDraftNotice';
+import InquiryPrivacyNotice from '@/components/InquiryPrivacyNotice';
+import { createInquiryDraft, emailInquiryCopy, type EmailInquiryDraft } from '@/lib/email-inquiry';
+import { whatsappButtonColors } from '@/lib/action-button-styles';
 
 export default function LiveChatWidget() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<'whatsapp' | 'message'>('whatsapp');
   const [isCopied, setIsCopied] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [draft, setDraft] = useState<EmailInquiryDraft | null>(null);
+  const isSubmitted = draft !== null;
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -81,25 +85,11 @@ export default function LiveChatWidget() {
     window.open('https://wa.me/8613392172330', '_blank');
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-
-    // Auto-close after 3 seconds
-    setTimeout(() => {
-      setIsOpen(false);
-      setIsSubmitted(false);
-      setFormData({ name: '', email: '', message: '' });
-      setActiveTab('whatsapp');
-    }, 3000);
-
-    setIsSubmitting(false);
+    const prepared = createInquiryDraft(formData);
+    setDraft(prepared);
+    window.location.href = prepared.mailto;
   };
 
   const handleInputChange = (
@@ -136,7 +126,7 @@ export default function LiveChatWidget() {
       <motion.button
         data-chat-fab
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 flex h-14 w-14 items-center justify-center gap-0 rounded-full bg-emerald-600 px-0 text-white shadow-[0_12px_32px_rgba(5,150,105,0.32)] transition-colors hover:bg-emerald-700 hover:shadow-[0_14px_36px_rgba(5,150,105,0.4)] md:w-auto md:min-w-[148px] md:gap-2 md:px-5 z-[9999]"
+        className={`fixed bottom-6 right-6 flex h-14 w-14 items-center justify-center gap-0 rounded-full ${whatsappButtonColors} px-0 shadow-[0_12px_32px_rgba(5,150,105,0.32)] transition-colors hover:shadow-[0_14px_36px_rgba(5,150,105,0.4)] md:w-auto md:min-w-[148px] md:gap-2 md:px-5 z-[9999]`}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         animate={{ scale: [1, 1, 1.055, 1], rotate: [0, 0, -2, 0] }}
@@ -326,32 +316,18 @@ export default function LiveChatWidget() {
                             />
                           </div>
 
+                          <InquiryPrivacyNotice />
                           <button
                             type="submit"
-                            disabled={isSubmitting}
                             className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white rounded-lg font-medium transition-colors"
                           >
-                            {isSubmitting
-                              ? t.chat.form.submitting
-                              : t.chat.form.submitButton}
+                            {emailInquiryCopy[language].compose}
                           </button>
                         </form>
                       ) : (
-                        <motion.div
-                          initial={{ opacity: 0, scale: 0.9 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          className="text-center py-12"
-                        >
-                          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <Check className="w-8 h-8 text-green-600" />
-                          </div>
-                          <h4 className="text-xl font-semibold text-gray-900 mb-2">
-                            {t.chat.form.successTitle}
-                          </h4>
-                          <p className="text-gray-600">
-                            {t.chat.form.successMessage}
-                          </p>
-                        </motion.div>
+                        <div className="py-3">
+                          {draft && <EmailDraftNotice draft={draft} onEdit={() => setDraft(null)} />}
+                        </div>
                       )}
                     </motion.div>
                   )}
@@ -362,7 +338,7 @@ export default function LiveChatWidget() {
             {/* Desktop: Popover panel */}
             <motion.div
               data-chat-panel
-              className="hidden md:block fixed bottom-24 right-6 w-[380px] bg-white rounded-xl shadow-lg z-[9999] overflow-hidden border border-gray-100"
+              className="hidden md:block fixed bottom-24 right-6 w-[380px] max-h-[calc(100dvh-8rem)] overflow-y-auto bg-white rounded-xl shadow-lg z-[9999] border border-gray-100"
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -528,32 +504,18 @@ export default function LiveChatWidget() {
                             />
                           </div>
 
+                          <InquiryPrivacyNotice />
                           <button
                             type="submit"
-                            disabled={isSubmitting}
                             className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white rounded-lg font-medium transition-colors"
                           >
-                            {isSubmitting
-                              ? t.chat.form.submitting
-                              : t.chat.form.submitButton}
+                            {emailInquiryCopy[language].compose}
                           </button>
                         </form>
                       ) : (
-                        <motion.div
-                          initial={{ opacity: 0, scale: 0.9 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          className="text-center py-12"
-                        >
-                          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <Check className="w-8 h-8 text-green-600" />
-                          </div>
-                          <h4 className="text-xl font-semibold text-gray-900 mb-2">
-                            {t.chat.form.successTitle}
-                          </h4>
-                          <p className="text-gray-600">
-                            {t.chat.form.successMessage}
-                          </p>
-                        </motion.div>
+                        <div className="py-3">
+                          {draft && <EmailDraftNotice draft={draft} onEdit={() => setDraft(null)} />}
+                        </div>
                       )}
                     </motion.div>
                   )}

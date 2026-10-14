@@ -2,8 +2,9 @@
 
 import { FormEvent, KeyboardEvent, RefObject, useEffect, useId, useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from '@/components/LocalizedLink';
 import { useRouter } from 'next/navigation';
+import { localizedHref } from '@/lib/i18n/routing';
 import { ArrowRight, FileText, Grid3X3, Map, Package, Search, X } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { SearchEntry, SearchEntryType, searchSite } from '@/lib/site-search';
@@ -50,8 +51,6 @@ export default function SiteSearch({ variant = 'header', onNavigate }: SiteSearc
   const allResults = useMemo(() => searchSite(query), [query]);
   const results = allResults.slice(0, 6);
 
-  useEffect(() => setActiveIndex(-1), [query]);
-
   useEffect(() => {
     const closeOnOutside = (event: PointerEvent) => {
       if (!rootRef.current?.contains(event.target as Node)) setIsOpen(false);
@@ -82,7 +81,7 @@ export default function SiteSearch({ variant = 'header', onNavigate }: SiteSearc
 
   const navigateTo = (href: string) => {
     closeSearch();
-    router.push(href);
+    router.push(localizedHref(href, language));
   };
 
   const submitSearch = (event: FormEvent) => {
@@ -146,9 +145,11 @@ export default function SiteSearch({ variant = 'header', onNavigate }: SiteSearc
       <input
         ref={inputRef}
         type="search"
+        role="combobox"
         value={query}
         onChange={event => {
           setQuery(event.target.value);
+          setActiveIndex(-1);
           setIsOpen(true);
         }}
         onFocus={() => query.trim() && setIsOpen(true)}
@@ -162,7 +163,7 @@ export default function SiteSearch({ variant = 'header', onNavigate }: SiteSearc
         className="min-w-0 flex-1 bg-transparent text-sm text-slate-800 outline-none placeholder:text-slate-400"
       />
       {query && (
-        <button type="button" onClick={() => setQuery('')} className="rounded-full p-0.5 text-slate-400 hover:bg-slate-200 hover:text-slate-700" aria-label={text.close}>
+        <button type="button" onClick={() => { setQuery(''); setActiveIndex(-1); }} className="rounded-full p-0.5 text-slate-400 hover:bg-slate-200 hover:text-slate-700" aria-label={text.close}>
           <X className="h-3.5 w-3.5" />
         </button>
       )}

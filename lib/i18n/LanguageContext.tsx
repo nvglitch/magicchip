@@ -1,27 +1,10 @@
-'use client';
+"use client";
 
-import React, { createContext, useContext, useState, useCallback, ReactNode, useEffect } from 'react';
-import { Language, SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE, detectBrowserLanguage, isValidLanguage } from './config';
-import { TranslationSchema } from './types';
-import { en } from './locales/en';
-
-// Lazy load other languages
-const loadTranslation = async (lang: Language): Promise<TranslationSchema> => {
-  switch (lang) {
-    case 'en':
-      return en;
-    case 'fr':
-      return (await import('./locales/fr')).fr;
-    case 'de':
-      return (await import('./locales/de')).de;
-    case 'it':
-      return (await import('./locales/it')).it;
-    case 'es':
-      return (await import('./locales/es')).es;
-    default:
-      return en;
-  }
-};
+import { createContext, useContext, useCallback, useEffect, useTransition, type ReactNode } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+import { isValidLanguage, type Language } from './config';
+import type { TranslationSchema } from './types';
+import { LANGUAGE_COOKIE, LANGUAGE_COOKIE_MAX_AGE, localizedHref } from './routing';
 
 interface LanguageContextType {
   language: Language;
@@ -29,84 +12,36 @@ interface LanguageContextType {
   setLanguage: (lang: Language) => void;
   isLoading: boolean;
 }
-
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-const STORAGE_KEY = 'magicchip-language';
+function rememberLanguage(language: Language) {
+  document.cookie = `${LANGUAGE_COOKIE}=${language}; Path=/; Max-Age=${LANGUAGE_COOKIE_MAX_AGE}; SameSite=Lax${location.protocol === 'https:' ? '; Secure' : ''}`;
+  try { localStorage.setItem(LANGUAGE_COOKIE, language); } catch { /* URL remains authoritative. */ }
+}
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(DEFAULT_LANGUAGE);
-  const [translations, setTranslations] = useState<TranslationSchema>(en);
-  const [isLoading, setIsLoading] = useState(false);
-
-  // Initialize language from localStorage or browser
+export function LanguageProvider({ children, initialLanguage, initialTranslations }: {
+  children: ReactNode;
+  initialLanguage: Language;
+  initialTranslations: TranslationSchema;
+}) {
+  const pathname = usePathname();
+  const router = useRouter();
+  const [isLoading, startTransition] = useTransition();
   useEffect(() => {
-    const initLanguage = async () => {
-      if (typeof window === 'undefined') return;
-
-      let savedLang: Language = DEFAULT_LANGUAGE;
-
-      // Try localStorage first
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored && isValidLanguage(stored)) {
-        savedLang = stored;
-      } else {
-        // Fallback to browser language detection
-        savedLang = detectBrowserLanguage();
-      }
-
-      if (savedLang !== DEFAULT_LANGUAGE) {
-        setIsLoading(true);
-        const trans = await loadTranslation(savedLang);
-        setTranslations(trans);
-        setLanguageState(savedLang);
-        setIsLoading(false);
-      }
-    };
-
-    initLanguage();
-  }, []);
-
-  const setLanguage = useCallback(async (lang: Language) => {
-    if (!isValidLanguage(lang)) {
-      console.warn(`Invalid language: ${lang}, falling back to ${DEFAULT_LANGUAGE}`);
-      lang = DEFAULT_LANGUAGE;
-    }
-
-    setIsLoading(true);
-
-    try {
-      const trans = await loadTranslation(lang);
-      setTranslations(trans);
-      setLanguageState(lang);
-
-      // Persist to localStorage
-      if (typeof window !== 'undefined') {
-        localStorage.setItem(STORAGE_KEY, lang);
-        // Update HTML lang attribute for SEO
-        document.documentElement.lang = lang;
-      }
-    } catch (error) {
-      console.error(`Failed to load language ${lang}:`, error);
-      // Fallback to English on error
-      setTranslations(en);
-      setLanguageState(DEFAULT_LANGUAGE);
-    } finally {
-      setIsLoading(false);
-    }
-  }, []);
-
-  return (
-    <LanguageContext.Provider value={{ language, t: translations, setLanguage, isLoading }}>
-      {children}
-    </LanguageContext.Provider>
-  );
+    document.documentElement.lang = initialLanguage;
+    rememberLanguage(initialLanguage);
+  }, [initialLanguage]);
+  const setLanguage = useCallback((language: Language) => {
+    if (!isValidLanguage(language) || language === initialLanguage) return;
+    rememberLanguage(language);
+    const destination = localizedHref(`${pathname}${window.location.search}${window.location.hash}`, language);
+    startTransition(() => router.push(destination, { scroll: false }));
+  }, [initialLanguage, pathname, router]);
+  return <LanguageContext.Provider value={{ language: initialLanguage, t: initialTranslations, setLanguage, isLoading }}>{children}</LanguageContext.Provider>;
 }
 
 export function useLanguage() {
   const context = useContext(LanguageContext);
-  if (context === undefined) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
-  }
+  if (!context) throw new Error('useLanguage must be used within a LanguageProvider');
   return context;
 }
