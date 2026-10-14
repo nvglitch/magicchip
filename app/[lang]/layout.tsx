@@ -9,6 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LiveChatWidget from "@/components/LiveChatWidget";
 import ScrollToTop from "@/components/ScrollToTop";
+import AnalyticsConsent from "@/components/AnalyticsConsent";
 import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 import { getSiteConfig } from "@/lib/content-loader";
 import { createPageMetadata, DEFAULT_SOCIAL_IMAGE, serializeJsonLd, SITE_NAME, SITE_URL } from "@/lib/seo";
@@ -158,6 +159,7 @@ export default async function RootLayout({
           </main>
           <Footer newsletterEnabled={siteConfig?.newsletter.enabled ?? false} />
           <LiveChatWidget />
+          <AnalyticsConsent />
         </LanguageProvider>
       </body>
     </html>

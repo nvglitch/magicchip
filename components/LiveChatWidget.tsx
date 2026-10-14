@@ -8,6 +8,7 @@ import EmailDraftNotice from '@/components/EmailDraftNotice';
 import InquiryPrivacyNotice from '@/components/InquiryPrivacyNotice';
 import { createInquiryDraft, emailInquiryCopy, type EmailInquiryDraft } from '@/lib/email-inquiry';
 import { whatsappButtonColors } from '@/lib/action-button-styles';
+import { trackSiteEvent } from '@/lib/analytics';
 
 export default function LiveChatWidget() {
   const { t, language } = useLanguage();
@@ -82,6 +83,7 @@ export default function LiveChatWidget() {
   };
 
   const handleStartWhatsApp = () => {
+    trackSiteEvent('whatsapp_click', { source: 'chat_widget' });
     window.open('https://wa.me/8613392172330', '_blank');
   };
 
@@ -89,6 +91,7 @@ export default function LiveChatWidget() {
     e.preventDefault();
     const prepared = createInquiryDraft(formData);
     setDraft(prepared);
+    trackSiteEvent('email_draft_prepared', { source: 'chat_widget' });
     window.location.href = prepared.mailto;
   };
 
@@ -115,6 +118,7 @@ export default function LiveChatWidget() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             aria-label={t.chat.scrollToTop}
+            style={{ bottom: 'calc(6rem + var(--analytics-notice-height, 0px))' }}
             title={t.chat.scrollToTop}
           >
             <ArrowUp className="w-5 h-5" />
@@ -125,7 +129,8 @@ export default function LiveChatWidget() {
       {/* Floating Action Button */}
       <motion.button
         data-chat-fab
-        onClick={() => setIsOpen(true)}
+        onClick={() => { trackSiteEvent('chat_widget_open'); setIsOpen(true); }}
+        style={{ bottom: 'calc(1.5rem + var(--analytics-notice-height, 0px))' }}
         className={`fixed bottom-6 right-6 flex h-14 w-14 items-center justify-center gap-0 rounded-full ${whatsappButtonColors} px-0 shadow-[0_12px_32px_rgba(5,150,105,0.32)] transition-colors hover:shadow-[0_14px_36px_rgba(5,150,105,0.4)] md:w-auto md:min-w-[148px] md:gap-2 md:px-5 z-[9999]`}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}

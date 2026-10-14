@@ -6,6 +6,7 @@ import EmailDraftNotice from '@/components/EmailDraftNotice';
 import InquiryPrivacyNotice from '@/components/InquiryPrivacyNotice';
 import { createInquiryDraft, emailInquiryCopy, type EmailInquiryDraft } from '@/lib/email-inquiry';
 import { actionButtonStyles } from '@/lib/action-button-styles';
+import { trackSiteEvent } from '@/lib/analytics';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Phone, MapPin, MessageCircle, Send, AlertCircle } from 'lucide-react';
 import type { MultiLangText, SiteConfig } from '@/lib/content-loader';
@@ -168,6 +169,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
     if (!validateForm()) return;
     const prepared = createInquiryDraft(formData, siteConfig?.contact.email);
     setDraft(prepared);
+    trackSiteEvent('email_draft_prepared', { source: 'home_form' });
     window.location.href = prepared.mailto;
   };
 

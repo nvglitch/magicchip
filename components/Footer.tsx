@@ -4,6 +4,8 @@ import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { Mail, Phone, MessageCircle } from 'lucide-react';
 import Link from '@/components/LocalizedLink';
 import { legalNavigation, legalPaths, legalRoutes } from '@/lib/legal-navigation';
+import { analyticsCopy } from '@/lib/analytics-copy';
+import { openAnalyticsSettings } from '@/lib/analytics';
 
 export default function Footer({ newsletterEnabled = false }: { newsletterEnabled?: boolean }) {
   const { t, language } = useLanguage();
@@ -105,6 +107,9 @@ export default function Footer({ newsletterEnabled = false }: { newsletterEnable
                   {legalNavigation[language][id]}
                 </Link>
               ))}
+              <button type="button" onClick={openAnalyticsSettings} className="cursor-pointer text-gray-400 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+                {analyticsCopy[language].settings}
+              </button>
             </nav>
           </div>
         </div>

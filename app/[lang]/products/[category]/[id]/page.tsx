@@ -844,7 +844,7 @@ export default function ProductDetailPage() {
     : product.specs;
 
   return (
-    <div className="min-h-screen bg-white text-slate-950">
+    <div data-analytics-product={productId} className="min-h-screen bg-white text-slate-950">
       <section className={`relative overflow-hidden bg-gradient-to-br ${catInfo.gradient} text-white`}>
         <div className="absolute inset-0 opacity-20 tech-pattern-overlay" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">

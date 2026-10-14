@@ -59,6 +59,8 @@ export default function ProductConfigurationSelector({ model, skus, sharedSpecs,
               key={sku.key}
               id={`sku-tab-${sku.key}`}
               type="button"
+              data-analytics-configuration={sku.key}
+              data-analytics-configuration-type="sku"
               role="tab"
               aria-selected={selected === index}
               aria-controls="sku-panel"
