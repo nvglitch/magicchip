@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M1 1l7 3.5L1 8" fill="none" stroke="#106fb8" stroke-width="1.5"/></marker>
+    <style>
+      text{font-family:Inter,'Microsoft YaHei','Noto Sans CJK SC',sans-serif;fill:#172033}
+      .title{font-size:34px;font-weight:700}.subtitle{font-size:20px;fill:#526377}
+      .heading{font-size:25px;font-weight:700}.body{font-size:20px;fill:#526377}
+      .small{font-size:17px;fill:#64748b}.tag{font-size:16px;fill:#106fb8;font-weight:700}
+      .node{fill:#fff;stroke:#b9dcf2;stroke-width:1.5}
+      .arrow{fill:none;stroke:#106fb8;stroke-width:2;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1440" height="900" fill="#f3f7f5"/>
+  <rect x="40" y="40" width="6" height="52" rx="3" fill="#106fb8"/>
+  <text x="64" y="65" class="title">MCAIPC2 · 从兼容关系到完整配置</text>
+  <text x="64" y="102" class="subtitle">内部保留约束与数据边界；界面只展示一套可识别、可分享的配置</text>
+
+  <rect x="40" y="146" width="418" height="186" rx="16" class="node"/>
+  <text x="66" y="181" class="tag">STEP 01 / MAINBOARD</text>
+  <text x="66" y="220" class="heading">选择主板系列</text>
+  <text x="66" y="258" class="body">AXB35-02 / AXB35-03 / AEB35-04</text>
+  <text x="66" y="296" class="small">CPU、内存、网口与扩展随平台变化</text>
+
+  <rect x="511" y="146" width="418" height="186" rx="16" class="node"/>
+  <text x="537" y="181" class="tag">STEP 02 / COMPATIBILITY</text>
+  <text x="537" y="220" class="heading">筛选兼容机箱</text>
+  <text x="537" y="258" class="body">当前机箱兼容 → 保留</text>
+  <text x="537" y="296" class="small">不兼容 → 回退到该主板首个合法组合</text>
+
+  <rect x="982" y="146" width="418" height="186" rx="16" fill="#106fb8"/>
+  <text x="1008" y="181" class="tag" style="fill:#dceefa">STEP 03 / ACTIVE CONFIGURATION</text>
+  <text x="1008" y="220" class="heading" style="fill:#fff">选中一套真实组合</text>
+  <text x="1008" y="258" class="body" style="fill:#fff">示例：AXB35-02 + H04-BQ</text>
+  <text x="1008" y="296" class="small" style="fill:#dceefa">25 个兼容组合，不是全排列</text>
+  <path d="M460 240h45" class="arrow"/><path d="M931 240h45" class="arrow"/>
+
+  <path d="M1191 334v38H250v42" class="arrow"/>
+  <path d="M1191 372H720v42" class="arrow"/>
+  <path d="M1191 372v42" class="arrow"/>
+
+  <rect x="40" y="420" width="418" height="190" rx="16" class="node"/>
+  <text x="66" y="460" class="heading">图像与视角</text>
+  <text x="66" y="501" class="body">所选机箱图片与配置视图</text>
+  <text x="66" y="535" class="body">主图随选型切换</text>
+  <text x="66" y="575" class="small">鼠标查看细节；触屏可点击预览</text>
+  <rect x="511" y="420" width="418" height="190" rx="16" class="node"/>
+  <text x="537" y="460" class="heading">完整参数</text>
+  <text x="537" y="501" class="body">平台参数 + 机箱与供电信息</text>
+  <text x="537" y="535" class="body">一张表格，避免读者来回对照</text>
+  <text x="537" y="575" class="small">通用 SKU：选中字段覆盖同名共用项</text>
+  <rect x="982" y="420" width="418" height="190" rx="16" class="node"/>
+  <text x="1008" y="460" class="heading">URL 与状态</text>
+  <text x="1008" y="501" class="body">#sku-axb35-02-h04-bq</text>
+  <text x="1008" y="535" class="body">replaceState 更新，刷新可恢复</text>
+  <text x="1008" y="575" class="small">hash 不发送至服务器，由浏览器解析</text>
+
+  <rect x="40" y="654" width="1360" height="88" rx="14" fill="#172033"/>
+  <text x="66" y="689" class="heading" style="fill:#fff">分享与迁移也必须保持一致</text>
+  <text x="66" y="722" class="body" style="fill:#dceefa">搜索直达配置 → 旧型号地址永久跳转 → 服务端输出系列 ProductGroup 与 hasVariant</text>
+
+  <rect x="40" y="771" width="1360" height="87" rx="14" fill="#fff7e8" stroke="#f0d8aa"/>
+  <text x="66" y="805" class="heading">数据原则：不能组合出产品实际不存在的能力</text>
+  <text x="66" y="837" class="small">共享字段必须适用于所有 Type；外观显著不同的产品允许独立页面。兼容性和来源事实仍需人工审核。</text>
+</svg>

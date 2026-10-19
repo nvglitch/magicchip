@@ -848,25 +848,27 @@ export default function ProductDetailPage() {
       <section className={`relative overflow-hidden bg-gradient-to-br ${catInfo.gradient} text-white`}>
         <div className="absolute inset-0 opacity-20 tech-pattern-overlay" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-          <Link href={backToCategoryHref} className="inline-flex items-center text-sm text-slate-300 hover:text-white transition-colors mb-8">
-            <ChevronLeft className="w-4 h-4 mr-1" />
-            {t.productDetail.backToCategory.replace('{category}', catInfo?.name || category)}
-          </Link>
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-x-6 gap-y-4 md:mb-8">
+            <Link href={backToCategoryHref} className="inline-flex min-w-0 items-center gap-1 text-sm text-slate-300 transition-colors hover:text-white">
+              <ChevronLeft aria-hidden="true" className="h-4 w-4 shrink-0" />
+              <span>{t.productDetail.backToCategory.replace('{category}', catInfo?.name || category)}</span>
+            </Link>
+            <div className="ml-auto inline-flex max-w-full items-center gap-2 rounded-full border border-blue-200/30 bg-blue-300/10 px-4 py-2 text-sm text-blue-100">
+              <CategoryIcon aria-hidden="true" className="h-4 w-4 shrink-0" />
+              <span>{catInfo?.name || ''}</span>
+            </div>
+          </div>
 
-          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1.06fr)_minmax(400px,0.94fr)] lg:gap-12">
-            <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }}>
-              <div className="inline-flex items-center gap-2 rounded-full border border-blue-200/30 bg-blue-300/10 px-4 py-2 text-sm text-blue-100 mb-6">
-                <CategoryIcon className="w-4 h-4" />
-                {catInfo?.name || ''}
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold tracking-normal mb-5">{product.name}</h1>
-              <p className="text-xl md:text-2xl text-slate-200 mb-6 max-w-2xl">{product.tagline}</p>
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,1.06fr)_minmax(400px,0.94fr)] lg:gap-12">
+            <motion.div className="min-w-0" initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }}>
+              <h1 className="mb-4 break-words text-4xl font-bold tracking-normal md:text-6xl">{product.name}</h1>
+              <p className="mb-5 max-w-2xl text-xl leading-snug text-slate-200 md:text-2xl">{product.tagline}</p>
               <p className="text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl">{product.description}</p>
 
-              <div className="grid grid-cols-2 gap-3 mt-8 max-w-2xl">
+              <div className="mt-6 grid max-w-2xl grid-cols-2 gap-4 md:mt-7">
                 {product.highlights.map((item) => (
-                  <div key={item} className="flex min-h-[68px] items-center rounded-lg border border-amber-200/20 bg-amber-200/10 px-4 py-3 text-sm font-medium leading-5 text-amber-50">
-                    <span className="line-clamp-2">{item}</span>
+                  <div key={item} className="flex min-h-[72px] items-center rounded-lg border border-amber-200/20 bg-amber-200/10 px-4 py-4 text-sm font-medium leading-relaxed text-amber-50 sm:px-5">
+                    <span className="min-w-0 break-words">{item}</span>
                   </div>
                 ))}
               </div>
@@ -874,10 +876,10 @@ export default function ProductDetailPage() {
               <button
                 type="button"
                 onClick={() => document.getElementById('contact-cta')?.scrollIntoView({ behavior: 'smooth' })}
-                className="liquid-cta liquid-cta-solid mt-6 inline-flex cursor-pointer items-center gap-2 px-6 py-3 text-sm font-semibold"
+                className="liquid-cta liquid-cta-solid mt-6 inline-flex min-h-14 min-w-[224px] cursor-pointer items-center justify-center gap-3 px-8 py-3.5 text-base font-semibold"
               >
                 <span>{t.productDetail.contactSales}</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight aria-hidden="true" className="h-5 w-5 shrink-0" />
               </button>
             </motion.div>
 
