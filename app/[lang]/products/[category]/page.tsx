@@ -16,6 +16,7 @@ import { industrialCatalog } from '@/lib/industrial-catalog';
 import { firewallCatalog } from '@/lib/firewall-catalog';
 import { commercialCatalog } from '@/lib/commercial-catalog';
 import { nasMotherboardCopy } from '@/lib/nas-motherboard-copy';
+import { actionButtonStyles } from '@/lib/action-button-styles';
 
 const categoryData: Record<string, { icon: LucideIcon; gradient: string; image: string }> = {
   'industrial-mini-pc': { icon: Cpu, gradient: 'from-blue-600 to-blue-700', image: '/assets/home/categories/industrial-mini-pc.png' },
@@ -406,22 +407,17 @@ export default function CategoryPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex items-center gap-6"
+            className="max-w-3xl"
           >
-            <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-950/30 flex-shrink-0">
-              <IconComponent className="w-10 h-10 text-white" />
-            </div>
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-3">{categoryName}</h1>
-              <p className="text-xl text-gray-300 max-w-2xl">{categoryDesc}</p>
-              <div className="mt-7 flex flex-wrap gap-3">
-                <Link href="#models" className="inline-flex items-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-500">
-                  Browse Models <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-                <Link href="#applications" className="inline-flex items-center rounded-full border border-white/25 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10">
-                  View Applications
-                </Link>
-              </div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-3">{categoryName}</h1>
+            <p className="text-xl text-gray-300 max-w-2xl">{categoryDesc}</p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link href="#models" className={actionButtonStyles.primary}>
+                Browse Models <ArrowRight aria-hidden="true" className="h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
+              </Link>
+              <Link href="#applications" className={actionButtonStyles.secondaryOnDark}>
+                View Applications
+              </Link>
             </div>
           </motion.div>
         </div>

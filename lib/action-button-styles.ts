@@ -5,5 +5,6 @@ export const whatsappButtonColors = 'bg-emerald-600 text-white hover:bg-emerald-
 
 export const actionButtonStyles = {
   primary: `${layout} bg-blue-600 text-white shadow-blue-600/20 hover:bg-blue-700`,
+  secondaryOnDark: `${layout} bg-white/5 text-white shadow-black/10 ring-1 ring-inset ring-white/30 hover:bg-white/10 hover:ring-white/60`,
   whatsapp: `${layout} ${whatsappButtonColors} shadow-emerald-600/20`,
 } as const;
