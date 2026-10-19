@@ -370,7 +370,7 @@ export default function Navbar() {
                 <Link
                   href={item.href}
                   aria-current={isNavItemActive(item) ? 'page' : undefined}
-                  className={`nav-item group relative inline-flex items-center gap-1 rounded-lg px-2 py-2 text-sm font-medium transition-colors duration-300 hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 xl:px-4 xl:text-base 2xl:px-5 ${isNavItemActive(item) ? 'text-blue-700' : 'text-slate-600'}`}
+                  className={`nav-item group relative inline-flex items-center gap-1 rounded-lg px-2 py-2 text-sm font-medium transition-colors duration-300 hover:text-brand-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 xl:px-4 xl:text-base 2xl:px-5 ${isNavItemActive(item) ? 'text-brand' : 'text-slate-600'}`}
                 >
                   <span className="relative">
                     {item.label}
@@ -401,7 +401,7 @@ export default function Navbar() {
                           <div>
                             <h2 className="text-2xl font-bold text-slate-950 lg:text-3xl">{t.nav.products}</h2>
                           </div>
-                          <Link href="/products" className="inline-flex items-center gap-1 text-sm font-semibold text-slate-600 transition-colors hover:text-blue-700">
+                          <Link href="/products" className="inline-flex items-center gap-1 text-sm font-semibold text-slate-600 transition-colors hover:text-brand-hover">
                             {t.products.learnMore}
                             <ChevronRight className="h-4 w-4" />
                           </Link>
@@ -421,7 +421,7 @@ export default function Navbar() {
                                     : 'text-slate-600 hover:bg-white/65 hover:text-slate-950'
                                 }`}
                               >
-                                {category.icon && <category.icon className={`h-5 w-5 ${activeMegaCategory.id === category.id ? 'text-blue-600' : 'text-slate-400'}`} />}
+                                {category.icon && <category.icon className={`h-5 w-5 ${activeMegaCategory.id === category.id ? 'text-brand' : 'text-slate-400'}`} />}
                                 <span>{category.title}</span>
                                 <ChevronRight className="ml-auto h-4 w-4 text-slate-400" />
                               </Link>
@@ -434,7 +434,7 @@ export default function Navbar() {
                                 <h3 className="text-xl font-bold text-slate-950">{activeMegaCategory.title}</h3>
                                 <p className="mt-1 hidden text-sm text-slate-500 lg:block">{activeMegaCategory.description}</p>
                               </div>
-                              <Link href={activeMegaCategory.href} className="shrink-0 text-sm font-semibold text-blue-700 hover:text-blue-800">
+                              <Link href={activeMegaCategory.href} className="shrink-0 text-sm font-semibold text-brand hover:text-brand-hover">
                                 {t.products.learnMore}
                               </Link>
                             </div>
@@ -464,7 +464,7 @@ export default function Navbar() {
                                       <span className="inline-flex rounded-md bg-slate-950 px-2 py-0.5 text-[10px] font-bold text-white">{series.code}</span>
                                       <div className="mt-1 flex items-center gap-1">
                                         <h4 className="text-base font-bold text-slate-950">{series.id === 'series-nas-mb' ? nasMotherboardCopy[language].title : series.code === 'E' ? industrialESeriesCopy[language].title : series.title}</h4>
-                                        <ChevronRight className="h-4 w-4 shrink-0 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:text-blue-600" />
+                                        <ChevronRight className="h-4 w-4 shrink-0 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:text-brand-hover" />
                                       </div>
                                       <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-slate-500">{series.id === 'series-nas-mb' ? nasMotherboardCopy[language].description : series.code === 'E' ? industrialESeriesCopy[language].description : series.description}</p>
                                     </div>
@@ -489,7 +489,7 @@ export default function Navbar() {
                           <div>
                             <h2 className="text-2xl font-bold text-slate-950 lg:text-3xl">{t.nav.solutions}</h2>
                           </div>
-                          <Link href="/scenarios" className="inline-flex items-center gap-1 text-sm font-semibold text-slate-600 transition-colors hover:text-blue-700">
+                          <Link href="/scenarios" className="inline-flex items-center gap-1 text-sm font-semibold text-slate-600 transition-colors hover:text-brand-hover">
                             {t.navDropdown?.solutions?.viewAll || t.products.learnMore}
                             <ChevronRight className="h-4 w-4" />
                           </Link>
@@ -509,7 +509,7 @@ export default function Navbar() {
                                     : 'text-slate-600 hover:bg-white/65 hover:text-slate-950'
                                 }`}
                               >
-                                {scenario.icon && <scenario.icon className={`h-5 w-5 shrink-0 ${activeMegaScenario.id === scenario.id ? 'text-blue-600' : 'text-slate-400'}`} />}
+                                {scenario.icon && <scenario.icon className={`h-5 w-5 shrink-0 ${activeMegaScenario.id === scenario.id ? 'text-brand' : 'text-slate-400'}`} />}
                                 <span className="leading-snug">{scenario.title}</span>
                                 <ChevronRight className="ml-auto h-4 w-4 shrink-0 text-slate-400" />
                               </Link>
@@ -522,7 +522,7 @@ export default function Navbar() {
                                 <h3 className="text-xl font-bold text-slate-950">{activeMegaScenario.title}</h3>
                                 <p className="mt-1 hidden text-sm text-slate-500 lg:block">{activeMegaScenario.description}</p>
                               </div>
-                              <Link href={activeMegaScenario.href} className="shrink-0 text-sm font-semibold text-blue-700 hover:text-blue-800">
+                              <Link href={activeMegaScenario.href} className="shrink-0 text-sm font-semibold text-brand hover:text-brand-hover">
                                 {t.products.learnMore}
                               </Link>
                             </div>
@@ -546,7 +546,7 @@ export default function Navbar() {
                                   <div className="border-t border-slate-100 px-4 py-3.5">
                                     <div className="flex items-center justify-between gap-3">
                                       <h4 className="font-bold text-slate-950">{product.name}</h4>
-                                      <ChevronRight className="h-4 w-4 shrink-0 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:text-blue-600" />
+                                      <ChevronRight className="h-4 w-4 shrink-0 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:text-brand-hover" />
                                     </div>
                                     <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-slate-500">{product.tagline}</p>
                                   </div>
@@ -574,7 +574,7 @@ export default function Navbar() {
                           >
                             {dropdownItem.icon && (
                               <div className="mr-3 flex h-5 w-5 flex-shrink-0 items-center justify-center">
-                                <dropdownItem.icon className="h-5 w-5 text-slate-400 transition-colors group-hover:text-blue-600" />
+                                <dropdownItem.icon className="h-5 w-5 text-slate-400 transition-colors group-hover:text-brand-hover" />
                               </div>
                             )}
                             <div className="min-w-0 flex-1">
@@ -603,7 +603,7 @@ export default function Navbar() {
                   setIsLangMenuOpen(!isLangMenuOpen);
                   setIsMobileMenuOpen(false);
                 }}
-                className="group flex h-9 items-center gap-1 rounded-full border border-slate-200 bg-slate-50/80 px-2 text-slate-600 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700 hover:shadow-md hover:shadow-blue-100/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 sm:h-auto sm:gap-1.5 sm:px-3 sm:py-2"
+                className="group flex h-9 items-center gap-1 rounded-full border border-slate-200 bg-slate-50/80 px-2 text-slate-600 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:bg-blue-50 hover:text-brand-hover hover:shadow-md hover:shadow-blue-100/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 sm:h-auto sm:gap-1.5 sm:px-3 sm:py-2"
                 aria-label={t.nav.languageAriaLabel}
                 aria-busy={isLoading}
                 disabled={isLoading}
@@ -639,7 +639,7 @@ export default function Navbar() {
                       >
                         <span>{lang.label}</span>
                         {language === lang.code && (
-                          <Check className="h-4 w-4 flex-shrink-0 text-blue-600" />
+                          <Check className="h-4 w-4 flex-shrink-0 text-brand" />
                         )}
                       </button>
                     ))}
@@ -654,7 +654,7 @@ export default function Navbar() {
                 setIsMobileMenuOpen(!isMobileMenuOpen);
                 setIsLangMenuOpen(false);
               }}
-              className="touch-manipulation rounded-xl p-2 text-slate-700 transition-all duration-300 hover:bg-blue-50 hover:text-blue-700 active:scale-95 lg:hidden"
+              className="touch-manipulation rounded-xl p-2 text-slate-700 transition-all duration-300 hover:bg-blue-50 hover:text-brand-hover active:scale-95 lg:hidden"
               aria-label={t.nav.menuAriaLabel}
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -680,7 +680,7 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     aria-current={isNavItemActive(item) ? 'page' : undefined}
-                    className={`block rounded-lg px-2 py-2 font-medium touch-manipulation ${isNavItemActive(item) ? 'bg-blue-50 text-blue-700' : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'}`}
+                    className={`block rounded-lg px-2 py-2 font-medium touch-manipulation ${isNavItemActive(item) ? 'bg-blue-50 text-brand' : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'}`}
                     onClick={() => !item.dropdown && setIsMobileMenuOpen(false)}
                   >
                     {item.label}
@@ -713,7 +713,7 @@ export default function Navbar() {
 
       {/* Scroll progress bar */}
       <motion.div
-        className="absolute bottom-0 left-0 right-0 h-[2px] origin-left bg-gradient-to-r from-blue-600 via-cyan-400 to-amber-400"
+        className="absolute bottom-0 left-0 right-0 h-[2px] origin-left bg-gradient-to-r from-blue-600 via-blue-400 to-amber-400"
         style={{ scaleX }}
       />
     </nav>

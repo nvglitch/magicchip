@@ -153,10 +153,10 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
                   className="absolute inset-0"
                   animate={{
                     background: [
-                      'radial-gradient(ellipse at 25% 40%, rgba(37,99,235,0.22) 0%, transparent 55%), radial-gradient(ellipse at 70% 55%, rgba(245,158,11,0.09) 0%, transparent 52%)',
-                      'radial-gradient(ellipse at 65% 35%, rgba(37,99,235,0.2) 0%, transparent 55%), radial-gradient(ellipse at 30% 60%, rgba(245,158,11,0.08) 0%, transparent 52%)',
-                      'radial-gradient(ellipse at 45% 55%, rgba(37,99,235,0.18) 0%, transparent 55%), radial-gradient(ellipse at 75% 35%, rgba(245,158,11,0.08) 0%, transparent 52%)',
-                      'radial-gradient(ellipse at 25% 40%, rgba(37,99,235,0.22) 0%, transparent 55%), radial-gradient(ellipse at 70% 55%, rgba(245,158,11,0.09) 0%, transparent 52%)',
+                      'radial-gradient(ellipse at 25% 40%, rgba(16,111,184,0.22) 0%, transparent 55%), radial-gradient(ellipse at 70% 55%, rgba(245,158,11,0.09) 0%, transparent 52%)',
+                      'radial-gradient(ellipse at 65% 35%, rgba(16,111,184,0.2) 0%, transparent 55%), radial-gradient(ellipse at 30% 60%, rgba(245,158,11,0.08) 0%, transparent 52%)',
+                      'radial-gradient(ellipse at 45% 55%, rgba(16,111,184,0.18) 0%, transparent 55%), radial-gradient(ellipse at 75% 35%, rgba(245,158,11,0.08) 0%, transparent 52%)',
+                      'radial-gradient(ellipse at 25% 40%, rgba(16,111,184,0.22) 0%, transparent 55%), radial-gradient(ellipse at 70% 55%, rgba(245,158,11,0.09) 0%, transparent 52%)',
                     ],
                   }}
                   transition={{ repeat: Infinity, duration: 10, ease: 'easeInOut' }}

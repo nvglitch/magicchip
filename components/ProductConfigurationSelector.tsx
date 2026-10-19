@@ -65,7 +65,7 @@ export default function ProductConfigurationSelector({ model, skus, sharedSpecs,
               aria-selected={selected === index}
               aria-controls="sku-panel"
               onClick={() => selectSku(index)}
-              className={`rounded-xl border px-5 py-4 text-left font-semibold transition-all hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-2 focus-visible:outline-blue-600 ${selected === index ? 'border-blue-500 bg-blue-50 text-blue-800 shadow-sm' : 'border-blue-200 bg-white text-slate-800 hover:border-blue-400'}`}
+              className={`rounded-xl border px-5 py-4 text-left font-semibold transition-all hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-2 focus-visible:outline-blue-600 ${selected === index ? 'border-blue-500 bg-blue-50 text-brand shadow-sm' : 'border-blue-200 bg-white text-slate-800 hover:border-blue-400'}`}
             >
               {verticalCards ? <>
                 <span className="block text-lg">{configurationLabel(sku).split(' · ')[0]}</span>

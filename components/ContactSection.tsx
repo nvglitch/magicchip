@@ -198,7 +198,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                 className="group flex items-center rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg"
               >
                 <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-100 transition-colors">
-                  <Mail className="w-5 h-5 text-blue-600" />
+                  <Mail className="w-5 h-5 text-brand" />
                 </div>
                 <div>
                   <div className="text-sm text-gray-500">{data.labels.email}</div>
@@ -211,7 +211,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                 className="group flex items-center rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg"
               >
                 <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-100 transition-colors">
-                  <Phone className="w-5 h-5 text-blue-600" />
+                  <Phone className="w-5 h-5 text-brand" />
                 </div>
                 <div>
                   <div className="text-sm text-gray-500">{data.labels.phone}</div>
@@ -226,7 +226,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                 className="group flex items-center rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg"
               >
                 <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-100 transition-colors">
-                  <MessageCircle className="w-5 h-5 text-blue-600" />
+                  <MessageCircle className="w-5 h-5 text-brand" />
                 </div>
                 <div>
                   <div className="text-sm text-gray-500">{data.labels.whatsapp}</div>
@@ -239,7 +239,7 @@ export default function ContactSection({ siteConfig }: ContactSectionProps) {
                 className="group flex items-start rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50"
               >
                 <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mr-4 flex-shrink-0 transition-all group-hover:bg-blue-100 group-hover:scale-105">
-                  <MapPin className="w-5 h-5 text-blue-600 transition-transform group-hover:-translate-y-0.5" />
+                  <MapPin className="w-5 h-5 text-brand transition-transform group-hover:-translate-y-0.5" />
                 </div>
                 <div>
                   <div className="text-sm text-gray-500">{data.labels.address}</div>

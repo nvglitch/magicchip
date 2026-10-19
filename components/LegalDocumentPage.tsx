@@ -32,7 +32,7 @@ export default function LegalDocumentPage({ documentId, documents }: {
             <ol className="mt-4 space-y-3 text-sm leading-6">
               {document.sections.map(section => (
                 <li key={section.id}>
-                  <Link href={`#${section.id}`} className="block text-slate-600 transition-colors hover:text-blue-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600">{section.title}</Link>
+                  <Link href={`#${section.id}`} className="block text-slate-600 transition-colors hover:text-brand-hover focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600">{section.title}</Link>
                 </li>
               ))}
             </ol>
@@ -47,14 +47,14 @@ export default function LegalDocumentPage({ documentId, documents }: {
                 {section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
                 {section.items && <ul className="list-disc space-y-2 pl-5">{section.items.map(item => <li key={item}>{item}</li>)}</ul>}
                 {section.links && <ul className="space-y-2">{section.links.map(link => (
-                  <li key={link.href}><Link href={link.href} className="break-words text-blue-600 underline decoration-blue-200 underline-offset-4 hover:text-blue-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600">{link.label}</Link></li>
+                  <li key={link.href}><Link href={link.href} className="break-words text-brand underline decoration-blue-200 underline-offset-4 hover:text-brand-hover focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600">{link.label}</Link></li>
                 ))}</ul>}
               </div>
             </section>
           ))}
 
           <nav aria-label={labels.navigation} className="flex flex-wrap gap-x-6 gap-y-3 border-t border-slate-200 pt-6 text-sm">
-            {legalRoutes.filter(id => id !== documentId).map(id => <Link key={id} href={legalPaths[id]} className="text-blue-600 underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600">{labels[id]}</Link>)}
+            {legalRoutes.filter(id => id !== documentId).map(id => <Link key={id} href={legalPaths[id]} className="text-brand underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600">{labels[id]}</Link>)}
           </nav>
         </article>
       </div>

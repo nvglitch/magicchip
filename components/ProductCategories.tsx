@@ -100,7 +100,7 @@ export default function ProductCategories({ products }: ProductCategoriesProps) 
                 </p>
                 <Link
                   href={`/products/${category.id}`}
-                  className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors group/link"
+                  className="inline-flex items-center text-brand font-medium hover:text-brand-hover transition-colors group/link"
                 >
                   {t.products.learnMore}
                   <ArrowRight className="w-4 h-4 ml-2 transform group-hover/link:translate-x-1 transition-transform" />

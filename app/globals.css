@@ -4,8 +4,9 @@
   --background: #ffffff;
   --foreground: #172033;
   --brand-ink: #172033;
-  --brand-teal: #087f8c;
-  --brand-teal-soft: #e4f5f4;
+  --brand-blue: #106fb8;
+  --brand-blue-hover: #0d5e9c;
+  --brand-blue-soft: #f0f7fc;
   --brand-amber: #d88a16;
   --brand-amber-soft: #fff5df;
   --brand-coral: #d95d4f;
@@ -13,13 +14,25 @@
   --brand-mint: #49a58d;
   --brand-surface: #f5f8f7;
   --brand-line: #d9e4e1;
-  --accent: var(--brand-teal);
+  --accent: var(--brand-blue);
   --accent-foreground: #ffffff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-brand: var(--brand-blue);
+  --color-brand-hover: var(--brand-blue-hover);
+  /* One blue family for links, controls, focus rings, and tinted surfaces. */
+  --color-blue-50: var(--brand-blue-soft);
+  --color-blue-100: #dceefa;
+  --color-blue-200: #b9dcf2;
+  --color-blue-300: #87c1e8;
+  --color-blue-400: #4c9bd4;
+  --color-blue-500: var(--brand-blue);
+  --color-blue-600: var(--brand-blue);
+  --color-blue-700: var(--brand-blue-hover);
+  --color-blue-800: #104f80;
   --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
 }
@@ -36,6 +49,8 @@ body {
   color: var(--foreground);
   overflow-x: hidden;
   min-width: 320px;
+  /* Keep copyright and trademark characters in text presentation. UI icons use SVG. */
+  font-variant-emoji: text;
 }
 
 html {
@@ -67,7 +82,7 @@ html {
 
 /* Selection color */
 ::selection {
-  background: rgba(8, 127, 140, 0.22);
+  background: rgba(16, 111, 184, 0.22);
   color: inherit;
 }
 
@@ -108,7 +123,7 @@ html {
   background-color: #ffffff;
   background-image:
     /* fine dot matrix */
-    radial-gradient(circle at 1px 1px, rgba(8,127,140,0.08) 0.5px, transparent 0.5px),
+    radial-gradient(circle at 1px 1px, rgba(16,111,184,0.08) 0.5px, transparent 0.5px),
     /* sparse anchor dots */
     radial-gradient(circle at center, rgba(216,138,22,0.04) 1px, transparent 1px);
   background-size: 16px 16px, 64px 64px;
@@ -123,24 +138,24 @@ html {
 }
 
 .brand-kicker {
-  color: var(--brand-teal);
+  color: var(--brand-blue);
 }
 
 .brand-link {
-  color: var(--brand-teal);
+  color: var(--brand-blue);
 }
 
 .brand-link:hover {
-  color: #075f69;
+  color: var(--brand-blue-hover);
 }
 
 .brand-button-primary {
-  background: var(--brand-teal);
+  background: var(--brand-blue);
   color: #ffffff;
 }
 
 .brand-button-primary:hover {
-  background: #076b76;
+  background: var(--brand-blue-hover);
 }
 
 .brand-button-secondary {
@@ -200,21 +215,21 @@ html {
 .liquid-cta-outline:hover,
 .liquid-cta-outline:focus-visible {
   border-color: #ffffff;
-  color: #1d4ed8;
+  color: var(--brand-blue);
   box-shadow: 0 12px 28px rgba(15, 23, 42, 0.28);
 }
 
 .liquid-cta-solid {
-  border: 2px solid #1d4ed8;
-  background: #1d4ed8;
+  border: 2px solid var(--brand-blue);
+  background: var(--brand-blue);
   color: #ffffff;
-  box-shadow: 0 10px 24px rgba(29, 78, 216, 0.22);
+  box-shadow: 0 10px 24px rgba(16, 111, 184, 0.22);
 }
 
 .liquid-cta-solid:hover,
 .liquid-cta-solid:focus-visible {
-  color: #1d4ed8;
-  box-shadow: 0 14px 30px rgba(29, 78, 216, 0.2);
+  color: var(--brand-blue);
+  box-shadow: 0 14px 30px rgba(16, 111, 184, 0.2);
 }
 
 @media (prefers-reduced-motion: reduce) {

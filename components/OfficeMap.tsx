@@ -27,13 +27,13 @@ export default function OfficeMap({ address, city }: { address: string; city: st
         </>
       ) : (
         <div className="max-w-md px-6 py-10 text-center">
-          <MapPin className="mx-auto h-10 w-10 text-blue-600" aria-hidden="true" />
+          <MapPin className="mx-auto h-10 w-10 text-brand" aria-hidden="true" />
           <p className="mt-4 text-lg font-semibold text-slate-900">{city}</p>
           <p className="mt-3 text-sm leading-6 text-slate-600">{labels.notice}</p>
           <button type="button" onClick={() => setLoaded(true)} className="mt-6 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600">{labels.load}</button>
           <div className="mt-5 flex flex-wrap justify-center gap-x-5 gap-y-2 text-xs text-slate-500">
-            <Link href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-blue-600">{labels.privacy}</Link>
-            <Link href="/cookie-policy" className="underline underline-offset-4 hover:text-blue-600">{labels.policy}</Link>
+            <Link href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-brand-hover">{labels.privacy}</Link>
+            <Link href="/cookie-policy" className="underline underline-offset-4 hover:text-brand-hover">{labels.policy}</Link>
           </div>
         </div>
       )}

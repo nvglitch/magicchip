@@ -70,7 +70,7 @@ export default function AnalyticsConsent() {
       <div className="relative mx-auto flex max-w-7xl flex-col gap-5 lg:flex-row lg:items-center lg:gap-8">
         <div className="min-w-0 flex-1 pr-7">
           <h2 id="analytics-notice-title" className="text-lg font-semibold text-slate-950">{words.title}</h2>
-          <p className="mt-2 text-sm leading-6 text-slate-600">{words.description} <Link href="/cookie-policy" onClick={() => setSettingsOpen(false)} className="font-medium text-blue-700 underline underline-offset-2">{words.cookieLink}</Link></p>
+          <p className="mt-2 text-sm leading-6 text-slate-600">{words.description} <Link href="/cookie-policy" onClick={() => setSettingsOpen(false)} className="font-medium text-brand underline underline-offset-2">{words.cookieLink}</Link></p>
           {settingsOpen && <p role="status" className="mt-2 text-sm font-medium text-slate-700">{consent === 'granted' ? words.enabled : words.disabled}</p>}
         </div>
         <div className="flex shrink-0 flex-col gap-3 sm:flex-row">

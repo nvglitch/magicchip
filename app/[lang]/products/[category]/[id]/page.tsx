@@ -831,7 +831,7 @@ export default function ProductDetailPage() {
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">{t.productDetail.productNotFound}</h1>
-          <Link href="/products" className="text-blue-700 hover:underline">
+          <Link href="/products" className="text-brand hover:underline">
             {t.productDetail.backToProducts}
           </Link>
         </div>
@@ -967,7 +967,7 @@ export default function ProductDetailPage() {
                     transition={{ duration: 0.45, delay: index * 0.08 }}
                     className="rounded-xl border border-blue-100 bg-white p-6 shadow-sm hover:-translate-y-1 hover:border-amber-300 hover:shadow-md transition-all"
                   >
-                    <div className={`w-11 h-11 rounded-lg flex items-center justify-center mb-5 ring-1 ${index === 0 ? 'bg-blue-50 text-blue-700 ring-blue-200' : index === 1 ? 'bg-amber-50 text-amber-700 ring-amber-200' : 'bg-rose-50 text-rose-700 ring-rose-200'}`}>
+                    <div className={`w-11 h-11 rounded-lg flex items-center justify-center mb-5 ring-1 ${index === 0 ? 'bg-blue-50 text-brand ring-blue-200' : index === 1 ? 'bg-amber-50 text-amber-700 ring-amber-200' : 'bg-rose-50 text-rose-700 ring-rose-200'}`}>
                       <FeatureIcon className="w-6 h-6" />
                     </div>
                     <h3 className="text-lg font-bold text-slate-950 mb-2">{feature.title}</h3>

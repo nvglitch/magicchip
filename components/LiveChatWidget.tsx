@@ -182,7 +182,7 @@ export default function LiveChatWidget() {
                   onClick={() => setActiveTab('whatsapp')}
                   className={`flex-1 py-3 text-sm font-medium transition-colors relative ${
                     activeTab === 'whatsapp'
-                      ? 'text-blue-600'
+                      ? 'text-brand'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -198,7 +198,7 @@ export default function LiveChatWidget() {
                   onClick={() => setActiveTab('message')}
                   className={`flex-1 py-3 text-sm font-medium transition-colors relative ${
                     activeTab === 'message'
-                      ? 'text-blue-600'
+                      ? 'text-brand'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -370,7 +370,7 @@ export default function LiveChatWidget() {
                   onClick={() => setActiveTab('whatsapp')}
                   className={`flex-1 py-3 text-sm font-medium transition-colors relative ${
                     activeTab === 'whatsapp'
-                      ? 'text-blue-600'
+                      ? 'text-brand'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -386,7 +386,7 @@ export default function LiveChatWidget() {
                   onClick={() => setActiveTab('message')}
                   className={`flex-1 py-3 text-sm font-medium transition-colors relative ${
                     activeTab === 'message'
-                      ? 'text-blue-600'
+                      ? 'text-brand'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >

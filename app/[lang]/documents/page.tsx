@@ -165,7 +165,7 @@ export default function DocumentsPage() {
     <div className="min-h-screen bg-[#f3f7f5] text-slate-950">
       {/* Hero Section */}
       <section className="relative isolate overflow-hidden bg-[#101827] text-white">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_20%,rgba(37,99,235,0.3),transparent_34%),radial-gradient(circle_at_15%_85%,rgba(245,158,11,0.14),transparent_28%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_20%,rgba(16,111,184,0.3),transparent_34%),radial-gradient(circle_at_15%_85%,rgba(245,158,11,0.14),transparent_28%)]" />
         <div className="absolute inset-0 -z-10 opacity-20 tech-pattern-overlay" />
         <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 md:py-28 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
@@ -197,14 +197,14 @@ export default function DocumentsPage() {
                     <section.icon className="w-7 h-7 text-white" />
                   </div>
 
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{section.title}</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-hover transition-colors">{section.title}</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">{section.href === '/downloads' ? certificateCopy[language].downloadsIntro : section.description}</p>
 
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-lg font-bold text-blue-600">{section.href === '/downloads' ? `${certificateFileCount} ${certificateCopy[language].files}` : section.stats}</span>
+                    <span className="text-lg font-bold text-brand">{section.href === '/downloads' ? `${certificateFileCount} ${certificateCopy[language].files}` : section.stats}</span>
                   </div>
 
-                  <span className="inline-flex items-center text-blue-600 font-semibold group-hover:text-blue-700">
+                  <span className="inline-flex items-center text-brand font-semibold group-hover:text-brand-hover">
                     {t.documentsPage.viewButton}
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
                   </span>

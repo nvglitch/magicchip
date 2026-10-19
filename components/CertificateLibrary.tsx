@@ -31,16 +31,16 @@ export default function CertificateLibrary({ dark = false, displayOnly = false }
                 <p className="mt-3 break-all text-xs text-slate-500">{cert.number}</p>
                 <p className="mt-1 text-xs text-slate-500">{text.issued}: <time dateTime={cert.issued}>{new Intl.DateTimeFormat(language, { dateStyle: 'medium', timeZone: 'UTC' }).format(new Date(`${cert.issued}T00:00:00Z`))}</time></p>
                 {!displayOnly && <><div className="mt-5 space-y-2">
-                  <LocalizedLink href={cert.certificate.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-semibold text-blue-700 hover:underline"><ExternalLink className="h-4 w-4 shrink-0" />{text.preview}</LocalizedLink>
+                  <LocalizedLink href={cert.certificate.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-semibold text-brand hover:underline"><ExternalLink className="h-4 w-4 shrink-0" />{text.preview}</LocalizedLink>
                   {[{ file: cert.certificate, label: text.download }, { file: cert.report, label: text.report }].map(({ file, label }) => (
                     <LocalizedLink key={file.href} href={file.href} download className="flex items-start gap-2 rounded-lg border border-slate-200 p-3 text-sm transition hover:border-blue-400 hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-blue-600">
-                      <Download className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" />
+                      <Download className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
                       <span><span className="block font-medium">{label}</span><span className="mt-1 block text-xs text-slate-500">PDF · {(file.bytes / 1024 / 1024).toFixed(2)} MB · {`${file.pages} ${file.pages === 1 ? text.page : text.pages}`}</span></span>
                     </LocalizedLink>
                   ))}
                 </div>
                 <details className="mt-5 border-t border-slate-200 pt-4 text-sm">
-                  <summary className="cursor-pointer font-medium text-slate-700 hover:text-blue-700">{text.details}</summary>
+                  <summary className="cursor-pointer font-medium text-slate-700 hover:text-brand-hover">{text.details}</summary>
                   <p className="mt-3 font-medium">{text.standards}</p>
                   <ul className="mt-2 space-y-1 break-words text-xs leading-5 text-slate-600">{cert.standards.map(standard => <li key={standard}>{standard}</li>)}</ul>
                   <p className="mt-3 font-medium">{text.models}</p>

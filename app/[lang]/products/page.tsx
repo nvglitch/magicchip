@@ -226,7 +226,7 @@ export default function ProductsPage() {
     <div className="min-h-screen bg-[#f3f7f5] text-slate-950">
       {/* Hero Section */}
       <section className="relative isolate overflow-hidden bg-[#101827] text-white">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_20%,rgba(37,99,235,0.3),transparent_34%),radial-gradient(circle_at_15%_85%,rgba(245,158,11,0.14),transparent_28%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_20%,rgba(16,111,184,0.3),transparent_34%),radial-gradient(circle_at_15%_85%,rgba(245,158,11,0.14),transparent_28%)]" />
         <div className="absolute inset-0 -z-10 opacity-20 tech-pattern-overlay" />
         <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 md:py-28 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
@@ -261,19 +261,19 @@ export default function ProductsPage() {
                     <category.icon className="w-8 h-8 text-white" />
                   </div>
 
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">{category.title}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-brand-hover transition-colors">{category.title}</h3>
                   <p className="text-gray-600 mb-8 leading-relaxed">{category.description}</p>
 
                   <ul className="space-y-3 mb-8">
                     {category.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-gray-600">
-                        <CheckCircle className="w-5 h-5 text-blue-500 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-brand mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
 
-                  <span className="inline-flex items-center font-semibold text-blue-600 group-hover:text-blue-700">
+                  <span className="inline-flex items-center font-semibold text-brand group-hover:text-brand-hover">
                     {data.learnMore}
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-2" />
                   </span>

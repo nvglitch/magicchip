@@ -15,7 +15,7 @@ export default function ScenariosPage() {
   return (
     <main className="min-h-screen bg-[#f3f7f5] text-slate-950">
       <section className="relative isolate overflow-hidden bg-[#101827] text-white">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_20%,rgba(37,99,235,0.3),transparent_34%),radial-gradient(circle_at_15%_85%,rgba(245,158,11,0.14),transparent_28%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_20%,rgba(16,111,184,0.3),transparent_34%),radial-gradient(circle_at_15%_85%,rgba(245,158,11,0.14),transparent_28%)]" />
         <div className="absolute inset-0 -z-10 opacity-20 tech-pattern-overlay" />
         <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 md:py-28 lg:px-8">
           <div className="max-w-4xl">
@@ -32,8 +32,8 @@ export default function ScenariosPage() {
             {scenarios.map(scenario => {
               const Icon = scenarioIcons[scenario.id];
               return (
-                <Link key={scenario.id} href={`#${scenario.id}`} className="inline-flex items-center gap-2 rounded-lg border border-blue-100 bg-white px-3 py-2.5 text-sm font-medium text-slate-700 transition-colors hover:border-blue-300 hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
-                  <Icon aria-hidden="true" className="h-4 w-4 shrink-0 text-blue-600" />
+                <Link key={scenario.id} href={`#${scenario.id}`} className="inline-flex items-center gap-2 rounded-lg border border-blue-100 bg-white px-3 py-2.5 text-sm font-medium text-slate-700 transition-colors hover:border-blue-300 hover:text-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+                  <Icon aria-hidden="true" className="h-4 w-4 shrink-0 text-brand" />
                   {text.items[scenario.id].title}
                 </Link>
               );
@@ -47,7 +47,7 @@ export default function ScenariosPage() {
                 <article id={scenario.id} key={scenario.id} aria-labelledby={`${scenario.id}-title`} className="flex scroll-mt-24 flex-col overflow-hidden rounded-lg border border-blue-100 bg-white">
                   <div className="p-6 sm:p-8">
                     <div className="flex items-center gap-4">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-brand">
                         <Icon aria-hidden="true" className="h-6 w-6" />
                       </div>
                       <h2 id={`${scenario.id}-title`} className="text-2xl font-bold leading-tight text-slate-950">{item.title}</h2>
@@ -61,7 +61,7 @@ export default function ScenariosPage() {
                     <ul className="mt-3 space-y-3 text-sm leading-6 text-slate-600">
                       {item.selection.map(check => (
                         <li key={check} className="flex items-start gap-2.5">
-                          <Check aria-hidden="true" className="mt-1 h-4 w-4 shrink-0 text-blue-600" />
+                          <Check aria-hidden="true" className="mt-1 h-4 w-4 shrink-0 text-brand" />
                           <span>{check}</span>
                         </li>
                       ))}
@@ -77,10 +77,10 @@ export default function ScenariosPage() {
                               <Image src={product.image} alt={product.name} fill sizes="(max-width: 639px) 64px, 80px" className="object-contain p-1" />
                             </div>
                             <div className="min-w-0 flex-1">
-                              <p className="font-semibold text-slate-950 group-hover:text-blue-700">{product.name}</p>
+                              <p className="font-semibold text-slate-950 group-hover:text-brand-hover">{product.name}</p>
                               <p className="mt-1 text-sm leading-5 text-slate-600">{item.reasons[index]}</p>
                             </div>
-                            <ArrowRight aria-hidden="true" className="hidden h-4 w-4 shrink-0 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:text-blue-600 motion-reduce:transform-none sm:block" />
+                            <ArrowRight aria-hidden="true" className="hidden h-4 w-4 shrink-0 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:text-brand-hover motion-reduce:transform-none sm:block" />
                           </Link>
                         </li>
                       ))}

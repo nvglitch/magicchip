@@ -127,7 +127,7 @@ export default function SiteSearch({ variant = 'header', onNavigate }: SiteSearc
           <Link
             href={`/search?q=${encodeURIComponent(query.trim())}`}
             onClick={closeSearch}
-            className="flex items-center justify-between border-t border-slate-100 bg-slate-50 px-4 py-3 text-sm font-semibold text-blue-700 transition-colors hover:bg-blue-50"
+            className="flex items-center justify-between border-t border-slate-100 bg-slate-50 px-4 py-3 text-sm font-semibold text-brand transition-colors hover:bg-blue-50"
           >
             {text.allResults} ({allResults.length})
             <ArrowRight className="h-4 w-4" />
@@ -192,7 +192,7 @@ export default function SiteSearch({ variant = 'header', onNavigate }: SiteSearc
           setIsCompactOpen(true);
           setIsOpen(Boolean(query.trim()));
         }}
-        className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-600 shadow-sm transition-colors hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700 sm:h-10 sm:w-10 xl:hidden"
+        className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-600 shadow-sm transition-colors hover:border-blue-200 hover:bg-blue-50 hover:text-brand-hover sm:h-10 sm:w-10 xl:hidden"
         aria-label={t.nav.searchAriaLabel}
       >
         <Search className="h-[18px] w-[18px]" />
@@ -248,9 +248,9 @@ function SearchResult({ result, typeLabel, active, onMouseEnter, onNavigate }: {
           <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-normal text-slate-500">{typeLabel}</span>
         </div>
         <p className="mt-0.5 line-clamp-1 text-xs text-slate-500">{result.description}</p>
-        {result.matchedSpecs?.map(spec => <p key={spec} className="mt-1 line-clamp-2 text-xs leading-relaxed text-blue-700">{spec}</p>)}
+        {result.matchedSpecs?.map(spec => <p key={spec} className="mt-1 line-clamp-2 text-xs leading-relaxed text-brand">{spec}</p>)}
       </div>
-      <ArrowRight className={`h-4 w-4 shrink-0 transition-transform ${active ? 'translate-x-0.5 text-blue-600' : 'text-slate-300'}`} />
+      <ArrowRight className={`h-4 w-4 shrink-0 transition-transform ${active ? 'translate-x-0.5 text-brand' : 'text-slate-300'}`} />
     </Link>
   );
 }

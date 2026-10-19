@@ -418,7 +418,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-[#f3f7f5] text-slate-950">
       {/* Hero Section */}
       <section className="relative isolate overflow-hidden bg-[#101827] text-white">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_20%,rgba(37,99,235,0.3),transparent_34%),radial-gradient(circle_at_15%_85%,rgba(245,158,11,0.14),transparent_28%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_20%,rgba(16,111,184,0.3),transparent_34%),radial-gradient(circle_at_15%_85%,rgba(245,158,11,0.14),transparent_28%)]" />
         <div className="absolute inset-0 -z-10 opacity-20 tech-pattern-overlay" />
         <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 md:py-28 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
@@ -450,19 +450,19 @@ export default function AboutPage() {
                     <section.icon className="w-8 h-8 text-white" />
                   </div>
 
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">{section.title}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-brand-hover transition-colors">{section.title}</h3>
                   <p className="text-gray-600 mb-8 leading-relaxed">{section.description}</p>
 
                   <div className="flex gap-6 mb-8">
                     {section.stats.map((stat, idx) => (
                       <div key={idx} className="flex-1">
-                        <div className="text-2xl font-bold text-blue-600">{stat.value}</div>
+                        <div className="text-2xl font-bold text-brand">{stat.value}</div>
                         <div className="text-sm text-gray-500">{stat.label}</div>
                       </div>
                     ))}
                   </div>
 
-                  <span className="inline-flex items-center text-blue-600 font-semibold group-hover:text-blue-700">
+                  <span className="inline-flex items-center text-brand font-semibold group-hover:text-brand-hover">
                     {t.about.learnMore}
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
                   </span>
@@ -490,8 +490,8 @@ export default function AboutPage() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
                 >
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-600 ring-1 ring-blue-200">
-                    <item.icon className="w-6 h-6 text-blue-600" />
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-brand ring-1 ring-blue-200">
+                    <item.icon className="w-6 h-6 text-brand" />
                   </div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h4>
                   <p className="text-gray-600">{item.description}</p>

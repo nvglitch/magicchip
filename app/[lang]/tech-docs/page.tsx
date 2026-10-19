@@ -601,7 +601,7 @@ export default function TechDocsPage() {
     <div className="min-h-screen bg-[#f3f7f5] text-slate-950">
         {/* Hero Section */}
         <section className="relative isolate overflow-hidden bg-[#101827] text-white">
-          <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_20%,rgba(37,99,235,0.3),transparent_34%),radial-gradient(circle_at_15%_85%,rgba(245,158,11,0.14),transparent_28%)]" />
+          <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_20%,rgba(16,111,184,0.3),transparent_34%),radial-gradient(circle_at_15%_85%,rgba(245,158,11,0.14),transparent_28%)]" />
           <div className="absolute inset-0 -z-10 opacity-20 tech-pattern-overlay" />
           <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 md:py-28 lg:px-8">
             <motion.div
@@ -670,7 +670,7 @@ export default function TechDocsPage() {
                           <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
                             <div className="flex-1">
                               <h3 className="text-lg font-semibold text-gray-900 mb-2 flex items-center">
-                                <FileCode className="w-5 h-5 text-blue-600 mr-2" />
+                                <FileCode className="w-5 h-5 text-brand mr-2" />
                                 {doc.title}
                               </h3>
                               <p className="text-gray-600 text-sm mb-3">{doc.description}</p>

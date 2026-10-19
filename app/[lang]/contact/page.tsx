@@ -368,7 +368,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-[#f3f7f5] text-slate-950">
         {/* Hero Section */}
         <section className="relative isolate overflow-hidden bg-[#101827] text-white">
-          <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_20%,rgba(37,99,235,0.3),transparent_34%),radial-gradient(circle_at_15%_85%,rgba(245,158,11,0.14),transparent_28%)]" />
+          <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_20%,rgba(16,111,184,0.3),transparent_34%),radial-gradient(circle_at_15%_85%,rgba(245,158,11,0.14),transparent_28%)]" />
           <div className="absolute inset-0 -z-10 opacity-20 tech-pattern-overlay" />
           <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 md:py-28 lg:px-8">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
@@ -391,12 +391,12 @@ export default function ContactPage() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-lg shadow-slate-900/5 transition-all hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl"
                 >
-                  <div className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-600 ring-1 ring-blue-200">
+                  <div className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-brand ring-1 ring-blue-200">
                     <item.icon className="h-6 w-6" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
                   <p className="text-gray-500 text-sm mb-2">{item.description}</p>
-                  <p className="font-semibold text-blue-800">{item.content}</p>
+                  <p className="font-semibold text-brand">{item.content}</p>
                 </motion.div>
               ))}
             </div>

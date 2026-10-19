@@ -2,12 +2,12 @@
 export const SUPPORTED_LANGUAGES = ['en', 'fr', 'de', 'it', 'es'] as const;
 export type Language = typeof SUPPORTED_LANGUAGES[number];
 
-export const LANGUAGE_NAMES: Record<Language, { native: string; english: string; flag: string }> = {
-  en: { native: 'English', english: 'English', flag: '🇬🇧' },
-  fr: { native: 'Français', english: 'French', flag: '🇫🇷' },
-  de: { native: 'Deutsch', english: 'German', flag: '🇩🇪' },
-  it: { native: 'Italiano', english: 'Italian', flag: '🇮🇹' },
-  es: { native: 'Español', english: 'Spanish', flag: '🇪🇸' },
+export const LANGUAGE_NAMES: Record<Language, { native: string; english: string }> = {
+  en: { native: 'English', english: 'English' },
+  fr: { native: 'Français', english: 'French' },
+  de: { native: 'Deutsch', english: 'German' },
+  it: { native: 'Italiano', english: 'Italian' },
+  es: { native: 'Español', english: 'Spanish' },
 };
 
 export const DEFAULT_LANGUAGE: Language = 'en';

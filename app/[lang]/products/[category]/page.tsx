@@ -18,9 +18,9 @@ import { commercialCatalog } from '@/lib/commercial-catalog';
 import { nasMotherboardCopy } from '@/lib/nas-motherboard-copy';
 
 const categoryData: Record<string, { icon: LucideIcon; gradient: string; image: string }> = {
-  'industrial-mini-pc': { icon: Cpu, gradient: 'from-blue-600 to-indigo-700', image: '/assets/home/categories/industrial-mini-pc.png' },
+  'industrial-mini-pc': { icon: Cpu, gradient: 'from-blue-600 to-blue-700', image: '/assets/home/categories/industrial-mini-pc.png' },
   'ai-mini-pc': { icon: Brain, gradient: 'from-violet-600 to-blue-700', image: '/assets/home/categories/ai-mini-pc.png' },
-  'commercial-mini-pc': { icon: Monitor, gradient: 'from-blue-500 to-indigo-600', image: '/assets/home/categories/commercial-mini-pc.png' },
+  'commercial-mini-pc': { icon: Monitor, gradient: 'from-blue-500 to-blue-600', image: '/assets/home/categories/commercial-mini-pc.png' },
   'firewall-mini-pc': { icon: Shield, gradient: 'from-rose-600 to-red-800', image: '/assets/home/categories/firewall-mini-pc-server-pc.png' },
 };
 
@@ -408,7 +408,7 @@ export default function CategoryPage() {
             transition={{ duration: 0.6 }}
             className="flex items-center gap-6"
           >
-            <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-950/30 flex-shrink-0">
+            <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-950/30 flex-shrink-0">
               <IconComponent className="w-10 h-10 text-white" />
             </div>
             <div>
@@ -430,9 +430,9 @@ export default function CategoryPage() {
 
       <nav aria-label="Category sections" className="sticky top-16 z-30 border-b border-slate-200 bg-white/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl gap-7 overflow-x-auto px-4 py-4 text-sm font-semibold text-slate-600 sm:px-6 lg:px-8">
-          <Link href="#overview" className="whitespace-nowrap transition-colors hover:text-blue-700">Category Overview</Link>
-          <Link href="#applications" className="whitespace-nowrap transition-colors hover:text-blue-700">Application Scenarios</Link>
-          <Link href="#models" className="whitespace-nowrap transition-colors hover:text-blue-700">Current Models</Link>
+          <Link href="#overview" className="whitespace-nowrap transition-colors hover:text-brand-hover">Category Overview</Link>
+          <Link href="#applications" className="whitespace-nowrap transition-colors hover:text-brand-hover">Application Scenarios</Link>
+          <Link href="#models" className="whitespace-nowrap transition-colors hover:text-brand-hover">Current Models</Link>
         </div>
       </nav>
 
@@ -456,7 +456,7 @@ export default function CategoryPage() {
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {richContent.capabilities.map((capability) => (
               <article key={capability.title} className="rounded-2xl border border-slate-200 bg-[#f7faf9] p-6 transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:bg-white hover:shadow-lg">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600"><CheckCircle2 className="h-5 w-5" /></div>
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-brand"><CheckCircle2 className="h-5 w-5" /></div>
                 <h3 className="mt-5 text-lg font-bold text-slate-950">{capability.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-slate-600">{capability.description}</p>
               </article>
@@ -505,7 +505,7 @@ export default function CategoryPage() {
                         {scenario.products.map((productName) => {
                           const product = products.find((item) => item.name === productName);
                           return product ? (
-                            <Link key={product.id} href={`/products/${category}/${product.id}`} className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-sm font-semibold text-blue-700 transition-colors hover:border-blue-400 hover:bg-blue-100">
+                            <Link key={product.id} href={`/products/${category}/${product.id}`} className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-sm font-semibold text-brand transition-colors hover:border-blue-400 hover:bg-blue-100">
                               {product.name}
                             </Link>
                           ) : null;
@@ -603,7 +603,7 @@ export default function CategoryPage() {
                       <p className="mb-6 text-lg text-gray-600">{product.tagline}</p>
                       <div className="mb-8 flex flex-wrap gap-3">
                         {product.specs.map((spec, idx) => (
-                          <span key={idx} className="rounded-lg border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-800">
+                          <span key={idx} className="rounded-lg border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-medium text-brand">
                             {spec}
                           </span>
                         ))}

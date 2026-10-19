@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Quote } from 'lucide-react';
+import { Quote, Star } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
 
@@ -159,7 +159,7 @@ export default function SocialProof() {
               {/* Rating — static value */}
               <div className="rounded-2xl border border-white/10 bg-black/15 p-6 shadow-sm">
                 <div className="flex items-baseline mb-1">
-                  <span className="text-3xl font-bold text-yellow-400">★</span>
+                  <Star aria-hidden="true" className="h-7 w-7 shrink-0 self-center text-yellow-400" fill="currentColor" />
                   <span className="ml-1 text-3xl font-bold text-yellow-400">{t.social.stats.rating}</span>
                 </div>
                 <p className="text-slate-300 text-sm">{t.social.stats.ratingLabel}</p>

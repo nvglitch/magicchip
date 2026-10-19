@@ -44,7 +44,7 @@ export default function SearchResultsPage() {
   return (
     <main className="min-h-screen bg-[#f3f7f5] text-slate-950">
       <section className="relative isolate overflow-hidden bg-[#101827] text-white">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_75%_20%,rgba(37,99,235,0.3),transparent_34%),radial-gradient(circle_at_15%_90%,rgba(20,184,166,0.12),transparent_28%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_75%_20%,rgba(16,111,184,0.3),transparent_34%),radial-gradient(circle_at_15%_90%,rgba(20,184,166,0.12),transparent_28%)]" />
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
           <h1 className="text-4xl font-bold tracking-tight md:text-5xl">{text.title}</h1>
           <p className="mt-4 max-w-2xl text-lg text-slate-300">{text.subtitle}</p>
@@ -75,15 +75,15 @@ export default function SearchResultsPage() {
                             <Image src={result.image} alt="" fill sizes="128px" className="object-contain p-1" />
                           </div>
                         ) : (
-                          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600"><Icon className="h-6 w-6" /></div>
+                          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-brand"><Icon className="h-6 w-6" /></div>
                         )}
                         <div className="min-w-0 flex-1">
                           <span className="rounded-full bg-slate-100 px-2.5 py-1 text-[10px] font-bold uppercase tracking-normal text-slate-500">{text.types[result.type]}</span>
-                          <h3 className="mt-3 text-lg font-bold text-slate-950 group-hover:text-blue-700">{result.title}</h3>
+                          <h3 className="mt-3 text-lg font-bold text-slate-950 group-hover:text-brand-hover">{result.title}</h3>
                           <p className="mt-1 line-clamp-2 text-sm leading-6 text-slate-600">{result.description}</p>
-                          {result.matchedSpecs?.map(spec => <p key={spec} className="mt-2 text-xs leading-relaxed text-blue-700">{spec}</p>)}
+                          {result.matchedSpecs?.map(spec => <p key={spec} className="mt-2 text-xs leading-relaxed text-brand">{spec}</p>)}
                         </div>
-                        <ArrowRight className="h-5 w-5 shrink-0 text-slate-300 transition-transform group-hover:translate-x-1 group-hover:text-blue-600" />
+                        <ArrowRight className="h-5 w-5 shrink-0 text-slate-300 transition-transform group-hover:translate-x-1 group-hover:text-brand-hover" />
                       </Link>
                     );
                   })}
@@ -98,7 +98,7 @@ export default function SearchResultsPage() {
             </>
           ) : (
             <div className="rounded-3xl border border-slate-200 bg-white px-6 py-16 text-center shadow-sm">
-              <Search className="mx-auto h-10 w-10 text-blue-500" />
+              <Search className="mx-auto h-10 w-10 text-brand" />
               <p className="mt-5 text-lg font-medium text-slate-600">{text.prompt}</p>
             </div>
           )}

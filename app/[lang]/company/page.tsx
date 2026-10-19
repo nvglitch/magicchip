@@ -232,7 +232,7 @@ export default function CompanyPage() {
   return (
     <div className="min-h-screen bg-[#f4f7f6] text-slate-950">
       <section className="relative isolate overflow-hidden bg-[#101827] text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_20%,rgba(37,99,235,0.32),transparent_34%),radial-gradient(circle_at_15%_80%,rgba(245,158,11,0.16),transparent_28%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_20%,rgba(16,111,184,0.32),transparent_34%),radial-gradient(circle_at_15%_80%,rgba(245,158,11,0.16),transparent_28%)]" />
         <div className="absolute inset-0 opacity-20 tech-pattern-overlay" />
         <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 md:py-32 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-4xl">
@@ -297,7 +297,7 @@ export default function CompanyPage() {
       </section>
 
       <section ref={timelineRef} className="relative overflow-hidden bg-[#0b1220] py-24 text-white md:py-32">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.2),transparent_38%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(16,111,184,0.2),transparent_38%)]" />
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto mb-20 max-w-2xl text-center">
             <h2 className="text-4xl font-bold md:text-6xl">{t.company.timelineTitle}</h2>
