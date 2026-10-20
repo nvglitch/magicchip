@@ -3,10 +3,21 @@ import { applyBrochureSpecCorrections } from '@/lib/brochure-spec-corrections';
 import { brochureUpdates } from '@/lib/brochure-updates';
 import { commercialBrochureProducts } from '@/lib/brochure-products';
 import { nasMotherboards } from '@/lib/nas-motherboards';
+import { mcdpc2 } from '@/lib/mcdpc2';
+import type { Language } from '@/lib/i18n/config';
 
 export type CommercialSeriesCode = 'DPC' | 'NAS' | 'NAS-MB';
 
 export type CommercialCatalogSpec = { label: string; value: string };
+export type CommercialCatalogFeature = {
+  icon: 'Cpu' | 'Network' | 'HardDrive' | 'Monitor' | 'Layers' | 'Usb' | 'Thermometer' | 'Zap';
+  title: string;
+  description: string;
+};
+
+export type CommercialProductCopy = Pick<CommercialCatalogItem,
+  'tagline' | 'description' | 'highlights' | 'specs' | 'galleryCards' | 'features' |
+  'specificationHeading' | 'featureHeading' | 'advantageSummary'>;
 
 export type CommercialCatalogItem = {
   id: string;
@@ -22,6 +33,11 @@ export type CommercialCatalogItem = {
   operatingRange?: string;
   sourceBrochure?: string;
   sourceSha256?: string;
+  features?: CommercialCatalogFeature[];
+  specificationHeading?: string;
+  featureHeading?: string;
+  advantageSummary?: string;
+  translations?: Partial<Record<Language, CommercialProductCopy>>;
 };
 
 // Product facts and images are extracted from the supplied product brochures.
@@ -29,6 +45,7 @@ export const commercialCatalog: CommercialCatalogItem[] = [
   ...commercialBrochureProducts,
   ...nasSeptemberUpdates,
   ...nasMotherboards,
+  mcdpc2,
   {
     "id": "mc12",
     "name": "MC12",

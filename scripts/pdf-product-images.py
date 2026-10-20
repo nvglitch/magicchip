@@ -5,7 +5,7 @@ from PIL import Image
 from pypdf import PdfWriter
 from pypdf.generic import ContentStream, NameObject
 
-def rendered_images(reader_page):
+def rendered_images(reader_page, scale=3):
     stream = ContentStream(reader_page.get_contents(), reader_page.pdf)
     draws = [i for i, (_, op) in enumerate(stream.operations) if op == b'Do']
     result=[]
@@ -21,11 +21,11 @@ def rendered_images(reader_page):
         page[NameObject('/Contents')]=writer._add_object(content)
         data=BytesIO(); writer.write(data)
         with fitz.open(stream=data.getvalue(),filetype='pdf') as doc:
-            pix=doc[0].get_pixmap(matrix=fitz.Matrix(3,3),alpha=True)
+            pix=doc[0].get_pixmap(matrix=fitz.Matrix(scale,scale),alpha=True)
             im=Image.frombytes('RGBA',(pix.width,pix.height),pix.samples)
         box=im.getchannel('A').point(lambda x:255 if x>16 else 0).getbbox()
         if not box: continue
-        x0,y0,x1,y1=[v/3 for v in box]
+        x0,y0,x1,y1=[v/scale for v in box]
         if y0<120 or y1>355 or x1-x0<35: continue
         result.append((x0,y0,im.crop(box)))
     result.sort(key=lambda r:(0 if r[0]<282 else 1,r[1]))

@@ -1,0 +1,226 @@
+{
+  "id": "mcdpc2",
+  "name": "MCDPC2",
+  "category": "commercial-mini-pc",
+  "series": "DPC",
+  "published": true,
+  "tagline": "Slim Core Ultra H desktop PC with Thunderbolt 4 and dual 2.5GbE",
+  "description": "MCDPC2 brings optional Intel Core Ultra Series 1 / 2 H-series processors, two DDR5 SO-DIMM slots supporting up to 96 GB, and dual M.2 NVMe storage into a 61 mm-wide upright enclosure. Dual Intel i226-V 2.5GbE, Thunderbolt 4, HDMI and DisplayPort connect desktop peripherals and networks. Cooling uses a vapor chamber heatsink; CPU options and maximum memory follow the confirmed configuration.",
+  "image": "/assets/products/commercial/dpc/mcdpc2/main.webp",
+  "images": ["/assets/products/commercial/dpc/mcdpc2/main.webp"],
+  "galleryImages": [
+    "/assets/products/commercial/dpc/mcdpc2/front.webp",
+    "/assets/products/commercial/dpc/mcdpc2/rear.webp",
+    "/assets/products/commercial/dpc/mcdpc2/main.webp"
+  ],
+  "galleryCards": [
+    { "image": "/assets/products/commercial/dpc/mcdpc2/front.webp", "title": "MCDPC2 front panel" },
+    { "image": "/assets/products/commercial/dpc/mcdpc2/rear.webp", "title": "MCDPC2 rear panel" },
+    { "image": "/assets/products/commercial/dpc/mcdpc2/main.webp", "title": "MCDPC2 upright enclosure" }
+  ],
+  "highlights": ["Core Ultra H Series 1 / 2 options", "Up to 96 GB DDR5", "Dual Intel i226-V 2.5GbE", "Thunderbolt 4 + dual M.2 NVMe"],
+  "specificationHeading": "MCDPC2 hardware specifications",
+  "featureHeading": "A slim desktop with room to expand",
+  "advantageSummary": "A 61 mm-wide enclosure keeps the desktop footprint compact, while replaceable memory, dual NVMe storage and wired connectivity support a configurable workspace.",
+  "features": [
+    { "icon": "Cpu", "title": "Core Ultra H options", "description": "Choose an Intel Core Ultra Series 1 or Series 2 H-series configuration with a vapor chamber heatsink. The exact processor follows the confirmed order." },
+    { "icon": "Network", "title": "Connected workspace", "description": "Two Intel i226-V 2.5GbE RJ45 ports, Thunderbolt 4, HDMI 2.1 and DisplayPort 2.1 connect networks, peripherals and compatible displays." },
+    { "icon": "HardDrive", "title": "Memory and SSD expansion", "description": "Two DDR5 SO-DIMM slots support up to 96 GB, depending on configuration. Two M.2 NVMe slots and a separate Wi-Fi M.2 slot provide expansion options." }
+  ],
+  "specs": [
+    { "label": "Model", "value": "MCDPC2" },
+    { "label": "CPU", "value": "Intel Core Ultra Series 1 / 2 H-series processors (optional)" },
+    { "label": "Cooling", "value": "Vapor chamber heatsink" },
+    { "label": "Memory", "value": "2 x DDR5 SO-DIMM, up to 96 GB; maximum capacity depends on the confirmed configuration" },
+    { "label": "Network", "value": "2 x Intel i226-V 2.5GbE RJ45" },
+    { "label": "USB", "value": "3 x USB 3.2 Gen 2; 1 x USB 2.0; 1 x USB Type-C" },
+    { "label": "Thunderbolt 4", "value": "1 x Thunderbolt 4" },
+    { "label": "Display", "value": "1 x HDMI 2.1 (TMDS 4K60 / FRL 8K60); 1 x DisplayPort 2.1; final I/O follows the confirmed configuration" },
+    { "label": "Storage", "value": "2 x M.2 NVMe" },
+    { "label": "Expansion", "value": "1 x M.2 slot for Wi-Fi" },
+    { "label": "Controls / audio", "value": "Power button; separate headphone and microphone jacks" },
+    { "label": "System", "value": "Windows 10 / 11; Linux" },
+    { "label": "Power-on features", "value": "Wake-on-LAN; auto power-on; scheduled power-on; PXE boot" },
+    { "label": "Power", "value": "12-19 V DC, 120 W" },
+    { "label": "Material", "value": "ABS enclosure" },
+    { "label": "Installation", "value": "Desktop" },
+    { "label": "Dimensions", "value": "61 (W) x 187 (H) x 142 (D) mm" },
+    { "label": "Weight", "value": "0.7 kg" },
+    { "label": "Operating temperature", "value": "-20°C to +60°C" },
+    { "label": "Storage temperature", "value": "-30°C to +70°C" },
+    { "label": "Storage humidity", "value": "10%-90% RH at 30°C, non-condensing" },
+    { "label": "Configuration notes", "value": "CPU options and maximum memory depend on the confirmed configuration. Product images are for reference; final I/O follows the confirmed order configuration." }
+  ],
+  "sourceBrochure": "桌面端DPC/MCDPC2 Brochure.pdf",
+  "sourceSha256": "7ffc34abb5039512277055f4f610cc3b5184d589e55a05288a8ebca4a5177831",
+  "translations": {
+    "de": {
+      "tagline": "Schlanker Core-Ultra-H-Desktop-PC mit Thunderbolt 4 und zwei 2,5GbE-Ports",
+      "description": "MCDPC2 vereint optionale Intel-Core-Ultra-H-Prozessoren der Serien 1 / 2, zwei DDR5-SO-DIMM-Steckplätze für bis zu 96 GB und zwei M.2-NVMe-Steckplätze in einem nur 61 mm breiten, aufrechten Gehäuse. Zwei Intel-i226-V-2,5GbE-Ports, Thunderbolt 4, HDMI und DisplayPort verbinden Peripherie und Netzwerke. Ein Vapor-Chamber-Kühlkörper übernimmt die Kühlung; CPU-Auswahl und maximale Speicherkapazität richten sich nach der bestätigten Konfiguration.",
+      "highlights": ["Core Ultra H Serie 1 / 2 wählbar", "Bis zu 96 GB DDR5", "2 x Intel i226-V 2,5GbE", "Thunderbolt 4 + 2 x M.2 NVMe"],
+      "specificationHeading": "MCDPC2 Hardwarespezifikationen",
+      "featureHeading": "Schlanker Desktop mit Erweiterungsmöglichkeiten",
+      "advantageSummary": "Das 61 mm breite Gehäuse benötigt wenig Platz. Austauschbarer Arbeitsspeicher, zwei NVMe-Steckplätze und kabelgebundene Anschlüsse ermöglichen einen anpassbaren Arbeitsplatz.",
+      "galleryCards": [
+        { "image": "/assets/products/commercial/dpc/mcdpc2/front.webp", "title": "MCDPC2 Vorderseite" },
+        { "image": "/assets/products/commercial/dpc/mcdpc2/rear.webp", "title": "MCDPC2 Rückseite" },
+        { "image": "/assets/products/commercial/dpc/mcdpc2/main.webp", "title": "MCDPC2 aufrechtes Gehäuse" }
+      ],
+      "features": [
+        { "icon": "Cpu", "title": "Core-Ultra-H-Auswahl", "description": "Wählen Sie eine Intel-Core-Ultra-H-Konfiguration der Serie 1 oder 2 mit Vapor-Chamber-Kühlkörper. Der genaue Prozessor richtet sich nach der bestätigten Bestellung." },
+        { "icon": "Network", "title": "Vernetzter Arbeitsplatz", "description": "Zwei Intel-i226-V-2,5GbE-RJ45-Ports, Thunderbolt 4, HDMI 2.1 und DisplayPort 2.1 verbinden Netzwerke, Peripherie und kompatible Bildschirme." },
+        { "icon": "HardDrive", "title": "RAM- und SSD-Erweiterung", "description": "Zwei DDR5-SO-DIMM-Steckplätze unterstützen je nach Konfiguration bis zu 96 GB. Zwei M.2-NVMe-Steckplätze und ein separater M.2-Steckplatz für WLAN bieten Erweiterungsmöglichkeiten." }
+      ],
+      "specs": [
+        { "label": "Modell", "value": "MCDPC2" },
+        { "label": "CPU", "value": "Intel-Core-Ultra-H-Prozessoren der Serien 1 / 2 (optional)" },
+        { "label": "Kühlung", "value": "Vapor-Chamber-Kühlkörper (Dampfkammer)" },
+        { "label": "Arbeitsspeicher", "value": "2 x DDR5 SO-DIMM, bis zu 96 GB; maximale Kapazität gemäß bestätigter Konfiguration" },
+        { "label": "Netzwerk", "value": "2 x Intel i226-V 2,5GbE RJ45" },
+        { "label": "USB", "value": "3 x USB 3.2 Gen 2; 1 x USB 2.0; 1 x USB Type-C" },
+        { "label": "Thunderbolt 4", "value": "1 x Thunderbolt 4" },
+        { "label": "Bildausgänge", "value": "1 x HDMI 2.1 (TMDS 4K60 / FRL 8K60); 1 x DisplayPort 2.1; endgültige Anschlüsse gemäß bestätigter Konfiguration" },
+        { "label": "Datenspeicher", "value": "2 x M.2 NVMe" },
+        { "label": "Erweiterung", "value": "1 x M.2-Steckplatz für WLAN" },
+        { "label": "Bedienung / Audio", "value": "Ein-/Aus-Taste; separate Kopfhörer- und Mikrofonbuchsen" },
+        { "label": "Betriebssystem", "value": "Windows 10 / 11; Linux" },
+        { "label": "Startfunktionen", "value": "Wake-on-LAN; automatisches Einschalten; zeitgesteuertes Einschalten; PXE-Boot" },
+        { "label": "Stromversorgung", "value": "12-19 V DC, 120 W" },
+        { "label": "Material", "value": "ABS-Gehäuse" },
+        { "label": "Aufstellung", "value": "Desktop" },
+        { "label": "Abmessungen", "value": "61 (B) x 187 (H) x 142 (T) mm" },
+        { "label": "Gewicht", "value": "0,7 kg" },
+        { "label": "Betriebstemperatur", "value": "-20°C bis +60°C" },
+        { "label": "Lagertemperatur", "value": "-30°C bis +70°C" },
+        { "label": "Lagerfeuchtigkeit", "value": "10%-90% r. F. bei 30°C, nicht kondensierend" },
+        { "label": "Konfigurationshinweise", "value": "CPU-Auswahl und maximale Speicherkapazität richten sich nach der bestätigten Konfiguration. Die Bilder dienen als Referenz; die endgültigen Anschlüsse richten sich nach der bestätigten Bestellung." }
+      ]
+    },
+    "fr": {
+      "tagline": "PC de bureau Core Ultra H fin avec Thunderbolt 4 et deux ports 2,5GbE",
+      "description": "MCDPC2 associe des processeurs Intel Core Ultra série H des séries 1 / 2 en option, deux emplacements DDR5 SO-DIMM jusqu'à 96 Go et deux emplacements M.2 NVMe dans un boîtier vertical de 61 mm de large. Deux ports Intel i226-V 2,5GbE, Thunderbolt 4, HDMI et DisplayPort relient les périphériques et les réseaux. Le refroidissement utilise un dissipateur à chambre à vapeur ; le processeur et la capacité mémoire maximale dépendent de la configuration confirmée.",
+      "highlights": ["Core Ultra H séries 1 / 2 au choix", "Jusqu'à 96 Go de DDR5", "2 x Intel i226-V 2,5GbE", "Thunderbolt 4 + 2 x M.2 NVMe"],
+      "specificationHeading": "Caractéristiques matérielles du MCDPC2",
+      "featureHeading": "Un PC de bureau fin et évolutif",
+      "advantageSummary": "Le boîtier de 61 mm de large limite l'encombrement du bureau. La mémoire remplaçable, les deux emplacements NVMe et les connexions filaires permettent d'adapter le poste de travail.",
+      "galleryCards": [
+        { "image": "/assets/products/commercial/dpc/mcdpc2/front.webp", "title": "MCDPC2 face avant" },
+        { "image": "/assets/products/commercial/dpc/mcdpc2/rear.webp", "title": "MCDPC2 face arrière" },
+        { "image": "/assets/products/commercial/dpc/mcdpc2/main.webp", "title": "MCDPC2 boîtier vertical" }
+      ],
+      "features": [
+        { "icon": "Cpu", "title": "Choix Core Ultra H", "description": "Choisissez une configuration Intel Core Ultra série H de série 1 ou 2 avec dissipateur à chambre à vapeur. Le processeur exact suit la commande confirmée." },
+        { "icon": "Network", "title": "Poste de travail connecté", "description": "Deux ports RJ45 Intel i226-V 2,5GbE, Thunderbolt 4, HDMI 2.1 et DisplayPort 2.1 relient les réseaux, les périphériques et les écrans compatibles." },
+        { "icon": "HardDrive", "title": "Extensions RAM et SSD", "description": "Deux emplacements DDR5 SO-DIMM prennent en charge jusqu'à 96 Go selon la configuration. Deux emplacements M.2 NVMe et un emplacement M.2 Wi-Fi distinct offrent des possibilités d'extension." }
+      ],
+      "specs": [
+        { "label": "Modèle", "value": "MCDPC2" },
+        { "label": "CPU", "value": "Processeurs Intel Core Ultra série H des séries 1 / 2 (en option)" },
+        { "label": "Refroidissement", "value": "Dissipateur à chambre à vapeur" },
+        { "label": "Mémoire", "value": "2 x DDR5 SO-DIMM, jusqu'à 96 Go ; capacité maximale selon la configuration confirmée" },
+        { "label": "Réseau", "value": "2 x Intel i226-V 2,5GbE RJ45" },
+        { "label": "USB", "value": "3 x USB 3.2 Gen 2 ; 1 x USB 2.0 ; 1 x USB Type-C" },
+        { "label": "Thunderbolt 4", "value": "1 x Thunderbolt 4" },
+        { "label": "Affichage", "value": "1 x HDMI 2.1 (TMDS 4K60 / FRL 8K60) ; 1 x DisplayPort 2.1 ; connectique finale selon la configuration confirmée" },
+        { "label": "Stockage", "value": "2 x M.2 NVMe" },
+        { "label": "Extension", "value": "1 x emplacement M.2 pour Wi-Fi" },
+        { "label": "Commandes / audio", "value": "Bouton d'alimentation ; prises casque et microphone séparées" },
+        { "label": "Système", "value": "Windows 10 / 11 ; Linux" },
+        { "label": "Fonctions de démarrage", "value": "Wake-on-LAN ; mise sous tension automatique ; mise sous tension programmée ; démarrage PXE" },
+        { "label": "Alimentation", "value": "12-19 V CC, 120 W" },
+        { "label": "Matériau", "value": "Boîtier ABS" },
+        { "label": "Installation", "value": "Sur bureau" },
+        { "label": "Dimensions", "value": "61 (l) x 187 (H) x 142 (P) mm" },
+        { "label": "Poids", "value": "0,7 kg" },
+        { "label": "Température de fonctionnement", "value": "-20°C à +60°C" },
+        { "label": "Température de stockage", "value": "-30°C à +70°C" },
+        { "label": "Humidité de stockage", "value": "10%-90% HR à 30°C, sans condensation" },
+        { "label": "Notes de configuration", "value": "Les processeurs proposés et la mémoire maximale dépendent de la configuration confirmée. Les images sont indicatives ; la connectique finale suit la commande confirmée." }
+      ]
+    },
+    "it": {
+      "tagline": "PC desktop Core Ultra H sottile con Thunderbolt 4 e doppia 2,5GbE",
+      "description": "MCDPC2 integra processori Intel Core Ultra serie H delle serie 1 / 2 opzionali, due slot DDR5 SO-DIMM fino a 96 GB e due slot M.2 NVMe in un case verticale largo 61 mm. Due porte Intel i226-V 2,5GbE, Thunderbolt 4, HDMI e DisplayPort collegano periferiche e reti. Il raffreddamento utilizza un dissipatore a camera di vapore; CPU e memoria massima dipendono dalla configurazione confermata.",
+      "highlights": ["Core Ultra H serie 1 / 2 a scelta", "Fino a 96 GB DDR5", "2 x Intel i226-V 2,5GbE", "Thunderbolt 4 + 2 x M.2 NVMe"],
+      "specificationHeading": "Specifiche hardware MCDPC2",
+      "featureHeading": "Un desktop sottile ed espandibile",
+      "advantageSummary": "Il case largo 61 mm riduce l'ingombro sulla scrivania. Memoria sostituibile, due slot NVMe e connessioni cablate consentono di configurare la postazione di lavoro.",
+      "galleryCards": [
+        { "image": "/assets/products/commercial/dpc/mcdpc2/front.webp", "title": "MCDPC2 pannello frontale" },
+        { "image": "/assets/products/commercial/dpc/mcdpc2/rear.webp", "title": "MCDPC2 pannello posteriore" },
+        { "image": "/assets/products/commercial/dpc/mcdpc2/main.webp", "title": "MCDPC2 case verticale" }
+      ],
+      "features": [
+        { "icon": "Cpu", "title": "Opzioni Core Ultra H", "description": "Scegli una configurazione Intel Core Ultra serie H di serie 1 o 2 con dissipatore a camera di vapore. Il processore esatto segue l'ordine confermato." },
+        { "icon": "Network", "title": "Postazione connessa", "description": "Due porte RJ45 Intel i226-V 2,5GbE, Thunderbolt 4, HDMI 2.1 e DisplayPort 2.1 collegano reti, periferiche e monitor compatibili." },
+        { "icon": "HardDrive", "title": "Espansione RAM e SSD", "description": "Due slot DDR5 SO-DIMM supportano fino a 96 GB secondo la configurazione. Due slot M.2 NVMe e uno slot M.2 Wi-Fi separato offrono opzioni di espansione." }
+      ],
+      "specs": [
+        { "label": "Modello", "value": "MCDPC2" },
+        { "label": "CPU", "value": "Processori Intel Core Ultra serie H delle serie 1 / 2 (opzionali)" },
+        { "label": "Raffreddamento", "value": "Dissipatore a camera di vapore" },
+        { "label": "Memoria", "value": "2 x DDR5 SO-DIMM, fino a 96 GB; capacità massima secondo la configurazione confermata" },
+        { "label": "Rete", "value": "2 x Intel i226-V 2,5GbE RJ45" },
+        { "label": "USB", "value": "3 x USB 3.2 Gen 2; 1 x USB 2.0; 1 x USB Type-C" },
+        { "label": "Thunderbolt 4", "value": "1 x Thunderbolt 4" },
+        { "label": "Uscite video", "value": "1 x HDMI 2.1 (TMDS 4K60 / FRL 8K60); 1 x DisplayPort 2.1; I/O finale secondo la configurazione confermata" },
+        { "label": "Archiviazione", "value": "2 x M.2 NVMe" },
+        { "label": "Espansione", "value": "1 x slot M.2 per Wi-Fi" },
+        { "label": "Comandi / audio", "value": "Pulsante di accensione; jack separati per cuffie e microfono" },
+        { "label": "Sistema", "value": "Windows 10 / 11; Linux" },
+        { "label": "Funzioni di avvio", "value": "Wake-on-LAN; accensione automatica; accensione programmata; avvio PXE" },
+        { "label": "Alimentazione", "value": "12-19 V CC, 120 W" },
+        { "label": "Materiale", "value": "Case in ABS" },
+        { "label": "Installazione", "value": "Da scrivania" },
+        { "label": "Dimensioni", "value": "61 (L) x 187 (A) x 142 (P) mm" },
+        { "label": "Peso", "value": "0,7 kg" },
+        { "label": "Temperatura operativa", "value": "Da -20°C a +60°C" },
+        { "label": "Temperatura di stoccaggio", "value": "Da -30°C a +70°C" },
+        { "label": "Umidità di stoccaggio", "value": "10%-90% UR a 30°C, senza condensa" },
+        { "label": "Note sulla configurazione", "value": "Le opzioni CPU e la memoria massima dipendono dalla configurazione confermata. Le immagini sono indicative; l'I/O finale segue l'ordine confermato." }
+      ]
+    },
+    "es": {
+      "tagline": "PC de sobremesa Core Ultra H delgado con Thunderbolt 4 y doble 2,5GbE",
+      "description": "MCDPC2 reúne procesadores Intel Core Ultra serie H de las series 1 / 2 opcionales, dos ranuras DDR5 SO-DIMM de hasta 96 GB y dos ranuras M.2 NVMe en una carcasa vertical de 61 mm de ancho. Dos puertos Intel i226-V 2,5GbE, Thunderbolt 4, HDMI y DisplayPort conectan periféricos y redes. La refrigeración utiliza un disipador con cámara de vapor; la CPU y la memoria máxima dependen de la configuración confirmada.",
+      "highlights": ["Core Ultra H series 1 / 2 a elegir", "Hasta 96 GB DDR5", "2 x Intel i226-V 2,5GbE", "Thunderbolt 4 + 2 x M.2 NVMe"],
+      "specificationHeading": "Especificaciones de hardware MCDPC2",
+      "featureHeading": "Un sobremesa delgado y ampliable",
+      "advantageSummary": "La carcasa de 61 mm de ancho ocupa poco espacio en el escritorio. La memoria sustituible, dos ranuras NVMe y las conexiones por cable permiten configurar el puesto de trabajo.",
+      "galleryCards": [
+        { "image": "/assets/products/commercial/dpc/mcdpc2/front.webp", "title": "MCDPC2 panel frontal" },
+        { "image": "/assets/products/commercial/dpc/mcdpc2/rear.webp", "title": "MCDPC2 panel trasero" },
+        { "image": "/assets/products/commercial/dpc/mcdpc2/main.webp", "title": "MCDPC2 carcasa vertical" }
+      ],
+      "features": [
+        { "icon": "Cpu", "title": "Opciones Core Ultra H", "description": "Elige una configuración Intel Core Ultra serie H de serie 1 o 2 con disipador con cámara de vapor. El procesador exacto sigue el pedido confirmado." },
+        { "icon": "Network", "title": "Puesto de trabajo conectado", "description": "Dos puertos RJ45 Intel i226-V 2,5GbE, Thunderbolt 4, HDMI 2.1 y DisplayPort 2.1 conectan redes, periféricos y pantallas compatibles." },
+        { "icon": "HardDrive", "title": "Ampliación de RAM y SSD", "description": "Dos ranuras DDR5 SO-DIMM admiten hasta 96 GB según la configuración. Dos ranuras M.2 NVMe y una ranura M.2 Wi-Fi independiente ofrecen opciones de ampliación." }
+      ],
+      "specs": [
+        { "label": "Modelo", "value": "MCDPC2" },
+        { "label": "CPU", "value": "Procesadores Intel Core Ultra serie H de las series 1 / 2 (opcionales)" },
+        { "label": "Refrigeración", "value": "Disipador con cámara de vapor" },
+        { "label": "Memoria", "value": "2 x DDR5 SO-DIMM, hasta 96 GB; capacidad máxima según la configuración confirmada" },
+        { "label": "Red", "value": "2 x Intel i226-V 2,5GbE RJ45" },
+        { "label": "USB", "value": "3 x USB 3.2 Gen 2; 1 x USB 2.0; 1 x USB Type-C" },
+        { "label": "Thunderbolt 4", "value": "1 x Thunderbolt 4" },
+        { "label": "Salidas de vídeo", "value": "1 x HDMI 2.1 (TMDS 4K60 / FRL 8K60); 1 x DisplayPort 2.1; E/S final según la configuración confirmada" },
+        { "label": "Almacenamiento", "value": "2 x M.2 NVMe" },
+        { "label": "Ampliación", "value": "1 x ranura M.2 para Wi-Fi" },
+        { "label": "Controles / audio", "value": "Botón de encendido; conectores separados para auriculares y micrófono" },
+        { "label": "Sistema", "value": "Windows 10 / 11; Linux" },
+        { "label": "Funciones de arranque", "value": "Wake-on-LAN; encendido automático; encendido programado; arranque PXE" },
+        { "label": "Alimentación", "value": "12-19 V CC, 120 W" },
+        { "label": "Material", "value": "Carcasa de ABS" },
+        { "label": "Instalación", "value": "De sobremesa" },
+        { "label": "Dimensiones", "value": "61 (ancho) x 187 (alto) x 142 (fondo) mm" },
+        { "label": "Peso", "value": "0,7 kg" },
+        { "label": "Temperatura de funcionamiento", "value": "De -20°C a +60°C" },
+        { "label": "Temperatura de almacenamiento", "value": "De -30°C a +70°C" },
+        { "label": "Humedad de almacenamiento", "value": "10%-90% HR a 30°C, sin condensación" },
+        { "label": "Notas de configuración", "value": "Las opciones de CPU y la memoria máxima dependen de la configuración confirmada. Las imágenes son orientativas; la E/S final sigue el pedido confirmado." }
+      ]
+    }
+  }
+}

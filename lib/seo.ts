@@ -1,7 +1,7 @@
 import { brochureUpdates } from '@/lib/brochure-updates';
 import { aiCatalog, mcaipc2 } from '@/lib/ai-catalog';
 import type { Metadata } from 'next';
-import { isValidLanguage, SUPPORTED_LANGUAGES } from '@/lib/i18n/config';
+import { isValidLanguage, SUPPORTED_LANGUAGES, type Language } from '@/lib/i18n/config';
 import { localizedHref } from '@/lib/i18n/routing';
 import { dictionaries } from '@/lib/i18n/dictionaries';
 import { legalNavigation } from '@/lib/legal-navigation';
@@ -12,7 +12,7 @@ import { commercialCatalog } from '@/lib/commercial-catalog';
 export const SITE_URL = 'https://szmagicchip.com';
 export const SITE_NAME = 'MagicChip';
 // Update this only when the published site or product catalog materially changes.
-export const SITE_CONTENT_LAST_UPDATED = new Date('2026-10-14T00:00:00.000Z');
+export const SITE_CONTENT_LAST_UPDATED = new Date('2026-10-20T00:00:00.000Z');
 export const DEFAULT_SOCIAL_IMAGE = '/assets/brand/og-default.png';
 
 export type SeoEntry = {
@@ -20,6 +20,7 @@ export type SeoEntry = {
   description: string;
   path: string;
   image?: string;
+  descriptionTranslations?: Partial<Record<Language, string>>;
 };
 
 export const categorySeo: Record<string, SeoEntry> = {
@@ -75,6 +76,7 @@ const catalogCommercialProductSeo: Record<string, SeoEntry & { category: string 
     {
       name: `${item.name} ${item.series === 'NAS-MB' ? 'NAS Motherboard' : item.series === 'NAS' ? 'NAS PC' : 'Commercial Desktop PC'}`,
       description: item.tagline,
+      descriptionTranslations: Object.fromEntries(Object.entries(item.translations || {}).map(([language, copy]) => [language, copy.tagline])),
       path: `/products/commercial-mini-pc/${item.id}`,
       image: item.image,
       category: 'commercial-mini-pc',
@@ -179,6 +181,7 @@ export function createPageMetadata(entry: SeoEntry, requestedLanguage = 'en'): M
     '/privacy-policy': legalNavigation[language].privacy, '/cookie-policy': legalNavigation[language].cookies, '/terms-of-use': legalNavigation[language].terms,
   };
   const name = titles[entry.path] || entry.name;
+  const description = entry.descriptionTranslations?.[language] || entry.description;
   const brandedTitle = name.includes(SITE_NAME) ? name : `${name} | ${SITE_NAME}`;
   const socialImage = entry.image || DEFAULT_SOCIAL_IMAGE;
   const path = localizedHref(entry.path, language);
@@ -186,11 +189,11 @@ export function createPageMetadata(entry: SeoEntry, requestedLanguage = 'en'): M
 
   return {
     title: { absolute: brandedTitle },
-    description: entry.description,
+    description,
     alternates: { canonical: path, languages: Object.fromEntries([...SUPPORTED_LANGUAGES.map(lang => [lang, localizedHref(entry.path, lang)]), ['x-default', localizedHref(entry.path, 'en')]]) },
     openGraph: {
       title: brandedTitle,
-      description: entry.description,
+      description,
       url: path,
       locale: locales[language],
       alternateLocale: SUPPORTED_LANGUAGES.filter(lang => lang !== language).map(lang => locales[lang]),
@@ -204,7 +207,7 @@ export function createPageMetadata(entry: SeoEntry, requestedLanguage = 'en'): M
     twitter: {
       card: 'summary_large_image',
       title: brandedTitle,
-      description: entry.description,
+      description,
       images: [socialImage],
     },
   };

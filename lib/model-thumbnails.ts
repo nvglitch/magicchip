@@ -495,5 +495,9 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
   "mc30s-ddr5": {
     "image": "/assets/products/thumbnails/mc30s.webp",
     "source": "/assets/products/firewall/ver2/mc30s/front.webp"
+  },
+  "mcdpc2": {
+    "image": "/assets/products/thumbnails/mcdpc2.webp",
+    "source": "/assets/products/commercial/dpc/mcdpc2/main.webp"
   }
 };

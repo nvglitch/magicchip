@@ -1,19 +1,19 @@
 {
   "schemaVersion": 2,
   "sourceRoot": "D:\\本地资源库\\电脑相关\\电脑册子归档\\ver2",
-  "observedAtUtc": "2026-10-13T09:54:12.159012+00:00",
+  "observedAtUtc": "2026-10-20T02:20:01.566382+00:00",
   "observationOnly": false,
-  "totalPdfCount": 115,
-  "inScopePdfCount": 114,
+  "totalPdfCount": 116,
+  "inScopePdfCount": 115,
   "statusCounts": {
     "deferred-by-user": 2,
     "pending-confirmation": 16,
     "superseded-by-merged-brochure": 19,
     "superseded-by-renamed-brochure": 4,
-    "updated": 31,
+    "updated": 32,
     "verified-current": 69
   },
-  "previousObservation": "brochure-history/before-2026-10-13-update.json",
+  "previousObservation": "brochure-history/before-2026-10-20-mcdpc2.json",
   "files": [
     {
       "relativePath": "AIPC/MCAIPC1 brochure.pdf",
@@ -325,7 +325,7 @@
       "modifiedAtUtc": "2026-10-13T08:58:32.961955+00:00",
       "observedSha256": "87a63c0d91c7d3c5dc0bbf7d8ce756cda65ba1bb76af819a0edb34bfc593bbc6",
       "present": true,
-      "changeSincePreviousObservation": "new",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "nasd2700"
       ],
@@ -1966,6 +1966,26 @@
       "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
+      "relativePath": "桌面端DPC/MCDPC2 Brochure.pdf",
+      "sizeBytes": 2829220,
+      "modifiedAtUtc": "2026-10-20T01:54:09.738106+00:00",
+      "observedSha256": "7ffc34abb5039512277055f4f610cc3b5184d589e55a05288a8ebca4a5177831",
+      "appliedSha256": "7ffc34abb5039512277055f4f610cc3b5184d589e55a05288a8ebca4a5177831",
+      "excluded": false,
+      "present": true,
+      "status": "updated",
+      "changeSincePreviousObservation": "new",
+      "modelIds": [
+        "mcdpc2"
+      ],
+      "hrefs": [
+        "/products/commercial-mini-pc/mcdpc2"
+      ],
+      "reviewedAtUtc": "2026-10-20T02:20:01.566382+00:00",
+      "appliedAtUtc": "2026-10-20T02:20:01.566382+00:00",
+      "notes": "2026-10-20：按用户指定资料新增 DPC 独立型号 MCDPC2。已核对固定册子库为同一指纹，落实 22 行参数、三视图、统一缩略图、五语言内容、搜索和 SEO；保留 CPU/内存/接口按确认配置的说明，生产构建与页面检查通过。"
+    },
+    {
       "relativePath": "桌面端DPC/MCGM13 brochure.pdf",
       "sizeBytes": 9499409,
       "modifiedAtUtc": "2026-08-24T10:03:38.918909+00:00",
@@ -2253,7 +2273,7 @@
       "modifiedAtUtc": "2026-10-13T07:49:15.071537+00:00",
       "observedSha256": "52d5069da09f4c846875e310d3b070705fbd71864841ee9bacb3600395bed016",
       "present": true,
-      "changeSincePreviousObservation": "new",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mc30s"
       ],
@@ -2276,7 +2296,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "missing",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mc30s-ddr4"
       ],
@@ -2300,7 +2320,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "missing",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mc30s-n100"
       ],
@@ -2323,7 +2343,7 @@
       "modifiedAtUtc": "2026-10-13T08:06:18.886488+00:00",
       "observedSha256": "f1662d25c0797279fd375e68448ef509ac17309a549116059e9ebf9f2e7de664",
       "present": true,
-      "changeSincePreviousObservation": "new",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mc30w"
       ],
@@ -2344,7 +2364,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-renamed-brochure",
-      "changeSincePreviousObservation": "missing",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mc30w-n100"
       ],
@@ -2408,7 +2428,7 @@
       "excluded": false,
       "present": false,
       "status": "pending-confirmation",
-      "changeSincePreviousObservation": "missing",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcsr613u"
       ],
@@ -2427,7 +2447,7 @@
       "modifiedAtUtc": "2026-10-13T08:17:47.996408+00:00",
       "observedSha256": "d30bb530243ce1e3e836aeeaa9b0ee2b6238368db454b62bc6e9ef12d6a14707",
       "present": true,
-      "changeSincePreviousObservation": "new",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcsr6n1"
       ],
@@ -2448,7 +2468,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-renamed-brochure",
-      "changeSincePreviousObservation": "missing",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcsr6n12u"
       ],
@@ -2472,7 +2492,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-renamed-brochure",
-      "changeSincePreviousObservation": "missing",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcsr6n13u"
       ],
@@ -2495,7 +2515,7 @@
       "modifiedAtUtc": "2026-10-13T08:17:48.112094+00:00",
       "observedSha256": "3fe84443af20a29701790f9cf21bb02f84502cb1812adf805aeb5c064682802c",
       "present": true,
-      "changeSincePreviousObservation": "new",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcsr6n2"
       ],
@@ -2516,7 +2536,7 @@
       "modifiedAtUtc": "2026-10-13T08:17:48.223851+00:00",
       "observedSha256": "ae8cbd9d112f04a2230b7b120b0ecbd435ff6ad532dd684d65acaa13f6dee44b",
       "present": true,
-      "changeSincePreviousObservation": "new",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcsr6n3"
       ],
@@ -2536,7 +2556,7 @@
       "modifiedAtUtc": "2026-10-13T08:29:40.323091+00:00",
       "observedSha256": "b28917ba2e067d155b22814b318d5b598b6e111a22746eb7c753c02751e760c9",
       "present": false,
-      "changeSincePreviousObservation": "missing-during-update",
+      "changeSincePreviousObservation": "still-missing",
       "lastObservedAtUtc": "2026-10-13T09:10:16.846961+00:00",
       "status": "deferred-by-user",
       "reviewedAtUtc": "2026-10-13T09:54:12.159012+00:00",
@@ -2770,7 +2790,7 @@
       "modifiedAtUtc": "2026-10-13T08:45:07.915540+00:00",
       "observedSha256": "8538c21f866920d7f824e8a6b48618ce4e829bf8a39d7be06668c1ebc1ef3220",
       "present": true,
-      "changeSincePreviousObservation": "new",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcsrp7"
       ],
@@ -2790,7 +2810,7 @@
       "modifiedAtUtc": "2026-10-13T08:06:19.005790+00:00",
       "observedSha256": "5aafb096c94e4016cc81680ceb5aa865208600e26d2541e359828d4dc7537d7d",
       "present": true,
-      "changeSincePreviousObservation": "new",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mgsrn100"
       ],
@@ -2811,7 +2831,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-renamed-brochure",
-      "changeSincePreviousObservation": "missing",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mgsrn100-v1"
       ],
@@ -2835,7 +2855,7 @@
       "excluded": false,
       "present": false,
       "status": "pending-confirmation",
-      "changeSincePreviousObservation": "missing",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcsr613u"
       ],

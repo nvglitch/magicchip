@@ -144,7 +144,7 @@ export default function HeroBanner({ banners }: HeroBannerProps) {
                   src={slides[currentSlide].image!}
                   alt={slides[currentSlide].title}
                   fill
-                  className={isCertificateSlide ? 'object-contain object-center' : 'object-cover object-center'}
+                  className={isCertificateSlide ? 'object-contain object-center scale-[1.02] -translate-x-[0.75%]' : 'object-cover object-center'}
                   sizes="100vw"
                   priority={currentSlide === 0}
                 />

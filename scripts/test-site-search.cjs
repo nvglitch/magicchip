@@ -73,9 +73,12 @@ assert(matchSearch(fixture([{ label: 'Memory', value: 'DDR5-4800' }]), 'DDR5'));
 assert.equal(matchSearch(fixture([{ label: 'Memory', value: 'DDR4' }]), 'DDR5'), null);
 assert(matchSearch(fixture([{ label: 'Cooling', value: 'fanless' }]), 'fanles'));
 const products = siteSearchIndex.filter(e => e.type === 'product');
-assert.equal(products.length, 164);
+assert.equal(products.length, 165);
 assert(products.every(e => e.specs?.length));
 assert.equal(new Set(products.map(e => e.href)).size, products.length);
+for (const query of ['MCDPC2', 'Core Ultra 96GB Thunderbolt 4', 'Dampfkammer', 'chambre à vapeur', 'camera di vapore', 'cámara de vapor']) {
+  assert(searchSite(query).some(entry => entry.href === '/products/commercial-mini-pc/mcdpc2'), `MCDPC2 query failed: ${query}`);
+}
 for (const entry of products) assert.equal(searchSite(entry.title)[0]?.href, entry.href);
 const b2 = groupProductNavigation(industrialCatalog.filter(item => item.series === 'B'))
   .find(group => group.name === 'MCIPCB2');

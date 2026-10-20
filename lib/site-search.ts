@@ -82,6 +82,7 @@ const catalogCommercialSearchEntries: SearchEntry[] = commercialCatalog.map((ite
     ...(item.series === 'NAS-MB' ? Object.values(nasMotherboardCopy).flatMap(copy => copy.keywords).filter(keyword => !/mini.?itx/i.test(keyword) || item.specs.some(spec => /mini.?itx/i.test(spec.value))) : []),
     `${item.series.toLowerCase()} series`,
     item.name.toLowerCase(),
+    ...Object.values(item.translations || {}).flatMap(copy => [copy.tagline, ...copy.highlights, ...copy.specs.map(spec => `${spec.label} ${spec.value}`)]),
   ],
   image: item.image,
 }));

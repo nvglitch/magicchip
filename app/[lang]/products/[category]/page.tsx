@@ -368,7 +368,7 @@ export default function CategoryPage() {
       : category === 'commercial-mini-pc'
         ? [
           ...sampleProducts['commercial-mini-pc'],
-          ...commercialCatalog.map(({ id, name, tagline, image, highlights }) => ({ id, name, tagline, image, specs: highlights })),
+          ...commercialCatalog.map(item => ({ id: item.id, name: item.name, tagline: item.translations?.[language]?.tagline || item.tagline, image: item.image, specs: item.translations?.[language]?.highlights || item.highlights })),
         ]
         : sampleProducts[category] || [];
   const activeSeries = category === 'industrial-mini-pc'

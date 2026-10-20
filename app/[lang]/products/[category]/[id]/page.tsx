@@ -29,7 +29,7 @@ import SpecificationTable from '@/components/SpecificationTable';
 import type { ProductConfiguration } from '@/lib/product-specifications';
 import { industrialCatalog, type IndustrialSeriesCode } from '@/lib/industrial-catalog';
 import { firewallCatalog, type FirewallSeriesCode } from '@/lib/firewall-catalog';
-import { commercialCatalog, type CommercialSeriesCode } from '@/lib/commercial-catalog';
+import { commercialCatalog, type CommercialSeriesCode, type CommercialCatalogItem } from '@/lib/commercial-catalog';
 import { nasMotherboardCopy } from '@/lib/nas-motherboard-copy';
 
 type ProductSpec = { label: string; value: string };
@@ -47,6 +47,9 @@ type ProductDetail = {
   features: ProductFeature[];
   sellingPoints?: ProductCard[];
   advantageSummary?: string;
+  specificationHeading?: string;
+  featureHeading?: string;
+  translations?: CommercialCatalogItem['translations'];
   operatingRange?: string;
   skus?: ProductConfiguration[];
 };
@@ -257,9 +260,13 @@ const catalogCommercialProducts: Record<string, ProductDetail> = Object.fromEntr
         image,
         title: index === 0 ? `${item.name} enclosure and interface view` : `${item.name} product view ${index + 1}`,
       })),
-      highlights: item.series === 'NAS-MB' ? item.highlights : compactCatalogHighlights(item.specs),
+      highlights: item.features || item.series === 'NAS-MB' ? item.highlights : compactCatalogHighlights(item.specs),
       specs: item.specs,
-      features: commercialSeriesFeatures[item.series],
+      features: item.features || commercialSeriesFeatures[item.series],
+      specificationHeading: item.specificationHeading,
+      featureHeading: item.featureHeading,
+      advantageSummary: item.advantageSummary,
+      translations: item.translations,
       operatingRange: item.operatingRange,
     },
   ]),
@@ -782,7 +789,9 @@ export default function ProductDetailPage() {
   const onConfigurationChange = useCallback((configuration: ProductConfiguration) => setConfigurationChoice({ productId, configuration }), [productId]);
   const activeConfiguration = configurationChoice?.productId === productId ? configurationChoice.configuration : undefined;
   const [previewImage, setPreviewImage] = useState<string | null>(null);
-  const product = productCategories[productId] === category ? products[productId] : undefined;
+  const sourceProduct = productCategories[productId] === category ? products[productId] : undefined;
+  const translatedCopy = sourceProduct?.translations?.[language];
+  const product = sourceProduct && translatedCopy ? { ...sourceProduct, ...translatedCopy } : sourceProduct;
   const configurationImagesFollowSelection = Boolean(product?.skus?.some(sku => sku.galleryCards?.length));
   const industrialSeriesCode = category === 'industrial-mini-pc'
     ? industrialCatalog.find((item) => item.id === productId)?.series.toLowerCase()
@@ -939,7 +948,7 @@ export default function ProductDetailPage() {
       {!product.skus && <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-950">{isNasMotherboard ? motherboardWords.specifications : t.productDetail.industrialConfigDetails}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-950">{product.specificationHeading || (isNasMotherboard ? motherboardWords.specifications : t.productDetail.industrialConfigDetails)}</h2>
           </div>
 
           <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }}>
@@ -952,7 +961,7 @@ export default function ProductDetailPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] gap-10 items-start">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-950 mb-5">{isNasMotherboard ? motherboardWords.featureHeading : category === 'ai-mini-pc' ? t.productDetail.aiAdvantagesHeading : t.productDetail.advantagesHeading}</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-950 mb-5">{product.featureHeading || (isNasMotherboard ? motherboardWords.featureHeading : category === 'ai-mini-pc' ? t.productDetail.aiAdvantagesHeading : t.productDetail.advantagesHeading)}</h2>
               <p className="text-slate-600 leading-relaxed">
                 {product.advantageSummary || product.description}
               </p>

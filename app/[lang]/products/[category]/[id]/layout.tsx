@@ -2,6 +2,7 @@ import { localizedHref } from '@/lib/i18n/routing';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { commercialCatalog } from '@/lib/commercial-catalog';
+import { isValidLanguage } from '@/lib/i18n/config';
 import { firewallCatalog } from '@/lib/firewall-catalog';
 import { industrialCatalog, industrialProductAliases } from '@/lib/industrial-catalog';
 import { aiCatalog, aiProductAliases } from '@/lib/ai-catalog';
@@ -37,6 +38,7 @@ export default async function ProductLayout({ children, params }: ProductLayoutP
   const product = productSeo[id];
   const categoryEntry = categorySeo[category];
   const catalogItem = [...industrialCatalog, ...firewallCatalog, ...commercialCatalog, ...aiCatalog].find((item) => item.id === id);
+  const translatedCopy = commercialCatalog.find(item => item.id === id)?.translations?.[isValidLanguage(lang) ? lang : 'en'];
   const configurationProduct = category === 'industrial-mini-pc' ? industrialCatalog.find(item => item.id === id) : category === 'ai-mini-pc' ? aiCatalog.find(item => item.id === id) : category === 'firewall-mini-pc' ? firewallCatalog.find(item => item.id === id) : undefined;
   const isValidProduct = product && product.category === category;
 
@@ -47,7 +49,7 @@ export default async function ProductLayout({ children, params }: ProductLayoutP
     '@type': configurationProduct?.skus?.length ? 'ProductGroup' : 'Product',
     '@id': `${SITE_URL}${localizedHref(product.path, lang)}#product`,
     name: product.name,
-    description: product.description,
+    description: translatedCopy?.tagline || product.description,
     image: product.image ? [`${SITE_URL}${product.image}`] : undefined,
     url: `${SITE_URL}${localizedHref(product.path, lang)}`,
     sku: configurationProduct?.skus?.length ? undefined : catalogItem?.name || id.toUpperCase(),
@@ -64,8 +66,8 @@ export default async function ProductLayout({ children, params }: ProductLayoutP
     category: categoryEntry?.name,
     brand: { '@type': 'Brand', name: SITE_NAME },
     manufacturer: { '@id': `${SITE_URL}/#organization` },
-    additionalProperty: catalogItem?.specs
-      .filter((spec) => !['Model', 'Series'].includes(spec.label))
+    additionalProperty: (translatedCopy?.specs || catalogItem?.specs)
+      ?.filter((spec) => !['Model', 'Series'].includes(spec.label))
       .map((spec) => ({ '@type': 'PropertyValue', name: spec.label, value: spec.value })),
   };
   const breadcrumb = {
