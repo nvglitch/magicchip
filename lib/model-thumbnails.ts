@@ -499,5 +499,9 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
   "mcdpc2": {
     "image": "/assets/products/thumbnails/mcdpc2.webp",
     "source": "/assets/products/commercial/dpc/mcdpc2/main.webp"
+  },
+  "mcsrc26": {
+    "image": "/assets/products/thumbnails/mcsrc26.webp",
+    "source": "/assets/products/firewall/high-speed-series/mcsrc26/rear.webp"
   }
 };

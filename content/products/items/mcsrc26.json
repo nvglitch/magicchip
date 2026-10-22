@@ -1,0 +1,667 @@
+{
+  "id": "mcsrc26",
+  "name": "MCSRC26",
+  "category": "firewall-mini-pc",
+  "series": "10G",
+  "published": true,
+  "tagline": "Intel Core network appliance with dual 10GbE SFP+ and six 2.5GbE ports",
+  "description": "MCSRC26 combines two Intel 82599ES 10GbE SFP+ ports and six Intel i226-V 2.5GbE RJ45 ports in an aluminum enclosure. Choose a 12th or 13th Gen Intel Core U/P/H configuration with two DDR5 SO-DIMM slots supporting up to 96 GB. A separate RJ45 console, NVMe storage, optional Wi-Fi and cellular expansion, and a built-in AC power module support configurable router and firewall deployments.",
+  "image": "/assets/products/firewall/high-speed-series/mcsrc26/rear.webp",
+  "images": [
+    "/assets/products/firewall/high-speed-series/mcsrc26/rear.webp"
+  ],
+  "galleryImages": [
+    "/assets/products/firewall/high-speed-series/mcsrc26/front.webp",
+    "/assets/products/firewall/high-speed-series/mcsrc26/rear.webp"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/firewall/high-speed-series/mcsrc26/front.webp",
+      "title": "MCSRC26 front panel"
+    },
+    {
+      "image": "/assets/products/firewall/high-speed-series/mcsrc26/rear.webp",
+      "title": "MCSRC26 network ports and AC input"
+    }
+  ],
+  "highlights": [
+    "12th / 13th Gen Intel Core options",
+    "Up to 96 GB DDR5",
+    "2 x 10GbE SFP+ + 6 x 2.5GbE RJ45",
+    "RJ45 console + built-in AC power"
+  ],
+  "specificationHeading": "MCSRC26 hardware specifications",
+  "featureHeading": "Fiber and copper connectivity in one appliance",
+  "advantageSummary": "Combine 10GbE SFP+ and 2.5GbE copper connections with configurable processing, local management and optional wireless expansion.",
+  "features": [
+    {
+      "icon": "Network",
+      "title": "Mixed fiber and copper networking",
+      "description": "Two Intel 82599ES 10GbE SFP+ ports and six Intel i226-V 2.5GbE RJ45 ports provide separate connections for uplinks and local networks."
+    },
+    {
+      "icon": "Cpu",
+      "title": "Configurable Intel Core platform",
+      "description": "Choose 12th or 13th Gen Intel Core U/P/H options. Two DDR5 SO-DIMM slots support up to 96 GB, alongside M.2 2280 NVMe storage and an HDD / SSD drive bay."
+    },
+    {
+      "icon": "Server",
+      "title": "Management and deployment options",
+      "description": "A dedicated RJ45 console uses the Cisco pinout. Optional Wi-Fi and 3G / 4G / 5G expansion, desktop or wall mounting, and built-in 100-240 V AC power suit different installations."
+    }
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCSRC26"
+    },
+    {
+      "label": "CPU",
+      "value": "12th / 13th Gen Intel Core i3 / i5 / i7 U/P/H"
+    },
+    {
+      "label": "Listed CPU options",
+      "value": "Intel Core i3-1215U / i5-1235U / i3-1315U / i5-1335U"
+    },
+    {
+      "label": "Memory",
+      "value": "2 x DDR5 SO-DIMM, up to 96 GB"
+    },
+    {
+      "label": "Network",
+      "value": "2 x Intel 82599ES 10GbE SFP+; 6 x Intel i226-V 2.5GbE RJ45"
+    },
+    {
+      "label": "USB",
+      "value": "4 x USB 3.0"
+    },
+    {
+      "label": "Console",
+      "value": "1 x RJ45 console, Cisco pinout; separate from the Ethernet ports"
+    },
+    {
+      "label": "Display",
+      "value": "1 x HDMI; 1 x Type-C video output with 5 V / 3 A power output"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x M.2 2280 NVMe SSD; 1 x HDD / SSD drive bay"
+    },
+    {
+      "label": "Wi-Fi expansion",
+      "value": "1 x M.2 Wi-Fi slot"
+    },
+    {
+      "label": "Cellular expansion",
+      "value": "1 x M.2 3042 for 3G / 4G; M.2 3052 for 5G optional"
+    },
+    {
+      "label": "SIM / antenna",
+      "value": "Onboard SIM slot; 2 antenna ports, 5 with optional 5G module"
+    },
+    {
+      "label": "System",
+      "value": "Windows 10 / 11; Linux"
+    },
+    {
+      "label": "Management",
+      "value": "Watchdog; Wake-on-LAN via copper Ethernet"
+    },
+    {
+      "label": "Power",
+      "value": "100-240 V AC, 50/60 Hz; built-in power module"
+    },
+    {
+      "label": "Material",
+      "value": "Aluminum enclosure"
+    },
+    {
+      "label": "Installation",
+      "value": "Desktop or wall mounting"
+    },
+    {
+      "label": "Dimensions",
+      "value": "299 x 175 x 51 mm"
+    },
+    {
+      "label": "Operating temperature",
+      "value": "-20°C to +60°C"
+    },
+    {
+      "label": "Storage temperature",
+      "value": "-30°C to +70°C"
+    },
+    {
+      "label": "Storage humidity",
+      "value": "10%-90% RH at 30°C, non-condensing"
+    },
+    {
+      "label": "Configuration notes",
+      "value": "CPU and cellular options follow the confirmed configuration. Wi-Fi and cellular modules are optional. Images are for reference; final I/O follows the confirmed order."
+    }
+  ],
+  "sourceBrochure": "软路由SR/MCSRC26 brochure.pdf",
+  "sourceSha256": "8b3b1bb4a4734155bbb513d5ab3487c524f6144de36f6be0bfd8b32a722d1313",
+  "translations": {
+    "de": {
+      "tagline": "Intel-Core-Netzwerk-Appliance mit zwei 10GbE-SFP+- und sechs 2,5GbE-Ports",
+      "description": "MCSRC26 kombiniert zwei Intel-82599ES-10GbE-SFP+-Ports mit sechs Intel-i226-V-2,5GbE-RJ45-Ports in einem Aluminiumgehäuse. Wählen Sie eine Intel-Core-U/P/H-Konfiguration der 12. oder 13. Generation mit zwei DDR5-SO-DIMM-Steckplätzen für bis zu 96 GB. Eine separate RJ45-Konsole, NVMe-Speicher, optionale WLAN- und Mobilfunkerweiterung sowie ein integriertes AC-Netzteil ermöglichen konfigurierbare Router- und Firewall-Installationen.",
+      "highlights": [
+        "Intel Core der 12. / 13. Generation",
+        "Bis zu 96 GB DDR5",
+        "2 x 10GbE SFP+ + 6 x 2,5GbE RJ45",
+        "RJ45-Konsole + integriertes AC-Netzteil"
+      ],
+      "specificationHeading": "MCSRC26 – Technische Daten",
+      "featureHeading": "Glasfaser- und Kupferanschlüsse in einem Gerät",
+      "advantageSummary": "Kombinieren Sie 10GbE SFP+ und 2,5GbE-Kupferanschlüsse mit konfigurierbarer Rechenleistung, lokaler Verwaltung und optionaler Funkerweiterung.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/high-speed-series/mcsrc26/front.webp",
+          "title": "MCSRC26 Vorderseite"
+        },
+        {
+          "image": "/assets/products/firewall/high-speed-series/mcsrc26/rear.webp",
+          "title": "MCSRC26 Netzwerkanschlüsse und AC-Eingang"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Glasfaser- und Kupfernetzwerke",
+          "description": "Zwei Intel-82599ES-10GbE-SFP+-Ports und sechs Intel-i226-V-2,5GbE-RJ45-Ports bieten separate Anschlüsse für Uplinks und lokale Netzwerke."
+        },
+        {
+          "icon": "Cpu",
+          "title": "Konfigurierbare Intel-Core-Plattform",
+          "description": "Wählen Sie Intel Core U/P/H der 12. oder 13. Generation. Zwei DDR5-SO-DIMM-Steckplätze unterstützen bis zu 96 GB; hinzu kommen M.2-2280-NVMe-Speicher und ein HDD-/SSD-Laufwerksschacht."
+        },
+        {
+          "icon": "Server",
+          "title": "Verwaltung und Installation",
+          "description": "Eine separate RJ45-Konsole verwendet die Cisco-Pinbelegung. Optionales WLAN und 3G / 4G / 5G, Desktop- oder Wandmontage und ein integriertes 100-240-V-AC-Netzteil ermöglichen unterschiedliche Installationen."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modell",
+          "value": "MCSRC26"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel Core i3 / i5 / i7 U/P/H der 12. / 13. Generation"
+        },
+        {
+          "label": "Aufgeführte CPU-Optionen",
+          "value": "Intel Core i3-1215U / i5-1235U / i3-1315U / i5-1335U"
+        },
+        {
+          "label": "Arbeitsspeicher",
+          "value": "2 x DDR5 SO-DIMM, bis zu 96 GB"
+        },
+        {
+          "label": "Netzwerk",
+          "value": "2 x Intel 82599ES 10GbE SFP+; 6 x Intel i226-V 2,5GbE RJ45"
+        },
+        {
+          "label": "USB",
+          "value": "4 x USB 3.0"
+        },
+        {
+          "label": "Konsole",
+          "value": "1 x RJ45-Konsole mit Cisco-Pinbelegung; separat von den Ethernet-Ports"
+        },
+        {
+          "label": "Bildausgänge",
+          "value": "1 x HDMI; 1 x Type-C-Videoausgang mit 5 V / 3 A Stromausgang"
+        },
+        {
+          "label": "Datenspeicher",
+          "value": "1 x M.2 2280 NVMe SSD; 1 x HDD-/SSD-Laufwerksschacht"
+        },
+        {
+          "label": "WLAN-Erweiterung",
+          "value": "1 x M.2-Steckplatz für WLAN"
+        },
+        {
+          "label": "Mobilfunkerweiterung",
+          "value": "1 x M.2 3042 für 3G / 4G; M.2 3052 für 5G optional"
+        },
+        {
+          "label": "SIM / Antennen",
+          "value": "SIM-Steckplatz auf der Platine; 2 Antennenanschlüsse, 5 mit optionalem 5G-Modul"
+        },
+        {
+          "label": "Betriebssystem",
+          "value": "Windows 10 / 11; Linux"
+        },
+        {
+          "label": "Verwaltung",
+          "value": "Watchdog; Wake-on-LAN über Kupfer-Ethernet"
+        },
+        {
+          "label": "Stromversorgung",
+          "value": "100-240 V AC, 50/60 Hz; integriertes Netzteil"
+        },
+        {
+          "label": "Material",
+          "value": "Aluminiumgehäuse"
+        },
+        {
+          "label": "Montage",
+          "value": "Desktop- oder Wandmontage"
+        },
+        {
+          "label": "Abmessungen",
+          "value": "299 x 175 x 51 mm"
+        },
+        {
+          "label": "Betriebstemperatur",
+          "value": "-20°C bis +60°C"
+        },
+        {
+          "label": "Lagertemperatur",
+          "value": "-30°C bis +70°C"
+        },
+        {
+          "label": "Lagerfeuchtigkeit",
+          "value": "10%-90% r. F. bei 30°C, nicht kondensierend"
+        },
+        {
+          "label": "Konfigurationshinweise",
+          "value": "CPU- und Mobilfunkoptionen richten sich nach der bestätigten Konfiguration. WLAN- und Mobilfunkmodule sind optional. Die Bilder dienen als Referenz; endgültige Anschlüsse gemäß bestätigter Bestellung."
+        }
+      ]
+    },
+    "fr": {
+      "tagline": "Appliance réseau Intel Core avec deux ports SFP+ 10GbE et six ports 2,5GbE",
+      "description": "MCSRC26 associe deux ports SFP+ Intel 82599ES 10GbE et six ports RJ45 Intel i226-V 2,5GbE dans un boîtier en aluminium. Choisissez une configuration Intel Core U/P/H de 12e ou 13e génération avec deux emplacements DDR5 SO-DIMM jusqu'à 96 Go. Une console RJ45 distincte, le stockage NVMe, des extensions Wi-Fi et cellulaires en option et une alimentation secteur intégrée permettent des déploiements de routeur et de pare-feu configurables.",
+      "highlights": [
+        "Intel Core de 12e / 13e génération",
+        "Jusqu'à 96 Go de DDR5",
+        "2 x SFP+ 10GbE + 6 x RJ45 2,5GbE",
+        "Console RJ45 + alimentation secteur intégrée"
+      ],
+      "specificationHeading": "Caractéristiques matérielles du MCSRC26",
+      "featureHeading": "Connexions fibre et cuivre dans un seul appareil",
+      "advantageSummary": "Associez le SFP+ 10GbE et les connexions cuivre 2,5GbE à une plateforme configurable, une gestion locale et des extensions sans fil en option.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/high-speed-series/mcsrc26/front.webp",
+          "title": "MCSRC26 face avant"
+        },
+        {
+          "image": "/assets/products/firewall/high-speed-series/mcsrc26/rear.webp",
+          "title": "MCSRC26 ports réseau et entrée secteur"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Réseaux fibre et cuivre",
+          "description": "Deux ports SFP+ Intel 82599ES 10GbE et six ports RJ45 Intel i226-V 2,5GbE offrent des connexions distinctes pour les liaisons montantes et les réseaux locaux."
+        },
+        {
+          "icon": "Cpu",
+          "title": "Plateforme Intel Core configurable",
+          "description": "Choisissez un Intel Core U/P/H de 12e ou 13e génération. Deux emplacements DDR5 SO-DIMM prennent en charge jusqu'à 96 Go, avec un emplacement M.2 2280 NVMe et une baie HDD / SSD."
+        },
+        {
+          "icon": "Server",
+          "title": "Gestion et installation",
+          "description": "Une console RJ45 dédiée utilise le brochage Cisco. Les extensions Wi-Fi et 3G / 4G / 5G en option, la pose sur bureau ou au mur et l'alimentation intégrée 100-240 V CA s'adaptent à différentes installations."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modèle",
+          "value": "MCSRC26"
+        },
+        {
+          "label": "Processeur",
+          "value": "Intel Core i3 / i5 / i7 U/P/H de 12e / 13e génération"
+        },
+        {
+          "label": "Options CPU indiquées",
+          "value": "Intel Core i3-1215U / i5-1235U / i3-1315U / i5-1335U"
+        },
+        {
+          "label": "Mémoire",
+          "value": "2 x DDR5 SO-DIMM, jusqu'à 96 Go"
+        },
+        {
+          "label": "Réseau",
+          "value": "2 x Intel 82599ES 10GbE SFP+; 6 x Intel i226-V 2,5GbE RJ45"
+        },
+        {
+          "label": "USB",
+          "value": "4 x USB 3.0"
+        },
+        {
+          "label": "Console",
+          "value": "1 x console RJ45, brochage Cisco ; distincte des ports Ethernet"
+        },
+        {
+          "label": "Sorties vidéo",
+          "value": "1 x HDMI ; 1 x sortie vidéo Type-C avec sortie électrique 5 V / 3 A"
+        },
+        {
+          "label": "Stockage",
+          "value": "1 x SSD M.2 2280 NVMe ; 1 x baie HDD / SSD"
+        },
+        {
+          "label": "Extension Wi-Fi",
+          "value": "1 x emplacement M.2 Wi-Fi"
+        },
+        {
+          "label": "Extension cellulaire",
+          "value": "1 x M.2 3042 pour 3G / 4G ; M.2 3052 pour 5G en option"
+        },
+        {
+          "label": "SIM / antennes",
+          "value": "Emplacement SIM intégré ; 2 ports antenne, 5 avec le module 5G en option"
+        },
+        {
+          "label": "Système d'exploitation",
+          "value": "Windows 10 / 11 ; Linux"
+        },
+        {
+          "label": "Gestion",
+          "value": "Watchdog ; Wake-on-LAN via Ethernet cuivre"
+        },
+        {
+          "label": "Alimentation",
+          "value": "100-240 V CA, 50/60 Hz ; module d'alimentation intégré"
+        },
+        {
+          "label": "Matériau",
+          "value": "Boîtier en aluminium"
+        },
+        {
+          "label": "Installation",
+          "value": "Sur bureau ou fixation murale"
+        },
+        {
+          "label": "Dimensions",
+          "value": "299 x 175 x 51 mm"
+        },
+        {
+          "label": "Température de fonctionnement",
+          "value": "-20°C à +60°C"
+        },
+        {
+          "label": "Température de stockage",
+          "value": "-30°C à +70°C"
+        },
+        {
+          "label": "Humidité de stockage",
+          "value": "10%-90% HR à 30°C, sans condensation"
+        },
+        {
+          "label": "Notes de configuration",
+          "value": "Les options CPU et cellulaires suivent la configuration confirmée. Les modules Wi-Fi et cellulaires sont en option. Images à titre indicatif ; connectique finale selon la commande confirmée."
+        }
+      ]
+    },
+    "it": {
+      "tagline": "Appliance di rete Intel Core con due porte SFP+ 10GbE e sei porte 2,5GbE",
+      "description": "MCSRC26 combina due porte SFP+ Intel 82599ES 10GbE e sei porte RJ45 Intel i226-V 2,5GbE in uno chassis in alluminio. Scegli una configurazione Intel Core U/P/H di 12a o 13a generazione con due slot DDR5 SO-DIMM fino a 96 GB. Console RJ45 separata, archiviazione NVMe, espansioni Wi-Fi e cellulari opzionali e alimentazione AC integrata consentono installazioni configurabili per router e firewall.",
+      "highlights": [
+        "Intel Core di 12a / 13a generazione",
+        "Fino a 96 GB DDR5",
+        "2 x SFP+ 10GbE + 6 x RJ45 2,5GbE",
+        "Console RJ45 + alimentazione AC integrata"
+      ],
+      "specificationHeading": "Specifiche hardware di MCSRC26",
+      "featureHeading": "Connessioni in fibra e rame in un solo dispositivo",
+      "advantageSummary": "Combina SFP+ 10GbE e connessioni in rame 2,5GbE con una piattaforma configurabile, gestione locale ed espansioni wireless opzionali.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/high-speed-series/mcsrc26/front.webp",
+          "title": "MCSRC26 pannello frontale"
+        },
+        {
+          "image": "/assets/products/firewall/high-speed-series/mcsrc26/rear.webp",
+          "title": "MCSRC26 porte di rete e ingresso AC"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Reti in fibra e rame",
+          "description": "Due porte SFP+ Intel 82599ES 10GbE e sei porte RJ45 Intel i226-V 2,5GbE offrono connessioni distinte per uplink e reti locali."
+        },
+        {
+          "icon": "Cpu",
+          "title": "Piattaforma Intel Core configurabile",
+          "description": "Scegli Intel Core U/P/H di 12a o 13a generazione. Due slot DDR5 SO-DIMM supportano fino a 96 GB, con uno slot M.2 2280 NVMe e un vano HDD / SSD."
+        },
+        {
+          "icon": "Server",
+          "title": "Gestione e installazione",
+          "description": "La console RJ45 dedicata utilizza il pinout Cisco. Wi-Fi e 3G / 4G / 5G opzionali, montaggio su scrivania o a parete e alimentazione integrata 100-240 V AC consentono diverse installazioni."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modello",
+          "value": "MCSRC26"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel Core i3 / i5 / i7 U/P/H di 12a / 13a generazione"
+        },
+        {
+          "label": "Opzioni CPU indicate",
+          "value": "Intel Core i3-1215U / i5-1235U / i3-1315U / i5-1335U"
+        },
+        {
+          "label": "Memoria",
+          "value": "2 x DDR5 SO-DIMM, fino a 96 GB"
+        },
+        {
+          "label": "Rete",
+          "value": "2 x Intel 82599ES 10GbE SFP+; 6 x Intel i226-V 2,5GbE RJ45"
+        },
+        {
+          "label": "USB",
+          "value": "4 x USB 3.0"
+        },
+        {
+          "label": "Console",
+          "value": "1 x console RJ45, pinout Cisco; separata dalle porte Ethernet"
+        },
+        {
+          "label": "Uscite video",
+          "value": "1 x HDMI; 1 x uscita video Type-C con uscita di alimentazione 5 V / 3 A"
+        },
+        {
+          "label": "Archiviazione",
+          "value": "1 x SSD M.2 2280 NVMe; 1 x vano HDD / SSD"
+        },
+        {
+          "label": "Espansione Wi-Fi",
+          "value": "1 x slot M.2 per Wi-Fi"
+        },
+        {
+          "label": "Espansione cellulare",
+          "value": "1 x M.2 3042 per 3G / 4G; M.2 3052 per 5G opzionale"
+        },
+        {
+          "label": "SIM / antenne",
+          "value": "Slot SIM integrato; 2 porte antenna, 5 con il modulo 5G opzionale"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10 / 11; Linux"
+        },
+        {
+          "label": "Gestione",
+          "value": "Watchdog; Wake-on-LAN tramite Ethernet in rame"
+        },
+        {
+          "label": "Alimentazione",
+          "value": "100-240 V AC, 50/60 Hz; modulo di alimentazione integrato"
+        },
+        {
+          "label": "Materiale",
+          "value": "Chassis in alluminio"
+        },
+        {
+          "label": "Installazione",
+          "value": "Su scrivania o a parete"
+        },
+        {
+          "label": "Dimensioni",
+          "value": "299 x 175 x 51 mm"
+        },
+        {
+          "label": "Temperatura operativa",
+          "value": "Da -20°C a +60°C"
+        },
+        {
+          "label": "Temperatura di stoccaggio",
+          "value": "Da -30°C a +70°C"
+        },
+        {
+          "label": "Umidità di stoccaggio",
+          "value": "10%-90% UR a 30°C, senza condensa"
+        },
+        {
+          "label": "Note sulla configurazione",
+          "value": "Le opzioni CPU e cellulari seguono la configurazione confermata. I moduli Wi-Fi e cellulari sono opzionali. Immagini di riferimento; connessioni finali secondo la configurazione confermata."
+        }
+      ]
+    },
+    "es": {
+      "tagline": "Appliance de red Intel Core con dos puertos SFP+ 10GbE y seis puertos 2,5GbE",
+      "description": "MCSRC26 combina dos puertos SFP+ Intel 82599ES 10GbE y seis puertos RJ45 Intel i226-V 2,5GbE en una carcasa de aluminio. Elige una configuración Intel Core U/P/H de 12.ª o 13.ª generación con dos ranuras DDR5 SO-DIMM de hasta 96 GB. La consola RJ45 independiente, el almacenamiento NVMe, las ampliaciones Wi-Fi y móviles opcionales y la alimentación de CA integrada permiten despliegues configurables de router y cortafuegos.",
+      "highlights": [
+        "Intel Core de 12.ª / 13.ª generación",
+        "Hasta 96 GB DDR5",
+        "2 x SFP+ 10GbE + 6 x RJ45 2,5GbE",
+        "Consola RJ45 + alimentación de CA integrada"
+      ],
+      "specificationHeading": "Especificaciones de hardware del MCSRC26",
+      "featureHeading": "Conexiones de fibra y cobre en un solo equipo",
+      "advantageSummary": "Combina SFP+ 10GbE y conexiones de cobre 2,5GbE con una plataforma configurable, gestión local y ampliaciones inalámbricas opcionales.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/high-speed-series/mcsrc26/front.webp",
+          "title": "MCSRC26 panel frontal"
+        },
+        {
+          "image": "/assets/products/firewall/high-speed-series/mcsrc26/rear.webp",
+          "title": "MCSRC26 puertos de red y entrada de CA"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Redes de fibra y cobre",
+          "description": "Dos puertos SFP+ Intel 82599ES 10GbE y seis puertos RJ45 Intel i226-V 2,5GbE proporcionan conexiones independientes para enlaces ascendentes y redes locales."
+        },
+        {
+          "icon": "Cpu",
+          "title": "Plataforma Intel Core configurable",
+          "description": "Elige Intel Core U/P/H de 12.ª o 13.ª generación. Dos ranuras DDR5 SO-DIMM admiten hasta 96 GB, junto con una ranura M.2 2280 NVMe y una bahía HDD / SSD."
+        },
+        {
+          "icon": "Server",
+          "title": "Gestión e instalación",
+          "description": "La consola RJ45 dedicada utiliza la asignación de pines Cisco. Wi-Fi y 3G / 4G / 5G opcionales, montaje de sobremesa o pared y alimentación integrada de 100-240 V CA permiten distintas instalaciones."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modelo",
+          "value": "MCSRC26"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel Core i3 / i5 / i7 U/P/H de 12.ª / 13.ª generación"
+        },
+        {
+          "label": "Opciones de CPU indicadas",
+          "value": "Intel Core i3-1215U / i5-1235U / i3-1315U / i5-1335U"
+        },
+        {
+          "label": "Memoria",
+          "value": "2 x DDR5 SO-DIMM, hasta 96 GB"
+        },
+        {
+          "label": "Red",
+          "value": "2 x Intel 82599ES 10GbE SFP+; 6 x Intel i226-V 2,5GbE RJ45"
+        },
+        {
+          "label": "USB",
+          "value": "4 x USB 3.0"
+        },
+        {
+          "label": "Consola",
+          "value": "1 x consola RJ45, asignación de pines Cisco; independiente de los puertos Ethernet"
+        },
+        {
+          "label": "Salidas de vídeo",
+          "value": "1 x HDMI; 1 x salida de vídeo Type-C con salida de alimentación de 5 V / 3 A"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "1 x SSD M.2 2280 NVMe; 1 x bahía HDD / SSD"
+        },
+        {
+          "label": "Ampliación Wi-Fi",
+          "value": "1 x ranura M.2 para Wi-Fi"
+        },
+        {
+          "label": "Ampliación móvil",
+          "value": "1 x M.2 3042 para 3G / 4G; M.2 3052 para 5G opcional"
+        },
+        {
+          "label": "SIM / antenas",
+          "value": "Ranura SIM integrada; 2 puertos de antena, 5 con el módulo 5G opcional"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10 / 11; Linux"
+        },
+        {
+          "label": "Gestión",
+          "value": "Watchdog; Wake-on-LAN mediante Ethernet de cobre"
+        },
+        {
+          "label": "Alimentación",
+          "value": "100-240 V CA, 50/60 Hz; módulo de alimentación integrado"
+        },
+        {
+          "label": "Material",
+          "value": "Carcasa de aluminio"
+        },
+        {
+          "label": "Instalación",
+          "value": "Sobremesa o montaje en pared"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "299 x 175 x 51 mm"
+        },
+        {
+          "label": "Temperatura de funcionamiento",
+          "value": "De -20°C a +60°C"
+        },
+        {
+          "label": "Temperatura de almacenamiento",
+          "value": "De -30°C a +70°C"
+        },
+        {
+          "label": "Humedad de almacenamiento",
+          "value": "10%-90% HR a 30°C, sin condensación"
+        },
+        {
+          "label": "Notas de configuración",
+          "value": "Las opciones de CPU y conectividad móvil dependen de la configuración confirmada. Los módulos Wi-Fi y móviles son opcionales. Imágenes de referencia; conexiones finales según el pedido confirmado."
+        }
+      ]
+    }
+  }
+}

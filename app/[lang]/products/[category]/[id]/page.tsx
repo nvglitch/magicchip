@@ -29,7 +29,8 @@ import SpecificationTable from '@/components/SpecificationTable';
 import type { ProductConfiguration } from '@/lib/product-specifications';
 import { industrialCatalog, type IndustrialSeriesCode } from '@/lib/industrial-catalog';
 import { firewallCatalog, type FirewallSeriesCode } from '@/lib/firewall-catalog';
-import { commercialCatalog, type CommercialSeriesCode, type CommercialCatalogItem } from '@/lib/commercial-catalog';
+import { commercialCatalog, type CommercialSeriesCode } from '@/lib/commercial-catalog';
+import type { CatalogProductTranslations } from '@/lib/catalog-product-copy';
 import { nasMotherboardCopy } from '@/lib/nas-motherboard-copy';
 
 type ProductSpec = { label: string; value: string };
@@ -49,7 +50,7 @@ type ProductDetail = {
   advantageSummary?: string;
   specificationHeading?: string;
   featureHeading?: string;
-  translations?: CommercialCatalogItem['translations'];
+  translations?: CatalogProductTranslations;
   operatingRange?: string;
   skus?: ProductConfiguration[];
 };
@@ -241,7 +242,11 @@ const catalogFirewallProducts: Record<string, ProductDetail> = Object.fromEntrie
       })),
       highlights: item.highlights,
       specs: item.specs,
-      features: firewallSeriesFeatures[item.series],
+      features: item.features || firewallSeriesFeatures[item.series],
+      specificationHeading: item.specificationHeading,
+      featureHeading: item.featureHeading,
+      advantageSummary: item.advantageSummary,
+      translations: item.translations,
       operatingRange: item.operatingRange,
       skus: item.skus,
     },

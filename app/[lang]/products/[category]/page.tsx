@@ -364,7 +364,7 @@ export default function CategoryPage() {
   const products = category === 'industrial-mini-pc'
     ? industrialCatalog.map(({ id, name, tagline, image, highlights }) => ({ id, name, tagline, image, specs: highlights }))
     : category === 'firewall-mini-pc'
-      ? firewallCatalog.map(({ id, name, tagline, image, highlights }) => ({ id, name, tagline, image, specs: highlights }))
+      ? firewallCatalog.map(item => ({ id: item.id, name: item.name, tagline: item.translations?.[language]?.tagline || item.tagline, image: item.image, specs: item.translations?.[language]?.highlights || item.highlights }))
       : category === 'commercial-mini-pc'
         ? [
           ...sampleProducts['commercial-mini-pc'],

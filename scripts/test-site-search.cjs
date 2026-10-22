@@ -73,13 +73,29 @@ assert(matchSearch(fixture([{ label: 'Memory', value: 'DDR5-4800' }]), 'DDR5'));
 assert.equal(matchSearch(fixture([{ label: 'Memory', value: 'DDR4' }]), 'DDR5'), null);
 assert(matchSearch(fixture([{ label: 'Cooling', value: 'fanless' }]), 'fanles'));
 const products = siteSearchIndex.filter(e => e.type === 'product');
-assert.equal(products.length, 165);
+assert.equal(products.length, 166);
 assert(products.every(e => e.specs?.length));
 assert.equal(new Set(products.map(e => e.href)).size, products.length);
 for (const query of ['MCDPC2', 'Core Ultra 96GB Thunderbolt 4', 'Dampfkammer', 'chambre à vapeur', 'camera di vapore', 'cámara de vapor']) {
   assert(searchSite(query).some(entry => entry.href === '/products/commercial-mini-pc/mcdpc2'), `MCDPC2 query failed: ${query}`);
 }
 for (const entry of products) assert.equal(searchSite(entry.title)[0]?.href, entry.href);
+const mcsrc26 = load('lib/firewall-catalog.ts').firewallCatalog.find(item => item.id === 'mcsrc26');
+assert.equal(mcsrc26.series, '10G');
+assert.equal(mcsrc26.skus, undefined);
+for (const query of ['MCSRC26', 'Intel DDR5 10GbE', 'Cisco', 'Glasfaser', 'brochage Cisco', 'pinout Cisco', 'consola RJ45']) {
+  assert(searchSite(query).some(entry => entry.href === '/products/firewall-mini-pc/mcsrc26'), `MCSRC26 query failed: ${query}`);
+}
+assert.match(mcsrc26.specs.find(spec => spec.label === 'Network').value, /2 x Intel 82599ES 10GbE SFP\+; 6 x Intel i226-V/);
+assert.match(mcsrc26.specs.find(spec => spec.label === 'Console').value, /separate from the Ethernet ports/);
+assert.match(mcsrc26.specs.find(spec => spec.label === 'Display').value, /5 V \/ 3 A power output/);
+assert.equal(mcsrc26.specs.find(spec => spec.label === 'Weight'), undefined);
+for (const copy of [mcsrc26, ...Object.values(mcsrc26.translations)]) {
+  assert.equal(copy.specs.length, mcsrc26.specs.length);
+  assert.equal(new Set(copy.specs.map(spec => spec.label)).size, copy.specs.length);
+  assert.equal(copy.galleryCards.length, 2);
+  assert(copy.galleryCards.every(card => fs.existsSync(path.join(__dirname, '..', 'public', card.image))));
+}
 const b2 = groupProductNavigation(industrialCatalog.filter(item => item.series === 'B'))
   .find(group => group.name === 'MCIPCB2');
 assert.deepEqual(Array.from(b2.models, item => item.id), ['mcipcb2', 'mcipcb2-j5005']);

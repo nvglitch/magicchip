@@ -38,7 +38,7 @@ export default async function ProductLayout({ children, params }: ProductLayoutP
   const product = productSeo[id];
   const categoryEntry = categorySeo[category];
   const catalogItem = [...industrialCatalog, ...firewallCatalog, ...commercialCatalog, ...aiCatalog].find((item) => item.id === id);
-  const translatedCopy = commercialCatalog.find(item => item.id === id)?.translations?.[isValidLanguage(lang) ? lang : 'en'];
+  const translatedCopy = [...commercialCatalog, ...firewallCatalog].find(item => item.id === id)?.translations?.[isValidLanguage(lang) ? lang : 'en'];
   const configurationProduct = category === 'industrial-mini-pc' ? industrialCatalog.find(item => item.id === id) : category === 'ai-mini-pc' ? aiCatalog.find(item => item.id === id) : category === 'firewall-mini-pc' ? firewallCatalog.find(item => item.id === id) : undefined;
   const isValidProduct = product && product.category === category;
 

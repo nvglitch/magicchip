@@ -12,7 +12,7 @@ import { commercialCatalog } from '@/lib/commercial-catalog';
 export const SITE_URL = 'https://szmagicchip.com';
 export const SITE_NAME = 'MagicChip';
 // Update this only when the published site or product catalog materially changes.
-export const SITE_CONTENT_LAST_UPDATED = new Date('2026-10-20T00:00:00.000Z');
+export const SITE_CONTENT_LAST_UPDATED = new Date('2026-10-22T00:00:00.000Z');
 export const DEFAULT_SOCIAL_IMAGE = '/assets/brand/og-default.png';
 
 export type SeoEntry = {
@@ -64,6 +64,7 @@ const catalogFirewallProductSeo: Record<string, SeoEntry & { category: string }>
     {
       name: `${item.name} Network Appliance`,
       description: item.tagline,
+      descriptionTranslations: Object.fromEntries(Object.entries(item.translations || {}).map(([language, copy]) => [language, copy.tagline])),
       path: `/products/firewall-mini-pc/${item.id}`,
       image: item.image,
       category: 'firewall-mini-pc',

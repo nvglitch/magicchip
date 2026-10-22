@@ -62,6 +62,7 @@ const catalogFirewallSearchEntries: SearchEntry[] = firewallCatalog
       item.series === '1U' ? 'rackmount server' : 'router gateway',
       item.name.toLowerCase(),
       ...(item.skus ? [] : firewallLegacyNames[item.id] || []),
+      ...Object.values(item.translations || {}).flatMap(copy => [copy.tagline, copy.description, ...copy.highlights, ...copy.specs.map(spec => `${spec.label} ${spec.value}`), ...(copy.features || []).map(feature => `${feature.title} ${feature.description}`)]),
     ],
     image: item.image,
   }, ...(item.skus?.map((sku): SearchEntry => ({

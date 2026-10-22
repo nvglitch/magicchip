@@ -3,6 +3,8 @@ import { firewallBrochureSpecs } from '@/lib/firewall-brochure-specs';
 import { octoberFirewallProducts } from '@/lib/october-network-products';
 import { firewallProductAliases } from '@/lib/firewall-product-aliases';
 import type { ProductConfiguration } from '@/lib/product-specifications';
+import type { CatalogProductFeature, CatalogProductTranslations } from '@/lib/catalog-product-copy';
+import { mcsrc26 } from '@/lib/mcsrc26';
 
 export type FirewallSeriesCode = '2L' | '4L' | '6L' | '10G' | '1U';
 
@@ -26,6 +28,11 @@ export type FirewallCatalogItem = {
   skus?: ProductConfiguration[];
   sourceBrochure?: string;
   sourceSha256?: string;
+  features?: CatalogProductFeature[];
+  specificationHeading?: string;
+  featureHeading?: string;
+  advantageSummary?: string;
+  translations?: CatalogProductTranslations;
 };
 
 const seriesDirectories: Record<FirewallSeriesCode, string> = {
@@ -90,6 +97,7 @@ const createProduct = (input: ProductInput): FirewallCatalogItem => {
 };
 
 export const firewallCatalog: FirewallCatalogItem[] = [
+  mcsrc26,
   createProduct({
     id: 'mcsrp1', name: 'MCSRP1', series: '2L',
     tagline: 'Compact dual-Gigabit fanless network appliance',

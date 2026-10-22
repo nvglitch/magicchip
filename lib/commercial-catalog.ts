@@ -4,20 +4,13 @@ import { brochureUpdates } from '@/lib/brochure-updates';
 import { commercialBrochureProducts } from '@/lib/brochure-products';
 import { nasMotherboards } from '@/lib/nas-motherboards';
 import { mcdpc2 } from '@/lib/mcdpc2';
-import type { Language } from '@/lib/i18n/config';
+import type { CatalogProductFeature, CatalogProductCopy, CatalogProductTranslations } from '@/lib/catalog-product-copy';
 
 export type CommercialSeriesCode = 'DPC' | 'NAS' | 'NAS-MB';
 
 export type CommercialCatalogSpec = { label: string; value: string };
-export type CommercialCatalogFeature = {
-  icon: 'Cpu' | 'Network' | 'HardDrive' | 'Monitor' | 'Layers' | 'Usb' | 'Thermometer' | 'Zap';
-  title: string;
-  description: string;
-};
-
-export type CommercialProductCopy = Pick<CommercialCatalogItem,
-  'tagline' | 'description' | 'highlights' | 'specs' | 'galleryCards' | 'features' |
-  'specificationHeading' | 'featureHeading' | 'advantageSummary'>;
+export type CommercialCatalogFeature = CatalogProductFeature;
+export type CommercialProductCopy = CatalogProductCopy;
 
 export type CommercialCatalogItem = {
   id: string;
@@ -37,7 +30,7 @@ export type CommercialCatalogItem = {
   specificationHeading?: string;
   featureHeading?: string;
   advantageSummary?: string;
-  translations?: Partial<Record<Language, CommercialProductCopy>>;
+  translations?: CatalogProductTranslations;
 };
 
 // Product facts and images are extracted from the supplied product brochures.
