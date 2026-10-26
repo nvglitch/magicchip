@@ -123,6 +123,24 @@ assert.deepEqual(Array.from(dualPortModels.slice(0, 2), group => ({ name: group.
   { name: 'MCSRP1', ids: ['mcsrp1', 'mcsrp1-hdmi'] },
   { name: 'MCSRP2', ids: ['mcsrp2', 'mcsrp2-hdmi'] },
 ]);
+// A revised family brochure must not retain the superseded 2.5GbE claim or mix R memory limits.
+const mcmqr = load('lib/commercial-catalog.ts').commercialCatalog.find(item => item.id === 'mcmqr-series');
+const mcmqrSpec = label => mcmqr.specs.find(spec => spec.label === label)?.value;
+assert.equal(mcmqrSpec('Network'), '1 x 1000 Mbps (1GbE) RJ45 Ethernet');
+assert.match(mcmqrSpec('Memory'), /R5 \/ R7:.*DDR4.*64 GB; R6:.*DDR5.*64 GB; R8:.*DDR5.*96 GB/);
+assert.match(mcmqrSpec('CPU'), /5600U.*5700U.*5825U.*6600H.*6800H.*8745HS.*8945HS/);
+assert.match(mcmqrSpec('Graphics'), /660M \(6600H\) or 680M \(6800H\)/);
+assert.equal(mcmqrSpec('Material'), 'PC+ABS enclosure');
+assert.equal(mcmqrSpec('Weight'), 'Approx. 800 g');
+for (const copy of [mcmqr, ...Object.values(mcmqr.translations)]) {
+  assert.equal(copy.specs.length, 21);
+  assert.equal(new Set(copy.specs.map(spec => spec.label)).size, copy.specs.length);
+  assert(!/2[.,]5\s*GbE/i.test(JSON.stringify(copy)), 'Superseded MCMQR network speed');
+  assert(copy.galleryCards.every(card => fs.existsSync(path.join(__dirname, '..', 'public', card.image))));
+}
+for (const query of ['MCMQR5/R6/R7/R8', '6600H 1GbE', 'Gehäuse PC+ABS', 'boîtier PC+ABS', 'chassis PC+ABS', 'carcasa PC+ABS']) {
+  assert(searchSite(query).some(entry => entry.href === '/products/commercial-mini-pc/mcmqr-series'), `MCMQR query failed: ${query}`);
+}
 const b2 = groupProductNavigation(industrialCatalog.filter(item => item.series === 'B'))
   .find(group => group.name === 'MCIPCB2');
 assert.deepEqual(Array.from(b2.models, item => item.id), ['mcipcb2', 'mcipcb2-j5005']);

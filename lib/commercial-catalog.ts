@@ -4,6 +4,7 @@ import { brochureUpdates } from '@/lib/brochure-updates';
 import { commercialBrochureProducts } from '@/lib/brochure-products';
 import { nasMotherboards } from '@/lib/nas-motherboards';
 import { mcdpc2 } from '@/lib/mcdpc2';
+import { mcmqrSeries } from '@/lib/mcmqr-series';
 import type { CatalogProductFeature, CatalogProductCopy, CatalogProductTranslations } from '@/lib/catalog-product-copy';
 
 export type CommercialSeriesCode = 'DPC' | 'NAS' | 'NAS-MB';
@@ -507,91 +508,7 @@ export const commercialCatalog: CommercialCatalogItem[] = [
     ],
     "operatingRange": "0°C to 45°C operating; -20°C to 70°C storage; 5% to 95% RH"
   },
-  {
-    "id": "mcmqr-series",
-    "name": "MCMQR5/R6/R7/R8",
-    "series": "DPC",
-    "tagline": "AMD Ryzen 5000 to 8000 compact desktop series",
-    "description": "MCMQR Series covers AMD Ryzen 5000, 6000, 7000, and 8000 processor families with model-specific DDR4 or DDR5 memory, USB4, dual HDMI, 2.5GbE, and dual M.2 storage.",
-    "image": "/assets/products/commercial/dpc/mcmqr-series/images/main-square.png",
-    "galleryImages": [
-      "/assets/products/commercial/dpc/mcmqr-series/images/view-1.png",
-      "/assets/products/commercial/dpc/mcmqr-series/images/view-2.png"
-    ],
-    "highlights": [
-      "AMD Ryzen 5000 / 6000 / 7000 / 8000 series options",
-      "2 x DDR4 or DDR5 SO-DIMM, up to 64GB or 96GB by model",
-      "1 x 2.5GbE RJ45",
-      "M.2 NVMe 2280 and M.2 NVMe 2242, up to 2TB"
-    ],
-    "specs": [
-      {
-        "label": "Model",
-        "value": "MCMQR5/R6/R7/R8"
-      },
-      {
-        "label": "CPU",
-        "value": "AMD Ryzen 5000 / 6000 / 7000 / 8000 series options"
-      },
-      {
-        "label": "Graphics",
-        "value": "AMD Radeon Graphics"
-      },
-      {
-        "label": "Video",
-        "value": "2 x HDMI 2.1 and USB4 Type-C, supporting 4K at 60Hz"
-      },
-      {
-        "label": "Memory",
-        "value": "2 x DDR4 or DDR5 SO-DIMM, up to 64GB or 96GB by model"
-      },
-      {
-        "label": "USB",
-        "value": "5 x USB 3.2 and 1 x USB4 Type-C"
-      },
-      {
-        "label": "Power",
-        "value": "19V / 3.78A adapter, 100-240V AC input"
-      },
-      {
-        "label": "Network",
-        "value": "1 x 2.5GbE RJ45"
-      },
-      {
-        "label": "Storage",
-        "value": "M.2 NVMe 2280 and M.2 NVMe 2242, up to 2TB"
-      },
-      {
-        "label": "Expansion",
-        "value": "M.2 E-Key Wi-Fi and Bluetooth 5.2; TPM 2.0 integrated in CPU"
-      },
-      {
-        "label": "Front I/O",
-        "value": "1 x power button; 1 x 3.5 mm audio jack; 1 x USB4 Type-C; 1 x USB 3.2"
-      },
-      {
-        "label": "Rear I/O",
-        "value": "1 x DC input; 2 x HDMI 2.1; 4 x USB 3.2; 1 x 2.5GbE RJ45"
-      },
-      {
-        "label": "Dimensions",
-        "value": "113 x 113 mm"
-      },
-      {
-        "label": "BIOS",
-        "value": "Resume by alarm, UEFI diskless boot, automatic power-on"
-      },
-      {
-        "label": "System",
-        "value": "Windows 11 / Linux"
-      },
-      {
-        "label": "Working Environment",
-        "value": "0°C to 45°C operating; -20°C to 70°C storage; 5% to 95% RH"
-      }
-    ],
-    "operatingRange": "0°C to 45°C operating; -20°C to 70°C storage; 5% to 95% RH"
-  },
+  mcmqrSeries,
   {
     "id": "mcn1",
     "name": "MCN1",

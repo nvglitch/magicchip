@@ -1,0 +1,647 @@
+{
+  "id": "mcmqr-series",
+  "name": "MCMQR5/R6/R7/R8",
+  "category": "commercial-mini-pc",
+  "series": "DPC",
+  "published": true,
+  "tagline": "AMD Ryzen desktop series with USB4, dual HDMI and Gigabit LAN",
+  "description": "MCMQR R5 / R6 / R7 / R8 spans AMD Ryzen 5000 to 8000 platforms. R5 and R7 use DDR4 up to 64 GB; R6 uses DDR5 up to 64 GB, while R8 supports up to 96 GB DDR5. Dual HDMI 2.1, USB4 Type-C, one Gigabit Ethernet port and two M.2 NVMe slots provide desktop connectivity in a PC+ABS enclosure with a 113 x 113 mm footprint.",
+  "image": "/assets/products/commercial/dpc/mcmqr-series/images/main-square.png",
+  "images": [
+    "/assets/products/commercial/dpc/mcmqr-series/images/main-square.png"
+  ],
+  "galleryImages": [
+    "/assets/products/commercial/dpc/mcmqr-series/images/view-1.png",
+    "/assets/products/commercial/dpc/mcmqr-series/images/view-2.png"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/commercial/dpc/mcmqr-series/images/view-1.png",
+      "title": "MCMQR front I/O"
+    },
+    {
+      "image": "/assets/products/commercial/dpc/mcmqr-series/images/view-2.png",
+      "title": "MCMQR rear I/O"
+    }
+  ],
+  "highlights": [
+    "AMD Ryzen 5000 / 6000 / 7000 / 8000",
+    "DDR4 / DDR5; capacity varies by R model",
+    "1 x Gigabit RJ45 Ethernet",
+    "USB4 + dual HDMI + dual M.2 NVMe"
+  ],
+  "specificationHeading": "MCMQR series hardware specifications",
+  "featureHeading": "Choose the R platform for your desktop",
+  "advantageSummary": "Compare processor, graphics and memory by R5 / R6 / R7 / R8, with shared Gigabit networking, display connections and two NVMe storage positions.",
+  "features": [
+    {
+      "icon": "Cpu",
+      "title": "Four platform families",
+      "description": "R5 and R7 offer DDR4 up to 64 GB; R6 offers DDR5 up to 64 GB and R8 up to 96 GB DDR5. Processor and Radeon graphics follow the selected R platform."
+    },
+    {
+      "icon": "Monitor",
+      "title": "Displays and peripherals",
+      "description": "Two HDMI 2.1 ports and USB4 Type-C with 4K/60 Hz display output connect compatible screens. Five USB 3.2 ports and one Gigabit RJ45 port connect peripherals and the wired network."
+    },
+    {
+      "icon": "HardDrive",
+      "title": "Compact storage expansion",
+      "description": "M.2 2280 and M.2 2242 NVMe PCIe slots provide two storage positions. The PC+ABS enclosure has a 113 x 113 mm footprint and weighs approximately 800 g."
+    }
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCMQR5/R6/R7/R8"
+    },
+    {
+      "label": "CPU",
+      "value": "R5: AMD Ryzen 5000 (5600U / 5700U / 5825U); R6: Ryzen 6000 (6600H / 6800H); R7: Ryzen 7000 (6 cores / 12 threads); R8: Ryzen 8000 (8745HS / 8845 / 8945HS)"
+    },
+    {
+      "label": "Graphics",
+      "value": "R5 / R7: AMD Radeon Graphics; R6: Radeon 660M (6600H) or 680M (6800H); R8: Radeon 780M"
+    },
+    {
+      "label": "Video",
+      "value": "2 x HDMI 2.1; 1 x USB4 Type-C with 4K/60 Hz display output"
+    },
+    {
+      "label": "Memory",
+      "value": "R5 / R7: 2 x DDR4 SO-DIMM, 3200 MT/s, up to 64 GB; R6: 2 x DDR5 SO-DIMM, 4800 MT/s (5600 optional), up to 64 GB; R8: 2 x DDR5 SO-DIMM, 4800 MT/s (5600 optional), up to 96 GB"
+    },
+    {
+      "label": "USB",
+      "value": "5 x USB 3.2; 1 x USB4 Type-C"
+    },
+    {
+      "label": "Power",
+      "value": "19 V / 3.78 A adapter, 100-240 V AC input; 5.5 x 2.5 mm DC jack"
+    },
+    {
+      "label": "Network",
+      "value": "1 x 1000 Mbps (1GbE) RJ45 Ethernet"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x M.2 2280 NVMe PCIe; 1 x M.2 2242 NVMe PCIe (up to 2 TB)"
+    },
+    {
+      "label": "Expansion",
+      "value": "M.2 E-key Wi-Fi and Bluetooth 5.2; CPU-integrated TPM 2.0"
+    },
+    {
+      "label": "Front I/O",
+      "value": "Power button; 3.5 mm audio jack; USB4 Type-C; 1 x USB 3.2"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "5.5 x 2.5 mm DC jack; 2 x HDMI 2.1; 4 x USB 3.2; 1 x 1000 Mbps RJ45"
+    },
+    {
+      "label": "Dimensions",
+      "value": "113 x 113 mm footprint"
+    },
+    {
+      "label": "Material",
+      "value": "PC+ABS enclosure"
+    },
+    {
+      "label": "Weight",
+      "value": "Approx. 800 g"
+    },
+    {
+      "label": "BIOS",
+      "value": "Timed power-on; UEFI diskless boot; automatic boot after power-on"
+    },
+    {
+      "label": "System",
+      "value": "Windows 11 / Linux"
+    },
+    {
+      "label": "Operating temperature",
+      "value": "0°C to +45°C"
+    },
+    {
+      "label": "Storage temperature",
+      "value": "-20°C to +70°C"
+    },
+    {
+      "label": "Humidity",
+      "value": "5%-95% RH at 40°C, non-condensing"
+    },
+    {
+      "label": "Configuration notes",
+      "value": "CPU, GPU, memory capacity and memory speed depend on the selected R platform and confirmed configuration. Product images are for reference; final I/O follows the confirmed order."
+    }
+  ],
+  "sourceBrochure": "桌面端DPC/MCMQRseries brochure.pdf",
+  "sourceSha256": "4c535ed74a22ba20795b746f92113e4004b19547ff422e34850354bfe86047e1",
+  "translations": {
+    "de": {
+      "tagline": "AMD-Ryzen-Desktop-Serie mit USB4, zwei HDMI-Ports und Gigabit-LAN",
+      "description": "MCMQR R5 / R6 / R7 / R8 umfasst AMD-Ryzen-Plattformen der Serien 5000 bis 8000. R5 und R7 nutzen DDR4 bis 64 GB, R6 DDR5 bis 64 GB und R8 DDR5 bis 96 GB. Zwei HDMI-2.1-Ports, USB4 Type-C, ein Gigabit-Ethernet-Port und zwei M.2-NVMe-Steckplätze bieten Desktop-Anschlüsse in einem PC+ABS-Gehäuse mit 113 x 113 mm Grundfläche.",
+      "highlights": [
+        "AMD Ryzen 5000 / 6000 / 7000 / 8000",
+        "DDR4 / DDR5, Kapazität je R-Modell",
+        "1 x Gigabit RJ45 Ethernet",
+        "USB4 + 2 x HDMI + 2 x M.2 NVMe"
+      ],
+      "specificationHeading": "MCMQR-Serie – Technische Daten",
+      "featureHeading": "Die passende R-Plattform für Ihren Desktop",
+      "advantageSummary": "Vergleichen Sie Prozessor, Grafik und Arbeitsspeicher nach R5 / R6 / R7 / R8. Gigabit-LAN, Bildausgänge und zwei NVMe-Speicherplätze ergänzen die Plattformen.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/dpc/mcmqr-series/images/view-1.png",
+          "title": "MCMQR Anschlüsse an der Vorderseite"
+        },
+        {
+          "image": "/assets/products/commercial/dpc/mcmqr-series/images/view-2.png",
+          "title": "MCMQR Anschlüsse an der Rückseite"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "Vier Plattformfamilien",
+          "description": "R5 und R7 bieten DDR4 bis 64 GB; R6 DDR5 bis 64 GB und R8 DDR5 bis 96 GB. Prozessor und Radeon-Grafik richten sich nach der gewählten R-Plattform."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Bildschirme und Peripherie",
+          "description": "Zwei HDMI-2.1-Ports und USB4 Type-C mit 4K/60-Hz-Bildausgabe verbinden kompatible Bildschirme. Fünf USB-3.2-Ports und ein Gigabit-RJ45-Port verbinden Peripherie und das kabelgebundene Netzwerk."
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Kompakter Speicher",
+          "description": "M.2 2280 und M.2 2242 NVMe PCIe bieten zwei Speicherplätze. Das PC+ABS-Gehäuse hat eine Grundfläche von 113 x 113 mm und wiegt etwa 800 g."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modell",
+          "value": "MCMQR5/R6/R7/R8"
+        },
+        {
+          "label": "CPU",
+          "value": "R5: AMD Ryzen 5000 (5600U / 5700U / 5825U); R6: Ryzen 6000 (6600H / 6800H); R7: Ryzen 7000 (6 Kerne / 12 Threads); R8: Ryzen 8000 (8745HS / 8845 / 8945HS)"
+        },
+        {
+          "label": "Grafik",
+          "value": "R5 / R7: AMD Radeon Graphics; R6: Radeon 660M (6600H) or 680M (6800H); R8: Radeon 780M"
+        },
+        {
+          "label": "Bildausgänge",
+          "value": "2 x HDMI 2.1; 1 x USB4 Type-C mit 4K/60-Hz-Bildausgabe"
+        },
+        {
+          "label": "Arbeitsspeicher",
+          "value": "R5 / R7: 2 x DDR4 SO-DIMM, 3200 MT/s, bis 64 GB; R6: 2 x DDR5 SO-DIMM, 4800 MT/s (5600 optional), bis 64 GB; R8: 2 x DDR5 SO-DIMM, 4800 MT/s (5600 optional), bis 96 GB"
+        },
+        {
+          "label": "USB",
+          "value": "5 x USB 3.2; 1 x USB4 Type-C"
+        },
+        {
+          "label": "Stromversorgung",
+          "value": "19 V / 3,78 A Netzteil, 100-240 V AC Eingang; 5,5 x 2,5 mm DC-Buchse"
+        },
+        {
+          "label": "Netzwerk",
+          "value": "1 x 1000 Mbit/s (1GbE) RJ45 Ethernet"
+        },
+        {
+          "label": "Datenspeicher",
+          "value": "1 x M.2 2280 NVMe PCIe; 1 x M.2 2242 NVMe PCIe (bis 2 TB)"
+        },
+        {
+          "label": "Erweiterung",
+          "value": "M.2 E-Key für WLAN und Bluetooth 5.2; CPU-integriertes TPM 2.0"
+        },
+        {
+          "label": "Vordere Anschlüsse",
+          "value": "Ein-/Aus-Taste; 3,5-mm-Audiobuchse; USB4 Type-C; 1 x USB 3.2"
+        },
+        {
+          "label": "Hintere Anschlüsse",
+          "value": "5,5 x 2,5 mm DC-Buchse; 2 x HDMI 2.1; 4 x USB 3.2; 1 x 1000-Mbit/s-RJ45"
+        },
+        {
+          "label": "Abmessungen",
+          "value": "113 x 113 mm Grundfläche"
+        },
+        {
+          "label": "Material",
+          "value": "PC+ABS-Gehäuse"
+        },
+        {
+          "label": "Gewicht",
+          "value": "Ca. 800 g"
+        },
+        {
+          "label": "BIOS",
+          "value": "Zeitgesteuertes Einschalten; UEFI-Diskless-Boot; automatischer Start nach Stromzufuhr"
+        },
+        {
+          "label": "Betriebssystem",
+          "value": "Windows 11 / Linux"
+        },
+        {
+          "label": "Betriebstemperatur",
+          "value": "0°C bis +45°C"
+        },
+        {
+          "label": "Lagertemperatur",
+          "value": "-20°C bis +70°C"
+        },
+        {
+          "label": "Luftfeuchtigkeit",
+          "value": "5%-95% r. F. bei 40°C, nicht kondensierend"
+        },
+        {
+          "label": "Hinweise zur Konfiguration",
+          "value": "CPU, Grafik, Speicherkapazität und Speichertakt hängen von der R-Plattform und bestätigten Konfiguration ab. Bilder dienen als Referenz; endgültige Anschlüsse gemäß bestätigter Bestellung."
+        }
+      ]
+    },
+    "fr": {
+      "tagline": "Série de PC AMD Ryzen avec USB4, double HDMI et réseau Gigabit",
+      "description": "MCMQR R5 / R6 / R7 / R8 couvre les plateformes AMD Ryzen 5000 à 8000. R5 et R7 utilisent la DDR4 jusqu'à 64 Go, R6 la DDR5 jusqu'à 64 Go et R8 la DDR5 jusqu'à 96 Go. Deux ports HDMI 2.1, USB4 Type-C, un port Ethernet Gigabit et deux emplacements M.2 NVMe offrent une connectique de bureau dans un boîtier PC+ABS de 113 x 113 mm au sol.",
+      "highlights": [
+        "AMD Ryzen 5000 / 6000 / 7000 / 8000",
+        "DDR4 / DDR5, capacité selon le modèle R",
+        "1 x Ethernet Gigabit RJ45",
+        "USB4 + 2 x HDMI + 2 x M.2 NVMe"
+      ],
+      "specificationHeading": "Série MCMQR – Fiche technique",
+      "featureHeading": "Choisissez la plateforme R pour votre bureau",
+      "advantageSummary": "Comparez le processeur, le circuit graphique et la mémoire selon R5 / R6 / R7 / R8, avec réseau Gigabit, sorties vidéo et deux emplacements NVMe.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/dpc/mcmqr-series/images/view-1.png",
+          "title": "MCMQR connectique avant"
+        },
+        {
+          "image": "/assets/products/commercial/dpc/mcmqr-series/images/view-2.png",
+          "title": "MCMQR connectique arrière"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "Quatre familles de plateformes",
+          "description": "R5 et R7 proposent la DDR4 jusqu'à 64 Go ; R6 la DDR5 jusqu'à 64 Go et R8 la DDR5 jusqu'à 96 Go. Le processeur et le circuit Radeon dépendent de la plateforme R choisie."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Écrans et périphériques",
+          "description": "Deux ports HDMI 2.1 et USB4 Type-C avec sortie vidéo 4K/60 Hz relient les écrans compatibles. Cinq ports USB 3.2 et un port RJ45 Gigabit relient les périphériques et le réseau filaire."
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Stockage compact et évolutif",
+          "description": "M.2 2280 et M.2 2242 NVMe PCIe offrent deux emplacements de stockage. Le boîtier PC+ABS occupe 113 x 113 mm au sol et pèse environ 800 g."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modèle",
+          "value": "MCMQR5/R6/R7/R8"
+        },
+        {
+          "label": "Processeur",
+          "value": "R5: AMD Ryzen 5000 (5600U / 5700U / 5825U); R6: Ryzen 6000 (6600H / 6800H); R7: Ryzen 7000 (6 cœurs / 12 threads); R8: Ryzen 8000 (8745HS / 8845 / 8945HS)"
+        },
+        {
+          "label": "Circuit graphique",
+          "value": "R5 / R7: AMD Radeon Graphics; R6: Radeon 660M (6600H) or 680M (6800H); R8: Radeon 780M"
+        },
+        {
+          "label": "Sorties vidéo",
+          "value": "2 x HDMI 2.1 ; 1 x USB4 Type-C avec sortie vidéo 4K/60 Hz"
+        },
+        {
+          "label": "Mémoire",
+          "value": "R5 / R7 : 2 x DDR4 SO-DIMM, 3200 MT/s, jusqu'à 64 Go ; R6 : 2 x DDR5 SO-DIMM, 4800 MT/s (5600 en option), jusqu'à 64 Go ; R8 : 2 x DDR5 SO-DIMM, 4800 MT/s (5600 en option), jusqu'à 96 Go"
+        },
+        {
+          "label": "USB",
+          "value": "5 x USB 3.2 ; 1 x USB4 Type-C"
+        },
+        {
+          "label": "Alimentation",
+          "value": "Adaptateur 19 V / 3,78 A, entrée 100-240 V CA ; prise CC 5,5 x 2,5 mm"
+        },
+        {
+          "label": "Réseau",
+          "value": "1 x Ethernet RJ45 1000 Mbit/s (1GbE)"
+        },
+        {
+          "label": "Stockage",
+          "value": "1 x M.2 2280 NVMe PCIe ; 1 x M.2 2242 NVMe PCIe (jusqu'à 2 To)"
+        },
+        {
+          "label": "Extension",
+          "value": "M.2 E-key Wi-Fi et Bluetooth 5.2 ; TPM 2.0 intégré au CPU"
+        },
+        {
+          "label": "Connectique avant",
+          "value": "Bouton d'alimentation ; prise audio 3,5 mm ; USB4 Type-C ; 1 x USB 3.2"
+        },
+        {
+          "label": "Connectique arrière",
+          "value": "Prise CC 5,5 x 2,5 mm ; 2 x HDMI 2.1 ; 4 x USB 3.2 ; 1 x RJ45 1000 Mbit/s"
+        },
+        {
+          "label": "Dimensions",
+          "value": "113 x 113 mm au sol"
+        },
+        {
+          "label": "Matériau",
+          "value": "Boîtier PC+ABS"
+        },
+        {
+          "label": "Poids",
+          "value": "Environ 800 g"
+        },
+        {
+          "label": "BIOS",
+          "value": "Mise sous tension programmée ; démarrage UEFI sans disque ; démarrage automatique au rétablissement du courant"
+        },
+        {
+          "label": "Système d'exploitation",
+          "value": "Windows 11 / Linux"
+        },
+        {
+          "label": "Température de fonctionnement",
+          "value": "0°C à +45°C"
+        },
+        {
+          "label": "Température de stockage",
+          "value": "-20°C à +70°C"
+        },
+        {
+          "label": "Humidité",
+          "value": "5%-95% HR à 40°C, sans condensation"
+        },
+        {
+          "label": "Notes de configuration",
+          "value": "CPU, circuit graphique, capacité et vitesse mémoire dépendent de la plateforme R et de la configuration confirmée. Images à titre indicatif ; connectique finale selon la commande confirmée."
+        }
+      ]
+    },
+    "it": {
+      "tagline": "Serie desktop AMD Ryzen con USB4, due HDMI e LAN Gigabit",
+      "description": "MCMQR R5 / R6 / R7 / R8 comprende piattaforme AMD Ryzen da 5000 a 8000. R5 e R7 utilizzano DDR4 fino a 64 GB, R6 DDR5 fino a 64 GB e R8 DDR5 fino a 96 GB. Due porte HDMI 2.1, USB4 Type-C, una porta Ethernet Gigabit e due slot M.2 NVMe offrono connettività desktop in uno chassis PC+ABS con base di 113 x 113 mm.",
+      "highlights": [
+        "AMD Ryzen 5000 / 6000 / 7000 / 8000",
+        "DDR4 / DDR5, capacità secondo il modello R",
+        "1 x Ethernet Gigabit RJ45",
+        "USB4 + 2 x HDMI + 2 x M.2 NVMe"
+      ],
+      "specificationHeading": "Serie MCMQR – Specifiche hardware",
+      "featureHeading": "Scegli la piattaforma R per il tuo desktop",
+      "advantageSummary": "Confronta processore, grafica e memoria di R5 / R6 / R7 / R8, con rete Gigabit, collegamenti video e due posizioni per archiviazione NVMe.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/dpc/mcmqr-series/images/view-1.png",
+          "title": "MCMQR connessioni frontali"
+        },
+        {
+          "image": "/assets/products/commercial/dpc/mcmqr-series/images/view-2.png",
+          "title": "MCMQR connessioni posteriori"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "Quattro famiglie di piattaforme",
+          "description": "R5 e R7 offrono DDR4 fino a 64 GB; R6 DDR5 fino a 64 GB e R8 DDR5 fino a 96 GB. Processore e grafica Radeon dipendono dalla piattaforma R selezionata."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Display e periferiche",
+          "description": "Due HDMI 2.1 e USB4 Type-C con uscita video 4K/60 Hz collegano schermi compatibili. Cinque porte USB 3.2 e una porta RJ45 Gigabit collegano periferiche e rete cablata."
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Archiviazione compatta ed espandibile",
+          "description": "M.2 2280 e M.2 2242 NVMe PCIe offrono due posizioni di archiviazione. Lo chassis PC+ABS ha una base di 113 x 113 mm e pesa circa 800 g."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modello",
+          "value": "MCMQR5/R6/R7/R8"
+        },
+        {
+          "label": "CPU",
+          "value": "R5: AMD Ryzen 5000 (5600U / 5700U / 5825U); R6: Ryzen 6000 (6600H / 6800H); R7: Ryzen 7000 (6 core / 12 thread); R8: Ryzen 8000 (8745HS / 8845 / 8945HS)"
+        },
+        {
+          "label": "Grafica",
+          "value": "R5 / R7: AMD Radeon Graphics; R6: Radeon 660M (6600H) or 680M (6800H); R8: Radeon 780M"
+        },
+        {
+          "label": "Uscite video",
+          "value": "2 x HDMI 2.1; 1 x USB4 Type-C con uscita video 4K/60 Hz"
+        },
+        {
+          "label": "Memoria",
+          "value": "R5 / R7: 2 x DDR4 SO-DIMM, 3200 MT/s, fino a 64 GB; R6: 2 x DDR5 SO-DIMM, 4800 MT/s (5600 opzionale), fino a 64 GB; R8: 2 x DDR5 SO-DIMM, 4800 MT/s (5600 opzionale), fino a 96 GB"
+        },
+        {
+          "label": "USB",
+          "value": "5 x USB 3.2; 1 x USB4 Type-C"
+        },
+        {
+          "label": "Alimentazione",
+          "value": "Alimentatore 19 V / 3,78 A, ingresso 100-240 V AC; jack DC 5,5 x 2,5 mm"
+        },
+        {
+          "label": "Rete",
+          "value": "1 x Ethernet RJ45 1000 Mbps (1GbE)"
+        },
+        {
+          "label": "Archiviazione",
+          "value": "1 x M.2 2280 NVMe PCIe; 1 x M.2 2242 NVMe PCIe (fino a 2 TB)"
+        },
+        {
+          "label": "Espansione",
+          "value": "M.2 E-key Wi-Fi e Bluetooth 5.2; TPM 2.0 integrato nella CPU"
+        },
+        {
+          "label": "I/O frontale",
+          "value": "Pulsante di accensione; jack audio 3,5 mm; USB4 Type-C; 1 x USB 3.2"
+        },
+        {
+          "label": "I/O posteriore",
+          "value": "Jack DC 5,5 x 2,5 mm; 2 x HDMI 2.1; 4 x USB 3.2; 1 x RJ45 1000 Mbps"
+        },
+        {
+          "label": "Dimensioni",
+          "value": "Base di 113 x 113 mm"
+        },
+        {
+          "label": "Materiale",
+          "value": "Chassis PC+ABS"
+        },
+        {
+          "label": "Peso",
+          "value": "Circa 800 g"
+        },
+        {
+          "label": "BIOS",
+          "value": "Accensione programmata; avvio UEFI senza disco; avvio automatico al ritorno dell'alimentazione"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11 / Linux"
+        },
+        {
+          "label": "Temperatura operativa",
+          "value": "Da 0°C a +45°C"
+        },
+        {
+          "label": "Temperatura di stoccaggio",
+          "value": "Da -20°C a +70°C"
+        },
+        {
+          "label": "Umidità",
+          "value": "5%-95% UR a 40°C, senza condensa"
+        },
+        {
+          "label": "Note sulla configurazione",
+          "value": "CPU, grafica, capacità e velocità della memoria dipendono dalla piattaforma R e dalla configurazione confermata. Immagini di riferimento; connessioni finali secondo la configurazione confermata."
+        }
+      ]
+    },
+    "es": {
+      "tagline": "Serie de sobremesa AMD Ryzen con USB4, doble HDMI y LAN Gigabit",
+      "description": "MCMQR R5 / R6 / R7 / R8 abarca plataformas AMD Ryzen de las series 5000 a 8000. R5 y R7 usan DDR4 de hasta 64 GB, R6 DDR5 de hasta 64 GB y R8 DDR5 de hasta 96 GB. Dos HDMI 2.1, USB4 Type-C, un puerto Ethernet Gigabit y dos ranuras M.2 NVMe ofrecen conexiones de sobremesa en una carcasa PC+ABS con una base de 113 x 113 mm.",
+      "highlights": [
+        "AMD Ryzen 5000 / 6000 / 7000 / 8000",
+        "DDR4 / DDR5, capacidad según el modelo R",
+        "1 x Ethernet Gigabit RJ45",
+        "USB4 + 2 x HDMI + 2 x M.2 NVMe"
+      ],
+      "specificationHeading": "Serie MCMQR – Ficha técnica",
+      "featureHeading": "Elige la plataforma R para tu escritorio",
+      "advantageSummary": "Compara procesador, gráficos y memoria de R5 / R6 / R7 / R8, con red Gigabit, salidas de vídeo y dos posiciones para almacenamiento NVMe.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/dpc/mcmqr-series/images/view-1.png",
+          "title": "MCMQR conexiones frontales"
+        },
+        {
+          "image": "/assets/products/commercial/dpc/mcmqr-series/images/view-2.png",
+          "title": "MCMQR conexiones traseras"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "Cuatro familias de plataformas",
+          "description": "R5 y R7 ofrecen DDR4 de hasta 64 GB; R6 DDR5 de hasta 64 GB y R8 DDR5 de hasta 96 GB. El procesador y los gráficos Radeon dependen de la plataforma R elegida."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Pantallas y periféricos",
+          "description": "Dos HDMI 2.1 y USB4 Type-C con salida de vídeo 4K/60 Hz conectan pantallas compatibles. Cinco puertos USB 3.2 y un puerto RJ45 Gigabit conectan los periféricos y la red cableada."
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Almacenamiento compacto y ampliable",
+          "description": "M.2 2280 y M.2 2242 NVMe PCIe ofrecen dos posiciones de almacenamiento. La carcasa PC+ABS ocupa una base de 113 x 113 mm y pesa unos 800 g."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modelo",
+          "value": "MCMQR5/R6/R7/R8"
+        },
+        {
+          "label": "CPU",
+          "value": "R5: AMD Ryzen 5000 (5600U / 5700U / 5825U); R6: Ryzen 6000 (6600H / 6800H); R7: Ryzen 7000 (6 núcleos / 12 hilos); R8: Ryzen 8000 (8745HS / 8845 / 8945HS)"
+        },
+        {
+          "label": "Gráficos",
+          "value": "R5 / R7: AMD Radeon Graphics; R6: Radeon 660M (6600H) or 680M (6800H); R8: Radeon 780M"
+        },
+        {
+          "label": "Salidas de vídeo",
+          "value": "2 x HDMI 2.1; 1 x USB4 Type-C con salida de vídeo 4K/60 Hz"
+        },
+        {
+          "label": "Memoria",
+          "value": "R5 / R7: 2 x DDR4 SO-DIMM, 3200 MT/s, hasta 64 GB; R6: 2 x DDR5 SO-DIMM, 4800 MT/s (5600 opcional), hasta 64 GB; R8: 2 x DDR5 SO-DIMM, 4800 MT/s (5600 opcional), hasta 96 GB"
+        },
+        {
+          "label": "USB",
+          "value": "5 x USB 3.2; 1 x USB4 Type-C"
+        },
+        {
+          "label": "Alimentación",
+          "value": "Adaptador de 19 V / 3,78 A, entrada 100-240 V CA; conector CC de 5,5 x 2,5 mm"
+        },
+        {
+          "label": "Red",
+          "value": "1 x Ethernet RJ45 1000 Mbps (1GbE)"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "1 x M.2 2280 NVMe PCIe; 1 x M.2 2242 NVMe PCIe (hasta 2 TB)"
+        },
+        {
+          "label": "Ampliación",
+          "value": "M.2 E-key Wi-Fi y Bluetooth 5.2; TPM 2.0 integrado en la CPU"
+        },
+        {
+          "label": "E/S frontal",
+          "value": "Botón de encendido; conector de audio de 3,5 mm; USB4 Type-C; 1 x USB 3.2"
+        },
+        {
+          "label": "E/S trasera",
+          "value": "Conector CC de 5,5 x 2,5 mm; 2 x HDMI 2.1; 4 x USB 3.2; 1 x RJ45 1000 Mbps"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "Base de 113 x 113 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Carcasa PC+ABS"
+        },
+        {
+          "label": "Peso",
+          "value": "Aprox. 800 g"
+        },
+        {
+          "label": "BIOS",
+          "value": "Encendido programado; arranque UEFI sin disco; arranque automático al restablecer la alimentación"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11 / Linux"
+        },
+        {
+          "label": "Temperatura de funcionamiento",
+          "value": "De 0°C a +45°C"
+        },
+        {
+          "label": "Temperatura de almacenamiento",
+          "value": "De -20°C a +70°C"
+        },
+        {
+          "label": "Humedad",
+          "value": "5%-95% HR a 40°C, sin condensación"
+        },
+        {
+          "label": "Notas de configuración",
+          "value": "CPU, gráficos, capacidad y velocidad de memoria dependen de la plataforma R y de la configuración confirmada. Imágenes de referencia; conexiones finales según el pedido confirmado."
+        }
+      ]
+    }
+  }
+}

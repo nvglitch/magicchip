@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "sourceRoot": "D:\\本地资源库\\电脑相关\\电脑册子归档\\ver2",
-  "observedAtUtc": "2026-10-26T02:23:53.886199+00:00",
+  "observedAtUtc": "2026-10-26T09:11:30.695199+00:00",
   "observationOnly": false,
   "totalPdfCount": 118,
   "inScopePdfCount": 117,
@@ -10,10 +10,10 @@
     "pending-confirmation": 16,
     "superseded-by-merged-brochure": 19,
     "superseded-by-renamed-brochure": 4,
-    "updated": 34,
-    "verified-current": 69
+    "updated": 35,
+    "verified-current": 68
   },
-  "previousObservation": "brochure-history/before-2026-10-26-mcsrp1-hdmi.json",
+  "previousObservation": "brochure-history/before-2026-10-26-mcmqr.json",
   "files": [
     {
       "relativePath": "AIPC/MCAIPC1 brochure.pdf",
@@ -2027,23 +2027,24 @@
     },
     {
       "relativePath": "桌面端DPC/MCMQRseries brochure.pdf",
-      "sizeBytes": 662215,
-      "modifiedAtUtc": "2026-08-24T10:03:39.924029+00:00",
-      "observedSha256": "37ea7feb079a59652be1e474feb359b80c059c71b3d4a3d2386ead2faf302f20",
-      "appliedSha256": "37ea7feb079a59652be1e474feb359b80c059c71b3d4a3d2386ead2faf302f20",
+      "sizeBytes": 741427,
+      "modifiedAtUtc": "2026-10-26T08:49:59.490886+00:00",
+      "observedSha256": "4c535ed74a22ba20795b746f92113e4004b19547ff422e34850354bfe86047e1",
+      "appliedSha256": "4c535ed74a22ba20795b746f92113e4004b19547ff422e34850354bfe86047e1",
       "excluded": false,
       "present": true,
-      "status": "verified-current",
-      "changeSincePreviousObservation": "unchanged",
+      "status": "updated",
+      "changeSincePreviousObservation": "modified",
       "modelIds": [
         "mcmqr-series"
       ],
       "hrefs": [
         "/products/commercial-mini-pc/mcmqr-series"
       ],
-      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
+      "reviewedAtUtc": "2026-10-26T09:11:30.695199+00:00",
+      "appliedAtUtc": "2026-10-26T09:11:30.695199+00:00",
+      "notes": "2026-10-26：按修订册同步单千兆网口、R5/R6/R7/R8 的 CPU/GPU/内存差异、PC+ABS/约800g、DC插孔及湿度；五语页面、搜索和 SEO 已验证。R6 6600H/6800H 显卡按 AMD 官方规格分别列为660M/680M，不将册子概括的680M扩大到全部配置。保留现有路由和图片，未修改源PDF。",
+      "previousSha256": "37ea7feb079a59652be1e474feb359b80c059c71b3d4a3d2386ead2faf302f20"
     },
     {
       "relativePath": "桌面端DPC/MCN1 brochure.pdf",
@@ -2691,7 +2692,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "new",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcsrp1-hdmi"
       ],
