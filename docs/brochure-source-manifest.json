@@ -1,19 +1,19 @@
 {
   "schemaVersion": 2,
   "sourceRoot": "D:\\本地资源库\\电脑相关\\电脑册子归档\\ver2",
-  "observedAtUtc": "2026-10-22T02:55:54.758008+00:00",
+  "observedAtUtc": "2026-10-26T02:23:53.886199+00:00",
   "observationOnly": false,
-  "totalPdfCount": 117,
-  "inScopePdfCount": 116,
+  "totalPdfCount": 118,
+  "inScopePdfCount": 117,
   "statusCounts": {
     "deferred-by-user": 2,
     "pending-confirmation": 16,
     "superseded-by-merged-brochure": 19,
     "superseded-by-renamed-brochure": 4,
-    "updated": 33,
+    "updated": 34,
     "verified-current": 69
   },
-  "previousObservation": "brochure-history/before-2026-10-22-mcsrc26.json",
+  "previousObservation": "brochure-history/before-2026-10-26-mcsrp1-hdmi.json",
   "files": [
     {
       "relativePath": "AIPC/MCAIPC1 brochure.pdf",
@@ -2571,7 +2571,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "new",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcsrc26"
       ],
@@ -2681,6 +2681,26 @@
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
+    },
+    {
+      "relativePath": "软路由SR/MCSRP1-HDMI Brochure.pdf",
+      "sizeBytes": 950265,
+      "modifiedAtUtc": "2026-10-23T10:34:50.218225+00:00",
+      "observedSha256": "73e668d6082fe8d7fa2cb569c74f4800206e9256ae109f656f558a039c379e91",
+      "appliedSha256": "73e668d6082fe8d7fa2cb569c74f4800206e9256ae109f656f558a039c379e91",
+      "excluded": false,
+      "present": true,
+      "status": "updated",
+      "changeSincePreviousObservation": "new",
+      "modelIds": [
+        "mcsrp1-hdmi"
+      ],
+      "hrefs": [
+        "/products/firewall-mini-pc/mcsrp1-hdmi"
+      ],
+      "reviewedAtUtc": "2026-10-26T02:23:53.886199+00:00",
+      "appliedAtUtc": "2026-10-26T02:23:53.886199+00:00",
+      "notes": "新增双网口 2L 系列独立页面；按新册核对 N3710/N3160、DDR3L、双千兆 Realtek、双 HDMI、内部扩展与供电。图片与 MCSRP2-HDMI 共用的说明已覆盖五语介绍、图库与参数表；90 x 90.04 mm 明确为主板尺寸，不继承整机尺寸、DDR4、2.5GbE 或 HDMI 版本。构建、167 条搜索入口、五语 SEO/站点地图及桌面/手机页面检查通过。"
     },
     {
       "relativePath": "软路由SR/MCSRP2 Brochure.pdf",

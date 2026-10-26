@@ -1,0 +1,637 @@
+{
+  "id": "mcsrp1-hdmi",
+  "name": "MCSRP1-HDMI",
+  "category": "firewall-mini-pc",
+  "series": "2L",
+  "published": true,
+  "tagline": "Dual-Gigabit network appliance with two HDMI outputs",
+  "description": "MCSRP1-HDMI combines Intel Pentium N3710 or Celeron N3160 options, dual Realtek Gigabit LAN and two HDMI ports. One DDR3L SO-DIMM slot supports up to 8 GB, with M.2 2242 NVMe storage, two FPC SATA connectors and internal expansion headers. Product illustrations are shared with MCSRP2-HDMI; the final enclosure may vary.",
+  "image": "/assets/products/firewall/dual-port-series/mcsrp1-hdmi/front.webp",
+  "images": [
+    "/assets/products/firewall/dual-port-series/mcsrp1-hdmi/front.webp"
+  ],
+  "galleryImages": [
+    "/assets/products/firewall/dual-port-series/mcsrp1-hdmi/front.webp",
+    "/assets/products/firewall/dual-port-series/mcsrp1-hdmi/product.webp"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/firewall/dual-port-series/mcsrp1-hdmi/front.webp",
+      "title": "Dual-HDMI reference panel",
+      "description": "Reference image shared with MCSRP2-HDMI; final enclosure may vary."
+    },
+    {
+      "image": "/assets/products/firewall/dual-port-series/mcsrp1-hdmi/product.webp",
+      "title": "Brochure product reference",
+      "description": "A second brochure rendering of the same reference enclosure, shared with MCSRP2-HDMI."
+    }
+  ],
+  "highlights": [
+    "Intel N3710 / N3160 options",
+    "Up to 8 GB DDR3L",
+    "2 x Realtek Gigabit LAN",
+    "2 x HDMI outputs"
+  ],
+  "specificationHeading": "MCSRP1-HDMI hardware specifications",
+  "featureHeading": "Dual-network connectivity and internal expansion",
+  "advantageSummary": "Two Gigabit Ethernet ports and two HDMI outputs combine with board-level storage, serial and GPIO headers for configurable network projects.",
+  "features": [
+    {
+      "icon": "Network",
+      "title": "Dual-Gigabit networking",
+      "description": "Two Realtek RTL8111-series Gigabit LAN ports provide separate network connections. The selected Intel Braswell processor has four cores and four threads."
+    },
+    {
+      "icon": "Monitor",
+      "title": "Two HDMI outputs",
+      "description": "Two stacked HDMI ports and two stacked USB 3.0 ports connect displays and peripherals. Display resolution and HDMI version are not specified in the brochure."
+    },
+    {
+      "icon": "Layers",
+      "title": "Board-level expansion",
+      "description": "M.2 2242 NVMe, two 12-pin FPC SATA connectors, an M.2 2230 E-key slot, GPIO and a jumper-selectable RS232 / RS485 COM header support system integration."
+    }
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCSRP1-HDMI"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel Pentium N3710 / Intel Celeron N3160"
+    },
+    {
+      "label": "Architecture",
+      "value": "Intel Braswell; 4 cores / 4 threads"
+    },
+    {
+      "label": "Memory",
+      "value": "1 x 204-pin DDR3L SO-DIMM, 1600 MHz; up to 8 GB"
+    },
+    {
+      "label": "Network",
+      "value": "2 x Gigabit LAN, Realtek RTL8111 series"
+    },
+    {
+      "label": "Display",
+      "value": "2 x HDMI ports, stacked"
+    },
+    {
+      "label": "USB",
+      "value": "2 x USB 3.0 ports, stacked"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x M.2 2242 M-key, NVMe only; 2 x 12-pin FPC SATA connectors"
+    },
+    {
+      "label": "Expansion",
+      "value": "1 x M.2 2230 E-key slot"
+    },
+    {
+      "label": "GPIO",
+      "value": "1 x 10-pin header with 8 GPIO channels"
+    },
+    {
+      "label": "Serial header",
+      "value": "1 x COM header; RS232 or RS485 selected by jumper"
+    },
+    {
+      "label": "USB header",
+      "value": "1 x USB 2.0 header for 2 external USB 2.0 ports"
+    },
+    {
+      "label": "CPU fan header",
+      "value": "1 x 4-pin CPU fan power header"
+    },
+    {
+      "label": "Power",
+      "value": "12 V DC input"
+    },
+    {
+      "label": "Power button",
+      "value": "1 x power button on the I/O panel"
+    },
+    {
+      "label": "Auto power-on",
+      "value": "Jumper selects auto power-on (default) or normal mode"
+    },
+    {
+      "label": "Clear CMOS",
+      "value": "3-pin clear-CMOS jumper"
+    },
+    {
+      "label": "Motherboard size",
+      "value": "90 x 90.04 mm motherboard; enclosure dimensions not specified"
+    },
+    {
+      "label": "Operating environment",
+      "value": "-20°C to +55°C; 5%-90% RH, non-condensing"
+    },
+    {
+      "label": "Configuration notes",
+      "value": "CPU options: Intel Pentium N3710 or Intel Celeron N3160. Product pictures are shared with MCSRP2-HDMI; final enclosure may vary. Internal headers are not additional fitted external ports."
+    }
+  ],
+  "sourceBrochure": "软路由SR/MCSRP1-HDMI Brochure.pdf",
+  "sourceSha256": "73e668d6082fe8d7fa2cb569c74f4800206e9256ae109f656f558a039c379e91",
+  "translations": {
+    "de": {
+      "tagline": "Dual-Gigabit-Netzwerk-Appliance mit zwei HDMI-Ausgängen",
+      "description": "MCSRP1-HDMI kombiniert Intel Pentium N3710 oder Celeron N3160 mit zwei Realtek-Gigabit-LAN-Ports und zwei HDMI-Anschlüssen. Ein DDR3L-SO-DIMM-Steckplatz unterstützt bis zu 8 GB; hinzu kommen M.2-2242-NVMe-Speicher, zwei FPC-SATA-Anschlüsse und interne Erweiterungsanschlüsse. Die Abbildungen werden mit MCSRP2-HDMI geteilt; das endgültige Gehäuse kann abweichen.",
+      "highlights": [
+        "Intel N3710 / N3160 wählbar",
+        "Bis zu 8 GB DDR3L",
+        "2 x Realtek Gigabit LAN",
+        "2 x HDMI-Ausgänge"
+      ],
+      "specificationHeading": "MCSRP1-HDMI – Technische Daten",
+      "featureHeading": "Zwei LAN-Ports und interne Erweiterung",
+      "advantageSummary": "Zwei Gigabit-Ethernet-Ports und zwei HDMI-Ausgänge ergänzen Speicher-, serielle und GPIO-Anschlüsse auf der Platine für konfigurierbare Netzwerkprojekte.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp1-hdmi/front.webp",
+          "title": "Referenzansicht mit zwei HDMI-Ports",
+          "description": "Referenzbild gemeinsam mit MCSRP2-HDMI; das endgültige Gehäuse kann abweichen."
+        },
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp1-hdmi/product.webp",
+          "title": "Produktreferenz aus der Broschüre",
+          "description": "Zweite Darstellung desselben Referenzgehäuses aus der Broschüre, gemeinsam mit MCSRP2-HDMI."
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Zwei Gigabit-LAN-Ports",
+          "description": "Zwei Gigabit-LAN-Ports der Realtek-RTL8111-Serie bieten separate Netzwerkanschlüsse. Der gewählte Intel-Braswell-Prozessor besitzt vier Kerne und vier Threads."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Zwei HDMI-Ausgänge",
+          "description": "Zwei übereinander angeordnete HDMI-Ports und zwei USB-3.0-Ports verbinden Bildschirme und Peripherie. Auflösung und HDMI-Version sind in der Broschüre nicht angegeben."
+        },
+        {
+          "icon": "Layers",
+          "title": "Erweiterung auf der Platine",
+          "description": "M.2 2242 NVMe, zwei 12-polige FPC-SATA-Anschlüsse, ein M.2-2230-E-Key-Steckplatz, GPIO und ein per Jumper wählbarer RS232-/RS485-COM-Header unterstützen die Systemintegration."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modell",
+          "value": "MCSRP1-HDMI"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel Pentium N3710 / Intel Celeron N3160"
+        },
+        {
+          "label": "Architektur",
+          "value": "Intel Braswell; 4 Kerne / 4 Threads"
+        },
+        {
+          "label": "Arbeitsspeicher",
+          "value": "1 x 204-poliger DDR3L SO-DIMM, 1600 MHz; bis zu 8 GB"
+        },
+        {
+          "label": "Netzwerk",
+          "value": "2 x Gigabit LAN, Realtek RTL8111-Serie"
+        },
+        {
+          "label": "Bildausgänge",
+          "value": "2 x HDMI, übereinander angeordnet"
+        },
+        {
+          "label": "USB",
+          "value": "2 x USB 3.0, übereinander angeordnet"
+        },
+        {
+          "label": "Datenspeicher",
+          "value": "1 x M.2 2242 M-Key, nur NVMe; 2 x 12-polige FPC-SATA-Anschlüsse"
+        },
+        {
+          "label": "Erweiterung",
+          "value": "1 x M.2 2230 E-Key-Steckplatz"
+        },
+        {
+          "label": "GPIO",
+          "value": "1 x 10-poliger Header mit 8 GPIO-Kanälen"
+        },
+        {
+          "label": "Serieller Header",
+          "value": "1 x COM-Header; RS232 oder RS485 per Jumper wählbar"
+        },
+        {
+          "label": "USB-Header",
+          "value": "1 x USB-2.0-Header für 2 externe USB-2.0-Ports"
+        },
+        {
+          "label": "CPU-Lüfteranschluss",
+          "value": "1 x 4-poliger Anschluss zur CPU-Lüfterversorgung"
+        },
+        {
+          "label": "Stromversorgung",
+          "value": "12 V DC Eingang"
+        },
+        {
+          "label": "Ein-/Aus-Taste",
+          "value": "1 x Ein-/Aus-Taste am I/O-Panel"
+        },
+        {
+          "label": "Automatisches Einschalten",
+          "value": "Jumper für automatisches Einschalten (Standard) oder normalen Modus"
+        },
+        {
+          "label": "CMOS zurücksetzen",
+          "value": "3-poliger Clear-CMOS-Jumper"
+        },
+        {
+          "label": "Platinengröße",
+          "value": "90 x 90,04 mm Hauptplatine; Gehäuseabmessungen nicht angegeben"
+        },
+        {
+          "label": "Betriebsbedingungen",
+          "value": "-20°C bis +55°C; 5%-90% r. F., nicht kondensierend"
+        },
+        {
+          "label": "Konfigurationshinweise",
+          "value": "CPU-Auswahl: Intel Pentium N3710 oder Intel Celeron N3160. Bilder gemeinsam mit MCSRP2-HDMI; endgültiges Gehäuse kann abweichen. Interne Header sind keine zusätzlich eingebauten externen Ports."
+        }
+      ]
+    },
+    "fr": {
+      "tagline": "Appliance réseau double Gigabit avec deux sorties HDMI",
+      "description": "MCSRP1-HDMI associe un Intel Pentium N3710 ou Celeron N3160, deux ports LAN Gigabit Realtek et deux ports HDMI. Un emplacement DDR3L SO-DIMM prend en charge jusqu'à 8 Go, avec un stockage M.2 2242 NVMe, deux connecteurs SATA FPC et des connecteurs internes d'extension. Les illustrations sont communes au MCSRP2-HDMI ; le boîtier final peut varier.",
+      "highlights": [
+        "Intel N3710 / N3160 au choix",
+        "Jusqu'à 8 Go de DDR3L",
+        "2 x LAN Gigabit Realtek",
+        "2 x sorties HDMI"
+      ],
+      "specificationHeading": "MCSRP1-HDMI – Fiche technique",
+      "featureHeading": "Deux réseaux et des extensions internes",
+      "advantageSummary": "Deux ports Ethernet Gigabit et deux sorties HDMI complètent les connecteurs de stockage, série et GPIO de la carte pour des projets réseau configurables.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp1-hdmi/front.webp",
+          "title": "Panneau de référence à deux ports HDMI",
+          "description": "Image de référence commune au MCSRP2-HDMI ; le boîtier final peut varier."
+        },
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp1-hdmi/product.webp",
+          "title": "Illustration de référence de la brochure",
+          "description": "Deuxième illustration du même boîtier de référence dans la brochure, commune au MCSRP2-HDMI."
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Deux ports LAN Gigabit",
+          "description": "Deux ports LAN Gigabit de la série Realtek RTL8111 offrent des connexions réseau distinctes. Le processeur Intel Braswell choisi dispose de quatre cœurs et quatre threads."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Deux sorties HDMI",
+          "description": "Deux ports HDMI superposés et deux ports USB 3.0 superposés relient les écrans et les périphériques. La résolution et la version HDMI ne sont pas précisées dans la brochure."
+        },
+        {
+          "icon": "Layers",
+          "title": "Extensions sur la carte",
+          "description": "Un M.2 2242 NVMe, deux connecteurs SATA FPC à 12 broches, un M.2 2230 E-key, le GPIO et un connecteur COM RS232 / RS485 sélectionnable par cavalier facilitent l'intégration système."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modèle",
+          "value": "MCSRP1-HDMI"
+        },
+        {
+          "label": "Processeur",
+          "value": "Intel Pentium N3710 / Intel Celeron N3160"
+        },
+        {
+          "label": "Architecture",
+          "value": "Intel Braswell ; 4 cœurs / 4 threads"
+        },
+        {
+          "label": "Mémoire",
+          "value": "1 x DDR3L SO-DIMM à 204 broches, 1600 MHz ; jusqu'à 8 Go"
+        },
+        {
+          "label": "Réseau",
+          "value": "2 x LAN Gigabit, série Realtek RTL8111"
+        },
+        {
+          "label": "Sorties vidéo",
+          "value": "2 x ports HDMI superposés"
+        },
+        {
+          "label": "USB",
+          "value": "2 x ports USB 3.0 superposés"
+        },
+        {
+          "label": "Stockage",
+          "value": "1 x M.2 2242 M-key, NVMe uniquement ; 2 x connecteurs SATA FPC à 12 broches"
+        },
+        {
+          "label": "Extension",
+          "value": "1 x emplacement M.2 2230 E-key"
+        },
+        {
+          "label": "GPIO",
+          "value": "1 x connecteur à 10 broches avec 8 canaux GPIO"
+        },
+        {
+          "label": "Connecteur série",
+          "value": "1 x connecteur COM ; RS232 ou RS485 sélectionné par cavalier"
+        },
+        {
+          "label": "Connecteur USB",
+          "value": "1 x connecteur USB 2.0 pour 2 ports USB 2.0 externes"
+        },
+        {
+          "label": "Connecteur ventilateur CPU",
+          "value": "1 x connecteur d'alimentation de ventilateur CPU à 4 broches"
+        },
+        {
+          "label": "Alimentation",
+          "value": "Entrée 12 V CC"
+        },
+        {
+          "label": "Bouton d'alimentation",
+          "value": "1 x bouton d'alimentation sur le panneau E/S"
+        },
+        {
+          "label": "Mise sous tension automatique",
+          "value": "Cavalier : mise sous tension automatique (par défaut) ou mode normal"
+        },
+        {
+          "label": "Effacement CMOS",
+          "value": "Cavalier Clear CMOS à 3 broches"
+        },
+        {
+          "label": "Dimensions de la carte",
+          "value": "Carte mère 90 x 90,04 mm ; dimensions du boîtier non précisées"
+        },
+        {
+          "label": "Conditions de fonctionnement",
+          "value": "-20°C à +55°C ; 5%-90% HR, sans condensation"
+        },
+        {
+          "label": "Notes de configuration",
+          "value": "CPU au choix : Intel Pentium N3710 ou Intel Celeron N3160. Images communes au MCSRP2-HDMI ; le boîtier final peut varier. Les connecteurs internes ne sont pas des ports externes supplémentaires déjà installés."
+        }
+      ]
+    },
+    "it": {
+      "tagline": "Appliance di rete dual Gigabit con due uscite HDMI",
+      "description": "MCSRP1-HDMI combina Intel Pentium N3710 o Celeron N3160, due porte LAN Gigabit Realtek e due porte HDMI. Uno slot DDR3L SO-DIMM supporta fino a 8 GB, con archiviazione M.2 2242 NVMe, due connettori SATA FPC e connettori interni di espansione. Le illustrazioni sono condivise con MCSRP2-HDMI; lo chassis finale può variare.",
+      "highlights": [
+        "Intel N3710 / N3160 a scelta",
+        "Fino a 8 GB DDR3L",
+        "2 x LAN Gigabit Realtek",
+        "2 x uscite HDMI"
+      ],
+      "specificationHeading": "MCSRP1-HDMI – Specifiche hardware",
+      "featureHeading": "Due reti ed espansioni interne",
+      "advantageSummary": "Due porte Ethernet Gigabit e due uscite HDMI si affiancano ai connettori di archiviazione, seriali e GPIO sulla scheda per progetti di rete configurabili.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp1-hdmi/front.webp",
+          "title": "Pannello di riferimento con due HDMI",
+          "description": "Immagine di riferimento condivisa con MCSRP2-HDMI; lo chassis finale può variare."
+        },
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp1-hdmi/product.webp",
+          "title": "Illustrazione di riferimento della brochure",
+          "description": "Seconda illustrazione dello stesso chassis di riferimento nella brochure, condivisa con MCSRP2-HDMI."
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Due porte LAN Gigabit",
+          "description": "Due porte LAN Gigabit della serie Realtek RTL8111 offrono connessioni di rete separate. Il processore Intel Braswell selezionato dispone di quattro core e quattro thread."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Due uscite HDMI",
+          "description": "Due porte HDMI sovrapposte e due porte USB 3.0 sovrapposte collegano display e periferiche. Risoluzione e versione HDMI non sono specificate nella brochure."
+        },
+        {
+          "icon": "Layers",
+          "title": "Espansioni sulla scheda",
+          "description": "M.2 2242 NVMe, due connettori SATA FPC a 12 pin, uno slot M.2 2230 E-key, GPIO e un connettore COM RS232 / RS485 selezionabile tramite jumper supportano l'integrazione del sistema."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modello",
+          "value": "MCSRP1-HDMI"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel Pentium N3710 / Intel Celeron N3160"
+        },
+        {
+          "label": "Architettura",
+          "value": "Intel Braswell; 4 core / 4 thread"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 x DDR3L SO-DIMM a 204 pin, 1600 MHz; fino a 8 GB"
+        },
+        {
+          "label": "Rete",
+          "value": "2 x LAN Gigabit, serie Realtek RTL8111"
+        },
+        {
+          "label": "Uscite video",
+          "value": "2 x porte HDMI sovrapposte"
+        },
+        {
+          "label": "USB",
+          "value": "2 x porte USB 3.0 sovrapposte"
+        },
+        {
+          "label": "Archiviazione",
+          "value": "1 x M.2 2242 M-key, solo NVMe; 2 x connettori SATA FPC a 12 pin"
+        },
+        {
+          "label": "Espansione",
+          "value": "1 x slot M.2 2230 E-key"
+        },
+        {
+          "label": "GPIO",
+          "value": "1 x connettore a 10 pin con 8 canali GPIO"
+        },
+        {
+          "label": "Connettore seriale",
+          "value": "1 x connettore COM; RS232 o RS485 selezionabile tramite jumper"
+        },
+        {
+          "label": "Connettore USB",
+          "value": "1 x connettore USB 2.0 per 2 porte USB 2.0 esterne"
+        },
+        {
+          "label": "Connettore ventola CPU",
+          "value": "1 x connettore di alimentazione ventola CPU a 4 pin"
+        },
+        {
+          "label": "Alimentazione",
+          "value": "Ingresso 12 V DC"
+        },
+        {
+          "label": "Pulsante di accensione",
+          "value": "1 x pulsante di accensione sul pannello I/O"
+        },
+        {
+          "label": "Accensione automatica",
+          "value": "Jumper per accensione automatica (predefinita) o modalità normale"
+        },
+        {
+          "label": "Cancellazione CMOS",
+          "value": "Jumper Clear CMOS a 3 pin"
+        },
+        {
+          "label": "Dimensioni della scheda",
+          "value": "Scheda madre 90 x 90,04 mm; dimensioni dello chassis non specificate"
+        },
+        {
+          "label": "Condizioni operative",
+          "value": "Da -20°C a +55°C; 5%-90% UR, senza condensa"
+        },
+        {
+          "label": "Note sulla configurazione",
+          "value": "CPU a scelta: Intel Pentium N3710 o Intel Celeron N3160. Immagini condivise con MCSRP2-HDMI; lo chassis finale può variare. I connettori interni non sono porte esterne aggiuntive già installate."
+        }
+      ]
+    },
+    "es": {
+      "tagline": "Appliance de red dual Gigabit con dos salidas HDMI",
+      "description": "MCSRP1-HDMI combina Intel Pentium N3710 o Celeron N3160, dos puertos LAN Gigabit Realtek y dos puertos HDMI. Una ranura DDR3L SO-DIMM admite hasta 8 GB, con almacenamiento M.2 2242 NVMe, dos conectores SATA FPC y conectores internos de ampliación. Las ilustraciones se comparten con MCSRP2-HDMI; la carcasa final puede variar.",
+      "highlights": [
+        "Intel N3710 / N3160 a elegir",
+        "Hasta 8 GB DDR3L",
+        "2 x LAN Gigabit Realtek",
+        "2 x salidas HDMI"
+      ],
+      "specificationHeading": "MCSRP1-HDMI – Ficha técnica",
+      "featureHeading": "Dos redes y ampliaciones internas",
+      "advantageSummary": "Dos puertos Ethernet Gigabit y dos salidas HDMI se combinan con conectores de almacenamiento, serie y GPIO en la placa para proyectos de red configurables.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp1-hdmi/front.webp",
+          "title": "Panel de referencia con dos HDMI",
+          "description": "Imagen de referencia compartida con MCSRP2-HDMI; la carcasa final puede variar."
+        },
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp1-hdmi/product.webp",
+          "title": "Ilustración de referencia del folleto",
+          "description": "Segunda ilustración del mismo chasis de referencia en el folleto, compartida con MCSRP2-HDMI."
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Dos puertos LAN Gigabit",
+          "description": "Dos puertos LAN Gigabit de la serie Realtek RTL8111 proporcionan conexiones de red independientes. El procesador Intel Braswell elegido tiene cuatro núcleos y cuatro hilos."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Dos salidas HDMI",
+          "description": "Dos puertos HDMI apilados y dos puertos USB 3.0 apilados conectan pantallas y periféricos. El folleto no especifica la resolución ni la versión HDMI."
+        },
+        {
+          "icon": "Layers",
+          "title": "Ampliaciones en la placa",
+          "description": "M.2 2242 NVMe, dos conectores SATA FPC de 12 pines, una ranura M.2 2230 E-key, GPIO y un conector COM RS232 / RS485 seleccionable por puente permiten integrar el sistema."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modelo",
+          "value": "MCSRP1-HDMI"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel Pentium N3710 / Intel Celeron N3160"
+        },
+        {
+          "label": "Arquitectura",
+          "value": "Intel Braswell; 4 núcleos / 4 hilos"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 x DDR3L SO-DIMM de 204 pines, 1600 MHz; hasta 8 GB"
+        },
+        {
+          "label": "Red",
+          "value": "2 x LAN Gigabit, serie Realtek RTL8111"
+        },
+        {
+          "label": "Salidas de vídeo",
+          "value": "2 x puertos HDMI apilados"
+        },
+        {
+          "label": "USB",
+          "value": "2 x puertos USB 3.0 apilados"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "1 x M.2 2242 M-key, solo NVMe; 2 x conectores SATA FPC de 12 pines"
+        },
+        {
+          "label": "Ampliación",
+          "value": "1 x ranura M.2 2230 E-key"
+        },
+        {
+          "label": "GPIO",
+          "value": "1 x conector de 10 pines con 8 canales GPIO"
+        },
+        {
+          "label": "Conector serie",
+          "value": "1 x conector COM; RS232 o RS485 seleccionable por puente"
+        },
+        {
+          "label": "Conector USB",
+          "value": "1 x conector USB 2.0 para 2 puertos USB 2.0 externos"
+        },
+        {
+          "label": "Conector de ventilador CPU",
+          "value": "1 x conector de alimentación de ventilador CPU de 4 pines"
+        },
+        {
+          "label": "Alimentación",
+          "value": "Entrada 12 V CC"
+        },
+        {
+          "label": "Botón de encendido",
+          "value": "1 x botón de encendido en el panel E/S"
+        },
+        {
+          "label": "Encendido automático",
+          "value": "Puente para encendido automático (predeterminado) o modo normal"
+        },
+        {
+          "label": "Borrado de CMOS",
+          "value": "Puente Clear CMOS de 3 pines"
+        },
+        {
+          "label": "Dimensiones de la placa",
+          "value": "Placa base de 90 x 90,04 mm; dimensiones de la carcasa no especificadas"
+        },
+        {
+          "label": "Condiciones de funcionamiento",
+          "value": "De -20°C a +55°C; 5%-90% HR, sin condensación"
+        },
+        {
+          "label": "Notas de configuración",
+          "value": "CPU a elegir: Intel Pentium N3710 o Intel Celeron N3160. Imágenes compartidas con MCSRP2-HDMI; la carcasa final puede variar. Los conectores internos no son puertos externos adicionales ya instalados."
+        }
+      ]
+    }
+  }
+}

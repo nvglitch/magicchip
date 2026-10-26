@@ -73,7 +73,7 @@ assert(matchSearch(fixture([{ label: 'Memory', value: 'DDR5-4800' }]), 'DDR5'));
 assert.equal(matchSearch(fixture([{ label: 'Memory', value: 'DDR4' }]), 'DDR5'), null);
 assert(matchSearch(fixture([{ label: 'Cooling', value: 'fanless' }]), 'fanles'));
 const products = siteSearchIndex.filter(e => e.type === 'product');
-assert.equal(products.length, 166);
+assert.equal(products.length, 167);
 assert(products.every(e => e.specs?.length));
 assert.equal(new Set(products.map(e => e.href)).size, products.length);
 for (const query of ['MCDPC2', 'Core Ultra 96GB Thunderbolt 4', 'Dampfkammer', 'chambre à vapeur', 'camera di vapore', 'cámara de vapor']) {
@@ -96,6 +96,33 @@ for (const copy of [mcsrc26, ...Object.values(mcsrc26.translations)]) {
   assert.equal(copy.galleryCards.length, 2);
   assert(copy.galleryCards.every(card => fs.existsSync(path.join(__dirname, '..', 'public', card.image))));
 }
+// The HDMI variant keeps its own platform facts; shared pictures do not imply shared specs.
+const p1Hdmi = load('lib/firewall-catalog.ts').firewallCatalog.find(item => item.id === 'mcsrp1-hdmi');
+assert.equal(p1Hdmi.series, '2L');
+assert.equal(p1Hdmi.skus, undefined);
+const p1Spec = label => p1Hdmi.specs.find(spec => spec.label === label)?.value;
+assert.equal(p1Spec('CPU'), 'Intel Pentium N3710 / Intel Celeron N3160');
+assert.match(p1Spec('Memory'), /DDR3L.*1600 MHz.*8 GB/);
+assert.equal(p1Spec('Network'), '2 x Gigabit LAN, Realtek RTL8111 series');
+assert.equal(p1Spec('Display'), '2 x HDMI ports, stacked');
+assert.match(p1Spec('Storage'), /M\.2 2242 M-key, NVMe only; 2 x 12-pin FPC SATA/);
+assert.match(p1Spec('Serial header'), /header.*RS232 or RS485.*jumper/);
+assert.equal(p1Spec('Power'), '12 V DC input');
+assert.equal(p1Spec('Dimensions'), undefined);
+assert.match(p1Spec('Motherboard size'), /90 x 90\.04 mm motherboard/);
+for (const query of ['MCSRP1-HDMI', 'N3710 DDR3L', 'FPC SATA', 'CMOS zurücksetzen', 'deux sorties HDMI', 'due uscite HDMI', 'dos salidas HDMI']) {
+  assert(searchSite(query).some(entry => entry.href === '/products/firewall-mini-pc/mcsrp1-hdmi'), `MCSRP1-HDMI query failed: ${query}`);
+}
+for (const copy of [p1Hdmi, ...Object.values(p1Hdmi.translations)]) {
+  assert.equal(copy.specs.length, 20);
+  assert.equal(new Set(copy.specs.map(spec => spec.label)).size, copy.specs.length);
+  assert(copy.galleryCards.every(card => card.description.includes('MCSRP2-HDMI') && fs.existsSync(path.join(__dirname, '..', 'public', card.image))));
+}
+const dualPortModels = groupProductNavigation(load('lib/firewall-catalog.ts').firewallCatalog.filter(item => item.series === '2L'));
+assert.deepEqual(Array.from(dualPortModels.slice(0, 2), group => ({ name: group.name, ids: Array.from(group.models, item => item.id) })), [
+  { name: 'MCSRP1', ids: ['mcsrp1', 'mcsrp1-hdmi'] },
+  { name: 'MCSRP2', ids: ['mcsrp2', 'mcsrp2-hdmi'] },
+]);
 const b2 = groupProductNavigation(industrialCatalog.filter(item => item.series === 'B'))
   .find(group => group.name === 'MCIPCB2');
 assert.deepEqual(Array.from(b2.models, item => item.id), ['mcipcb2', 'mcipcb2-j5005']);

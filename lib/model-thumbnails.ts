@@ -503,5 +503,9 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
   "mcsrc26": {
     "image": "/assets/products/thumbnails/mcsrc26.webp",
     "source": "/assets/products/firewall/high-speed-series/mcsrc26/rear.webp"
+  },
+  "mcsrp1-hdmi": {
+    "image": "/assets/products/thumbnails/mcsrp1-hdmi.webp",
+    "source": "/assets/products/firewall/dual-port-series/mcsrp1-hdmi/front.webp"
   }
 };

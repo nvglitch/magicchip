@@ -5,6 +5,7 @@ import { firewallProductAliases } from '@/lib/firewall-product-aliases';
 import type { ProductConfiguration } from '@/lib/product-specifications';
 import type { CatalogProductFeature, CatalogProductTranslations } from '@/lib/catalog-product-copy';
 import { mcsrc26 } from '@/lib/mcsrc26';
+import { mcsrp1Hdmi } from '@/lib/mcsrp1-hdmi';
 
 export type FirewallSeriesCode = '2L' | '4L' | '6L' | '10G' | '1U';
 
@@ -98,6 +99,7 @@ const createProduct = (input: ProductInput): FirewallCatalogItem => {
 
 export const firewallCatalog: FirewallCatalogItem[] = [
   mcsrc26,
+  mcsrp1Hdmi,
   createProduct({
     id: 'mcsrp1', name: 'MCSRP1', series: '2L',
     tagline: 'Compact dual-Gigabit fanless network appliance',

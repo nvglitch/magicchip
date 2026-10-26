@@ -4,6 +4,8 @@ type NamedProduct = { id: string; name: string };
 const families: Record<string, string[]> = {
   MCIPCB2: ['MCIPCB2', 'MCIPCB2-J5005'],
   MCNAS14: ['MCNAS14A', 'MCNAS14B'],
+  MCSRP1: ['MCSRP1', 'MCSRP1-HDMI'],
+  MCSRP2: ['MCSRP2', 'MCSRP2-HDMI'],
 };
 
 const modelOrder = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
