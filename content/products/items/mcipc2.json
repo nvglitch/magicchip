@@ -1,0 +1,1388 @@
+{
+  "id": "mcipc2",
+  "name": "MCIPC2",
+  "category": "industrial-mini-pc",
+  "series": "C",
+  "published": true,
+  "image": "/assets/products/industrial/october/mcipc2/main.webp",
+  "galleryImages": [],
+  "sourceBrochures": [
+    "工控机IPC/C系列/MCIPC2 brochure.pdf"
+  ],
+  "sourceSha256": "38808c1e74575452f365ccd91cc13bbf6af1f80e2783d656c3baa0affe0d433e",
+  "tagline": "Six-COM industrial PC with J1900 or Intel Core i3 configurations",
+  "description": "Choose Type A (J1900, DDR3L up to 8 GB) or Type B (Intel Core i3, DDR4 up to 16 GB). Both provide six COM ports, HDMI plus VGA, dual Gigabit LAN and 12 V DC. Network controllers, USB, storage, watchdog, dimensions and operating limits follow the selected Type.",
+  "highlights": [
+    "J1900 / Intel Core i3",
+    "6 x COM",
+    "2 x Gigabit LAN",
+    "12 V DC"
+  ],
+  "specs": [
+    {
+      "label": "Display",
+      "value": "HDMI + VGA"
+    },
+    {
+      "label": "GPIO",
+      "value": "10 GPIO"
+    },
+    {
+      "label": "Audio",
+      "value": "Audio output and microphone input"
+    },
+    {
+      "label": "Wireless",
+      "value": "Mini PCIe (half-size): Wi-Fi / Bluetooth; Mini PCIe (full-size): 3G / 4G"
+    },
+    {
+      "label": "Power",
+      "value": "12 V DC"
+    },
+    {
+      "label": "Enclosure",
+      "value": "Aluminum"
+    },
+    {
+      "label": "Storage temperature",
+      "value": "-30°C ... +70°C"
+    },
+    {
+      "label": "Configuration notes",
+      "value": "The brochure uses the same reference photos for Types A and B; dimensions and ports follow the selected Type. Images are for reference; final I/O follows the confirmed configuration."
+    }
+  ],
+  "galleryCards": [],
+  "specificationHeading": "MCIPC2 - Hardware specifications",
+  "featureHeading": "Industrial interfaces and configuration choices",
+  "advantageSummary": "Match the platform, memory, storage and interfaces to the confirmed configuration.",
+  "features": [
+    {
+      "icon": "Cpu",
+      "title": "CPU and memory",
+      "description": "DDR3L SO-DIMM, up to 8 GB DDR4 SO-DIMM, up to 16 GB"
+    },
+    {
+      "icon": "Network",
+      "title": "Equipment interfaces",
+      "description": "Both Types: six COM, dual Gigabit LAN, HDMI and VGA."
+    },
+    {
+      "icon": "HardDrive",
+      "title": "Storage and expansion",
+      "description": "Type A: mSATA; Type B: mSATA plus 2.5-inch HDD / SSD."
+    }
+  ],
+  "translations": {
+    "de": {
+      "tagline": "Industrie-PC mit sechs COM und J1900- oder Core-i3-Konfiguration",
+      "description": "Typ A bietet J1900 und DDR3L bis 8 GB, Typ B Intel Core i3 und DDR4 bis 16 GB. Beide haben sechs COM-Ports, HDMI und VGA, zwei Gigabit-LAN-Ports und 12 V DC. Netzwerkcontroller, USB, Speicher, Watchdog, Maße und Betriebsgrenzen hängen vom Typ ab.",
+      "highlights": [
+        "J1900 / Intel Core i3",
+        "6 x COM",
+        "2 x Gigabit LAN",
+        "12 V DC"
+      ],
+      "specs": [
+        {
+          "label": "Bildausgänge",
+          "value": "HDMI + VGA"
+        },
+        {
+          "label": "GPIO",
+          "value": "10 GPIO"
+        },
+        {
+          "label": "Audio",
+          "value": "Audioausgang und Mikrofoneingang"
+        },
+        {
+          "label": "Funkmodule",
+          "value": "Mini PCIe (Half-Size): Wi-Fi / Bluetooth; Mini PCIe (Full-Size): 3G / 4G"
+        },
+        {
+          "label": "Stromversorgung",
+          "value": "12 V DC"
+        },
+        {
+          "label": "Gehäuse",
+          "value": "Aluminium"
+        },
+        {
+          "label": "Lagertemperatur",
+          "value": "-30°C ... +70°C"
+        },
+        {
+          "label": "Hinweise zur Konfiguration",
+          "value": "Die Broschüre nutzt dieselben Referenzfotos für Typ A und B; Maße und Anschlüsse nach gewähltem Typ. Abbildungen dienen als Referenz; Anschlüsse nach bestätigter Konfiguration."
+        }
+      ],
+      "galleryCards": [],
+      "specificationHeading": "MCIPC2 - Technische Daten",
+      "featureHeading": "Industrieanschlüsse und Optionen",
+      "advantageSummary": "Plattform, Speicher und Anschlüsse nach der bestätigten Konfiguration auswählen.",
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "CPU und RAM",
+          "description": "DDR3L SO-DIMM, bis 8 GB DDR4 SO-DIMM, bis 16 GB"
+        },
+        {
+          "icon": "Network",
+          "title": "Geräteanschlüsse",
+          "description": "Beide Typen: sechs COM, zwei Gigabit-LAN-Ports, HDMI und VGA."
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Speicher und Erweiterung",
+          "description": "Typ A: mSATA; Typ B: mSATA plus 2,5-Zoll-HDD / SSD."
+        }
+      ]
+    },
+    "fr": {
+      "tagline": "PC industriel à six COM avec configurations J1900 ou Core i3",
+      "description": "Choisissez le type A (J1900, DDR3L jusqu’à 8 Go) ou B (Intel Core i3, DDR4 jusqu’à 16 Go). Les deux proposent six COM, HDMI et VGA, deux LAN Gigabit et 12 V CC. Contrôleurs, USB, stockage, watchdog, dimensions et limites selon le type.",
+      "highlights": [
+        "J1900 / Intel Core i3",
+        "6 x COM",
+        "2 x Gigabit LAN",
+        "12 V DC"
+      ],
+      "specs": [
+        {
+          "label": "Affichage",
+          "value": "HDMI + VGA"
+        },
+        {
+          "label": "GPIO",
+          "value": "10 GPIO"
+        },
+        {
+          "label": "Audio",
+          "value": "Sortie audio et entrée microphone"
+        },
+        {
+          "label": "Sans fil",
+          "value": "Mini PCIe (demi-format): Wi-Fi / Bluetooth; Mini PCIe (plein format): 3G / 4G"
+        },
+        {
+          "label": "Alimentation",
+          "value": "12 V DC"
+        },
+        {
+          "label": "Boîtier",
+          "value": "Aluminium"
+        },
+        {
+          "label": "Température de stockage",
+          "value": "-30°C ... +70°C"
+        },
+        {
+          "label": "Notes de configuration",
+          "value": "La brochure utilise les mêmes photos de référence pour les types A et B ; dimensions et ports selon le type choisi. Images indicatives ; ports selon la configuration confirmée."
+        }
+      ],
+      "galleryCards": [],
+      "specificationHeading": "MCIPC2 - Caractéristiques techniques",
+      "featureHeading": "Interfaces industrielles et configurations",
+      "advantageSummary": "Choisissez plateforme, mémoire, stockage et ports selon la configuration confirmée.",
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "CPU et mémoire",
+          "description": "DDR3L SO-DIMM, jusqu’à 8 GB DDR4 SO-DIMM, jusqu’à 16 GB"
+        },
+        {
+          "icon": "Network",
+          "title": "Interfaces des équipements",
+          "description": "Les deux types : six COM, deux LAN Gigabit, HDMI et VGA."
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Stockage et extension",
+          "description": "Type A : mSATA ; type B : mSATA et HDD / SSD 2,5 pouces."
+        }
+      ]
+    },
+    "it": {
+      "tagline": "PC industriale a sei COM con configurazioni J1900 o Core i3",
+      "description": "Scegli tipo A (J1900, DDR3L fino a 8 GB) o B (Intel Core i3, DDR4 fino a 16 GB). Entrambi offrono sei COM, HDMI e VGA, due LAN Gigabit e 12 V CC. Controller, USB, archiviazione, watchdog, dimensioni e limiti variano per tipo.",
+      "highlights": [
+        "J1900 / Intel Core i3",
+        "6 x COM",
+        "2 x Gigabit LAN",
+        "12 V DC"
+      ],
+      "specs": [
+        {
+          "label": "Uscite video",
+          "value": "HDMI + VGA"
+        },
+        {
+          "label": "GPIO",
+          "value": "10 GPIO"
+        },
+        {
+          "label": "Audio",
+          "value": "Uscita audio e ingresso microfono"
+        },
+        {
+          "label": "Wireless",
+          "value": "Mini PCIe (half-size): Wi-Fi / Bluetooth; Mini PCIe (full-size): 3G / 4G"
+        },
+        {
+          "label": "Alimentazione",
+          "value": "12 V DC"
+        },
+        {
+          "label": "Chassis",
+          "value": "Alluminio"
+        },
+        {
+          "label": "Temperatura di stoccaggio",
+          "value": "-30°C ... +70°C"
+        },
+        {
+          "label": "Note di configurazione",
+          "value": "La brochure usa le stesse foto per i tipi A e B; dimensioni e porte secondo il tipo selezionato. Immagini indicative; porte secondo la configurazione confermata."
+        }
+      ],
+      "galleryCards": [],
+      "specificationHeading": "MCIPC2 - Specifiche hardware",
+      "featureHeading": "Interfacce industriali e configurazioni",
+      "advantageSummary": "Scegli piattaforma, memoria, archiviazione e porte secondo la configurazione confermata.",
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "CPU e memoria",
+          "description": "DDR3L SO-DIMM, fino a 8 GB DDR4 SO-DIMM, fino a 16 GB"
+        },
+        {
+          "icon": "Network",
+          "title": "Interfacce dispositivi",
+          "description": "Entrambi i tipi: sei COM, due LAN Gigabit, HDMI e VGA."
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Archiviazione ed espansione",
+          "description": "Tipo A: mSATA; tipo B: mSATA e HDD / SSD da 2,5 pollici."
+        }
+      ]
+    },
+    "es": {
+      "tagline": "PC industrial de seis COM con configuraciones J1900 o Core i3",
+      "description": "Elige tipo A (J1900, DDR3L hasta 8 GB) o B (Intel Core i3, DDR4 hasta 16 GB). Ambos ofrecen seis COM, HDMI y VGA, doble LAN Gigabit y 12 V CC. Controladores, USB, almacenamiento, watchdog, dimensiones y límites dependen del tipo.",
+      "highlights": [
+        "J1900 / Intel Core i3",
+        "6 x COM",
+        "2 x Gigabit LAN",
+        "12 V DC"
+      ],
+      "specs": [
+        {
+          "label": "Salidas de vídeo",
+          "value": "HDMI + VGA"
+        },
+        {
+          "label": "GPIO",
+          "value": "10 GPIO"
+        },
+        {
+          "label": "Audio",
+          "value": "Salida de audio y entrada de micrófono"
+        },
+        {
+          "label": "Conectividad inalámbrica",
+          "value": "Mini PCIe (tamaño medio): Wi-Fi / Bluetooth; Mini PCIe (tamaño completo): 3G / 4G"
+        },
+        {
+          "label": "Alimentación",
+          "value": "12 V DC"
+        },
+        {
+          "label": "Chasis",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Temperatura de almacenamiento",
+          "value": "-30°C ... +70°C"
+        },
+        {
+          "label": "Notas de configuración",
+          "value": "El folleto utiliza las mismas fotos para los tipos A y B; dimensiones y puertos según el tipo elegido. Imágenes de referencia; puertos según la configuración confirmada."
+        }
+      ],
+      "galleryCards": [],
+      "specificationHeading": "MCIPC2 - Especificaciones de hardware",
+      "featureHeading": "Interfaces industriales y configuraciones",
+      "advantageSummary": "Elige plataforma, memoria, almacenamiento y puertos según la configuración confirmada.",
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "CPU y memoria",
+          "description": "DDR3L SO-DIMM, hasta 8 GB DDR4 SO-DIMM, hasta 16 GB"
+        },
+        {
+          "icon": "Network",
+          "title": "Interfaces de equipos",
+          "description": "Ambos tipos: seis COM, doble LAN Gigabit, HDMI y VGA."
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Almacenamiento y expansión",
+          "description": "Tipo A: mSATA; tipo B: mSATA y HDD / SSD de 2,5 pulgadas."
+        }
+      ]
+    }
+  },
+  "skus": [
+    {
+      "key": "type-a",
+      "label": "Type A · J1900 · DDR3L · 6 COM",
+      "labelTranslations": {
+        "de": "Typ A · J1900 · DDR3L · 6 COM",
+        "fr": "Type A · J1900 · DDR3L · 6 COM",
+        "it": "Tipo A · J1900 · DDR3L · 6 COM",
+        "es": "Tipo A · J1900 · DDR3L · 6 COM"
+      },
+      "legacyNames": [
+        "MCIPC2A"
+      ],
+      "image": "/assets/products/industrial/october/mcipc2a/main.webp",
+      "specs": [
+        {
+          "label": "Model",
+          "value": "MCIPC2A"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel Atom J1900"
+        },
+        {
+          "label": "Memory",
+          "value": "DDR3L SO-DIMM, up to 8 GB"
+        },
+        {
+          "label": "Display",
+          "value": "HDMI + VGA"
+        },
+        {
+          "label": "Network",
+          "value": "2 x Realtek RTL8111H Gigabit LAN (1000 Mbps)"
+        },
+        {
+          "label": "USB",
+          "value": "1 x USB 3.0 + 5 x USB 2.0"
+        },
+        {
+          "label": "Serial",
+          "value": "6 x COM; 2 configurable as RS-232/422/485"
+        },
+        {
+          "label": "Storage",
+          "value": "mSATA"
+        },
+        {
+          "label": "Power",
+          "value": "12 V DC"
+        },
+        {
+          "label": "System",
+          "value": "Windows 7 / 8 / 10; WES 7; Linux"
+        },
+        {
+          "label": "Dimensions",
+          "value": "150 x 135 x 49 mm"
+        },
+        {
+          "label": "GPIO",
+          "value": "10 GPIO"
+        },
+        {
+          "label": "Audio",
+          "value": "Audio output and microphone input"
+        },
+        {
+          "label": "Wireless",
+          "value": "Mini PCIe (half-size): Wi-Fi / Bluetooth; Mini PCIe (full-size): 3G / 4G"
+        },
+        {
+          "label": "Enclosure",
+          "value": "Aluminum"
+        },
+        {
+          "label": "Storage temperature",
+          "value": "-30°C ... +70°C"
+        },
+        {
+          "label": "Configuration notes",
+          "value": "The brochure uses the same reference photos for Types A and B; dimensions and ports follow the selected Type. Images are for reference; final I/O follows the confirmed configuration."
+        },
+        {
+          "label": "Cellular / SIM",
+          "value": "3G / 4G via full-size Mini PCIe; SIM slot not specified"
+        },
+        {
+          "label": "Monitoring",
+          "value": "Programmable watchdog: 1-255 seconds"
+        },
+        {
+          "label": "Weight",
+          "value": "0.64 kg"
+        },
+        {
+          "label": "Operating temperature",
+          "value": "-20°C ... +70°C"
+        },
+        {
+          "label": "Humidity",
+          "value": "95% RH @ 40°C"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/october/mcipc2a/front.webp",
+          "title": "MCIPC2A - Front panel"
+        },
+        {
+          "image": "/assets/products/industrial/october/mcipc2a/rear.webp",
+          "title": "MCIPC2A - Rear panel"
+        }
+      ],
+      "translations": {
+        "de": {
+          "specs": [
+            {
+              "label": "Modell",
+              "value": "MCIPC2A"
+            },
+            {
+              "label": "CPU",
+              "value": "Intel Atom J1900"
+            },
+            {
+              "label": "Arbeitsspeicher",
+              "value": "DDR3L SO-DIMM, bis 8 GB"
+            },
+            {
+              "label": "Bildausgänge",
+              "value": "HDMI + VGA"
+            },
+            {
+              "label": "Netzwerk",
+              "value": "2 x Realtek RTL8111H Gigabit LAN (1000 Mbps)"
+            },
+            {
+              "label": "USB",
+              "value": "1 x USB 3.0 + 5 x USB 2.0"
+            },
+            {
+              "label": "Serielle Anschlüsse",
+              "value": "6 x COM; 2 als RS-232/422/485 konfigurierbar"
+            },
+            {
+              "label": "Speicher",
+              "value": "mSATA"
+            },
+            {
+              "label": "Stromversorgung",
+              "value": "12 V DC"
+            },
+            {
+              "label": "Betriebssystem",
+              "value": "Windows 7 / 8 / 10; WES 7; Linux"
+            },
+            {
+              "label": "Abmessungen",
+              "value": "150 x 135 x 49 mm"
+            },
+            {
+              "label": "GPIO",
+              "value": "10 GPIO"
+            },
+            {
+              "label": "Audio",
+              "value": "Audioausgang und Mikrofoneingang"
+            },
+            {
+              "label": "Funkmodule",
+              "value": "Mini PCIe (Half-Size): Wi-Fi / Bluetooth; Mini PCIe (Full-Size): 3G / 4G"
+            },
+            {
+              "label": "Gehäuse",
+              "value": "Aluminium"
+            },
+            {
+              "label": "Lagertemperatur",
+              "value": "-30°C ... +70°C"
+            },
+            {
+              "label": "Hinweise zur Konfiguration",
+              "value": "Die Broschüre nutzt dieselben Referenzfotos für Typ A und B; Maße und Anschlüsse nach gewähltem Typ. Abbildungen dienen als Referenz; Anschlüsse nach bestätigter Konfiguration."
+            },
+            {
+              "label": "Mobilfunk / SIM",
+              "value": "3G / 4G über Full-Size Mini PCIe; SIM-Steckplatz nicht angegeben"
+            },
+            {
+              "label": "Überwachung",
+              "value": "Programmierbarer Watchdog: 1-255 Sekunden"
+            },
+            {
+              "label": "Gewicht",
+              "value": "0.64 kg"
+            },
+            {
+              "label": "Betriebstemperatur",
+              "value": "-20°C ... +70°C"
+            },
+            {
+              "label": "Luftfeuchte",
+              "value": "95% RH @ 40°C"
+            }
+          ],
+          "galleryCards": [
+            {
+              "image": "/assets/products/industrial/october/mcipc2a/front.webp",
+              "title": "MCIPC2A - Frontansicht"
+            },
+            {
+              "image": "/assets/products/industrial/october/mcipc2a/rear.webp",
+              "title": "MCIPC2A - Rückansicht"
+            }
+          ]
+        },
+        "fr": {
+          "specs": [
+            {
+              "label": "Modèle",
+              "value": "MCIPC2A"
+            },
+            {
+              "label": "CPU",
+              "value": "Intel Atom J1900"
+            },
+            {
+              "label": "Mémoire",
+              "value": "DDR3L SO-DIMM, jusqu’à 8 GB"
+            },
+            {
+              "label": "Affichage",
+              "value": "HDMI + VGA"
+            },
+            {
+              "label": "Réseau",
+              "value": "2 x Realtek RTL8111H Gigabit LAN (1000 Mbps)"
+            },
+            {
+              "label": "USB",
+              "value": "1 x USB 3.0 + 5 x USB 2.0"
+            },
+            {
+              "label": "Ports série",
+              "value": "6 x COM ; 2 configurables en RS-232/422/485"
+            },
+            {
+              "label": "Stockage",
+              "value": "mSATA"
+            },
+            {
+              "label": "Alimentation",
+              "value": "12 V DC"
+            },
+            {
+              "label": "Système",
+              "value": "Windows 7 / 8 / 10; WES 7; Linux"
+            },
+            {
+              "label": "Dimensions",
+              "value": "150 x 135 x 49 mm"
+            },
+            {
+              "label": "GPIO",
+              "value": "10 GPIO"
+            },
+            {
+              "label": "Audio",
+              "value": "Sortie audio et entrée microphone"
+            },
+            {
+              "label": "Sans fil",
+              "value": "Mini PCIe (demi-format): Wi-Fi / Bluetooth; Mini PCIe (plein format): 3G / 4G"
+            },
+            {
+              "label": "Boîtier",
+              "value": "Aluminium"
+            },
+            {
+              "label": "Température de stockage",
+              "value": "-30°C ... +70°C"
+            },
+            {
+              "label": "Notes de configuration",
+              "value": "La brochure utilise les mêmes photos de référence pour les types A et B ; dimensions et ports selon le type choisi. Images indicatives ; ports selon la configuration confirmée."
+            },
+            {
+              "label": "Cellulaire / SIM",
+              "value": "3G / 4G via Mini PCIe plein format ; emplacement SIM non précisé"
+            },
+            {
+              "label": "Surveillance",
+              "value": "Watchdog programmable : 1-255 secondes"
+            },
+            {
+              "label": "Poids",
+              "value": "0.64 kg"
+            },
+            {
+              "label": "Température de fonctionnement",
+              "value": "-20°C ... +70°C"
+            },
+            {
+              "label": "Humidité",
+              "value": "95% RH @ 40°C"
+            }
+          ],
+          "galleryCards": [
+            {
+              "image": "/assets/products/industrial/october/mcipc2a/front.webp",
+              "title": "MCIPC2A - Face avant"
+            },
+            {
+              "image": "/assets/products/industrial/october/mcipc2a/rear.webp",
+              "title": "MCIPC2A - Face arrière"
+            }
+          ]
+        },
+        "it": {
+          "specs": [
+            {
+              "label": "Modello",
+              "value": "MCIPC2A"
+            },
+            {
+              "label": "CPU",
+              "value": "Intel Atom J1900"
+            },
+            {
+              "label": "Memoria",
+              "value": "DDR3L SO-DIMM, fino a 8 GB"
+            },
+            {
+              "label": "Uscite video",
+              "value": "HDMI + VGA"
+            },
+            {
+              "label": "Rete",
+              "value": "2 x Realtek RTL8111H Gigabit LAN (1000 Mbps)"
+            },
+            {
+              "label": "USB",
+              "value": "1 x USB 3.0 + 5 x USB 2.0"
+            },
+            {
+              "label": "Porte seriali",
+              "value": "6 x COM; 2 configurabili RS-232/422/485"
+            },
+            {
+              "label": "Archiviazione",
+              "value": "mSATA"
+            },
+            {
+              "label": "Alimentazione",
+              "value": "12 V DC"
+            },
+            {
+              "label": "Sistema",
+              "value": "Windows 7 / 8 / 10; WES 7; Linux"
+            },
+            {
+              "label": "Dimensioni",
+              "value": "150 x 135 x 49 mm"
+            },
+            {
+              "label": "GPIO",
+              "value": "10 GPIO"
+            },
+            {
+              "label": "Audio",
+              "value": "Uscita audio e ingresso microfono"
+            },
+            {
+              "label": "Wireless",
+              "value": "Mini PCIe (half-size): Wi-Fi / Bluetooth; Mini PCIe (full-size): 3G / 4G"
+            },
+            {
+              "label": "Chassis",
+              "value": "Alluminio"
+            },
+            {
+              "label": "Temperatura di stoccaggio",
+              "value": "-30°C ... +70°C"
+            },
+            {
+              "label": "Note di configurazione",
+              "value": "La brochure usa le stesse foto per i tipi A e B; dimensioni e porte secondo il tipo selezionato. Immagini indicative; porte secondo la configurazione confermata."
+            },
+            {
+              "label": "Rete mobile / SIM",
+              "value": "3G / 4G tramite Mini PCIe full-size; slot SIM non specificato"
+            },
+            {
+              "label": "Monitoraggio",
+              "value": "Watchdog programmabile: 1-255 secondi"
+            },
+            {
+              "label": "Peso",
+              "value": "0.64 kg"
+            },
+            {
+              "label": "Temperatura operativa",
+              "value": "-20°C ... +70°C"
+            },
+            {
+              "label": "Umidità",
+              "value": "95% RH @ 40°C"
+            }
+          ],
+          "galleryCards": [
+            {
+              "image": "/assets/products/industrial/october/mcipc2a/front.webp",
+              "title": "MCIPC2A - Pannello anteriore"
+            },
+            {
+              "image": "/assets/products/industrial/october/mcipc2a/rear.webp",
+              "title": "MCIPC2A - Pannello posteriore"
+            }
+          ]
+        },
+        "es": {
+          "specs": [
+            {
+              "label": "Modelo",
+              "value": "MCIPC2A"
+            },
+            {
+              "label": "CPU",
+              "value": "Intel Atom J1900"
+            },
+            {
+              "label": "Memoria",
+              "value": "DDR3L SO-DIMM, hasta 8 GB"
+            },
+            {
+              "label": "Salidas de vídeo",
+              "value": "HDMI + VGA"
+            },
+            {
+              "label": "Red",
+              "value": "2 x Realtek RTL8111H Gigabit LAN (1000 Mbps)"
+            },
+            {
+              "label": "USB",
+              "value": "1 x USB 3.0 + 5 x USB 2.0"
+            },
+            {
+              "label": "Puertos serie",
+              "value": "6 x COM; 2 configurables como RS-232/422/485"
+            },
+            {
+              "label": "Almacenamiento",
+              "value": "mSATA"
+            },
+            {
+              "label": "Alimentación",
+              "value": "12 V DC"
+            },
+            {
+              "label": "Sistema",
+              "value": "Windows 7 / 8 / 10; WES 7; Linux"
+            },
+            {
+              "label": "Dimensiones",
+              "value": "150 x 135 x 49 mm"
+            },
+            {
+              "label": "GPIO",
+              "value": "10 GPIO"
+            },
+            {
+              "label": "Audio",
+              "value": "Salida de audio y entrada de micrófono"
+            },
+            {
+              "label": "Conectividad inalámbrica",
+              "value": "Mini PCIe (tamaño medio): Wi-Fi / Bluetooth; Mini PCIe (tamaño completo): 3G / 4G"
+            },
+            {
+              "label": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "label": "Temperatura de almacenamiento",
+              "value": "-30°C ... +70°C"
+            },
+            {
+              "label": "Notas de configuración",
+              "value": "El folleto utiliza las mismas fotos para los tipos A y B; dimensiones y puertos según el tipo elegido. Imágenes de referencia; puertos según la configuración confirmada."
+            },
+            {
+              "label": "Red móvil / SIM",
+              "value": "3G / 4G mediante Mini PCIe de tamaño completo; ranura SIM no especificada"
+            },
+            {
+              "label": "Supervisión",
+              "value": "Watchdog programable: 1-255 segundos"
+            },
+            {
+              "label": "Peso",
+              "value": "0.64 kg"
+            },
+            {
+              "label": "Temperatura de funcionamiento",
+              "value": "-20°C ... +70°C"
+            },
+            {
+              "label": "Humedad",
+              "value": "95% RH @ 40°C"
+            }
+          ],
+          "galleryCards": [
+            {
+              "image": "/assets/products/industrial/october/mcipc2a/front.webp",
+              "title": "MCIPC2A - Panel frontal"
+            },
+            {
+              "image": "/assets/products/industrial/october/mcipc2a/rear.webp",
+              "title": "MCIPC2A - Panel trasero"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "type-b",
+      "label": "Type B · Intel Core i3 · DDR4 · 6 COM",
+      "labelTranslations": {
+        "de": "Typ B · Intel Core i3 · DDR4 · 6 COM",
+        "fr": "Type B · Intel Core i3 · DDR4 · 6 COM",
+        "it": "Tipo B · Intel Core i3 · DDR4 · 6 COM",
+        "es": "Tipo B · Intel Core i3 · DDR4 · 6 COM"
+      },
+      "legacyNames": [
+        "MCIPC2B"
+      ],
+      "image": "/assets/products/industrial/october/mcipc2b/main.webp",
+      "specs": [
+        {
+          "label": "Model",
+          "value": "MCIPC2B"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel Core i3-6157U / i3-7100U / i3-8130U"
+        },
+        {
+          "label": "Memory",
+          "value": "DDR4 SO-DIMM, up to 16 GB"
+        },
+        {
+          "label": "Display",
+          "value": "HDMI + VGA"
+        },
+        {
+          "label": "Network",
+          "value": "2 x Intel i211 / i210 Gigabit LAN (1000 Mbps)"
+        },
+        {
+          "label": "USB",
+          "value": "4 x USB 3.0 + 2 x USB 2.0"
+        },
+        {
+          "label": "Serial",
+          "value": "6 x COM; 2 support RS-422/485"
+        },
+        {
+          "label": "Storage",
+          "value": "mSATA + 2.5-inch HDD / SSD"
+        },
+        {
+          "label": "Power",
+          "value": "12 V DC"
+        },
+        {
+          "label": "System",
+          "value": "Windows 7 / 8 / 10; WES 7 / 10; Linux"
+        },
+        {
+          "label": "Dimensions",
+          "value": "180 x 120 x 54 mm"
+        },
+        {
+          "label": "GPIO",
+          "value": "10 GPIO"
+        },
+        {
+          "label": "Audio",
+          "value": "Audio output and microphone input"
+        },
+        {
+          "label": "Wireless",
+          "value": "Mini PCIe (half-size): Wi-Fi / Bluetooth; Mini PCIe (full-size): 3G / 4G"
+        },
+        {
+          "label": "Enclosure",
+          "value": "Aluminum"
+        },
+        {
+          "label": "Storage temperature",
+          "value": "-30°C ... +70°C"
+        },
+        {
+          "label": "Configuration notes",
+          "value": "The brochure uses the same reference photos for Types A and B; dimensions and ports follow the selected Type. Images are for reference; final I/O follows the confirmed configuration."
+        },
+        {
+          "label": "Cellular / SIM",
+          "value": "3G / 4G via full-size Mini PCIe; SIM slot"
+        },
+        {
+          "label": "Monitoring",
+          "value": "Watchdog supported"
+        },
+        {
+          "label": "Weight",
+          "value": "1.0 kg"
+        },
+        {
+          "label": "Operating temperature",
+          "value": "-20°C ... +60°C"
+        },
+        {
+          "label": "Humidity",
+          "value": "10-90% RH @ 30°C"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/october/mcipc2b/front.webp",
+          "title": "MCIPC2B - Front panel"
+        },
+        {
+          "image": "/assets/products/industrial/october/mcipc2b/rear.webp",
+          "title": "MCIPC2B - Rear panel"
+        }
+      ],
+      "translations": {
+        "de": {
+          "specs": [
+            {
+              "label": "Modell",
+              "value": "MCIPC2B"
+            },
+            {
+              "label": "CPU",
+              "value": "Intel Core i3-6157U / i3-7100U / i3-8130U"
+            },
+            {
+              "label": "Arbeitsspeicher",
+              "value": "DDR4 SO-DIMM, bis 16 GB"
+            },
+            {
+              "label": "Bildausgänge",
+              "value": "HDMI + VGA"
+            },
+            {
+              "label": "Netzwerk",
+              "value": "2 x Intel i211 / i210 Gigabit LAN (1000 Mbps)"
+            },
+            {
+              "label": "USB",
+              "value": "4 x USB 3.0 + 2 x USB 2.0"
+            },
+            {
+              "label": "Serielle Anschlüsse",
+              "value": "6 x COM; 2 unterstützen RS-422/485"
+            },
+            {
+              "label": "Speicher",
+              "value": "mSATA + 2,5-Zoll-HDD / SSD"
+            },
+            {
+              "label": "Stromversorgung",
+              "value": "12 V DC"
+            },
+            {
+              "label": "Betriebssystem",
+              "value": "Windows 7 / 8 / 10; WES 7 / 10; Linux"
+            },
+            {
+              "label": "Abmessungen",
+              "value": "180 x 120 x 54 mm"
+            },
+            {
+              "label": "GPIO",
+              "value": "10 GPIO"
+            },
+            {
+              "label": "Audio",
+              "value": "Audioausgang und Mikrofoneingang"
+            },
+            {
+              "label": "Funkmodule",
+              "value": "Mini PCIe (Half-Size): Wi-Fi / Bluetooth; Mini PCIe (Full-Size): 3G / 4G"
+            },
+            {
+              "label": "Gehäuse",
+              "value": "Aluminium"
+            },
+            {
+              "label": "Lagertemperatur",
+              "value": "-30°C ... +70°C"
+            },
+            {
+              "label": "Hinweise zur Konfiguration",
+              "value": "Die Broschüre nutzt dieselben Referenzfotos für Typ A und B; Maße und Anschlüsse nach gewähltem Typ. Abbildungen dienen als Referenz; Anschlüsse nach bestätigter Konfiguration."
+            },
+            {
+              "label": "Mobilfunk / SIM",
+              "value": "3G / 4G über Full-Size Mini PCIe; SIM-Steckplatz"
+            },
+            {
+              "label": "Überwachung",
+              "value": "Watchdog unterstützt"
+            },
+            {
+              "label": "Gewicht",
+              "value": "1.0 kg"
+            },
+            {
+              "label": "Betriebstemperatur",
+              "value": "-20°C ... +60°C"
+            },
+            {
+              "label": "Luftfeuchte",
+              "value": "10-90% RH @ 30°C"
+            }
+          ],
+          "galleryCards": [
+            {
+              "image": "/assets/products/industrial/october/mcipc2b/front.webp",
+              "title": "MCIPC2B - Frontansicht"
+            },
+            {
+              "image": "/assets/products/industrial/october/mcipc2b/rear.webp",
+              "title": "MCIPC2B - Rückansicht"
+            }
+          ]
+        },
+        "fr": {
+          "specs": [
+            {
+              "label": "Modèle",
+              "value": "MCIPC2B"
+            },
+            {
+              "label": "CPU",
+              "value": "Intel Core i3-6157U / i3-7100U / i3-8130U"
+            },
+            {
+              "label": "Mémoire",
+              "value": "DDR4 SO-DIMM, jusqu’à 16 GB"
+            },
+            {
+              "label": "Affichage",
+              "value": "HDMI + VGA"
+            },
+            {
+              "label": "Réseau",
+              "value": "2 x Intel i211 / i210 Gigabit LAN (1000 Mbps)"
+            },
+            {
+              "label": "USB",
+              "value": "4 x USB 3.0 + 2 x USB 2.0"
+            },
+            {
+              "label": "Ports série",
+              "value": "6 x COM; 2 compatibles RS-422/485"
+            },
+            {
+              "label": "Stockage",
+              "value": "mSATA + HDD / SSD 2,5 pouces"
+            },
+            {
+              "label": "Alimentation",
+              "value": "12 V DC"
+            },
+            {
+              "label": "Système",
+              "value": "Windows 7 / 8 / 10; WES 7 / 10; Linux"
+            },
+            {
+              "label": "Dimensions",
+              "value": "180 x 120 x 54 mm"
+            },
+            {
+              "label": "GPIO",
+              "value": "10 GPIO"
+            },
+            {
+              "label": "Audio",
+              "value": "Sortie audio et entrée microphone"
+            },
+            {
+              "label": "Sans fil",
+              "value": "Mini PCIe (demi-format): Wi-Fi / Bluetooth; Mini PCIe (plein format): 3G / 4G"
+            },
+            {
+              "label": "Boîtier",
+              "value": "Aluminium"
+            },
+            {
+              "label": "Température de stockage",
+              "value": "-30°C ... +70°C"
+            },
+            {
+              "label": "Notes de configuration",
+              "value": "La brochure utilise les mêmes photos de référence pour les types A et B ; dimensions et ports selon le type choisi. Images indicatives ; ports selon la configuration confirmée."
+            },
+            {
+              "label": "Cellulaire / SIM",
+              "value": "3G / 4G via Mini PCIe plein format ; emplacement SIM"
+            },
+            {
+              "label": "Surveillance",
+              "value": "Watchdog pris en charge"
+            },
+            {
+              "label": "Poids",
+              "value": "1.0 kg"
+            },
+            {
+              "label": "Température de fonctionnement",
+              "value": "-20°C ... +60°C"
+            },
+            {
+              "label": "Humidité",
+              "value": "10-90% RH @ 30°C"
+            }
+          ],
+          "galleryCards": [
+            {
+              "image": "/assets/products/industrial/october/mcipc2b/front.webp",
+              "title": "MCIPC2B - Face avant"
+            },
+            {
+              "image": "/assets/products/industrial/october/mcipc2b/rear.webp",
+              "title": "MCIPC2B - Face arrière"
+            }
+          ]
+        },
+        "it": {
+          "specs": [
+            {
+              "label": "Modello",
+              "value": "MCIPC2B"
+            },
+            {
+              "label": "CPU",
+              "value": "Intel Core i3-6157U / i3-7100U / i3-8130U"
+            },
+            {
+              "label": "Memoria",
+              "value": "DDR4 SO-DIMM, fino a 16 GB"
+            },
+            {
+              "label": "Uscite video",
+              "value": "HDMI + VGA"
+            },
+            {
+              "label": "Rete",
+              "value": "2 x Intel i211 / i210 Gigabit LAN (1000 Mbps)"
+            },
+            {
+              "label": "USB",
+              "value": "4 x USB 3.0 + 2 x USB 2.0"
+            },
+            {
+              "label": "Porte seriali",
+              "value": "6 x COM; 2 supportano RS-422/485"
+            },
+            {
+              "label": "Archiviazione",
+              "value": "mSATA + HDD / SSD da 2,5 pollici"
+            },
+            {
+              "label": "Alimentazione",
+              "value": "12 V DC"
+            },
+            {
+              "label": "Sistema",
+              "value": "Windows 7 / 8 / 10; WES 7 / 10; Linux"
+            },
+            {
+              "label": "Dimensioni",
+              "value": "180 x 120 x 54 mm"
+            },
+            {
+              "label": "GPIO",
+              "value": "10 GPIO"
+            },
+            {
+              "label": "Audio",
+              "value": "Uscita audio e ingresso microfono"
+            },
+            {
+              "label": "Wireless",
+              "value": "Mini PCIe (half-size): Wi-Fi / Bluetooth; Mini PCIe (full-size): 3G / 4G"
+            },
+            {
+              "label": "Chassis",
+              "value": "Alluminio"
+            },
+            {
+              "label": "Temperatura di stoccaggio",
+              "value": "-30°C ... +70°C"
+            },
+            {
+              "label": "Note di configurazione",
+              "value": "La brochure usa le stesse foto per i tipi A e B; dimensioni e porte secondo il tipo selezionato. Immagini indicative; porte secondo la configurazione confermata."
+            },
+            {
+              "label": "Rete mobile / SIM",
+              "value": "3G / 4G tramite Mini PCIe full-size; slot SIM"
+            },
+            {
+              "label": "Monitoraggio",
+              "value": "Watchdog supportato"
+            },
+            {
+              "label": "Peso",
+              "value": "1.0 kg"
+            },
+            {
+              "label": "Temperatura operativa",
+              "value": "-20°C ... +60°C"
+            },
+            {
+              "label": "Umidità",
+              "value": "10-90% RH @ 30°C"
+            }
+          ],
+          "galleryCards": [
+            {
+              "image": "/assets/products/industrial/october/mcipc2b/front.webp",
+              "title": "MCIPC2B - Pannello anteriore"
+            },
+            {
+              "image": "/assets/products/industrial/october/mcipc2b/rear.webp",
+              "title": "MCIPC2B - Pannello posteriore"
+            }
+          ]
+        },
+        "es": {
+          "specs": [
+            {
+              "label": "Modelo",
+              "value": "MCIPC2B"
+            },
+            {
+              "label": "CPU",
+              "value": "Intel Core i3-6157U / i3-7100U / i3-8130U"
+            },
+            {
+              "label": "Memoria",
+              "value": "DDR4 SO-DIMM, hasta 16 GB"
+            },
+            {
+              "label": "Salidas de vídeo",
+              "value": "HDMI + VGA"
+            },
+            {
+              "label": "Red",
+              "value": "2 x Intel i211 / i210 Gigabit LAN (1000 Mbps)"
+            },
+            {
+              "label": "USB",
+              "value": "4 x USB 3.0 + 2 x USB 2.0"
+            },
+            {
+              "label": "Puertos serie",
+              "value": "6 x COM; 2 admiten RS-422/485"
+            },
+            {
+              "label": "Almacenamiento",
+              "value": "mSATA + HDD / SSD de 2,5 pulgadas"
+            },
+            {
+              "label": "Alimentación",
+              "value": "12 V DC"
+            },
+            {
+              "label": "Sistema",
+              "value": "Windows 7 / 8 / 10; WES 7 / 10; Linux"
+            },
+            {
+              "label": "Dimensiones",
+              "value": "180 x 120 x 54 mm"
+            },
+            {
+              "label": "GPIO",
+              "value": "10 GPIO"
+            },
+            {
+              "label": "Audio",
+              "value": "Salida de audio y entrada de micrófono"
+            },
+            {
+              "label": "Conectividad inalámbrica",
+              "value": "Mini PCIe (tamaño medio): Wi-Fi / Bluetooth; Mini PCIe (tamaño completo): 3G / 4G"
+            },
+            {
+              "label": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "label": "Temperatura de almacenamiento",
+              "value": "-30°C ... +70°C"
+            },
+            {
+              "label": "Notas de configuración",
+              "value": "El folleto utiliza las mismas fotos para los tipos A y B; dimensiones y puertos según el tipo elegido. Imágenes de referencia; puertos según la configuración confirmada."
+            },
+            {
+              "label": "Red móvil / SIM",
+              "value": "3G / 4G mediante Mini PCIe de tamaño completo; ranura SIM"
+            },
+            {
+              "label": "Supervisión",
+              "value": "Watchdog compatible"
+            },
+            {
+              "label": "Peso",
+              "value": "1.0 kg"
+            },
+            {
+              "label": "Temperatura de funcionamiento",
+              "value": "-20°C ... +60°C"
+            },
+            {
+              "label": "Humedad",
+              "value": "10-90% RH @ 30°C"
+            }
+          ],
+          "galleryCards": [
+            {
+              "image": "/assets/products/industrial/october/mcipc2b/front.webp",
+              "title": "MCIPC2B - Panel frontal"
+            },
+            {
+              "image": "/assets/products/industrial/october/mcipc2b/rear.webp",
+              "title": "MCIPC2B - Panel trasero"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

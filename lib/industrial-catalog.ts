@@ -3,7 +3,9 @@ import { brochureUpdates } from '@/lib/brochure-updates';
 import { industrialBrochureProducts } from '@/lib/brochure-products';
 import { tpcXProducts } from '@/lib/tpc-x-products';
 import { mergedBSeries, mergedBSeriesAliases, separateB2J5005, type IndustrialSku } from '@/lib/merged-b-series';
-import { industrialFamilySourceIds, mergeIndustrialFamilies } from '@/lib/merged-industrial-families';
+import { industrialFamilySourceIds, mergedIndustrialFamilies, reviewedIndustrialFamilyModels } from '@/lib/merged-industrial-families';
+import { octoberIndustrialProducts } from '@/lib/october-industrial-products';
+import type { CatalogProductFeature, CatalogProductTranslations } from '@/lib/catalog-product-copy';
 
 export type IndustrialSeriesCode = 'A' | 'B' | 'C' | 'D' | 'E' | 'TPC';
 
@@ -23,6 +25,12 @@ export type IndustrialCatalogItem = {
   operatingRange?: string;
   skus?: IndustrialSku[];
   sourceBrochures?: string[];
+  sourceSha256?: string;
+  features?: CatalogProductFeature[];
+  specificationHeading?: string;
+  featureHeading?: string;
+  advantageSummary?: string;
+  translations?: CatalogProductTranslations;
 };
 
 // Product facts are based on the available source specifications.
@@ -2306,10 +2314,11 @@ const correctedIndustrialCatalog = [
   separateB2J5005,
 ].map(applyBrochureSpecCorrections);
 
-export const industrialFamilyModels = correctedIndustrialCatalog.filter(item => industrialFamilySourceIds.includes(item.id));
-const mergedIndustrialFamilies = mergeIndustrialFamilies(industrialFamilyModels);
+export const industrialFamilyModels = reviewedIndustrialFamilyModels;
+const reviewedStandaloneIds = new Set(octoberIndustrialProducts.map(item => item.id));
 export const industrialCatalog = [
-  ...correctedIndustrialCatalog.filter(item => !industrialFamilySourceIds.includes(item.id)),
+  ...correctedIndustrialCatalog.filter(item => !industrialFamilySourceIds.includes(item.id) && !reviewedStandaloneIds.has(item.id)),
+  ...octoberIndustrialProducts,
   ...mergedIndustrialFamilies,
 ];
 

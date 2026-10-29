@@ -1,5 +1,5 @@
 'use client';
-import { industrialESeriesCopy } from '@/lib/industrial-navigation-copy';
+import { industrialBSeriesCopy, industrialESeriesCopy } from '@/lib/industrial-navigation-copy';
 import { brochureUpdates } from '@/lib/brochure-updates';
 
 import { ModelFamilyLinks, AiFamilyCards, TpcSeriesLinks } from '@/components/ProductFamilyNavigation';
@@ -184,7 +184,7 @@ const industrialSeries = [
   {
     code: 'B',
     title: 'B Series',
-    description: 'Dual-LAN industrial computers with dual COM ports',
+    description: 'Industrial computers with dual-LAN platforms and configurable serial I/O',
     image: '/assets/products/industrial/merged/mcipcb13/front.webp',
     models: industrialCatalog.filter((product) => product.series === 'B').map(({ id, name, image }) => ({ id, name, image })),
 
@@ -362,7 +362,7 @@ export default function CategoryPage() {
 
   const catInfo = categoryData[category];
   const products = category === 'industrial-mini-pc'
-    ? industrialCatalog.map(({ id, name, tagline, image, highlights }) => ({ id, name, tagline, image, specs: highlights }))
+    ? industrialCatalog.map(item => ({ id: item.id, name: item.name, tagline: item.translations?.[language]?.tagline || item.tagline, image: item.image, specs: item.translations?.[language]?.highlights || item.highlights }))
     : category === 'firewall-mini-pc'
       ? firewallCatalog.map(item => ({ id: item.id, name: item.name, tagline: item.translations?.[language]?.tagline || item.tagline, image: item.image, specs: item.translations?.[language]?.highlights || item.highlights }))
       : category === 'commercial-mini-pc'
@@ -551,8 +551,8 @@ export default function CategoryPage() {
                       </div>
 
                       <div className="min-w-0 text-center md:pr-36 md:text-left lg:pr-52">
-                        <h3 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{series.code === 'NAS-MB' ? nasMotherboardCopy[language].title : series.code === 'E' ? industrialESeriesCopy[language].title : series.title}</h3>
-                        <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">{series.code === 'NAS-MB' ? nasMotherboardCopy[language].description : series.code === 'E' ? industrialESeriesCopy[language].description : series.description}</p>
+                        <h3 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{series.code === 'NAS-MB' ? nasMotherboardCopy[language].title : series.code === 'B' ? industrialBSeriesCopy[language].title : series.code === 'E' ? industrialESeriesCopy[language].title : series.title}</h3>
+                        <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">{series.code === 'NAS-MB' ? nasMotherboardCopy[language].description : series.code === 'B' ? industrialBSeriesCopy[language].description : series.code === 'E' ? industrialESeriesCopy[language].description : series.description}</p>
                         <p className="mt-5 text-sm font-bold uppercase tracking-normal text-slate-400">
                           {series.models.length} {series.models.length === 1 ? 'current model' : 'current models'}
                         </p>

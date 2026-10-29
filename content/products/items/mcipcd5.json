@@ -1,0 +1,1668 @@
+{
+  "id": "mcipcd5",
+  "name": "MCIPCD5",
+  "category": "industrial-mini-pc",
+  "series": "D",
+  "published": true,
+  "image": "/assets/products/industrial/october/mcipcd5/main.webp",
+  "galleryImages": [],
+  "sourceBrochures": [
+    "工控机IPC/D系列/MCIPCD5 Brochure.pdf"
+  ],
+  "sourceSha256": "e344b609b6524b2191bf9eb65006ae9f84309b5c8153814cdba7182e4fb8f259",
+  "tagline": "Intel N100 / i3-N305 industrial PC with two cooling options",
+  "description": "Choose standard fanless MCIPCD5 or optional fan-equipped MCIPCD5F. Both share Intel N100 / i3-N305, DDR5 up to 32 GB, four Intel I226-V interfaces and dual COM. The complete table distinguishes internal headers, optional TPM 2.0 and the installed fan.",
+  "highlights": [
+    "Intel N100 / i3-N305",
+    "DDR5; max. 32 GB",
+    "4 x Intel I226-V; 2 COM",
+    "Fanless / optional fan"
+  ],
+  "specs": [
+    {
+      "label": "CPU",
+      "value": "Intel N100 / Core i3-N305"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel UHD Graphics"
+    },
+    {
+      "label": "Memory",
+      "value": "1 x DDR5-4800 SO-DIMM, up to 32 GB"
+    },
+    {
+      "label": "Display",
+      "value": "2 x HDMI 2.0, up to 4K/60 Hz; internal eDP header, up to 1080p/60 Hz"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x SATA 3.0 (6 Gb/s); 1 x M.2 2280 with SATA / PCIe auto-switching"
+    },
+    {
+      "label": "Network",
+      "value": "4 x Intel I226-V RJ45; LAN1 may use an internal pin header"
+    },
+    {
+      "label": "USB",
+      "value": "4 x USB 2.0 (header option) + 2 x USB 3.2 Gen 2"
+    },
+    {
+      "label": "Serial",
+      "value": "2 x RS-232 COM; COM2 supports RS-485; COM1 RJ45 option"
+    },
+    {
+      "label": "Wireless",
+      "value": "M.2 E-key 2230 / Mini PCIe: Wi-Fi / 4G"
+    },
+    {
+      "label": "Cellular / SIM",
+      "value": "1 x Nano SIM"
+    },
+    {
+      "label": "GPIO",
+      "value": "8 GPIO"
+    },
+    {
+      "label": "Monitoring",
+      "value": "Watchdog: 4-255 seconds"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI 128 Mb; Auto Power On; PXE; Wake-on-LAN"
+    },
+    {
+      "label": "JP3",
+      "value": "(1-2): auto power-on; (2-3): normal"
+    },
+    {
+      "label": "TPM",
+      "value": "TPM 2.0 hardware encryption, optional"
+    },
+    {
+      "label": "Power",
+      "value": "12 V DC; 5.5 x 2.5 mm jack"
+    },
+    {
+      "label": "Dimensions",
+      "value": "148 x 125 x 56 mm"
+    },
+    {
+      "label": "PCB dimensions",
+      "value": "120 x 120 mm"
+    },
+    {
+      "label": "Environment",
+      "value": "Operating / storage: -20°C ... +60°C; 0-90% RH, non-condensing"
+    },
+    {
+      "label": "Configuration notes",
+      "value": "Electrical specifications are shared; installed fan and enclosure appearance follow the selected option. Images are for reference; final I/O follows the confirmed configuration."
+    }
+  ],
+  "galleryCards": [],
+  "specificationHeading": "MCIPCD5 - Hardware specifications",
+  "featureHeading": "Industrial interfaces and configuration choices",
+  "advantageSummary": "Match the platform, memory, storage and interfaces to the confirmed configuration.",
+  "features": [
+    {
+      "icon": "Cpu",
+      "title": "CPU and memory",
+      "description": "1 x DDR5-4800 SO-DIMM, up to 32 GB"
+    },
+    {
+      "icon": "Network",
+      "title": "Equipment interfaces",
+      "description": "2 x HDMI 2.0, up to 4K/60 Hz; internal eDP header, up to 1080p/60 Hz 4 x Intel I226-V RJ45; LAN1 may use an internal pin header"
+    },
+    {
+      "icon": "HardDrive",
+      "title": "Storage and expansion",
+      "description": "1 x SATA 3.0 (6 Gb/s); 1 x M.2 2280 with SATA / PCIe auto-switching"
+    }
+  ],
+  "translations": {
+    "de": {
+      "tagline": "Industrie-PC mit Intel N100 / i3-N305 und zwei Kühloptionen",
+      "description": "Wählen Sie das lüfterlose MCIPCD5 oder das optionale MCIPCD5F mit Lüfter. Beide teilen Intel N100 / i3-N305, DDR5 bis 32 GB, vier Intel-I226-V-Schnittstellen und zwei COM-Ports. Die Tabelle unterscheidet interne Anschlüsse, optionales TPM 2.0 und den eingebauten Lüfter.",
+      "highlights": [
+        "Intel N100 / i3-N305",
+        "DDR5; max. 32 GB",
+        "4 x Intel I226-V; 2 COM",
+        "Lüfterlos / optionaler Lüfter"
+      ],
+      "specs": [
+        {
+          "label": "CPU",
+          "value": "Intel N100 / Core i3-N305"
+        },
+        {
+          "label": "Grafik",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Arbeitsspeicher",
+          "value": "1 x DDR5-4800 SO-DIMM, bis 32 GB"
+        },
+        {
+          "label": "Bildausgänge",
+          "value": "2 x HDMI 2.0, bis 4K/60 Hz; interner eDP-Anschluss, bis 1080p/60 Hz"
+        },
+        {
+          "label": "Speicher",
+          "value": "1 x SATA 3.0 (6 Gb/s); 1 x M.2 2280 mit automatischer SATA-/PCIe-Umschaltung"
+        },
+        {
+          "label": "Netzwerk",
+          "value": "4 x Intel I226-V RJ45; LAN1 kann als interner Pfostenstecker ausgeführt sein"
+        },
+        {
+          "label": "USB",
+          "value": "4 x USB 2.0 (interne Header-Option) + 2 x USB 3.2 Gen 2"
+        },
+        {
+          "label": "Serielle Anschlüsse",
+          "value": "2 x RS-232 COM; COM2 unterstützt RS-485; COM1 optional als RJ45"
+        },
+        {
+          "label": "Funkmodule",
+          "value": "M.2 E-key 2230 / Mini PCIe: Wi-Fi / 4G"
+        },
+        {
+          "label": "Mobilfunk / SIM",
+          "value": "1 x Nano SIM"
+        },
+        {
+          "label": "GPIO",
+          "value": "8 GPIO"
+        },
+        {
+          "label": "Überwachung",
+          "value": "Watchdog: 4-255 Sekunden"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI 128 Mb; Auto Power On; PXE; Wake-on-LAN"
+        },
+        {
+          "label": "JP3",
+          "value": "(1-2): automatisches Einschalten; (2-3): normal"
+        },
+        {
+          "label": "TPM",
+          "value": "TPM 2.0 Hardwareverschlüsselung, optional"
+        },
+        {
+          "label": "Stromversorgung",
+          "value": "12 V DC; Buchse 5,5 x 2,5 mm"
+        },
+        {
+          "label": "Abmessungen",
+          "value": "148 x 125 x 56 mm"
+        },
+        {
+          "label": "Platinenmaße",
+          "value": "120 x 120 mm"
+        },
+        {
+          "label": "Umgebung",
+          "value": "Betrieb / Lagerung: -20°C ... +60°C; 0-90% rF, nicht kondensierend"
+        },
+        {
+          "label": "Hinweise zur Konfiguration",
+          "value": "Elektrische Daten sind gemeinsam; eingebauter Lüfter und Aussehen nach gewählter Option. Abbildungen dienen als Referenz; Anschlüsse nach bestätigter Konfiguration."
+        }
+      ],
+      "galleryCards": [],
+      "specificationHeading": "MCIPCD5 - Technische Daten",
+      "featureHeading": "Industrieanschlüsse und Optionen",
+      "advantageSummary": "Plattform, Speicher und Anschlüsse nach der bestätigten Konfiguration auswählen.",
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "CPU und RAM",
+          "description": "1 x DDR5-4800 SO-DIMM, bis 32 GB"
+        },
+        {
+          "icon": "Network",
+          "title": "Geräteanschlüsse",
+          "description": "2 x HDMI 2.0, bis 4K/60 Hz; interner eDP-Anschluss, bis 1080p/60 Hz 4 x Intel I226-V RJ45; LAN1 kann als interner Pfostenstecker ausgeführt sein"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Speicher und Erweiterung",
+          "description": "1 x SATA 3.0 (6 Gb/s); 1 x M.2 2280 mit automatischer SATA-/PCIe-Umschaltung"
+        }
+      ]
+    },
+    "fr": {
+      "tagline": "PC industriel Intel N100 / i3-N305 avec deux refroidissements",
+      "description": "Choisissez MCIPCD5 sans ventilateur ou MCIPCD5F avec ventilateur en option. Les deux partagent Intel N100 / i3-N305, DDR5 jusqu’à 32 Go, quatre Intel I226-V et deux COM. Le tableau distingue connecteurs internes, TPM 2.0 optionnel et ventilateur installé.",
+      "highlights": [
+        "Intel N100 / i3-N305",
+        "DDR5; max. 32 GB",
+        "4 x Intel I226-V; 2 COM",
+        "Sans / avec ventilateur en option"
+      ],
+      "specs": [
+        {
+          "label": "CPU",
+          "value": "Intel N100 / Core i3-N305"
+        },
+        {
+          "label": "Graphiques",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Mémoire",
+          "value": "1 x DDR5-4800 SO-DIMM, jusqu’à 32 GB"
+        },
+        {
+          "label": "Affichage",
+          "value": "2 x HDMI 2.0, jusqu’à 4K/60 Hz ; connecteur eDP interne, jusqu’à 1080p/60 Hz"
+        },
+        {
+          "label": "Stockage",
+          "value": "1 x SATA 3.0 (6 Gb/s) ; 1 x M.2 2280 avec commutation automatique SATA / PCIe"
+        },
+        {
+          "label": "Réseau",
+          "value": "4 x RJ45 Intel I226-V ; LAN1 peut utiliser un connecteur interne"
+        },
+        {
+          "label": "USB",
+          "value": "4 x USB 2.0 (option par connecteur interne) + 2 x USB 3.2 Gen 2"
+        },
+        {
+          "label": "Ports série",
+          "value": "2 x COM RS-232 ; COM2 compatible RS-485 ; COM1 RJ45 en option"
+        },
+        {
+          "label": "Sans fil",
+          "value": "M.2 E-key 2230 / Mini PCIe: Wi-Fi / 4G"
+        },
+        {
+          "label": "Cellulaire / SIM",
+          "value": "1 x Nano SIM"
+        },
+        {
+          "label": "GPIO",
+          "value": "8 GPIO"
+        },
+        {
+          "label": "Surveillance",
+          "value": "Watchdog : 4-255 secondes"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI 128 Mb; Auto Power On; PXE; Wake-on-LAN"
+        },
+        {
+          "label": "JP3",
+          "value": "(1-2) : mise sous tension automatique ; (2-3) : normal"
+        },
+        {
+          "label": "TPM",
+          "value": "Chiffrement matériel TPM 2.0, en option"
+        },
+        {
+          "label": "Alimentation",
+          "value": "12 V CC ; prise 5,5 x 2,5 mm"
+        },
+        {
+          "label": "Dimensions",
+          "value": "148 x 125 x 56 mm"
+        },
+        {
+          "label": "Dimensions de carte",
+          "value": "120 x 120 mm"
+        },
+        {
+          "label": "Environnement",
+          "value": "Fonctionnement / stockage : -20°C ... +60°C ; 0-90 % HR, sans condensation"
+        },
+        {
+          "label": "Notes de configuration",
+          "value": "Caractéristiques électriques communes ; ventilateur installé et aspect selon l’option choisie. Images indicatives ; ports selon la configuration confirmée."
+        }
+      ],
+      "galleryCards": [],
+      "specificationHeading": "MCIPCD5 - Caractéristiques techniques",
+      "featureHeading": "Interfaces industrielles et configurations",
+      "advantageSummary": "Choisissez plateforme, mémoire, stockage et ports selon la configuration confirmée.",
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "CPU et mémoire",
+          "description": "1 x DDR5-4800 SO-DIMM, jusqu’à 32 GB"
+        },
+        {
+          "icon": "Network",
+          "title": "Interfaces des équipements",
+          "description": "2 x HDMI 2.0, jusqu’à 4K/60 Hz ; connecteur eDP interne, jusqu’à 1080p/60 Hz 4 x RJ45 Intel I226-V ; LAN1 peut utiliser un connecteur interne"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Stockage et extension",
+          "description": "1 x SATA 3.0 (6 Gb/s) ; 1 x M.2 2280 avec commutation automatique SATA / PCIe"
+        }
+      ]
+    },
+    "it": {
+      "tagline": "PC industriale Intel N100 / i3-N305 con due opzioni di raffreddamento",
+      "description": "Scegli MCIPCD5 senza ventola o MCIPCD5F con ventola opzionale. Entrambi condividono Intel N100 / i3-N305, DDR5 fino a 32 GB, quattro Intel I226-V e due COM. La tabella distingue connettori interni, TPM 2.0 opzionale e ventola installata.",
+      "highlights": [
+        "Intel N100 / i3-N305",
+        "DDR5; max. 32 GB",
+        "4 x Intel I226-V; 2 COM",
+        "Senza ventola / ventola opzionale"
+      ],
+      "specs": [
+        {
+          "label": "CPU",
+          "value": "Intel N100 / Core i3-N305"
+        },
+        {
+          "label": "Grafica",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 x DDR5-4800 SO-DIMM, fino a 32 GB"
+        },
+        {
+          "label": "Uscite video",
+          "value": "2 x HDMI 2.0, fino a 4K/60 Hz; connettore eDP interno, fino a 1080p/60 Hz"
+        },
+        {
+          "label": "Archiviazione",
+          "value": "1 x SATA 3.0 (6 Gb/s); 1 x M.2 2280 con commutazione automatica SATA / PCIe"
+        },
+        {
+          "label": "Rete",
+          "value": "4 x RJ45 Intel I226-V; LAN1 può usare un connettore interno"
+        },
+        {
+          "label": "USB",
+          "value": "4 x USB 2.0 (opzione su connettore interno) + 2 x USB 3.2 Gen 2"
+        },
+        {
+          "label": "Porte seriali",
+          "value": "2 x COM RS-232; COM2 supporta RS-485; COM1 RJ45 opzionale"
+        },
+        {
+          "label": "Wireless",
+          "value": "M.2 E-key 2230 / Mini PCIe: Wi-Fi / 4G"
+        },
+        {
+          "label": "Rete mobile / SIM",
+          "value": "1 x Nano SIM"
+        },
+        {
+          "label": "GPIO",
+          "value": "8 GPIO"
+        },
+        {
+          "label": "Monitoraggio",
+          "value": "Watchdog: 4-255 secondi"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI 128 Mb; Auto Power On; PXE; Wake-on-LAN"
+        },
+        {
+          "label": "JP3",
+          "value": "(1-2): accensione automatica; (2-3): normale"
+        },
+        {
+          "label": "TPM",
+          "value": "Cifratura hardware TPM 2.0, opzionale"
+        },
+        {
+          "label": "Alimentazione",
+          "value": "12 V CC; presa 5,5 x 2,5 mm"
+        },
+        {
+          "label": "Dimensioni",
+          "value": "148 x 125 x 56 mm"
+        },
+        {
+          "label": "Dimensioni scheda",
+          "value": "120 x 120 mm"
+        },
+        {
+          "label": "Ambiente",
+          "value": "Funzionamento / stoccaggio: -20°C ... +60°C; 0-90% UR, senza condensa"
+        },
+        {
+          "label": "Note di configurazione",
+          "value": "Specifiche elettriche condivise; ventola installata e aspetto secondo l’opzione selezionata. Immagini indicative; porte secondo la configurazione confermata."
+        }
+      ],
+      "galleryCards": [],
+      "specificationHeading": "MCIPCD5 - Specifiche hardware",
+      "featureHeading": "Interfacce industriali e configurazioni",
+      "advantageSummary": "Scegli piattaforma, memoria, archiviazione e porte secondo la configurazione confermata.",
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "CPU e memoria",
+          "description": "1 x DDR5-4800 SO-DIMM, fino a 32 GB"
+        },
+        {
+          "icon": "Network",
+          "title": "Interfacce dispositivi",
+          "description": "2 x HDMI 2.0, fino a 4K/60 Hz; connettore eDP interno, fino a 1080p/60 Hz 4 x RJ45 Intel I226-V; LAN1 può usare un connettore interno"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Archiviazione ed espansione",
+          "description": "1 x SATA 3.0 (6 Gb/s); 1 x M.2 2280 con commutazione automatica SATA / PCIe"
+        }
+      ]
+    },
+    "es": {
+      "tagline": "PC industrial Intel N100 / i3-N305 con dos opciones de refrigeración",
+      "description": "Elige MCIPCD5 sin ventilador o MCIPCD5F con ventilador opcional. Ambos comparten Intel N100 / i3-N305, DDR5 hasta 32 GB, cuatro Intel I226-V y dos COM. La tabla distingue conectores internos, TPM 2.0 opcional y ventilador instalado.",
+      "highlights": [
+        "Intel N100 / i3-N305",
+        "DDR5; max. 32 GB",
+        "4 x Intel I226-V; 2 COM",
+        "Sin ventilador / ventilador opcional"
+      ],
+      "specs": [
+        {
+          "label": "CPU",
+          "value": "Intel N100 / Core i3-N305"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 x DDR5-4800 SO-DIMM, hasta 32 GB"
+        },
+        {
+          "label": "Salidas de vídeo",
+          "value": "2 x HDMI 2.0, hasta 4K/60 Hz; conector eDP interno, hasta 1080p/60 Hz"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "1 x SATA 3.0 (6 Gb/s); 1 x M.2 2280 con conmutación automática SATA / PCIe"
+        },
+        {
+          "label": "Red",
+          "value": "4 x RJ45 Intel I226-V; LAN1 puede utilizar un conector interno"
+        },
+        {
+          "label": "USB",
+          "value": "4 x USB 2.0 (opción de conector interno) + 2 x USB 3.2 Gen 2"
+        },
+        {
+          "label": "Puertos serie",
+          "value": "2 x COM RS-232; COM2 admite RS-485; COM1 RJ45 opcional"
+        },
+        {
+          "label": "Conectividad inalámbrica",
+          "value": "M.2 E-key 2230 / Mini PCIe: Wi-Fi / 4G"
+        },
+        {
+          "label": "Red móvil / SIM",
+          "value": "1 x Nano SIM"
+        },
+        {
+          "label": "GPIO",
+          "value": "8 GPIO"
+        },
+        {
+          "label": "Supervisión",
+          "value": "Watchdog: 4-255 segundos"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI 128 Mb; Auto Power On; PXE; Wake-on-LAN"
+        },
+        {
+          "label": "JP3",
+          "value": "(1-2): encendido automático; (2-3): normal"
+        },
+        {
+          "label": "TPM",
+          "value": "Cifrado por hardware TPM 2.0, opcional"
+        },
+        {
+          "label": "Alimentación",
+          "value": "12 V CC; conector de 5,5 x 2,5 mm"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "148 x 125 x 56 mm"
+        },
+        {
+          "label": "Dimensiones de placa",
+          "value": "120 x 120 mm"
+        },
+        {
+          "label": "Entorno",
+          "value": "Funcionamiento / almacenamiento: -20°C ... +60°C; 0-90 % HR, sin condensación"
+        },
+        {
+          "label": "Notas de configuración",
+          "value": "Especificaciones eléctricas compartidas; ventilador instalado y aspecto según la opción elegida. Imágenes de referencia; puertos según la configuración confirmada."
+        }
+      ],
+      "galleryCards": [],
+      "specificationHeading": "MCIPCD5 - Especificaciones de hardware",
+      "featureHeading": "Interfaces industriales y configuraciones",
+      "advantageSummary": "Elige plataforma, memoria, almacenamiento y puertos según la configuración confirmada.",
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "CPU y memoria",
+          "description": "1 x DDR5-4800 SO-DIMM, hasta 32 GB"
+        },
+        {
+          "icon": "Network",
+          "title": "Interfaces de equipos",
+          "description": "2 x HDMI 2.0, hasta 4K/60 Hz; conector eDP interno, hasta 1080p/60 Hz 4 x RJ45 Intel I226-V; LAN1 puede utilizar un conector interno"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Almacenamiento y expansión",
+          "description": "1 x SATA 3.0 (6 Gb/s); 1 x M.2 2280 con conmutación automática SATA / PCIe"
+        }
+      ]
+    }
+  },
+  "skus": [
+    {
+      "key": "standard",
+      "label": "MCIPCD5 · Fanless",
+      "labelTranslations": {
+        "de": "MCIPCD5 · Lüfterlos",
+        "fr": "MCIPCD5 · Sans ventilateur",
+        "it": "MCIPCD5 · Senza ventola",
+        "es": "MCIPCD5 · Sin ventilador"
+      },
+      "legacyNames": [
+        "MCIPCD5"
+      ],
+      "image": "/assets/products/industrial/october/mcipcd5/main.webp",
+      "specs": [
+        {
+          "label": "Model",
+          "value": "MCIPCD5"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel N100 / Core i3-N305"
+        },
+        {
+          "label": "Memory",
+          "value": "1 x DDR5-4800 SO-DIMM, up to 32 GB"
+        },
+        {
+          "label": "Graphics",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Display",
+          "value": "2 x HDMI 2.0, up to 4K/60 Hz; internal eDP header, up to 1080p/60 Hz"
+        },
+        {
+          "label": "Network",
+          "value": "4 x Intel I226-V RJ45; LAN1 may use an internal pin header"
+        },
+        {
+          "label": "USB",
+          "value": "4 x USB 2.0 (header option) + 2 x USB 3.2 Gen 2"
+        },
+        {
+          "label": "Serial",
+          "value": "2 x RS-232 COM; COM2 supports RS-485; COM1 RJ45 option"
+        },
+        {
+          "label": "Storage",
+          "value": "1 x SATA 3.0 (6 Gb/s); 1 x M.2 2280 with SATA / PCIe auto-switching"
+        },
+        {
+          "label": "Power",
+          "value": "12 V DC; 5.5 x 2.5 mm jack"
+        },
+        {
+          "label": "Cooling",
+          "value": "Fanless aluminum enclosure"
+        },
+        {
+          "label": "Dimensions",
+          "value": "148 x 125 x 56 mm"
+        },
+        {
+          "label": "Wireless",
+          "value": "M.2 E-key 2230 / Mini PCIe: Wi-Fi / 4G"
+        },
+        {
+          "label": "Cellular / SIM",
+          "value": "1 x Nano SIM"
+        },
+        {
+          "label": "GPIO",
+          "value": "8 GPIO"
+        },
+        {
+          "label": "Monitoring",
+          "value": "Watchdog: 4-255 seconds"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI 128 Mb; Auto Power On; PXE; Wake-on-LAN"
+        },
+        {
+          "label": "JP3",
+          "value": "(1-2): auto power-on; (2-3): normal"
+        },
+        {
+          "label": "TPM",
+          "value": "TPM 2.0 hardware encryption, optional"
+        },
+        {
+          "label": "PCB dimensions",
+          "value": "120 x 120 mm"
+        },
+        {
+          "label": "Environment",
+          "value": "Operating / storage: -20°C ... +60°C; 0-90% RH, non-condensing"
+        },
+        {
+          "label": "Configuration notes",
+          "value": "Electrical specifications are shared; installed fan and enclosure appearance follow the selected option. Images are for reference; final I/O follows the confirmed configuration."
+        },
+        {
+          "label": "Fan",
+          "value": "4-pin 12 V fan header; fan-equipped enclosure optional"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/october/mcipcd5/front.webp",
+          "title": "MCIPCD5 - Front panel"
+        },
+        {
+          "image": "/assets/products/industrial/october/mcipcd5/rear.webp",
+          "title": "MCIPCD5 - Rear panel"
+        }
+      ],
+      "translations": {
+        "de": {
+          "specs": [
+            {
+              "label": "Modell",
+              "value": "MCIPCD5"
+            },
+            {
+              "label": "CPU",
+              "value": "Intel N100 / Core i3-N305"
+            },
+            {
+              "label": "Arbeitsspeicher",
+              "value": "1 x DDR5-4800 SO-DIMM, bis 32 GB"
+            },
+            {
+              "label": "Grafik",
+              "value": "Intel UHD Graphics"
+            },
+            {
+              "label": "Bildausgänge",
+              "value": "2 x HDMI 2.0, bis 4K/60 Hz; interner eDP-Anschluss, bis 1080p/60 Hz"
+            },
+            {
+              "label": "Netzwerk",
+              "value": "4 x Intel I226-V RJ45; LAN1 kann als interner Pfostenstecker ausgeführt sein"
+            },
+            {
+              "label": "USB",
+              "value": "4 x USB 2.0 (interne Header-Option) + 2 x USB 3.2 Gen 2"
+            },
+            {
+              "label": "Serielle Anschlüsse",
+              "value": "2 x RS-232 COM; COM2 unterstützt RS-485; COM1 optional als RJ45"
+            },
+            {
+              "label": "Speicher",
+              "value": "1 x SATA 3.0 (6 Gb/s); 1 x M.2 2280 mit automatischer SATA-/PCIe-Umschaltung"
+            },
+            {
+              "label": "Stromversorgung",
+              "value": "12 V DC; Buchse 5,5 x 2,5 mm"
+            },
+            {
+              "label": "Kühlung",
+              "value": "Lüfterloses Aluminiumgehäuse"
+            },
+            {
+              "label": "Abmessungen",
+              "value": "148 x 125 x 56 mm"
+            },
+            {
+              "label": "Funkmodule",
+              "value": "M.2 E-key 2230 / Mini PCIe: Wi-Fi / 4G"
+            },
+            {
+              "label": "Mobilfunk / SIM",
+              "value": "1 x Nano SIM"
+            },
+            {
+              "label": "GPIO",
+              "value": "8 GPIO"
+            },
+            {
+              "label": "Überwachung",
+              "value": "Watchdog: 4-255 Sekunden"
+            },
+            {
+              "label": "BIOS",
+              "value": "AMI 128 Mb; Auto Power On; PXE; Wake-on-LAN"
+            },
+            {
+              "label": "JP3",
+              "value": "(1-2): automatisches Einschalten; (2-3): normal"
+            },
+            {
+              "label": "TPM",
+              "value": "TPM 2.0 Hardwareverschlüsselung, optional"
+            },
+            {
+              "label": "Platinenmaße",
+              "value": "120 x 120 mm"
+            },
+            {
+              "label": "Umgebung",
+              "value": "Betrieb / Lagerung: -20°C ... +60°C; 0-90% rF, nicht kondensierend"
+            },
+            {
+              "label": "Hinweise zur Konfiguration",
+              "value": "Elektrische Daten sind gemeinsam; eingebauter Lüfter und Aussehen nach gewählter Option. Abbildungen dienen als Referenz; Anschlüsse nach bestätigter Konfiguration."
+            },
+            {
+              "label": "Lüfter",
+              "value": "4-poliger 12-V-Lüfteranschluss; Gehäuse mit Lüfter optional"
+            }
+          ],
+          "galleryCards": [
+            {
+              "image": "/assets/products/industrial/october/mcipcd5/front.webp",
+              "title": "MCIPCD5 - Frontansicht"
+            },
+            {
+              "image": "/assets/products/industrial/october/mcipcd5/rear.webp",
+              "title": "MCIPCD5 - Rückansicht"
+            }
+          ]
+        },
+        "fr": {
+          "specs": [
+            {
+              "label": "Modèle",
+              "value": "MCIPCD5"
+            },
+            {
+              "label": "CPU",
+              "value": "Intel N100 / Core i3-N305"
+            },
+            {
+              "label": "Mémoire",
+              "value": "1 x DDR5-4800 SO-DIMM, jusqu’à 32 GB"
+            },
+            {
+              "label": "Graphiques",
+              "value": "Intel UHD Graphics"
+            },
+            {
+              "label": "Affichage",
+              "value": "2 x HDMI 2.0, jusqu’à 4K/60 Hz ; connecteur eDP interne, jusqu’à 1080p/60 Hz"
+            },
+            {
+              "label": "Réseau",
+              "value": "4 x RJ45 Intel I226-V ; LAN1 peut utiliser un connecteur interne"
+            },
+            {
+              "label": "USB",
+              "value": "4 x USB 2.0 (option par connecteur interne) + 2 x USB 3.2 Gen 2"
+            },
+            {
+              "label": "Ports série",
+              "value": "2 x COM RS-232 ; COM2 compatible RS-485 ; COM1 RJ45 en option"
+            },
+            {
+              "label": "Stockage",
+              "value": "1 x SATA 3.0 (6 Gb/s) ; 1 x M.2 2280 avec commutation automatique SATA / PCIe"
+            },
+            {
+              "label": "Alimentation",
+              "value": "12 V CC ; prise 5,5 x 2,5 mm"
+            },
+            {
+              "label": "Refroidissement",
+              "value": "Boîtier aluminium sans ventilateur"
+            },
+            {
+              "label": "Dimensions",
+              "value": "148 x 125 x 56 mm"
+            },
+            {
+              "label": "Sans fil",
+              "value": "M.2 E-key 2230 / Mini PCIe: Wi-Fi / 4G"
+            },
+            {
+              "label": "Cellulaire / SIM",
+              "value": "1 x Nano SIM"
+            },
+            {
+              "label": "GPIO",
+              "value": "8 GPIO"
+            },
+            {
+              "label": "Surveillance",
+              "value": "Watchdog : 4-255 secondes"
+            },
+            {
+              "label": "BIOS",
+              "value": "AMI 128 Mb; Auto Power On; PXE; Wake-on-LAN"
+            },
+            {
+              "label": "JP3",
+              "value": "(1-2) : mise sous tension automatique ; (2-3) : normal"
+            },
+            {
+              "label": "TPM",
+              "value": "Chiffrement matériel TPM 2.0, en option"
+            },
+            {
+              "label": "Dimensions de carte",
+              "value": "120 x 120 mm"
+            },
+            {
+              "label": "Environnement",
+              "value": "Fonctionnement / stockage : -20°C ... +60°C ; 0-90 % HR, sans condensation"
+            },
+            {
+              "label": "Notes de configuration",
+              "value": "Caractéristiques électriques communes ; ventilateur installé et aspect selon l’option choisie. Images indicatives ; ports selon la configuration confirmée."
+            },
+            {
+              "label": "Ventilateur",
+              "value": "Connecteur ventilateur 4 broches 12 V ; boîtier avec ventilateur en option"
+            }
+          ],
+          "galleryCards": [
+            {
+              "image": "/assets/products/industrial/october/mcipcd5/front.webp",
+              "title": "MCIPCD5 - Face avant"
+            },
+            {
+              "image": "/assets/products/industrial/october/mcipcd5/rear.webp",
+              "title": "MCIPCD5 - Face arrière"
+            }
+          ]
+        },
+        "it": {
+          "specs": [
+            {
+              "label": "Modello",
+              "value": "MCIPCD5"
+            },
+            {
+              "label": "CPU",
+              "value": "Intel N100 / Core i3-N305"
+            },
+            {
+              "label": "Memoria",
+              "value": "1 x DDR5-4800 SO-DIMM, fino a 32 GB"
+            },
+            {
+              "label": "Grafica",
+              "value": "Intel UHD Graphics"
+            },
+            {
+              "label": "Uscite video",
+              "value": "2 x HDMI 2.0, fino a 4K/60 Hz; connettore eDP interno, fino a 1080p/60 Hz"
+            },
+            {
+              "label": "Rete",
+              "value": "4 x RJ45 Intel I226-V; LAN1 può usare un connettore interno"
+            },
+            {
+              "label": "USB",
+              "value": "4 x USB 2.0 (opzione su connettore interno) + 2 x USB 3.2 Gen 2"
+            },
+            {
+              "label": "Porte seriali",
+              "value": "2 x COM RS-232; COM2 supporta RS-485; COM1 RJ45 opzionale"
+            },
+            {
+              "label": "Archiviazione",
+              "value": "1 x SATA 3.0 (6 Gb/s); 1 x M.2 2280 con commutazione automatica SATA / PCIe"
+            },
+            {
+              "label": "Alimentazione",
+              "value": "12 V CC; presa 5,5 x 2,5 mm"
+            },
+            {
+              "label": "Raffreddamento",
+              "value": "Chassis in alluminio senza ventola"
+            },
+            {
+              "label": "Dimensioni",
+              "value": "148 x 125 x 56 mm"
+            },
+            {
+              "label": "Wireless",
+              "value": "M.2 E-key 2230 / Mini PCIe: Wi-Fi / 4G"
+            },
+            {
+              "label": "Rete mobile / SIM",
+              "value": "1 x Nano SIM"
+            },
+            {
+              "label": "GPIO",
+              "value": "8 GPIO"
+            },
+            {
+              "label": "Monitoraggio",
+              "value": "Watchdog: 4-255 secondi"
+            },
+            {
+              "label": "BIOS",
+              "value": "AMI 128 Mb; Auto Power On; PXE; Wake-on-LAN"
+            },
+            {
+              "label": "JP3",
+              "value": "(1-2): accensione automatica; (2-3): normale"
+            },
+            {
+              "label": "TPM",
+              "value": "Cifratura hardware TPM 2.0, opzionale"
+            },
+            {
+              "label": "Dimensioni scheda",
+              "value": "120 x 120 mm"
+            },
+            {
+              "label": "Ambiente",
+              "value": "Funzionamento / stoccaggio: -20°C ... +60°C; 0-90% UR, senza condensa"
+            },
+            {
+              "label": "Note di configurazione",
+              "value": "Specifiche elettriche condivise; ventola installata e aspetto secondo l’opzione selezionata. Immagini indicative; porte secondo la configurazione confermata."
+            },
+            {
+              "label": "Ventola",
+              "value": "Connettore ventola a 4 poli 12 V; chassis con ventola opzionale"
+            }
+          ],
+          "galleryCards": [
+            {
+              "image": "/assets/products/industrial/october/mcipcd5/front.webp",
+              "title": "MCIPCD5 - Pannello anteriore"
+            },
+            {
+              "image": "/assets/products/industrial/october/mcipcd5/rear.webp",
+              "title": "MCIPCD5 - Pannello posteriore"
+            }
+          ]
+        },
+        "es": {
+          "specs": [
+            {
+              "label": "Modelo",
+              "value": "MCIPCD5"
+            },
+            {
+              "label": "CPU",
+              "value": "Intel N100 / Core i3-N305"
+            },
+            {
+              "label": "Memoria",
+              "value": "1 x DDR5-4800 SO-DIMM, hasta 32 GB"
+            },
+            {
+              "label": "Gráficos",
+              "value": "Intel UHD Graphics"
+            },
+            {
+              "label": "Salidas de vídeo",
+              "value": "2 x HDMI 2.0, hasta 4K/60 Hz; conector eDP interno, hasta 1080p/60 Hz"
+            },
+            {
+              "label": "Red",
+              "value": "4 x RJ45 Intel I226-V; LAN1 puede utilizar un conector interno"
+            },
+            {
+              "label": "USB",
+              "value": "4 x USB 2.0 (opción de conector interno) + 2 x USB 3.2 Gen 2"
+            },
+            {
+              "label": "Puertos serie",
+              "value": "2 x COM RS-232; COM2 admite RS-485; COM1 RJ45 opcional"
+            },
+            {
+              "label": "Almacenamiento",
+              "value": "1 x SATA 3.0 (6 Gb/s); 1 x M.2 2280 con conmutación automática SATA / PCIe"
+            },
+            {
+              "label": "Alimentación",
+              "value": "12 V CC; conector de 5,5 x 2,5 mm"
+            },
+            {
+              "label": "Refrigeración",
+              "value": "Chasis de aluminio sin ventilador"
+            },
+            {
+              "label": "Dimensiones",
+              "value": "148 x 125 x 56 mm"
+            },
+            {
+              "label": "Conectividad inalámbrica",
+              "value": "M.2 E-key 2230 / Mini PCIe: Wi-Fi / 4G"
+            },
+            {
+              "label": "Red móvil / SIM",
+              "value": "1 x Nano SIM"
+            },
+            {
+              "label": "GPIO",
+              "value": "8 GPIO"
+            },
+            {
+              "label": "Supervisión",
+              "value": "Watchdog: 4-255 segundos"
+            },
+            {
+              "label": "BIOS",
+              "value": "AMI 128 Mb; Auto Power On; PXE; Wake-on-LAN"
+            },
+            {
+              "label": "JP3",
+              "value": "(1-2): encendido automático; (2-3): normal"
+            },
+            {
+              "label": "TPM",
+              "value": "Cifrado por hardware TPM 2.0, opcional"
+            },
+            {
+              "label": "Dimensiones de placa",
+              "value": "120 x 120 mm"
+            },
+            {
+              "label": "Entorno",
+              "value": "Funcionamiento / almacenamiento: -20°C ... +60°C; 0-90 % HR, sin condensación"
+            },
+            {
+              "label": "Notas de configuración",
+              "value": "Especificaciones eléctricas compartidas; ventilador instalado y aspecto según la opción elegida. Imágenes de referencia; puertos según la configuración confirmada."
+            },
+            {
+              "label": "Ventilador",
+              "value": "Conector de ventilador de 4 pines y 12 V; chasis con ventilador opcional"
+            }
+          ],
+          "galleryCards": [
+            {
+              "image": "/assets/products/industrial/october/mcipcd5/front.webp",
+              "title": "MCIPCD5 - Panel frontal"
+            },
+            {
+              "image": "/assets/products/industrial/october/mcipcd5/rear.webp",
+              "title": "MCIPCD5 - Panel trasero"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "fan",
+      "label": "MCIPCD5F · Fan-cooled",
+      "labelTranslations": {
+        "de": "MCIPCD5F · Mit Lüfter",
+        "fr": "MCIPCD5F · Avec ventilateur",
+        "it": "MCIPCD5F · Con ventola",
+        "es": "MCIPCD5F · Con ventilador"
+      },
+      "legacyNames": [
+        "MCIPCD5F"
+      ],
+      "image": "/assets/products/industrial/october/mcipcd5f/main.webp",
+      "specs": [
+        {
+          "label": "Model",
+          "value": "MCIPCD5F"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel N100 / Core i3-N305"
+        },
+        {
+          "label": "Memory",
+          "value": "1 x DDR5-4800 SO-DIMM, up to 32 GB"
+        },
+        {
+          "label": "Graphics",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Display",
+          "value": "2 x HDMI 2.0, up to 4K/60 Hz; internal eDP header, up to 1080p/60 Hz"
+        },
+        {
+          "label": "Network",
+          "value": "4 x Intel I226-V RJ45; LAN1 may use an internal pin header"
+        },
+        {
+          "label": "USB",
+          "value": "4 x USB 2.0 (header option) + 2 x USB 3.2 Gen 2"
+        },
+        {
+          "label": "Serial",
+          "value": "2 x RS-232 COM; COM2 supports RS-485; COM1 RJ45 option"
+        },
+        {
+          "label": "Storage",
+          "value": "1 x SATA 3.0 (6 Gb/s); 1 x M.2 2280 with SATA / PCIe auto-switching"
+        },
+        {
+          "label": "Power",
+          "value": "12 V DC; 5.5 x 2.5 mm jack"
+        },
+        {
+          "label": "Cooling",
+          "value": "Fan-equipped aluminum enclosure"
+        },
+        {
+          "label": "Dimensions",
+          "value": "148 x 125 x 56 mm"
+        },
+        {
+          "label": "Wireless",
+          "value": "M.2 E-key 2230 / Mini PCIe: Wi-Fi / 4G"
+        },
+        {
+          "label": "Cellular / SIM",
+          "value": "1 x Nano SIM"
+        },
+        {
+          "label": "GPIO",
+          "value": "8 GPIO"
+        },
+        {
+          "label": "Monitoring",
+          "value": "Watchdog: 4-255 seconds"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI 128 Mb; Auto Power On; PXE; Wake-on-LAN"
+        },
+        {
+          "label": "JP3",
+          "value": "(1-2): auto power-on; (2-3): normal"
+        },
+        {
+          "label": "TPM",
+          "value": "TPM 2.0 hardware encryption, optional"
+        },
+        {
+          "label": "PCB dimensions",
+          "value": "120 x 120 mm"
+        },
+        {
+          "label": "Environment",
+          "value": "Operating / storage: -20°C ... +60°C; 0-90% RH, non-condensing"
+        },
+        {
+          "label": "Configuration notes",
+          "value": "Electrical specifications are shared; installed fan and enclosure appearance follow the selected option. Images are for reference; final I/O follows the confirmed configuration."
+        },
+        {
+          "label": "Fan",
+          "value": "4-pin 12 V controlled system fan installed"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/october/mcipcd5f/front.webp",
+          "title": "MCIPCD5F - Front panel"
+        },
+        {
+          "image": "/assets/products/industrial/october/mcipcd5f/rear.webp",
+          "title": "MCIPCD5F - Rear panel"
+        }
+      ],
+      "translations": {
+        "de": {
+          "specs": [
+            {
+              "label": "Modell",
+              "value": "MCIPCD5F"
+            },
+            {
+              "label": "CPU",
+              "value": "Intel N100 / Core i3-N305"
+            },
+            {
+              "label": "Arbeitsspeicher",
+              "value": "1 x DDR5-4800 SO-DIMM, bis 32 GB"
+            },
+            {
+              "label": "Grafik",
+              "value": "Intel UHD Graphics"
+            },
+            {
+              "label": "Bildausgänge",
+              "value": "2 x HDMI 2.0, bis 4K/60 Hz; interner eDP-Anschluss, bis 1080p/60 Hz"
+            },
+            {
+              "label": "Netzwerk",
+              "value": "4 x Intel I226-V RJ45; LAN1 kann als interner Pfostenstecker ausgeführt sein"
+            },
+            {
+              "label": "USB",
+              "value": "4 x USB 2.0 (interne Header-Option) + 2 x USB 3.2 Gen 2"
+            },
+            {
+              "label": "Serielle Anschlüsse",
+              "value": "2 x RS-232 COM; COM2 unterstützt RS-485; COM1 optional als RJ45"
+            },
+            {
+              "label": "Speicher",
+              "value": "1 x SATA 3.0 (6 Gb/s); 1 x M.2 2280 mit automatischer SATA-/PCIe-Umschaltung"
+            },
+            {
+              "label": "Stromversorgung",
+              "value": "12 V DC; Buchse 5,5 x 2,5 mm"
+            },
+            {
+              "label": "Kühlung",
+              "value": "Aluminiumgehäuse mit Lüfter"
+            },
+            {
+              "label": "Abmessungen",
+              "value": "148 x 125 x 56 mm"
+            },
+            {
+              "label": "Funkmodule",
+              "value": "M.2 E-key 2230 / Mini PCIe: Wi-Fi / 4G"
+            },
+            {
+              "label": "Mobilfunk / SIM",
+              "value": "1 x Nano SIM"
+            },
+            {
+              "label": "GPIO",
+              "value": "8 GPIO"
+            },
+            {
+              "label": "Überwachung",
+              "value": "Watchdog: 4-255 Sekunden"
+            },
+            {
+              "label": "BIOS",
+              "value": "AMI 128 Mb; Auto Power On; PXE; Wake-on-LAN"
+            },
+            {
+              "label": "JP3",
+              "value": "(1-2): automatisches Einschalten; (2-3): normal"
+            },
+            {
+              "label": "TPM",
+              "value": "TPM 2.0 Hardwareverschlüsselung, optional"
+            },
+            {
+              "label": "Platinenmaße",
+              "value": "120 x 120 mm"
+            },
+            {
+              "label": "Umgebung",
+              "value": "Betrieb / Lagerung: -20°C ... +60°C; 0-90% rF, nicht kondensierend"
+            },
+            {
+              "label": "Hinweise zur Konfiguration",
+              "value": "Elektrische Daten sind gemeinsam; eingebauter Lüfter und Aussehen nach gewählter Option. Abbildungen dienen als Referenz; Anschlüsse nach bestätigter Konfiguration."
+            },
+            {
+              "label": "Lüfter",
+              "value": "Geregelter 12-V-Systemlüfter mit 4-poligem Anschluss eingebaut"
+            }
+          ],
+          "galleryCards": [
+            {
+              "image": "/assets/products/industrial/october/mcipcd5f/front.webp",
+              "title": "MCIPCD5F - Frontansicht"
+            },
+            {
+              "image": "/assets/products/industrial/october/mcipcd5f/rear.webp",
+              "title": "MCIPCD5F - Rückansicht"
+            }
+          ]
+        },
+        "fr": {
+          "specs": [
+            {
+              "label": "Modèle",
+              "value": "MCIPCD5F"
+            },
+            {
+              "label": "CPU",
+              "value": "Intel N100 / Core i3-N305"
+            },
+            {
+              "label": "Mémoire",
+              "value": "1 x DDR5-4800 SO-DIMM, jusqu’à 32 GB"
+            },
+            {
+              "label": "Graphiques",
+              "value": "Intel UHD Graphics"
+            },
+            {
+              "label": "Affichage",
+              "value": "2 x HDMI 2.0, jusqu’à 4K/60 Hz ; connecteur eDP interne, jusqu’à 1080p/60 Hz"
+            },
+            {
+              "label": "Réseau",
+              "value": "4 x RJ45 Intel I226-V ; LAN1 peut utiliser un connecteur interne"
+            },
+            {
+              "label": "USB",
+              "value": "4 x USB 2.0 (option par connecteur interne) + 2 x USB 3.2 Gen 2"
+            },
+            {
+              "label": "Ports série",
+              "value": "2 x COM RS-232 ; COM2 compatible RS-485 ; COM1 RJ45 en option"
+            },
+            {
+              "label": "Stockage",
+              "value": "1 x SATA 3.0 (6 Gb/s) ; 1 x M.2 2280 avec commutation automatique SATA / PCIe"
+            },
+            {
+              "label": "Alimentation",
+              "value": "12 V CC ; prise 5,5 x 2,5 mm"
+            },
+            {
+              "label": "Refroidissement",
+              "value": "Boîtier aluminium avec ventilateur"
+            },
+            {
+              "label": "Dimensions",
+              "value": "148 x 125 x 56 mm"
+            },
+            {
+              "label": "Sans fil",
+              "value": "M.2 E-key 2230 / Mini PCIe: Wi-Fi / 4G"
+            },
+            {
+              "label": "Cellulaire / SIM",
+              "value": "1 x Nano SIM"
+            },
+            {
+              "label": "GPIO",
+              "value": "8 GPIO"
+            },
+            {
+              "label": "Surveillance",
+              "value": "Watchdog : 4-255 secondes"
+            },
+            {
+              "label": "BIOS",
+              "value": "AMI 128 Mb; Auto Power On; PXE; Wake-on-LAN"
+            },
+            {
+              "label": "JP3",
+              "value": "(1-2) : mise sous tension automatique ; (2-3) : normal"
+            },
+            {
+              "label": "TPM",
+              "value": "Chiffrement matériel TPM 2.0, en option"
+            },
+            {
+              "label": "Dimensions de carte",
+              "value": "120 x 120 mm"
+            },
+            {
+              "label": "Environnement",
+              "value": "Fonctionnement / stockage : -20°C ... +60°C ; 0-90 % HR, sans condensation"
+            },
+            {
+              "label": "Notes de configuration",
+              "value": "Caractéristiques électriques communes ; ventilateur installé et aspect selon l’option choisie. Images indicatives ; ports selon la configuration confirmée."
+            },
+            {
+              "label": "Ventilateur",
+              "value": "Ventilateur système régulé 4 broches 12 V installé"
+            }
+          ],
+          "galleryCards": [
+            {
+              "image": "/assets/products/industrial/october/mcipcd5f/front.webp",
+              "title": "MCIPCD5F - Face avant"
+            },
+            {
+              "image": "/assets/products/industrial/october/mcipcd5f/rear.webp",
+              "title": "MCIPCD5F - Face arrière"
+            }
+          ]
+        },
+        "it": {
+          "specs": [
+            {
+              "label": "Modello",
+              "value": "MCIPCD5F"
+            },
+            {
+              "label": "CPU",
+              "value": "Intel N100 / Core i3-N305"
+            },
+            {
+              "label": "Memoria",
+              "value": "1 x DDR5-4800 SO-DIMM, fino a 32 GB"
+            },
+            {
+              "label": "Grafica",
+              "value": "Intel UHD Graphics"
+            },
+            {
+              "label": "Uscite video",
+              "value": "2 x HDMI 2.0, fino a 4K/60 Hz; connettore eDP interno, fino a 1080p/60 Hz"
+            },
+            {
+              "label": "Rete",
+              "value": "4 x RJ45 Intel I226-V; LAN1 può usare un connettore interno"
+            },
+            {
+              "label": "USB",
+              "value": "4 x USB 2.0 (opzione su connettore interno) + 2 x USB 3.2 Gen 2"
+            },
+            {
+              "label": "Porte seriali",
+              "value": "2 x COM RS-232; COM2 supporta RS-485; COM1 RJ45 opzionale"
+            },
+            {
+              "label": "Archiviazione",
+              "value": "1 x SATA 3.0 (6 Gb/s); 1 x M.2 2280 con commutazione automatica SATA / PCIe"
+            },
+            {
+              "label": "Alimentazione",
+              "value": "12 V CC; presa 5,5 x 2,5 mm"
+            },
+            {
+              "label": "Raffreddamento",
+              "value": "Chassis in alluminio con ventola"
+            },
+            {
+              "label": "Dimensioni",
+              "value": "148 x 125 x 56 mm"
+            },
+            {
+              "label": "Wireless",
+              "value": "M.2 E-key 2230 / Mini PCIe: Wi-Fi / 4G"
+            },
+            {
+              "label": "Rete mobile / SIM",
+              "value": "1 x Nano SIM"
+            },
+            {
+              "label": "GPIO",
+              "value": "8 GPIO"
+            },
+            {
+              "label": "Monitoraggio",
+              "value": "Watchdog: 4-255 secondi"
+            },
+            {
+              "label": "BIOS",
+              "value": "AMI 128 Mb; Auto Power On; PXE; Wake-on-LAN"
+            },
+            {
+              "label": "JP3",
+              "value": "(1-2): accensione automatica; (2-3): normale"
+            },
+            {
+              "label": "TPM",
+              "value": "Cifratura hardware TPM 2.0, opzionale"
+            },
+            {
+              "label": "Dimensioni scheda",
+              "value": "120 x 120 mm"
+            },
+            {
+              "label": "Ambiente",
+              "value": "Funzionamento / stoccaggio: -20°C ... +60°C; 0-90% UR, senza condensa"
+            },
+            {
+              "label": "Note di configurazione",
+              "value": "Specifiche elettriche condivise; ventola installata e aspetto secondo l’opzione selezionata. Immagini indicative; porte secondo la configurazione confermata."
+            },
+            {
+              "label": "Ventola",
+              "value": "Ventola di sistema controllata a 4 poli 12 V installata"
+            }
+          ],
+          "galleryCards": [
+            {
+              "image": "/assets/products/industrial/october/mcipcd5f/front.webp",
+              "title": "MCIPCD5F - Pannello anteriore"
+            },
+            {
+              "image": "/assets/products/industrial/october/mcipcd5f/rear.webp",
+              "title": "MCIPCD5F - Pannello posteriore"
+            }
+          ]
+        },
+        "es": {
+          "specs": [
+            {
+              "label": "Modelo",
+              "value": "MCIPCD5F"
+            },
+            {
+              "label": "CPU",
+              "value": "Intel N100 / Core i3-N305"
+            },
+            {
+              "label": "Memoria",
+              "value": "1 x DDR5-4800 SO-DIMM, hasta 32 GB"
+            },
+            {
+              "label": "Gráficos",
+              "value": "Intel UHD Graphics"
+            },
+            {
+              "label": "Salidas de vídeo",
+              "value": "2 x HDMI 2.0, hasta 4K/60 Hz; conector eDP interno, hasta 1080p/60 Hz"
+            },
+            {
+              "label": "Red",
+              "value": "4 x RJ45 Intel I226-V; LAN1 puede utilizar un conector interno"
+            },
+            {
+              "label": "USB",
+              "value": "4 x USB 2.0 (opción de conector interno) + 2 x USB 3.2 Gen 2"
+            },
+            {
+              "label": "Puertos serie",
+              "value": "2 x COM RS-232; COM2 admite RS-485; COM1 RJ45 opcional"
+            },
+            {
+              "label": "Almacenamiento",
+              "value": "1 x SATA 3.0 (6 Gb/s); 1 x M.2 2280 con conmutación automática SATA / PCIe"
+            },
+            {
+              "label": "Alimentación",
+              "value": "12 V CC; conector de 5,5 x 2,5 mm"
+            },
+            {
+              "label": "Refrigeración",
+              "value": "Chasis de aluminio con ventilador"
+            },
+            {
+              "label": "Dimensiones",
+              "value": "148 x 125 x 56 mm"
+            },
+            {
+              "label": "Conectividad inalámbrica",
+              "value": "M.2 E-key 2230 / Mini PCIe: Wi-Fi / 4G"
+            },
+            {
+              "label": "Red móvil / SIM",
+              "value": "1 x Nano SIM"
+            },
+            {
+              "label": "GPIO",
+              "value": "8 GPIO"
+            },
+            {
+              "label": "Supervisión",
+              "value": "Watchdog: 4-255 segundos"
+            },
+            {
+              "label": "BIOS",
+              "value": "AMI 128 Mb; Auto Power On; PXE; Wake-on-LAN"
+            },
+            {
+              "label": "JP3",
+              "value": "(1-2): encendido automático; (2-3): normal"
+            },
+            {
+              "label": "TPM",
+              "value": "Cifrado por hardware TPM 2.0, opcional"
+            },
+            {
+              "label": "Dimensiones de placa",
+              "value": "120 x 120 mm"
+            },
+            {
+              "label": "Entorno",
+              "value": "Funcionamiento / almacenamiento: -20°C ... +60°C; 0-90 % HR, sin condensación"
+            },
+            {
+              "label": "Notas de configuración",
+              "value": "Especificaciones eléctricas compartidas; ventilador instalado y aspecto según la opción elegida. Imágenes de referencia; puertos según la configuración confirmada."
+            },
+            {
+              "label": "Ventilador",
+              "value": "Ventilador de sistema controlado de 4 pines y 12 V instalado"
+            }
+          ],
+          "galleryCards": [
+            {
+              "image": "/assets/products/industrial/october/mcipcd5f/front.webp",
+              "title": "MCIPCD5F - Panel frontal"
+            },
+            {
+              "image": "/assets/products/industrial/october/mcipcd5f/rear.webp",
+              "title": "MCIPCD5F - Panel trasero"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -7,6 +7,10 @@ export type ProductConfiguration = {
   image: string;
   specs: ProductSpecification[];
   galleryCards?: { image: string; title: string; description?: string }[];
+  translations?: Partial<Record<'de' | 'fr' | 'it' | 'es', {
+    specs: ProductSpecification[];
+    galleryCards?: { image: string; title: string; description?: string }[];
+  }>>;
 };
 
 const specificationOrder = [

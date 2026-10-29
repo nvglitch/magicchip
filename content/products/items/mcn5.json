@@ -1,0 +1,667 @@
+{
+  "id": "mcn5",
+  "name": "MCN5",
+  "category": "commercial-mini-pc",
+  "series": "DPC",
+  "published": true,
+  "tagline": "90 mm Intel mini PC with onboard LPDDR5 and three display ports",
+  "description": "MCN5 fits Intel N-series options, onboard LPDDR5-4800 memory and dual Gigabit LAN into a 90 x 90 x 38.5 mm enclosure. Two HDMI 2.0 ports and DisplayPort 1.4 provide three display connections. M.2 2242 SATA / NVMe storage, three USB 3.2 ports, two 10 Gbps Type-C ports and TPM 2.0 support complete the platform.",
+  "highlights": [
+    "Intel N-series CPU options",
+    "Onboard LPDDR5: 8 / 12 / 16 GB",
+    "2 x Gigabit LAN",
+    "2 x HDMI 2.0 + DisplayPort 1.4"
+  ],
+  "specificationHeading": "MCN5 hardware specifications",
+  "featureHeading": "Compact desktop connections and clear configuration choices",
+  "advantageSummary": "Compare the memory, display, storage and wireless options for this model, including TPM 2.0 support and the listed power and environment limits.",
+  "galleryCards": [
+    {
+      "image": "/assets/products/commercial/dpc/mcn5/images/view-1.png",
+      "title": "MCN5 product view 1"
+    },
+    {
+      "image": "/assets/products/commercial/dpc/mcn5/images/view-2.png",
+      "title": "MCN5 product view 2"
+    }
+  ],
+  "features": [
+    {
+      "icon": "Cpu",
+      "title": "Onboard LPDDR5",
+      "description": "Intel N95 / N97 / N100 / N150 / N200 / N305. Onboard LPDDR5-4800, 8 / 12 / 16 GB options."
+    },
+    {
+      "icon": "Monitor",
+      "title": "Display and USB connections",
+      "description": "2 x HDMI 2.0 (4K/60 Hz); 1 x DisplayPort 1.4 (4K/144 Hz). 3 x USB 3.2 (10 Gbps); 2 x USB Type-C (10 Gbps)."
+    },
+    {
+      "icon": "Layers",
+      "title": "Storage and wireless options",
+      "description": "The M.2 2242 slot accepts SATA or NVMe PCIe 3.0 SSDs. Wi-Fi 5 / 6 and Bluetooth 4.2 / 5.2 configurations are listed, with TPM 2.0 support."
+    }
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCN5"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel N95 / N97 / N100 / N150 / N200 / N305"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel UHD Graphics"
+    },
+    {
+      "label": "Memory",
+      "value": "Onboard LPDDR5-4800, 8 / 12 / 16 GB options"
+    },
+    {
+      "label": "Video",
+      "value": "2 x HDMI 2.0 (4K/60 Hz); 1 x DisplayPort 1.4 (4K/144 Hz)"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x M.2 2242 SATA / NVMe PCIe 3.0, up to 2 TB"
+    },
+    {
+      "label": "Network",
+      "value": "2 x Realtek RTL8111 Gigabit LAN (1000 Mbps)"
+    },
+    {
+      "label": "USB",
+      "value": "3 x USB 3.2 (10 Gbps); 2 x USB Type-C (10 Gbps)"
+    },
+    {
+      "label": "Audio",
+      "value": "3.5 mm combo audio jack, Realtek ALC897"
+    },
+    {
+      "label": "Controls",
+      "value": "Power button; Clear CMOS button"
+    },
+    {
+      "label": "Power",
+      "value": "12 V DC; 5.5 x 2.1 mm jack"
+    },
+    {
+      "label": "Wireless",
+      "value": "Wi-Fi 5 / 6; Bluetooth 4.2 / 5.2; 2 FPC antennas"
+    },
+    {
+      "label": "BIOS",
+      "value": "RTC / timed boot; automatic power-on; Wake-on-LAN"
+    },
+    {
+      "label": "TPM",
+      "value": "TPM 2.0 supported"
+    },
+    {
+      "label": "Dimensions",
+      "value": "90 x 90 x 38.5 mm"
+    },
+    {
+      "label": "Material",
+      "value": "Plastic enclosure"
+    },
+    {
+      "label": "Weight",
+      "value": "190 g"
+    },
+    {
+      "label": "System",
+      "value": "Windows 7 / 8 / 10; Linux"
+    },
+    {
+      "label": "Operating temperature",
+      "value": "0°C to +40°C"
+    },
+    {
+      "label": "Storage temperature",
+      "value": "-20°C to +60°C"
+    },
+    {
+      "label": "Humidity",
+      "value": "90% RH at 40°C"
+    },
+    {
+      "label": "Configuration notes",
+      "value": "CPU, memory, storage and wireless options follow the confirmed configuration. Product images are for reference; final I/O follows the confirmed order."
+    }
+  ],
+  "image": "/assets/products/commercial/dpc/mcn5/images/main-square.png",
+  "images": [
+    "/assets/products/commercial/dpc/mcn5/images/main-square.png"
+  ],
+  "galleryImages": [
+    "/assets/products/commercial/dpc/mcn5/images/view-1.png",
+    "/assets/products/commercial/dpc/mcn5/images/view-2.png"
+  ],
+  "sourceBrochure": "桌面端DPC/MCN5 brochure.pdf",
+  "sourceSha256": "a8d8efb08a5d3439bb1425e227d0d8344ebce4b6e9ccfada30b207eb420e9bb8",
+  "translations": {
+    "de": {
+      "tagline": "90-mm-Intel-Mini-PC mit Onboard-LPDDR5 und drei Bildanschlüssen",
+      "description": "MCN5 verbindet Intel-N-Prozessoroptionen, Onboard-LPDDR5-4800 und zwei Gigabit-LAN-Ports in einem Gehäuse mit 90 x 90 x 38,5 mm. Zwei HDMI-2.0-Ports und DisplayPort 1.4 bieten drei Bildanschlüsse. M.2 2242 SATA / NVMe, drei USB-3.2-Ports, zwei Type-C-Ports mit 10 Gbit/s und TPM-2.0-Unterstützung ergänzen die Plattform.",
+      "highlights": [
+        "Intel-N-Prozessoroptionen",
+        "Onboard-LPDDR5: 8 / 12 / 16 GB",
+        "2 x Gigabit LAN",
+        "2 x HDMI 2.0 + DisplayPort 1.4"
+      ],
+      "specificationHeading": "MCN5 – Technische Daten",
+      "featureHeading": "Kompakte Anschlüsse und klare Optionen",
+      "advantageSummary": "Vergleichen Sie RAM, Bildausgänge, Speicher und Funkoptionen dieses Modells einschließlich TPM-2.0-Unterstützung sowie der angegebenen Stromversorgung und Umgebungsgrenzen.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/dpc/mcn5/images/view-1.png",
+          "title": "MCN5 Produktansicht 1"
+        },
+        {
+          "image": "/assets/products/commercial/dpc/mcn5/images/view-2.png",
+          "title": "MCN5 Produktansicht 2"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "Onboard-LPDDR5",
+          "description": "Intel N95 / N97 / N100 / N150 / N200 / N305. Onboard-LPDDR5-4800, wahlweise 8 / 12 / 16 GB."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Bildschirme und USB",
+          "description": "2 x HDMI 2.0 (4K/60 Hz); 1 x DisplayPort 1.4 (4K/144 Hz). 3 x USB 3.2 (10 Gbit/s); 2 x USB Type-C (10 Gbit/s)."
+        },
+        {
+          "icon": "Layers",
+          "title": "Speicher und Funk",
+          "description": "Der M.2-2242-Steckplatz unterstützt SATA- oder NVMe-PCIe-3.0-SSDs. WLAN-5-/6- und Bluetooth-4.2-/5.2-Konfigurationen sind aufgeführt; TPM 2.0 wird unterstützt."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modell",
+          "value": "MCN5"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel N95 / N97 / N100 / N150 / N200 / N305"
+        },
+        {
+          "label": "Grafik",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Arbeitsspeicher",
+          "value": "Onboard-LPDDR5-4800, wahlweise 8 / 12 / 16 GB"
+        },
+        {
+          "label": "Bildausgänge",
+          "value": "2 x HDMI 2.0 (4K/60 Hz); 1 x DisplayPort 1.4 (4K/144 Hz)"
+        },
+        {
+          "label": "Datenspeicher",
+          "value": "1 x M.2 2242 SATA / NVMe PCIe 3.0, bis 2 TB"
+        },
+        {
+          "label": "Netzwerk",
+          "value": "2 x Realtek RTL8111 Gigabit LAN (1000 Mbps)"
+        },
+        {
+          "label": "USB",
+          "value": "3 x USB 3.2 (10 Gbit/s); 2 x USB Type-C (10 Gbit/s)"
+        },
+        {
+          "label": "Audio",
+          "value": "3,5-mm-Kombi-Audiobuchse, Realtek ALC897"
+        },
+        {
+          "label": "Bedienung",
+          "value": "Ein-/Aus-Taste; Clear-CMOS-Taste"
+        },
+        {
+          "label": "Stromversorgung",
+          "value": "12 V DC; 5,5 x 2,1 mm Buchse"
+        },
+        {
+          "label": "Funkverbindungen",
+          "value": "WLAN 5 / 6; Bluetooth 4.2 / 5.2; 2 FPC-Antennen"
+        },
+        {
+          "label": "BIOS",
+          "value": "RTC / zeitgesteuerter Start; automatisches Einschalten; Wake-on-LAN"
+        },
+        {
+          "label": "TPM",
+          "value": "TPM 2.0 wird unterstützt"
+        },
+        {
+          "label": "Abmessungen",
+          "value": "90 x 90 x 38,5 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Kunststoffgehäuse"
+        },
+        {
+          "label": "Gewicht",
+          "value": "190 g"
+        },
+        {
+          "label": "Betriebssystem",
+          "value": "Windows 7 / 8 / 10; Linux"
+        },
+        {
+          "label": "Betriebstemperatur",
+          "value": "0°C bis +40°C"
+        },
+        {
+          "label": "Lagertemperatur",
+          "value": "-20°C bis +60°C"
+        },
+        {
+          "label": "Luftfeuchtigkeit",
+          "value": "90% r. F. bei 40°C"
+        },
+        {
+          "label": "Hinweise zur Konfiguration",
+          "value": "CPU, RAM, Speicher und Funkoptionen richten sich nach der bestätigten Konfiguration. Bilder dienen als Referenz; endgültige Anschlüsse gemäß bestätigter Bestellung."
+        }
+      ]
+    },
+    "fr": {
+      "tagline": "Mini-PC Intel de 90 mm avec LPDDR5 intégrée et trois sorties vidéo",
+      "description": "MCN5 intègre des processeurs Intel N au choix, la mémoire LPDDR5-4800 embarquée et deux LAN Gigabit dans un boîtier de 90 x 90 x 38,5 mm. Deux HDMI 2.0 et DisplayPort 1.4 offrent trois connexions vidéo. M.2 2242 SATA / NVMe, trois USB 3.2, deux Type-C à 10 Gbit/s et la prise en charge de TPM 2.0 complètent la plateforme.",
+      "highlights": [
+        "Processeurs Intel N au choix",
+        "LPDDR5 intégrée : 8 / 12 / 16 Go",
+        "2 x LAN Gigabit",
+        "2 x HDMI 2.0 + DisplayPort 1.4"
+      ],
+      "specificationHeading": "MCN5 – Fiche technique",
+      "featureHeading": "Connexions compactes et choix de configuration clairs",
+      "advantageSummary": "Comparez mémoire, sorties vidéo, stockage et options sans fil de ce modèle, avec prise en charge de TPM 2.0 et limites indiquées pour alimentation et environnement.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/dpc/mcn5/images/view-1.png",
+          "title": "MCN5 vue du produit 1"
+        },
+        {
+          "image": "/assets/products/commercial/dpc/mcn5/images/view-2.png",
+          "title": "MCN5 vue du produit 2"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "LPDDR5 intégrée",
+          "description": "Intel N95 / N97 / N100 / N150 / N200 / N305. LPDDR5-4800 intégrée, options 8 / 12 / 16 Go."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Écrans et USB",
+          "description": "2 x HDMI 2.0 (4K/60 Hz) ; 1 x DisplayPort 1.4 (4K/144 Hz). 3 x USB 3.2 (10 Gbit/s) ; 2 x USB Type-C (10 Gbit/s)."
+        },
+        {
+          "icon": "Layers",
+          "title": "Stockage et sans fil",
+          "description": "Le M.2 2242 accepte les SSD SATA ou NVMe PCIe 3.0. Des configurations Wi-Fi 5 / 6 et Bluetooth 4.2 / 5.2 sont indiquées, avec prise en charge de TPM 2.0."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modèle",
+          "value": "MCN5"
+        },
+        {
+          "label": "Processeur",
+          "value": "Intel N95 / N97 / N100 / N150 / N200 / N305"
+        },
+        {
+          "label": "Circuit graphique",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Mémoire",
+          "value": "LPDDR5-4800 intégrée, options 8 / 12 / 16 Go"
+        },
+        {
+          "label": "Sorties vidéo",
+          "value": "2 x HDMI 2.0 (4K/60 Hz) ; 1 x DisplayPort 1.4 (4K/144 Hz)"
+        },
+        {
+          "label": "Stockage",
+          "value": "1 x M.2 2242 SATA / NVMe PCIe 3.0, jusqu'à 2 To"
+        },
+        {
+          "label": "Réseau",
+          "value": "2 x Realtek RTL8111 LAN Gigabit (1000 Mbps)"
+        },
+        {
+          "label": "USB",
+          "value": "3 x USB 3.2 (10 Gbit/s) ; 2 x USB Type-C (10 Gbit/s)"
+        },
+        {
+          "label": "Audio",
+          "value": "Prise audio combinée 3,5 mm, Realtek ALC897"
+        },
+        {
+          "label": "Commandes",
+          "value": "Bouton d'alimentation ; bouton Clear CMOS"
+        },
+        {
+          "label": "Alimentation",
+          "value": "12 V CC ; prise 5,5 x 2,1 mm"
+        },
+        {
+          "label": "Sans fil",
+          "value": "Wi-Fi 5 / 6 ; Bluetooth 4.2 / 5.2 ; 2 antennes FPC"
+        },
+        {
+          "label": "BIOS",
+          "value": "Démarrage RTC / programmé ; mise sous tension automatique ; Wake-on-LAN"
+        },
+        {
+          "label": "TPM",
+          "value": "TPM 2.0 pris en charge"
+        },
+        {
+          "label": "Dimensions",
+          "value": "90 x 90 x 38,5 mm"
+        },
+        {
+          "label": "Matériau",
+          "value": "Boîtier en plastique"
+        },
+        {
+          "label": "Poids",
+          "value": "190 g"
+        },
+        {
+          "label": "Système d'exploitation",
+          "value": "Windows 7 / 8 / 10; Linux"
+        },
+        {
+          "label": "Température de fonctionnement",
+          "value": "0°C à +40°C"
+        },
+        {
+          "label": "Température de stockage",
+          "value": "-20°C à +60°C"
+        },
+        {
+          "label": "Humidité",
+          "value": "90% HR à 40°C"
+        },
+        {
+          "label": "Notes de configuration",
+          "value": "Les options CPU, mémoire, stockage et sans fil suivent la configuration confirmée. Images à titre indicatif ; connectique finale selon la commande confirmée."
+        }
+      ]
+    },
+    "it": {
+      "tagline": "Mini PC Intel da 90 mm con LPDDR5 integrata e tre porte video",
+      "description": "MCN5 integra opzioni Intel serie N, LPDDR5-4800 a bordo e due LAN Gigabit in uno chassis da 90 x 90 x 38,5 mm. Due HDMI 2.0 e DisplayPort 1.4 offrono tre connessioni video. M.2 2242 SATA / NVMe, tre USB 3.2, due Type-C a 10 Gbps e supporto TPM 2.0 completano la piattaforma.",
+      "highlights": [
+        "Opzioni CPU Intel serie N",
+        "LPDDR5 integrata: 8 / 12 / 16 GB",
+        "2 x LAN Gigabit",
+        "2 x HDMI 2.0 + DisplayPort 1.4"
+      ],
+      "specificationHeading": "MCN5 – Specifiche hardware",
+      "featureHeading": "Connessioni compatte e opzioni di configurazione chiare",
+      "advantageSummary": "Confronta memoria, uscite video, archiviazione e wireless di questo modello, con supporto TPM 2.0 e limiti indicati per alimentazione e ambiente.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/dpc/mcn5/images/view-1.png",
+          "title": "MCN5 vista del prodotto 1"
+        },
+        {
+          "image": "/assets/products/commercial/dpc/mcn5/images/view-2.png",
+          "title": "MCN5 vista del prodotto 2"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "LPDDR5 integrata",
+          "description": "Intel N95 / N97 / N100 / N150 / N200 / N305. LPDDR5-4800 integrata, opzioni 8 / 12 / 16 GB."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Display e USB",
+          "description": "2 x HDMI 2.0 (4K/60 Hz); 1 x DisplayPort 1.4 (4K/144 Hz). 3 x USB 3.2 (10 Gbps); 2 x USB Type-C (10 Gbps)."
+        },
+        {
+          "icon": "Layers",
+          "title": "Archiviazione e wireless",
+          "description": "Lo slot M.2 2242 accetta SSD SATA o NVMe PCIe 3.0. Sono indicate configurazioni Wi-Fi 5 / 6 e Bluetooth 4.2 / 5.2, con supporto TPM 2.0."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modello",
+          "value": "MCN5"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel N95 / N97 / N100 / N150 / N200 / N305"
+        },
+        {
+          "label": "Grafica",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Memoria",
+          "value": "LPDDR5-4800 integrata, opzioni 8 / 12 / 16 GB"
+        },
+        {
+          "label": "Uscite video",
+          "value": "2 x HDMI 2.0 (4K/60 Hz); 1 x DisplayPort 1.4 (4K/144 Hz)"
+        },
+        {
+          "label": "Archiviazione",
+          "value": "1 x M.2 2242 SATA / NVMe PCIe 3.0, fino a 2 TB"
+        },
+        {
+          "label": "Rete",
+          "value": "2 x Realtek RTL8111 LAN Gigabit (1000 Mbps)"
+        },
+        {
+          "label": "USB",
+          "value": "3 x USB 3.2 (10 Gbps); 2 x USB Type-C (10 Gbps)"
+        },
+        {
+          "label": "Audio",
+          "value": "Jack audio combinato da 3,5 mm, Realtek ALC897"
+        },
+        {
+          "label": "Comandi",
+          "value": "Pulsante di accensione; pulsante Clear CMOS"
+        },
+        {
+          "label": "Alimentazione",
+          "value": "12 V DC; jack da 5,5 x 2,1 mm"
+        },
+        {
+          "label": "Wireless",
+          "value": "Wi-Fi 5 / 6; Bluetooth 4.2 / 5.2; 2 antenne FPC"
+        },
+        {
+          "label": "BIOS",
+          "value": "Avvio RTC / programmato; accensione automatica; Wake-on-LAN"
+        },
+        {
+          "label": "TPM",
+          "value": "TPM 2.0 supportato"
+        },
+        {
+          "label": "Dimensioni",
+          "value": "90 x 90 x 38,5 mm"
+        },
+        {
+          "label": "Materiale",
+          "value": "Chassis in plastica"
+        },
+        {
+          "label": "Peso",
+          "value": "190 g"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 7 / 8 / 10; Linux"
+        },
+        {
+          "label": "Temperatura operativa",
+          "value": "Da 0°C a +40°C"
+        },
+        {
+          "label": "Temperatura di stoccaggio",
+          "value": "Da -20°C a +60°C"
+        },
+        {
+          "label": "Umidità",
+          "value": "90% UR a 40°C"
+        },
+        {
+          "label": "Note sulla configurazione",
+          "value": "Le opzioni CPU, memoria, archiviazione e wireless seguono la configurazione confermata. Immagini di riferimento; connessioni finali secondo il relativo ordine."
+        }
+      ]
+    },
+    "es": {
+      "tagline": "Mini PC Intel de 90 mm con LPDDR5 integrada y tres puertos de vídeo",
+      "description": "MCN5 integra opciones Intel serie N, LPDDR5-4800 en placa y dos LAN Gigabit en una carcasa de 90 x 90 x 38,5 mm. Dos HDMI 2.0 y DisplayPort 1.4 ofrecen tres conexiones de vídeo. M.2 2242 SATA / NVMe, tres USB 3.2, dos Type-C de 10 Gbps y compatibilidad con TPM 2.0 completan la plataforma.",
+      "highlights": [
+        "Opciones CPU Intel serie N",
+        "LPDDR5 en placa: 8 / 12 / 16 GB",
+        "2 x LAN Gigabit",
+        "2 x HDMI 2.0 + DisplayPort 1.4"
+      ],
+      "specificationHeading": "MCN5 – Ficha técnica",
+      "featureHeading": "Conexiones compactas y opciones de configuración claras",
+      "advantageSummary": "Compara memoria, salidas de vídeo, almacenamiento y opciones inalámbricas de este modelo, con compatibilidad TPM 2.0 y límites indicados de alimentación y entorno.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/dpc/mcn5/images/view-1.png",
+          "title": "MCN5 vista del producto 1"
+        },
+        {
+          "image": "/assets/products/commercial/dpc/mcn5/images/view-2.png",
+          "title": "MCN5 vista del producto 2"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "LPDDR5 integrada",
+          "description": "Intel N95 / N97 / N100 / N150 / N200 / N305. LPDDR5-4800 en placa, opciones de 8 / 12 / 16 GB."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Pantallas y USB",
+          "description": "2 x HDMI 2.0 (4K/60 Hz); 1 x DisplayPort 1.4 (4K/144 Hz). 3 x USB 3.2 (10 Gbps); 2 x USB Type-C (10 Gbps)."
+        },
+        {
+          "icon": "Layers",
+          "title": "Almacenamiento y red",
+          "description": "La ranura M.2 2242 admite SSD SATA o NVMe PCIe 3.0. Se indican configuraciones Wi-Fi 5 / 6 y Bluetooth 4.2 / 5.2, con compatibilidad TPM 2.0."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modelo",
+          "value": "MCN5"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel N95 / N97 / N100 / N150 / N200 / N305"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Memoria",
+          "value": "LPDDR5-4800 en placa, opciones de 8 / 12 / 16 GB"
+        },
+        {
+          "label": "Salidas de vídeo",
+          "value": "2 x HDMI 2.0 (4K/60 Hz); 1 x DisplayPort 1.4 (4K/144 Hz)"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "1 x M.2 2242 SATA / NVMe PCIe 3.0, hasta 2 TB"
+        },
+        {
+          "label": "Red",
+          "value": "2 x Realtek RTL8111 LAN Gigabit (1000 Mbps)"
+        },
+        {
+          "label": "USB",
+          "value": "3 x USB 3.2 (10 Gbps); 2 x USB Type-C (10 Gbps)"
+        },
+        {
+          "label": "Audio",
+          "value": "Conector de audio combinado de 3,5 mm, Realtek ALC897"
+        },
+        {
+          "label": "Controles",
+          "value": "Botón de encendido; botón Clear CMOS"
+        },
+        {
+          "label": "Alimentación",
+          "value": "12 V CC; conector de 5,5 x 2,1 mm"
+        },
+        {
+          "label": "Conexión inalámbrica",
+          "value": "Wi-Fi 5 / 6; Bluetooth 4.2 / 5.2; 2 antenas FPC"
+        },
+        {
+          "label": "BIOS",
+          "value": "Arranque RTC / programado; encendido automático; Wake-on-LAN"
+        },
+        {
+          "label": "TPM",
+          "value": "TPM 2.0 admitido"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "90 x 90 x 38,5 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Carcasa de plástico"
+        },
+        {
+          "label": "Peso",
+          "value": "190 g"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 7 / 8 / 10; Linux"
+        },
+        {
+          "label": "Temperatura de funcionamiento",
+          "value": "De 0°C a +40°C"
+        },
+        {
+          "label": "Temperatura de almacenamiento",
+          "value": "De -20°C a +60°C"
+        },
+        {
+          "label": "Humedad",
+          "value": "90% HR a 40°C"
+        },
+        {
+          "label": "Notas de configuración",
+          "value": "Las opciones CPU, memoria, almacenamiento e inalámbricas dependen de la configuración confirmada. Imágenes de referencia; conexiones finales según el pedido confirmado."
+        }
+      ]
+    }
+  }
+}

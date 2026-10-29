@@ -1,0 +1,667 @@
+{
+  "id": "mcn6",
+  "name": "MCN6",
+  "category": "commercial-mini-pc",
+  "series": "DPC",
+  "published": true,
+  "tagline": "Slim Intel mini PC with dual HDMI 2.0 and M.2 SATA / NVMe storage",
+  "description": "MCN6 combines Intel N-series options, one DDR4-3200 SO-DIMM slot for 8-16 GB and M.2 2242 SATA / NVMe storage in a 33 mm-high enclosure. Dual HDMI 2.0 outputs, four 10 Gbps USB 3.2 ports and Gigabit Ethernet connect desktop devices. Wi-Fi 6 and Bluetooth 5.2 are optional, and TPM 2.0 is supported.",
+  "highlights": [
+    "Intel N95 / N97 / N100 / N150 / N200 / N300",
+    "1 x DDR4 SO-DIMM, 8-16 GB",
+    "1 x Gigabit LAN",
+    "M.2 2242 SATA / NVMe"
+  ],
+  "specificationHeading": "MCN6 hardware specifications",
+  "featureHeading": "Compact desktop connections and clear configuration choices",
+  "advantageSummary": "Compare the memory, display, storage and wireless options for this model, including TPM 2.0 support and the listed power and environment limits.",
+  "galleryCards": [
+    {
+      "image": "/assets/products/commercial/dpc/mcn6/images/view-1.png",
+      "title": "MCN6 product view 1"
+    },
+    {
+      "image": "/assets/products/commercial/dpc/mcn6/images/view-2.png",
+      "title": "MCN6 product view 2"
+    }
+  ],
+  "features": [
+    {
+      "icon": "Cpu",
+      "title": "Replaceable DDR4 SO-DIMM",
+      "description": "Intel N95 / N97 / N100 / N150 / N200 / N300. 1 x DDR4-3200 SO-DIMM, 8-16 GB."
+    },
+    {
+      "icon": "Monitor",
+      "title": "Display and USB connections",
+      "description": "2 x HDMI 2.0, up to 4K at 60 Hz. 4 x USB 3.2 (10 Gbps)."
+    },
+    {
+      "icon": "Layers",
+      "title": "Storage and wireless options",
+      "description": "The M.2 2242 slot accepts SATA or NVMe PCIe 3.0 SSDs. Wi-Fi 6 and Bluetooth 5.2 are optional; TPM 2.0 is supported."
+    }
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCN6"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel N95 / N97 / N100 / N150 / N200 / N300"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel UHD Graphics"
+    },
+    {
+      "label": "Memory",
+      "value": "1 x DDR4-3200 SO-DIMM, 8-16 GB"
+    },
+    {
+      "label": "Video",
+      "value": "2 x HDMI 2.0, up to 4K at 60 Hz"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x M.2 2242 SATA / NVMe PCIe 3.0, 128 GB-2 TB"
+    },
+    {
+      "label": "Network",
+      "value": "1 x Realtek RTL8111 Gigabit LAN (1000 Mbps)"
+    },
+    {
+      "label": "USB",
+      "value": "4 x USB 3.2 (10 Gbps)"
+    },
+    {
+      "label": "Audio",
+      "value": "3.5 mm combo audio jack, Realtek ALC897"
+    },
+    {
+      "label": "Controls",
+      "value": "Power button; Clear CMOS button"
+    },
+    {
+      "label": "Power",
+      "value": "12 V DC; 5.5 x 2.1 mm jack"
+    },
+    {
+      "label": "Wireless",
+      "value": "Wi-Fi 5; optional Wi-Fi 6; Bluetooth 4.2; optional Bluetooth 5.2; 2 FPC antennas"
+    },
+    {
+      "label": "BIOS",
+      "value": "RTC / timed boot; automatic power-on; Wake-on-LAN"
+    },
+    {
+      "label": "TPM",
+      "value": "TPM 2.0 supported"
+    },
+    {
+      "label": "Dimensions",
+      "value": "124.5 x 111 x 33 mm"
+    },
+    {
+      "label": "Material",
+      "value": "Plastic enclosure"
+    },
+    {
+      "label": "Weight",
+      "value": "215 g"
+    },
+    {
+      "label": "System",
+      "value": "Windows 7 / 8 / 10; Linux"
+    },
+    {
+      "label": "Operating temperature",
+      "value": "0°C to +40°C"
+    },
+    {
+      "label": "Storage temperature",
+      "value": "-20°C to +60°C"
+    },
+    {
+      "label": "Humidity",
+      "value": "90% RH at 40°C"
+    },
+    {
+      "label": "Configuration notes",
+      "value": "CPU, memory, storage and wireless options follow the confirmed configuration. Product images are for reference; final I/O follows the confirmed order."
+    }
+  ],
+  "image": "/assets/products/commercial/dpc/mcn6/images/main-square.png",
+  "images": [
+    "/assets/products/commercial/dpc/mcn6/images/main-square.png"
+  ],
+  "galleryImages": [
+    "/assets/products/commercial/dpc/mcn6/images/view-1.png",
+    "/assets/products/commercial/dpc/mcn6/images/view-2.png"
+  ],
+  "sourceBrochure": "桌面端DPC/MCN6 brochure.pdf",
+  "sourceSha256": "df57591cffe5b15e87828989376ba771cf1e4f74890d1745324e94aa0d2e4d65",
+  "translations": {
+    "de": {
+      "tagline": "Schlanker Intel-Mini-PC mit zwei HDMI-2.0-Ports und M.2 SATA / NVMe",
+      "description": "MCN6 kombiniert Intel-N-Prozessoroptionen, einen DDR4-3200-SO-DIMM-Steckplatz für 8-16 GB und M.2 2242 SATA / NVMe in einem 33 mm hohen Gehäuse. Zwei HDMI-2.0-Ausgänge, vier USB-3.2-Ports mit 10 Gbit/s und Gigabit-Ethernet verbinden Desktop-Geräte. WLAN 6 und Bluetooth 5.2 sind optional; TPM 2.0 wird unterstützt.",
+      "highlights": [
+        "Intel N95 / N97 / N100 / N150 / N200 / N300",
+        "1 x DDR4 SO-DIMM, 8-16 GB",
+        "1 x Gigabit LAN",
+        "M.2 2242 SATA / NVMe"
+      ],
+      "specificationHeading": "MCN6 – Technische Daten",
+      "featureHeading": "Kompakte Anschlüsse und klare Optionen",
+      "advantageSummary": "Vergleichen Sie RAM, Bildausgänge, Speicher und Funkoptionen dieses Modells einschließlich TPM-2.0-Unterstützung sowie der angegebenen Stromversorgung und Umgebungsgrenzen.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/dpc/mcn6/images/view-1.png",
+          "title": "MCN6 Produktansicht 1"
+        },
+        {
+          "image": "/assets/products/commercial/dpc/mcn6/images/view-2.png",
+          "title": "MCN6 Produktansicht 2"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "Austauschbarer DDR4-RAM",
+          "description": "Intel N95 / N97 / N100 / N150 / N200 / N300. 1 x DDR4-3200 SO-DIMM, 8-16 GB."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Bildschirme und USB",
+          "description": "2 x HDMI 2.0, bis 4K bei 60 Hz. 4 x USB 3.2 (10 Gbit/s)."
+        },
+        {
+          "icon": "Layers",
+          "title": "Speicher und Funk",
+          "description": "Der M.2-2242-Steckplatz unterstützt SATA- oder NVMe-PCIe-3.0-SSDs. WLAN 6 und Bluetooth 5.2 sind optional; TPM 2.0 wird unterstützt."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modell",
+          "value": "MCN6"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel N95 / N97 / N100 / N150 / N200 / N300"
+        },
+        {
+          "label": "Grafik",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Arbeitsspeicher",
+          "value": "1 x DDR4-3200 SO-DIMM, 8-16 GB"
+        },
+        {
+          "label": "Bildausgänge",
+          "value": "2 x HDMI 2.0, bis 4K bei 60 Hz"
+        },
+        {
+          "label": "Datenspeicher",
+          "value": "1 x M.2 2242 SATA / NVMe PCIe 3.0, 128 GB-2 TB"
+        },
+        {
+          "label": "Netzwerk",
+          "value": "1 x Realtek RTL8111 Gigabit LAN (1000 Mbps)"
+        },
+        {
+          "label": "USB",
+          "value": "4 x USB 3.2 (10 Gbit/s)"
+        },
+        {
+          "label": "Audio",
+          "value": "3,5-mm-Kombi-Audiobuchse, Realtek ALC897"
+        },
+        {
+          "label": "Bedienung",
+          "value": "Ein-/Aus-Taste; Clear-CMOS-Taste"
+        },
+        {
+          "label": "Stromversorgung",
+          "value": "12 V DC; 5,5 x 2,1 mm Buchse"
+        },
+        {
+          "label": "Funkverbindungen",
+          "value": "WLAN 5; WLAN 6 optional; Bluetooth 4.2; Bluetooth 5.2 optional; 2 FPC-Antennen"
+        },
+        {
+          "label": "BIOS",
+          "value": "RTC / zeitgesteuerter Start; automatisches Einschalten; Wake-on-LAN"
+        },
+        {
+          "label": "TPM",
+          "value": "TPM 2.0 wird unterstützt"
+        },
+        {
+          "label": "Abmessungen",
+          "value": "124,5 x 111 x 33 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Kunststoffgehäuse"
+        },
+        {
+          "label": "Gewicht",
+          "value": "215 g"
+        },
+        {
+          "label": "Betriebssystem",
+          "value": "Windows 7 / 8 / 10; Linux"
+        },
+        {
+          "label": "Betriebstemperatur",
+          "value": "0°C bis +40°C"
+        },
+        {
+          "label": "Lagertemperatur",
+          "value": "-20°C bis +60°C"
+        },
+        {
+          "label": "Luftfeuchtigkeit",
+          "value": "90% r. F. bei 40°C"
+        },
+        {
+          "label": "Hinweise zur Konfiguration",
+          "value": "CPU, RAM, Speicher und Funkoptionen richten sich nach der bestätigten Konfiguration. Bilder dienen als Referenz; endgültige Anschlüsse gemäß bestätigter Bestellung."
+        }
+      ]
+    },
+    "fr": {
+      "tagline": "Mini-PC Intel fin avec deux HDMI 2.0 et stockage M.2 SATA / NVMe",
+      "description": "MCN6 associe des processeurs Intel N au choix, un emplacement DDR4-3200 SO-DIMM pour 8-16 Go et M.2 2242 SATA / NVMe dans un boîtier de 33 mm de haut. Deux HDMI 2.0, quatre USB 3.2 à 10 Gbit/s et Ethernet Gigabit relient les périphériques. Wi-Fi 6 et Bluetooth 5.2 sont en option ; TPM 2.0 est pris en charge.",
+      "highlights": [
+        "Intel N95 / N97 / N100 / N150 / N200 / N300",
+        "1 x DDR4 SO-DIMM, 8-16 Go",
+        "1 x LAN Gigabit",
+        "M.2 2242 SATA / NVMe"
+      ],
+      "specificationHeading": "MCN6 – Fiche technique",
+      "featureHeading": "Connexions compactes et choix de configuration clairs",
+      "advantageSummary": "Comparez mémoire, sorties vidéo, stockage et options sans fil de ce modèle, avec prise en charge de TPM 2.0 et limites indiquées pour alimentation et environnement.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/dpc/mcn6/images/view-1.png",
+          "title": "MCN6 vue du produit 1"
+        },
+        {
+          "image": "/assets/products/commercial/dpc/mcn6/images/view-2.png",
+          "title": "MCN6 vue du produit 2"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "DDR4 SO-DIMM remplaçable",
+          "description": "Intel N95 / N97 / N100 / N150 / N200 / N300. 1 x DDR4-3200 SO-DIMM, 8-16 Go."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Écrans et USB",
+          "description": "2 x HDMI 2.0, jusqu'à 4K à 60 Hz. 4 x USB 3.2 (10 Gbit/s)."
+        },
+        {
+          "icon": "Layers",
+          "title": "Stockage et sans fil",
+          "description": "Le M.2 2242 accepte les SSD SATA ou NVMe PCIe 3.0. Wi-Fi 6 et Bluetooth 5.2 sont en option ; TPM 2.0 est pris en charge."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modèle",
+          "value": "MCN6"
+        },
+        {
+          "label": "Processeur",
+          "value": "Intel N95 / N97 / N100 / N150 / N200 / N300"
+        },
+        {
+          "label": "Circuit graphique",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Mémoire",
+          "value": "1 x DDR4-3200 SO-DIMM, 8-16 Go"
+        },
+        {
+          "label": "Sorties vidéo",
+          "value": "2 x HDMI 2.0, jusqu'à 4K à 60 Hz"
+        },
+        {
+          "label": "Stockage",
+          "value": "1 x M.2 2242 SATA / NVMe PCIe 3.0, 128 Go-2 To"
+        },
+        {
+          "label": "Réseau",
+          "value": "1 x Realtek RTL8111 LAN Gigabit (1000 Mbps)"
+        },
+        {
+          "label": "USB",
+          "value": "4 x USB 3.2 (10 Gbit/s)"
+        },
+        {
+          "label": "Audio",
+          "value": "Prise audio combinée 3,5 mm, Realtek ALC897"
+        },
+        {
+          "label": "Commandes",
+          "value": "Bouton d'alimentation ; bouton Clear CMOS"
+        },
+        {
+          "label": "Alimentation",
+          "value": "12 V CC ; prise 5,5 x 2,1 mm"
+        },
+        {
+          "label": "Sans fil",
+          "value": "Wi-Fi 5 ; Wi-Fi 6 en option ; Bluetooth 4.2 ; Bluetooth 5.2 en option ; 2 antennes FPC"
+        },
+        {
+          "label": "BIOS",
+          "value": "Démarrage RTC / programmé ; mise sous tension automatique ; Wake-on-LAN"
+        },
+        {
+          "label": "TPM",
+          "value": "TPM 2.0 pris en charge"
+        },
+        {
+          "label": "Dimensions",
+          "value": "124,5 x 111 x 33 mm"
+        },
+        {
+          "label": "Matériau",
+          "value": "Boîtier en plastique"
+        },
+        {
+          "label": "Poids",
+          "value": "215 g"
+        },
+        {
+          "label": "Système d'exploitation",
+          "value": "Windows 7 / 8 / 10; Linux"
+        },
+        {
+          "label": "Température de fonctionnement",
+          "value": "0°C à +40°C"
+        },
+        {
+          "label": "Température de stockage",
+          "value": "-20°C à +60°C"
+        },
+        {
+          "label": "Humidité",
+          "value": "90% HR à 40°C"
+        },
+        {
+          "label": "Notes de configuration",
+          "value": "Les options CPU, mémoire, stockage et sans fil suivent la configuration confirmée. Images à titre indicatif ; connectique finale selon la commande confirmée."
+        }
+      ]
+    },
+    "it": {
+      "tagline": "Mini PC Intel sottile con due HDMI 2.0 e M.2 SATA / NVMe",
+      "description": "MCN6 combina opzioni Intel serie N, uno slot DDR4-3200 SO-DIMM per 8-16 GB e M.2 2242 SATA / NVMe in uno chassis alto 33 mm. Due HDMI 2.0, quattro USB 3.2 a 10 Gbps ed Ethernet Gigabit collegano le periferiche. Wi-Fi 6 e Bluetooth 5.2 sono opzionali; TPM 2.0 è supportato.",
+      "highlights": [
+        "Intel N95 / N97 / N100 / N150 / N200 / N300",
+        "1 x DDR4 SO-DIMM, 8-16 GB",
+        "1 x LAN Gigabit",
+        "M.2 2242 SATA / NVMe"
+      ],
+      "specificationHeading": "MCN6 – Specifiche hardware",
+      "featureHeading": "Connessioni compatte e opzioni di configurazione chiare",
+      "advantageSummary": "Confronta memoria, uscite video, archiviazione e wireless di questo modello, con supporto TPM 2.0 e limiti indicati per alimentazione e ambiente.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/dpc/mcn6/images/view-1.png",
+          "title": "MCN6 vista del prodotto 1"
+        },
+        {
+          "image": "/assets/products/commercial/dpc/mcn6/images/view-2.png",
+          "title": "MCN6 vista del prodotto 2"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "DDR4 SO-DIMM sostituibile",
+          "description": "Intel N95 / N97 / N100 / N150 / N200 / N300. 1 x DDR4-3200 SO-DIMM, 8-16 GB."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Display e USB",
+          "description": "2 x HDMI 2.0, fino a 4K a 60 Hz. 4 x USB 3.2 (10 Gbps)."
+        },
+        {
+          "icon": "Layers",
+          "title": "Archiviazione e wireless",
+          "description": "Lo slot M.2 2242 accetta SSD SATA o NVMe PCIe 3.0. Wi-Fi 6 e Bluetooth 5.2 sono opzionali; TPM 2.0 è supportato."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modello",
+          "value": "MCN6"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel N95 / N97 / N100 / N150 / N200 / N300"
+        },
+        {
+          "label": "Grafica",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 x DDR4-3200 SO-DIMM, 8-16 GB"
+        },
+        {
+          "label": "Uscite video",
+          "value": "2 x HDMI 2.0, fino a 4K a 60 Hz"
+        },
+        {
+          "label": "Archiviazione",
+          "value": "1 x M.2 2242 SATA / NVMe PCIe 3.0, 128 GB-2 TB"
+        },
+        {
+          "label": "Rete",
+          "value": "1 x Realtek RTL8111 LAN Gigabit (1000 Mbps)"
+        },
+        {
+          "label": "USB",
+          "value": "4 x USB 3.2 (10 Gbps)"
+        },
+        {
+          "label": "Audio",
+          "value": "Jack audio combinato da 3,5 mm, Realtek ALC897"
+        },
+        {
+          "label": "Comandi",
+          "value": "Pulsante di accensione; pulsante Clear CMOS"
+        },
+        {
+          "label": "Alimentazione",
+          "value": "12 V DC; jack da 5,5 x 2,1 mm"
+        },
+        {
+          "label": "Wireless",
+          "value": "Wi-Fi 5; Wi-Fi 6 opzionale; Bluetooth 4.2; Bluetooth 5.2 opzionale; 2 antenne FPC"
+        },
+        {
+          "label": "BIOS",
+          "value": "Avvio RTC / programmato; accensione automatica; Wake-on-LAN"
+        },
+        {
+          "label": "TPM",
+          "value": "TPM 2.0 supportato"
+        },
+        {
+          "label": "Dimensioni",
+          "value": "124,5 x 111 x 33 mm"
+        },
+        {
+          "label": "Materiale",
+          "value": "Chassis in plastica"
+        },
+        {
+          "label": "Peso",
+          "value": "215 g"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 7 / 8 / 10; Linux"
+        },
+        {
+          "label": "Temperatura operativa",
+          "value": "Da 0°C a +40°C"
+        },
+        {
+          "label": "Temperatura di stoccaggio",
+          "value": "Da -20°C a +60°C"
+        },
+        {
+          "label": "Umidità",
+          "value": "90% UR a 40°C"
+        },
+        {
+          "label": "Note sulla configurazione",
+          "value": "Le opzioni CPU, memoria, archiviazione e wireless seguono la configurazione confermata. Immagini di riferimento; connessioni finali secondo il relativo ordine."
+        }
+      ]
+    },
+    "es": {
+      "tagline": "Mini PC Intel fino con doble HDMI 2.0 y M.2 SATA / NVMe",
+      "description": "MCN6 combina opciones Intel serie N, una ranura DDR4-3200 SO-DIMM para 8-16 GB y M.2 2242 SATA / NVMe en una carcasa de 33 mm de alto. Dos HDMI 2.0, cuatro USB 3.2 de 10 Gbps y Ethernet Gigabit conectan los periféricos. Wi-Fi 6 y Bluetooth 5.2 son opcionales; TPM 2.0 está admitido.",
+      "highlights": [
+        "Intel N95 / N97 / N100 / N150 / N200 / N300",
+        "1 x DDR4 SO-DIMM, 8-16 GB",
+        "1 x LAN Gigabit",
+        "M.2 2242 SATA / NVMe"
+      ],
+      "specificationHeading": "MCN6 – Ficha técnica",
+      "featureHeading": "Conexiones compactas y opciones de configuración claras",
+      "advantageSummary": "Compara memoria, salidas de vídeo, almacenamiento y opciones inalámbricas de este modelo, con compatibilidad TPM 2.0 y límites indicados de alimentación y entorno.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/dpc/mcn6/images/view-1.png",
+          "title": "MCN6 vista del producto 1"
+        },
+        {
+          "image": "/assets/products/commercial/dpc/mcn6/images/view-2.png",
+          "title": "MCN6 vista del producto 2"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "DDR4 SO-DIMM sustituible",
+          "description": "Intel N95 / N97 / N100 / N150 / N200 / N300. 1 x DDR4-3200 SO-DIMM, 8-16 GB."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Pantallas y USB",
+          "description": "2 x HDMI 2.0, hasta 4K a 60 Hz. 4 x USB 3.2 (10 Gbps)."
+        },
+        {
+          "icon": "Layers",
+          "title": "Almacenamiento y red",
+          "description": "La ranura M.2 2242 admite SSD SATA o NVMe PCIe 3.0. Wi-Fi 6 y Bluetooth 5.2 son opcionales; TPM 2.0 está admitido."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modelo",
+          "value": "MCN6"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel N95 / N97 / N100 / N150 / N200 / N300"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 x DDR4-3200 SO-DIMM, 8-16 GB"
+        },
+        {
+          "label": "Salidas de vídeo",
+          "value": "2 x HDMI 2.0, hasta 4K a 60 Hz"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "1 x M.2 2242 SATA / NVMe PCIe 3.0, 128 GB-2 TB"
+        },
+        {
+          "label": "Red",
+          "value": "1 x Realtek RTL8111 LAN Gigabit (1000 Mbps)"
+        },
+        {
+          "label": "USB",
+          "value": "4 x USB 3.2 (10 Gbps)"
+        },
+        {
+          "label": "Audio",
+          "value": "Conector de audio combinado de 3,5 mm, Realtek ALC897"
+        },
+        {
+          "label": "Controles",
+          "value": "Botón de encendido; botón Clear CMOS"
+        },
+        {
+          "label": "Alimentación",
+          "value": "12 V CC; conector de 5,5 x 2,1 mm"
+        },
+        {
+          "label": "Conexión inalámbrica",
+          "value": "Wi-Fi 5; Wi-Fi 6 opcional; Bluetooth 4.2; Bluetooth 5.2 opcional; 2 antenas FPC"
+        },
+        {
+          "label": "BIOS",
+          "value": "Arranque RTC / programado; encendido automático; Wake-on-LAN"
+        },
+        {
+          "label": "TPM",
+          "value": "TPM 2.0 admitido"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "124,5 x 111 x 33 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Carcasa de plástico"
+        },
+        {
+          "label": "Peso",
+          "value": "215 g"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 7 / 8 / 10; Linux"
+        },
+        {
+          "label": "Temperatura de funcionamiento",
+          "value": "De 0°C a +40°C"
+        },
+        {
+          "label": "Temperatura de almacenamiento",
+          "value": "De -20°C a +60°C"
+        },
+        {
+          "label": "Humedad",
+          "value": "90% HR a 40°C"
+        },
+        {
+          "label": "Notas de configuración",
+          "value": "Las opciones CPU, memoria, almacenamiento e inalámbricas dependen de la configuración confirmada. Imágenes de referencia; conexiones finales según el pedido confirmado."
+        }
+      ]
+    }
+  }
+}

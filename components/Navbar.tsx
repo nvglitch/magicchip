@@ -1,5 +1,5 @@
 'use client';
-import { industrialESeriesCopy } from '@/lib/industrial-navigation-copy';
+import { industrialBSeriesCopy, industrialESeriesCopy } from '@/lib/industrial-navigation-copy';
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
@@ -114,7 +114,7 @@ const industrialMegaSeries: ProductMegaSeries[] = [
     id: 'series-b',
     code: 'B',
     title: 'B Series',
-    description: 'Dual-LAN industrial computers with dual COM ports',
+    description: 'Industrial computers with dual-LAN platforms and configurable serial I/O',
     image: '/assets/products/industrial/merged/mcipcb13/front.webp',
     href: '/products/industrial-mini-pc#series-b',
   },
@@ -463,10 +463,10 @@ export default function Navbar() {
                                     <div className="min-w-0">
                                       <span className="inline-flex rounded-md bg-slate-950 px-2 py-0.5 text-[10px] font-bold text-white">{series.code}</span>
                                       <div className="mt-1 flex items-center gap-1">
-                                        <h4 className="text-base font-bold text-slate-950">{series.id === 'series-nas-mb' ? nasMotherboardCopy[language].title : series.code === 'E' ? industrialESeriesCopy[language].title : series.title}</h4>
+                                        <h4 className="text-base font-bold text-slate-950">{series.id === 'series-nas-mb' ? nasMotherboardCopy[language].title : series.code === 'B' ? industrialBSeriesCopy[language].title : series.code === 'E' ? industrialESeriesCopy[language].title : series.title}</h4>
                                         <ChevronRight className="h-4 w-4 shrink-0 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:text-brand-hover" />
                                       </div>
-                                      <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-slate-500">{series.id === 'series-nas-mb' ? nasMotherboardCopy[language].description : series.code === 'E' ? industrialESeriesCopy[language].description : series.description}</p>
+                                      <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-slate-500">{series.id === 'series-nas-mb' ? nasMotherboardCopy[language].description : series.code === 'B' ? industrialBSeriesCopy[language].description : series.code === 'E' ? industrialESeriesCopy[language].description : series.description}</p>
                                     </div>
                                   </Link>
                                 ))}

@@ -1,0 +1,667 @@
+{
+  "id": "mcn1",
+  "name": "MCN1",
+  "category": "commercial-mini-pc",
+  "series": "DPC",
+  "published": true,
+  "tagline": "Compact Intel mini PC with dual HDMI 2.0 and flexible SATA storage",
+  "description": "MCN1 pairs Intel N95 / N100 / N150 options with one DDR4-3200 SO-DIMM slot for 8-16 GB. Dual HDMI 2.0 outputs, four 10 Gbps USB 3.2 ports and Gigabit Ethernet connect displays, peripherals and the network. M.2 SATA storage, an optional 7 mm 2.5-inch drive and selectable wireless configurations provide expansion choices; TPM 2.0 is supported.",
+  "highlights": [
+    "Intel N95 / N100 / N150",
+    "1 x DDR4 SO-DIMM, 8-16 GB",
+    "1 x Gigabit LAN",
+    "M.2 SATA + optional 2.5-inch drive"
+  ],
+  "specificationHeading": "MCN1 hardware specifications",
+  "featureHeading": "Compact desktop connections and clear configuration choices",
+  "advantageSummary": "Compare the memory, display, storage and wireless options for this model, including TPM 2.0 support and the listed power and environment limits.",
+  "galleryCards": [
+    {
+      "image": "/assets/products/commercial/dpc/mcn1/images/view-1.png",
+      "title": "MCN1 product view 1"
+    },
+    {
+      "image": "/assets/products/commercial/dpc/mcn1/images/view-2.png",
+      "title": "MCN1 product view 2"
+    }
+  ],
+  "features": [
+    {
+      "icon": "Cpu",
+      "title": "Replaceable DDR4 SO-DIMM",
+      "description": "Intel N95 / N100 / N150. 1 x DDR4-3200 SO-DIMM, 8-16 GB."
+    },
+    {
+      "icon": "Monitor",
+      "title": "Display and USB connections",
+      "description": "2 x HDMI 2.0, up to 4K at 60 Hz. 4 x USB 3.2 (10 Gbps); 2 front, 2 rear."
+    },
+    {
+      "icon": "Layers",
+      "title": "Storage and wireless options",
+      "description": "M.2 2280 SATA and an optional 7 mm 2.5-inch drive provide storage choices. Wireless specifications are listed separately for this model; TPM 2.0 is supported."
+    }
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCN1"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel N95 / N100 / N150"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel UHD Graphics"
+    },
+    {
+      "label": "Memory",
+      "value": "1 x DDR4-3200 SO-DIMM, 8-16 GB"
+    },
+    {
+      "label": "Video",
+      "value": "2 x HDMI 2.0, up to 4K at 60 Hz"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x M.2 2280 SATA, 128 GB-2 TB; optional 7 mm 2.5-inch HDD / SSD, up to 2 TB"
+    },
+    {
+      "label": "Network",
+      "value": "1 x Realtek RTL8111 Gigabit LAN (1000 Mbps)"
+    },
+    {
+      "label": "USB",
+      "value": "4 x USB 3.2 (10 Gbps); 2 front, 2 rear"
+    },
+    {
+      "label": "Audio",
+      "value": "3.5 mm combo audio jack"
+    },
+    {
+      "label": "Controls",
+      "value": "Power button; Clear CMOS button"
+    },
+    {
+      "label": "Power",
+      "value": "12 V DC; 5.5 x 2.1 mm jack"
+    },
+    {
+      "label": "Wireless",
+      "value": "Wi-Fi 5; optional Wi-Fi 6; Bluetooth 4.2; optional Bluetooth 5.2; 2 FPC antennas"
+    },
+    {
+      "label": "BIOS",
+      "value": "RTC / timed boot; automatic power-on; Wake-on-LAN"
+    },
+    {
+      "label": "TPM",
+      "value": "TPM 2.0 supported"
+    },
+    {
+      "label": "Dimensions",
+      "value": "127 x 145 x 38 mm"
+    },
+    {
+      "label": "Material",
+      "value": "Plastic enclosure"
+    },
+    {
+      "label": "Weight",
+      "value": "315 g"
+    },
+    {
+      "label": "System",
+      "value": "Windows 7 / 8 / 10; Linux"
+    },
+    {
+      "label": "Operating temperature",
+      "value": "0°C to +40°C"
+    },
+    {
+      "label": "Storage temperature",
+      "value": "-20°C to +60°C"
+    },
+    {
+      "label": "Humidity",
+      "value": "90% RH at 40°C"
+    },
+    {
+      "label": "Configuration notes",
+      "value": "The 2.5-inch drive is optional. CPU, memory, storage and wireless options follow the confirmed configuration. Product images are for reference; final I/O follows the confirmed order."
+    }
+  ],
+  "image": "/assets/products/commercial/dpc/mcn1/images/main-square.png",
+  "images": [
+    "/assets/products/commercial/dpc/mcn1/images/main-square.png"
+  ],
+  "galleryImages": [
+    "/assets/products/commercial/dpc/mcn1/images/view-1.png",
+    "/assets/products/commercial/dpc/mcn1/images/view-2.png"
+  ],
+  "sourceBrochure": "桌面端DPC/MCN1 brochure.pdf",
+  "sourceSha256": "8ac91756845ca888e85a77d0b6098182bf235109fd2612b0544701d2c32addb9",
+  "translations": {
+    "de": {
+      "tagline": "Kompakter Intel-Mini-PC mit zwei HDMI-2.0-Ports und SATA-Speicheroptionen",
+      "description": "MCN1 kombiniert Intel N95 / N100 / N150 mit einem DDR4-3200-SO-DIMM-Steckplatz für 8-16 GB. Zwei HDMI-2.0-Ausgänge, vier USB-3.2-Ports mit 10 Gbit/s und Gigabit-Ethernet verbinden Bildschirme, Peripherie und Netzwerk. M.2-SATA-Speicher, ein optionales 7-mm-2,5-Zoll-Laufwerk und wählbare Funkkonfigurationen bieten Erweiterung; TPM 2.0 wird unterstützt.",
+      "highlights": [
+        "Intel N95 / N100 / N150",
+        "1 x DDR4 SO-DIMM, 8-16 GB",
+        "1 x Gigabit LAN",
+        "M.2 SATA + optionales 2,5-Zoll-Laufwerk"
+      ],
+      "specificationHeading": "MCN1 – Technische Daten",
+      "featureHeading": "Kompakte Anschlüsse und klare Optionen",
+      "advantageSummary": "Vergleichen Sie RAM, Bildausgänge, Speicher und Funkoptionen dieses Modells einschließlich TPM-2.0-Unterstützung sowie der angegebenen Stromversorgung und Umgebungsgrenzen.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/dpc/mcn1/images/view-1.png",
+          "title": "MCN1 Produktansicht 1"
+        },
+        {
+          "image": "/assets/products/commercial/dpc/mcn1/images/view-2.png",
+          "title": "MCN1 Produktansicht 2"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "Austauschbarer DDR4-RAM",
+          "description": "Intel N95 / N100 / N150. 1 x DDR4-3200 SO-DIMM, 8-16 GB."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Bildschirme und USB",
+          "description": "2 x HDMI 2.0, bis 4K bei 60 Hz. 4 x USB 3.2 (10 Gbit/s); 2 vorne, 2 hinten."
+        },
+        {
+          "icon": "Layers",
+          "title": "Speicher und Funk",
+          "description": "M.2 2280 SATA und ein optionales 7-mm-2,5-Zoll-Laufwerk bieten Speicheroptionen. Die Funkdaten sind für dieses Modell separat aufgeführt; TPM 2.0 wird unterstützt."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modell",
+          "value": "MCN1"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel N95 / N100 / N150"
+        },
+        {
+          "label": "Grafik",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Arbeitsspeicher",
+          "value": "1 x DDR4-3200 SO-DIMM, 8-16 GB"
+        },
+        {
+          "label": "Bildausgänge",
+          "value": "2 x HDMI 2.0, bis 4K bei 60 Hz"
+        },
+        {
+          "label": "Datenspeicher",
+          "value": "1 x M.2 2280 SATA, 128 GB-2 TB; optionales 7-mm-2,5-Zoll-HDD-/SSD-Laufwerk, bis 2 TB"
+        },
+        {
+          "label": "Netzwerk",
+          "value": "1 x Realtek RTL8111 Gigabit LAN (1000 Mbps)"
+        },
+        {
+          "label": "USB",
+          "value": "4 x USB 3.2 (10 Gbit/s); 2 vorne, 2 hinten"
+        },
+        {
+          "label": "Audio",
+          "value": "3,5-mm-Kombi-Audiobuchse"
+        },
+        {
+          "label": "Bedienung",
+          "value": "Ein-/Aus-Taste; Clear-CMOS-Taste"
+        },
+        {
+          "label": "Stromversorgung",
+          "value": "12 V DC; 5,5 x 2,1 mm Buchse"
+        },
+        {
+          "label": "Funkverbindungen",
+          "value": "WLAN 5; WLAN 6 optional; Bluetooth 4.2; Bluetooth 5.2 optional; 2 FPC-Antennen"
+        },
+        {
+          "label": "BIOS",
+          "value": "RTC / zeitgesteuerter Start; automatisches Einschalten; Wake-on-LAN"
+        },
+        {
+          "label": "TPM",
+          "value": "TPM 2.0 wird unterstützt"
+        },
+        {
+          "label": "Abmessungen",
+          "value": "127 x 145 x 38 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Kunststoffgehäuse"
+        },
+        {
+          "label": "Gewicht",
+          "value": "315 g"
+        },
+        {
+          "label": "Betriebssystem",
+          "value": "Windows 7 / 8 / 10; Linux"
+        },
+        {
+          "label": "Betriebstemperatur",
+          "value": "0°C bis +40°C"
+        },
+        {
+          "label": "Lagertemperatur",
+          "value": "-20°C bis +60°C"
+        },
+        {
+          "label": "Luftfeuchtigkeit",
+          "value": "90% r. F. bei 40°C"
+        },
+        {
+          "label": "Hinweise zur Konfiguration",
+          "value": "Das 2,5-Zoll-Laufwerk ist optional. CPU, RAM, Speicher und Funkoptionen richten sich nach der bestätigten Konfiguration. Bilder dienen als Referenz; endgültige Anschlüsse gemäß bestätigter Bestellung."
+        }
+      ]
+    },
+    "fr": {
+      "tagline": "Mini-PC Intel compact avec deux HDMI 2.0 et stockage SATA évolutif",
+      "description": "MCN1 associe Intel N95 / N100 / N150 à un emplacement DDR4-3200 SO-DIMM pour 8-16 Go. Deux sorties HDMI 2.0, quatre ports USB 3.2 à 10 Gbit/s et Ethernet Gigabit relient écrans, périphériques et réseau. Le stockage M.2 SATA, un disque 2,5 pouces de 7 mm en option et des configurations sans fil au choix offrent des possibilités d'extension ; TPM 2.0 est pris en charge.",
+      "highlights": [
+        "Intel N95 / N100 / N150",
+        "1 x DDR4 SO-DIMM, 8-16 Go",
+        "1 x LAN Gigabit",
+        "M.2 SATA + disque 2,5 pouces en option"
+      ],
+      "specificationHeading": "MCN1 – Fiche technique",
+      "featureHeading": "Connexions compactes et choix de configuration clairs",
+      "advantageSummary": "Comparez mémoire, sorties vidéo, stockage et options sans fil de ce modèle, avec prise en charge de TPM 2.0 et limites indiquées pour alimentation et environnement.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/dpc/mcn1/images/view-1.png",
+          "title": "MCN1 vue du produit 1"
+        },
+        {
+          "image": "/assets/products/commercial/dpc/mcn1/images/view-2.png",
+          "title": "MCN1 vue du produit 2"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "DDR4 SO-DIMM remplaçable",
+          "description": "Intel N95 / N100 / N150. 1 x DDR4-3200 SO-DIMM, 8-16 Go."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Écrans et USB",
+          "description": "2 x HDMI 2.0, jusqu'à 4K à 60 Hz. 4 x USB 3.2 (10 Gbit/s) ; 2 à l'avant, 2 à l'arrière."
+        },
+        {
+          "icon": "Layers",
+          "title": "Stockage et sans fil",
+          "description": "M.2 2280 SATA et un disque 2,5 pouces de 7 mm en option offrent des choix de stockage. Les caractéristiques sans fil sont indiquées pour ce modèle ; TPM 2.0 est pris en charge."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modèle",
+          "value": "MCN1"
+        },
+        {
+          "label": "Processeur",
+          "value": "Intel N95 / N100 / N150"
+        },
+        {
+          "label": "Circuit graphique",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Mémoire",
+          "value": "1 x DDR4-3200 SO-DIMM, 8-16 Go"
+        },
+        {
+          "label": "Sorties vidéo",
+          "value": "2 x HDMI 2.0, jusqu'à 4K à 60 Hz"
+        },
+        {
+          "label": "Stockage",
+          "value": "1 x M.2 2280 SATA, 128 Go-2 To ; HDD / SSD 2,5 pouces de 7 mm en option, jusqu'à 2 To"
+        },
+        {
+          "label": "Réseau",
+          "value": "1 x Realtek RTL8111 LAN Gigabit (1000 Mbps)"
+        },
+        {
+          "label": "USB",
+          "value": "4 x USB 3.2 (10 Gbit/s) ; 2 à l'avant, 2 à l'arrière"
+        },
+        {
+          "label": "Audio",
+          "value": "Prise audio combinée 3,5 mm"
+        },
+        {
+          "label": "Commandes",
+          "value": "Bouton d'alimentation ; bouton Clear CMOS"
+        },
+        {
+          "label": "Alimentation",
+          "value": "12 V CC ; prise 5,5 x 2,1 mm"
+        },
+        {
+          "label": "Sans fil",
+          "value": "Wi-Fi 5 ; Wi-Fi 6 en option ; Bluetooth 4.2 ; Bluetooth 5.2 en option ; 2 antennes FPC"
+        },
+        {
+          "label": "BIOS",
+          "value": "Démarrage RTC / programmé ; mise sous tension automatique ; Wake-on-LAN"
+        },
+        {
+          "label": "TPM",
+          "value": "TPM 2.0 pris en charge"
+        },
+        {
+          "label": "Dimensions",
+          "value": "127 x 145 x 38 mm"
+        },
+        {
+          "label": "Matériau",
+          "value": "Boîtier en plastique"
+        },
+        {
+          "label": "Poids",
+          "value": "315 g"
+        },
+        {
+          "label": "Système d'exploitation",
+          "value": "Windows 7 / 8 / 10; Linux"
+        },
+        {
+          "label": "Température de fonctionnement",
+          "value": "0°C à +40°C"
+        },
+        {
+          "label": "Température de stockage",
+          "value": "-20°C à +60°C"
+        },
+        {
+          "label": "Humidité",
+          "value": "90% HR à 40°C"
+        },
+        {
+          "label": "Notes de configuration",
+          "value": "Le disque 2,5 pouces est en option. Les options CPU, mémoire, stockage et sans fil suivent la configuration confirmée. Images à titre indicatif ; connectique finale selon la commande confirmée."
+        }
+      ]
+    },
+    "it": {
+      "tagline": "Mini PC Intel compatto con due HDMI 2.0 e archiviazione SATA flessibile",
+      "description": "MCN1 combina Intel N95 / N100 / N150 con uno slot DDR4-3200 SO-DIMM per 8-16 GB. Due uscite HDMI 2.0, quattro USB 3.2 a 10 Gbps ed Ethernet Gigabit collegano display, periferiche e rete. M.2 SATA, un disco da 2,5 pollici alto 7 mm opzionale e configurazioni wireless a scelta offrono espansione; TPM 2.0 è supportato.",
+      "highlights": [
+        "Intel N95 / N100 / N150",
+        "1 x DDR4 SO-DIMM, 8-16 GB",
+        "1 x LAN Gigabit",
+        "M.2 SATA + disco da 2,5 pollici opzionale"
+      ],
+      "specificationHeading": "MCN1 – Specifiche hardware",
+      "featureHeading": "Connessioni compatte e opzioni di configurazione chiare",
+      "advantageSummary": "Confronta memoria, uscite video, archiviazione e wireless di questo modello, con supporto TPM 2.0 e limiti indicati per alimentazione e ambiente.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/dpc/mcn1/images/view-1.png",
+          "title": "MCN1 vista del prodotto 1"
+        },
+        {
+          "image": "/assets/products/commercial/dpc/mcn1/images/view-2.png",
+          "title": "MCN1 vista del prodotto 2"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "DDR4 SO-DIMM sostituibile",
+          "description": "Intel N95 / N100 / N150. 1 x DDR4-3200 SO-DIMM, 8-16 GB."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Display e USB",
+          "description": "2 x HDMI 2.0, fino a 4K a 60 Hz. 4 x USB 3.2 (10 Gbps); 2 frontali, 2 posteriori."
+        },
+        {
+          "icon": "Layers",
+          "title": "Archiviazione e wireless",
+          "description": "M.2 2280 SATA e un disco da 2,5 pollici alto 7 mm opzionale offrono scelte di archiviazione. Il wireless è specificato per questo modello; TPM 2.0 è supportato."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modello",
+          "value": "MCN1"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel N95 / N100 / N150"
+        },
+        {
+          "label": "Grafica",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 x DDR4-3200 SO-DIMM, 8-16 GB"
+        },
+        {
+          "label": "Uscite video",
+          "value": "2 x HDMI 2.0, fino a 4K a 60 Hz"
+        },
+        {
+          "label": "Archiviazione",
+          "value": "1 x M.2 2280 SATA, 128 GB-2 TB; HDD / SSD da 2,5 pollici alto 7 mm opzionale, fino a 2 TB"
+        },
+        {
+          "label": "Rete",
+          "value": "1 x Realtek RTL8111 LAN Gigabit (1000 Mbps)"
+        },
+        {
+          "label": "USB",
+          "value": "4 x USB 3.2 (10 Gbps); 2 frontali, 2 posteriori"
+        },
+        {
+          "label": "Audio",
+          "value": "Jack audio combinato da 3,5 mm"
+        },
+        {
+          "label": "Comandi",
+          "value": "Pulsante di accensione; pulsante Clear CMOS"
+        },
+        {
+          "label": "Alimentazione",
+          "value": "12 V DC; jack da 5,5 x 2,1 mm"
+        },
+        {
+          "label": "Wireless",
+          "value": "Wi-Fi 5; Wi-Fi 6 opzionale; Bluetooth 4.2; Bluetooth 5.2 opzionale; 2 antenne FPC"
+        },
+        {
+          "label": "BIOS",
+          "value": "Avvio RTC / programmato; accensione automatica; Wake-on-LAN"
+        },
+        {
+          "label": "TPM",
+          "value": "TPM 2.0 supportato"
+        },
+        {
+          "label": "Dimensioni",
+          "value": "127 x 145 x 38 mm"
+        },
+        {
+          "label": "Materiale",
+          "value": "Chassis in plastica"
+        },
+        {
+          "label": "Peso",
+          "value": "315 g"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 7 / 8 / 10; Linux"
+        },
+        {
+          "label": "Temperatura operativa",
+          "value": "Da 0°C a +40°C"
+        },
+        {
+          "label": "Temperatura di stoccaggio",
+          "value": "Da -20°C a +60°C"
+        },
+        {
+          "label": "Umidità",
+          "value": "90% UR a 40°C"
+        },
+        {
+          "label": "Note sulla configurazione",
+          "value": "Il disco da 2,5 pollici è opzionale. Le opzioni CPU, memoria, archiviazione e wireless seguono la configurazione confermata. Immagini di riferimento; connessioni finali secondo il relativo ordine."
+        }
+      ]
+    },
+    "es": {
+      "tagline": "Mini PC Intel compacto con doble HDMI 2.0 y almacenamiento SATA flexible",
+      "description": "MCN1 combina Intel N95 / N100 / N150 con una ranura DDR4-3200 SO-DIMM para 8-16 GB. Dos salidas HDMI 2.0, cuatro USB 3.2 de 10 Gbps y Ethernet Gigabit conectan pantallas, periféricos y red. M.2 SATA, un disco de 2,5 pulgadas y 7 mm opcional y configuraciones inalámbricas a elegir ofrecen ampliaciones; TPM 2.0 está admitido.",
+      "highlights": [
+        "Intel N95 / N100 / N150",
+        "1 x DDR4 SO-DIMM, 8-16 GB",
+        "1 x LAN Gigabit",
+        "M.2 SATA + disco de 2,5 pulgadas opcional"
+      ],
+      "specificationHeading": "MCN1 – Ficha técnica",
+      "featureHeading": "Conexiones compactas y opciones de configuración claras",
+      "advantageSummary": "Compara memoria, salidas de vídeo, almacenamiento y opciones inalámbricas de este modelo, con compatibilidad TPM 2.0 y límites indicados de alimentación y entorno.",
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/dpc/mcn1/images/view-1.png",
+          "title": "MCN1 vista del producto 1"
+        },
+        {
+          "image": "/assets/products/commercial/dpc/mcn1/images/view-2.png",
+          "title": "MCN1 vista del producto 2"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "DDR4 SO-DIMM sustituible",
+          "description": "Intel N95 / N100 / N150. 1 x DDR4-3200 SO-DIMM, 8-16 GB."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Pantallas y USB",
+          "description": "2 x HDMI 2.0, hasta 4K a 60 Hz. 4 x USB 3.2 (10 Gbps); 2 frontales, 2 traseros."
+        },
+        {
+          "icon": "Layers",
+          "title": "Almacenamiento y red",
+          "description": "M.2 2280 SATA y un disco de 2,5 pulgadas y 7 mm opcional ofrecen opciones de almacenamiento. La conexión inalámbrica se especifica para este modelo; TPM 2.0 está admitido."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modelo",
+          "value": "MCN1"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel N95 / N100 / N150"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 x DDR4-3200 SO-DIMM, 8-16 GB"
+        },
+        {
+          "label": "Salidas de vídeo",
+          "value": "2 x HDMI 2.0, hasta 4K a 60 Hz"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "1 x M.2 2280 SATA, 128 GB-2 TB; HDD / SSD de 2,5 pulgadas y 7 mm opcional, hasta 2 TB"
+        },
+        {
+          "label": "Red",
+          "value": "1 x Realtek RTL8111 LAN Gigabit (1000 Mbps)"
+        },
+        {
+          "label": "USB",
+          "value": "4 x USB 3.2 (10 Gbps); 2 frontales, 2 traseros"
+        },
+        {
+          "label": "Audio",
+          "value": "Conector de audio combinado de 3,5 mm"
+        },
+        {
+          "label": "Controles",
+          "value": "Botón de encendido; botón Clear CMOS"
+        },
+        {
+          "label": "Alimentación",
+          "value": "12 V CC; conector de 5,5 x 2,1 mm"
+        },
+        {
+          "label": "Conexión inalámbrica",
+          "value": "Wi-Fi 5; Wi-Fi 6 opcional; Bluetooth 4.2; Bluetooth 5.2 opcional; 2 antenas FPC"
+        },
+        {
+          "label": "BIOS",
+          "value": "Arranque RTC / programado; encendido automático; Wake-on-LAN"
+        },
+        {
+          "label": "TPM",
+          "value": "TPM 2.0 admitido"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "127 x 145 x 38 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Carcasa de plástico"
+        },
+        {
+          "label": "Peso",
+          "value": "315 g"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 7 / 8 / 10; Linux"
+        },
+        {
+          "label": "Temperatura de funcionamiento",
+          "value": "De 0°C a +40°C"
+        },
+        {
+          "label": "Temperatura de almacenamiento",
+          "value": "De -20°C a +60°C"
+        },
+        {
+          "label": "Humedad",
+          "value": "90% HR a 40°C"
+        },
+        {
+          "label": "Notas de configuración",
+          "value": "El disco de 2,5 pulgadas es opcional. Las opciones CPU, memoria, almacenamiento e inalámbricas dependen de la configuración confirmada. Imágenes de referencia; conexiones finales según el pedido confirmado."
+        }
+      ]
+    }
+  }
+}

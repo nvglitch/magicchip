@@ -8,7 +8,7 @@ import { industrialCatalog, industrialProductAliases } from '@/lib/industrial-ca
 import { aiCatalog, aiProductAliases } from '@/lib/ai-catalog';
 import { firewallProductAliases } from '@/lib/firewall-product-aliases';
 import { permanentRedirect } from 'next/navigation';
-import { mergeSpecifications } from '@/lib/product-specifications';
+import { mergeSpecifications, type ProductConfiguration } from '@/lib/product-specifications';
 import { categorySeo, createPageMetadata, productSeo, serializeJsonLd, SITE_NAME, SITE_URL } from '@/lib/seo';
 
 type ProductLayoutProps = {
@@ -38,11 +38,12 @@ export default async function ProductLayout({ children, params }: ProductLayoutP
   const product = productSeo[id];
   const categoryEntry = categorySeo[category];
   const catalogItem = [...industrialCatalog, ...firewallCatalog, ...commercialCatalog, ...aiCatalog].find((item) => item.id === id);
-  const translatedCopy = [...commercialCatalog, ...firewallCatalog].find(item => item.id === id)?.translations?.[isValidLanguage(lang) ? lang : 'en'];
+  const translatedCopy = [...industrialCatalog, ...commercialCatalog, ...firewallCatalog].find(item => item.id === id)?.translations?.[isValidLanguage(lang) ? lang : 'en'];
   const configurationProduct = category === 'industrial-mini-pc' ? industrialCatalog.find(item => item.id === id) : category === 'ai-mini-pc' ? aiCatalog.find(item => item.id === id) : category === 'firewall-mini-pc' ? firewallCatalog.find(item => item.id === id) : undefined;
   const isValidProduct = product && product.category === category;
 
   if (!isValidProduct) return children;
+  const configurationSkus: ProductConfiguration[] | undefined = configurationProduct?.skus;
 
   const productData = {
     '@context': 'https://schema.org',
@@ -55,13 +56,13 @@ export default async function ProductLayout({ children, params }: ProductLayoutP
     sku: configurationProduct?.skus?.length ? undefined : catalogItem?.name || id.toUpperCase(),
     mpn: configurationProduct?.skus?.length ? undefined : catalogItem?.name || id.toUpperCase(),
     productGroupID: configurationProduct?.skus?.length ? configurationProduct.name : undefined,
-    hasVariant: configurationProduct?.skus?.map(sku => ({
+    hasVariant: configurationSkus?.map(sku => ({
       '@type': 'Product',
-      name: `${configurationProduct.name} ${sku.label}`,
+      name: `${configurationProduct?.name || product.name} ${isValidLanguage(lang) && lang !== 'en' ? sku.labelTranslations?.[lang] || sku.label : sku.label}`,
       sku: sku.legacyNames[0],
       image: `${SITE_URL}${sku.image}`,
       url: `${SITE_URL}${localizedHref(product.path, lang)}#sku-${sku.key}`,
-      additionalProperty: (id === 'mcai2' ? sku.specs : mergeSpecifications(configurationProduct.specs, sku.specs)).map(spec => ({ '@type': 'PropertyValue', name: spec.label, value: spec.value })),
+      additionalProperty: ((isValidLanguage(lang) && lang !== 'en' ? sku.translations?.[lang]?.specs : undefined) || (id === 'mcai2' ? sku.specs : mergeSpecifications(configurationProduct?.specs || [], sku.specs))).map(spec => ({ '@type': 'PropertyValue', name: spec.label, value: spec.value })),
     })),
     category: categoryEntry?.name,
     brand: { '@type': 'Brand', name: SITE_NAME },

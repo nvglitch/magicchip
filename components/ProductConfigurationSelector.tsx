@@ -42,7 +42,8 @@ export default function ProductConfigurationSelector({ model, skus, sharedSpecs,
 
   const active = skus[selected];
   useEffect(() => { onConfigurationChange?.(active); }, [active, onConfigurationChange]);
-  const specifications = mergeSpecifications(sharedSpecs, [...active.specs, { label: 'Model', value: active.legacyNames[0] || model }]);
+  const activeCopy = language === 'en' ? undefined : active.translations?.[language];
+  const specifications = activeCopy?.specs || mergeSpecifications(sharedSpecs, [...active.specs, { label: 'Model', value: active.legacyNames[0] || model }]);
   const selectSku = (index: number) => {
     setSelected(index);
     window.history.replaceState(null, '', `#sku-${skus[index].key}`);
@@ -78,7 +79,7 @@ export default function ProductConfigurationSelector({ model, skus, sharedSpecs,
           ))}
         </div>
         <div id="sku-panel" role="tabpanel" aria-labelledby={`sku-tab-${active.key}`} className="mt-6 overflow-hidden rounded-xl border border-blue-200 bg-white">
-          <ConfigurationSpecifications key={active.key} title={`${configurationLabel(active)} · ${words.specification}`} image={active.image} imageAlt={`${model} ${configurationLabel(active)}`} imageCaption={referenceImage ? words.image : undefined} specs={specifications} galleryCards={active.galleryCards} onPreview={onPreview} />
+          <ConfigurationSpecifications key={active.key} title={`${configurationLabel(active)} · ${words.specification}`} image={active.image} imageAlt={`${model} ${configurationLabel(active)}`} imageCaption={referenceImage ? words.image : undefined} specs={specifications} galleryCards={activeCopy?.galleryCards || active.galleryCards} onPreview={onPreview} />
         </div>
       </div>
     </section>

@@ -62,11 +62,11 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
   },
   "mcipcd5": {
     "image": "/assets/products/thumbnails/mcipcd5.webp",
-    "source": "/assets/products/industrial/brochure/mcipcd5/main.webp"
+    "source": "/assets/products/industrial/october/mcipcd5/main.webp"
   },
   "mcipcd5f": {
     "image": "/assets/products/thumbnails/mcipcd5f.webp",
-    "source": "/assets/products/industrial/brochure/mcipcd5f/main.webp"
+    "source": "/assets/products/industrial/october/mcipcd5f/main.webp"
   },
   "mcipcd6": {
     "image": "/assets/products/thumbnails/mcipcd6.webp",
@@ -110,19 +110,19 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
   },
   "mcipc1": {
     "image": "/assets/products/thumbnails/mcipc1.webp",
-    "source": "/assets/products/industrial/c-series/mcipc1/images/main-square-srgb.jpg"
+    "source": "/assets/products/industrial/october/mcipc1/main.webp"
   },
   "mcipc2": {
-    "image": "/assets/products/thumbnails/mcipc2a.webp",
-    "source": "/assets/products/industrial/c-series/mcipc2a/images/main-transparent.png"
+    "image": "/assets/products/thumbnails/mcipc2.webp",
+    "source": "/assets/products/industrial/october/mcipc2/main.webp"
   },
   "mcipc2a": {
     "image": "/assets/products/thumbnails/mcipc2a.webp",
-    "source": "/assets/products/industrial/c-series/mcipc2a/images/main-transparent.png"
+    "source": "/assets/products/industrial/october/mcipc2a/main.webp"
   },
   "mcipc2b": {
     "image": "/assets/products/thumbnails/mcipc2b.webp",
-    "source": "/assets/products/industrial/c-series/mcipc2b/images/main-transparent.png"
+    "source": "/assets/products/industrial/october/mcipc2b/main.webp"
   },
   "mcipc3": {
     "image": "/assets/products/thumbnails/mcipc3.webp",
@@ -142,7 +142,7 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
   },
   "mcipc8": {
     "image": "/assets/products/thumbnails/mcipc8.webp",
-    "source": "/assets/products/industrial/c-series/mcipc8/images/main-square-srgb.jpg"
+    "source": "/assets/products/industrial/october/mcipc8/main.webp"
   },
   "mcipcd1": {
     "image": "/assets/products/thumbnails/mcipcd1.webp",
@@ -507,5 +507,9 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
   "mcsrp1-hdmi": {
     "image": "/assets/products/thumbnails/mcsrp1-hdmi.webp",
     "source": "/assets/products/firewall/dual-port-series/mcsrp1-hdmi/front.webp"
+  },
+  "mcipcbp1": {
+    "image": "/assets/products/thumbnails/mcipcbp1.webp",
+    "source": "/assets/products/industrial/october/mcipcbp1/main.webp"
   }
 };

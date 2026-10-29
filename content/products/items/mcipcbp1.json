@@ -1,0 +1,766 @@
+{
+  "id": "mcipcbp1",
+  "name": "MCIPCBP1",
+  "category": "industrial-mini-pc",
+  "series": "B",
+  "published": true,
+  "image": "/assets/products/industrial/october/mcipcbp1/main.webp",
+  "galleryImages": [
+    "/assets/products/industrial/october/mcipcbp1/front.webp",
+    "/assets/products/industrial/october/mcipcbp1/rear.webp"
+  ],
+  "sourceBrochures": [
+    "工控机IPC/B系列/MCIPCBP1 brochure.pdf"
+  ],
+  "sourceSha256": "c50b21d786415548949b117daa414d0684de9eb6c1be7e1a96dc3cae2a26478e",
+  "tagline": "Fanless industrial edge PC with 2.5GbE and expansion I/O",
+  "description": "MCIPCBP1 offers J4125, J6412 and selected Intel Core platforms in a fanless aluminum chassis. Dual Intel I225-V 2.5GbE, six RS-232 channels (two DB9 and four through expansion I/O), 10 GPIO and 9-36 V input support equipment integration. RAM and USB depend on the platform; four LAN ports are optional.",
+  "highlights": [
+    "Intel J4125 / J6412 / Core",
+    "2 x Intel I225-V 2.5GbE",
+    "6 x RS-232; 10 GPIO",
+    "9-36 V DC"
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCIPCBP1"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel J4125 / J6412; Core i3 / i5 / i7 (8th / 10th / 11th Gen)"
+    },
+    {
+      "label": "Memory",
+      "value": "DDR4 SO-DIMM: J4125 / J6412: 1 slot; Core platforms: 2 slots"
+    },
+    {
+      "label": "Display",
+      "value": "1 x HDMI"
+    },
+    {
+      "label": "Network",
+      "value": "2 x Intel I225-V 2.5GbE RJ45; optional expansion to 4 LAN ports"
+    },
+    {
+      "label": "USB",
+      "value": "J4125 / J6412 / 11th Gen: 4 x USB 3.0 + 2 x USB 2.0; 8th/10th Gen: 2 x USB 3.0 + 4 x USB 2.0"
+    },
+    {
+      "label": "Serial",
+      "value": "6 x RS-232: 2 x DB9 + 4 via expansion I/O; 2 support RS-422/485"
+    },
+    {
+      "label": "GPIO",
+      "value": "10 GPIO"
+    },
+    {
+      "label": "Controls",
+      "value": "1 remote power-switch input"
+    },
+    {
+      "label": "Audio",
+      "value": "Headphone jack"
+    },
+    {
+      "label": "Antennas",
+      "value": "5 connectors for Wi-Fi / Bluetooth / cellular"
+    },
+    {
+      "label": "M.2 SATA",
+      "value": "1 x M.2 2242 / 2260 / 2280 SATA"
+    },
+    {
+      "label": "M.2 NVMe",
+      "value": "1 x M.2 2280 NVMe"
+    },
+    {
+      "label": "Drive bay",
+      "value": "1 x 2.5-inch HDD / SSD bay"
+    },
+    {
+      "label": "Cellular / SIM",
+      "value": "M.2 3042 / 3052 for 3G / 4G / 5G; onboard SIM slot"
+    },
+    {
+      "label": "Wireless",
+      "value": "M.2 2230: Wi-Fi / Bluetooth"
+    },
+    {
+      "label": "Monitoring",
+      "value": "Watchdog timer; diskless boot"
+    },
+    {
+      "label": "Power",
+      "value": "9-36 V DC; 4-pin aviation connector"
+    },
+    {
+      "label": "Cooling",
+      "value": "Fanless aluminum enclosure"
+    },
+    {
+      "label": "Mounting",
+      "value": "Desktop"
+    },
+    {
+      "label": "Dimensions",
+      "value": "300 x 155 x 50 mm"
+    },
+    {
+      "label": "Weight",
+      "value": "1.8 kg"
+    },
+    {
+      "label": "System",
+      "value": "Windows 10 / WES 10 / Linux"
+    },
+    {
+      "label": "Operating temperature",
+      "value": "-20°C ... +60°C"
+    },
+    {
+      "label": "Storage temperature",
+      "value": "-30°C ... +70°C"
+    },
+    {
+      "label": "Humidity",
+      "value": "10-90% RH at 30°C, non-condensing"
+    },
+    {
+      "label": "Configuration notes",
+      "value": "RAM slots and USB mix depend on the CPU platform; four LAN ports are optional. Images are for reference; final I/O follows the confirmed configuration."
+    }
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/industrial/october/mcipcbp1/front.webp",
+      "title": "MCIPCBP1 - Product view"
+    },
+    {
+      "image": "/assets/products/industrial/october/mcipcbp1/rear.webp",
+      "title": "MCIPCBP1 - I/O panel"
+    }
+  ],
+  "specificationHeading": "MCIPCBP1 - Hardware specifications",
+  "featureHeading": "Industrial interfaces and configuration choices",
+  "advantageSummary": "Match the platform, memory, storage and interfaces to the confirmed configuration.",
+  "features": [
+    {
+      "icon": "Cpu",
+      "title": "CPU and memory",
+      "description": "Intel J4125 / J6412; Core i3 / i5 / i7 (8th / 10th / 11th Gen) DDR4 SO-DIMM: J4125 / J6412: 1 slot; Core platforms: 2 slots"
+    },
+    {
+      "icon": "Network",
+      "title": "Equipment interfaces",
+      "description": "2 x Intel I225-V 2.5GbE RJ45; optional expansion to 4 LAN ports 6 x RS-232: 2 x DB9 + 4 via expansion I/O; 2 support RS-422/485"
+    },
+    {
+      "icon": "HardDrive",
+      "title": "Storage and expansion",
+      "description": "M.2 SATA, M.2 NVMe and a 2.5-inch HDD / SSD bay"
+    }
+  ],
+  "translations": {
+    "de": {
+      "tagline": "Lüfterloser Industrie-PC mit 2.5GbE und Erweiterungs-I/O",
+      "description": "MCIPCBP1 bietet J4125, J6412 und Intel-Core-Plattformen im lüfterlosen Aluminiumgehäuse. Zwei Intel-I225-V-2.5GbE-Ports, sechs RS-232-Kanäle (zwei DB9 und vier über Erweiterungs-I/O), 10 GPIO und 9-36 V unterstützen die Geräteintegration. RAM und USB sind plattformabhängig; vier LAN-Ports sind optional.",
+      "highlights": [
+        "Intel J4125 / J6412 / Core",
+        "2 x Intel I225-V 2.5GbE",
+        "6 x RS-232; 10 GPIO",
+        "9-36 V DC"
+      ],
+      "specs": [
+        {
+          "label": "Modell",
+          "value": "MCIPCBP1"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel J4125 / J6412; Core i3 / i5 / i7 (8th / 10th / 11th Gen)"
+        },
+        {
+          "label": "Arbeitsspeicher",
+          "value": "DDR4 SO-DIMM: J4125 / J6412: 1 Steckplatz; Core-Plattformen: 2 Steckplätze"
+        },
+        {
+          "label": "Bildausgänge",
+          "value": "1 x HDMI"
+        },
+        {
+          "label": "Netzwerk",
+          "value": "2 x Intel I225-V 2.5GbE RJ45; optional auf 4 LAN-Ports erweiterbar"
+        },
+        {
+          "label": "USB",
+          "value": "J4125 / J6412 / 11. Gen.: 4 x USB 3.0 + 2 x USB 2.0; 8./10. Gen.: 2 x USB 3.0 + 4 x USB 2.0"
+        },
+        {
+          "label": "Serielle Anschlüsse",
+          "value": "6 x RS-232: 2 x DB9 + 4 über Erweiterungs-I/O; 2 unterstützen RS-422/485"
+        },
+        {
+          "label": "GPIO",
+          "value": "10 GPIO"
+        },
+        {
+          "label": "Bedienelemente",
+          "value": "1 Eingang für externen Einschalttaster"
+        },
+        {
+          "label": "Audio",
+          "value": "Kopfhörerbuchse"
+        },
+        {
+          "label": "Antennen",
+          "value": "5 Anschlüsse für WLAN / Bluetooth / Mobilfunk"
+        },
+        {
+          "label": "M.2 SATA",
+          "value": "1 x M.2 2242 / 2260 / 2280 SATA"
+        },
+        {
+          "label": "M.2 NVMe",
+          "value": "1 x M.2 2280 NVMe"
+        },
+        {
+          "label": "Laufwerksschacht",
+          "value": "1 x 2,5-Zoll-HDD-/SSD-Schacht"
+        },
+        {
+          "label": "Mobilfunk / SIM",
+          "value": "M.2 3042 / 3052 für 3G / 4G / 5G; SIM-Steckplatz auf der Platine"
+        },
+        {
+          "label": "Funkmodule",
+          "value": "M.2 2230: Wi-Fi / Bluetooth"
+        },
+        {
+          "label": "Überwachung",
+          "value": "Watchdog-Timer; Start ohne lokales Laufwerk"
+        },
+        {
+          "label": "Stromversorgung",
+          "value": "9-36 V DC; 4-poliger Rundsteckverbinder"
+        },
+        {
+          "label": "Kühlung",
+          "value": "Lüfterloses Aluminiumgehäuse"
+        },
+        {
+          "label": "Montage",
+          "value": "Tischaufstellung"
+        },
+        {
+          "label": "Abmessungen",
+          "value": "300 x 155 x 50 mm"
+        },
+        {
+          "label": "Gewicht",
+          "value": "1.8 kg"
+        },
+        {
+          "label": "Betriebssystem",
+          "value": "Windows 10 / WES 10 / Linux"
+        },
+        {
+          "label": "Betriebstemperatur",
+          "value": "-20°C ... +60°C"
+        },
+        {
+          "label": "Lagertemperatur",
+          "value": "-30°C ... +70°C"
+        },
+        {
+          "label": "Luftfeuchte",
+          "value": "10-90% rF bei 30°C, nicht kondensierend"
+        },
+        {
+          "label": "Hinweise zur Konfiguration",
+          "value": "RAM-Steckplätze und USB hängen von der CPU-Plattform ab; vier LAN-Ports sind optional. Abbildungen dienen als Referenz; Anschlüsse nach bestätigter Konfiguration."
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/october/mcipcbp1/front.webp",
+          "title": "MCIPCBP1 - Produktansicht"
+        },
+        {
+          "image": "/assets/products/industrial/october/mcipcbp1/rear.webp",
+          "title": "MCIPCBP1 - Anschlussseite"
+        }
+      ],
+      "specificationHeading": "MCIPCBP1 - Technische Daten",
+      "featureHeading": "Industrieanschlüsse und Optionen",
+      "advantageSummary": "Plattform, Speicher und Anschlüsse nach der bestätigten Konfiguration auswählen.",
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "CPU und RAM",
+          "description": "Intel J4125 / J6412; Core i3 / i5 / i7 (8th / 10th / 11th Gen) DDR4 SO-DIMM: J4125 / J6412: 1 Steckplatz; Core-Plattformen: 2 Steckplätze"
+        },
+        {
+          "icon": "Network",
+          "title": "Geräteanschlüsse",
+          "description": "2 x Intel I225-V 2.5GbE RJ45; optional auf 4 LAN-Ports erweiterbar 6 x RS-232: 2 x DB9 + 4 über Erweiterungs-I/O; 2 unterstützen RS-422/485"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Speicher und Erweiterung",
+          "description": "M.2 SATA, M.2 NVMe und ein 2,5-Zoll-HDD-/SSD-Schacht"
+        }
+      ]
+    },
+    "fr": {
+      "tagline": "PC industriel sans ventilateur avec 2,5GbE et E/S d’extension",
+      "description": "MCIPCBP1 propose J4125, J6412 et Intel Core dans un boîtier aluminium sans ventilateur. Deux Intel I225-V 2,5GbE, six RS-232 (deux DB9 et quatre via E/S d’extension), 10 GPIO et 9-36 V facilitent l’intégration. Mémoire et USB selon plateforme ; quatre LAN en option.",
+      "highlights": [
+        "Intel J4125 / J6412 / Core",
+        "2 x Intel I225-V 2.5GbE",
+        "6 x RS-232; 10 GPIO",
+        "9-36 V DC"
+      ],
+      "specs": [
+        {
+          "label": "Modèle",
+          "value": "MCIPCBP1"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel J4125 / J6412; Core i3 / i5 / i7 (8th / 10th / 11th Gen)"
+        },
+        {
+          "label": "Mémoire",
+          "value": "DDR4 SO-DIMM: J4125 / J6412: 1 emplacement; plateformes Core: 2 emplacements"
+        },
+        {
+          "label": "Affichage",
+          "value": "1 x HDMI"
+        },
+        {
+          "label": "Réseau",
+          "value": "2 x RJ45 Intel I225-V 2,5GbE ; extension à 4 ports LAN en option"
+        },
+        {
+          "label": "USB",
+          "value": "J4125 / J6412 / 11e gén.: 4 x USB 3.0 + 2 x USB 2.0; 8e/10e gén.: 2 x USB 3.0 + 4 x USB 2.0"
+        },
+        {
+          "label": "Ports série",
+          "value": "6 x RS-232 : 2 x DB9 + 4 via E/S d’extension ; 2 compatibles RS-422/485"
+        },
+        {
+          "label": "GPIO",
+          "value": "10 GPIO"
+        },
+        {
+          "label": "Commandes",
+          "value": "1 entrée de commande d’alimentation à distance"
+        },
+        {
+          "label": "Audio",
+          "value": "Prise casque"
+        },
+        {
+          "label": "Antennes",
+          "value": "5 connecteurs pour Wi-Fi / Bluetooth / cellulaire"
+        },
+        {
+          "label": "M.2 SATA",
+          "value": "1 x M.2 2242 / 2260 / 2280 SATA"
+        },
+        {
+          "label": "M.2 NVMe",
+          "value": "1 x M.2 2280 NVMe"
+        },
+        {
+          "label": "Baie de disque",
+          "value": "1 x baie HDD / SSD 2,5 pouces"
+        },
+        {
+          "label": "Cellulaire / SIM",
+          "value": "M.2 3042 / 3052 pour 3G / 4G / 5G ; emplacement SIM intégré"
+        },
+        {
+          "label": "Sans fil",
+          "value": "M.2 2230: Wi-Fi / Bluetooth"
+        },
+        {
+          "label": "Surveillance",
+          "value": "Temporisateur watchdog ; démarrage sans disque"
+        },
+        {
+          "label": "Alimentation",
+          "value": "9-36 V CC ; connecteur aviation 4 broches"
+        },
+        {
+          "label": "Refroidissement",
+          "value": "Boîtier aluminium sans ventilateur"
+        },
+        {
+          "label": "Montage",
+          "value": "Bureau"
+        },
+        {
+          "label": "Dimensions",
+          "value": "300 x 155 x 50 mm"
+        },
+        {
+          "label": "Poids",
+          "value": "1.8 kg"
+        },
+        {
+          "label": "Système",
+          "value": "Windows 10 / WES 10 / Linux"
+        },
+        {
+          "label": "Température de fonctionnement",
+          "value": "-20°C ... +60°C"
+        },
+        {
+          "label": "Température de stockage",
+          "value": "-30°C ... +70°C"
+        },
+        {
+          "label": "Humidité",
+          "value": "10-90 % HR à 30°C, sans condensation"
+        },
+        {
+          "label": "Notes de configuration",
+          "value": "Emplacements mémoire et USB selon la plateforme CPU ; quatre ports LAN en option. Images indicatives ; ports selon la configuration confirmée."
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/october/mcipcbp1/front.webp",
+          "title": "MCIPCBP1 - Vue du produit"
+        },
+        {
+          "image": "/assets/products/industrial/october/mcipcbp1/rear.webp",
+          "title": "MCIPCBP1 - Panneau E/S"
+        }
+      ],
+      "specificationHeading": "MCIPCBP1 - Caractéristiques techniques",
+      "featureHeading": "Interfaces industrielles et configurations",
+      "advantageSummary": "Choisissez plateforme, mémoire, stockage et ports selon la configuration confirmée.",
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "CPU et mémoire",
+          "description": "Intel J4125 / J6412; Core i3 / i5 / i7 (8th / 10th / 11th Gen) DDR4 SO-DIMM: J4125 / J6412: 1 emplacement; plateformes Core: 2 emplacements"
+        },
+        {
+          "icon": "Network",
+          "title": "Interfaces des équipements",
+          "description": "2 x RJ45 Intel I225-V 2,5GbE ; extension à 4 ports LAN en option 6 x RS-232 : 2 x DB9 + 4 via E/S d’extension ; 2 compatibles RS-422/485"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Stockage et extension",
+          "description": "M.2 SATA, M.2 NVMe et une baie HDD / SSD 2,5 pouces"
+        }
+      ]
+    },
+    "it": {
+      "tagline": "PC industriale senza ventola con 2.5GbE e I/O di espansione",
+      "description": "MCIPCBP1 offre J4125, J6412 e Intel Core in uno chassis in alluminio senza ventola. Due Intel I225-V 2.5GbE, sei RS-232 (due DB9 e quattro tramite I/O di espansione), 10 GPIO e 9-36 V supportano l’integrazione. RAM e USB dipendono dalla piattaforma; quattro LAN sono opzionali.",
+      "highlights": [
+        "Intel J4125 / J6412 / Core",
+        "2 x Intel I225-V 2.5GbE",
+        "6 x RS-232; 10 GPIO",
+        "9-36 V DC"
+      ],
+      "specs": [
+        {
+          "label": "Modello",
+          "value": "MCIPCBP1"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel J4125 / J6412; Core i3 / i5 / i7 (8th / 10th / 11th Gen)"
+        },
+        {
+          "label": "Memoria",
+          "value": "DDR4 SO-DIMM: J4125 / J6412: 1 slot; piattaforme Core: 2 slot"
+        },
+        {
+          "label": "Uscite video",
+          "value": "1 x HDMI"
+        },
+        {
+          "label": "Rete",
+          "value": "2 x RJ45 Intel I225-V 2.5GbE; espansione opzionale a 4 porte LAN"
+        },
+        {
+          "label": "USB",
+          "value": "J4125 / J6412 / 11a gen.: 4 x USB 3.0 + 2 x USB 2.0; 8a/10a gen.: 2 x USB 3.0 + 4 x USB 2.0"
+        },
+        {
+          "label": "Porte seriali",
+          "value": "6 x RS-232: 2 x DB9 + 4 tramite I/O di espansione; 2 supportano RS-422/485"
+        },
+        {
+          "label": "GPIO",
+          "value": "10 GPIO"
+        },
+        {
+          "label": "Comandi",
+          "value": "1 ingresso interruttore di accensione remoto"
+        },
+        {
+          "label": "Audio",
+          "value": "Presa cuffie"
+        },
+        {
+          "label": "Antenne",
+          "value": "5 connettori per Wi-Fi / Bluetooth / rete mobile"
+        },
+        {
+          "label": "M.2 SATA",
+          "value": "1 x M.2 2242 / 2260 / 2280 SATA"
+        },
+        {
+          "label": "M.2 NVMe",
+          "value": "1 x M.2 2280 NVMe"
+        },
+        {
+          "label": "Vano unità",
+          "value": "1 x vano HDD / SSD da 2,5 pollici"
+        },
+        {
+          "label": "Rete mobile / SIM",
+          "value": "M.2 3042 / 3052 per 3G / 4G / 5G; slot SIM sulla scheda"
+        },
+        {
+          "label": "Wireless",
+          "value": "M.2 2230: Wi-Fi / Bluetooth"
+        },
+        {
+          "label": "Monitoraggio",
+          "value": "Timer watchdog; avvio senza disco"
+        },
+        {
+          "label": "Alimentazione",
+          "value": "9-36 V CC; connettore aviation a 4 poli"
+        },
+        {
+          "label": "Raffreddamento",
+          "value": "Chassis in alluminio senza ventola"
+        },
+        {
+          "label": "Montaggio",
+          "value": "Desktop"
+        },
+        {
+          "label": "Dimensioni",
+          "value": "300 x 155 x 50 mm"
+        },
+        {
+          "label": "Peso",
+          "value": "1.8 kg"
+        },
+        {
+          "label": "Sistema",
+          "value": "Windows 10 / WES 10 / Linux"
+        },
+        {
+          "label": "Temperatura operativa",
+          "value": "-20°C ... +60°C"
+        },
+        {
+          "label": "Temperatura di stoccaggio",
+          "value": "-30°C ... +70°C"
+        },
+        {
+          "label": "Umidità",
+          "value": "10-90% UR a 30°C, senza condensa"
+        },
+        {
+          "label": "Note di configurazione",
+          "value": "Slot RAM e USB secondo la piattaforma CPU; quattro LAN sono opzionali. Immagini indicative; porte secondo la configurazione confermata."
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/october/mcipcbp1/front.webp",
+          "title": "MCIPCBP1 - Vista prodotto"
+        },
+        {
+          "image": "/assets/products/industrial/october/mcipcbp1/rear.webp",
+          "title": "MCIPCBP1 - Pannello I/O"
+        }
+      ],
+      "specificationHeading": "MCIPCBP1 - Specifiche hardware",
+      "featureHeading": "Interfacce industriali e configurazioni",
+      "advantageSummary": "Scegli piattaforma, memoria, archiviazione e porte secondo la configurazione confermata.",
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "CPU e memoria",
+          "description": "Intel J4125 / J6412; Core i3 / i5 / i7 (8th / 10th / 11th Gen) DDR4 SO-DIMM: J4125 / J6412: 1 slot; piattaforme Core: 2 slot"
+        },
+        {
+          "icon": "Network",
+          "title": "Interfacce dispositivi",
+          "description": "2 x RJ45 Intel I225-V 2.5GbE; espansione opzionale a 4 porte LAN 6 x RS-232: 2 x DB9 + 4 tramite I/O di espansione; 2 supportano RS-422/485"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Archiviazione ed espansione",
+          "description": "M.2 SATA, M.2 NVMe e vano HDD / SSD da 2,5 pollici"
+        }
+      ]
+    },
+    "es": {
+      "tagline": "PC industrial sin ventilador con 2.5GbE y E/S de expansión",
+      "description": "MCIPCBP1 ofrece J4125, J6412 e Intel Core en un chasis de aluminio sin ventilador. Dos Intel I225-V 2.5GbE, seis RS-232 (dos DB9 y cuatro mediante E/S de expansión), 10 GPIO y 9-36 V facilitan la integración. RAM y USB según plataforma; cuatro LAN opcionales.",
+      "highlights": [
+        "Intel J4125 / J6412 / Core",
+        "2 x Intel I225-V 2.5GbE",
+        "6 x RS-232; 10 GPIO",
+        "9-36 V DC"
+      ],
+      "specs": [
+        {
+          "label": "Modelo",
+          "value": "MCIPCBP1"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel J4125 / J6412; Core i3 / i5 / i7 (8th / 10th / 11th Gen)"
+        },
+        {
+          "label": "Memoria",
+          "value": "DDR4 SO-DIMM: J4125 / J6412: 1 ranura; plataformas Core: 2 ranuras"
+        },
+        {
+          "label": "Salidas de vídeo",
+          "value": "1 x HDMI"
+        },
+        {
+          "label": "Red",
+          "value": "2 x RJ45 Intel I225-V 2.5GbE; ampliación opcional a 4 puertos LAN"
+        },
+        {
+          "label": "USB",
+          "value": "J4125 / J6412 / 11.ª gen.: 4 x USB 3.0 + 2 x USB 2.0; 8.ª/10.ª gen.: 2 x USB 3.0 + 4 x USB 2.0"
+        },
+        {
+          "label": "Puertos serie",
+          "value": "6 x RS-232: 2 x DB9 + 4 mediante E/S de expansión; 2 admiten RS-422/485"
+        },
+        {
+          "label": "GPIO",
+          "value": "10 GPIO"
+        },
+        {
+          "label": "Controles",
+          "value": "1 entrada de interruptor de encendido remoto"
+        },
+        {
+          "label": "Audio",
+          "value": "Conector de auriculares"
+        },
+        {
+          "label": "Antenas",
+          "value": "5 conectores para Wi-Fi / Bluetooth / red móvil"
+        },
+        {
+          "label": "M.2 SATA",
+          "value": "1 x M.2 2242 / 2260 / 2280 SATA"
+        },
+        {
+          "label": "M.2 NVMe",
+          "value": "1 x M.2 2280 NVMe"
+        },
+        {
+          "label": "Bahía de unidad",
+          "value": "1 x bahía HDD / SSD de 2,5 pulgadas"
+        },
+        {
+          "label": "Red móvil / SIM",
+          "value": "M.2 3042 / 3052 para 3G / 4G / 5G; ranura SIM en placa"
+        },
+        {
+          "label": "Conectividad inalámbrica",
+          "value": "M.2 2230: Wi-Fi / Bluetooth"
+        },
+        {
+          "label": "Supervisión",
+          "value": "Temporizador watchdog; arranque sin disco"
+        },
+        {
+          "label": "Alimentación",
+          "value": "9-36 V CC; conector de aviación de 4 pines"
+        },
+        {
+          "label": "Refrigeración",
+          "value": "Chasis de aluminio sin ventilador"
+        },
+        {
+          "label": "Montaje",
+          "value": "Sobremesa"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "300 x 155 x 50 mm"
+        },
+        {
+          "label": "Peso",
+          "value": "1.8 kg"
+        },
+        {
+          "label": "Sistema",
+          "value": "Windows 10 / WES 10 / Linux"
+        },
+        {
+          "label": "Temperatura de funcionamiento",
+          "value": "-20°C ... +60°C"
+        },
+        {
+          "label": "Temperatura de almacenamiento",
+          "value": "-30°C ... +70°C"
+        },
+        {
+          "label": "Humedad",
+          "value": "10-90 % HR a 30°C, sin condensación"
+        },
+        {
+          "label": "Notas de configuración",
+          "value": "Ranuras RAM y USB según plataforma CPU; cuatro LAN son opcionales. Imágenes de referencia; puertos según la configuración confirmada."
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/october/mcipcbp1/front.webp",
+          "title": "MCIPCBP1 - Vista del producto"
+        },
+        {
+          "image": "/assets/products/industrial/october/mcipcbp1/rear.webp",
+          "title": "MCIPCBP1 - Panel E/S"
+        }
+      ],
+      "specificationHeading": "MCIPCBP1 - Especificaciones de hardware",
+      "featureHeading": "Interfaces industriales y configuraciones",
+      "advantageSummary": "Elige plataforma, memoria, almacenamiento y puertos según la configuración confirmada.",
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "CPU y memoria",
+          "description": "Intel J4125 / J6412; Core i3 / i5 / i7 (8th / 10th / 11th Gen) DDR4 SO-DIMM: J4125 / J6412: 1 ranura; plataformas Core: 2 ranuras"
+        },
+        {
+          "icon": "Network",
+          "title": "Interfaces de equipos",
+          "description": "2 x RJ45 Intel I225-V 2.5GbE; ampliación opcional a 4 puertos LAN 6 x RS-232: 2 x DB9 + 4 mediante E/S de expansión; 2 admiten RS-422/485"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Almacenamiento y expansión",
+          "description": "M.2 SATA, M.2 NVMe y una bahía HDD / SSD de 2,5 pulgadas"
+        }
+      ]
+    }
+  }
+}

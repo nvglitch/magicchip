@@ -73,7 +73,7 @@ assert(matchSearch(fixture([{ label: 'Memory', value: 'DDR5-4800' }]), 'DDR5'));
 assert.equal(matchSearch(fixture([{ label: 'Memory', value: 'DDR4' }]), 'DDR5'), null);
 assert(matchSearch(fixture([{ label: 'Cooling', value: 'fanless' }]), 'fanles'));
 const products = siteSearchIndex.filter(e => e.type === 'product');
-assert.equal(products.length, 167);
+assert.equal(products.length, 168);
 assert(products.every(e => e.specs?.length));
 assert.equal(new Set(products.map(e => e.href)).size, products.length);
 for (const query of ['MCDPC2', 'Core Ultra 96GB Thunderbolt 4', 'Dampfkammer', 'chambre à vapeur', 'camera di vapore', 'cámara de vapor']) {
@@ -140,6 +140,39 @@ for (const copy of [mcmqr, ...Object.values(mcmqr.translations)]) {
 }
 for (const query of ['MCMQR5/R6/R7/R8', '6600H 1GbE', 'Gehäuse PC+ABS', 'boîtier PC+ABS', 'chassis PC+ABS', 'carcasa PC+ABS']) {
   assert(searchSite(query).some(entry => entry.href === '/products/commercial-mini-pc/mcmqr-series'), `MCMQR query failed: ${query}`);
+}
+// Updated MCN brochures keep SATA/NVMe, onboard RAM and wireless options specific to each model.
+const mcnModels = load('lib/mcn-desktop-products.ts').mcnDesktopProducts;
+const mcnSpec = (id, label) => mcnModels.find(item => item.id === id).specs.find(spec => spec.label === label)?.value;
+for (const item of mcnModels) {
+  assert.equal(item.skus, undefined);
+  assert.equal(mcnSpec(item.id, 'Power'), '12 V DC; 5.5 x 2.1 mm jack');
+  assert.equal(mcnSpec(item.id, 'TPM'), 'TPM 2.0 supported');
+  assert.match(mcnSpec(item.id, 'Wireless'), /2 FPC antennas/);
+  assert.equal(searchSite(item.name)[0].href, `/products/commercial-mini-pc/${item.id}`);
+  assert(searchSite('TPM 2.0 FPC').some(entry => entry.href === `/products/commercial-mini-pc/${item.id}`));
+  for (const copy of [item, ...Object.values(item.translations)]) {
+    assert.equal(copy.specs.length, 22);
+    assert.equal(new Set(copy.specs.map(spec => spec.label)).size, 22);
+    assert.equal(copy.galleryCards.length, 2);
+    assert(copy.galleryCards.every(card => fs.existsSync(path.join(__dirname, '..', 'public', card.image))));
+  }
+}
+for (const id of ['mcn1', 'mcn2']) {
+  assert.match(mcnSpec(id, 'Storage'), /M\.2 2280 SATA, 128 GB-2 TB; optional 7 mm 2\.5-inch/);
+  assert.equal(mcnSpec(id, 'Video'), '2 x HDMI 2.0, up to 4K at 60 Hz');
+  assert(!/NVMe/.test(JSON.stringify(mcnModels.find(item => item.id === id))));
+}
+assert.equal(mcnSpec('mcn2', 'Wireless'), 'Wi-Fi 5; Bluetooth 4.2; 2 FPC antennas');
+assert.equal(mcnSpec('mcn5', 'Memory'), 'Onboard LPDDR5-4800, 8 / 12 / 16 GB options');
+assert.match(mcnSpec('mcn5', 'Video'), /DisplayPort 1\.4 \(4K\/144 Hz\)/);
+assert.match(mcnSpec('mcn5', 'USB'), /2 x USB Type-C \(10 Gbps\)/);
+assert.equal(mcnSpec('mcn6', 'Memory'), '1 x DDR4-3200 SO-DIMM, 8-16 GB');
+assert.match(mcnSpec('mcn6', 'Storage'), /M\.2 2242 SATA \/ NVMe/);
+assert.match(mcnSpec('mcn6', 'Wireless'), /optional Wi-Fi 6.*optional Bluetooth 5\.2/);
+assert(!/USB4/.test(JSON.stringify(mcnModels)));
+for (const query of ['onboard LPDDR5', 'Arbeitsspeicher LPDDR5', 'mémoire intégrée LPDDR5', 'memoria integrata LPDDR5', 'memoria en placa LPDDR5']) {
+  assert(searchSite(query).some(entry => entry.href === '/products/commercial-mini-pc/mcn5'), `MCN5 query failed: ${query}`);
 }
 const b2 = groupProductNavigation(industrialCatalog.filter(item => item.series === 'B'))
   .find(group => group.name === 'MCIPCB2');
@@ -260,19 +293,62 @@ for (const [familyId, memberIds] of Object.entries({ mcipcd5: ['mcipcd5', 'mcipc
 assert.equal(industrialProductAliases.mcipcd5, undefined);
 assert.equal(searchSite('MCIPCD5')[0]?.href, '/products/industrial-mini-pc/mcipcd5');
 const c2a = searchSite('MCIPC2A')[0], c2b = searchSite('MCIPC2B')[0];
-assert.match(c2a.specs.find(spec => spec.label === 'Memory').value, /DDR3L.*8GB/);
-assert.match(c2b.specs.find(spec => spec.label === 'Memory').value, /DDR4.*16GB/);
-assert(!c2a.specs.some(spec => spec.label === 'Storage'));
-assert.match(c2b.specs.find(spec => spec.label === 'Storage').value, /MSATA/);
-assert.match(c2a.specs.find(spec => spec.label === 'Serial').value, /^2x/);
-assert.match(c2b.specs.find(spec => spec.label === 'Serial').value, /^6x/);
+assert.match(c2a.specs.find(spec => spec.label === 'Memory').value, /DDR3L.*8 GB/);
+assert.match(c2b.specs.find(spec => spec.label === 'Memory').value, /DDR4.*16 GB/);
+assert.equal(c2a.specs.find(spec => spec.label === 'Storage').value, 'mSATA');
+assert.match(c2b.specs.find(spec => spec.label === 'Storage').value, /mSATA/);
+assert.match(c2a.specs.find(spec => spec.label === 'Serial').value, /^6 x/);
+assert.match(c2b.specs.find(spec => spec.label === 'Serial').value, /^6 x/);
 assert.notEqual(c2a.specs.find(spec => spec.label === 'Dimensions').value, c2b.specs.find(spec => spec.label === 'Dimensions').value);
-assert.notEqual(c2a.specs.find(spec => spec.label === 'Operating Environment').value, c2b.specs.find(spec => spec.label === 'Operating Environment').value);
+assert.notEqual(c2a.specs.find(spec => spec.label === 'Operating temperature').value, c2b.specs.find(spec => spec.label === 'Operating temperature').value);
 assert(!searchSite('DDR4').some(item => item.href === c2a.href));
 assert(!searchSite('DDR3L').some(item => item.href === c2b.href));
 assert(!searchSite('fanless').some(item => item.href === '/products/industrial-mini-pc/mcipcd5#sku-fan'));
 assert(searchSite('fanless').some(item => item.href === '/products/industrial-mini-pc/mcipcd5#sku-standard'));
 console.log('Industrial family checks passed: two series pages, four exact configurations, distinct image sets and legacy route aliases.');
+
+// October 29: preserve platform limits, the corrected Type A serial/storage facts, and optional hardware.
+const octoberIndustrial = [...load('lib/october-industrial-products.ts').octoberIndustrialProducts,
+  ...load('lib/merged-industrial-families.ts').mergedIndustrialFamilies];
+const hardwareValue = (item, label) => item.specs.find(row => row.label === label)?.value;
+const bp1 = octoberIndustrial.find(item => item.id === 'mcipcbp1');
+assert.equal(bp1.series, 'B');
+assert.match(hardwareValue(bp1, 'Serial'), /2 x DB9 \+ 4 via expansion I\/O/);
+assert.match(hardwareValue(bp1, 'Network'), /2 x Intel I225-V.*optional.*4 LAN/);
+assert.match(hardwareValue(bp1, 'Memory'), /J4125.*1 slot.*Core.*2 slots/);
+assert.match(hardwareValue(bp1, 'Power'), /9-36 V DC.*4-pin/);
+for (const id of ['mcipc1', 'mcipc8']) {
+  const model = octoberIndustrial.find(item => item.id === id);
+  assert.match(hardwareValue(model, 'Memory'), /10th\/11th Gen: max\. 64 GB.*12th\/13th Gen.*DDR5/);
+  assert.match(hardwareValue(model, 'Network'), /4th-10th.*Gigabit.*11th-13th.*2\.5GbE/);
+  assert.match(hardwareValue(model, 'Storage'), /SATA \/ NVMe.*6th-10th.*only NVMe.*11th-13th/);
+}
+assert.equal(hardwareValue(octoberIndustrial.find(item => item.id === 'mcipc1'), 'Display'), '2 x HDMI');
+assert.equal(hardwareValue(octoberIndustrial.find(item => item.id === 'mcipc8'), 'Display'), '1 x HDMI + 1 x VGA');
+const d5 = octoberIndustrial.find(item => item.id === 'mcipcd5');
+assert.match(hardwareValue(d5, 'TPM'), /optional/);
+assert.match(hardwareValue(d5, 'Display'), /internal eDP header/);
+assert.match(hardwareValue(d5, 'USB'), /header option/);
+assert.match(hardwareValue(d5.skus[0], 'Fan'), /header.*optional/);
+assert.match(hardwareValue(d5.skus[1], 'Fan'), /installed/);
+for (const item of octoberIndustrial) {
+  assert(industrialCatalog.some(product => product.id === item.id));
+  for (const copy of [item, ...Object.values(item.translations)]) {
+    assert.equal(new Set(copy.specs.map(row => row.label)).size, copy.specs.length);
+  }
+  for (const sku of item.skus || []) for (const copy of Object.values(sku.translations)) {
+    assert.equal(copy.specs.length, sku.specs.length);
+    assert.equal(new Set(copy.specs.map(row => row.label)).size, copy.specs.length);
+  }
+  for (const image of [item.image, ...(item.galleryCards || []).map(card => card.image),
+    ...(item.skus || []).flatMap(sku => [sku.image, ...sku.galleryCards.map(card => card.image)])]) {
+    assert(fs.existsSync(path.join(__dirname, '..', 'public', image)));
+  }
+}
+for (const query of ['aviation 9-36V', 'Rundsteckverbinder 9-36V', 'aviation 9-36V', 'connettore aviation 9-36V', 'aviación 9-36V']) {
+  assert(searchSite(query).some(item => item.href === '/products/industrial-mini-pc/mcipcbp1'), `BP1 multilingual query failed: ${query}`);
+}
+console.log('October 29 industrial checks passed: one new B model, four reviewed pages, exact Type facts and five-language copy.');
 
 // October SR renames / merged configurations and separate NAS motherboard facts.
 const { firewallCatalog } = load('lib/firewall-catalog.ts');

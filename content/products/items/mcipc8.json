@@ -1,0 +1,726 @@
+{
+  "id": "mcipc8",
+  "name": "MCIPC8",
+  "category": "industrial-mini-pc",
+  "series": "C",
+  "published": true,
+  "image": "/assets/products/industrial/october/mcipc8/main.webp",
+  "galleryImages": [
+    "/assets/products/industrial/october/mcipc8/front.webp",
+    "/assets/products/industrial/october/mcipc8/rear.webp"
+  ],
+  "sourceBrochures": [
+    "工控机IPC/C系列/MCIPC8 brochure.pdf"
+  ],
+  "sourceSha256": "dfbc4eeb8a7d54524401d1994707dfe496156801c08e8dd293ab754e2c1124ec",
+  "tagline": "MCIPC8: six COM ports and 4th-13th Gen Intel Core options",
+  "description": "MCIPC8 is a fanless industrial PC with six DB9 serial ports, 14 GPIO channels and 9-36 V DC input. Display connections: 1 x HDMI + 1 x VGA. Memory, USB, LAN speed and storage follow the CPU generation; compare the complete platform details below.",
+  "highlights": [
+    "Intel Core 4th-13th Gen",
+    "6 x COM; 14 GPIO",
+    "1 x HDMI + 1 x VGA",
+    "9-36 V DC"
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCIPC8"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel Core i3 / i5 / i7, 4th-13th Gen"
+    },
+    {
+      "label": "Memory",
+      "value": "4th/5th Gen: 1 x DDR3L SO-DIMM, max. 8 GB; 6th-11th Gen: 2 x DDR4 SO-DIMM (6th-8th Gen: max. 32 GB; 10th/11th Gen: max. 64 GB); 12th/13th Gen: 2 x DDR5 SO-DIMM, max. 64 GB"
+    },
+    {
+      "label": "Display",
+      "value": "1 x HDMI + 1 x VGA"
+    },
+    {
+      "label": "Network",
+      "value": "4th-10th Gen: 2 x Intel i210 / i211 / i219 Gigabit LAN; 11th-13th Gen: 2 x Intel I225-V / I226-V 2.5GbE"
+    },
+    {
+      "label": "USB",
+      "value": "4th/5th Gen: 2 x USB 3.0 + 4 x USB 2.0; 6th-13th Gen: 4 x USB 3.0 + 2 x USB 2.0"
+    },
+    {
+      "label": "Serial",
+      "value": "6 x DB9 RS-232 COM; 4 support RS-422/485"
+    },
+    {
+      "label": "GPIO",
+      "value": "14 GPIO: 7 inputs + 7 outputs"
+    },
+    {
+      "label": "Controls",
+      "value": "Power, Reset and Clear CMOS buttons; ATX / AT switch; 1 x PS/2"
+    },
+    {
+      "label": "Audio",
+      "value": "Headphone and microphone jacks"
+    },
+    {
+      "label": "Antennas",
+      "value": "2 antenna connectors"
+    },
+    {
+      "label": "Storage",
+      "value": "1 x mSATA; M.2 2280: SATA / NVMe (6th-10th Gen), only NVMe (11th-13th Gen); 1 x HDD / SSD"
+    },
+    {
+      "label": "Wireless",
+      "value": "4th-11th Gen: Mini PCIe (half-size); 12th/13th Gen: M.2 2230 (Wi-Fi / Bluetooth)"
+    },
+    {
+      "label": "Cellular / SIM",
+      "value": "1 x full-size Mini PCIe with SIM slot for 3G / 4G"
+    },
+    {
+      "label": "Monitoring",
+      "value": "Watchdog; one-key recovery; diskless boot"
+    },
+    {
+      "label": "Power",
+      "value": "9-36 V DC; 3-pin Phoenix terminal"
+    },
+    {
+      "label": "Cooling",
+      "value": "Fanless aluminum enclosure"
+    },
+    {
+      "label": "Mounting",
+      "value": "Desktop or wall mounting"
+    },
+    {
+      "label": "Dimensions",
+      "value": "249 x 150 x 86 mm"
+    },
+    {
+      "label": "Weight",
+      "value": "2.2 kg"
+    },
+    {
+      "label": "System",
+      "value": "Windows 7 / 10 / 11; WES 7 / 10; Linux (platform-dependent)"
+    },
+    {
+      "label": "Operating temperature",
+      "value": "-20°C ... +60°C"
+    },
+    {
+      "label": "Storage temperature",
+      "value": "-30°C ... +70°C"
+    },
+    {
+      "label": "Humidity",
+      "value": "10-90% RH at 30°C, non-condensing"
+    },
+    {
+      "label": "Configuration notes",
+      "value": "Memory, USB, LAN and storage depend on CPU generation. Images are for reference; final I/O follows the confirmed configuration."
+    }
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/industrial/october/mcipc8/front.webp",
+      "title": "MCIPC8 - Front panel"
+    },
+    {
+      "image": "/assets/products/industrial/october/mcipc8/rear.webp",
+      "title": "MCIPC8 - Rear panel"
+    }
+  ],
+  "specificationHeading": "MCIPC8 - Hardware specifications",
+  "featureHeading": "Industrial interfaces and configuration choices",
+  "advantageSummary": "Match the platform, memory, storage and interfaces to the confirmed configuration.",
+  "features": [
+    {
+      "icon": "Cpu",
+      "title": "CPU and memory",
+      "description": "4th/5th Gen: 1 x DDR3L SO-DIMM, max. 8 GB; 6th-11th Gen: 2 x DDR4 SO-DIMM (6th-8th Gen: max. 32 GB; 10th/11th Gen: max. 64 GB); 12th/13th Gen: 2 x DDR5 SO-DIMM, max. 64 GB"
+    },
+    {
+      "icon": "Network",
+      "title": "Equipment interfaces",
+      "description": "4th-10th Gen: 2 x Intel i210 / i211 / i219 Gigabit LAN; 11th-13th Gen: 2 x Intel I225-V / I226-V 2.5GbE 6 x DB9 RS-232 COM; 4 support RS-422/485"
+    },
+    {
+      "icon": "HardDrive",
+      "title": "Storage and expansion",
+      "description": "1 x mSATA; M.2 2280: SATA / NVMe (6th-10th Gen), only NVMe (11th-13th Gen); 1 x HDD / SSD"
+    }
+  ],
+  "translations": {
+    "de": {
+      "tagline": "MCIPC8: sechs COM-Ports und Intel Core der 4. bis 13. Generation",
+      "description": "MCIPC8 ist ein lüfterloser Industrie-PC mit sechs DB9-Ports, 14 GPIO-Kanälen und 9-36 V DC. Bildausgänge: 1 x HDMI + 1 x VGA. RAM, USB, LAN-Geschwindigkeit und Speicher richten sich nach der CPU-Generation; Details stehen in der Tabelle.",
+      "highlights": [
+        "Intel Core 4.-13. Gen.",
+        "6 x COM; 14 GPIO",
+        "1 x HDMI + 1 x VGA",
+        "9-36 V DC"
+      ],
+      "specs": [
+        {
+          "label": "Modell",
+          "value": "MCIPC8"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel Core i3 / i5 / i7, 4.-13. Gen."
+        },
+        {
+          "label": "Arbeitsspeicher",
+          "value": "4./5. Gen.: 1 x DDR3L SO-DIMM, max. 8 GB; 6.-11. Gen.: 2 x DDR4 SO-DIMM (6.-8. Gen.: max. 32 GB; 10./11. Gen.: max. 64 GB); 12./13. Gen.: 2 x DDR5 SO-DIMM, max. 64 GB"
+        },
+        {
+          "label": "Bildausgänge",
+          "value": "1 x HDMI + 1 x VGA"
+        },
+        {
+          "label": "Netzwerk",
+          "value": "4.-10. Gen.: 2 x Intel i210 / i211 / i219 Gigabit LAN; 11.-13. Gen.: 2 x Intel I225-V / I226-V 2.5GbE"
+        },
+        {
+          "label": "USB",
+          "value": "4./5. Gen.: 2 x USB 3.0 + 4 x USB 2.0; 6.-13. Gen.: 4 x USB 3.0 + 2 x USB 2.0"
+        },
+        {
+          "label": "Serielle Anschlüsse",
+          "value": "6 x DB9 RS-232 COM; 4 unterstützen RS-422/485"
+        },
+        {
+          "label": "GPIO",
+          "value": "14 GPIO: 7 Eingänge + 7 Ausgänge"
+        },
+        {
+          "label": "Bedienelemente",
+          "value": "Power-, Reset- und Clear-CMOS-Tasten; ATX/AT-Schalter; 1 x PS/2"
+        },
+        {
+          "label": "Audio",
+          "value": "Kopfhörer- und Mikrofonbuchsen"
+        },
+        {
+          "label": "Antennen",
+          "value": "2 Antennenanschlüsse"
+        },
+        {
+          "label": "Speicher",
+          "value": "1 x mSATA; M.2 2280: SATA / NVMe (6.-10. Gen.), nur NVMe (11.-13. Gen.); 1 x HDD / SSD"
+        },
+        {
+          "label": "Funkmodule",
+          "value": "4.-11. Gen.: Mini PCIe (Half-Size); 12./13. Gen.: M.2 2230 (Wi-Fi / Bluetooth)"
+        },
+        {
+          "label": "Mobilfunk / SIM",
+          "value": "1 x Full-Size Mini PCIe mit SIM-Steckplatz für 3G / 4G"
+        },
+        {
+          "label": "Überwachung",
+          "value": "Watchdog; Wiederherstellung per Taste; Start ohne lokales Laufwerk"
+        },
+        {
+          "label": "Stromversorgung",
+          "value": "9-36 V DC; 3-polige Phoenix-Klemme"
+        },
+        {
+          "label": "Kühlung",
+          "value": "Lüfterloses Aluminiumgehäuse"
+        },
+        {
+          "label": "Montage",
+          "value": "Tisch- oder Wandmontage"
+        },
+        {
+          "label": "Abmessungen",
+          "value": "249 x 150 x 86 mm"
+        },
+        {
+          "label": "Gewicht",
+          "value": "2.2 kg"
+        },
+        {
+          "label": "Betriebssystem",
+          "value": "Windows 7 / 10 / 11; WES 7 / 10; Linux (plattformabhängig)"
+        },
+        {
+          "label": "Betriebstemperatur",
+          "value": "-20°C ... +60°C"
+        },
+        {
+          "label": "Lagertemperatur",
+          "value": "-30°C ... +70°C"
+        },
+        {
+          "label": "Luftfeuchte",
+          "value": "10-90% rF bei 30°C, nicht kondensierend"
+        },
+        {
+          "label": "Hinweise zur Konfiguration",
+          "value": "RAM, USB, LAN und Speicher hängen von der CPU-Generation ab. Abbildungen dienen als Referenz; Anschlüsse nach bestätigter Konfiguration."
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/october/mcipc8/front.webp",
+          "title": "MCIPC8 - Frontansicht"
+        },
+        {
+          "image": "/assets/products/industrial/october/mcipc8/rear.webp",
+          "title": "MCIPC8 - Rückansicht"
+        }
+      ],
+      "specificationHeading": "MCIPC8 - Technische Daten",
+      "featureHeading": "Industrieanschlüsse und Optionen",
+      "advantageSummary": "Plattform, Speicher und Anschlüsse nach der bestätigten Konfiguration auswählen.",
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "CPU und RAM",
+          "description": "4./5. Gen.: 1 x DDR3L SO-DIMM, max. 8 GB; 6.-11. Gen.: 2 x DDR4 SO-DIMM (6.-8. Gen.: max. 32 GB; 10./11. Gen.: max. 64 GB); 12./13. Gen.: 2 x DDR5 SO-DIMM, max. 64 GB"
+        },
+        {
+          "icon": "Network",
+          "title": "Geräteanschlüsse",
+          "description": "4.-10. Gen.: 2 x Intel i210 / i211 / i219 Gigabit LAN; 11.-13. Gen.: 2 x Intel I225-V / I226-V 2.5GbE 6 x DB9 RS-232 COM; 4 unterstützen RS-422/485"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Speicher und Erweiterung",
+          "description": "1 x mSATA; M.2 2280: SATA / NVMe (6.-10. Gen.), nur NVMe (11.-13. Gen.); 1 x HDD / SSD"
+        }
+      ]
+    },
+    "fr": {
+      "tagline": "MCIPC8 : six ports COM et Intel Core de 4e à 13e génération",
+      "description": "MCIPC8 est un PC industriel sans ventilateur avec six ports DB9, 14 GPIO et une entrée 9-36 V CC. Sorties vidéo : 1 x HDMI + 1 x VGA. Mémoire, USB, débit LAN et stockage varient selon la génération CPU ; consultez le tableau.",
+      "highlights": [
+        "Intel Core 4e-13e gén.",
+        "6 x COM; 14 GPIO",
+        "1 x HDMI + 1 x VGA",
+        "9-36 V DC"
+      ],
+      "specs": [
+        {
+          "label": "Modèle",
+          "value": "MCIPC8"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel Core i3 / i5 / i7, 4e-13e gén."
+        },
+        {
+          "label": "Mémoire",
+          "value": "4e/5e gén.: 1 x DDR3L SO-DIMM, max. 8 GB; 6e-11e gén.: 2 x DDR4 SO-DIMM (6e-8e gén.: max. 32 GB; 10e/11e gén.: max. 64 GB); 12e/13e gén.: 2 x DDR5 SO-DIMM, max. 64 GB"
+        },
+        {
+          "label": "Affichage",
+          "value": "1 x HDMI + 1 x VGA"
+        },
+        {
+          "label": "Réseau",
+          "value": "4e-10e gén.: 2 x Intel i210 / i211 / i219 Gigabit LAN; 11e-13e gén.: 2 x Intel I225-V / I226-V 2.5GbE"
+        },
+        {
+          "label": "USB",
+          "value": "4e/5e gén.: 2 x USB 3.0 + 4 x USB 2.0; 6e-13e gén.: 4 x USB 3.0 + 2 x USB 2.0"
+        },
+        {
+          "label": "Ports série",
+          "value": "6 x DB9 RS-232 COM; 4 compatibles RS-422/485"
+        },
+        {
+          "label": "GPIO",
+          "value": "14 GPIO: 7 entrées + 7 sorties"
+        },
+        {
+          "label": "Commandes",
+          "value": "Boutons Power, Reset et Clear CMOS ; commutateur ATX / AT ; 1 x PS/2"
+        },
+        {
+          "label": "Audio",
+          "value": "Prises casque et microphone"
+        },
+        {
+          "label": "Antennes",
+          "value": "2 connecteurs d’antenne"
+        },
+        {
+          "label": "Stockage",
+          "value": "1 x mSATA; M.2 2280: SATA / NVMe (6e-10e gén.), uniquement NVMe (11e-13e gén.); 1 x HDD / SSD"
+        },
+        {
+          "label": "Sans fil",
+          "value": "4e-11e gén.: Mini PCIe (demi-format); 12e/13e gén.: M.2 2230 (Wi-Fi / Bluetooth)"
+        },
+        {
+          "label": "Cellulaire / SIM",
+          "value": "1 x Mini PCIe plein format avec emplacement SIM pour 3G / 4G"
+        },
+        {
+          "label": "Surveillance",
+          "value": "Watchdog ; restauration par bouton ; démarrage sans disque"
+        },
+        {
+          "label": "Alimentation",
+          "value": "9-36 V CC ; bornier Phoenix 3 broches"
+        },
+        {
+          "label": "Refroidissement",
+          "value": "Boîtier aluminium sans ventilateur"
+        },
+        {
+          "label": "Montage",
+          "value": "Bureau ou montage mural"
+        },
+        {
+          "label": "Dimensions",
+          "value": "249 x 150 x 86 mm"
+        },
+        {
+          "label": "Poids",
+          "value": "2.2 kg"
+        },
+        {
+          "label": "Système",
+          "value": "Windows 7 / 10 / 11; WES 7 / 10; Linux (selon la plateforme)"
+        },
+        {
+          "label": "Température de fonctionnement",
+          "value": "-20°C ... +60°C"
+        },
+        {
+          "label": "Température de stockage",
+          "value": "-30°C ... +70°C"
+        },
+        {
+          "label": "Humidité",
+          "value": "10-90 % HR à 30°C, sans condensation"
+        },
+        {
+          "label": "Notes de configuration",
+          "value": "Mémoire, USB, LAN et stockage dépendent de la génération CPU. Images indicatives ; ports selon la configuration confirmée."
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/october/mcipc8/front.webp",
+          "title": "MCIPC8 - Face avant"
+        },
+        {
+          "image": "/assets/products/industrial/october/mcipc8/rear.webp",
+          "title": "MCIPC8 - Face arrière"
+        }
+      ],
+      "specificationHeading": "MCIPC8 - Caractéristiques techniques",
+      "featureHeading": "Interfaces industrielles et configurations",
+      "advantageSummary": "Choisissez plateforme, mémoire, stockage et ports selon la configuration confirmée.",
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "CPU et mémoire",
+          "description": "4e/5e gén.: 1 x DDR3L SO-DIMM, max. 8 GB; 6e-11e gén.: 2 x DDR4 SO-DIMM (6e-8e gén.: max. 32 GB; 10e/11e gén.: max. 64 GB); 12e/13e gén.: 2 x DDR5 SO-DIMM, max. 64 GB"
+        },
+        {
+          "icon": "Network",
+          "title": "Interfaces des équipements",
+          "description": "4e-10e gén.: 2 x Intel i210 / i211 / i219 Gigabit LAN; 11e-13e gén.: 2 x Intel I225-V / I226-V 2.5GbE 6 x DB9 RS-232 COM; 4 compatibles RS-422/485"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Stockage et extension",
+          "description": "1 x mSATA; M.2 2280: SATA / NVMe (6e-10e gén.), uniquement NVMe (11e-13e gén.); 1 x HDD / SSD"
+        }
+      ]
+    },
+    "it": {
+      "tagline": "MCIPC8: sei porte COM e Intel Core dalla 4a alla 13a generazione",
+      "description": "MCIPC8 è un PC industriale senza ventola con sei porte DB9, 14 GPIO e ingresso 9-36 V CC. Uscite video: 1 x HDMI + 1 x VGA. Memoria, USB, velocità LAN e archiviazione dipendono dalla generazione CPU; consulta la tabella.",
+      "highlights": [
+        "Intel Core 4a-13a gen.",
+        "6 x COM; 14 GPIO",
+        "1 x HDMI + 1 x VGA",
+        "9-36 V DC"
+      ],
+      "specs": [
+        {
+          "label": "Modello",
+          "value": "MCIPC8"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel Core i3 / i5 / i7, 4a-13a gen."
+        },
+        {
+          "label": "Memoria",
+          "value": "4a/5a gen.: 1 x DDR3L SO-DIMM, max. 8 GB; 6a-11a gen.: 2 x DDR4 SO-DIMM (6a-8a gen.: max. 32 GB; 10a/11a gen.: max. 64 GB); 12a/13a gen.: 2 x DDR5 SO-DIMM, max. 64 GB"
+        },
+        {
+          "label": "Uscite video",
+          "value": "1 x HDMI + 1 x VGA"
+        },
+        {
+          "label": "Rete",
+          "value": "4a-10a gen.: 2 x Intel i210 / i211 / i219 Gigabit LAN; 11a-13a gen.: 2 x Intel I225-V / I226-V 2.5GbE"
+        },
+        {
+          "label": "USB",
+          "value": "4a/5a gen.: 2 x USB 3.0 + 4 x USB 2.0; 6a-13a gen.: 4 x USB 3.0 + 2 x USB 2.0"
+        },
+        {
+          "label": "Porte seriali",
+          "value": "6 x DB9 RS-232 COM; 4 supportano RS-422/485"
+        },
+        {
+          "label": "GPIO",
+          "value": "14 GPIO: 7 ingressi + 7 uscite"
+        },
+        {
+          "label": "Comandi",
+          "value": "Pulsanti Power, Reset e Clear CMOS; selettore ATX / AT; 1 x PS/2"
+        },
+        {
+          "label": "Audio",
+          "value": "Prese cuffie e microfono"
+        },
+        {
+          "label": "Antenne",
+          "value": "2 connettori antenna"
+        },
+        {
+          "label": "Archiviazione",
+          "value": "1 x mSATA; M.2 2280: SATA / NVMe (6a-10a gen.), solo NVMe (11a-13a gen.); 1 x HDD / SSD"
+        },
+        {
+          "label": "Wireless",
+          "value": "4a-11a gen.: Mini PCIe (half-size); 12a/13a gen.: M.2 2230 (Wi-Fi / Bluetooth)"
+        },
+        {
+          "label": "Rete mobile / SIM",
+          "value": "1 x Mini PCIe full-size con slot SIM per 3G / 4G"
+        },
+        {
+          "label": "Monitoraggio",
+          "value": "Watchdog; ripristino con pulsante; avvio senza disco"
+        },
+        {
+          "label": "Alimentazione",
+          "value": "9-36 V CC; morsetto Phoenix a 3 poli"
+        },
+        {
+          "label": "Raffreddamento",
+          "value": "Chassis in alluminio senza ventola"
+        },
+        {
+          "label": "Montaggio",
+          "value": "Desktop o montaggio a parete"
+        },
+        {
+          "label": "Dimensioni",
+          "value": "249 x 150 x 86 mm"
+        },
+        {
+          "label": "Peso",
+          "value": "2.2 kg"
+        },
+        {
+          "label": "Sistema",
+          "value": "Windows 7 / 10 / 11; WES 7 / 10; Linux (secondo la piattaforma)"
+        },
+        {
+          "label": "Temperatura operativa",
+          "value": "-20°C ... +60°C"
+        },
+        {
+          "label": "Temperatura di stoccaggio",
+          "value": "-30°C ... +70°C"
+        },
+        {
+          "label": "Umidità",
+          "value": "10-90% UR a 30°C, senza condensa"
+        },
+        {
+          "label": "Note di configurazione",
+          "value": "Memoria, USB, LAN e archiviazione dipendono dalla generazione CPU. Immagini indicative; porte secondo la configurazione confermata."
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/october/mcipc8/front.webp",
+          "title": "MCIPC8 - Pannello anteriore"
+        },
+        {
+          "image": "/assets/products/industrial/october/mcipc8/rear.webp",
+          "title": "MCIPC8 - Pannello posteriore"
+        }
+      ],
+      "specificationHeading": "MCIPC8 - Specifiche hardware",
+      "featureHeading": "Interfacce industriali e configurazioni",
+      "advantageSummary": "Scegli piattaforma, memoria, archiviazione e porte secondo la configurazione confermata.",
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "CPU e memoria",
+          "description": "4a/5a gen.: 1 x DDR3L SO-DIMM, max. 8 GB; 6a-11a gen.: 2 x DDR4 SO-DIMM (6a-8a gen.: max. 32 GB; 10a/11a gen.: max. 64 GB); 12a/13a gen.: 2 x DDR5 SO-DIMM, max. 64 GB"
+        },
+        {
+          "icon": "Network",
+          "title": "Interfacce dispositivi",
+          "description": "4a-10a gen.: 2 x Intel i210 / i211 / i219 Gigabit LAN; 11a-13a gen.: 2 x Intel I225-V / I226-V 2.5GbE 6 x DB9 RS-232 COM; 4 supportano RS-422/485"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Archiviazione ed espansione",
+          "description": "1 x mSATA; M.2 2280: SATA / NVMe (6a-10a gen.), solo NVMe (11a-13a gen.); 1 x HDD / SSD"
+        }
+      ]
+    },
+    "es": {
+      "tagline": "MCIPC8: seis puertos COM e Intel Core de 4.ª a 13.ª generación",
+      "description": "MCIPC8 es un PC industrial sin ventilador con seis puertos DB9, 14 GPIO y entrada de 9-36 V CC. Salidas de vídeo: 1 x HDMI + 1 x VGA. Memoria, USB, velocidad LAN y almacenamiento dependen de la generación CPU; consulta la tabla.",
+      "highlights": [
+        "Intel Core 4.ª-13.ª gen.",
+        "6 x COM; 14 GPIO",
+        "1 x HDMI + 1 x VGA",
+        "9-36 V DC"
+      ],
+      "specs": [
+        {
+          "label": "Modelo",
+          "value": "MCIPC8"
+        },
+        {
+          "label": "CPU",
+          "value": "Intel Core i3 / i5 / i7, 4.ª-13.ª gen."
+        },
+        {
+          "label": "Memoria",
+          "value": "4.ª/5.ª gen.: 1 x DDR3L SO-DIMM, max. 8 GB; 6.ª-11.ª gen.: 2 x DDR4 SO-DIMM (6.ª-8.ª gen.: max. 32 GB; 10.ª/11.ª gen.: max. 64 GB); 12.ª/13.ª gen.: 2 x DDR5 SO-DIMM, max. 64 GB"
+        },
+        {
+          "label": "Salidas de vídeo",
+          "value": "1 x HDMI + 1 x VGA"
+        },
+        {
+          "label": "Red",
+          "value": "4.ª-10.ª gen.: 2 x Intel i210 / i211 / i219 Gigabit LAN; 11.ª-13.ª gen.: 2 x Intel I225-V / I226-V 2.5GbE"
+        },
+        {
+          "label": "USB",
+          "value": "4.ª/5.ª gen.: 2 x USB 3.0 + 4 x USB 2.0; 6.ª-13.ª gen.: 4 x USB 3.0 + 2 x USB 2.0"
+        },
+        {
+          "label": "Puertos serie",
+          "value": "6 x DB9 RS-232 COM; 4 admiten RS-422/485"
+        },
+        {
+          "label": "GPIO",
+          "value": "14 GPIO: 7 entradas + 7 salidas"
+        },
+        {
+          "label": "Controles",
+          "value": "Botones Power, Reset y Clear CMOS; selector ATX / AT; 1 x PS/2"
+        },
+        {
+          "label": "Audio",
+          "value": "Conectores de auriculares y micrófono"
+        },
+        {
+          "label": "Antenas",
+          "value": "2 conectores de antena"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "1 x mSATA; M.2 2280: SATA / NVMe (6.ª-10.ª gen.), solo NVMe (11.ª-13.ª gen.); 1 x HDD / SSD"
+        },
+        {
+          "label": "Conectividad inalámbrica",
+          "value": "4.ª-11.ª gen.: Mini PCIe (tamaño medio); 12.ª/13.ª gen.: M.2 2230 (Wi-Fi / Bluetooth)"
+        },
+        {
+          "label": "Red móvil / SIM",
+          "value": "1 x Mini PCIe de tamaño completo con ranura SIM para 3G / 4G"
+        },
+        {
+          "label": "Supervisión",
+          "value": "Watchdog; recuperación con un botón; arranque sin disco"
+        },
+        {
+          "label": "Alimentación",
+          "value": "9-36 V CC; terminal Phoenix de 3 pines"
+        },
+        {
+          "label": "Refrigeración",
+          "value": "Chasis de aluminio sin ventilador"
+        },
+        {
+          "label": "Montaje",
+          "value": "Sobremesa o montaje en pared"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "249 x 150 x 86 mm"
+        },
+        {
+          "label": "Peso",
+          "value": "2.2 kg"
+        },
+        {
+          "label": "Sistema",
+          "value": "Windows 7 / 10 / 11; WES 7 / 10; Linux (según plataforma)"
+        },
+        {
+          "label": "Temperatura de funcionamiento",
+          "value": "-20°C ... +60°C"
+        },
+        {
+          "label": "Temperatura de almacenamiento",
+          "value": "-30°C ... +70°C"
+        },
+        {
+          "label": "Humedad",
+          "value": "10-90 % HR a 30°C, sin condensación"
+        },
+        {
+          "label": "Notas de configuración",
+          "value": "Memoria, USB, LAN y almacenamiento dependen de la generación CPU. Imágenes de referencia; puertos según la configuración confirmada."
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/october/mcipc8/front.webp",
+          "title": "MCIPC8 - Panel frontal"
+        },
+        {
+          "image": "/assets/products/industrial/october/mcipc8/rear.webp",
+          "title": "MCIPC8 - Panel trasero"
+        }
+      ],
+      "specificationHeading": "MCIPC8 - Especificaciones de hardware",
+      "featureHeading": "Interfaces industriales y configuraciones",
+      "advantageSummary": "Elige plataforma, memoria, almacenamiento y puertos según la configuración confirmada.",
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "CPU y memoria",
+          "description": "4.ª/5.ª gen.: 1 x DDR3L SO-DIMM, max. 8 GB; 6.ª-11.ª gen.: 2 x DDR4 SO-DIMM (6.ª-8.ª gen.: max. 32 GB; 10.ª/11.ª gen.: max. 64 GB); 12.ª/13.ª gen.: 2 x DDR5 SO-DIMM, max. 64 GB"
+        },
+        {
+          "icon": "Network",
+          "title": "Interfaces de equipos",
+          "description": "4.ª-10.ª gen.: 2 x Intel i210 / i211 / i219 Gigabit LAN; 11.ª-13.ª gen.: 2 x Intel I225-V / I226-V 2.5GbE 6 x DB9 RS-232 COM; 4 admiten RS-422/485"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Almacenamiento y expansión",
+          "description": "1 x mSATA; M.2 2280: SATA / NVMe (6.ª-10.ª gen.), solo NVMe (11.ª-13.ª gen.); 1 x HDD / SSD"
+        }
+      ]
+    }
+  }
+}
