@@ -112,6 +112,10 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
     "image": "/assets/products/thumbnails/mcipc1.webp",
     "source": "/assets/products/industrial/october/mcipc1/main.webp"
   },
+  "mcipc8-hdmi": {
+    "image": "/assets/products/thumbnails/mcipc1.webp",
+    "source": "/assets/products/industrial/october/mcipc1/main.webp"
+  },
   "mcipc2": {
     "image": "/assets/products/thumbnails/mcipc2.webp",
     "source": "/assets/products/industrial/october/mcipc2/main.webp"

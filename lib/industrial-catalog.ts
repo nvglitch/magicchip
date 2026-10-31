@@ -26,6 +26,7 @@ export type IndustrialCatalogItem = {
   skus?: IndustrialSku[];
   sourceBrochures?: string[];
   sourceSha256?: string;
+  legacyNames?: string[];
   features?: CatalogProductFeature[];
   specificationHeading?: string;
   featureHeading?: string;
@@ -2315,7 +2316,11 @@ const correctedIndustrialCatalog = [
 ].map(applyBrochureSpecCorrections);
 
 export const industrialFamilyModels = reviewedIndustrialFamilyModels;
-const reviewedStandaloneIds = new Set(octoberIndustrialProducts.map(item => item.id));
+const renamedIndustrialAliases: Record<string, string> = Object.fromEntries(octoberIndustrialProducts.flatMap(product =>
+  (product.legacyNames || []).filter(name => name.toLowerCase() !== product.id)
+    .map(name => [name.toLowerCase(), `/products/industrial-mini-pc/${product.id}`]),
+));
+const reviewedStandaloneIds = new Set([...octoberIndustrialProducts.map(item => item.id), ...Object.keys(renamedIndustrialAliases)]);
 export const industrialCatalog = [
   ...correctedIndustrialCatalog.filter(item => !industrialFamilySourceIds.includes(item.id) && !reviewedStandaloneIds.has(item.id)),
   ...octoberIndustrialProducts,
@@ -2323,6 +2328,7 @@ export const industrialCatalog = [
 ];
 
 export const industrialProductAliases: Record<string, string> = {
+  ...renamedIndustrialAliases,
   ...mergedBSeriesAliases,
   ...Object.fromEntries(mergedIndustrialFamilies.flatMap(product => product.skus!.flatMap(sku => sku.legacyNames
     .filter(name => name.toLowerCase() !== product.id)

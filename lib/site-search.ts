@@ -36,7 +36,7 @@ const catalogIndustrialSearchEntries: SearchEntry[] = industrialCatalog
     description: item.tagline,
     href: `/products/industrial-mini-pc/${item.id}`,
     type: 'product',
-    keywords: ['industrial mini pc', `${item.series.toLowerCase()} series`, item.name.toLowerCase(),
+    keywords: ['industrial mini pc', `${item.series.toLowerCase()} series`, item.name.toLowerCase(), ...(item.legacyNames || []),
       ...Object.values(item.translations || {}).flatMap(copy => [copy.tagline, copy.description, ...copy.highlights, ...copy.specs.map(spec => `${spec.label} ${spec.value}`)]),
     ],
     image: item.image,

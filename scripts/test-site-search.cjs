@@ -317,14 +317,33 @@ assert.match(hardwareValue(bp1, 'Serial'), /2 x DB9 \+ 4 via expansion I\/O/);
 assert.match(hardwareValue(bp1, 'Network'), /2 x Intel I225-V.*optional.*4 LAN/);
 assert.match(hardwareValue(bp1, 'Memory'), /J4125.*1 slot.*Core.*2 slots/);
 assert.match(hardwareValue(bp1, 'Power'), /9-36 V DC.*4-pin/);
-for (const id of ['mcipc1', 'mcipc8']) {
+for (const id of ['mcipc8-hdmi', 'mcipc8']) {
   const model = octoberIndustrial.find(item => item.id === id);
   assert.match(hardwareValue(model, 'Memory'), /10th\/11th Gen: max\. 64 GB.*12th\/13th Gen.*DDR5/);
   assert.match(hardwareValue(model, 'Network'), /4th-10th.*Gigabit.*11th-13th.*2\.5GbE/);
   assert.match(hardwareValue(model, 'Storage'), /SATA \/ NVMe.*6th-10th.*only NVMe.*11th-13th/);
 }
-assert.equal(hardwareValue(octoberIndustrial.find(item => item.id === 'mcipc1'), 'Display'), '2 x HDMI');
+assert.equal(hardwareValue(octoberIndustrial.find(item => item.id === 'mcipc8-hdmi'), 'Display'), '2 x HDMI');
 assert.equal(hardwareValue(octoberIndustrial.find(item => item.id === 'mcipc8'), 'Display'), '1 x HDMI + 1 x VGA');
+const ipc8Hdmi = industrialCatalog.find(item => item.id === 'mcipc8-hdmi');
+const ipc8Family = groupProductNavigation(industrialCatalog.filter(item => item.series === 'C')).find(group => group.name === 'MCIPC8');
+assert.deepEqual(Array.from(ipc8Family.models, item => item.id), ['mcipc8', 'mcipc8-hdmi']);
+assert(!industrialCatalog.some(item => item.id === 'mcipc1' || item.name === 'MCIPC1'));
+assert.equal(industrialProductAliases.mcipc1, '/products/industrial-mini-pc/mcipc8-hdmi');
+assert.equal(industrialProductAliases['mcipc8-hdmi'], undefined);
+assert.equal(ipc8Hdmi.skus, undefined);
+for (const query of ['MCIPC1', 'mcipc1', 'MCIPC8-HDMI']) {
+  const result = searchSite(query)[0];
+  assert.equal(result.href, '/products/industrial-mini-pc/mcipc8-hdmi');
+  assert.equal(result.title, 'MCIPC8-HDMI');
+}
+for (const copy of [ipc8Hdmi, ...Object.values(ipc8Hdmi.translations)]) {
+  assert(copy.tagline.includes('MCIPC8-HDMI') && !copy.tagline.includes('MCIPC1'));
+  assert.equal(copy.specs[0].value, 'MCIPC8-HDMI');
+}
+assert.equal(load('lib/model-thumbnails.ts').modelThumbnails['mcipc8-hdmi'].source, ipc8Hdmi.image);
+assert.equal(load('lib/seo.ts').productSeo.mcipc1, undefined);
+assert.equal(load('lib/seo.ts').productSeo['mcipc8-hdmi'].path, '/products/industrial-mini-pc/mcipc8-hdmi');
 const d5 = octoberIndustrial.find(item => item.id === 'mcipcd5');
 assert.match(hardwareValue(d5, 'TPM'), /optional/);
 assert.match(hardwareValue(d5, 'Display'), /internal eDP header/);

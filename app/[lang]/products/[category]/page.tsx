@@ -296,7 +296,7 @@ const richCategoryData = {
     sceneAlt: 'Automated robotic production line with conveyors, sensors, and safety systems',
     scenarios: [
       { title: 'Compact machine-side control', description: 'A and B Series systems place control software, display output, USB peripherals, and essential serial connectivity close to the equipment.', products: ['MCIPCA1', 'MCIPCB12'] },
-      { title: 'Serial equipment & data acquisition', description: 'Multi-COM C Series models connect several controllers, instruments, readers, or legacy serial devices through one industrial computer.', products: ['MCIPC1', 'MCIPC9'] },
+      { title: 'Serial equipment & data acquisition', description: 'Multi-COM C Series models connect several controllers, instruments, readers, or legacy serial devices through one industrial computer.', products: ['MCIPC8-HDMI', 'MCIPC9'] },
       { title: 'Industrial edge & network gateways', description: 'Multi-LAN D Series and expandable box PCs support local data processing, segmented equipment networks, vision systems, and edge gateway roles.', products: ['MCIPCD3', 'MCIPCB13A'] },
       { title: 'Panel HMI & operator stations', description: 'TPC models combine the display and computer in one panel-mount system for production status, equipment operation, and on-site interaction.', products: ['MCTPC-1506E', 'MCTPC-2105E'] },
     ],

@@ -1116,15 +1116,18 @@
       "status": "updated",
       "changeSincePreviousObservation": "modified",
       "modelIds": [
-        "mcipc1"
+        "mcipc8-hdmi"
       ],
       "hrefs": [
-        "/products/industrial-mini-pc/mcipc1"
+        "/products/industrial-mini-pc/mcipc8-hdmi"
       ],
       "reviewedAtUtc": "2026-10-29T07:58:33.246518+00:00",
       "appliedAtUtc": "2026-10-29T07:58:33.246518+00:00",
-      "notes": "2026-10-29 已按新版核对并同步完整五语参数、介绍、功能卡和本地产品图；分类/菜单、搜索、SEO、结构化参数及缩略图均接入同一记录。生产构建、搜索回归、25 个五语页面和 15 条永久跳转验证通过。浏览器运行环境启动失败，未完成本次电脑/手机排版目视复核。详见当日工控机更新报告；原始 PDF 未修改。",
-      "previousSha256": "43e6eb784fb19e30a827d6a1a56d090e541ff3071b365c5d0a5d91a77d998566"
+      "notes": "2026-10-29 已按新版核对并同步完整五语参数、介绍、功能卡和本地产品图；分类/菜单、搜索、SEO、结构化参数及缩略图均接入同一记录。生产构建、搜索回归、25 个五语页面和 15 条永久跳转验证通过。浏览器运行环境启动失败，未完成本次电脑/手机排版目视复核。详见当日工控机更新报告；原始 PDF 未修改。 2026-10-31 按用户要求将官网 MCIPC1 更名为 MCIPC8-HDMI，归入 MCIPC8 下拉分组，保留两个独立详情页；旧路由永久跳转、旧名称搜索兼容。此次仅变更官网名称与入口，原册及图片路径不改，不推进来源观察、审核、应用时间或指纹。",
+      "previousSha256": "43e6eb784fb19e30a827d6a1a56d090e541ff3071b365c5d0a5d91a77d998566",
+      "legacyModelIds": [
+        "mcipc1"
+      ]
     },
     {
       "relativePath": "工控机IPC/C系列/MCIPC2A brochure.pdf",

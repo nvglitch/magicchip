@@ -120,6 +120,21 @@ SOURCES = {
     'mcipcd5': ('工控机IPC/D系列/MCIPCD5 Brochure.pdf', 'e344b609b6524b2191bf9eb65006ae9f84309b5c8153814cdba7182e4fb8f259'),
 }
 
+# A website rename does not rename the original brochure or its stable image URLs.
+PRODUCT_RENAMES = {'mcipc1': ('mcipc8-hdmi', 'MCIPC8-HDMI')}
+
+
+def rename_model_copy(value, old_name, new_name, key=''):
+    if key == 'sourceBrochures':
+        return value
+    if isinstance(value, str):
+        return value if value.startswith('/assets/') else value.replace(old_name, new_name)
+    if isinstance(value, list):
+        return [rename_model_copy(item, old_name, new_name, key) for item in value]
+    if isinstance(value, dict):
+        return {name: rename_model_copy(item, old_name, new_name, name) for name, item in value.items()}
+    return value
+
 
 def make(mid, series, tagline, description, highlights, defs, features, variants=None):
     name=mid.upper(); relative,fingerprint=SOURCES[mid]
@@ -148,6 +163,11 @@ def make(mid, series, tagline, description, highlights, defs, features, variants
                 'legacyNames':[legacy],'image':f'/assets/products/industrial/october/{image_id}/main.webp','specs':rows(all_defs,'en'),
                 'galleryCards':gallery(legacy,image_id,'en'),
                 'translations':{lang:{'specs':rows(all_defs,lang),'galleryCards':gallery(legacy,image_id,lang)} for lang in LANGS[1:]}})
+    if mid in PRODUCT_RENAMES:
+        canonical_id, canonical_name = PRODUCT_RENAMES[mid]
+        product = rename_model_copy(product, name, canonical_name)
+        product['id'] = canonical_id
+        product['legacyNames'] = [name]
     return product
 
 
@@ -248,8 +268,9 @@ def canvas(image, size, bounds):
 if __name__=='__main__':
     loader=spec_from_file_location('pdf_product_images',ROOT/'scripts/pdf-product-images.py'); pdf_images=module_from_spec(loader); loader.loader.exec_module(pdf_images)
     for product in products:
-        reader=PdfReader(SOURCE/SOURCES[product['id']][0]); pages=[pdf_images.rendered_images(p) for p in reader.pages]
-        image_sets=[(product['id'],pages[0])]
+        source_id = product.get('legacyNames', [product['id']])[0].lower()
+        reader=PdfReader(SOURCE/SOURCES[source_id][0]); pages=[pdf_images.rendered_images(p) for p in reader.pages]
+        image_sets=[(source_id,pages[0])]
         if product['id']=='mcipc2': image_sets += [('mcipc2a',pages[0]),('mcipc2b',pages[0])]
         if product['id']=='mcipcd5': image_sets += [('mcipcd5f',pages[1])]
         for image_id,views in image_sets:

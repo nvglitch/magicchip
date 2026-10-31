@@ -1,6 +1,6 @@
 {
-  "id": "mcipc1",
-  "name": "MCIPC1",
+  "id": "mcipc8-hdmi",
+  "name": "MCIPC8-HDMI",
   "category": "industrial-mini-pc",
   "series": "C",
   "published": true,
@@ -13,8 +13,8 @@
     "工控机IPC/C系列/MCIPC1 Brochure.pdf"
   ],
   "sourceSha256": "4c76c6ecea61f537278167160fc4770b7f2dc9e9a2f5fe84875c35cb61776975",
-  "tagline": "MCIPC1: six COM ports and 4th-13th Gen Intel Core options",
-  "description": "MCIPC1 is a fanless industrial PC with six DB9 serial ports, 14 GPIO channels and 9-36 V DC input. Display connections: 2 x HDMI. Memory, USB, LAN speed and storage follow the CPU generation; compare the complete platform details below.",
+  "tagline": "MCIPC8-HDMI: six COM ports and 4th-13th Gen Intel Core options",
+  "description": "MCIPC8-HDMI is a fanless industrial PC with six DB9 serial ports, 14 GPIO channels and 9-36 V DC input. Display connections: 2 x HDMI. Memory, USB, LAN speed and storage follow the CPU generation; compare the complete platform details below.",
   "highlights": [
     "Intel Core 4th-13th Gen",
     "6 x COM; 14 GPIO",
@@ -24,7 +24,7 @@
   "specs": [
     {
       "label": "Model",
-      "value": "MCIPC1"
+      "value": "MCIPC8-HDMI"
     },
     {
       "label": "CPU",
@@ -126,14 +126,14 @@
   "galleryCards": [
     {
       "image": "/assets/products/industrial/october/mcipc1/front.webp",
-      "title": "MCIPC1 - Front panel"
+      "title": "MCIPC8-HDMI - Front panel"
     },
     {
       "image": "/assets/products/industrial/october/mcipc1/rear.webp",
-      "title": "MCIPC1 - Rear panel"
+      "title": "MCIPC8-HDMI - Rear panel"
     }
   ],
-  "specificationHeading": "MCIPC1 - Hardware specifications",
+  "specificationHeading": "MCIPC8-HDMI - Hardware specifications",
   "featureHeading": "Industrial interfaces and configuration choices",
   "advantageSummary": "Match the platform, memory, storage and interfaces to the confirmed configuration.",
   "features": [
@@ -155,8 +155,8 @@
   ],
   "translations": {
     "de": {
-      "tagline": "MCIPC1: sechs COM-Ports und Intel Core der 4. bis 13. Generation",
-      "description": "MCIPC1 ist ein lüfterloser Industrie-PC mit sechs DB9-Ports, 14 GPIO-Kanälen und 9-36 V DC. Bildausgänge: 2 x HDMI. RAM, USB, LAN-Geschwindigkeit und Speicher richten sich nach der CPU-Generation; Details stehen in der Tabelle.",
+      "tagline": "MCIPC8-HDMI: sechs COM-Ports und Intel Core der 4. bis 13. Generation",
+      "description": "MCIPC8-HDMI ist ein lüfterloser Industrie-PC mit sechs DB9-Ports, 14 GPIO-Kanälen und 9-36 V DC. Bildausgänge: 2 x HDMI. RAM, USB, LAN-Geschwindigkeit und Speicher richten sich nach der CPU-Generation; Details stehen in der Tabelle.",
       "highlights": [
         "Intel Core 4.-13. Gen.",
         "6 x COM; 14 GPIO",
@@ -166,7 +166,7 @@
       "specs": [
         {
           "label": "Modell",
-          "value": "MCIPC1"
+          "value": "MCIPC8-HDMI"
         },
         {
           "label": "CPU",
@@ -268,14 +268,14 @@
       "galleryCards": [
         {
           "image": "/assets/products/industrial/october/mcipc1/front.webp",
-          "title": "MCIPC1 - Frontansicht"
+          "title": "MCIPC8-HDMI - Frontansicht"
         },
         {
           "image": "/assets/products/industrial/october/mcipc1/rear.webp",
-          "title": "MCIPC1 - Rückansicht"
+          "title": "MCIPC8-HDMI - Rückansicht"
         }
       ],
-      "specificationHeading": "MCIPC1 - Technische Daten",
+      "specificationHeading": "MCIPC8-HDMI - Technische Daten",
       "featureHeading": "Industrieanschlüsse und Optionen",
       "advantageSummary": "Plattform, Speicher und Anschlüsse nach der bestätigten Konfiguration auswählen.",
       "features": [
@@ -297,8 +297,8 @@
       ]
     },
     "fr": {
-      "tagline": "MCIPC1 : six ports COM et Intel Core de 4e à 13e génération",
-      "description": "MCIPC1 est un PC industriel sans ventilateur avec six ports DB9, 14 GPIO et une entrée 9-36 V CC. Sorties vidéo : 2 x HDMI. Mémoire, USB, débit LAN et stockage varient selon la génération CPU ; consultez le tableau.",
+      "tagline": "MCIPC8-HDMI : six ports COM et Intel Core de 4e à 13e génération",
+      "description": "MCIPC8-HDMI est un PC industriel sans ventilateur avec six ports DB9, 14 GPIO et une entrée 9-36 V CC. Sorties vidéo : 2 x HDMI. Mémoire, USB, débit LAN et stockage varient selon la génération CPU ; consultez le tableau.",
       "highlights": [
         "Intel Core 4e-13e gén.",
         "6 x COM; 14 GPIO",
@@ -308,7 +308,7 @@
       "specs": [
         {
           "label": "Modèle",
-          "value": "MCIPC1"
+          "value": "MCIPC8-HDMI"
         },
         {
           "label": "CPU",
@@ -410,14 +410,14 @@
       "galleryCards": [
         {
           "image": "/assets/products/industrial/october/mcipc1/front.webp",
-          "title": "MCIPC1 - Face avant"
+          "title": "MCIPC8-HDMI - Face avant"
         },
         {
           "image": "/assets/products/industrial/october/mcipc1/rear.webp",
-          "title": "MCIPC1 - Face arrière"
+          "title": "MCIPC8-HDMI - Face arrière"
         }
       ],
-      "specificationHeading": "MCIPC1 - Caractéristiques techniques",
+      "specificationHeading": "MCIPC8-HDMI - Caractéristiques techniques",
       "featureHeading": "Interfaces industrielles et configurations",
       "advantageSummary": "Choisissez plateforme, mémoire, stockage et ports selon la configuration confirmée.",
       "features": [
@@ -439,8 +439,8 @@
       ]
     },
     "it": {
-      "tagline": "MCIPC1: sei porte COM e Intel Core dalla 4a alla 13a generazione",
-      "description": "MCIPC1 è un PC industriale senza ventola con sei porte DB9, 14 GPIO e ingresso 9-36 V CC. Uscite video: 2 x HDMI. Memoria, USB, velocità LAN e archiviazione dipendono dalla generazione CPU; consulta la tabella.",
+      "tagline": "MCIPC8-HDMI: sei porte COM e Intel Core dalla 4a alla 13a generazione",
+      "description": "MCIPC8-HDMI è un PC industriale senza ventola con sei porte DB9, 14 GPIO e ingresso 9-36 V CC. Uscite video: 2 x HDMI. Memoria, USB, velocità LAN e archiviazione dipendono dalla generazione CPU; consulta la tabella.",
       "highlights": [
         "Intel Core 4a-13a gen.",
         "6 x COM; 14 GPIO",
@@ -450,7 +450,7 @@
       "specs": [
         {
           "label": "Modello",
-          "value": "MCIPC1"
+          "value": "MCIPC8-HDMI"
         },
         {
           "label": "CPU",
@@ -552,14 +552,14 @@
       "galleryCards": [
         {
           "image": "/assets/products/industrial/october/mcipc1/front.webp",
-          "title": "MCIPC1 - Pannello anteriore"
+          "title": "MCIPC8-HDMI - Pannello anteriore"
         },
         {
           "image": "/assets/products/industrial/october/mcipc1/rear.webp",
-          "title": "MCIPC1 - Pannello posteriore"
+          "title": "MCIPC8-HDMI - Pannello posteriore"
         }
       ],
-      "specificationHeading": "MCIPC1 - Specifiche hardware",
+      "specificationHeading": "MCIPC8-HDMI - Specifiche hardware",
       "featureHeading": "Interfacce industriali e configurazioni",
       "advantageSummary": "Scegli piattaforma, memoria, archiviazione e porte secondo la configurazione confermata.",
       "features": [
@@ -581,8 +581,8 @@
       ]
     },
     "es": {
-      "tagline": "MCIPC1: seis puertos COM e Intel Core de 4.ª a 13.ª generación",
-      "description": "MCIPC1 es un PC industrial sin ventilador con seis puertos DB9, 14 GPIO y entrada de 9-36 V CC. Salidas de vídeo: 2 x HDMI. Memoria, USB, velocidad LAN y almacenamiento dependen de la generación CPU; consulta la tabla.",
+      "tagline": "MCIPC8-HDMI: seis puertos COM e Intel Core de 4.ª a 13.ª generación",
+      "description": "MCIPC8-HDMI es un PC industrial sin ventilador con seis puertos DB9, 14 GPIO y entrada de 9-36 V CC. Salidas de vídeo: 2 x HDMI. Memoria, USB, velocidad LAN y almacenamiento dependen de la generación CPU; consulta la tabla.",
       "highlights": [
         "Intel Core 4.ª-13.ª gen.",
         "6 x COM; 14 GPIO",
@@ -592,7 +592,7 @@
       "specs": [
         {
           "label": "Modelo",
-          "value": "MCIPC1"
+          "value": "MCIPC8-HDMI"
         },
         {
           "label": "CPU",
@@ -694,14 +694,14 @@
       "galleryCards": [
         {
           "image": "/assets/products/industrial/october/mcipc1/front.webp",
-          "title": "MCIPC1 - Panel frontal"
+          "title": "MCIPC8-HDMI - Panel frontal"
         },
         {
           "image": "/assets/products/industrial/october/mcipc1/rear.webp",
-          "title": "MCIPC1 - Panel trasero"
+          "title": "MCIPC8-HDMI - Panel trasero"
         }
       ],
-      "specificationHeading": "MCIPC1 - Especificaciones de hardware",
+      "specificationHeading": "MCIPC8-HDMI - Especificaciones de hardware",
       "featureHeading": "Interfaces industriales y configuraciones",
       "advantageSummary": "Elige plataforma, memoria, almacenamiento y puertos según la configuración confirmada.",
       "features": [
@@ -722,5 +722,8 @@
         }
       ]
     }
-  }
+  },
+  "legacyNames": [
+    "MCIPC1"
+  ]
 }
