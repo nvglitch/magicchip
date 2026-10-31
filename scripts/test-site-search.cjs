@@ -326,6 +326,19 @@ for (const id of ['mcipc8-hdmi', 'mcipc8']) {
 assert.equal(hardwareValue(octoberIndustrial.find(item => item.id === 'mcipc8-hdmi'), 'Display'), '2 x HDMI');
 assert.equal(hardwareValue(octoberIndustrial.find(item => item.id === 'mcipc8'), 'Display'), '1 x HDMI + 1 x VGA');
 const ipc8Hdmi = industrialCatalog.find(item => item.id === 'mcipc8-hdmi');
+assert.equal(hardwareValue(ipc8Hdmi, 'Power'), '9-36 V DC; 4-pin aviation connector');
+assert.equal(hardwareValue(industrialCatalog.find(item => item.id === 'mcipc8'), 'Power'), '9-36 V DC; 3-pin Phoenix terminal');
+assert.equal(ipc8Hdmi.sourceSha256, '73b30b37f48bc16fa9b1e893b07adf35bb462f4013045a0536ac6ed8c0fea18f');
+assert(ipc8Hdmi.sourceBrochures[0].endsWith('/MCIPC8-HDMI brochure.pdf'));
+for (const copy of [ipc8Hdmi, ...Object.values(ipc8Hdmi.translations)]) {
+  const power = copy.specs.find(row => row.value.startsWith('9-36 V'));
+  assert(power);
+  assert(/4-|4 (broches|poli|pines)/.test(power.value));
+  assert(!power.value.includes('Phoenix'));
+}
+for (const query of ['MCIPC8-HDMI 4-pin aviation', 'MCIPC8-HDMI Rundsteckverbinder', 'MCIPC8-HDMI aviation 4 broches', 'MCIPC8-HDMI aviation 4 poli', 'MCIPC8-HDMI aviación 4 pines']) {
+  assert.equal(searchSite(query)[0]?.href, '/products/industrial-mini-pc/mcipc8-hdmi');
+}
 const ipc8Family = groupProductNavigation(industrialCatalog.filter(item => item.series === 'C')).find(group => group.name === 'MCIPC8');
 assert.deepEqual(Array.from(ipc8Family.models, item => item.id), ['mcipc8', 'mcipc8-hdmi']);
 assert(!industrialCatalog.some(item => item.id === 'mcipc1' || item.name === 'MCIPC1'));

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "sourceRoot": "D:\\本地资源库\\电脑相关\\电脑册子归档\\ver2",
-  "observedAtUtc": "2026-10-29T07:58:33.246518+00:00",
+  "observedAtUtc": "2026-10-31T09:58:30.040546+00:00",
   "observationOnly": false,
   "totalPdfCount": 117,
   "inScopePdfCount": 116,
@@ -9,11 +9,11 @@
     "deferred-by-user": 2,
     "pending-confirmation": 16,
     "superseded-by-merged-brochure": 22,
-    "superseded-by-renamed-brochure": 4,
+    "superseded-by-renamed-brochure": 5,
     "updated": 44,
     "verified-current": 58
   },
-  "previousObservation": "brochure-history/before-2026-10-29-industrial-update.json",
+  "previousObservation": "brochure-history/before-2026-10-31-mcipc8-hdmi-brochure-update.json",
   "files": [
     {
       "relativePath": "AIPC/MCAIPC1 brochure.pdf",
@@ -1112,21 +1112,25 @@
       "observedSha256": "4c76c6ecea61f537278167160fc4770b7f2dc9e9a2f5fe84875c35cb61776975",
       "appliedSha256": "4c76c6ecea61f537278167160fc4770b7f2dc9e9a2f5fe84875c35cb61776975",
       "excluded": false,
-      "present": true,
-      "status": "updated",
-      "changeSincePreviousObservation": "modified",
+      "present": false,
+      "status": "superseded-by-renamed-brochure",
+      "changeSincePreviousObservation": "removed",
       "modelIds": [
         "mcipc8-hdmi"
       ],
       "hrefs": [
         "/products/industrial-mini-pc/mcipc8-hdmi"
       ],
-      "reviewedAtUtc": "2026-10-29T07:58:33.246518+00:00",
+      "reviewedAtUtc": "2026-10-31T10:07:34.154437+00:00",
       "appliedAtUtc": "2026-10-29T07:58:33.246518+00:00",
-      "notes": "2026-10-29 已按新版核对并同步完整五语参数、介绍、功能卡和本地产品图；分类/菜单、搜索、SEO、结构化参数及缩略图均接入同一记录。生产构建、搜索回归、25 个五语页面和 15 条永久跳转验证通过。浏览器运行环境启动失败，未完成本次电脑/手机排版目视复核。详见当日工控机更新报告；原始 PDF 未修改。 2026-10-31 按用户要求将官网 MCIPC1 更名为 MCIPC8-HDMI，归入 MCIPC8 下拉分组，保留两个独立详情页；旧路由永久跳转、旧名称搜索兼容。此次仅变更官网名称与入口，原册及图片路径不改，不推进来源观察、审核、应用时间或指纹。",
+      "notes": "2026-10-29 已按新版核对并同步完整五语参数、介绍、功能卡和本地产品图；分类/菜单、搜索、SEO、结构化参数及缩略图均接入同一记录。生产构建、搜索回归、25 个五语页面和 15 条永久跳转验证通过。浏览器运行环境启动失败，未完成本次电脑/手机排版目视复核。详见当日工控机更新报告；原始 PDF 未修改。 2026-10-31 按用户要求将官网 MCIPC1 更名为 MCIPC8-HDMI，归入 MCIPC8 下拉分组，保留两个独立详情页；旧路由永久跳转、旧名称搜索兼容。此次仅变更官网名称与入口，原册及图片路径不改，不推进来源观察、审核、应用时间或指纹。 2026-10-31 来源目录已由 MCIPC8-HDMI 新册替代；已核对新册正文与后面板，供电改为 9-36 V 四针航空插座。官网仍为原有 MCIPC8-HDMI 页面，不下架。旧来源应用指纹与应用时间仅保留作历史，不代表新册已应用。",
       "previousSha256": "43e6eb784fb19e30a827d6a1a56d090e541ff3071b365c5d0a5d91a77d998566",
       "legacyModelIds": [
         "mcipc1"
+      ],
+      "supersededBy": "工控机IPC/C系列/MCIPC8-HDMI brochure.pdf",
+      "canonicalHrefs": [
+        "/products/industrial-mini-pc/mcipc8-hdmi"
       ]
     },
     {
@@ -1138,7 +1142,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "missing",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcipc2a"
       ],
@@ -1158,7 +1162,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "missing",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcipc2b"
       ],
@@ -1258,7 +1262,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "modified",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipc8"
       ],
@@ -1379,7 +1383,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "modified",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcd5"
       ],
@@ -1400,7 +1404,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-merged-brochure",
-      "changeSincePreviousObservation": "missing",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcipcd5f"
       ],
@@ -2926,7 +2930,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "added",
+      "changeSincePreviousObservation": "unchanged",
       "reviewedAtUtc": "2026-10-29T07:58:33.246518+00:00",
       "appliedAtUtc": "2026-10-29T07:58:33.246518+00:00",
       "modelIds": [
@@ -2946,7 +2950,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "added",
+      "changeSincePreviousObservation": "unchanged",
       "reviewedAtUtc": "2026-10-29T07:58:33.246518+00:00",
       "appliedAtUtc": "2026-10-29T07:58:33.246518+00:00",
       "modelIds": [
@@ -2956,6 +2960,30 @@
         "/products/industrial-mini-pc/mcipc2"
       ],
       "notes": "2026-10-29 已按新版核对并同步完整五语参数、介绍、功能卡和本地产品图；分类/菜单、搜索、SEO、结构化参数及缩略图均接入同一记录。生产构建、搜索回归、25 个五语页面和 15 条永久跳转验证通过。浏览器运行环境启动失败，未完成本次电脑/手机排版目视复核。详见当日工控机更新报告；原始 PDF 未修改。"
+    },
+    {
+      "relativePath": "工控机IPC/C系列/MCIPC8-HDMI brochure.pdf",
+      "sizeBytes": 2654774,
+      "modifiedAtUtc": "2026-10-31T09:37:39.881231+00:00",
+      "observedSha256": "73b30b37f48bc16fa9b1e893b07adf35bb462f4013045a0536ac6ed8c0fea18f",
+      "excluded": false,
+      "appliedSha256": "73b30b37f48bc16fa9b1e893b07adf35bb462f4013045a0536ac6ed8c0fea18f",
+      "present": true,
+      "status": "updated",
+      "changeSincePreviousObservation": "added",
+      "modelIds": [
+        "mcipc8-hdmi"
+      ],
+      "legacyModelIds": [
+        "mcipc1"
+      ],
+      "hrefs": [
+        "/products/industrial-mini-pc/mcipc8-hdmi"
+      ],
+      "reviewedAtUtc": "2026-10-31T10:07:34.154437+00:00",
+      "appliedAtUtc": "2026-10-31T10:07:34.154437+00:00",
+      "previousSha256": "4c76c6ecea61f537278167160fc4770b7f2dc9e9a2f5fe84875c35cb61776975",
+      "notes": "2026-10-31 核对新册整页与后面板后，同步五语供电为 9-36 V 四针航空插座，并替换官网后面板图；主图、正面图、其他参数、MCIPC8 独立型号和既有旧名称跳转保持。来源映射与导入脚本已更新。生产构建、168 条搜索回归、10 个五语详情、5 个分类分组、5 条同语言永久跳转、无前缀旧地址、站点地图与 6 个图片字节检查通过；浏览器已实测新图放大和参数显示。原始 PDF 只读。"
     }
   ]
 }

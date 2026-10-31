@@ -10,9 +10,9 @@
     "/assets/products/industrial/october/mcipc1/rear.webp"
   ],
   "sourceBrochures": [
-    "工控机IPC/C系列/MCIPC1 Brochure.pdf"
+    "工控机IPC/C系列/MCIPC8-HDMI brochure.pdf"
   ],
-  "sourceSha256": "4c76c6ecea61f537278167160fc4770b7f2dc9e9a2f5fe84875c35cb61776975",
+  "sourceSha256": "73b30b37f48bc16fa9b1e893b07adf35bb462f4013045a0536ac6ed8c0fea18f",
   "tagline": "MCIPC8-HDMI: six COM ports and 4th-13th Gen Intel Core options",
   "description": "MCIPC8-HDMI is a fanless industrial PC with six DB9 serial ports, 14 GPIO channels and 9-36 V DC input. Display connections: 2 x HDMI. Memory, USB, LAN speed and storage follow the CPU generation; compare the complete platform details below.",
   "highlights": [
@@ -84,7 +84,7 @@
     },
     {
       "label": "Power",
-      "value": "9-36 V DC; 3-pin Phoenix terminal"
+      "value": "9-36 V DC; 4-pin aviation connector"
     },
     {
       "label": "Cooling",
@@ -226,7 +226,7 @@
         },
         {
           "label": "Stromversorgung",
-          "value": "9-36 V DC; 3-polige Phoenix-Klemme"
+          "value": "9-36 V DC; 4-poliger Rundsteckverbinder"
         },
         {
           "label": "Kühlung",
@@ -368,7 +368,7 @@
         },
         {
           "label": "Alimentation",
-          "value": "9-36 V CC ; bornier Phoenix 3 broches"
+          "value": "9-36 V CC ; connecteur aviation 4 broches"
         },
         {
           "label": "Refroidissement",
@@ -510,7 +510,7 @@
         },
         {
           "label": "Alimentazione",
-          "value": "9-36 V CC; morsetto Phoenix a 3 poli"
+          "value": "9-36 V CC; connettore aviation a 4 poli"
         },
         {
           "label": "Raffreddamento",
@@ -652,7 +652,7 @@
         },
         {
           "label": "Alimentación",
-          "value": "9-36 V CC; terminal Phoenix de 3 pines"
+          "value": "9-36 V CC; conector de aviación de 4 pines"
         },
         {
           "label": "Refrigeración",

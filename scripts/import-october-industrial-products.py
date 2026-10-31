@@ -1,4 +1,4 @@
-"""Import only the five manually reviewed October 29 brochures.
+"""Import five reviewed brochures, including the October 31 MCIPC8-HDMI revision.
 
 Source PDFs are read-only. Platform qualifiers and translations below are authored
 copy, not inferred from filenames. Builds consume the generated local JSON/assets.
@@ -114,13 +114,13 @@ def gallery(model, image_id, lang, angled=False):
 
 SOURCES = {
     'mcipcbp1': ('工控机IPC/B系列/MCIPCBP1 brochure.pdf', 'c50b21d786415548949b117daa414d0684de9eb6c1be7e1a96dc3cae2a26478e'),
-    'mcipc1': ('工控机IPC/C系列/MCIPC1 Brochure.pdf', '4c76c6ecea61f537278167160fc4770b7f2dc9e9a2f5fe84875c35cb61776975'),
+    'mcipc1': ('工控机IPC/C系列/MCIPC8-HDMI brochure.pdf', '73b30b37f48bc16fa9b1e893b07adf35bb462f4013045a0536ac6ed8c0fea18f'),
     'mcipc8': ('工控机IPC/C系列/MCIPC8 brochure.pdf', 'dfbc4eeb8a7d54524401d1994707dfe496156801c08e8dd293ab754e2c1124ec'),
     'mcipc2': ('工控机IPC/C系列/MCIPC2 brochure.pdf', '38808c1e74575452f365ccd91cc13bbf6af1f80e2783d656c3baa0affe0d433e'),
     'mcipcd5': ('工控机IPC/D系列/MCIPCD5 Brochure.pdf', 'e344b609b6524b2191bf9eb65006ae9f84309b5c8153814cdba7182e4fb8f259'),
 }
 
-# A website rename does not rename the original brochure or its stable image URLs.
+# Keep legacy image URLs and old-name aliases while reading the current brochure.
 PRODUCT_RENAMES = {'mcipc1': ('mcipc8-hdmi', 'MCIPC8-HDMI')}
 
 
@@ -192,11 +192,13 @@ core_common=[('CPU',T('Intel Core i3 / i5 / i7, 4th-13th Gen')),('Memory',core_r
     ('Operating temperature',T('-20°C ... +60°C')),('Storage temperature',T('-30°C ... +70°C')),('Humidity',HUMIDITY),
     ('Configuration notes',join(L('Memory, USB, LAN and storage depend on CPU generation.','RAM, USB, LAN und Speicher hängen von der CPU-Generation ab.','Mémoire, USB, LAN et stockage dépendent de la génération CPU.','Memoria, USB, LAN e archiviazione dipendono dalla generazione CPU.','Memoria, USB, LAN y almacenamiento dependen de la generación CPU.'),REFERENCE))]
 products=[]
+hdmi_power=L('9-36 V DC; 4-pin aviation connector','9-36 V DC; 4-poliger Rundsteckverbinder','9-36 V CC ; connecteur aviation 4 broches','9-36 V CC; connettore aviation a 4 poli','9-36 V CC; conector de aviación de 4 pines')
 for mid,display in [('mcipc1',T('2 x HDMI')),('mcipc8',T('1 x HDMI + 1 x VGA'))]:
     name=mid.upper()
     tagline=L(f'{name}: six COM ports and 4th-13th Gen Intel Core options',f'{name}: sechs COM-Ports und Intel Core der 4. bis 13. Generation',f'{name} : six ports COM et Intel Core de 4e à 13e génération',f'{name}: sei porte COM e Intel Core dalla 4a alla 13a generazione',f'{name}: seis puertos COM e Intel Core de 4.ª a 13.ª generación')
     desc=L(f'{name} is a fanless industrial PC with six DB9 serial ports, 14 GPIO channels and 9-36 V DC input. Display connections: {display["en"]}. Memory, USB, LAN speed and storage follow the CPU generation; compare the complete platform details below.',f'{name} ist ein lüfterloser Industrie-PC mit sechs DB9-Ports, 14 GPIO-Kanälen und 9-36 V DC. Bildausgänge: {display["de"]}. RAM, USB, LAN-Geschwindigkeit und Speicher richten sich nach der CPU-Generation; Details stehen in der Tabelle.',f'{name} est un PC industriel sans ventilateur avec six ports DB9, 14 GPIO et une entrée 9-36 V CC. Sorties vidéo : {display["fr"]}. Mémoire, USB, débit LAN et stockage varient selon la génération CPU ; consultez le tableau.',f'{name} è un PC industriale senza ventola con sei porte DB9, 14 GPIO e ingresso 9-36 V CC. Uscite video: {display["it"]}. Memoria, USB, velocità LAN e archiviazione dipendono dalla generazione CPU; consulta la tabella.',f'{name} es un PC industrial sin ventilador con seis puertos DB9, 14 GPIO y entrada de 9-36 V CC. Salidas de vídeo: {display["es"]}. Memoria, USB, velocidad LAN y almacenamiento dependen de la generación CPU; consulta la tabla.')
-    products.append(make(mid,'C',tagline,desc,[T('Intel Core 4th-13th Gen'),T('6 x COM; 14 GPIO'),display,T('9-36 V DC')],core_common[:2]+[('Display',display)]+core_common[2:],[('Cpu',PLATFORM,core_ram),('Network',INTERFACES,join(core_lan,core_serial)),('HardDrive',STORAGE,core_storage)]))
+    model_defs=[(key,hdmi_power if mid=='mcipc1' and key=='Power' else value) for key,value in core_common]
+    products.append(make(mid,'C',tagline,desc,[T('Intel Core 4th-13th Gen'),T('6 x COM; 14 GPIO'),display,T('9-36 V DC')],model_defs[:2]+[('Display',display)]+model_defs[2:],[('Cpu',PLATFORM,core_ram),('Network',INTERFACES,join(core_lan,core_serial)),('HardDrive',STORAGE,core_storage)]))
 
 # BP1: six serial channels do not mean six external DB9 connectors.
 bp_cpu=T('Intel J4125 / J6412; Core i3 / i5 / i7 (8th / 10th / 11th Gen)')
