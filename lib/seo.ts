@@ -1,4 +1,5 @@
 import { brochureUpdates } from '@/lib/brochure-updates';
+import { categoryNames, categoryDescriptions } from '@/lib/category-labels';
 import { aiCatalog, mcaipc2 } from '@/lib/ai-catalog';
 import type { Metadata } from 'next';
 import { isValidLanguage, SUPPORTED_LANGUAGES, type Language } from '@/lib/i18n/config';
@@ -12,7 +13,7 @@ import { commercialCatalog } from '@/lib/commercial-catalog';
 export const SITE_URL = 'https://szmagicchip.com';
 export const SITE_NAME = 'MagicChip';
 // Update this only when the published site or product catalog materially changes.
-export const SITE_CONTENT_LAST_UPDATED = new Date('2026-10-31T00:00:00.000Z');
+export const SITE_CONTENT_LAST_UPDATED = new Date('2026-11-02T00:00:00.000Z');
 export const DEFAULT_SOCIAL_IMAGE = '/assets/brand/og-default.png';
 
 export type SeoEntry = {
@@ -182,8 +183,9 @@ export function createPageMetadata(entry: SeoEntry, requestedLanguage = 'en'): M
     '/documents': copy.nav.documents, '/search': copy.nav.searchAriaLabel,
     '/privacy-policy': legalNavigation[language].privacy, '/cookie-policy': legalNavigation[language].cookies, '/terms-of-use': legalNavigation[language].terms,
   };
-  const name = titles[entry.path] || entry.name;
-  const description = entry.descriptionTranslations?.[language] || entry.description;
+  const categoryId = entry.path.match(/^\/products\/([^/]+)$/)?.[1];
+  const name = titles[entry.path] || (categoryId && categoryNames[categoryId]?.[language]) || entry.name;
+  const description = entry.descriptionTranslations?.[language] || (categoryId && categoryDescriptions[categoryId]?.[language]) || entry.description;
   const brandedTitle = name.includes(SITE_NAME) ? name : `${name} | ${SITE_NAME}`;
   const socialImage = entry.image || DEFAULT_SOCIAL_IMAGE;
   const path = localizedHref(entry.path, language);

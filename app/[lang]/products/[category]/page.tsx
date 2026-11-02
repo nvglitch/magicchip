@@ -17,6 +17,8 @@ import { firewallCatalog } from '@/lib/firewall-catalog';
 import { commercialCatalog } from '@/lib/commercial-catalog';
 import { nasMotherboardCopy } from '@/lib/nas-motherboard-copy';
 import { actionButtonStyles } from '@/lib/action-button-styles';
+import { categoryNames, categoryDescriptions } from '@/lib/category-labels';
+import { aiCategoryCopy, categoryUiCopy } from '@/lib/category-copy';
 
 const categoryData: Record<string, { icon: LucideIcon; gradient: string; image: string }> = {
   'industrial-mini-pc': { icon: Cpu, gradient: 'from-blue-600 to-blue-700', image: '/assets/home/categories/industrial-mini-pc.png' },
@@ -25,66 +27,6 @@ const categoryData: Record<string, { icon: LucideIcon; gradient: string; image: 
   'firewall-mini-pc': { icon: Shield, gradient: 'from-rose-600 to-red-800', image: '/assets/home/categories/firewall-mini-pc-server-pc.png' },
 };
 
-const categoryNames: Record<string, Record<string, string>> = {
-  'industrial-mini-pc': {
-    en: 'Industrial Mini PC',
-    fr: 'Mini PC Industriel',
-    de: 'Industrie-Mini-PC',
-    it: 'Mini PC Industriale',
-    es: 'Mini PC Industrial',
-  },
-  'ai-mini-pc': {
-    en: 'AI Mini PC',
-    fr: 'Mini PC IA',
-    de: 'AI Mini-PC',
-    it: 'Mini PC AI',
-    es: 'Mini PC con IA',
-  },
-  'commercial-mini-pc': {
-    en: 'Commercial Mini PC',
-    fr: 'Mini PC Commercial',
-    de: 'Kommerzieller Mini-PC',
-    it: 'Mini PC Commerciale',
-    es: 'Mini PC Comercial',
-  },
-  'firewall-mini-pc': {
-    en: 'Firewall Mini PC / Server PC',
-    fr: 'Mini PC Firewall / Serveur PC',
-    de: 'Firewall Mini-PC / Server-PC',
-    it: 'Mini PC Firewall / Server PC',
-    es: 'Mini PC Firewall / Servidor PC',
-  },
-};
-const categoryDescriptions: Record<string, Record<string, string>> = {
-  'industrial-mini-pc': {
-    en: 'Fanless, compact industrial computers designed for harsh environments and 24/7 operation.',
-    fr: 'Ordinateurs industriels compacts sans ventilateur conçus pour les environnements exigeants et un fonctionnement 24/7.',
-    de: 'Lüfterlose, kompakte Industriecomputer für anspruchsvolle Umgebungen und den 24/7-Betrieb.',
-    it: 'Computer industriali compatti senza ventola per ambienti difficili e funzionamento 24/7.',
-    es: 'Computadoras industriales compactas sin ventilador para entornos exigentes y funcionamiento 24/7.',
-  },
-  'ai-mini-pc': {
-    en: 'High-performance mini PCs designed for AI workloads, edge computing, and professional applications.',
-    fr: 'Mini PC hautes performances conçus pour les charges de travail IA, le edge computing et les applications professionnelles.',
-    de: 'Leistungsstarke Mini-PCs für KI-Workloads, Edge Computing und professionelle Anwendungen.',
-    it: 'Mini PC ad alte prestazioni per carichi di lavoro AI, edge computing e applicazioni professionali.',
-    es: 'Mini PC de alto rendimiento para cargas de trabajo de IA, edge computing y aplicaciones profesionales.',
-  },
-  'commercial-mini-pc': {
-    en: 'Compact computers for business, education, digital signage, and everyday commercial use.',
-    fr: 'Ordinateurs compacts pour les entreprises, l’éducation, l’affichage dynamique et les usages commerciaux.',
-    de: 'Kompakte Computer für Unternehmen, Bildung, Digital Signage und den kommerziellen Alltag.',
-    it: 'Computer compatti per aziende, istruzione, digital signage e uso commerciale quotidiano.',
-    es: 'Computadoras compactas para empresas, educación, señalización digital y uso comercial cotidiano.',
-  },
-  'firewall-mini-pc': {
-    en: 'Compact and rackmount network appliances for firewall, routing, and enterprise network deployments.',
-    fr: 'Appliances réseau compactes et rackables pour pare-feu, routage et déploiements réseau professionnels.',
-    de: 'Kompakte und rackmontierte Netzwerkgeräte für Firewall-, Routing- und Unternehmensnetzwerke.',
-    it: 'Appliance di rete compatte e rackmount per firewall, routing e reti aziendali.',
-    es: 'Dispositivos de red compactos y para rack destinados a firewall, routing y redes empresariales.',
-  },
-};
 const sampleProducts: Record<string, Array<{ id: string; name: string; tagline: string; image: string; specs: string[] }>> = {
   'industrial-mini-pc': [
     {
@@ -302,21 +244,9 @@ const richCategoryData = {
     ],
   },
   'ai-mini-pc': {
-    overview: 'AI Mini PCs bring high-performance AMD compute, large unified-memory options, fast local storage, and multi-display output into a compact workstation format for local AI and demanding professional workloads.',
-    qualifier: 'AI performance depends on the selected processor, memory configuration, software stack, and workload.',
-    capabilities: [
-      { title: 'Local AI acceleration', description: 'Choose AMD Ryzen / Ryzen AI or Intel Core Ultra platforms. Graphics and AI acceleration capabilities depend on the selected model and configuration.' },
-      { title: 'Large memory configurations', description: 'Model-specific onboard LPDDR5 / LPDDR5x or DDR5 SO-DIMM options support different workloads. MCAIPC2 memory capacity and speed depend on the mainboard series.' },
-      { title: 'Fast data & display paths', description: 'Multi-display output, high-speed networking, and multiple NVMe options support substantial local workflows.' },
-    ],
+    ...aiCategoryCopy.en,
     sceneImage: '/assets/products/category-scenes/edge-ai-robotics.webp',
     desktopSceneImage: '/assets/products/category-scenes/edge-ai-robotics-desktop.webp',
-    sceneAlt: 'Abstract blue and cyan lightscape representing AI computing',
-    scenarios: [
-      { title: 'Local AI development & inference', description: 'Run supported models locally where data proximity, responsiveness, or offline operation matters.', products: ['MCAIPC2', 'MCAIPC1'] },
-      { title: 'Computer-vision development', description: 'Use high-performance compute and external camera connectivity to prototype visual-analysis workflows.', products: ['MCAIPC2', 'MCAIPC1'] },
-      { title: 'Professional multi-display work', description: 'Quad-display support suits engineering, visualization, media, and information-dense workspaces.', products: ['MCAIPC2', 'MCAIPC1'] },
-    ],
   },
   'commercial-mini-pc': {
     overview: 'MagicChip Commercial PCs now cover compact desktop systems for office, education, display, and professional workloads, together with NAS-focused platforms for local storage, backup, media libraries, and network services. The range spans low-power Intel N-series systems, Intel Core and AMD Ryzen performance platforms, and multi-LAN storage appliances.',
@@ -378,7 +308,9 @@ export default function CategoryPage() {
       : category === 'commercial-mini-pc'
         ? commercialSeries
         : null;
-  const richContent = richCategoryData[category as keyof typeof richCategoryData] || richCategoryData['industrial-mini-pc'];
+  const baseContent = richCategoryData[category as keyof typeof richCategoryData] || richCategoryData['industrial-mini-pc'];
+  const richContent = category === 'ai-mini-pc' ? { ...baseContent, ...aiCategoryCopy[language] } : baseContent;
+  const ui = categoryUiCopy[language];
   const desktopSceneImage = richContent.desktopSceneImage;
 
   const categoryName = categoryNames[category]?.[language] || categoryNames[category]?.en || category;
@@ -413,10 +345,10 @@ export default function CategoryPage() {
             <p className="text-xl text-gray-300 max-w-2xl">{categoryDesc}</p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="#models" className={actionButtonStyles.primary}>
-                Browse Models <ArrowRight aria-hidden="true" className="h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
+                {ui.browse} <ArrowRight aria-hidden="true" className="h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link href="#applications" className={actionButtonStyles.secondaryOnDark}>
-                View Applications
+                {ui.viewApplications}
               </Link>
             </div>
           </motion.div>
@@ -424,11 +356,11 @@ export default function CategoryPage() {
       </section>
 
 
-      <nav aria-label="Category sections" className="sticky top-16 z-30 border-b border-slate-200 bg-white/90 backdrop-blur-xl">
+      <nav aria-label={ui.sections} className="sticky top-16 z-30 border-b border-slate-200 bg-white/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl gap-7 overflow-x-auto px-4 py-4 text-sm font-semibold text-slate-600 sm:px-6 lg:px-8">
-          <Link href="#overview" className="whitespace-nowrap transition-colors hover:text-brand-hover">Category Overview</Link>
-          <Link href="#applications" className="whitespace-nowrap transition-colors hover:text-brand-hover">Application Scenarios</Link>
-          <Link href="#models" className="whitespace-nowrap transition-colors hover:text-brand-hover">Current Models</Link>
+          <Link href="#overview" className="whitespace-nowrap transition-colors hover:text-brand-hover">{ui.overview}</Link>
+          <Link href="#applications" className="whitespace-nowrap transition-colors hover:text-brand-hover">{ui.applications}</Link>
+          <Link href="#models" className="whitespace-nowrap transition-colors hover:text-brand-hover">{ui.models}</Link>
         </div>
       </nav>
 
@@ -436,13 +368,7 @@ export default function CategoryPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">{category === 'industrial-mini-pc'
-                ? 'Compact computers for machines, data, and the industrial edge'
-                : category === 'firewall-mini-pc'
-                  ? 'Network appliances from compact edge gateways to 1U servers'
-                  : category === 'commercial-mini-pc'
-                    ? 'Compact desktop and NAS platforms for work, displays, and local services'
-                    : `What defines ${categoryName}?`}</h2>
+              <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">{ui.overviewTitles[category as keyof typeof ui.overviewTitles] || categoryName}</h2>
             </div>
             <div>
               <p className="text-lg leading-8 text-slate-600">{richContent.overview}</p>
@@ -465,13 +391,7 @@ export default function CategoryPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
             <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
-              {category === 'industrial-mini-pc'
-                ? 'From machine control to operator stations'
-                : category === 'firewall-mini-pc'
-                  ? 'From branch firewalls to rackmount network platforms'
-                  : category === 'commercial-mini-pc'
-                    ? 'From everyday desktops to compact storage and network services'
-                    : 'Where this category fits'}
+              {ui.applicationTitles[category as keyof typeof ui.applicationTitles] || ui.applications}
             </h2>
             {(category === 'industrial-mini-pc' || category === 'firewall-mini-pc' || category === 'commercial-mini-pc') && (
               <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
@@ -496,7 +416,7 @@ export default function CategoryPage() {
                     <div>
                       <h3 className="text-xl font-bold text-slate-950">{scenario.title}</h3>
                       <p className="mt-2 text-sm leading-6 text-slate-600">{scenario.description}</p>
-                      <p className="mt-4 text-xs font-bold uppercase tracking-normal text-slate-400">Recommended SKUs</p>
+                      <p className="mt-4 text-xs font-bold uppercase tracking-normal text-slate-400">{ui.recommended}</p>
                       <div className="mt-2 flex flex-wrap gap-2">
                         {scenario.products.map((productName) => {
                           const product = products.find((item) => item.name === productName);
@@ -520,7 +440,7 @@ export default function CategoryPage() {
       <section id="models" className="scroll-mt-32 bg-gray-50 py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10 max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">Choose the right configuration</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">{ui.choose}</h2>
             <p className="mt-4 text-base leading-7 text-slate-600">
               {category === 'industrial-mini-pc'
                 ? 'Select an IPC series by serial, network, and display architecture, then open the available model page.'
@@ -528,7 +448,7 @@ export default function CategoryPage() {
                   ? 'Select a series by port count, network speed, and installation format, then open the available model page.'
                   : category === 'commercial-mini-pc'
                     ? nasMotherboardCopy[language].selection
-                    : 'Compare the current models by processor platform, connectivity, expansion, and deployment requirements.'}
+                    : ui.compare}
             </p>
           </div>
 
@@ -570,7 +490,7 @@ export default function CategoryPage() {
               ))}
             </div>
           ) : category === 'ai-mini-pc' ? (
-            <AiFamilyCards products={products} />
+            <AiFamilyCards products={products.map(product => ({ ...product, tagline: aiCategoryCopy[language].products[product.id as keyof typeof aiCategoryCopy.en.products] || product.tagline }))} />
           ) : (
             <div className="space-y-8">
               {products.map((product, index) => (
