@@ -1,14 +1,19 @@
 'use client';
 
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import Image from 'next/image';
 import { Mail, Phone, MessageCircle } from 'lucide-react';
 import Link from '@/components/LocalizedLink';
 import { legalNavigation, legalPaths, legalRoutes } from '@/lib/legal-navigation';
 import { analyticsCopy } from '@/lib/analytics-copy';
 import { openAnalyticsSettings } from '@/lib/analytics';
+import SocialLinks from '@/components/SocialLinks';
+import { footerCopy } from '@/lib/footer-copy';
+import siteConfig from '@/content/site-config.json';
 
 export default function Footer({ newsletterEnabled = false }: { newsletterEnabled?: boolean }) {
   const { t, language } = useLanguage();
+  const copy = footerCopy[language];
 
   const footerLinks = {
     about: [
@@ -23,21 +28,27 @@ export default function Footer({ newsletterEnabled = false }: { newsletterEnable
     ],
   };
 
+  const officePhone = siteConfig.contact.phone.replace(/^\+86\s+0/, '+86 ');
   const contactLinks = [
-    { key: 'email', href: 'mailto:klauslee@szmagicchip.com', icon: Mail },
-    { key: 'phone', href: 'tel:+8613392172330', icon: Phone },
-    { key: 'whatsapp', href: 'https://wa.me/8613392172330', icon: MessageCircle },
+    { key: 'email', label: t.footer.contact[0], value: siteConfig.contact.email, href: `mailto:${siteConfig.contact.email}`, icon: Mail },
+    { key: 'phone', label: t.footer.contact[1], value: officePhone, href: `tel:${officePhone.replace(/[^+0-9]/g, '')}`, icon: Phone },
+    { key: 'whatsapp', label: 'WhatsApp', value: '+86 133 9217 2330', href: 'https://wa.me/8613392172330', icon: MessageCircle },
   ];
+  const navigationLink = 'block text-[15px] leading-6 text-blue-50/90 transition-colors hover:text-white hover:underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-300';
+  const columnRows = 'lg:row-span-2 lg:grid lg:grid-rows-subgrid';
+  const columnTitle = 'mb-5 text-lg font-semibold leading-7 text-white lg:mb-0 lg:self-center';
+  const columnList = 'grid content-start gap-3 self-start';
+
 
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-[#082d49] text-blue-50/90">
       {/* Newsletter Section */}
       {newsletterEnabled && <div className="border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <h3 className="text-xl font-semibold text-white mb-2">{t.footer.newsletter.title}</h3>
-              <p className="text-gray-400">{t.footer.newsletter.subtitle}</p>
+              <p className="text-blue-100/70">{t.footer.newsletter.subtitle}</p>
             </div>
             <div className="flex w-full md:w-auto gap-2">
               <input
@@ -53,42 +64,47 @@ export default function Footer({ newsletterEnabled = false }: { newsletterEnable
         </div>
       </div>}
 
-      {/* Links Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h4 className="text-white font-semibold mb-4">{t.footer.links.about}</h4>
-            <ul className="space-y-3">
-              {footerLinks.about.map((link) => (
-                <li key={link.key}>
-                  <Link href={link.href} className="hover:text-white transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+      <div className="mx-auto max-w-[1440px] px-5 py-12 sm:px-8 lg:py-14">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-9 lg:grid-cols-[minmax(0,1.8fr)_minmax(0,0.85fr)_minmax(0,0.95fr)_minmax(220px,1.15fr)] lg:grid-rows-[64px_auto] lg:gap-x-12 lg:gap-y-6">
+          <div className={`col-span-2 lg:col-span-1 ${columnRows}`}>
+            <Link href="/" className="inline-block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-300 lg:self-center lg:justify-self-start">
+              <Image
+                src="/assets/brand/logo-wordmark-footer.svg"
+                alt="MagicChip"
+                width={240}
+                height={55}
+                className="h-auto w-[220px] brightness-0 invert sm:w-[240px]"
+              />
+            </Link>
+            <div className="mt-5 lg:mt-0">
+              <p className="max-w-md text-[15px] leading-6 text-blue-50/85">{copy.description}</p>
+              <div className="mt-6">
+                <SocialLinks showTitle={false} />
+              </div>
+            </div>
           </div>
-          <div>
-            <h4 className="text-white font-semibold mb-4">{t.footer.links.support}</h4>
-            <ul className="space-y-3">
-              {footerLinks.support.map((link) => (
-                <li key={link.key}>
-                  <Link href={link.href} className="hover:text-white transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+
+          <nav aria-label={t.footer.links.about} className={columnRows}>
+            <h3 className={columnTitle}>{t.footer.links.about}</h3>
+            <ul className={columnList}>
+              {footerLinks.about.map(link => <li key={link.key}><Link href={link.href} className={navigationLink}>{link.label}</Link></li>)}
             </ul>
-          </div>
-          <div>
-            <h4 className="text-white font-semibold mb-4">{t.footer.links.contact}</h4>
-            <ul className="space-y-3">
-              {contactLinks.map((link) => (
+          </nav>
+          <nav aria-label={t.footer.links.support} className={columnRows}>
+            <h3 className={columnTitle}>{t.footer.links.support}</h3>
+            <ul className={columnList}>
+              {footerLinks.support.map(link => <li key={link.key}><Link href={link.href} className={navigationLink}>{link.label}</Link></li>)}
+            </ul>
+          </nav>
+          <div className={`col-span-2 min-w-0 lg:col-span-1 ${columnRows}`}>
+            <h3 className={columnTitle}>{t.footer.links.contact}</h3>
+            <ul className={columnList}>
+              {contactLinks.map(link => (
                 <li key={link.key}>
-                  <Link href={link.href} className="flex items-center hover:text-white transition-colors">
-                    <link.icon className="w-4 h-4 mr-2 flex-shrink-0" />
-                    {t.footer.contact[link.key === 'email' ? 0 : link.key === 'phone' ? 1 : 2]}
-                  </Link>
+                  <a href={link.href} aria-label={`${link.label}: ${link.value}`} {...(link.key === 'whatsapp' ? { target: '_blank', rel: 'noopener noreferrer' } : {})} className="group flex items-center gap-3 rounded-sm text-[15px] leading-6 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-300">
+                    <link.icon aria-hidden="true" className="h-4 w-4 shrink-0 text-blue-100/80" />
+                    <span className="min-w-0 break-words text-[15px]">{link.value}</span>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -97,17 +113,17 @@ export default function Footer({ newsletterEnabled = false }: { newsletterEnable
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-40 md:pb-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm md:pr-44">
-            <p className="text-gray-400">{t.footer.copyright}</p>
-            <nav aria-label={legalNavigation[language].navigation} className="flex flex-wrap justify-center gap-x-6 gap-y-3 md:justify-end">
+      <div className="border-t border-white/10">
+        <div className="mx-auto max-w-[1440px] px-5 pt-6 pb-36 sm:px-8 lg:pb-8">
+          <div className="flex flex-col items-start justify-between gap-4 text-xs lg:flex-row lg:items-center lg:gap-8 lg:pr-48">
+            <p className="text-blue-100/70">{t.footer.copyright}</p>
+            <nav aria-label={legalNavigation[language].navigation} className="flex flex-wrap gap-x-5 gap-y-3 lg:justify-end">
               {legalRoutes.map(id => (
-                <Link key={id} href={legalPaths[id]} className="text-gray-400 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+                <Link key={id} href={legalPaths[id]} className="text-blue-100/70 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
                   {legalNavigation[language][id]}
                 </Link>
               ))}
-              <button type="button" onClick={openAnalyticsSettings} className="cursor-pointer text-gray-400 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+              <button type="button" onClick={openAnalyticsSettings} className="cursor-pointer text-blue-100/70 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
                 {analyticsCopy[language].settings}
               </button>
             </nav>

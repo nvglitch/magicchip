@@ -1,6 +1,7 @@
 'use client';
 
 import LocalizedLink from '@/components/LocalizedLink';
+import SocialLinks from '@/components/SocialLinks';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import EmailDraftNotice from '@/components/EmailDraftNotice';
 import InquiryPrivacyNotice from '@/components/InquiryPrivacyNotice';
@@ -450,6 +451,9 @@ export default function ContactPage() {
                         <LocalizedLink href="mailto:klauslee@szmagicchip.com" className="mt-1 block font-medium text-white hover:text-emerald-300">
                           klauslee@szmagicchip.com
                         </LocalizedLink>
+                      </div>
+                      <div className="mt-7 border-t border-white/10 pt-6">
+                        <SocialLinks />
                       </div>
                     </div>
                   </aside>
