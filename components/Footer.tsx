@@ -1,7 +1,6 @@
 'use client';
 
 import { useLanguage } from '@/lib/i18n/LanguageContext';
-import Image from 'next/image';
 import { Mail, Phone, MessageCircle } from 'lucide-react';
 import Link from '@/components/LocalizedLink';
 import { legalNavigation, legalPaths, legalRoutes } from '@/lib/legal-navigation';
@@ -35,8 +34,7 @@ export default function Footer({ newsletterEnabled = false }: { newsletterEnable
     { key: 'whatsapp', label: 'WhatsApp', value: '+86 133 9217 2330', href: 'https://wa.me/8613392172330', icon: MessageCircle },
   ];
   const navigationLink = 'block text-[15px] leading-6 text-blue-50/90 transition-colors hover:text-white hover:underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-300';
-  const columnRows = 'lg:row-span-2 lg:grid lg:grid-rows-subgrid';
-  const columnTitle = 'mb-5 text-lg font-semibold leading-7 text-white lg:mb-0 lg:self-center';
+  const columnTitle = 'mb-5 text-lg font-semibold leading-7 text-white';
   const columnList = 'grid content-start gap-3 self-start';
 
 
@@ -65,38 +63,27 @@ export default function Footer({ newsletterEnabled = false }: { newsletterEnable
       </div>}
 
       <div className="mx-auto max-w-[1440px] px-5 py-12 sm:px-8 lg:py-14">
-        <div className="grid grid-cols-2 gap-x-8 gap-y-9 lg:grid-cols-[minmax(0,1.8fr)_minmax(0,0.85fr)_minmax(0,0.95fr)_minmax(220px,1.15fr)] lg:grid-rows-[64px_auto] lg:gap-x-12 lg:gap-y-6">
-          <div className={`col-span-2 lg:col-span-1 ${columnRows}`}>
-            <Link href="/" className="inline-block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-300 lg:self-center lg:justify-self-start">
-              <Image
-                src="/assets/brand/logo-wordmark-footer.svg"
-                alt="MagicChip"
-                width={240}
-                height={55}
-                className="h-auto w-[220px] brightness-0 invert sm:w-[240px]"
-              />
-            </Link>
-            <div className="mt-5 lg:mt-0">
-              <p className="max-w-md text-[15px] leading-6 text-blue-50/85">{copy.description}</p>
-              <div className="mt-6">
-                <SocialLinks showTitle={false} />
-              </div>
+        <div className="grid grid-cols-2 items-start gap-x-8 gap-y-9 lg:grid-cols-[minmax(0,1.8fr)_minmax(0,0.85fr)_minmax(0,0.95fr)_minmax(220px,1.15fr)] lg:gap-x-12">
+          <div className="col-span-2 lg:col-span-1">
+            <p className="max-w-md text-[15px] leading-6 text-blue-50/85">{copy.description}</p>
+            <div className="mt-6">
+              <SocialLinks showTitle={false} />
             </div>
           </div>
 
-          <nav aria-label={t.footer.links.about} className={columnRows}>
+          <nav aria-label={t.footer.links.about}>
             <h3 className={columnTitle}>{t.footer.links.about}</h3>
             <ul className={columnList}>
               {footerLinks.about.map(link => <li key={link.key}><Link href={link.href} className={navigationLink}>{link.label}</Link></li>)}
             </ul>
           </nav>
-          <nav aria-label={t.footer.links.support} className={columnRows}>
+          <nav aria-label={t.footer.links.support}>
             <h3 className={columnTitle}>{t.footer.links.support}</h3>
             <ul className={columnList}>
               {footerLinks.support.map(link => <li key={link.key}><Link href={link.href} className={navigationLink}>{link.label}</Link></li>)}
             </ul>
           </nav>
-          <div className={`col-span-2 min-w-0 lg:col-span-1 ${columnRows}`}>
+          <div className="col-span-2 min-w-0 lg:col-span-1">
             <h3 className={columnTitle}>{t.footer.links.contact}</h3>
             <ul className={columnList}>
               {contactLinks.map(link => (
