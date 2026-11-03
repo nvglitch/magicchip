@@ -24,7 +24,7 @@ export default function SocialLinks({ showTitle = true }: { showTitle?: boolean 
               rel="noopener noreferrer"
               aria-label={copy.profileLabel(link.name)}
               title={link.name}
-              className="flex h-11 w-11 items-center justify-center rounded-full bg-[#1b5b79] text-white transition-colors hover:bg-[#26799b] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-300"
+              className="flex h-11 w-11 items-center justify-center rounded-full bg-blue-600 text-white transition-colors hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-300"
             >
               <Icon aria-hidden="true" fill="currentColor" strokeWidth={0} className="h-5 w-5" />
             </a>

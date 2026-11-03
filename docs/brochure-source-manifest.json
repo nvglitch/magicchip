@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "sourceRoot": "D:\\本地资源库\\电脑相关\\电脑册子归档\\ver2",
-  "observedAtUtc": "2026-10-31T09:58:30.040546+00:00",
+  "observedAtUtc": "2026-11-03T08:03:15.430039+00:00",
   "observationOnly": false,
   "totalPdfCount": 117,
   "inScopePdfCount": 116,
@@ -13,7 +13,7 @@
     "updated": 44,
     "verified-current": 58
   },
-  "previousObservation": "brochure-history/before-2026-10-31-mcipc8-hdmi-brochure-update.json",
+  "previousObservation": "brochure-history/before-2026-11-03-mcsrc26-image-refresh.json",
   "files": [
     {
       "relativePath": "AIPC/MCAIPC1 brochure.pdf",
@@ -2579,23 +2579,24 @@
     },
     {
       "relativePath": "软路由SR/MCSRC26 brochure.pdf",
-      "sizeBytes": 3580244,
-      "modifiedAtUtc": "2026-10-22T02:26:13.916255+00:00",
-      "observedSha256": "8b3b1bb4a4734155bbb513d5ab3487c524f6144de36f6be0bfd8b32a722d1313",
-      "appliedSha256": "8b3b1bb4a4734155bbb513d5ab3487c524f6144de36f6be0bfd8b32a722d1313",
+      "sizeBytes": 5742912,
+      "modifiedAtUtc": "2026-11-03T07:42:56.645650+00:00",
+      "observedSha256": "40c4d2eb5b1e6bddb27586361c134b981608c964600f1187844e52ba65b2e877",
+      "appliedSha256": "40c4d2eb5b1e6bddb27586361c134b981608c964600f1187844e52ba65b2e877",
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "unchanged",
+      "changeSincePreviousObservation": "modified",
       "modelIds": [
         "mcsrc26"
       ],
       "hrefs": [
         "/products/firewall-mini-pc/mcsrc26"
       ],
-      "reviewedAtUtc": "2026-10-22T02:55:54.758008+00:00",
-      "appliedAtUtc": "2026-10-22T02:55:54.758008+00:00",
-      "notes": "用户指定目录与固定库册子指纹一致；已核对中英文原始资料，新增软路由/防火墙 10G 系列独立详情页、五语参数与图片、搜索及 SEO。RJ45 console 与 LAN 分开；Type-C 为视频和 5V/3A 输出。Wi-Fi 槽仅公布 M.2，不猜测源文 2232 的模块长度；无线模块注明可选，不承诺未经验证的软件吞吐。"
+      "reviewedAtUtc": "2026-11-03T08:13:18.668086+00:00",
+      "appliedAtUtc": "2026-11-03T08:13:18.668086+00:00",
+      "notes": "用户指定目录与固定库册子指纹一致；已核对中英文原始资料，新增软路由/防火墙 10G 系列独立详情页、五语参数与图片、搜索及 SEO。RJ45 console 与 LAN 分开；Type-C 为视频和 5V/3A 输出。Wi-Fi 槽仅公布 M.2，不猜测源文 2232 的模块长度；无线模块注明可选，不承诺未经验证的软件吞吐。 2026-11-03：按用户提亮后的新版册子刷新正反面图片、背面主图及 640x400 型号缩略图；保留原裁切与蒙版。已复核参数与现有网站一致，仅推进图片和来源指纹。构建、168 条搜索回归、五语详情、三个图片字节核对和浏览器主图放大检查通过；390px 手机图片加载正常且无横向溢出。原始 PDF 只读。",
+      "previousSha256": "8b3b1bb4a4734155bbb513d5ab3487c524f6144de36f6be0bfd8b32a722d1313"
     },
     {
       "relativePath": "软路由SR/MCSRG31F Brochure.pdf",
@@ -2970,7 +2971,7 @@
       "appliedSha256": "73b30b37f48bc16fa9b1e893b07adf35bb462f4013045a0536ac6ed8c0fea18f",
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "added",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipc8-hdmi"
       ],

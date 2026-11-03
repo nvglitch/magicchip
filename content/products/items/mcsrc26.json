@@ -141,7 +141,7 @@
     }
   ],
   "sourceBrochure": "软路由SR/MCSRC26 brochure.pdf",
-  "sourceSha256": "8b3b1bb4a4734155bbb513d5ab3487c524f6144de36f6be0bfd8b32a722d1313",
+  "sourceSha256": "40c4d2eb5b1e6bddb27586361c134b981608c964600f1187844e52ba65b2e877",
   "translations": {
     "de": {
       "tagline": "Intel-Core-Netzwerk-Appliance mit zwei 10GbE-SFP+- und sechs 2,5GbE-Ports",
