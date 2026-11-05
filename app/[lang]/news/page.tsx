@@ -1,8 +1,6 @@
-import { getAllNews } from '@/lib/content-loader';
-import NewsPageClient from './NewsPageClient';
+import { permanentRedirect } from 'next/navigation';
+import { localizedHref } from '@/lib/i18n/routing';
 
-export default function NewsPage() {
-  const newsArticles = getAllNews();
-
-  return <NewsPageClient newsArticles={newsArticles} />;
+export default async function LegacyNewsPage({ params }: { params: Promise<{ lang: string }> }) {
+  permanentRedirect(localizedHref('/case-studies', (await params).lang));
 }

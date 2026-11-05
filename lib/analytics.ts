@@ -109,17 +109,17 @@ export const getAnalyticsConsent = () => status;
 export const getServerAnalyticsConsent = (): AnalyticsConsent => 'loading';
 export function openAnalyticsSettings() { window.dispatchEvent(new Event(ANALYTICS_SETTINGS_EVENT)); }
 
-// Only public routes and identifiers rendered by the product/news page are used.
+// Only public routes and identifiers rendered by product/article pages are used.
 // Search terms, URL queries, hashes, document titles and form values are never copied.
 export function publicPageDetails(pathname: string, productId = '', articleId = '') {
   const language = languageFromPath(pathname) || 'en';
   const plain = withoutLanguage(pathname).replace(/\/$/, '') || '/';
-  const staticPaths = ['/', '/about', '/company', '/factory', '/contact', '/products', '/scenarios', '/documents', '/downloads', '/tech-docs', '/news', '/search', '/privacy-policy', '/cookie-policy', '/terms-of-use'];
+  const staticPaths = ['/', '/about', '/company', '/factory', '/contact', '/products', '/scenarios', '/documents', '/downloads', '/tech-docs', '/case-studies', '/search', '/privacy-policy', '/cookie-policy', '/terms-of-use'];
   const categories = ['industrial-mini-pc', 'ai-mini-pc', 'commercial-mini-pc', 'firewall-mini-pc'];
   const pieces = plain.split('/').filter(Boolean);
   const product = pieces[0] === 'products' && categories.includes(pieces[1]) && pieces.length === 3
     && pieces[2] === productId && /^[a-z0-9-]{1,80}$/.test(productId);
-  const article = pieces[0] === 'news' && pieces.length === 2 && pieces[1] === articleId && /^[a-z0-9-]{1,80}$/.test(articleId);
+  const article = ['tech-docs', 'case-studies'].includes(pieces[0]) && pieces.length === 2 && pieces[1] === articleId && /^[a-z0-9-]{1,80}$/.test(articleId);
   const category = pieces[0] === 'products' && pieces.length === 2 && categories.includes(pieces[1]);
   const path = staticPaths.includes(plain) || product || article || category ? plain : '/other';
   return {

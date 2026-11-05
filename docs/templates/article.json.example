@@ -1,0 +1,14 @@
+{
+  "id": "replace-with-article-slug",
+  "kind": "technical",
+  "published": false,
+  "date": "",
+  "image": "",
+  "translations": {
+    "en": { "title": "", "excerpt": "", "imageAlt": "", "body": [] },
+    "de": { "title": "", "excerpt": "", "imageAlt": "", "body": [] },
+    "fr": { "title": "", "excerpt": "", "imageAlt": "", "body": [] },
+    "it": { "title": "", "excerpt": "", "imageAlt": "", "body": [] },
+    "es": { "title": "", "excerpt": "", "imageAlt": "", "body": [] }
+  }
+}

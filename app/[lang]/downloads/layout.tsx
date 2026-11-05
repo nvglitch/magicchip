@@ -1,12 +1,16 @@
 import type { ReactNode } from 'react';
 import { createPageMetadata } from '@/lib/seo';
+import { certificateCopy } from '@/lib/certificates';
+import { isValidLanguage } from '@/lib/i18n/config';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+  const requested = (await params).lang;
+  const lang = isValidLanguage(requested) ? requested : 'en';
   return createPageMetadata({
-  name: 'Product Downloads',
-  description: 'Access available MagicChip product brochures, specifications, and downloadable resources for Mini PCs and industrial computing systems.',
+  name: certificateCopy[lang].downloads,
+  description: certificateCopy[lang].displayIntro,
   path: '/downloads',
-  }, (await params).lang);
+  }, lang);
 }
 
 export default function RouteLayout({ children }: { children: ReactNode }) {

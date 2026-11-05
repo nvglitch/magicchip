@@ -9,6 +9,8 @@ import { openAnalyticsSettings } from '@/lib/analytics';
 import SocialLinks from '@/components/SocialLinks';
 import { footerCopy } from '@/lib/footer-copy';
 import siteConfig from '@/content/site-config.json';
+import { editorialCopy } from '@/lib/editorial-copy';
+import { certificateCopy } from '@/lib/certificates';
 
 export default function Footer({ newsletterEnabled = false }: { newsletterEnabled?: boolean }) {
   const { t, language } = useLanguage();
@@ -18,11 +20,11 @@ export default function Footer({ newsletterEnabled = false }: { newsletterEnable
     about: [
       { label: t.footer.about[0], href: '/company', key: 'about-0' },
       { label: t.footer.about[1], href: '/factory', key: 'about-1' },
-      { label: t.footer.about[2], href: '/news', key: 'about-2' },
+      { label: editorialCopy[language]['case-study'].title, href: '/case-studies', key: 'about-2' },
     ],
     support: [
-      { label: t.footer.support[0], href: '/tech-docs', key: 'support-0' },
-      { label: t.footer.support[1], href: '/downloads', key: 'support-1' },
+      { label: editorialCopy[language].technical.title, href: '/tech-docs', key: 'support-0' },
+      { label: certificateCopy[language].downloads, href: '/downloads', key: 'support-1' },
       { label: t.footer.support[2], href: '/contact', key: 'support-2' },
     ],
   };

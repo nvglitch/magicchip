@@ -37,6 +37,8 @@ import { AiFamilyCards } from '@/components/ProductFamilyNavigation';
 import { brochureUpdates } from '@/lib/brochure-updates';
 import SiteSearch from '@/components/SiteSearch';
 import { LANGUAGE_NAMES, SUPPORTED_LANGUAGES } from '@/lib/i18n/config';
+import { editorialCopy } from '@/lib/editorial-copy';
+import { certificateCopy } from '@/lib/certificates';
 
 interface DropdownItem {
   title: string;
@@ -270,9 +272,9 @@ export default function Navbar() {
       { title: 'Firewall Mini PC / Server PC', description: 'Compact firewall, routing, and gateway appliances', href: '/products/firewall-mini-pc', icon: Shield },
     ],
     documents: [
-      { title: t.navDropdown?.documents?.news || 'News', description: t.navDropdown?.documents?.newsDesc || 'Latest updates and announcements', href: '/news', icon: Newspaper },
-      { title: t.navDropdown?.documents?.downloads || 'File Downloads', description: t.navDropdown?.documents?.downloadsDesc || 'Brochures, whitepapers, and resources', href: '/downloads', icon: Download },
-      { title: t.navDropdown?.documents?.techDocs || 'Tech Document', description: t.navDropdown?.documents?.techDocsDesc || 'Technical specifications and manuals', href: '/tech-docs', icon: FileCode },
+      { title: editorialCopy[language]['case-study'].title, description: editorialCopy[language]['case-study'].description, href: '/case-studies', icon: Newspaper },
+      { title: certificateCopy[language].downloads, description: certificateCopy[language].downloadsIntro, href: '/downloads', icon: Download },
+      { title: editorialCopy[language].technical.title, description: editorialCopy[language].technical.description, href: '/tech-docs', icon: FileCode },
     ],
     contact: [
       { title: t.navDropdown?.contact?.email || 'Email', description: t.navDropdown?.contact?.emailDesc || 'Send us an email', href: 'mailto:klauslee@szmagicchip.com', icon: Mail, external: true },
@@ -317,7 +319,7 @@ export default function Navbar() {
   const isNavItemActive = (item: NavItem) => {
     if (item.href === '/') return pathname === '/';
     if (item.href === '/documents') {
-      return ['/documents', '/downloads', '/tech-docs', '/news'].some(
+      return ['/documents', '/downloads', '/tech-docs', '/case-studies', '/news'].some(
         path => pathname === path || pathname.startsWith(`${path}/`),
       );
     }

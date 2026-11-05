@@ -9,11 +9,13 @@ import { legalNavigation } from '@/lib/legal-navigation';
 import { industrialCatalog } from '@/lib/industrial-catalog';
 import { firewallCatalog } from '@/lib/firewall-catalog';
 import { commercialCatalog } from '@/lib/commercial-catalog';
+import { editorialCopy } from '@/lib/editorial-copy';
+import { certificateCopy } from '@/lib/certificates';
 
 export const SITE_URL = 'https://szmagicchip.com';
 export const SITE_NAME = 'MagicChip';
 // Update this only when the published site or product catalog materially changes.
-export const SITE_CONTENT_LAST_UPDATED = new Date('2026-11-02T00:00:00.000Z');
+export const SITE_CONTENT_LAST_UPDATED = new Date('2026-11-05T00:00:00.000Z');
 export const DEFAULT_SOCIAL_IMAGE = '/assets/brand/og-default.png';
 
 export type SeoEntry = {
@@ -178,9 +180,9 @@ export function createPageMetadata(entry: SeoEntry, requestedLanguage = 'en'): M
   const copy = dictionaries[language];
   const titles: Record<string, string> = {
     '/products': copy.nav.products, '/scenarios': copy.nav.solutions, '/about': copy.nav.aboutUs,
-    '/company': copy.footer.about[0], '/factory': copy.footer.about[1], '/news': copy.footer.about[2],
-    '/contact': copy.footer.support[2], '/tech-docs': copy.footer.support[0], '/downloads': copy.footer.support[1],
-    '/documents': copy.nav.documents, '/search': copy.nav.searchAriaLabel,
+    '/company': copy.footer.about[0], '/factory': copy.footer.about[1], '/case-studies': editorialCopy[language]['case-study'].title,
+    '/contact': copy.footer.support[2], '/tech-docs': editorialCopy[language].technical.title, '/downloads': certificateCopy[language].downloads,
+    '/documents': editorialCopy[language].resourcesTitle, '/search': copy.nav.searchAriaLabel,
     '/privacy-policy': legalNavigation[language].privacy, '/cookie-policy': legalNavigation[language].cookies, '/terms-of-use': legalNavigation[language].terms,
   };
   const categoryId = entry.path.match(/^\/products\/([^/]+)$/)?.[1];

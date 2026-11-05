@@ -14,6 +14,8 @@ import { commercialCatalog } from '@/lib/commercial-catalog';
 import { mergeSpecifications } from '@/lib/product-specifications';
 import { firewallLegacyNames } from '@/lib/firewall-product-aliases';
 import { nasMotherboardCopy } from '@/lib/nas-motherboard-copy';
+import { articlePaths, getPublishedArticles } from '@/lib/editorial';
+import { editorialCopy } from '@/lib/editorial-copy';
 
 export type SearchEntryType = 'product' | 'category' | 'scenario' | 'page' | 'resource';
 
@@ -235,10 +237,15 @@ const baseSearchIndex: SearchEntry[] = [
   })),
   { title: 'All Products', description: 'Browse all MagicChip Mini PC and industrial computing categories.', href: '/products', type: 'page', keywords: ['catalog', 'product range'] },
   { title: 'Application Scenarios', description: 'Browse products by deployment scenario and workload.', href: '/scenarios', type: 'page', keywords: ['solutions', 'applications', 'use cases'] },
-  { title: 'Documents & Resources', description: 'Access product news, downloads, and technical information.', href: '/documents', type: 'resource', keywords: ['resources', 'support', 'manuals'] },
-  { title: 'File Downloads', description: 'Download available product brochures and specification documents.', href: '/downloads', type: 'resource', keywords: ['pdf', 'brochure', 'datasheet', 'specification'] },
-  { title: 'Technical Documents', description: 'Browse technical product information and integration resources.', href: '/tech-docs', type: 'resource', keywords: ['technical', 'manual', 'specification', 'guide'] },
-  { title: 'News', description: 'Read MagicChip product and company updates.', href: '/news', type: 'resource', keywords: ['updates', 'announcements'] },
+  { title: 'Documents & Resources', description: editorialCopy.en.resourcesIntro, href: '/documents', type: 'resource', keywords: ['resources', 'support', ...Object.values(editorialCopy).map(copy => copy.resourcesTitle)] },
+  { title: certificateCopy.en.downloads, description: certificateCopy.en.downloadsIntro, href: '/downloads', type: 'resource', keywords: ['pdf', 'certification', 'certificate', 'test report', ...Object.values(certificateCopy).map(copy => copy.downloads)] },
+  { title: editorialCopy.en.technical.title, description: editorialCopy.en.technical.description, href: '/tech-docs', type: 'resource', keywords: ['blog', 'technical', 'guide', ...Object.values(editorialCopy).map(copy => copy.technical.title)] },
+  { title: editorialCopy.en['case-study'].title, description: editorialCopy.en['case-study'].description, href: '/case-studies', type: 'resource', keywords: ['customer', 'case studies', 'project', ...Object.values(editorialCopy).map(copy => copy['case-study'].title)] },
+  ...getPublishedArticles().map(article => ({
+    title: article.translations.en.title, description: article.translations.en.excerpt,
+    href: `${articlePaths[article.kind]}/${article.id}`, type: 'resource' as const, image: article.image,
+    keywords: Object.values(article.translations).flatMap(copy => [copy.title, copy.excerpt]),
+  })),
   { title: 'Our Company', description: 'Learn about MagicChip, its history, markets, and operating philosophy.', href: '/company', type: 'page', keywords: ['about', 'manufacturer', 'shenzhen'] },
   { title: 'Our Factory', description: 'Explore MagicChip manufacturing, assembly, testing, and customization capabilities.', href: '/factory', type: 'page', keywords: ['manufacturing', 'production', 'oem', 'odm'] },
   { title: 'Contact MagicChip', description: 'Contact our sales team about products, samples, quotations, and projects.', href: '/contact', type: 'page', keywords: ['sales', 'inquiry', 'quote', 'whatsapp', 'email'] },

@@ -15,7 +15,7 @@ export default function DownloadsPage() {
           <div className="max-w-3xl">
             <div className="mb-7 h-px w-24 bg-gradient-to-r from-amber-400 to-transparent" />
             <h1 className="text-5xl font-bold tracking-tight md:text-7xl">{text.downloads}</h1>
-            <p className="mt-6 max-w-2xl text-xl leading-relaxed text-slate-300 md:text-2xl">{text.downloadsIntro}</p>
+            <p className="mt-6 max-w-2xl text-xl leading-relaxed text-slate-300 md:text-2xl">{text.displayIntro}</p>
           </div>
         </div>
       </section>

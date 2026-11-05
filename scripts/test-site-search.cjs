@@ -26,6 +26,12 @@ const { groupProductNavigation } = load('lib/product-navigation.ts');
 const { matchSearch } = load('lib/search-matching.ts');
 const { scenarios, scenarioIds } = load('lib/scenarios.ts');
 const { scenarioCopy } = load('lib/scenario-copy.ts');
+const { editorialCopy } = load('lib/editorial-copy.ts');
+for (const copy of Object.values(editorialCopy)) {
+  assert(searchSite(copy.technical.title).some(item => item.href === '/tech-docs'));
+  assert(searchSite(copy['case-study'].title).some(item => item.href === '/case-studies'));
+}
+assert(!siteSearchIndex.some(item => item.href.startsWith('/news')));
 
 // Scenario recommendations must open current product pages (or an exact Type),
 // with existing local images and complete text in every supported language.

@@ -30,7 +30,7 @@ function assertDestination(response, target) {
 
 async function main() {
   for (const lang of languages) {
-    for (const path of ['', '/privacy-policy', '/cookie-policy', '/terms-of-use', '/products', '/scenarios', '/contact', '/company', '/downloads', '/news']) {
+    for (const path of ['', '/privacy-policy', '/cookie-policy', '/terms-of-use', '/products', '/scenarios', '/contact', '/company', '/downloads', '/case-studies', '/tech-docs', '/documents']) {
       const route = `/${lang}${path}`;
       const response = await request(route, { Cookie: 'magicchip-language=es', 'Accept-Language': 'en-US' });
       assert.equal(response.status, 200, route);
@@ -43,7 +43,7 @@ async function main() {
       }
     }
   }
-  console.log('50 static pages: server language overrides conflicting cookie; canonical, hreflang and internal links passed.');
+  console.log('60 pages: server language overrides conflicting cookie; canonical, hreflang and internal links passed.');
 
   for (const [route, target] of [['/privacy-policy', '/en/privacy-policy'], ['/products/ai-mini-pc/mcai2', '/en/products/ai-mini-pc/mcai2'], ['/search?q=USB4', '/en/search?q=USB4']]) {
     const response = await request(route, { Cookie: 'magicchip-language=de' });
@@ -57,6 +57,11 @@ async function main() {
     assert(response.headers.get('cache-control').includes('no-store'));
   }
   for (const lang of languages) {
+    for (const path of ['/news', '/news/ai-accelerator-launch-2026']) {
+      const response = await request(`/${lang}${path}`);
+      assert.equal(response.status, 308);
+      assertDestination(response, `/${lang}/case-studies`);
+    }
     for (const [old, target] of [['mc30s-n100', 'mc30s#sku-ddr5'], ['mcsr6n12u', 'mcsr6n1']]) {
       const response = await request(`/${lang}/products/firewall-mini-pc/${old}`);
       assert.equal(response.status, 308);

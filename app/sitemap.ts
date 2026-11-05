@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { getAllNews } from '@/lib/content-loader';
+import { articlePaths, getPublishedArticles } from '@/lib/editorial';
 import { categorySeo, productSeo, SITE_CONTENT_LAST_UPDATED, SITE_URL } from '@/lib/seo';
 import { LEGAL_UPDATED, legalPaths } from '@/lib/legal-navigation';
 import { SUPPORTED_LANGUAGES } from '@/lib/i18n/config';
@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/documents`, lastModified: SITE_CONTENT_LAST_UPDATED, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${SITE_URL}/downloads`, lastModified: SITE_CONTENT_LAST_UPDATED, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${SITE_URL}/tech-docs`, lastModified: SITE_CONTENT_LAST_UPDATED, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${SITE_URL}/news`, lastModified: SITE_CONTENT_LAST_UPDATED, changeFrequency: 'weekly', priority: 0.6 },
+    { url: `${SITE_URL}/case-studies`, lastModified: SITE_CONTENT_LAST_UPDATED, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${SITE_URL}/contact`, lastModified: SITE_CONTENT_LAST_UPDATED, changeFrequency: 'yearly', priority: 0.7 },
   ];
 
@@ -34,9 +34,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const newsPages: MetadataRoute.Sitemap = getAllNews().map(article => ({
-    url: `${SITE_URL}/news/${article.id}`,
-    lastModified: new Date(article.date),
+  const articlePages: MetadataRoute.Sitemap = getPublishedArticles().map(article => ({
+    url: `${SITE_URL}${articlePaths[article.kind]}/${article.id}`,
+    lastModified: new Date(article.updated || article.date),
     changeFrequency: 'monthly',
     priority: 0.5,
   }));
@@ -48,7 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.3,
   }));
 
-  return [...staticPages, ...categoryPages, ...productPages, ...newsPages, ...legalPages].flatMap(entry => {
+  return [...staticPages, ...categoryPages, ...productPages, ...articlePages, ...legalPages].flatMap(entry => {
     const path = new URL(entry.url).pathname;
     const languages = Object.fromEntries(SUPPORTED_LANGUAGES.map(lang => [lang, `${SITE_URL}${localizedHref(path, lang)}`]));
     return SUPPORTED_LANGUAGES.map(lang => ({ ...entry, url: languages[lang], alternates: { languages } }));
