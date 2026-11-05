@@ -1,0 +1,1130 @@
+{
+  "id": "mcipcb13",
+  "name": "MCIPCB13",
+  "category": "industrial-mini-pc",
+  "series": "B",
+  "published": true,
+  "image": "/assets/products/industrial/merged/mcipcb13/front.webp",
+  "operatingRange": "-20°C to +60°C",
+  "sourceBrochures": [
+    "工控机IPC/B系列/MCIPCB13 brochure.pdf"
+  ],
+  "sourceSha256": "8f6b6d2bcb801fb4168174bb913adb5ea9124c9e24446cc6b2e5bcf7b29b7134",
+  "tagline": "Industrial PC with Intel Core and Core Ultra platform types",
+  "description": "Type A covers selected Intel Core generations; Type B covers Core Ultra or Core 3. Memory, display, USB and storage depend on the board platform and should be selected from the Type specifications below.",
+  "highlights": [
+    "Intel Core / Core Ultra options",
+    "Up to 64 GB on selected platforms",
+    "Dual Gigabit LAN",
+    "193.9 × 127 × 57.2 mm"
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCIPCB13 family"
+    },
+    {
+      "label": "Series",
+      "value": "B Series"
+    },
+    {
+      "label": "Network",
+      "value": "2 × Realtek RTL8111H Gigabit RJ45 LAN"
+    },
+    {
+      "label": "Serial",
+      "value": "2 × DB9 RS-232 COM"
+    },
+    {
+      "label": "Audio / antenna",
+      "value": "Headphone and microphone jacks; 2 × antenna connectors"
+    },
+    {
+      "label": "System features",
+      "value": "Watchdog and diskless boot"
+    },
+    {
+      "label": "Power",
+      "value": "12–19 V DC"
+    },
+    {
+      "label": "Chassis",
+      "value": "Aluminum enclosure; desktop or wall mounting"
+    },
+    {
+      "label": "Dimensions",
+      "value": "193.9 × 127 × 57.2 mm"
+    },
+    {
+      "label": "Weight",
+      "value": "1 kg"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "Operating: -20°C to +60°C; storage: -30°C to +70°C. Storage humidity: 10–90% RH at 30°C, non-condensing"
+    }
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/industrial/merged/mcipcb13/rear-type-a.webp",
+      "title": "MCIPCB13 Type A rear panel"
+    },
+    {
+      "image": "/assets/products/industrial/merged/mcipcb13/rear-type-b.webp",
+      "title": "MCIPCB13 Type B rear panel"
+    }
+  ],
+  "features": [
+    {
+      "icon": "Network",
+      "title": "Dual Gigabit LAN",
+      "description": "Two Realtek RTL8111H RJ45 ports connect equipment and networks."
+    },
+    {
+      "icon": "Server",
+      "title": "Two RS-232 ports",
+      "description": "Two DB9 RS-232 COM ports support compatible industrial peripherals."
+    },
+    {
+      "icon": "Layers",
+      "title": "Choose the right platform",
+      "description": "Compare processor, memory, display, USB and expansion options by Type."
+    }
+  ],
+  "skus": [
+    {
+      "key": "type-a",
+      "label": "Type A · Intel Core",
+      "legacyNames": [
+        "MCIPCB13A"
+      ],
+      "image": "/assets/products/industrial/merged/mcipcb13/rear-type-a.webp",
+      "specs": [
+        {
+          "label": "CPU",
+          "value": "Intel Core i3 / i5 / i7, 4th / 6th / 7th / 8th / 10th / 12th / 13th Gen"
+        },
+        {
+          "label": "Memory",
+          "value": "4th Gen: 1 × DDR3L SO-DIMM, up to 8 GB; 6th/7th/8th Gen: 1 × DDR4 SO-DIMM, up to 16 GB; 8th/10th Gen: 2 × DDR4 SO-DIMM, up to 32 GB; 12th/13th Gen: 1 × DDR5 SO-DIMM, up to 64 GB. The brochure lists both one- and two-slot 8th Gen platforms; confirm the ordered board"
+        },
+        {
+          "label": "Display",
+          "value": "1 × HDMI + 1 × VGA; optional second HDMI replaces VGA"
+        },
+        {
+          "label": "USB",
+          "value": "4 × USB 3.0 + 4 × USB 2.0"
+        },
+        {
+          "label": "Storage",
+          "value": "4th Gen: 1 × mSATA; 6th/7th/8th/10th/12th/13th Gen: 1 × M.2 2280 (SATA / NVMe). Plus 1 × 2.5-inch HDD / SSD"
+        },
+        {
+          "label": "Expansion",
+          "value": "1 × half/full-size Mini PCIe with SIM for 3G / 4G or Wi-Fi / Bluetooth"
+        },
+        {
+          "label": "OS",
+          "value": "Windows 7 / 8 / 10, WES 7 / 10, Linux"
+        }
+      ],
+      "labelTranslations": {
+        "de": "Typ A · Intel Core",
+        "fr": "Type A · Intel Core",
+        "it": "Tipo A · Intel Core",
+        "es": "Tipo A · Intel Core"
+      },
+      "translations": {
+        "de": {
+          "specs": [
+            {
+              "label": "Modell",
+              "value": "MCIPCB13A"
+            },
+            {
+              "label": "Serie",
+              "value": "B-Serie"
+            },
+            {
+              "label": "CPU",
+              "value": "Intel Core i3 / i5 / i7 der 4. / 6. / 7. / 8. / 10. / 12. / 13. Generation"
+            },
+            {
+              "label": "Arbeitsspeicher",
+              "value": "4. Gen.: 1 × DDR3L-SO-DIMM, bis 8 GB; 6./7./8. Gen.: 1 × DDR4-SO-DIMM, bis 16 GB; 8./10. Gen.: 2 × DDR4-SO-DIMM, bis 32 GB; 12./13. Gen.: 1 × DDR5-SO-DIMM, bis 64 GB. Die Broschüre nennt Plattformen der 8. Generation mit einem und zwei Steckplätzen; bestellte Platine bestätigen"
+            },
+            {
+              "label": "Bildausgänge",
+              "value": "1 × HDMI + 1 × VGA; optional ersetzt ein zweiter HDMI-Ausgang VGA"
+            },
+            {
+              "label": "Netzwerk",
+              "value": "2 × Realtek RTL8111H Gigabit-RJ45-LAN"
+            },
+            {
+              "label": "USB",
+              "value": "4 × USB 3.0 + 4 × USB 2.0"
+            },
+            {
+              "label": "Serielle Anschlüsse",
+              "value": "2 × DB9 RS-232 COM"
+            },
+            {
+              "label": "Massenspeicher",
+              "value": "4. Gen.: 1 × mSATA; 6./7./8./10./12./13. Gen.: 1 × M.2 2280 (SATA / NVMe). Zusätzlich 1 × 2,5-Zoll-HDD / SSD"
+            },
+            {
+              "label": "Erweiterung",
+              "value": "1 × Mini PCIe in halber/voller Baugröße mit SIM für 3G / 4G oder Wi-Fi / Bluetooth"
+            },
+            {
+              "label": "Stromversorgung",
+              "value": "12–19 V DC"
+            },
+            {
+              "label": "Betriebssystem",
+              "value": "Windows 7 / 8 / 10, WES 7 / 10, Linux"
+            },
+            {
+              "label": "Umgebungsbedingungen",
+              "value": "Betrieb: -20°C bis +60°C; Lagerung: -30°C bis +70°C. Lagerfeuchte: 10–90 % r. F. bei 30°C, nicht kondensierend"
+            },
+            {
+              "label": "Gehäuse",
+              "value": "Aluminiumgehäuse; Tischaufstellung oder Wandmontage"
+            },
+            {
+              "label": "Abmessungen",
+              "value": "193,9 × 127 × 57,2 mm"
+            },
+            {
+              "label": "Audio / Antennen",
+              "value": "Kopfhörer- und Mikrofonbuchse; 2 × Antennenanschluss"
+            },
+            {
+              "label": "Systemfunktionen",
+              "value": "Watchdog und Start ohne lokales Laufwerk"
+            },
+            {
+              "label": "Gewicht",
+              "value": "1 kg"
+            }
+          ]
+        },
+        "fr": {
+          "specs": [
+            {
+              "label": "Modèle",
+              "value": "MCIPCB13A"
+            },
+            {
+              "label": "Série",
+              "value": "Série B"
+            },
+            {
+              "label": "Processeur",
+              "value": "Intel Core i3 / i5 / i7 de 4e / 6e / 7e / 8e / 10e / 12e / 13e génération"
+            },
+            {
+              "label": "Mémoire",
+              "value": "4e gén. : 1 × SO-DIMM DDR3L, jusqu’à 8 Go ; 6e/7e/8e gén. : 1 × SO-DIMM DDR4, jusqu’à 16 Go ; 8e/10e gén. : 2 × SO-DIMM DDR4, jusqu’à 32 Go ; 12e/13e gén. : 1 × SO-DIMM DDR5, jusqu’à 64 Go. La brochure indique des plateformes de 8e génération à un ou deux emplacements ; confirmez la carte commandée"
+            },
+            {
+              "label": "Sorties vidéo",
+              "value": "1 × HDMI + 1 × VGA ; un second HDMI peut remplacer le VGA en option"
+            },
+            {
+              "label": "Réseau",
+              "value": "2 × LAN Gigabit RJ45 Realtek RTL8111H"
+            },
+            {
+              "label": "USB",
+              "value": "4 × USB 3.0 + 4 × USB 2.0"
+            },
+            {
+              "label": "Ports série",
+              "value": "2 × COM DB9 RS-232"
+            },
+            {
+              "label": "Stockage",
+              "value": "4e gén. : 1 × mSATA ; 6e/7e/8e/10e/12e/13e gén. : 1 × M.2 2280 (SATA / NVMe). Plus 1 × HDD / SSD de 2,5 pouces"
+            },
+            {
+              "label": "Extension",
+              "value": "1 × Mini PCIe demi-format/plein format avec SIM pour 3G / 4G ou Wi-Fi / Bluetooth"
+            },
+            {
+              "label": "Alimentation",
+              "value": "12–19 V CC"
+            },
+            {
+              "label": "Système d’exploitation",
+              "value": "Windows 7 / 8 / 10, WES 7 / 10, Linux"
+            },
+            {
+              "label": "Environnement",
+              "value": "Fonctionnement : -20°C à +60°C ; stockage : -30°C à +70°C. Humidité de stockage : 10–90 % HR à 30°C, sans condensation"
+            },
+            {
+              "label": "Boîtier",
+              "value": "Boîtier en aluminium ; installation sur bureau ou au mur"
+            },
+            {
+              "label": "Dimensions",
+              "value": "193,9 × 127 × 57,2 mm"
+            },
+            {
+              "label": "Audio / antennes",
+              "value": "Prises casque et microphone ; 2 × connecteurs d’antenne"
+            },
+            {
+              "label": "Fonctions système",
+              "value": "Watchdog et démarrage sans disque"
+            },
+            {
+              "label": "Poids",
+              "value": "1 kg"
+            }
+          ]
+        },
+        "it": {
+          "specs": [
+            {
+              "label": "Modello",
+              "value": "MCIPCB13A"
+            },
+            {
+              "label": "Serie",
+              "value": "Serie B"
+            },
+            {
+              "label": "Processore",
+              "value": "Intel Core i3 / i5 / i7 di 4ª / 6ª / 7ª / 8ª / 10ª / 12ª / 13ª generazione"
+            },
+            {
+              "label": "Memoria",
+              "value": "4ª gen.: 1 × SO-DIMM DDR3L, fino a 8 GB; 6ª/7ª/8ª gen.: 1 × SO-DIMM DDR4, fino a 16 GB; 8ª/10ª gen.: 2 × SO-DIMM DDR4, fino a 32 GB; 12ª/13ª gen.: 1 × SO-DIMM DDR5, fino a 64 GB. La brochure elenca piattaforme di 8ª generazione con uno o due slot; confermare la scheda ordinata"
+            },
+            {
+              "label": "Uscite video",
+              "value": "1 × HDMI + 1 × VGA; una seconda HDMI può sostituire la VGA come opzione"
+            },
+            {
+              "label": "Rete",
+              "value": "2 × LAN Gigabit RJ45 Realtek RTL8111H"
+            },
+            {
+              "label": "USB",
+              "value": "4 × USB 3.0 + 4 × USB 2.0"
+            },
+            {
+              "label": "Porte seriali",
+              "value": "2 × COM DB9 RS-232"
+            },
+            {
+              "label": "Archiviazione",
+              "value": "4ª gen.: 1 × mSATA; 6ª/7ª/8ª/10ª/12ª/13ª gen.: 1 × M.2 2280 (SATA / NVMe). Inoltre 1 × HDD / SSD da 2,5 pollici"
+            },
+            {
+              "label": "Espansione",
+              "value": "1 × Mini PCIe half/full-size con SIM per 3G / 4G o Wi-Fi / Bluetooth"
+            },
+            {
+              "label": "Alimentazione",
+              "value": "12–19 V CC"
+            },
+            {
+              "label": "Sistema operativo",
+              "value": "Windows 7 / 8 / 10, WES 7 / 10, Linux"
+            },
+            {
+              "label": "Condizioni ambientali",
+              "value": "Funzionamento: da -20°C a +60°C; stoccaggio: da -30°C a +70°C. Umidità di stoccaggio: 10–90% UR a 30°C, senza condensa"
+            },
+            {
+              "label": "Case",
+              "value": "Case in alluminio; installazione su scrivania o a parete"
+            },
+            {
+              "label": "Dimensioni",
+              "value": "193,9 × 127 × 57,2 mm"
+            },
+            {
+              "label": "Audio / antenne",
+              "value": "Jack cuffie e microfono; 2 × connettori per antenna"
+            },
+            {
+              "label": "Funzioni di sistema",
+              "value": "Watchdog e avvio senza disco"
+            },
+            {
+              "label": "Peso",
+              "value": "1 kg"
+            }
+          ]
+        },
+        "es": {
+          "specs": [
+            {
+              "label": "Modelo",
+              "value": "MCIPCB13A"
+            },
+            {
+              "label": "Serie",
+              "value": "Serie B"
+            },
+            {
+              "label": "Procesador",
+              "value": "Intel Core i3 / i5 / i7 de 4.ª / 6.ª / 7.ª / 8.ª / 10.ª / 12.ª / 13.ª generación"
+            },
+            {
+              "label": "Memoria",
+              "value": "4.ª gen.: 1 × SO-DIMM DDR3L, hasta 8 GB; 6.ª/7.ª/8.ª gen.: 1 × SO-DIMM DDR4, hasta 16 GB; 8.ª/10.ª gen.: 2 × SO-DIMM DDR4, hasta 32 GB; 12.ª/13.ª gen.: 1 × SO-DIMM DDR5, hasta 64 GB. El folleto indica plataformas de 8.ª generación con una o dos ranuras; confirma la placa solicitada"
+            },
+            {
+              "label": "Salidas de vídeo",
+              "value": "1 × HDMI + 1 × VGA; una segunda HDMI puede sustituir la VGA como opción"
+            },
+            {
+              "label": "Red",
+              "value": "2 × LAN Gigabit RJ45 Realtek RTL8111H"
+            },
+            {
+              "label": "USB",
+              "value": "4 × USB 3.0 + 4 × USB 2.0"
+            },
+            {
+              "label": "Puertos serie",
+              "value": "2 × COM DB9 RS-232"
+            },
+            {
+              "label": "Almacenamiento",
+              "value": "4.ª gen.: 1 × mSATA; 6.ª/7.ª/8.ª/10.ª/12.ª/13.ª gen.: 1 × M.2 2280 (SATA / NVMe). Además, 1 × HDD / SSD de 2,5 pulgadas"
+            },
+            {
+              "label": "Ampliación",
+              "value": "1 × Mini PCIe de tamaño medio/completo con SIM para 3G / 4G o Wi-Fi / Bluetooth"
+            },
+            {
+              "label": "Alimentación",
+              "value": "12–19 V CC"
+            },
+            {
+              "label": "Sistema operativo",
+              "value": "Windows 7 / 8 / 10, WES 7 / 10, Linux"
+            },
+            {
+              "label": "Entorno",
+              "value": "Funcionamiento: de -20°C a +60°C; almacenamiento: de -30°C a +70°C. Humedad de almacenamiento: 10–90 % HR a 30°C, sin condensación"
+            },
+            {
+              "label": "Carcasa",
+              "value": "Carcasa de aluminio; instalación de sobremesa o en pared"
+            },
+            {
+              "label": "Dimensiones",
+              "value": "193,9 × 127 × 57,2 mm"
+            },
+            {
+              "label": "Audio / antenas",
+              "value": "Conectores de auriculares y micrófono; 2 × conectores de antena"
+            },
+            {
+              "label": "Funciones del sistema",
+              "value": "Watchdog y arranque sin disco"
+            },
+            {
+              "label": "Peso",
+              "value": "1 kg"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "type-b",
+      "label": "Type B · Core Ultra / Core 3",
+      "legacyNames": [
+        "MCIPCB13B"
+      ],
+      "image": "/assets/products/industrial/merged/mcipcb13/rear-type-b.webp",
+      "specs": [
+        {
+          "label": "CPU",
+          "value": "Intel Core Ultra Series 1 / 2 U5 / U7; Intel Core 3 304 / 305 / 315 / 320 / 330 / 350 / 360"
+        },
+        {
+          "label": "Memory",
+          "value": "1 × DDR5 SO-DIMM, up to 64 GB"
+        },
+        {
+          "label": "Display",
+          "value": "2 × HDMI + 1 × DisplayPort"
+        },
+        {
+          "label": "USB",
+          "value": "Core Ultra: 4 × USB 3.0 + 4 × USB 2.0; Core 3: 2 × USB 3.0 + 6 × USB 2.0"
+        },
+        {
+          "label": "Storage",
+          "value": "1 × M.2 2280 NVMe; 1 × 2.5-inch HDD / SSD on Core Ultra only (not supported on Core 3)"
+        },
+        {
+          "label": "Expansion",
+          "value": "1 × M.2 Wi-Fi slot (brochure lists 2232; confirm slot size before ordering); 1 × M.2 3042 for 3G / 4G with onboard SIM"
+        },
+        {
+          "label": "OS",
+          "value": "Windows 10 / 11, Linux"
+        }
+      ],
+      "labelTranslations": {
+        "de": "Typ B · Core Ultra / Core 3",
+        "fr": "Type B · Core Ultra / Core 3",
+        "it": "Tipo B · Core Ultra / Core 3",
+        "es": "Tipo B · Core Ultra / Core 3"
+      },
+      "translations": {
+        "de": {
+          "specs": [
+            {
+              "label": "Modell",
+              "value": "MCIPCB13B"
+            },
+            {
+              "label": "Serie",
+              "value": "B-Serie"
+            },
+            {
+              "label": "CPU",
+              "value": "Intel Core Ultra Series 1 / 2 U5 / U7; Intel Core 3 304 / 305 / 315 / 320 / 330 / 350 / 360"
+            },
+            {
+              "label": "Arbeitsspeicher",
+              "value": "1 × DDR5-SO-DIMM, bis 64 GB"
+            },
+            {
+              "label": "Bildausgänge",
+              "value": "2 × HDMI + 1 × DisplayPort"
+            },
+            {
+              "label": "Netzwerk",
+              "value": "2 × Realtek RTL8111H Gigabit-RJ45-LAN"
+            },
+            {
+              "label": "USB",
+              "value": "Core Ultra: 4 × USB 3.0 + 4 × USB 2.0; Core 3: 2 × USB 3.0 + 6 × USB 2.0"
+            },
+            {
+              "label": "Serielle Anschlüsse",
+              "value": "2 × DB9 RS-232 COM"
+            },
+            {
+              "label": "Massenspeicher",
+              "value": "1 × M.2 2280 NVMe; 1 × 2,5-Zoll-HDD / SSD nur bei Core Ultra (bei Core 3 nicht unterstützt)"
+            },
+            {
+              "label": "Erweiterung",
+              "value": "1 × M.2-Wi-Fi-Steckplatz (Broschüre nennt 2232; Baugröße vor Bestellung bestätigen); 1 × M.2 3042 für 3G / 4G mit integrierter SIM"
+            },
+            {
+              "label": "Stromversorgung",
+              "value": "12–19 V DC"
+            },
+            {
+              "label": "Betriebssystem",
+              "value": "Windows 10 / 11, Linux"
+            },
+            {
+              "label": "Umgebungsbedingungen",
+              "value": "Betrieb: -20°C bis +60°C; Lagerung: -30°C bis +70°C. Lagerfeuchte: 10–90 % r. F. bei 30°C, nicht kondensierend"
+            },
+            {
+              "label": "Gehäuse",
+              "value": "Aluminiumgehäuse; Tischaufstellung oder Wandmontage"
+            },
+            {
+              "label": "Abmessungen",
+              "value": "193,9 × 127 × 57,2 mm"
+            },
+            {
+              "label": "Audio / Antennen",
+              "value": "Kopfhörer- und Mikrofonbuchse; 2 × Antennenanschluss"
+            },
+            {
+              "label": "Systemfunktionen",
+              "value": "Watchdog und Start ohne lokales Laufwerk"
+            },
+            {
+              "label": "Gewicht",
+              "value": "1 kg"
+            }
+          ]
+        },
+        "fr": {
+          "specs": [
+            {
+              "label": "Modèle",
+              "value": "MCIPCB13B"
+            },
+            {
+              "label": "Série",
+              "value": "Série B"
+            },
+            {
+              "label": "Processeur",
+              "value": "Intel Core Ultra Series 1 / 2 U5 / U7; Intel Core 3 304 / 305 / 315 / 320 / 330 / 350 / 360"
+            },
+            {
+              "label": "Mémoire",
+              "value": "1 × SO-DIMM DDR5, jusqu’à 64 Go"
+            },
+            {
+              "label": "Sorties vidéo",
+              "value": "2 × HDMI + 1 × DisplayPort"
+            },
+            {
+              "label": "Réseau",
+              "value": "2 × LAN Gigabit RJ45 Realtek RTL8111H"
+            },
+            {
+              "label": "USB",
+              "value": "Core Ultra: 4 × USB 3.0 + 4 × USB 2.0; Core 3: 2 × USB 3.0 + 6 × USB 2.0"
+            },
+            {
+              "label": "Ports série",
+              "value": "2 × COM DB9 RS-232"
+            },
+            {
+              "label": "Stockage",
+              "value": "1 × M.2 2280 NVMe ; 1 × HDD / SSD de 2,5 pouces uniquement sur Core Ultra (non pris en charge sur Core 3)"
+            },
+            {
+              "label": "Extension",
+              "value": "1 × emplacement M.2 Wi-Fi (2232 indiqué dans la brochure ; format à confirmer avant commande) ; 1 × M.2 3042 pour 3G / 4G avec SIM intégrée"
+            },
+            {
+              "label": "Alimentation",
+              "value": "12–19 V CC"
+            },
+            {
+              "label": "Système d’exploitation",
+              "value": "Windows 10 / 11, Linux"
+            },
+            {
+              "label": "Environnement",
+              "value": "Fonctionnement : -20°C à +60°C ; stockage : -30°C à +70°C. Humidité de stockage : 10–90 % HR à 30°C, sans condensation"
+            },
+            {
+              "label": "Boîtier",
+              "value": "Boîtier en aluminium ; installation sur bureau ou au mur"
+            },
+            {
+              "label": "Dimensions",
+              "value": "193,9 × 127 × 57,2 mm"
+            },
+            {
+              "label": "Audio / antennes",
+              "value": "Prises casque et microphone ; 2 × connecteurs d’antenne"
+            },
+            {
+              "label": "Fonctions système",
+              "value": "Watchdog et démarrage sans disque"
+            },
+            {
+              "label": "Poids",
+              "value": "1 kg"
+            }
+          ]
+        },
+        "it": {
+          "specs": [
+            {
+              "label": "Modello",
+              "value": "MCIPCB13B"
+            },
+            {
+              "label": "Serie",
+              "value": "Serie B"
+            },
+            {
+              "label": "Processore",
+              "value": "Intel Core Ultra Series 1 / 2 U5 / U7; Intel Core 3 304 / 305 / 315 / 320 / 330 / 350 / 360"
+            },
+            {
+              "label": "Memoria",
+              "value": "1 × SO-DIMM DDR5, fino a 64 GB"
+            },
+            {
+              "label": "Uscite video",
+              "value": "2 × HDMI + 1 × DisplayPort"
+            },
+            {
+              "label": "Rete",
+              "value": "2 × LAN Gigabit RJ45 Realtek RTL8111H"
+            },
+            {
+              "label": "USB",
+              "value": "Core Ultra: 4 × USB 3.0 + 4 × USB 2.0; Core 3: 2 × USB 3.0 + 6 × USB 2.0"
+            },
+            {
+              "label": "Porte seriali",
+              "value": "2 × COM DB9 RS-232"
+            },
+            {
+              "label": "Archiviazione",
+              "value": "1 × M.2 2280 NVMe; 1 × HDD / SSD da 2,5 pollici solo su Core Ultra (non supportato su Core 3)"
+            },
+            {
+              "label": "Espansione",
+              "value": "1 × slot M.2 Wi-Fi (la brochure indica 2232; confermare il formato prima dell’ordine); 1 × M.2 3042 per 3G / 4G con SIM integrata"
+            },
+            {
+              "label": "Alimentazione",
+              "value": "12–19 V CC"
+            },
+            {
+              "label": "Sistema operativo",
+              "value": "Windows 10 / 11, Linux"
+            },
+            {
+              "label": "Condizioni ambientali",
+              "value": "Funzionamento: da -20°C a +60°C; stoccaggio: da -30°C a +70°C. Umidità di stoccaggio: 10–90% UR a 30°C, senza condensa"
+            },
+            {
+              "label": "Case",
+              "value": "Case in alluminio; installazione su scrivania o a parete"
+            },
+            {
+              "label": "Dimensioni",
+              "value": "193,9 × 127 × 57,2 mm"
+            },
+            {
+              "label": "Audio / antenne",
+              "value": "Jack cuffie e microfono; 2 × connettori per antenna"
+            },
+            {
+              "label": "Funzioni di sistema",
+              "value": "Watchdog e avvio senza disco"
+            },
+            {
+              "label": "Peso",
+              "value": "1 kg"
+            }
+          ]
+        },
+        "es": {
+          "specs": [
+            {
+              "label": "Modelo",
+              "value": "MCIPCB13B"
+            },
+            {
+              "label": "Serie",
+              "value": "Serie B"
+            },
+            {
+              "label": "Procesador",
+              "value": "Intel Core Ultra Series 1 / 2 U5 / U7; Intel Core 3 304 / 305 / 315 / 320 / 330 / 350 / 360"
+            },
+            {
+              "label": "Memoria",
+              "value": "1 × SO-DIMM DDR5, hasta 64 GB"
+            },
+            {
+              "label": "Salidas de vídeo",
+              "value": "2 × HDMI + 1 × DisplayPort"
+            },
+            {
+              "label": "Red",
+              "value": "2 × LAN Gigabit RJ45 Realtek RTL8111H"
+            },
+            {
+              "label": "USB",
+              "value": "Core Ultra: 4 × USB 3.0 + 4 × USB 2.0; Core 3: 2 × USB 3.0 + 6 × USB 2.0"
+            },
+            {
+              "label": "Puertos serie",
+              "value": "2 × COM DB9 RS-232"
+            },
+            {
+              "label": "Almacenamiento",
+              "value": "1 × M.2 2280 NVMe; 1 × HDD / SSD de 2,5 pulgadas solo en Core Ultra (no compatible con Core 3)"
+            },
+            {
+              "label": "Ampliación",
+              "value": "1 × ranura M.2 Wi-Fi (el folleto indica 2232; confirma el tamaño antes del pedido); 1 × M.2 3042 para 3G / 4G con SIM integrada"
+            },
+            {
+              "label": "Alimentación",
+              "value": "12–19 V CC"
+            },
+            {
+              "label": "Sistema operativo",
+              "value": "Windows 10 / 11, Linux"
+            },
+            {
+              "label": "Entorno",
+              "value": "Funcionamiento: de -20°C a +60°C; almacenamiento: de -30°C a +70°C. Humedad de almacenamiento: 10–90 % HR a 30°C, sin condensación"
+            },
+            {
+              "label": "Carcasa",
+              "value": "Carcasa de aluminio; instalación de sobremesa o en pared"
+            },
+            {
+              "label": "Dimensiones",
+              "value": "193,9 × 127 × 57,2 mm"
+            },
+            {
+              "label": "Audio / antenas",
+              "value": "Conectores de auriculares y micrófono; 2 × conectores de antena"
+            },
+            {
+              "label": "Funciones del sistema",
+              "value": "Watchdog y arranque sin disco"
+            },
+            {
+              "label": "Peso",
+              "value": "1 kg"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "translations": {
+    "de": {
+      "tagline": "Industrie-PC mit Intel Core- und Core Ultra-Plattformen",
+      "description": "Typ A bietet ausgewählte Intel Core-Generationen, Typ B Core Ultra oder Core 3. Arbeitsspeicher, Bildausgänge, USB und Massenspeicher hängen von der Platine ab. Vergleichen Sie die vollständigen Daten des jeweiligen Typs unten.",
+      "highlights": [
+        "Intel Core / Core Ultra zur Wahl",
+        "Bis 64 GB je nach Plattform",
+        "Zwei Gigabit-LAN-Anschlüsse",
+        "193,9 × 127 × 57,2 mm"
+      ],
+      "specs": [
+        {
+          "label": "Modell",
+          "value": "MCIPCB13-Serie"
+        },
+        {
+          "label": "Serie",
+          "value": "B-Serie"
+        },
+        {
+          "label": "Netzwerk",
+          "value": "2 × Realtek RTL8111H Gigabit-RJ45-LAN"
+        },
+        {
+          "label": "Serielle Anschlüsse",
+          "value": "2 × DB9 RS-232 COM"
+        },
+        {
+          "label": "Audio / Antennen",
+          "value": "Kopfhörer- und Mikrofonbuchse; 2 × Antennenanschluss"
+        },
+        {
+          "label": "Systemfunktionen",
+          "value": "Watchdog und Start ohne lokales Laufwerk"
+        },
+        {
+          "label": "Stromversorgung",
+          "value": "12–19 V DC"
+        },
+        {
+          "label": "Gehäuse",
+          "value": "Aluminiumgehäuse; Tischaufstellung oder Wandmontage"
+        },
+        {
+          "label": "Abmessungen",
+          "value": "193,9 × 127 × 57,2 mm"
+        },
+        {
+          "label": "Gewicht",
+          "value": "1 kg"
+        },
+        {
+          "label": "Umgebungsbedingungen",
+          "value": "Betrieb: -20°C bis +60°C; Lagerung: -30°C bis +70°C. Lagerfeuchte: 10–90 % r. F. bei 30°C, nicht kondensierend"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/merged/mcipcb13/rear-type-a.webp",
+          "title": "MCIPCB13 Typ A – Rückseite"
+        },
+        {
+          "image": "/assets/products/industrial/merged/mcipcb13/rear-type-b.webp",
+          "title": "MCIPCB13 Typ B – Rückseite"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Zwei Gigabit-LAN-Anschlüsse",
+          "description": "Zwei Realtek RTL8111H-RJ45-Anschlüsse verbinden Geräte und Netzwerke."
+        },
+        {
+          "icon": "Server",
+          "title": "Zwei RS-232-Anschlüsse",
+          "description": "Zwei DB9-RS-232-COM-Anschlüsse unterstützen kompatible Industrieperipherie."
+        },
+        {
+          "icon": "Layers",
+          "title": "Passende Plattform wählen",
+          "description": "Vergleichen Sie Prozessor, Arbeitsspeicher, Bildausgänge, USB und Erweiterungen je Typ."
+        }
+      ]
+    },
+    "fr": {
+      "tagline": "PC industriel avec plateformes Intel Core et Core Ultra",
+      "description": "Le type A propose plusieurs générations Intel Core ; le type B propose Core Ultra ou Core 3. La mémoire, les sorties vidéo, les ports USB et le stockage dépendent de la carte. Consultez les caractéristiques complètes du type choisi ci-dessous.",
+      "highlights": [
+        "Options Intel Core / Core Ultra",
+        "Jusqu’à 64 Go selon la plateforme",
+        "Deux ports LAN Gigabit",
+        "193,9 × 127 × 57,2 mm"
+      ],
+      "specs": [
+        {
+          "label": "Modèle",
+          "value": "Famille MCIPCB13"
+        },
+        {
+          "label": "Série",
+          "value": "Série B"
+        },
+        {
+          "label": "Réseau",
+          "value": "2 × LAN Gigabit RJ45 Realtek RTL8111H"
+        },
+        {
+          "label": "Ports série",
+          "value": "2 × COM DB9 RS-232"
+        },
+        {
+          "label": "Audio / antennes",
+          "value": "Prises casque et microphone ; 2 × connecteurs d’antenne"
+        },
+        {
+          "label": "Fonctions système",
+          "value": "Watchdog et démarrage sans disque"
+        },
+        {
+          "label": "Alimentation",
+          "value": "12–19 V CC"
+        },
+        {
+          "label": "Boîtier",
+          "value": "Boîtier en aluminium ; installation sur bureau ou au mur"
+        },
+        {
+          "label": "Dimensions",
+          "value": "193,9 × 127 × 57,2 mm"
+        },
+        {
+          "label": "Poids",
+          "value": "1 kg"
+        },
+        {
+          "label": "Environnement",
+          "value": "Fonctionnement : -20°C à +60°C ; stockage : -30°C à +70°C. Humidité de stockage : 10–90 % HR à 30°C, sans condensation"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/merged/mcipcb13/rear-type-a.webp",
+          "title": "MCIPCB13 type A – panneau arrière"
+        },
+        {
+          "image": "/assets/products/industrial/merged/mcipcb13/rear-type-b.webp",
+          "title": "MCIPCB13 type B – panneau arrière"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Deux ports LAN Gigabit",
+          "description": "Deux ports RJ45 Realtek RTL8111H relient les équipements et les réseaux."
+        },
+        {
+          "icon": "Server",
+          "title": "Deux ports RS-232",
+          "description": "Deux ports COM DB9 RS-232 prennent en charge les périphériques industriels compatibles."
+        },
+        {
+          "icon": "Layers",
+          "title": "Choisissez votre plateforme",
+          "description": "Comparez le processeur, la mémoire, les sorties vidéo, les ports USB et les extensions de chaque type."
+        }
+      ]
+    },
+    "it": {
+      "tagline": "PC industriale con piattaforme Intel Core e Core Ultra",
+      "description": "Il tipo A offre diverse generazioni Intel Core; il tipo B offre Core Ultra o Core 3. Memoria, uscite video, USB e archiviazione dipendono dalla scheda. Consulta le specifiche complete del tipo selezionato qui sotto.",
+      "highlights": [
+        "Opzioni Intel Core / Core Ultra",
+        "Fino a 64 GB secondo la piattaforma",
+        "Due porte LAN Gigabit",
+        "193,9 × 127 × 57,2 mm"
+      ],
+      "specs": [
+        {
+          "label": "Modello",
+          "value": "Famiglia MCIPCB13"
+        },
+        {
+          "label": "Serie",
+          "value": "Serie B"
+        },
+        {
+          "label": "Rete",
+          "value": "2 × LAN Gigabit RJ45 Realtek RTL8111H"
+        },
+        {
+          "label": "Porte seriali",
+          "value": "2 × COM DB9 RS-232"
+        },
+        {
+          "label": "Audio / antenne",
+          "value": "Jack cuffie e microfono; 2 × connettori per antenna"
+        },
+        {
+          "label": "Funzioni di sistema",
+          "value": "Watchdog e avvio senza disco"
+        },
+        {
+          "label": "Alimentazione",
+          "value": "12–19 V CC"
+        },
+        {
+          "label": "Case",
+          "value": "Case in alluminio; installazione su scrivania o a parete"
+        },
+        {
+          "label": "Dimensioni",
+          "value": "193,9 × 127 × 57,2 mm"
+        },
+        {
+          "label": "Peso",
+          "value": "1 kg"
+        },
+        {
+          "label": "Condizioni ambientali",
+          "value": "Funzionamento: da -20°C a +60°C; stoccaggio: da -30°C a +70°C. Umidità di stoccaggio: 10–90% UR a 30°C, senza condensa"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/merged/mcipcb13/rear-type-a.webp",
+          "title": "MCIPCB13 tipo A – pannello posteriore"
+        },
+        {
+          "image": "/assets/products/industrial/merged/mcipcb13/rear-type-b.webp",
+          "title": "MCIPCB13 tipo B – pannello posteriore"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Due porte LAN Gigabit",
+          "description": "Due porte RJ45 Realtek RTL8111H collegano dispositivi e reti."
+        },
+        {
+          "icon": "Server",
+          "title": "Due porte RS-232",
+          "description": "Due porte COM DB9 RS-232 supportano periferiche industriali compatibili."
+        },
+        {
+          "icon": "Layers",
+          "title": "Scegli la piattaforma adatta",
+          "description": "Confronta processore, memoria, uscite video, USB ed espansioni di ciascun tipo."
+        }
+      ]
+    },
+    "es": {
+      "tagline": "PC industrial con plataformas Intel Core y Core Ultra",
+      "description": "El tipo A ofrece varias generaciones Intel Core; el tipo B ofrece Core Ultra o Core 3. La memoria, las salidas de vídeo, los USB y el almacenamiento dependen de la placa. Consulta las especificaciones completas del tipo seleccionado a continuación.",
+      "highlights": [
+        "Opciones Intel Core / Core Ultra",
+        "Hasta 64 GB según la plataforma",
+        "Dos puertos LAN Gigabit",
+        "193,9 × 127 × 57,2 mm"
+      ],
+      "specs": [
+        {
+          "label": "Modelo",
+          "value": "Familia MCIPCB13"
+        },
+        {
+          "label": "Serie",
+          "value": "Serie B"
+        },
+        {
+          "label": "Red",
+          "value": "2 × LAN Gigabit RJ45 Realtek RTL8111H"
+        },
+        {
+          "label": "Puertos serie",
+          "value": "2 × COM DB9 RS-232"
+        },
+        {
+          "label": "Audio / antenas",
+          "value": "Conectores de auriculares y micrófono; 2 × conectores de antena"
+        },
+        {
+          "label": "Funciones del sistema",
+          "value": "Watchdog y arranque sin disco"
+        },
+        {
+          "label": "Alimentación",
+          "value": "12–19 V CC"
+        },
+        {
+          "label": "Carcasa",
+          "value": "Carcasa de aluminio; instalación de sobremesa o en pared"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "193,9 × 127 × 57,2 mm"
+        },
+        {
+          "label": "Peso",
+          "value": "1 kg"
+        },
+        {
+          "label": "Entorno",
+          "value": "Funcionamiento: de -20°C a +60°C; almacenamiento: de -30°C a +70°C. Humedad de almacenamiento: 10–90 % HR a 30°C, sin condensación"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/merged/mcipcb13/rear-type-a.webp",
+          "title": "MCIPCB13 tipo A – panel trasero"
+        },
+        {
+          "image": "/assets/products/industrial/merged/mcipcb13/rear-type-b.webp",
+          "title": "MCIPCB13 tipo B – panel trasero"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Dos puertos LAN Gigabit",
+          "description": "Dos puertos RJ45 Realtek RTL8111H conectan equipos y redes."
+        },
+        {
+          "icon": "Server",
+          "title": "Dos puertos RS-232",
+          "description": "Dos puertos COM DB9 RS-232 admiten periféricos industriales compatibles."
+        },
+        {
+          "icon": "Layers",
+          "title": "Elige la plataforma adecuada",
+          "description": "Compara el procesador, la memoria, las salidas de vídeo, los USB y las ampliaciones de cada tipo."
+        }
+      ]
+    }
+  }
+}

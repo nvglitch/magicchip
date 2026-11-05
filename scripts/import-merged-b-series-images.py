@@ -16,7 +16,8 @@ BROCHURES = {
     "mcipcb1": "MCIPCB1 brochure.pdf",
     "mcipcb2": "MCIPCB2 brochure.pdf",
     "mcipcb6": "MCIPCB6 Brochure.pdf",
-    "mcipcb13": "MCIPCB13 brochure.pdf",
+    # MCIPCB13 now has separate Type A/B pages. Use import-mcipcb13-assets.py;
+    # its approved front.webp hero and model thumbnail must remain unchanged.
     "mcipcb14": "MCIPCB14 Brochure.pdf",
     "mcipcb15": "MCIPCB15 brochure.pdf",
     "mcipcb16": "MCIPCB16 brochure.pdf",

@@ -1,5 +1,6 @@
 import type { IndustrialCatalogItem, IndustrialCatalogSpec } from '@/lib/industrial-catalog';
 import type { ProductConfiguration } from '@/lib/product-specifications';
+import mcipcb13 from '@/content/products/items/mcipcb13.json';
 
 export type IndustrialSku = ProductConfiguration;
 
@@ -61,20 +62,7 @@ export const mergedBSeries: MergedProduct[] = [
       { key: 'type-c', label: 'Type C · DDR4', legacyNames: ['MCIPCB6-DDR4'], image: view('mcipcb6', 'rear'), specs: [spec('CPU', 'Intel Core 6th / 7th / 8th Gen'), spec('Memory', '1 × DDR4 SO-DIMM, up to 32 GB'), spec('DisplayPort', 'DP 1.2, up to 4K 60 Hz'), spec('Power connector', 'Onboard 2-pin connector')] },
     ],
   },
-  {
-    id: 'mcipcb13', name: 'MCIPCB13', series: 'B',
-    tagline: 'Industrial PC with Intel Core and Core Ultra platform types',
-    description: 'Type A covers selected Intel Core generations; Type B covers Core Ultra or Core 3. Memory, display, USB and storage depend on the board platform and should be selected from the Type specifications below.',
-    image: view('mcipcb13', 'front'), galleryCards: gallery('mcipcb13'),
-    highlights: ['Intel Core / Core Ultra options', 'Up to 64 GB on selected platforms', 'Dual Gigabit LAN', '193.9 × 127 × 57.2 mm'],
-    specs: [spec('Model', 'MCIPCB13 family'), spec('Series', 'B Series'), spec('Network', '2 × Realtek RTL8111H Gigabit LAN'), spec('Serial', '2 × DB9 COM; signaling for Type A requires confirmation'), spec('Power', '12–19 V DC'), spec('Operating Environment', '-20°C to +60°C'), spec('Dimensions', '193.9 × 127 × 57.2 mm')],
-    operatingRange: '-20°C to +60°C',
-    sourceBrochures: ['工控机IPC/B系列/MCIPCB13 brochure.pdf'],
-    skus: [
-      { key: 'type-a', label: 'Type A · Intel Core', legacyNames: ['MCIPCB13A'], image: view('mcipcb13', 'rear'), specs: [spec('CPU', 'Intel Core i3 / i5 / i7, selected 4th / 6th / 7th / 8th / 10th / 12th / 13th Gen platforms'), spec('Memory', '4th Gen: DDR3L up to 8 GB; 6th–8th Gen: DDR4 up to 16 GB; 8th/10th Gen boards: 2 × DDR4 up to 32 GB; 12th/13th Gen: DDR5 up to 64 GB. Verify the exact 8th Gen board before ordering.'), spec('Display', '1 × HDMI + 1 × VGA; optional HDMI replaces VGA'), spec('USB', '4 × USB 3.0 + 4 × USB 2.0'), spec('Storage', '4th Gen: mSATA; later boards: M.2 2280 SATA / NVMe; plus 2.5-inch HDD / SSD')] },
-      { key: 'type-b', label: 'Type B · Core Ultra / Core 3', legacyNames: ['MCIPCB13B'], image: view('mcipcb13', 'rear'), specs: [spec('CPU', 'Intel Core Ultra 1 / 2 U5 / U7 or Intel Core 3 304 / 305 / 315 / 320 / 330 / 350 / 360'), spec('Memory', '1 × DDR5 SO-DIMM, up to 64 GB'), spec('Display', '2 × HDMI + 1 × DisplayPort'), spec('USB', 'Core Ultra: 4 × USB 3.0 + 4 × USB 2.0; Core 3: 2 × USB 3.0 + 6 × USB 2.0'), spec('Storage', 'M.2 2280 NVMe; 2.5-inch HDD / SSD on Core Ultra only, not Core 3')] },
-    ],
-  },
+  mcipcb13 as MergedProduct,
   {
     id: 'mcipcb14', name: 'MCIPCB14', series: 'B',
     tagline: 'DDR5 Intel N-series industrial PC with optional fan cooling',

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "sourceRoot": "D:\\本地资源库\\电脑相关\\电脑册子归档\\ver2",
-  "observedAtUtc": "2026-11-03T08:03:15.430039+00:00",
+  "observedAtUtc": "2026-11-05T02:06:56.078874+00:00",
   "observationOnly": false,
   "totalPdfCount": 117,
   "inScopePdfCount": 116,
@@ -13,7 +13,7 @@
     "updated": 44,
     "verified-current": 58
   },
-  "previousObservation": "brochure-history/before-2026-11-03-mcsrc26-image-refresh.json",
+  "previousObservation": "brochure-history/before-2026-11-05-mcipcb13-update.json",
   "files": [
     {
       "relativePath": "AIPC/MCAIPC1 brochure.pdf",
@@ -511,22 +511,23 @@
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB13 brochure.pdf",
-      "sizeBytes": 2513378,
-      "modifiedAtUtc": "2026-09-30T01:44:09.353590+00:00",
-      "observedSha256": "747e9e9214d76ab83c66e2fb5e187602209091d79eda292e1b8134cd0f5b8c4b",
+      "sizeBytes": 3546315,
+      "modifiedAtUtc": "2026-11-05T01:37:26.799231+00:00",
+      "observedSha256": "8f6b6d2bcb801fb4168174bb913adb5ea9124c9e24446cc6b2e5bcf7b29b7134",
       "appliedSha256": null,
       "excluded": false,
       "status": "pending-confirmation",
       "present": true,
-      "notes": "已合并 Type A/B 到同页；8 代平台存在两种内存规格，网页注明选板前确认。",
+      "notes": "新版两页 Type A/B 已同步各自后面板与五语完整配置参数，头图和缩略图保持不变。两款串口均确认 2 × DB9 RS-232；Type A 八代仍列单/双 SO-DIMM 平台，Type B Wi-Fi 原册列 M.2 2232 并提示确认；网页保留限定，应用指纹仍为空。详见册子更新报告-2026-11-05-MCIPCB13.md。",
       "modelIds": [
         "mcipcb13"
       ],
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb13"
       ],
-      "changeSincePreviousObservation": "unchanged",
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00"
+      "changeSincePreviousObservation": "modified",
+      "reviewedAtUtc": "2026-11-05T02:21:16.819965+00:00",
+      "previousSha256": "747e9e9214d76ab83c66e2fb5e187602209091d79eda292e1b8134cd0f5b8c4b"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB13A brochure.pdf",
@@ -2586,7 +2587,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "modified",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcsrc26"
       ],

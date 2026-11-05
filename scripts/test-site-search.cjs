@@ -216,6 +216,29 @@ assert(searchSite('DDR5').some(item => item.href === '/products/industrial-mini-
 assert(searchSite('DDR4').some(item => item.href === '/products/industrial-mini-pc/mcipcb1#sku-type-a'));
 assert(!searchSite('DDR4').some(item => item.href === '/products/industrial-mini-pc/mcipcb1#sku-type-b'));
 
+// MCIPCB13 keeps its approved hero while the two rear panels and facts stay distinct.
+const b13 = industrialCatalog.find(item => item.id === 'mcipcb13');
+assert.equal(b13.image, '/assets/products/industrial/merged/mcipcb13/front.webp');
+assert.equal(b13.galleryCards.length, 2);
+for (const [index, sku] of Array.from(b13.skus).entries()) {
+  assert.equal(b13.galleryCards[index].image, sku.image);
+  assert.match(sku.image, new RegExp(`rear-${sku.key}\\.webp$`));
+  assert(fs.existsSync(path.join(__dirname, '..', 'public', sku.image)));
+  const result = searchSite(sku.legacyNames[0])[0];
+  assert.equal(result.image, sku.image);
+  assert.equal(result.specs.find(row => row.label === 'Serial').value, '2 × DB9 RS-232 COM');
+  for (const language of ['de', 'fr', 'it', 'es']) {
+    assert.equal(sku.translations[language].specs.length, result.specs.length);
+    assert.equal(b13.translations[language].galleryCards[index].image, sku.image);
+    assert.equal(sku.translations[language].specs[0].value, sku.legacyNames[0]);
+  }
+}
+assert.match(searchSite('MCIPCB13A')[0].specs.find(row => row.label === 'Display').value, /VGA/);
+assert.match(searchSite('MCIPCB13A')[0].specs.find(row => row.label === 'Expansion').value, /Mini PCIe/);
+assert.equal(searchSite('MCIPCB13B')[0].specs.find(row => row.label === 'Display').value, '2 × HDMI + 1 × DisplayPort');
+assert.match(searchSite('MCIPCB13B')[0].specs.find(row => row.label === 'Storage').value, /not supported on Core 3/);
+assert.match(searchSite('MCIPCB13B')[0].specs.find(row => row.label === 'Expansion').value, /2232; confirm/);
+
 // Every selected configuration exposes the full facts without duplicate labels.
 const b15aSpecs = searchSite('MCIPCB15A')[0].specs;
 assert.match(b15aSpecs.find(item => item.label === 'Network').value, /RTL8111H/);

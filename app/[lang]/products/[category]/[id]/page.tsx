@@ -952,7 +952,7 @@ export default function ProductDetailPage() {
         </section>
       )}
 
-      {productId === 'mcai2' ? <Mcaipc2Configurations onPreview={setPreviewImage} onConfigurationChange={onConfigurationChange} /> : product.skus && <ProductConfigurationSelector key={productId} model={product.name} skus={product.skus} sharedSpecs={specifications} referenceImage={!configurationImagesFollowSelection} onPreview={setPreviewImage} onConfigurationChange={configurationImagesFollowSelection ? onConfigurationChange : undefined} />}
+      {productId === 'mcai2' ? <Mcaipc2Configurations onPreview={setPreviewImage} onConfigurationChange={onConfigurationChange} /> : product.skus && <ProductConfigurationSelector key={productId} model={product.name} skus={product.skus} sharedSpecs={specifications} referenceImage={!configurationImagesFollowSelection && productId !== 'mcipcb13'} onPreview={setPreviewImage} onConfigurationChange={configurationImagesFollowSelection ? onConfigurationChange : undefined} />}
 
       {!product.skus && <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
