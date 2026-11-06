@@ -11,16 +11,16 @@ export function ArticleCards({ articles, language }: { articles: EditorialArticl
   return <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
     {articles.map(article => {
       const copy = article.translations[language];
-      return <article key={article.id} className="group flex min-w-0 flex-col border-b border-slate-200 pb-7">
+      return <article key={article.id} className="group flex min-w-0 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white pb-6 shadow-sm transition-shadow hover:shadow-lg">
         <Link href={localizedHref(`${articlePaths[article.kind]}/${article.id}`, language)} className="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600">
-          <div className="overflow-hidden bg-slate-100"><img src={article.image} alt={copy.imageAlt} width={720} height={450} loading="lazy" className="aspect-[8/5] w-full object-cover transition-transform duration-500 group-hover:scale-[1.025] motion-reduce:transform-none" /></div>
-          <div className="mt-5">
+          <div className="overflow-hidden border-b border-slate-100 bg-[#edf3f7]"><img src={article.image} alt={copy.imageAlt} width={720} height={450} loading="lazy" className="aspect-[8/5] w-full object-contain transition-transform duration-500 group-hover:scale-[1.025] motion-reduce:transform-none" /></div>
+          <div className="mt-5 px-5">
             <time dateTime={article.date} className="text-sm text-slate-500">{new Intl.DateTimeFormat(language, { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' }).format(new Date(`${article.date}T00:00:00Z`))}</time>
             <h2 className="mt-2 text-xl font-semibold leading-snug text-slate-950 transition-colors group-hover:text-brand">{copy.title}</h2>
           </div>
         </Link>
-        <p className="mt-3 line-clamp-3 text-sm leading-6 text-slate-600">{copy.excerpt}</p>
-        <Link href={localizedHref(`${articlePaths[article.kind]}/${article.id}`, language)} aria-label={`${words.readMore}: ${copy.title}`} className="mt-5 inline-flex items-center gap-2 self-start text-sm font-semibold text-brand hover:text-brand-hover focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600">
+        <p className="mx-5 mt-3 line-clamp-3 text-sm leading-6 text-slate-600">{copy.excerpt}</p>
+        <Link href={localizedHref(`${articlePaths[article.kind]}/${article.id}`, language)} aria-label={`${words.readMore}: ${copy.title}`} className="mx-5 mt-5 inline-flex items-center gap-2 self-start text-sm font-semibold text-brand hover:text-brand-hover focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600">
           {words.readMore}<ArrowRight aria-hidden="true" className="h-4 w-4" />
         </Link>
       </article>;

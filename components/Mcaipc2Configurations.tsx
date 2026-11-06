@@ -6,6 +6,7 @@ import { defaultMcaipc2Configuration, mcaipc2Chassis, mcaipc2Configurations, mca
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import ConfigurationSpecifications from '@/components/ConfigurationSpecifications';
 import { mergeSpecifications, type ProductConfiguration } from '@/lib/product-specifications';
+import { translateAiGalleryDe, translateAiSpecsDe } from '@/lib/ai-product-german';
 
 const copy = {
   en: { title: 'Choose a configuration', intro: 'Select a mainboard series, then choose a compatible chassis to view the complete specifications.', chassis: 'Compatible chassis', specification: 'Configuration specifications', image: 'Selected chassis; I/O follows the selected mainboard series.' },
@@ -63,7 +64,7 @@ export default function Mcaipc2Configurations({ onPreview, onConfigurationChange
           </button>)}
         </div>
         <div id="sku-panel" role="tabpanel" aria-labelledby={`sku-tab-${active.seriesId}`} className="mt-6 overflow-hidden rounded-xl border border-blue-200 bg-white">
-          <ConfigurationSpecifications key={active.key} title={`${active.label} · ${t.specification}`} image={active.image} imageAlt={`MCAIPC2 ${active.label}`} imageCaption={t.image} specs={mergeSpecifications([], active.specs)} galleryCards={active.galleryCards} onPreview={onPreview} />
+          <ConfigurationSpecifications key={active.key} title={`${active.label} · ${t.specification}`} image={active.image} imageAlt={`MCAIPC2 ${active.label}`} imageCaption={t.image} specs={language === 'de' ? translateAiSpecsDe(active.specs) : mergeSpecifications([], active.specs)} galleryCards={language === 'de' ? translateAiGalleryDe(active.galleryCards || []) : active.galleryCards} onPreview={onPreview} />
         </div>
       </div>
     </section>

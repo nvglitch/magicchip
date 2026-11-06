@@ -6,7 +6,9 @@ export type ArticleBlock =
   | { type: 'paragraph'; text: string }
   | { type: 'heading'; text: string }
   | { type: 'list'; items: string[] }
-  | { type: 'image'; src: string; alt: string; caption?: string };
+  | { type: 'table'; columns: string[]; rows: string[][] }
+  | { type: 'links'; items: { text: string; href: string }[] }
+  | { type: 'image'; src: string; alt: string; caption?: string; presentation?: 'panel' | 'diagram' };
 export type ArticleCopy = { title: string; excerpt: string; imageAlt: string; body: ArticleBlock[] };
 export type EditorialArticle = {
   id: string;
@@ -28,7 +30,14 @@ function validBlock(block: ArticleBlock) {
   if (!block) return false;
   if (block.type === 'paragraph' || block.type === 'heading') return text(block.text);
   if (block.type === 'list') return Array.isArray(block.items) && block.items.length > 0 && block.items.every(text);
-  return block.type === 'image' && publicImage(block.src) && text(block.alt);
+  if (block.type === 'table') return Array.isArray(block.columns) && block.columns.length > 1 && block.columns.every(text)
+    && Array.isArray(block.rows) && block.rows.length > 0
+    && block.rows.every(row => Array.isArray(row) && row.length === block.columns.length && row.every(text));
+  if (block.type === 'links') return Array.isArray(block.items) && block.items.length > 0
+    && block.items.every(item => item && text(item.text) && typeof item.href === 'string'
+      && /^\/(?:products(?:\/[a-z0-9-]+){0,2}|tech-docs(?:\/[a-z0-9-]+)?|contact)(?:#[a-z0-9-]+)?$/.test(item.href));
+  return block.type === 'image' && publicImage(block.src) && text(block.alt)
+    && (block.presentation === undefined || block.presentation === 'panel' || block.presentation === 'diagram');
 }
 
 // Drafts and incomplete translations stay out of pages, search, counts and sitemap.

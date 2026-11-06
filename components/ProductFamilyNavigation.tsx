@@ -2,6 +2,7 @@ import Link from '@/components/LocalizedLink';
 import { ArrowUpRight, ChevronDown } from 'lucide-react';
 import { modelThumbnails } from '@/lib/model-thumbnails';
 import { groupProductNavigation } from '@/lib/product-navigation';
+import type { Language } from '@/lib/i18n/config';
 
 type PreviewModel = { id: string; name: string; image: string };
 
@@ -50,12 +51,19 @@ export function ModelFamilyLinks({ models, category }: { models: PreviewModel[];
 }
 
 type CardProduct = { id: string; name: string; image: string; tagline: string };
-export function AiFamilyCards({ products }: { products: CardProduct[] }) {
+export function AiFamilyCards({ products, language = 'en' }: { products: CardProduct[]; language?: Language }) {
+  const words = {
+    en: { series: 'Series', platforms: 'AMD and Intel platforms · 4 configurations', image: 'Representative image; appearance varies by configuration.' },
+    de: { series: 'Serie', platforms: 'AMD- und Intel-Plattformen · 4 Konfigurationen', image: 'Referenzbild; das Aussehen hängt von der Konfiguration ab.' },
+    fr: { series: 'Série', platforms: 'Plateformes AMD et Intel · 4 configurations', image: 'Image indicative ; l’aspect varie selon la configuration.' },
+    it: { series: 'Serie', platforms: 'Piattaforme AMD e Intel · 4 configurazioni', image: 'Immagine indicativa; l’aspetto varia in base alla configurazione.' },
+    es: { series: 'Serie', platforms: 'Plataformas AMD e Intel · 4 configuraciones', image: 'Imagen de referencia; el aspecto varía según la configuración.' },
+  }[language];
   return <div className="grid items-start gap-4 md:grid-cols-3">
     {groupProductNavigation(products).map(group => {
       const product = group.models[0];
       const multiple = group.models.length > 1;
-      const content = <><img src={product.image} alt={multiple ? `${group.name} representative configuration` : product.name} className="aspect-[4/3] w-full object-contain p-4 transition-transform duration-500 group-hover/card:scale-105 motion-reduce:transform-none motion-reduce:transition-none" /><div className="border-t border-slate-100 p-4"><h3 className="font-bold text-slate-950">{group.name}{multiple ? ' Series' : ''}</h3><p className="mt-2 text-sm leading-relaxed text-slate-500">{multiple ? 'AMD and Intel platforms · 4 configurations' : product.tagline}</p>{multiple && <p className="mt-2 text-xs text-slate-400">Representative image; appearance varies by configuration.</p>}</div></>;
+      const content = <><img src={product.image} alt={multiple ? `${group.name} · ${words.image}` : product.name} className="aspect-[4/3] w-full object-contain p-4 transition-transform duration-500 group-hover/card:scale-105 motion-reduce:transform-none motion-reduce:transition-none" /><div className="border-t border-slate-100 p-4"><h3 className="font-bold text-slate-950">{group.name}{multiple ? ` · ${words.series}` : ''}</h3><p className="mt-2 text-sm leading-relaxed text-slate-500">{multiple ? words.platforms : product.tagline}</p>{multiple && <p className="mt-2 text-xs text-slate-400">{words.image}</p>}</div></>;
       return <article key={group.name} className="group/card overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-xl hover:shadow-slate-900/10 motion-reduce:transform-none motion-reduce:transition-none">
         {multiple ? content : <Link href={`/products/ai-mini-pc/${product.id}`} className="block transition-colors duration-200 hover:bg-blue-50 focus-visible:outline-blue-600">{content}</Link>}
         {multiple && <div className="flex flex-wrap gap-2 px-4 pb-4">{group.models.map(model => <Link key={model.id} href={`/products/ai-mini-pc/${model.id}`} aria-label={model.name} className="inline-flex items-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-3 py-2 text-sm font-semibold text-brand transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-400 hover:bg-blue-100 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 motion-reduce:transform-none motion-reduce:transition-none"><span>{model.name.replace('MCAIPC', '')}</span><ArrowUpRight aria-hidden="true" className="h-4 w-4 shrink-0" /></Link>)}</div>}

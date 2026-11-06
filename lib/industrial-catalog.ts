@@ -1502,7 +1502,7 @@ const industrialCatalogSource: IndustrialCatalogItem[] = [
       "Intel Core 14th Gen Ultra 125U / 125H / 155H / 185H full series processors",
       "1 x HDMI , 1 x DP",
       "2 x Intel I219LM + i226-V LAN",
-      "COM2/COM3 support optional RS485 via jumper)"
+      "6 x DB9 COM; optional RS-485 on COM2/COM3"
     ],
     "specs": [
       {
@@ -1535,7 +1535,7 @@ const industrialCatalogSource: IndustrialCatalogItem[] = [
       },
       {
         "label": "Serial",
-        "value": "COM2/COM3 support optional RS485 via jumper)"
+        "value": "6 x DB9 COM; RS-232 by default; COM1 supports optional TTL; COM2/COM3 support optional RS-485 via jumper"
       },
       {
         "label": "Power",
@@ -1705,7 +1705,7 @@ const industrialCatalogSource: IndustrialCatalogItem[] = [
       "Optional Intel 2955U, 4th/6th/7th/8th Gen Core i3/i5/i7 CPU",
       "1 x HDMI",
       "6 x GbE RJ45 LAN",
-      "1 x DB-9 RS232 (COM2)"
+      "1 x DB9 RS-232 + 1 x RJ45 RS-232"
     ],
     "specs": [
       {
@@ -1738,7 +1738,7 @@ const industrialCatalogSource: IndustrialCatalogItem[] = [
       },
       {
         "label": "Serial",
-        "value": "1 x DB-9 RS232 (COM2)"
+        "value": "2 x RS-232: 1 x DB9 (COM2) + 1 x RJ45 (COM1, Cisco pinout)"
       },
       {
         "label": "Storage",

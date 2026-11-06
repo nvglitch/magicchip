@@ -33,6 +33,8 @@ const makeArticle = (id, kind = 'technical') => ({ id, kind, published: true, da
   title: `${lang} title ${id}`, excerpt: `${lang} excerpt`, imageAlt: `${lang} image`, body: [
     { type: 'heading', text: `${lang} section` }, { type: 'paragraph', text: '<script>alert("unsafe")</script>' },
     { type: 'list', items: ['First fact', 'Second fact'] }, { type: 'image', src: '/assets/brand/og-default.png', alt: `${lang} detail`, caption: `${lang} caption` },
+    { type: 'table', columns: ['Model', 'Interface'], rows: [['MCIPC8-HDMI', '6 x COM']] },
+    { type: 'links', items: [{ text: 'Compare industrial PCs', href: '/products/industrial-mini-pc' }, { text: 'Type A', href: '/products/ai-mini-pc/mcaipc3#sku-type-a' }] },
   ],
 }])) });
 const clone = item => JSON.parse(JSON.stringify(item));
@@ -44,6 +46,10 @@ for (const change of [
   item => { item.image = '/assets/../private.png'; }, item => { item.id = '../draft'; },
   item => { item.date = '2026-02-31'; }, item => { item.updated = '2025-01-01'; },
   item => { item.translations.es.body = [{ type: 'image', src: 'javascript:alert(1)', alt: 'bad' }]; },
+  item => { item.translations.de.body = [{ type: 'links', items: [{ text: 'Unsafe', href: 'javascript:alert(1)' }] }]; },
+  item => { item.translations.fr.body = [{ type: 'links', items: [{ text: 'Wrong locale', href: '/en/products' }] }]; },
+  item => { item.translations.it.body = [{ type: 'table', columns: ['Model', 'Interface'], rows: [['Missing cell']] }]; },
+  item => { item.translations.en.body = [{ type: 'image', src: '/assets/brand/og-default.png', alt: 'Image', presentation: 'invalid' }]; },
 ]) {
   const invalid = clone(published); change(invalid);
   assert(!api.isPublishableArticle(invalid));
@@ -67,6 +73,14 @@ assert.equal(source.length, 14);
 // Fixtures never enter the content file; real published content must pass the same guard.
 assert(api.getPublishedArticles().every(api.isPublishableArticle));
 assert(!api.getPublishedArticles().some(item => ['published-guide', 'draft'].includes(item.id)));
+assert.equal(api.getPublishedArticles('technical').length, 3);
+assert.equal(api.getPublishedArticles('case-study').length, 0);
+for (const article of api.getPublishedArticles()) {
+  assert(fs.existsSync(path.join(root, 'public', article.image)));
+  for (const copy of Object.values(article.translations)) for (const block of copy.body) {
+    if (block.type === 'image') assert(fs.existsSync(path.join(root, 'public', block.src)));
+  }
+}
 for (const lang of languages) {
   for (const kind of ['technical', 'case-study']) {
     const empty = renderToStaticMarkup(React.createElement(Listing, { kind, language: lang, articles: [] }));
@@ -84,6 +98,14 @@ for (const lang of languages) {
     assert(detail.includes('&lt;script&gt;'));
     assert(!detail.includes('<script>'));
     assert(detail.includes(`${lang} caption`) && detail.includes('Second fact'));
+    assert(detail.includes('<table') && detail.includes('scope="col"') && detail.includes('6 x COM'));
+    assert(detail.includes(`href="/${lang}/products/industrial-mini-pc"`));
+    assert(detail.includes(`href="/${lang}/products/ai-mini-pc/mcaipc3#sku-type-a"`));
+    assert(detail.includes('href="#section-0"') && detail.includes('id="section-0"'));
+    assert(detail.includes('data-article-intro') && detail.includes('data-article-toc'));
+    assert(detail.includes('aria-current="location"'));
+    assert(!detail.includes('border-l-4'));
+    assert(!detail.includes('Planning a configuration?'));
   }
 }
-console.log('Editorial checks passed: empty live collections, five-language publication guard, draft exclusion, Type-safe body blocks, escaped text, sorted/paginated cards, details and localized links.');
+console.log('Editorial checks passed: five-language publication guard, draft exclusion, safe tables and localized internal links, escaped text, sorted/paginated cards and details.');

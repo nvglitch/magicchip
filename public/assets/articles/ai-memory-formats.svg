@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" fill="none">
+  <title>MCAIPC3 memory format schematic</title>
+  <desc>Types A and D use onboard LPDDR5. Types B and C use two DDR5 SO-DIMM slots. Each configuration supports a total of up to 64 GB. Conceptual illustration, not a motherboard layout.</desc>
+  <defs>
+    <linearGradient id="backdrop" x1="0" y1="0" x2="960" y2="540" gradientUnits="userSpaceOnUse"><stop stop-color="#edf5fc"/><stop offset="1" stop-color="#e4edf3"/></linearGradient>
+    <linearGradient id="pcb" x1="90" y1="180" x2="840" y2="410" gradientUnits="userSpaceOnUse"><stop stop-color="#193a56"/><stop offset="1" stop-color="#0c273e"/></linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" stroke="#c7dcea" stroke-opacity=".45"/></pattern>
+  </defs>
+  <rect width="960" height="540" rx="24" fill="url(#backdrop)"/>
+  <rect width="960" height="540" rx="24" fill="url(#grid)"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="48" y="59" fill="#1173b7" font-size="16" font-weight="700" letter-spacing="2">MCAIPC3</text>
+    <text x="48" y="102" fill="#14263a" font-size="30" font-weight="700">LPDDR5 / DDR5 SO-DIMM</text>
+    <rect x="40" y="138" width="426" height="362" rx="16" fill="white" stroke="#d7e4ee"/>
+    <rect x="494" y="138" width="426" height="362" rx="16" fill="white" stroke="#d7e4ee"/>
+    <text x="68" y="179" fill="#14263a" font-size="21" font-weight="700">MCAIPC3 A / D</text>
+    <text x="522" y="179" fill="#14263a" font-size="21" font-weight="700">MCAIPC3 B / C</text>
+    <rect x="70" y="206" width="366" height="180" rx="12" fill="url(#pcb)"/>
+    <rect x="524" y="206" width="366" height="180" rx="12" fill="url(#pcb)"/>
+    <g stroke="#6ca3c2" stroke-width="2" opacity=".55"><path d="M100 250H145M100 280H145M100 310H145M360 250H408M360 280H408M360 310H408M200 229V215M230 229V215M275 229V215M305 229V215M200 357V375M230 357V375M275 357V375M305 357V375"/></g>
+    <g fill="#3c637f" stroke="#99bdce" stroke-width="2"><rect x="145" y="235" width="95" height="48" rx="5"/><rect x="266" y="235" width="95" height="48" rx="5"/><rect x="145" y="310" width="95" height="48" rx="5"/><rect x="266" y="310" width="95" height="48" rx="5"/></g>
+    <g fill="#b8d8e7"><circle cx="84" cy="220" r="3"/><circle cx="422" cy="372" r="3"/><circle cx="538" cy="220" r="3"/><circle cx="876" cy="372" r="3"/></g>
+    <g stroke="#b5c9d5" stroke-width="3"><path d="M550 253H864M550 330H864"/></g>
+    <g fill="#216c72" stroke="#85b9b0" stroke-width="2"><rect x="557" y="232" width="300" height="47" rx="4"/><rect x="557" y="309" width="300" height="47" rx="4"/></g>
+    <g fill="#142d3a"><rect x="575" y="241" width="43" height="24" rx="3"/><rect x="633" y="241" width="43" height="24" rx="3"/><rect x="691" y="241" width="43" height="24" rx="3"/><rect x="749" y="241" width="43" height="24" rx="3"/><rect x="575" y="318" width="43" height="24" rx="3"/><rect x="633" y="318" width="43" height="24" rx="3"/><rect x="691" y="318" width="43" height="24" rx="3"/><rect x="749" y="318" width="43" height="24" rx="3"/></g>
+    <g stroke="#d2b77a" stroke-width="2"><path d="M574 275H826M574 352H826"/></g>
+    <g fill="#c8d8e1"><rect x="548" y="244" width="7" height="26" rx="2"/><rect x="859" y="244" width="7" height="26" rx="2"/><rect x="548" y="321" width="7" height="26" rx="2"/><rect x="859" y="321" width="7" height="26" rx="2"/></g>
+    <text x="68" y="431" fill="#28465c" font-size="21" font-weight="700">LPDDR5</text>
+    <text x="522" y="431" fill="#28465c" font-size="21" font-weight="700">2 × DDR5 SO-DIMM</text>
+    <text x="68" y="470" fill="#1173b7" font-size="25" font-weight="700">≤ 64 GB</text>
+    <text x="522" y="470" fill="#1173b7" font-size="25" font-weight="700">≤ 64 GB</text>
+  </g>
+</svg>

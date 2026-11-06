@@ -40,6 +40,20 @@ function matches(text: string, token: string) {
   return false;
 }
 
+function specified(value: string) {
+  const text = value.trim();
+  return Boolean(text) && !/^(?:[-—]+|n\/?a)$/i.test(text)
+    && !/^(?:none|no|unknown|unspecified|not (?:listed|available|supported|specified|provided)|0(?:\s*(?:x|×)?\s*(?:ports?|com|lan))?)\b/i.test(text);
+}
+
+function networkRates(value: string) {
+  const rates: number[] = [];
+  const rest = value.replace(/\b(\d+(?:\.\d+)?)\s*(gigabit|gbe|gbps|gbit\/s|g)\b/gi, (_, speed) => { rates.push(Number(speed)); return ' '; })
+    .replace(/\b(\d+(?:\.\d+)?)\s*(?:mbps|mbit\/s)\b/gi, (_, speed) => { rates.push(Number(speed) / 1000); return ' '; });
+  if (/\b(?:gigabit|gbe)\b/i.test(rest)) rates.push(1);
+  return rates;
+}
+
 export function matchSearch(entry: SearchEntry, query: string): { score: number; matchedSpecs: string[] } | null {
   let remaining = normalizeSearch(query);
   const exactModel = remaining.replace(/[^a-z0-9]/g, '') === normalizeSearch(entry.title).replace(/[^a-z0-9]/g, '');
@@ -48,6 +62,16 @@ export function matchSearch(entry: SearchEntry, query: string): { score: number;
   const evidence = new Set<string>();
   let score = 0;
   const add = (spec: { label: string; value: string }) => evidence.add(`${spec.label}: ${spec.value}`);
+  const network = specs.filter(spec => /network|ethernet|\bnic\b|\blan\b/i.test(spec.label) && specified(spec.value));
+  const ethernetQueries = [...query.matchAll(/\b(\d+(?:\.\d+)?)\s*(?:gbe|gigabit(?:\s+ethernet)?)\b/gi)];
+  const networkQualified = ethernetQueries.length > 0 || /\b(lan|network|ethernet|i226|i225|i210|i211)\b/.test(remaining);
+  // Ethernet speeds must be supported by a network row, never a USB data rate.
+  if (entry.type === 'product') for (const request of ethernetQueries) {
+    const hit = network.find(spec => networkRates(spec.value).includes(Number(request[1])));
+    if (!hit) return null;
+    add(hit); score += 60;
+    remaining = remaining.replace(normalizeSearch(request[0]), ' ');
+  }
   const voltageQuery = voltages(remaining);
   if (voltageQuery.length) {
     const power = specs.filter(s => /power|voltage|input|psu/i.test(s.label) && !/output/i.test(s.label));
@@ -65,7 +89,7 @@ export function matchSearch(entry: SearchEntry, query: string): { score: number;
     add(hit); score += 50; remaining = remaining.replace(/widevoltage/g, ' ');
   }
   // Brand names without a network qualifier refer to the processor field.
-  if (!/\b(lan|network|ethernet|i226|i225|i210|i211)\b/.test(remaining)) {
+  if (!networkQualified) {
     for (const brand of ['intel', 'amd']) {
       if (!new RegExp(`\\b${brand}\\b`).test(remaining)) continue;
       const hit = specs.find(s => /cpu|processor|mainboard series/i.test(s.label) &&
@@ -74,6 +98,17 @@ export function matchSearch(entry: SearchEntry, query: string): { score: number;
       if (!hit) return null;
       add(hit); score += 50; remaining = remaining.replace(new RegExp(`\\b${brand}\\b`, 'g'), ' ');
     }
+  }
+  if (entry.type === 'product' && /\b(?:lan|network|ethernet)\b/.test(remaining)) {
+    if (!network.length) return null;
+    add(network[0]); score += 20;
+    remaining = remaining.replace(/\b(?:lan|network|ethernet)\b/g, ' ');
+  }
+  if (entry.type === 'product' && /\bserial\b/.test(remaining)) {
+    const hit = specs.find(spec => specified(spec.value) && (/\b(?:serial|com)\b/i.test(spec.label) || /\b(?:COM\d*|RS[ -]?232|RS[ -]?422|RS[ -]?485|serial)\b/i.test(spec.value)));
+    if (!hit) return null;
+    add(hit); score += 20;
+    remaining = remaining.replace(/\bserial\b/g, ' ');
   }
   remaining = removeSearchFillers(remaining);
   const tokens = words(remaining);

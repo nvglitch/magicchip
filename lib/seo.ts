@@ -11,11 +11,12 @@ import { firewallCatalog } from '@/lib/firewall-catalog';
 import { commercialCatalog } from '@/lib/commercial-catalog';
 import { editorialCopy } from '@/lib/editorial-copy';
 import { certificateCopy } from '@/lib/certificates';
+import { germanAiCopy } from '@/lib/ai-product-german';
 
 export const SITE_URL = 'https://szmagicchip.com';
 export const SITE_NAME = 'MagicChip';
 // Update this only when the published site or product catalog materially changes.
-export const SITE_CONTENT_LAST_UPDATED = new Date('2026-11-05T00:00:00.000Z');
+export const SITE_CONTENT_LAST_UPDATED = new Date('2026-11-06T00:00:00.000Z');
 export const DEFAULT_SOCIAL_IMAGE = '/assets/brand/og-default.png';
 
 export type SeoEntry = {
@@ -24,6 +25,65 @@ export type SeoEntry = {
   path: string;
   image?: string;
   descriptionTranslations?: Partial<Record<Language, string>>;
+};
+
+// Metadata titles only: keep visible headings, catalog names and JSON-LD unchanged.
+const productPageTitles: Partial<Record<string, Partial<Record<Language, string>>>> = {
+  '/products/industrial-mini-pc': {
+    en: 'Industrial Mini PCs with Multi-COM & LAN',
+    de: 'Industrie-Mini-PCs mit mehreren COM- & LAN-Ports',
+    fr: 'Mini PC industriels avec plusieurs ports COM et LAN',
+    it: 'Mini PC industriali con più porte COM e LAN',
+    es: 'Mini PCs industriales con múltiples puertos COM y LAN',
+  },
+  '/products/ai-mini-pc': {
+    en: 'AI Mini PCs for Local AI & Edge Computing',
+    de: 'KI-Mini-PCs für lokale KI & Edge-Computing',
+    fr: 'Mini PC IA pour l’IA locale et l’edge computing',
+    it: 'Mini PC AI per IA locale ed edge computing',
+    es: 'Mini PCs para IA local y edge computing',
+  },
+  '/products/industrial-mini-pc/mcipc8-hdmi': {
+    en: 'MCIPC8-HDMI 6-COM Fanless PC, Dual LAN',
+    de: 'MCIPC8-HDMI: Lüfterloser PC, 6 COM, Dual-LAN',
+    fr: 'MCIPC8-HDMI : PC sans ventilateur, 6 COM, double LAN',
+    it: 'MCIPC8-HDMI: PC senza ventole, 6 COM, doppia LAN',
+    es: 'MCIPC8-HDMI: PC sin ventilador, 6 COM, doble LAN',
+  },
+  '/products/commercial-mini-pc/mcn1': {
+    en: 'MCN1 Intel N95/N100/N150 Mini PC',
+    de: 'MCN1 Mini-PC mit Intel N95/N100/N150',
+    fr: 'MCN1 Mini PC Intel N95/N100/N150',
+    it: 'MCN1 Mini PC Intel N95/N100/N150',
+    es: 'MCN1 Mini PC Intel N95/N100/N150',
+  },
+  '/products/ai-mini-pc/mcai1': { de: 'MCAIPC1 KI-Mini-PC mit Ryzen AI Max+ 395' },
+  '/products/ai-mini-pc/mcai2': { de: 'MCAIPC2 KI-Mini-PC mit drei Mainboard-Serien' },
+  '/products/ai-mini-pc/mcaipc3': { de: 'MCAIPC3 KI-Mini-PC mit AMD- und Intel-Konfigurationen' },
+};
+
+const productPageDescriptions: Partial<Record<string, Record<Language, string>>> = {
+  '/products/industrial-mini-pc': {
+    en: 'Compare industrial mini PCs by COM, LAN, GPIO, mounting and temperature range. Explore fanless options and OEM/ODM configurations for equipment integration.',
+    de: 'Vergleichen Sie Industrie-Mini-PCs nach COM, LAN, GPIO, Montage und Temperaturbereich. Entdecken Sie lüfterlose Modelle und OEM/ODM-Konfigurationen.',
+    fr: 'Comparez les mini PC industriels selon les ports COM, LAN, GPIO, le montage et la température. Découvrez les modèles sans ventilateur et les options OEM/ODM.',
+    it: 'Confronta mini PC industriali per COM, LAN, GPIO, montaggio e temperatura. Scopri modelli senza ventole e configurazioni OEM/ODM per i tuoi impianti.',
+    es: 'Compare mini PCs industriales por COM, LAN, GPIO, montaje y temperatura. Descubra modelos sin ventilador y configuraciones OEM/ODM para sus equipos.',
+  },
+  '/products/ai-mini-pc': {
+    en: 'Compare AMD and Intel AI mini PCs by CPU, memory, networking and expansion. Choose configurations for local inference, edge AI and professional workloads.',
+    de: 'Vergleichen Sie KI-Mini-PCs mit AMD und Intel nach CPU, RAM, Netzwerk und Erweiterung. Wählen Sie die passende Konfiguration für lokale KI und Edge-Anwendungen.',
+    fr: 'Comparez les mini PC IA AMD et Intel : processeur, mémoire, réseau et extensions. Choisissez une configuration pour l’inférence locale et l’IA en périphérie.',
+    it: 'Confronta mini PC AI AMD e Intel per CPU, memoria, rete ed espansione. Scegli una configurazione per inferenza locale, IA edge e attività professionali.',
+    es: 'Compare mini PCs con IA AMD e Intel por CPU, memoria, red y expansión. Elija una configuración para inferencia local, IA en el borde y trabajo profesional.',
+  },
+  '/products/commercial-mini-pc/mcn1': {
+    en: 'MCN1 mini PC with Intel N95/N100/N150, replaceable DDR4 SO-DIMM, dual HDMI 2.0, M.2 SATA and optional 2.5-inch storage for offices and displays.',
+    de: 'MCN1 mit Intel N95/N100/N150, austauschbarem DDR4-SO-DIMM, zwei HDMI-2.0-Ausgängen, M.2-SATA und optionalem 2,5-Zoll-Laufwerk für Büro und Anzeigen.',
+    fr: 'MCN1 avec Intel N95/N100/N150, RAM DDR4 SO-DIMM remplaçable, deux HDMI 2.0, M.2 SATA et disque 2,5 pouces en option pour le bureau et l’affichage.',
+    it: 'MCN1 con Intel N95/N100/N150, DDR4 SO-DIMM sostituibile, doppia HDMI 2.0, M.2 SATA e unità da 2,5 pollici opzionale per uffici e schermi.',
+    es: 'MCN1 con Intel N95/N100/N150, DDR4 SO-DIMM reemplazable, dos HDMI 2.0, M.2 SATA y disco de 2,5 pulgadas opcional para oficina y pantallas.',
+  },
 };
 
 export const categorySeo: Record<string, SeoEntry> = {
@@ -175,6 +235,9 @@ export const productSeo: Record<string, SeoEntry & { category: string }> = {
 for (const item of brochureUpdates) {
   if (productSeo[item.id]) productSeo[item.id] = { ...productSeo[item.id], description: item.description, image: item.image };
 }
+for (const [id, copy] of Object.entries(germanAiCopy)) {
+  if (productSeo[id] && copy.description) productSeo[id].descriptionTranslations = { ...productSeo[id].descriptionTranslations, de: copy.description };
+}
 export function createPageMetadata(entry: SeoEntry, requestedLanguage = 'en'): Metadata {
   const language = isValidLanguage(requestedLanguage) ? requestedLanguage : 'en';
   const copy = dictionaries[language];
@@ -187,8 +250,9 @@ export function createPageMetadata(entry: SeoEntry, requestedLanguage = 'en'): M
   };
   const categoryId = entry.path.match(/^\/products\/([^/]+)$/)?.[1];
   const name = titles[entry.path] || (categoryId && categoryNames[categoryId]?.[language]) || entry.name;
-  const description = entry.descriptionTranslations?.[language] || (categoryId && categoryDescriptions[categoryId]?.[language]) || entry.description;
-  const brandedTitle = name.includes(SITE_NAME) ? name : `${name} | ${SITE_NAME}`;
+  const description = productPageDescriptions[entry.path]?.[language] || entry.descriptionTranslations?.[language] || (categoryId && categoryDescriptions[categoryId]?.[language]) || entry.description;
+  const title = productPageTitles[entry.path]?.[language] || name;
+  const brandedTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
   const socialImage = entry.image || DEFAULT_SOCIAL_IMAGE;
   const path = localizedHref(entry.path, language);
   const locales = { en: 'en_US', de: 'de_DE', fr: 'fr_FR', it: 'it_IT', es: 'es_ES' };

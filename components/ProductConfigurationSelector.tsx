@@ -5,6 +5,7 @@ import { localizedHref } from '@/lib/i18n/routing';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import ConfigurationSpecifications from '@/components/ConfigurationSpecifications';
 import { mergeSpecifications, type ProductConfiguration, type ProductSpecification } from '@/lib/product-specifications';
+import { translateAiConfigurationLabelDe, translateAiGalleryDe, translateAiSpecsDe } from '@/lib/ai-product-german';
 
 const copy = {
   en: { title: 'Choose a configuration', detail: 'Select a configuration to view its complete specifications.', sku: 'SKU', image: 'Reference view; I/O may differ by Type', specification: 'Configuration specifications' },
@@ -19,7 +20,7 @@ export default function ProductConfigurationSelector({ model, skus, sharedSpecs,
   const words = copy[language];
   const [selected, setSelected] = useState(0);
   const verticalCards = model === 'MCAIPC3';
-  const configurationLabel = (sku: ProductConfiguration) => language === 'en' ? sku.label : sku.labelTranslations?.[language] || sku.label;
+  const configurationLabel = (sku: ProductConfiguration) => language === 'de' && model === 'MCAIPC3' ? translateAiConfigurationLabelDe(sku.label) : language === 'en' ? sku.label : sku.labelTranslations?.[language] || sku.label;
 
   useEffect(() => {
     const pickHash = () => {
@@ -43,7 +44,10 @@ export default function ProductConfigurationSelector({ model, skus, sharedSpecs,
   const active = skus[selected];
   useEffect(() => { onConfigurationChange?.(active); }, [active, onConfigurationChange]);
   const activeCopy = language === 'en' ? undefined : active.translations?.[language];
-  const specifications = activeCopy?.specs || mergeSpecifications(sharedSpecs, [...active.specs, { label: 'Model', value: active.legacyNames[0] || model }]);
+  const sourceSpecifications = activeCopy?.specs || mergeSpecifications(sharedSpecs, [...active.specs, { label: 'Model', value: active.legacyNames[0] || model }]);
+  const specifications = language === 'de' && model === 'MCAIPC3' ? translateAiSpecsDe(sourceSpecifications) : sourceSpecifications;
+  const sourceGallery = activeCopy?.galleryCards || active.galleryCards;
+  const gallery = language === 'de' && model === 'MCAIPC3' ? translateAiGalleryDe(sourceGallery || []) : sourceGallery;
   const selectSku = (index: number) => {
     setSelected(index);
     window.history.replaceState(null, '', `#sku-${skus[index].key}`);
@@ -79,7 +83,7 @@ export default function ProductConfigurationSelector({ model, skus, sharedSpecs,
           ))}
         </div>
         <div id="sku-panel" role="tabpanel" aria-labelledby={`sku-tab-${active.key}`} className="mt-6 overflow-hidden rounded-xl border border-blue-200 bg-white">
-          <ConfigurationSpecifications key={active.key} title={`${configurationLabel(active)} · ${words.specification}`} image={active.image} imageAlt={`${model} ${configurationLabel(active)}`} imageCaption={referenceImage ? words.image : undefined} specs={specifications} galleryCards={activeCopy?.galleryCards || active.galleryCards} onPreview={onPreview} />
+          <ConfigurationSpecifications key={active.key} title={`${configurationLabel(active)} · ${words.specification}`} image={active.image} imageAlt={`${model} ${configurationLabel(active)}`} imageCaption={referenceImage ? words.image : undefined} specs={specifications} galleryCards={gallery} onPreview={onPreview} />
         </div>
       </div>
     </section>

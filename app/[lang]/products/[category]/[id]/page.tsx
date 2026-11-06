@@ -32,6 +32,8 @@ import { firewallCatalog, type FirewallSeriesCode } from '@/lib/firewall-catalog
 import { commercialCatalog, type CommercialSeriesCode } from '@/lib/commercial-catalog';
 import type { CatalogProductTranslations } from '@/lib/catalog-product-copy';
 import { nasMotherboardCopy } from '@/lib/nas-motherboard-copy';
+import { categoryNames } from '@/lib/category-labels';
+import { germanAiCopy, translateAiSpecsDe } from '@/lib/ai-product-german';
 
 type ProductSpec = { label: string; value: string };
 type ProductFeature = { icon: keyof typeof iconMap; title: string; description: string };
@@ -799,7 +801,9 @@ export default function ProductDetailPage() {
   const activeConfiguration = configurationChoice?.productId === productId ? configurationChoice.configuration : undefined;
   const [previewImage, setPreviewImage] = useState<string | null>(null);
   const sourceProduct = productCategories[productId] === category ? products[productId] : undefined;
-  const translatedCopy = sourceProduct?.translations?.[language];
+  const translatedCopy = language === 'de' && germanAiCopy[productId]
+    ? { ...germanAiCopy[productId], specs: translateAiSpecsDe(sourceProduct?.specs || []) }
+    : sourceProduct?.translations?.[language];
   const product = sourceProduct && translatedCopy ? { ...sourceProduct, ...translatedCopy } : sourceProduct;
   const configurationImagesFollowSelection = Boolean(product?.skus?.some(sku => sku.galleryCards?.length));
   const industrialSeriesCode = category === 'industrial-mini-pc'
@@ -822,7 +826,8 @@ export default function ProductDetailPage() {
     (industrialSeriesCode === 'tpc' && productId !== 'mctpc-1501b');
   const isNasMotherboard = commercialSeriesCode === 'nas-mb';
   const motherboardWords = nasMotherboardCopy[language];
-  const catInfo = isNasMotherboard ? { ...categoryData['commercial-mini-pc'], name: motherboardWords.label } : categoryData[category] || categoryData['industrial-mini-pc'];
+  const baseCatInfo = categoryData[category] || categoryData['industrial-mini-pc'];
+  const catInfo = { ...baseCatInfo, name: isNasMotherboard ? motherboardWords.label : categoryNames[category]?.[language] || baseCatInfo.name };
   const CategoryIcon = iconMap[catInfo.icon] || Cpu;
   const gallery = activeConfiguration ? [activeConfiguration.image] : product?.images || [];
   const detailImages = product?.galleryImages || gallery.slice(1, 4);
@@ -860,6 +865,8 @@ export default function ProductDetailPage() {
   const specifications = product.operatingRange && !product.specs.some(spec => /operating|temperature|environment/i.test(spec.label))
     ? [...product.specs, { label: t.productDetail.operatingRange, value: product.operatingRange }]
     : product.specs;
+  // Merge configurations by their original labels before translating the table.
+  const configurationSharedSpecs = language === 'de' && productId === 'mcaipc3' ? sourceProduct?.specs || [] : specifications;
 
   return (
     <div data-analytics-product={productId} className="min-h-screen bg-white text-slate-950">
@@ -952,7 +959,7 @@ export default function ProductDetailPage() {
         </section>
       )}
 
-      {productId === 'mcai2' ? <Mcaipc2Configurations onPreview={setPreviewImage} onConfigurationChange={onConfigurationChange} /> : product.skus && <ProductConfigurationSelector key={productId} model={product.name} skus={product.skus} sharedSpecs={specifications} referenceImage={!configurationImagesFollowSelection && productId !== 'mcipcb13'} onPreview={setPreviewImage} onConfigurationChange={configurationImagesFollowSelection ? onConfigurationChange : undefined} />}
+      {productId === 'mcai2' ? <Mcaipc2Configurations onPreview={setPreviewImage} onConfigurationChange={onConfigurationChange} /> : product.skus && <ProductConfigurationSelector key={productId} model={product.name} skus={product.skus} sharedSpecs={configurationSharedSpecs} referenceImage={!configurationImagesFollowSelection && productId !== 'mcipcb13'} onPreview={setPreviewImage} onConfigurationChange={configurationImagesFollowSelection ? onConfigurationChange : undefined} />}
 
       {!product.skus && <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

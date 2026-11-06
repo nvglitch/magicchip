@@ -1,5 +1,4 @@
 'use client';
-import { industrialBSeriesCopy, industrialESeriesCopy } from '@/lib/industrial-navigation-copy';
 import { brochureUpdates } from '@/lib/brochure-updates';
 
 import { ModelFamilyLinks, AiFamilyCards, TpcSeriesLinks } from '@/components/ProductFamilyNavigation';
@@ -19,6 +18,8 @@ import { nasMotherboardCopy } from '@/lib/nas-motherboard-copy';
 import { actionButtonStyles } from '@/lib/action-button-styles';
 import { categoryNames, categoryDescriptions } from '@/lib/category-labels';
 import { aiCategoryCopy, categoryUiCopy } from '@/lib/category-copy';
+import { industrialCategoryCopy } from '@/lib/category-content-translations';
+import CategorySelection from '@/components/CategorySelection';
 
 const categoryData: Record<string, { icon: LucideIcon; gradient: string; image: string }> = {
   'industrial-mini-pc': { icon: Cpu, gradient: 'from-blue-600 to-blue-700', image: '/assets/home/categories/industrial-mini-pc.png' },
@@ -226,22 +227,9 @@ const commercialSeries = [
 ];
 const richCategoryData = {
   'industrial-mini-pc': {
-    overview: 'MagicChip Industrial Mini PCs bring processing, networking, display output, and equipment-facing I/O into compact fanless systems. They can run control software beside a machine, collect data from serial devices, drive production dashboards, or connect local equipment to an industrial edge network.',
-    qualifier: 'Choose from compact A Series systems, dual-LAN B Series, multi-COM C Series, multi-LAN D Series, or integrated-display TPC models according to the interfaces, compute platform, and installation method your project requires.',
-    capabilities: [
-      { title: 'Run beside the equipment', description: 'Compact fanless enclosures support machine-side computing where space is limited and continuous operation matters.' },
-      { title: 'Connect industrial devices', description: 'Serial ports, wired LAN, USB, and display outputs connect controllers, sensors, cameras, peripherals, and operator displays.' },
-      { title: 'Match the system to the task', description: 'Select the series by serial-port count, network architecture, display needs, compute platform, and panel-mount requirements.' },
-    ],
+    ...industrialCategoryCopy.en,
     sceneImage: '/assets/products/category-scenes/industrial-automation.webp',
     desktopSceneImage: '/assets/products/category-scenes/industrial-automation-desktop.webp',
-    sceneAlt: 'Automated robotic production line with conveyors, sensors, and safety systems',
-    scenarios: [
-      { title: 'Compact machine-side control', description: 'A and B Series systems place control software, display output, USB peripherals, and essential serial connectivity close to the equipment.', products: ['MCIPCA1', 'MCIPCB12'] },
-      { title: 'Serial equipment & data acquisition', description: 'Multi-COM C Series models connect several controllers, instruments, readers, or legacy serial devices through one industrial computer.', products: ['MCIPC8-HDMI', 'MCIPC9'] },
-      { title: 'Industrial edge & network gateways', description: 'Multi-LAN D Series and expandable box PCs support local data processing, segmented equipment networks, vision systems, and edge gateway roles.', products: ['MCIPCD3', 'MCIPCB13A'] },
-      { title: 'Panel HMI & operator stations', description: 'TPC models combine the display and computer in one panel-mount system for production status, equipment operation, and on-site interaction.', products: ['MCTPC-1506E', 'MCTPC-2105E'] },
-    ],
   },
   'ai-mini-pc': {
     ...aiCategoryCopy.en,
@@ -309,7 +297,9 @@ export default function CategoryPage() {
         ? commercialSeries
         : null;
   const baseContent = richCategoryData[category as keyof typeof richCategoryData] || richCategoryData['industrial-mini-pc'];
-  const richContent = category === 'ai-mini-pc' ? { ...baseContent, ...aiCategoryCopy[language] } : baseContent;
+  const industrialCopy = industrialCategoryCopy[language];
+  const richContent = category === 'ai-mini-pc' ? { ...baseContent, ...aiCategoryCopy[language] }
+    : category === 'industrial-mini-pc' ? { ...baseContent, ...industrialCopy } : baseContent;
   const ui = categoryUiCopy[language];
   const desktopSceneImage = richContent.desktopSceneImage;
 
@@ -396,7 +386,7 @@ export default function CategoryPage() {
             {(category === 'industrial-mini-pc' || category === 'firewall-mini-pc' || category === 'commercial-mini-pc') && (
               <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
                 {category === 'industrial-mini-pc'
-                  ? 'The expanded range covers five box-PC interface architectures plus integrated-display panel PCs, so customers can start with the deployment task and then narrow the choice by I/O and compute platform.'
+                  ? industrialCopy.applicationIntro
                   : category === 'firewall-mini-pc'
                     ? 'The expanded network range covers compact two-, four-, and six-port appliances, high-speed 10GbE platforms, and 1U servers. Start with the deployment format and port architecture, then compare the available compute and expansion options.'
                     : 'The expanded commercial range now covers compact desktop systems for everyday and professional workloads plus NAS-focused platforms for local storage, backup, media, and network services.'}
@@ -443,7 +433,7 @@ export default function CategoryPage() {
             <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">{ui.choose}</h2>
             <p className="mt-4 text-base leading-7 text-slate-600">
               {category === 'industrial-mini-pc'
-                ? 'Select an IPC series by serial, network, and display architecture, then open the available model page.'
+                ? industrialCopy.selectionIntro
                 : category === 'firewall-mini-pc'
                   ? 'Select a series by port count, network speed, and installation format, then open the available model page.'
                   : category === 'commercial-mini-pc'
@@ -451,6 +441,8 @@ export default function CategoryPage() {
                     : ui.compare}
             </p>
           </div>
+
+          <CategorySelection key={category} category={category} language={language} />
 
           {activeSeries ? (
             <div className="space-y-6 md:space-y-8">
@@ -467,20 +459,20 @@ export default function CategoryPage() {
 
                     <div className="relative grid gap-7 md:grid-cols-[190px_minmax(0,1fr)] md:items-center lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-10">
                       <div className="relative aspect-square w-full max-w-[190px] justify-self-center overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm md:max-w-[220px]">
-                        <img src={series.image} alt={`${series.title} representative product`} className="h-full w-full object-contain p-3 transition-transform duration-500 hover:scale-105" />
+                        <img src={series.image} alt={`${category === 'industrial-mini-pc' ? industrialCopy.series[series.code as keyof typeof industrialCopy.series].title : series.title} · ${industrialCopy.representativeProduct}`} className="h-full w-full object-contain p-3 transition-transform duration-500 hover:scale-105" />
                       </div>
 
                       <div className="min-w-0 text-center md:pr-36 md:text-left lg:pr-52">
-                        <h3 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{series.code === 'NAS-MB' ? nasMotherboardCopy[language].title : series.code === 'B' ? industrialBSeriesCopy[language].title : series.code === 'E' ? industrialESeriesCopy[language].title : series.title}</h3>
-                        <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">{series.code === 'NAS-MB' ? nasMotherboardCopy[language].description : series.code === 'B' ? industrialBSeriesCopy[language].description : series.code === 'E' ? industrialESeriesCopy[language].description : series.description}</p>
+                        <h3 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{category === 'industrial-mini-pc' ? industrialCopy.series[series.code as keyof typeof industrialCopy.series].title : series.code === 'NAS-MB' ? nasMotherboardCopy[language].title : series.title}</h3>
+                        <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">{category === 'industrial-mini-pc' ? industrialCopy.series[series.code as keyof typeof industrialCopy.series].description : series.code === 'NAS-MB' ? nasMotherboardCopy[language].description : series.description}</p>
                         <p className="mt-5 text-sm font-bold uppercase tracking-normal text-slate-400">
-                          {series.models.length} {series.models.length === 1 ? 'current model' : 'current models'}
+                          {series.models.length} {series.models.length === 1 ? industrialCopy.currentModel : industrialCopy.currentModels}
                         </p>
                       </div>
                     </div>
 
                     <div className="mt-8 border-t border-slate-200 pt-6">
-                      <p className="mb-4 text-xs font-bold uppercase tracking-normal text-slate-400">Available models</p>
+                      <p className="mb-4 text-xs font-bold uppercase tracking-normal text-slate-400">{industrialCopy.availableModels}</p>
                       {series.code === 'TPC'
                         ? <TpcSeriesLinks models={series.models} category={category} language={language} />
                         : <ModelFamilyLinks models={series.models} category={category} />}
@@ -490,7 +482,7 @@ export default function CategoryPage() {
               ))}
             </div>
           ) : category === 'ai-mini-pc' ? (
-            <AiFamilyCards products={products.map(product => ({ ...product, tagline: aiCategoryCopy[language].products[product.id as keyof typeof aiCategoryCopy.en.products] || product.tagline }))} />
+            <AiFamilyCards language={language} products={products.map(product => ({ ...product, tagline: aiCategoryCopy[language].products[product.id as keyof typeof aiCategoryCopy.en.products] || product.tagline }))} />
           ) : (
             <div className="space-y-8">
               {products.map((product, index) => (
