@@ -301,7 +301,6 @@ export default function CategoryPage() {
   const richContent = category === 'ai-mini-pc' ? { ...baseContent, ...aiCategoryCopy[language] }
     : category === 'industrial-mini-pc' ? { ...baseContent, ...industrialCopy } : baseContent;
   const ui = categoryUiCopy[language];
-  const desktopSceneImage = richContent.desktopSceneImage;
 
   const categoryName = categoryNames[category]?.[language] || categoryNames[category]?.en || category;
   const categoryDesc = categoryDescriptions[category]?.[language] || categoryDescriptions[category]?.en || '';
@@ -311,15 +310,23 @@ export default function CategoryPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#172033] via-blue-950 to-[#172033] text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-10 right-20 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl"></div>
+      <section data-category-hero className="relative bg-[#172033] text-white py-20 overflow-hidden">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+          <Image
+            src={richContent.desktopSceneImage}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+            style={{ objectPosition: category === 'industrial-mini-pc' ? '35% 45%' : category === 'commercial-mini-pc' ? '50% 60%' : '50% 50%' }}
+          />
+          <div className="absolute inset-0 bg-slate-950/70 md:bg-[linear-gradient(90deg,rgba(8,18,35,0.86)_0%,rgba(8,18,35,0.72)_48%,rgba(8,18,35,0.42)_100%)] md:bg-transparent" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <div className="mb-8">
-            <Link href="/products" className="inline-flex items-center text-gray-400 hover:text-white transition-colors text-sm">
+            <Link href="/products" className="inline-flex items-center text-gray-300 hover:text-white transition-colors text-sm">
               <ChevronLeft className="w-4 h-4 mr-1" />
               {t.products.backToProducts}
             </Link>
@@ -337,9 +344,6 @@ export default function CategoryPage() {
               <Link href="#models" className={actionButtonStyles.primary}>
                 {ui.browse} <ArrowRight aria-hidden="true" className="h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
               </Link>
-              <Link href="#applications" className={actionButtonStyles.secondaryOnDark}>
-                {ui.viewApplications}
-              </Link>
             </div>
           </motion.div>
         </div>
@@ -349,7 +353,6 @@ export default function CategoryPage() {
       <nav aria-label={ui.sections} className="sticky top-16 z-30 border-b border-slate-200 bg-white/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl gap-7 overflow-x-auto px-4 py-4 text-sm font-semibold text-slate-600 sm:px-6 lg:px-8">
           <Link href="#overview" className="whitespace-nowrap transition-colors hover:text-brand-hover">{ui.overview}</Link>
-          <Link href="#applications" className="whitespace-nowrap transition-colors hover:text-brand-hover">{ui.applications}</Link>
           <Link href="#models" className="whitespace-nowrap transition-colors hover:text-brand-hover">{ui.models}</Link>
         </div>
       </nav>
@@ -373,55 +376,6 @@ export default function CategoryPage() {
                 <p className="mt-2 text-sm leading-6 text-slate-600">{capability.description}</p>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="applications" className="scroll-mt-32 bg-[#eaf0ee] py-16 md:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
-            <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
-              {ui.applicationTitles[category as keyof typeof ui.applicationTitles] || ui.applications}
-            </h2>
-            {(category === 'industrial-mini-pc' || category === 'firewall-mini-pc' || category === 'commercial-mini-pc') && (
-              <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
-                {category === 'industrial-mini-pc'
-                  ? industrialCopy.applicationIntro
-                  : category === 'firewall-mini-pc'
-                    ? 'The expanded network range covers compact two-, four-, and six-port appliances, high-speed 10GbE platforms, and 1U servers. Start with the deployment format and port architecture, then compare the available compute and expansion options.'
-                    : 'The expanded commercial range now covers compact desktop systems for everyday and professional workloads plus NAS-focused platforms for local storage, backup, media, and network services.'}
-              </p>
-            )}
-          </div>
-          <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl shadow-slate-900/10">
-            <figure className="relative aspect-[3/2] overflow-hidden bg-slate-900 lg:aspect-video">
-              <Image src={richContent.sceneImage} alt={richContent.sceneAlt} fill sizes="(max-width: 1023px) 100vw, 1px" className="object-cover transition-transform duration-700 hover:scale-[1.02] lg:hidden" />
-              <Image src={desktopSceneImage} alt={richContent.sceneAlt} fill sizes="(max-width: 1023px) 1px, 1280px" className="hidden object-cover transition-transform duration-700 hover:scale-[1.02] lg:block" />
-            </figure>
-            <div className="grid gap-px bg-slate-200 md:grid-cols-2">
-              {richContent.scenarios.map((scenario, index) => (
-                <article key={scenario.title} className="bg-white p-6 md:p-8">
-                  <div className="flex gap-4">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-900 text-sm font-bold text-white">0{index + 1}</div>
-                    <div>
-                      <h3 className="text-xl font-bold text-slate-950">{scenario.title}</h3>
-                      <p className="mt-2 text-sm leading-6 text-slate-600">{scenario.description}</p>
-                      <p className="mt-4 text-xs font-bold uppercase tracking-normal text-slate-400">{ui.recommended}</p>
-                      <div className="mt-2 flex flex-wrap gap-2">
-                        {scenario.products.map((productName) => {
-                          const product = products.find((item) => item.name === productName);
-                          return product ? (
-                            <Link key={product.id} href={`/products/${category}/${product.id}`} className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-sm font-semibold text-brand transition-colors hover:border-blue-400 hover:bg-blue-100">
-                              {product.name}
-                            </Link>
-                          ) : null;
-                        })}
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
           </div>
         </div>
       </section>
