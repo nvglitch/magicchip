@@ -138,24 +138,6 @@
           {
             "type": "paragraph",
             "text": "A separate computer and display is worth considering when the two need different locations or independent service. An integrated panel PC is worth considering when a fixed operator interface and a single physical assembly simplify the workstation. Choose between them using the installation and maintenance plan, then validate the selected configuration with the real application."
-          },
-          {
-            "type": "heading",
-            "level": 3,
-            "text": "Further reading"
-          },
-          {
-            "type": "links",
-            "items": [
-              {
-                "text": "Beckhoff: integrated panel PC architectures",
-                "href": "https://www.beckhoff.com/en-en/products/ipc/panel-pcs/"
-              },
-              {
-                "text": "Beckhoff: separate control panels and connection technology",
-                "href": "https://www.beckhoff.com/en-en/products/ipc/control-panels/"
-              }
-            ]
           }
         ],
         "cta": {
@@ -409,24 +391,6 @@
           {
             "type": "paragraph",
             "text": "Work through these checks in order instead of changing several settings at once. Keep the physical link, byte transport and application protocol as separate questions. When each is documented and tested, the hardware decision becomes a choice about the channels, environment and service access the project actually needs."
-          },
-          {
-            "type": "heading",
-            "level": 3,
-            "text": "Further reading"
-          },
-          {
-            "type": "links",
-            "items": [
-              {
-                "text": "Texas Instruments: RS-232 electrical levels and handshaking",
-                "href": "https://www.ti.com/lit/an/slla544/slla544.pdf"
-              },
-              {
-                "text": "MathWorks: serial connections, cables and communication settings",
-                "href": "https://www.mathworks.com/help/instrument/serial-port-overview.html"
-              }
-            ]
           }
         ],
         "cta": {

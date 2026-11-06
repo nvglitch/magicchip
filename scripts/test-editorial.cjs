@@ -118,7 +118,8 @@ for (const id of ['industrial-box-pc-vs-panel-pc','connect-multiple-rs232-device
   assert(!/MagicChip|MCIPC\d|MCTPC|MCAIPC|MCai\d/i.test(JSON.stringify(visible)));
   assert(!/MCIPC|MCTPC/.test(copy.excerpt));
   assert(copy.body.filter(block=>block.type==='paragraph').every(block=>block.text.split(/\s+/).length<=110));
-  assert(copy.body.filter(block=>block.type==='links').every(block=>block.items.every(item=>api.isArticleReference(item.href))));
+  assert(!copy.body.some(block=>block.type==='links'&&block.items.some(item=>/^https?:/.test(item.href))));
+  assert(!copy.body.some(block=>block.type==='heading'&&block.text==='Further reading'));
   const html = renderToStaticMarkup(React.createElement(Detail,{article,language:'en'}));
   assert.equal((html.match(/href="\/en\/products\//g)||[]).length,1);
   assert.equal((html.match(/<h2 id="section-/g)||[]).length,6);
