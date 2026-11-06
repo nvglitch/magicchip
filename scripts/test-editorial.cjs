@@ -14,7 +14,7 @@ function load(filename) {
   const exports = {};
   cache.set(file, exports);
   const code = ts.transpileModule(fs.readFileSync(file, 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX, esModuleInterop: true } }).outputText;
-  vm.runInNewContext(code, { exports, Intl, Date, require(name) {
+  vm.runInNewContext(code, { exports, Intl, Date, URL, require(name) {
     if (name === 'next/link') return ({ children, ...props }) => React.createElement('a', props, children);
     if (!name.startsWith('@/') && !name.startsWith('.')) return require(name);
     const resolved = name.startsWith('@/') ? path.join(root, name.slice(2)) : path.resolve(path.dirname(file), name);
@@ -50,6 +50,10 @@ for (const change of [
   item => { item.translations.fr.body = [{ type: 'links', items: [{ text: 'Wrong locale', href: '/en/products' }] }]; },
   item => { item.translations.it.body = [{ type: 'table', columns: ['Model', 'Interface'], rows: [['Missing cell']] }]; },
   item => { item.translations.en.body = [{ type: 'image', src: '/assets/brand/og-default.png', alt: 'Image', presentation: 'invalid' }]; },
+  item => { item.translations.en.body = [{ type: 'links', items: [{ text: 'Unsafe', href: 'https://ollama.com.attacker.example/model' }] }]; },
+  item => { item.translations.en.body = [{ type: 'models', items: [{name:'Model',workload:'Chat',download:'4GB',command:'ollama run model',note:'Example',href:'https://user:password@ollama.com/library/model'}] }]; },
+  item => { item.translations.en.image = '/assets/../private.png'; },
+  item => { item.translations.en.cta = {title:'Hardware',description:'Explore',label:'View',href:'javascript:alert(1)'}; },
 ]) {
   const invalid = clone(published); change(invalid);
   assert(!api.isPublishableArticle(invalid));
@@ -77,9 +81,49 @@ assert.equal(api.getPublishedArticles('technical').length, 3);
 assert.equal(api.getPublishedArticles('case-study').length, 0);
 for (const article of api.getPublishedArticles()) {
   assert(fs.existsSync(path.join(root, 'public', article.image)));
-  for (const copy of Object.values(article.translations)) for (const block of copy.body) {
-    if (block.type === 'image') assert(fs.existsSync(path.join(root, 'public', block.src)));
+  for (const copy of Object.values(article.translations)) {
+    if (copy.image) assert(fs.existsSync(path.join(root, 'public', copy.image)));
+    for (const block of copy.body) {
+      if (block.type === 'image') assert(fs.existsSync(path.join(root, 'public', block.src)));
+    }
   }
+}
+const guideArticle = api.getArticle('technical', 'local-ai-mini-pc-memory');
+const guide = guideArticle.translations.en;
+assert.equal(guide.title, 'Local AI Hardware Guide: How Much RAM Do You Really Need?');
+assert.equal(guide.metaTitle, 'Local AI Hardware Guide: RAM, GPU Memory & Model Sizes');
+assert(!/MagicChip|MCAIPC\d|MCai2|mini\s+pc/i.test(JSON.stringify(guide.body)));
+assert(!guide.body.some(block => block.type === 'image'));
+assert.equal(guide.body.filter(block => block.type === 'heading' && block.level !== 3).length, 7);
+const modelCards = guide.body.find(block => block.type === 'models').items;
+assert.equal(modelCards.length, 7);
+for (const model of modelCards) {
+  assert(api.isArticleReference(model.href));
+  assert.equal(model.command, `ollama run ${model.href.split('/').at(-1)}`);
+}
+const guideHtml = renderToStaticMarkup(React.createElement(Detail, {article:guideArticle,language:'en'}));
+assert.equal((guideHtml.match(/href="\/en\/products\//g) || []).length, 1);
+assert(guideHtml.includes('data-article-cta') && guideHtml.includes('Explore AI Hardware'));
+assert(guideHtml.includes('qwen3-5-official.png') && !guideHtml.includes('ai-memory-formats.svg'));
+assert(guideHtml.includes('bg-[#101e31] text-white') && guideHtml.includes('radial-gradient('));
+assert(guideHtml.includes('<code>ollama run qwen3.5:9b</code>'));
+assert(guideHtml.includes('href="https://ollama.com/"') && guideHtml.includes('href="https://lmstudio.ai/"'));
+assert(guideHtml.includes('overflow-x-auto') && guideHtml.includes('data-article-toc'));
+assert.equal((guideHtml.match(/<h2 id="section-/g) || []).length, 7);
+for (const id of ['industrial-box-pc-vs-panel-pc','connect-multiple-rs232-devices']) {
+  const article = api.getArticle('technical',id);
+  const copy = article.translations.en;
+  const visible = copy.body.map(block => block.type === 'image' ? {alt:block.alt,caption:block.caption} : block);
+  assert.equal(copy.presentation,'guide');
+  assert(!/MagicChip|MCIPC\d|MCTPC|MCAIPC|MCai\d/i.test(JSON.stringify(visible)));
+  assert(!/MCIPC|MCTPC/.test(copy.excerpt));
+  assert(copy.body.filter(block=>block.type==='paragraph').every(block=>block.text.split(/\s+/).length<=110));
+  assert(copy.body.filter(block=>block.type==='links').every(block=>block.items.every(item=>api.isArticleReference(item.href))));
+  const html = renderToStaticMarkup(React.createElement(Detail,{article,language:'en'}));
+  assert.equal((html.match(/href="\/en\/products\//g)||[]).length,1);
+  assert.equal((html.match(/<h2 id="section-/g)||[]).length,6);
+  assert(html.includes('data-article-cta') && html.includes('Explore Industrial Computing'));
+  assert(html.includes('data-article-body') && html.includes('data-article-toc') && html.includes('bg-[#101e31] text-white'));
 }
 for (const lang of languages) {
   for (const kind of ['technical', 'case-study']) {

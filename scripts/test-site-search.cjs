@@ -13,7 +13,7 @@ function load(filename) {
   const code = ts.transpileModule(fs.readFileSync(file, 'utf8'), {
     compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020, esModuleInterop: true },
   }).outputText;
-  vm.runInNewContext(code, { exports, Intl, Map, Set, require(name) {
+  vm.runInNewContext(code, { exports, Intl, Map, Set, URL, require(name) {
     const resolved = name.startsWith('@/') ? name.slice(2) : path.resolve(path.dirname(file), name);
     return load(resolved.endsWith('.json') ? resolved : `${resolved}.ts`);
   } });

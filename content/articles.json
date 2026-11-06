@@ -8,21 +8,162 @@
     "translations": {
       "en": {
         "title": "Industrial Box PC or Panel PC: Which Fits Your Machine?",
-        "excerpt": "Compare a separate box PC and display with an integrated panel PC using MCIPC8-HDMI and MCTPC-1506E: installation, serial devices, network connections and service access.",
-        "imageAlt": "MCTPC-1506E industrial panel PC",
+        "excerpt": "Understand how separate and integrated computers differ in display placement, installation and maintenance, then choose the format around the machine and its operator.",
+        "imageAlt": "Industrial panel computer with an integrated display",
+        "presentation": "guide",
+        "metaTitle": "Industrial Box PC vs Panel PC: A Practical Selection Guide",
+        "metaDescription": "Compare box PCs and panel PCs by installation, display placement, I/O, maintenance and lifetime cost. Learn which design fits your machine and operator workflow.",
         "body": [
-          { "type": "paragraph", "text": "Start with where the operator and the computer need to be. An industrial box PC runs the application while a separate monitor provides the interface. A panel PC puts the computer and screen in one unit. Neither format is automatically the better control system: the right choice depends on display position, available mounting space, equipment connections and maintenance access." },
-          { "type": "heading", "text": "Decide the installation before the processor" },
-          { "type": "paragraph", "text": "A box PC such as MCIPC8-HDMI can be desktop- or wall-mounted, with the monitor positioned separately. This suits a control cabinet or machine-side location when the enclosure dimensions and ventilation clearances fit the installation. MCTPC-1506E integrates a 15.6-inch, 1920 × 1080 display for an operator station. Before choosing a panel installation, confirm the approved mounting drawing, cutout, panel thickness and access behind the screen; the outer dimensions alone are not a cutout specification." },
-          { "type": "table", "columns": ["Selection point", "MCIPC8-HDMI box PC", "MCTPC-1506E panel PC"], "rows": [ ["Display", "Separate monitor; 2 × HDMI", "Integrated 15.6-inch Full HD display; 1 × HDMI"], ["Serial connections", "6 × DB9 COM; 4 support RS-422/485", "2 × DB9 RS-232/422/485; extended I/O listed separately"], ["Wired network", "2 × LAN; speed depends on CPU generation", "2 × 2.5GbE; expansion to 4 LAN ports is optional"], ["Size", "249 × 150 × 86 mm", "378.56 × 235.49 × 66.5 mm"], ["Power and operating range", "9–36 V DC; −20°C to +60°C", "9–36 V DC; −20°C to +60°C"] ] },
-          { "type": "image", "src": "/assets/products/industrial/october/mcipc1/rear.webp", "alt": "MCIPC8-HDMI rear with COM5 and COM6, GPIO, two LAN ports and two HDMI ports", "caption": "MCIPC8-HDMI rear connections. Four additional DB9 COM ports are on the front. Photos show one configuration; confirm final I/O with the order.", "presentation": "panel" },
-          { "type": "heading", "text": "Map the equipment to physical ports" },
-          { "type": "paragraph", "text": "Write down each instrument, controller, display and network connection. Six independent serial devices may point toward MCIPC8-HDMI, while a local touch interface with fewer DB9 connections may favour the panel format. The MCTPC-1506E extended-I/O connector is not the same as four additional fitted DB9 ports: check the breakout cable, signal definitions and required accessories." },
-          { "type": "list", "items": ["Keep the display cable route, connector bend space and service access in the installation drawing. A separate display can be replaced independently; an integrated screen changes the service arrangement.", "Match the CPU to its actual RAM and storage options. MCTPC-1506E J4125/J6412 configurations use DDR4; N100/N150 use DDR5. Core configurations also differ by generation.", "Check the ambient conditions at the installed computer, the power connector and the final enclosure protection requirements. A listed temperature range does not establish an IP rating or certification for the complete machine."] },
-          { "type": "heading", "text": "What to send for a configuration review" },
-          { "type": "paragraph", "text": "Send the equipment list, interface count and protocol, display location, installation drawing, DC supply, ambient temperature and operating system. Include the application’s CPU, memory and storage requirements. This makes the proposal traceable to the installation instead of selecting solely by screen size or processor name. The comparison above uses brochure specifications, not a comparative reliability or application-performance test." },
-          { "type": "links", "items": [ { "text": "Compare Industrial Mini PCs", "href": "/products/industrial-mini-pc" }, { "text": "MCIPC8-HDMI specifications and interfaces", "href": "/products/industrial-mini-pc/mcipc8-hdmi" }, { "text": "MCTPC-1506E panel PC specifications", "href": "/products/industrial-mini-pc/mctpc-1506e" }, { "text": "Connecting several RS-232 devices", "href": "/tech-docs/connect-multiple-rs232-devices" } ] }
-        ]
+          {
+            "type": "paragraph",
+            "text": "An industrial computer can run the same application in very different physical arrangements. The processor might sit inside a control cabinet with a separate screen on the machine, or it might be built into the screen itself. That choice affects cable routes, installation space and what a technician has to replace when something fails."
+          },
+          {
+            "type": "paragraph",
+            "text": "A useful starting question is where the operator needs to work and where the computer can be installed. Processor performance matters, but it cannot compensate for a screen that is difficult to reach or a computer that cannot be serviced without dismantling the machine."
+          },
+          {
+            "type": "heading",
+            "text": "1. Understand what is integrated"
+          },
+          {
+            "type": "paragraph",
+            "text": "A box PC is a computer without a built-in operator display. It can work with a separate monitor or run without a local screen when the application supports remote operation. A panel PC combines the computer, display and usually a touch interface in one assembly. It still needs suitable power, equipment connections and a mounting arrangement."
+          },
+          {
+            "type": "paragraph",
+            "text": "An industrial monitor is different from a panel PC: it normally displays a video signal from another computer rather than running the application itself. A dedicated HMI terminal may instead run its own limited runtime. Establish which device executes the software before comparing screen sizes or treating these terms as interchangeable."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Decision",
+              "Box PC + separate display",
+              "Panel PC"
+            ],
+            "rows": [
+              [
+                "Display location",
+                "Can be positioned separately from the computer",
+                "Computing and display share one location"
+              ],
+              [
+                "Installation",
+                "Space for computer, display and interconnecting cables",
+                "Space for the complete display/computer assembly"
+              ],
+              [
+                "Display connection",
+                "Video and often a separate touch or USB connection",
+                "Internal display connection; equipment cables remain"
+              ],
+              [
+                "Maintenance",
+                "Computer and display can often be serviced independently",
+                "Service options depend on the integrated design"
+              ],
+              [
+                "Workstation changes",
+                "Screen and computing platform can be changed separately",
+                "Check mounting compatibility and service parts"
+              ]
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "2. Start with the operator and the available space"
+          },
+          {
+            "type": "paragraph",
+            "text": "If the operator stands at a machine door while the computing hardware belongs in a protected cabinet, separating the screen and computer can make the layout easier to manage. It also allows a different screen size or mounting position without moving the computer. The trade-off is a cable route that must support video, touch input and power as required by the chosen display."
+          },
+          {
+            "type": "paragraph",
+            "text": "An integrated panel PC can suit a fixed operator station where the application and screen belong together. For panel mounting, check the approved cutout drawing, permitted panel thickness, mounting hardware and clearance behind the display. The front dimensions are not the cutout dimensions. Arm-mounted designs have different mechanical requirements, including the load and cable movement the arm must accommodate."
+          },
+          {
+            "type": "heading",
+            "text": "3. Match the connections and the software"
+          },
+          {
+            "type": "paragraph",
+            "text": "Create a connection list before comparing the two formats. Count the displays, cameras, serial instruments, USB peripherals and network connections, then record their protocols and required data rates. Neither format inherently provides more ports: compare the actual interfaces and expansion options of each candidate. An internal header is not the same as a fitted external connector."
+          },
+          {
+            "type": "paragraph",
+            "text": "Size CPU, memory and storage around the application, its operating system and supported drivers. A screen does not make a computer faster or slower by definition. For a touch workstation, check whether the application is usable at the chosen resolution and viewing distance. Test the intended gloves, cleaning conditions and input method with the selected touch technology rather than relying on the word touchscreen."
+          },
+          {
+            "type": "heading",
+            "text": "4. Check the installed environment"
+          },
+          {
+            "type": "paragraph",
+            "text": "The environment at the computer can differ from the room around the machine. A cabinet may accumulate heat, while an exposed operator station may encounter dust, liquid or cleaning agents. Assess the complete installation: ambient temperature, airflow, mounting orientation, power supply, cable entries and access for service. A fanless design still has to transfer heat to its surroundings."
+          },
+          {
+            "type": "paragraph",
+            "text": "Read protection ratings with their stated scope. Some panel-mounted products specify a protected front face and a different rating at the rear; that does not make every surface or the complete machine equally protected. The mounting seal and surrounding enclosure matter. Apply the same scrutiny to a box PC installed inside another cabinet, and use the selected device’s installation instructions rather than a general assumption about its enclosure."
+          },
+          {
+            "type": "heading",
+            "text": "5. Plan maintenance and lifetime cost"
+          },
+          {
+            "type": "paragraph",
+            "text": "With a separate display and computer, a failed screen can often be replaced without replacing the computing unit, and a computer upgrade may leave the operator interface in place. This benefit depends on compatible connections and mounts. Extra cables, brackets and power arrangements also have a cost and create additional items to document."
+          },
+          {
+            "type": "paragraph",
+            "text": "An integrated unit can simplify the physical workstation, but its service procedure deserves an early review. Ask which parts are replaceable, how the unit is removed and whether a replacement fits the existing opening. Do not assume every panel PC requires complete replacement, or that every box PC can be serviced without disturbing the installation."
+          },
+          {
+            "type": "paragraph",
+            "text": "Compare the complete installed and supported system, not just the purchase price of the computer. Include the display, mounting parts, cables, spare equipment, software recovery and the time needed to return the workstation to service. These are planning considerations, not a claim that one format always costs less."
+          },
+          {
+            "type": "heading",
+            "text": "6. Turn the comparison into a short decision checklist"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Mark the operator position, screen position and computing location on the installation drawing.",
+              "Confirm mounting space, approved drawings, connector access and all cable routes.",
+              "Check the application, OS, drivers, memory, storage and required interfaces for each candidate.",
+              "Review environmental limits and the protection of the complete installed assembly.",
+              "Walk through a display failure, a computer failure and software recovery with the maintenance team."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "A separate computer and display is worth considering when the two need different locations or independent service. An integrated panel PC is worth considering when a fixed operator interface and a single physical assembly simplify the workstation. Choose between them using the installation and maintenance plan, then validate the selected configuration with the real application."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Further reading"
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "text": "Beckhoff: integrated panel PC architectures",
+                "href": "https://www.beckhoff.com/en-en/products/ipc/panel-pcs/"
+              },
+              {
+                "text": "Beckhoff: separate control panels and connection technology",
+                "href": "https://www.beckhoff.com/en-en/products/ipc/control-panels/"
+              }
+            ]
+          }
+        ],
+        "cta": {
+          "title": "Ready to Compare Hardware?",
+          "description": "Use your installation and I/O checklist to compare suitable industrial computing platforms.",
+          "label": "Explore Industrial Computing",
+          "href": "/products/industrial-mini-pc"
+        }
       },
       "de": {
         "title": "Industrie-Box-PC oder Panel-PC: Was passt zu Ihrer Maschine?",
@@ -107,22 +248,193 @@
     "translations": {
       "en": {
         "title": "How to Connect Several RS-232 Devices to One Industrial PC",
-        "excerpt": "Plan independent serial connections, choose a six-COM PC, check signal modes and cables, then validate each device with the actual application.",
-        "imageAlt": "MCIPC8-HDMI industrial computer with multiple COM ports",
+        "excerpt": "Learn how independent serial links work, compare ways to add ports, and check cables, communication settings and application behaviour before connecting several instruments.",
+        "imageAlt": "Industrial computer with front-panel DB9 serial connectors",
+        "presentation": "guide",
+        "metaTitle": "Connecting Multiple RS-232 Devices: A Practical Guide",
+        "metaDescription": "Connect several RS-232 devices with the right ports, cables and serial settings. Compare native ports, USB adapters and device servers, then troubleshoot the link.",
         "body": [
-          { "type": "paragraph", "text": "A weighing station, reader and controller may each need a serial connection even when the production network uses Ethernet. A multi-COM industrial PC can collect their data locally and provide a network uplink. Start by listing the devices, their electrical interfaces and their application protocols. A matching connector shape alone does not establish compatibility." },
-          { "type": "heading", "text": "Use one independent RS-232 connection per device" },
-          { "type": "paragraph", "text": "RS-232 is a point-to-point interface, not a multidrop bus. For several independent devices, plan a separate PC port and cable for each. Do not wire several transmitters together. Check whether each instrument actually uses RS-232, RS-422, RS-485 or TTL signalling before selecting the port mode. These electrical interfaces are not interchangeable merely because the product uses a DB9 connector." },
-          { "type": "table", "columns": ["Model", "Serial hardware", "Network uplink"], "rows": [ ["MCIPC8-HDMI", "6 × DB9 RS-232; 4 support RS-422/485", "2 × Intel LAN; 1GbE or 2.5GbE by CPU generation"], ["MCIPC9", "6 × DB9, default RS-232; optional RS-485 on COM2/COM3 via jumper; optional TTL on COM1", "1 × Intel I219LM GbE + 1 × Intel i226-V 2.5GbE"] ] },
-          { "type": "image", "src": "/assets/products/industrial/october/mcipc1/front.webp", "alt": "MCIPC8-HDMI front showing four labelled DB9 serial connectors", "caption": "MCIPC8-HDMI front: COM1–COM4. COM5 and COM6 are on the rear. The hardware labels identify connector positions; record their operating-system port assignments separately.", "presentation": "panel" },
-          { "type": "heading", "text": "Build a port and cable schedule" },
-          { "type": "list", "items": ["For every device, record the PC connector, instrument connector, documented pinout, cable type and required handshake signals. Check whether the equipment needs a straight-through or null-modem cable; do not assume a universal DB9 wiring diagram.", "Set the electrical mode using the approved procedure for the ordered board. Confirm RS-232 mode before connection; do not change jumpers on powered equipment.", "Match baud rate, data bits, parity, stop bits and flow control to the instrument manual. Then map the operating-system port name to the physical COM label and to the application’s device identifier."] },
-          { "type": "paragraph", "text": "For example, assign a scale, reader and controller to three separate confirmed RS-232 ports, then reserve other ports for the documented expansion plan. Their software protocols can still differ: the application needs a suitable driver or protocol implementation for each device. A six-port enclosure does not automatically supply that application integration." },
-          { "type": "heading", "text": "Install for access and validate the complete chain" },
-          { "type": "paragraph", "text": "MCIPC8-HDMI supports desktop or wall mounting. Leave room on both sides for cable bends and connector access because its six serial ports are split between front and rear. Confirm the 9–36 V DC supply and connector before installation. Route the network uplink to the intended equipment network; two LAN ports alone do not provide configured network isolation." },
-          { "type": "paragraph", "text": "Test one device first with its real request and response, then run all intended connections together. Record timeouts, data integrity, reconnect behaviour and recovery after a restart under the expected operating conditions. Keep the port map and tested software versions with the project. The model comparison describes documented hardware options; it is not a completed interoperability or production acceptance test." },
-          { "type": "links", "items": [ { "text": "Compare industrial serial and LAN configurations", "href": "/products/industrial-mini-pc" }, { "text": "MCIPC8-HDMI six-COM specifications", "href": "/products/industrial-mini-pc/mcipc8-hdmi" }, { "text": "MCIPC9 serial-port and network specifications", "href": "/products/industrial-mini-pc/mcipc9" }, { "text": "Choose a box PC or panel PC", "href": "/tech-docs/industrial-box-pc-vs-panel-pc" } ] }
-        ]
+          {
+            "type": "paragraph",
+            "text": "A scale, barcode reader and controller can all use serial communication while sending completely different messages. Connecting them to one computer requires a suitable electrical link for each device and software that understands what each message means. Counting sockets is only the first part of that job."
+          },
+          {
+            "type": "paragraph",
+            "text": "A reliable setup starts with the device manuals, a port map and a small test using one instrument. Once that link works, the same method can be repeated for the remaining devices before testing the complete application. There is no need to begin by assuming a particular computer model or a fixed number of serial ports."
+          },
+          {
+            "type": "heading",
+            "text": "1. Plan an independent link for each RS-232 device"
+          },
+          {
+            "type": "paragraph",
+            "text": "RS-232 is a point-to-point electrical interface. For several independent instruments, plan a separate serial channel for each rather than connecting their transmitters together with a passive splitter. A multiport adapter or a computer with several serial ports provides separate channels; it does not turn RS-232 into a shared multidrop bus."
+          },
+          {
+            "type": "paragraph",
+            "text": "The connector shape does not identify the complete interface. A nine-pin D-sub connector may be used for different electrical modes or vendor-specific signals. RS-232, RS-422, RS-485 and TTL-level UART connections are not directly interchangeable. Identify the supported mode and pinout at both ends before selecting the cable or changing a configurable port."
+          },
+          {
+            "type": "heading",
+            "text": "2. Choose how the computer will access the ports"
+          },
+          {
+            "type": "paragraph",
+            "text": "Several physical arrangements can provide the required serial channels. Built-in ports keep the connections on the computer; USB adapters add channels without replacing it; serial device servers carry serial traffic over an Ethernet network. Choose around the installation and the software interface, rather than assuming one method is always more reliable."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Approach",
+              "When it may fit",
+              "What to check"
+            ],
+            "rows": [
+              [
+                "Built-in serial ports",
+                "Local devices connect to a fixed computer",
+                "Port modes, drivers, connector access and expansion needs"
+              ],
+              [
+                "USB-to-serial adapter",
+                "A computer needs additional local channels",
+                "Driver support, USB power, physical retention and port naming"
+              ],
+              [
+                "Serial-to-Ethernet device server",
+                "Instruments are reached through a managed network",
+                "Virtual COM or network mode, latency, access control and recovery"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "A device server may offer a virtual COM/TTY driver, a network socket interface or other operating modes. The application must support the mode you choose. Transporting serial bytes over Ethernet does not automatically translate an instrument’s commands into another application protocol, and the network path adds configuration and recovery conditions to test."
+          },
+          {
+            "type": "heading",
+            "text": "3. Select the cable from the signal definitions"
+          },
+          {
+            "type": "paragraph",
+            "text": "Check the manufacturer’s pinout and whether the connection requires a straight-through or null-modem cable. DTE and DCE describe complementary endpoint roles; two endpoints with the same role generally need transmit and receive paths crossed appropriately. Connector gender alone is not enough to choose the wiring, particularly on equipment with nonstandard assignments."
+          },
+          {
+            "type": "paragraph",
+            "text": "Some devices communicate using transmit, receive and signal ground; others require control signals as well. Hardware flow control can use RTS/CTS lines, while software flow control can use XON/XOFF characters. Match both the cable and the configured flow-control method to the device documentation. A cable that omits required handshake signals may appear connected while communication remains blocked."
+          },
+          {
+            "type": "image",
+            "src": "/assets/products/industrial/october/mcipc1/front.webp",
+            "alt": "Four DB9 serial connectors labelled COM1 to COM4 on a computer enclosure",
+            "caption": "Panel labels help identify physical connector positions. Confirm the configured electrical mode and pinout separately, then record how each connector maps to the operating system.",
+            "presentation": "panel"
+          },
+          {
+            "type": "paragraph",
+            "text": "Also account for cable routing, mechanical strain and the electrical environment. Keep the installation within the cable and interface vendor’s limits; do not treat one quoted maximum distance as a guarantee at every baud rate. Where grounding or noise is a concern, assess a suitable isolated interface or a different connection architecture with the equipment documentation."
+          },
+          {
+            "type": "heading",
+            "text": "4. Match serial settings and message framing"
+          },
+          {
+            "type": "paragraph",
+            "text": "The endpoints must agree on baud rate, data bits, parity, stop bits and flow control. These settings describe how bytes travel, not what the bytes mean. A device may send readable text, binary records or responses to a specific polling command. The application still needs the appropriate parser, command sequence and timing."
+          },
+          {
+            "type": "paragraph",
+            "text": "Keep a port schedule that connects the physical label, operating-system name and application device name. For a USB adapter, confirm how the driver identifies that adapter after reconnecting or restarting the computer. Avoid assuming that a front-panel COM label will always have the same number in the operating system."
+          },
+          {
+            "type": "list",
+            "items": [
+              "Record the device identity, physical connector and operating-system port name.",
+              "Copy the documented baud rate, framing and flow-control settings.",
+              "Record the command or data format, message length or terminator, and timeout behaviour.",
+              "Assign one intended application owner to each port and document the driver version."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "5. Test one connection, then the complete workload"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Connect one device with the documented cable and electrical mode. Check its power and port settings before opening the software.",
+              "Use a suitable serial tool or the intended application to send a documented request or capture the expected output. A port opening successfully is not a complete communication test.",
+              "Repeat for the remaining devices, then run them together. Check that one slow or disconnected instrument does not block the application from processing the others.",
+              "Test the expected restart and reconnect sequence. Save the port map, settings and example responses with the project so another technician can reproduce the setup."
+            ],
+            "ordered": true
+          },
+          {
+            "type": "paragraph",
+            "text": "Use the actual message sizes, polling rates and operating conditions. A brief single-device check cannot establish sustained behaviour for several simultaneous connections. Record errors and recovery behaviour as well as successful responses; these observations are more useful than a claim based solely on the number of ports."
+          },
+          {
+            "type": "heading",
+            "text": "6. Troubleshoot the layer that is failing"
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Symptom",
+              "Check first"
+            ],
+            "rows": [
+              [
+                "The port will not open",
+                "Correct OS port, installed driver and whether another program already owns it"
+              ],
+              [
+                "The port opens but no data arrives",
+                "Device power, electrical mode, cable pinout, flow control and whether a request is required"
+              ],
+              [
+                "Characters arrive but look incorrect",
+                "Baud rate, data bits, parity, stop bits and whether the message is binary"
+              ],
+              [
+                "Data arrives but the application times out",
+                "Expected message length, terminator, parsing and response timing"
+              ],
+              [
+                "A setup fails after a restart",
+                "Port identity, saved settings, startup order and reconnect handling"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Work through these checks in order instead of changing several settings at once. Keep the physical link, byte transport and application protocol as separate questions. When each is documented and tested, the hardware decision becomes a choice about the channels, environment and service access the project actually needs."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Further reading"
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "text": "Texas Instruments: RS-232 electrical levels and handshaking",
+                "href": "https://www.ti.com/lit/an/slla544/slla544.pdf"
+              },
+              {
+                "text": "MathWorks: serial connections, cables and communication settings",
+                "href": "https://www.mathworks.com/help/instrument/serial-port-overview.html"
+              }
+            ]
+          }
+        ],
+        "cta": {
+          "title": "Ready to Compare Hardware?",
+          "description": "Compare industrial computing platforms against your documented serial-port, installation and software requirements.",
+          "label": "Explore Industrial Computing",
+          "href": "/products/industrial-mini-pc"
+        }
       },
       "de": {
         "title": "Mehrere RS-232-Geräte an einen Industrie-PC anschließen",
@@ -210,24 +522,444 @@
     "image": "/assets/articles/ai-memory-formats.svg",
     "translations": {
       "en": {
-        "title": "How Much Memory Does a Local AI Mini PC Need?",
-        "excerpt": "Budget for model weights, context and application memory, then compare MCAIPC1, MCAIPC2 and MCAIPC3 configurations without confusing system RAM with usable accelerator memory.",
-        "imageAlt": "Schematic comparison of MCAIPC3 onboard LPDDR5 and two DDR5 SO-DIMM slots",
+        "title": "Local AI Hardware Guide: How Much RAM Do You Really Need?",
+        "excerpt": "Choose hardware around the model you want to run. Compare model sizes, RAM and GPU memory, quantization, LPDDR trade-offs and practical tools for local inference.",
+        "imageAlt": "Official Qwen3.5 model logo",
+        "presentation": "guide",
+        "image": "/assets/articles/qwen3-5-official.png",
+        "imageCredit": {
+          "text": "Qwen3.5 — official model artwork",
+          "href": "https://huggingface.co/Qwen/Qwen3.5-9B"
+        },
+        "metaTitle": "Local AI Hardware Guide: RAM, GPU Memory & Model Sizes",
+        "metaDescription": "Learn how much RAM you need to run local AI models, from 8B to 70B and beyond. Compare quantization, LPDDR memory, GPU requirements and models you can run today.",
         "body": [
-          { "type": "paragraph", "text": "Choose the model and software workflow before choosing the RAM capacity. A local assistant, document-search service and vision application can have very different memory requirements. Record the exact model, precision or quantization, context length, concurrent requests and processing backend. A mini PC’s maximum installed RAM is not a promise that every AI model fits, nor that the whole capacity is available to its GPU or NPU." },
-          { "type": "heading", "text": "Separate the memory budget into parts" },
-          { "type": "paragraph", "text": "For a dense model, a weights-only estimate is parameter count × bits per parameter ÷ 8. As an arithmetic example, eight billion parameters stored at four bits occupy about 4 GB in decimal units before format metadata and runtime overhead. This is a starting estimate, not total application memory or a claim that a particular model runs on a particular computer." },
-          { "type": "paragraph", "text": "During text generation, the attention cache also uses memory; longer contexts and more concurrent sequences can increase its requirements. Add operating-system, runtime and application memory to the measured budget." },
-          { "type": "heading", "text": "Compare the actual memory configuration" },
-          { "type": "table", "columns": ["Model or configuration", "Documented system memory", "What to confirm"], "rows": [ ["MCAIPC1", "LPDDR5x 8533 MT/s; up to 128 GB", "Ordered capacity and memory available to the selected backend"], ["MCAIPC2 AXB35-02 / AXB35-03", "LPDDR5 8000 MT/s; up to 128 GB", "Mainboard, capacity and compatible chassis"], ["MCAIPC2 AEB35-04", "LPDDR5 9600 MT/s; 64 GB or 96 GB", "This board does not share the 128 GB specification"], ["MCAIPC3 Type A / Type D", "Onboard LPDDR5, up to 6400 MT/s; max. 64 GB", "Select the required onboard capacity when ordering"], ["MCAIPC3 Type B / Type C", "2 × DDR5 SO-DIMM, up to 5600 MT/s; max. 64 GB", "Validated modules and final installed capacity"] ] },
-          { "type": "paragraph", "text": "MCAIPC3 Type A/B use AMD platforms; Type C/D use Intel Core Ultra. The memory type follows the Type, not just the series name. MCAIPC2 AXB35-02 and AXB35-03 also differ in networking and expansion, so the same memory ceiling does not make their complete configurations interchangeable." },
-          { "type": "image", "src": "/assets/articles/ai-memory-formats.svg", "alt": "Schematic comparison of MCAIPC3 onboard LPDDR5 and two DDR5 SO-DIMM slots", "caption": "Memory-format schematic: MCAIPC3 A/D use onboard LPDDR5; B/C use two DDR5 SO-DIMM slots. Each configuration supports up to 64 GB for the whole system, not per slot. This is not an actual motherboard layout.", "presentation": "diagram" },
-          { "type": "heading", "text": "Capacity, storage and acceleration are different checks" },
-          { "type": "paragraph", "text": "Use SSD space for the model files, datasets, application and logs, with sufficient working space for updates. Storage capacity does not replace a RAM requirement. Similarly, an integrated GPU or NPU is useful only if the chosen framework, model operators and driver support the intended backend. Check the software vendor’s supported hardware and operating-system requirements for the exact versions before ordering." },
-          { "type": "list", "items": ["Run a representative model with the intended quantization, longest required context and simultaneous requests. Measure peak system and accelerator memory, then retain headroom for the operating system and other services.", "For shared-memory graphics, confirm firmware settings, driver allocation limits and actual usable memory. Do not interpret 128 GB of system RAM as 128 GB of dedicated graphics memory.", "Record the CPU, RAM capacity, storage, BIOS, OS, driver, runtime and model versions alongside startup time and sustained workload results. Repeat the check after a material configuration change."] },
-          { "type": "paragraph", "text": "The table compares brochure configurations. It does not report tested model capacity, tokens per second or framework certification. Send the intended software stack and a representative workload with an inquiry so the proposed hardware and validation plan can be reviewed together." },
-          { "type": "links", "items": [ { "text": "Compare AI Mini PC platforms", "href": "/products/ai-mini-pc" }, { "text": "MCAIPC1 memory and storage specifications", "href": "/products/ai-mini-pc/mcai1" }, { "text": "MCAIPC2 mainboards and chassis", "href": "/products/ai-mini-pc/mcai2" }, { "text": "MCAIPC3 Type A/B/C/D configurations", "href": "/products/ai-mini-pc/mcaipc3" } ] }
-        ]
+          {
+            "type": "paragraph",
+            "text": "Running AI locally is more accessible than ever. Open-weight models can power private assistants, coding workflows, document analysis, reasoning and even image understanding without sending every request to a hosted AI service."
+          },
+          {
+            "type": "paragraph",
+            "text": "But choosing the right hardware can be confusing. Do you need 16GB or 64GB of RAM? Is a powerful GPU more important than memory capacity? And what makes high-bandwidth LPDDR memory useful for local AI? The answer starts with the model you want to run."
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "16GB",
+                "subtitle": "A Starting Point for Small Models",
+                "text": "Explore lightweight 3B–9B models."
+              },
+              {
+                "title": "32GB",
+                "subtitle": "Room for More Capable AI",
+                "text": "Comfortably explore many 9B–14B models and selected larger quantized models."
+              },
+              {
+                "title": "64GB",
+                "subtitle": "Step Into Larger Models",
+                "text": "Suitable for many 27B–35B workflows and selected 70B configurations when supported."
+              },
+              {
+                "title": "128GB",
+                "subtitle": "Headroom for Advanced Local AI",
+                "text": "More room for 70B-class inference, longer contexts and selected very large quantized models."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "These are broad planning suggestions for selected compressed models, not tested performance promises. Usable accelerator memory and software support must be checked separately."
+          },
+          {
+            "type": "heading",
+            "text": "1. Understanding AI Model Sizes"
+          },
+          {
+            "type": "paragraph",
+            "text": "AI language models are commonly described by their parameter counts: 4B, 8B, 14B, 32B, 70B and beyond. \"B\" means billion parameters. These numbers help describe model scale, but they do not directly tell you how fast a model runs or how much memory it consumes. In general:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "3B–4B models: Lightweight assistants, simple automation and basic language tasks.",
+              "7B–9B models: Everyday chat, translation, summarization and general productivity.",
+              "12B–14B models: More demanding reasoning, writing and coding workflows.",
+              "20B–35B models: Larger models for complex instructions, programming and analytical tasks.",
+              "70B-class models: Resource-intensive inference where model capability and available memory take priority over minimal hardware requirements."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Architecture, training quality, quantization and the inference backend also affect performance. A modern 9B model may outperform an older, larger model on particular tasks. Bigger does not automatically mean better."
+          },
+          {
+            "type": "paragraph",
+            "text": "Mixture-of-Experts (MoE) models introduce another distinction: total parameters versus active parameters. An MoE model may activate only part of its network for each token, potentially reducing computation. However, its total model weights still need storage and memory placement. A 30B model with only 3B active parameters does not have the same memory footprint as a dense 3B model."
+          },
+          {
+            "type": "heading",
+            "text": "2. How Much RAM Do Local AI Models Need?"
+          },
+          {
+            "type": "paragraph",
+            "text": "For many local deployments, memory capacity determines which models can run comfortably. Model weights are only the starting point. The inference system also needs memory for the context window, temporary computation, the operating system and other applications."
+          },
+          {
+            "type": "paragraph",
+            "text": "Quantization can significantly reduce memory requirements by storing model weights with fewer bits. For example, a dense 8-billion-parameter model stored at exactly 4 bits per parameter requires approximately 4GB for its raw weights. Actual model files and loaded memory usage are higher because of quantization metadata, tensors, runtime buffers and other overhead."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Approximate memory planning by model size"
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Model size",
+              "Approximate compressed model files",
+              "Practical system RAM planning"
+            ],
+            "rows": [
+              [
+                "3B–4B",
+                "2–4GB",
+                "16GB"
+              ],
+              [
+                "7B–9B",
+                "4–8GB",
+                "16GB"
+              ],
+              [
+                "12B–14B",
+                "8–11GB",
+                "32GB"
+              ],
+              [
+                "20B–35B",
+                "14–25GB",
+                "32–64GB"
+              ],
+              [
+                "70B",
+                "40–50GB",
+                "64–128GB"
+              ],
+              [
+                "Selected 120B-class quantized models",
+                "65–85GB",
+                "128GB or more"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Important: These are broad planning ranges for selected compressed models, not universal requirements or guaranteed compatibility. They assume one principal model running with a relatively modest context window. The exact requirements depend on architecture, quantization, context length, concurrent users and the software backend."
+          },
+          {
+            "type": "paragraph",
+            "text": "A 32GB configuration may handle certain 27B or 32B quantized models but leave limited headroom. Similarly, fitting a compressed 70B model into 64GB does not guarantee responsive GPU inference. The table describes total system memory planning, especially for CPU or supported shared-memory configurations. On systems with a discrete GPU, available VRAM must be evaluated separately."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Why the context window matters"
+          },
+          {
+            "type": "paragraph",
+            "text": "A model needs additional memory to process and retain information from a conversation. This includes the key-value cache, commonly called the KV cache. As context length and simultaneous requests increase, memory requirements can rise substantially. A model that fits comfortably with an 8K-token context may require significantly more memory at 32K or 64K."
+          },
+          {
+            "type": "paragraph",
+            "text": "When selecting hardware, leave headroom for the operating system, application processes and your intended context length. Do not size a system using model download size alone."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "text": "LM Studio: estimate memory before loading",
+                "href": "https://lmstudio.ai/docs/cli/local-models/load"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "3. Why High-Capacity LPDDR Memory Matters"
+          },
+          {
+            "type": "paragraph",
+            "text": "Memory capacity answers one question: Can the model fit? Memory bandwidth answers another: How quickly can the processor or integrated GPU access the data it needs? Both matter for local AI inference."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "More memory for larger models"
+          },
+          {
+            "type": "paragraph",
+            "text": "Large local AI models can require tens of gigabytes of memory even after quantization. Higher-capacity memory configurations make it possible to explore larger models, longer contexts and more complex workflows without relying as heavily on aggressive memory-saving techniques."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "High bandwidth for data-intensive inference"
+          },
+          {
+            "type": "paragraph",
+            "text": "Language model inference repeatedly accesses model weights and intermediate data. Memory bandwidth can be an important performance bottleneck, especially during token generation. Some LPDDR5X platforms combine high data rates with wide memory interfaces, providing substantial aggregate bandwidth. The practical result depends on the complete memory architecture, not merely the LPDDR5 or LPDDR5X label."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Shared memory and integrated graphics"
+          },
+          {
+            "type": "paragraph",
+            "text": "On supported integrated-GPU platforms, the CPU and GPU can access a shared system memory pool. This can be particularly attractive for large local models because the accelerator may be able to use more memory than is available on many conventional discrete graphics cards."
+          },
+          {
+            "type": "paragraph",
+            "text": "However, shared memory is not the same as dedicated VRAM. GPU-accessible memory limits, firmware settings, drivers, backend support and memory bandwidth all affect real-world results. A system with 128GB of RAM does not automatically provide 128GB of usable GPU memory."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Efficiency and trade-offs"
+          },
+          {
+            "type": "paragraph",
+            "text": "LPDDR memory is designed for power-efficient operation and can deliver excellent performance in suitable system designs. However, LPDDR is commonly soldered and not user-upgradeable. That makes choosing the correct memory capacity at purchase especially important."
+          },
+          {
+            "type": "paragraph",
+            "text": "DDR5 and discrete-GPU systems remain valid choices, particularly when upgradeability, dedicated VRAM bandwidth or a particular software ecosystem takes priority. The best memory architecture depends on the workload."
+          },
+          {
+            "type": "heading",
+            "text": "4. Local AI Models Worth Trying"
+          },
+          {
+            "type": "paragraph",
+            "text": "There is no need to start with the largest model available. The following models have downloadable local variants and represent different practical hardware tiers."
+          },
+          {
+            "type": "models",
+            "items": [
+              {
+                "name": "Qwen3.5 4B",
+                "workload": "Lightweight local assistants and entry-level multimodal experimentation.",
+                "download": "Approx. download: 3–4GB, depending on the available variant.",
+                "command": "ollama run qwen3.5:4b",
+                "note": "A useful starting point for testing a local AI environment before committing more memory to larger models.",
+                "href": "https://ollama.com/library/qwen3.5:4b"
+              },
+              {
+                "name": "Qwen3.5 9B",
+                "workload": "Everyday chat, multilingual workflows and general-purpose text or image understanding.",
+                "download": "Approx. download: 6.6–7.6GB, depending on the available variant.",
+                "command": "ollama run qwen3.5:9b",
+                "note": "A practical starting point for users who want a capable local assistant without immediately moving into much larger models.",
+                "href": "https://ollama.com/library/qwen3.5:9b"
+              },
+              {
+                "name": "DeepSeek-R1 Distill 14B",
+                "workload": "Reasoning-oriented tasks, mathematics and structured problem solving.",
+                "download": "Approx. download: 9GB for the listed Ollama variant.",
+                "command": "ollama run deepseek-r1:14b",
+                "note": "This is a distilled model, not the original full-size DeepSeek-R1 model.",
+                "href": "https://ollama.com/library/deepseek-r1:14b"
+              },
+              {
+                "name": "gpt-oss 20B",
+                "workload": "Local reasoning, developer workflows and applications that can use supported tool-calling capabilities.",
+                "download": "Approx. download: 14GB for the listed MXFP4 variant.",
+                "command": "ollama run gpt-oss:20b",
+                "note": "This model uses a mixture-of-experts architecture and specialized weight quantization. Its memory requirements should not be estimated solely by multiplying parameter count by four bits.",
+                "href": "https://ollama.com/library/gpt-oss:20b"
+              },
+              {
+                "name": "Qwen3.5 27B",
+                "workload": "More demanding multilingual, analytical and multimodal workflows.",
+                "download": "Approx. download: 17–20GB, depending on the variant.",
+                "command": "ollama run qwen3.5:27b",
+                "note": "A strong candidate for exploring how larger local models fit into a 32GB or 64GB memory budget, with the latter offering more comfortable headroom.",
+                "href": "https://ollama.com/library/qwen3.5:27b"
+              },
+              {
+                "name": "Qwen3 32B",
+                "workload": "Larger text-based assistants, reasoning and coding experimentation.",
+                "download": "Approx. download: 20GB for the listed Ollama variant.",
+                "command": "ollama run qwen3:32b",
+                "note": "Its practical memory requirement is higher than the download size once context and runtime allocations are included.",
+                "href": "https://ollama.com/library/qwen3:32b"
+              },
+              {
+                "name": "DeepSeek-R1 Distill 70B",
+                "workload": "Experimenting with larger reasoning models when substantial memory is available.",
+                "download": "Approx. download: 43GB for the listed Ollama variant.",
+                "command": "ollama run deepseek-r1:70b",
+                "note": "This is the 70B distilled model, not the original 671B model. Running it entirely on an accelerator requires sufficient usable accelerator memory and compatible software support.",
+                "href": "https://ollama.com/library/deepseek-r1:70b"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "What about models beyond 70B?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Some highly compressed models, such as gpt-oss 120B, have downloadable variants around 65GB."
+          },
+          {
+            "type": "code",
+            "text": "ollama run gpt-oss:120b"
+          },
+          {
+            "type": "paragraph",
+            "text": "These workloads can make 128GB-class memory configurations interesting, but the model must still fit within the actual usable memory limits of the chosen backend. Large model files also require ample SSD storage. A model being loadable does not guarantee interactive performance. For all the models above, review the exact model variant and its license before commercial deployment."
+          },
+          {
+            "type": "heading",
+            "text": "5. RAM, GPU, NPU and SSD: What Matters Most?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Selecting local AI hardware means balancing several components."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "RAM: Determines the practical model-size ceiling"
+          },
+          {
+            "type": "paragraph",
+            "text": "Memory capacity is critical for holding model weights, context and runtime data. Insufficient capacity can prevent a model from loading or force slower memory-offloading strategies."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "GPU: Often crucial for inference speed"
+          },
+          {
+            "type": "paragraph",
+            "text": "Compatible GPUs can accelerate the matrix operations used by language models. For discrete GPUs, VRAM capacity and bandwidth are particularly important. For integrated GPUs, shared-memory access, aggregate memory bandwidth and software compatibility deserve close attention."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "NPU: Useful when software support exists"
+          },
+          {
+            "type": "paragraph",
+            "text": "A neural processing unit can accelerate supported AI workloads, often with an emphasis on efficiency. However, not every large language model or local inference framework can use every NPU. Do not treat an advertised TOPS figure as a direct measure of LLM generation speed."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "SSD: Stores models and working data"
+          },
+          {
+            "type": "paragraph",
+            "text": "Local model files can occupy several gigabytes to tens of gigabytes each. Fast NVMe storage helps with model loading and managing large model libraries, but SSD capacity is not a replacement for RAM or VRAM. A 1TB SSD is a reasonable general-purpose starting point. Users maintaining multiple large models, datasets or development environments may benefit from additional storage."
+          },
+          {
+            "type": "heading",
+            "text": "6. Choose Hardware Around Your Actual Workload"
+          },
+          {
+            "type": "paragraph",
+            "text": "Before buying hardware, answer five questions:"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Which specific model and quantization will you use?",
+              "How much memory does that model require at your intended context length?",
+              "Will inference run on the CPU, integrated GPU, discrete GPU or a supported NPU?",
+              "Does your operating system and software backend support that accelerator?",
+              "Do you need one interactive user, multiple concurrent users or a continuously running service?"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "For new users, a compact 4B–9B model is often the easiest place to begin. For more demanding local development, 14B–32B models provide a useful next step. For 70B-class inference and selected larger quantized models, memory capacity, bandwidth, accelerator compatibility and sustained performance become increasingly important."
+          },
+          {
+            "type": "paragraph",
+            "text": "The right configuration is not simply the one with the highest specification. It is the one that runs your chosen workload reliably, with acceptable speed and enough headroom for future needs."
+          },
+          {
+            "type": "heading",
+            "text": "7. Getting Started with Local AI"
+          },
+          {
+            "type": "paragraph",
+            "text": "Two accessible tools for local experimentation are Ollama and LM Studio. Ollama offers a command-line workflow and local API."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "text": "Ollama official website",
+                "href": "https://ollama.com/"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "LM Studio provides a graphical interface for downloading, loading and testing compatible models."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "text": "LM Studio official website",
+                "href": "https://lmstudio.ai/"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "A simple starting workflow:"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Install Ollama for your operating system.",
+              "Open a terminal and run:"
+            ]
+          },
+          {
+            "type": "code",
+            "text": "ollama run qwen3.5:9b"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "start": 3,
+            "items": [
+              "Try normal conversations, document summaries or coding prompts.",
+              "Inspect actual resource usage and compare results with a smaller or larger model.",
+              "Increase context length only when your workflow needs it, and monitor memory consumption."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "After compatible model files and tools are installed, many inference workflows can operate locally without an active cloud connection. However, some applications, integrations, model downloads or optional features still require internet access. Start with a model that fits comfortably, then scale up when you have a clear reason to do so."
+          }
+        ],
+        "cta": {
+          "title": "Ready to Explore Your Hardware Options?",
+          "description": "Explore computing platforms for local AI development and demanding inference workloads.",
+          "label": "Explore AI Hardware",
+          "href": "/products/ai-mini-pc"
+        }
       },
       "de": {
         "title": "Wie viel Arbeitsspeicher braucht ein Mini-PC für lokale KI?",

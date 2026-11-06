@@ -243,7 +243,7 @@ const baseSearchIndex: SearchEntry[] = [
   { title: editorialCopy.en['case-study'].title, description: editorialCopy.en['case-study'].description, href: '/case-studies', type: 'resource', keywords: ['customer', 'case studies', 'project', ...Object.values(editorialCopy).map(copy => copy['case-study'].title)] },
   ...getPublishedArticles().map(article => ({
     title: article.translations.en.title, description: article.translations.en.excerpt,
-    href: `${articlePaths[article.kind]}/${article.id}`, type: 'resource' as const, image: article.image,
+    href: `${articlePaths[article.kind]}/${article.id}`, type: 'resource' as const, image: article.translations.en.image || article.image,
     keywords: Object.values(article.translations).flatMap(copy => [copy.title, copy.excerpt]),
   })),
   { title: 'Our Company', description: 'Learn about MagicChip, its history, markets, and operating philosophy.', href: '/company', type: 'page', keywords: ['about', 'manufacturer', 'shenzhen'] },

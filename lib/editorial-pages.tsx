@@ -32,8 +32,13 @@ export async function articleDetailMetadata(kind: ArticleKind, { params }: Artic
   const article = getArticle(kind, id);
   if (!article) notFound();
   const copy = article.translations[lang];
-  const metadata = createPageMetadata({ name: copy.title, description: copy.excerpt, path: `${articlePaths[kind]}/${id}`, image: article.image }, lang);
-  return { ...metadata, openGraph: { ...metadata.openGraph, type: 'article', publishedTime: article.date, modifiedTime: article.updated || article.date } };
+  const metadata = createPageMetadata({ name: copy.metaTitle || copy.title, description: copy.metaDescription || copy.excerpt, path: `${articlePaths[kind]}/${id}`, image: copy.image || article.image }, lang);
+  return {
+    ...metadata,
+    ...(copy.metaTitle ? { title: { absolute: copy.metaTitle } } : {}),
+    openGraph: { ...metadata.openGraph, ...(copy.metaTitle ? { title: copy.metaTitle } : {}), type: 'article', publishedTime: article.date, modifiedTime: article.updated || article.date },
+    twitter: { ...metadata.twitter, ...(copy.metaTitle ? { title: copy.metaTitle } : {}) },
+  };
 }
 
 export async function renderArticleDetail(kind: ArticleKind, { params }: ArticleDetailProps) {
@@ -47,7 +52,7 @@ export async function renderArticleDetail(kind: ArticleKind, { params }: Article
     '@context': 'https://schema.org', '@type': 'Article',
     headline: copy.title, description: copy.excerpt, inLanguage: lang,
     datePublished: article.date, dateModified: article.updated || article.date,
-    image: [`${SITE_URL}${article.image}`], mainEntityOfPage: `${SITE_URL}${localizedHref(path, lang)}`,
+    image: [`${SITE_URL}${copy.image || article.image}`], mainEntityOfPage: `${SITE_URL}${localizedHref(path, lang)}`,
     author: { '@type': 'Organization', '@id': `${SITE_URL}/#organization` },
     publisher: { '@id': `${SITE_URL}/#organization` },
   };

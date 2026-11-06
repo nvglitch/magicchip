@@ -13,7 +13,7 @@ export function ArticleCards({ articles, language }: { articles: EditorialArticl
       const copy = article.translations[language];
       return <article key={article.id} className="group flex min-w-0 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white pb-6 shadow-sm transition-shadow hover:shadow-lg">
         <Link href={localizedHref(`${articlePaths[article.kind]}/${article.id}`, language)} className="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600">
-          <div className="overflow-hidden border-b border-slate-100 bg-[#edf3f7]"><img src={article.image} alt={copy.imageAlt} width={720} height={450} loading="lazy" className="aspect-[8/5] w-full object-contain transition-transform duration-500 group-hover:scale-[1.025] motion-reduce:transform-none" /></div>
+          <div className={`overflow-hidden border-b border-slate-100 ${copy.presentation === 'guide' ? 'bg-white' : 'bg-[#edf3f7]'}`}><img src={copy.image || article.image} alt={copy.imageAlt} width={720} height={450} loading="lazy" className="aspect-[8/5] w-full object-contain transition-transform duration-500 group-hover:scale-[1.025] motion-reduce:transform-none" /></div>
           <div className="mt-5 px-5">
             <time dateTime={article.date} className="text-sm text-slate-500">{new Intl.DateTimeFormat(language, { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' }).format(new Date(`${article.date}T00:00:00Z`))}</time>
             <h2 className="mt-2 text-xl font-semibold leading-snug text-slate-950 transition-colors group-hover:text-brand">{copy.title}</h2>
