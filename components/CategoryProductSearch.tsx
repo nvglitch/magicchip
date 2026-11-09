@@ -18,7 +18,7 @@ export default function CategoryProductSearch({ category, language }: { category
   const submit = (event: FormEvent) => { event.preventDefault(); if (query.trim()) status.current?.focus(); else input.current?.focus(); };
 
   return <div className="p-6 sm:p-8" data-category-search={category}>
-    <h3 id="selection-heading" className="text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl">{words.title}</h3>
+    <h2 id="selection-heading" className="text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl">{words.title}</h2>
     <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600">{words.intro}</p>
     <form onSubmit={submit} role="search" aria-label={words.input} className="mt-6 flex items-center gap-2 rounded-xl border border-blue-200 bg-[#f5f9fc] p-2 shadow-sm focus-within:border-blue-400 focus-within:ring-4 focus-within:ring-blue-50">
       <Search aria-hidden="true" className="ml-2 hidden h-6 w-6 shrink-0 text-brand sm:block" />

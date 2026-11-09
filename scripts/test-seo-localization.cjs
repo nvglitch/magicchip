@@ -35,7 +35,7 @@ async function main() {
       assert.equal(industrial.title, 'Industrial Mini PCs with Multi-COM & LAN | MagicChip');
     }
     if (lang === 'de') {
-      for (const phrase of ['Industriegeräte verbinden', 'Serielle Geräte und Datenerfassung', 'Verfügbare Modelle', 'C-Serie']) assert(industrial.body.includes(phrase), phrase);
+      for (const phrase of ['Ein Modell nach technischen Daten finden', 'Verfügbare Modelle', 'C-Serie']) assert(industrial.body.includes(phrase), phrase);
       assert(!/MagicChip Industrial Mini PCs bring|Select an IPC series|Available models|The expanded range|Run beside the equipment/.test(industrial.body));
       assert(ai.body.includes('lokale KI'));
     }
