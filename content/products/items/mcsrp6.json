@@ -1,96 +1,634 @@
 {
   "id": "mcsrp6",
-  "category": "firewall-mini-pc",
   "name": "MCSRP6",
-  "tagline": "Compact Alder Lake-N and Twin Lake network appliance with dual 2.5GbE",
-  "description": "MCSRP6 is a compact aluminum-alloy network and edge appliance with dual Intel 2.5GbE LAN, DDR5 memory, dual 4K display output, wide 12-24V DC input, M.2 storage, and extensive internal expansion.",
+  "category": "firewall-mini-pc",
+  "series": "2L",
+  "published": true,
+  "image": "/assets/products/firewall/dual-port-series/mcsrp6/front.webp",
   "images": [
-    "/assets/products/firewall/mcsrp6/images/1.jpg",
-    "/assets/products/firewall/mcsrp6/images/2.jpg",
-    "/assets/products/firewall/mcsrp6/images/3.jpg",
-    "/assets/products/firewall/mcsrp6/images/8.jpg"
+    "/assets/products/firewall/dual-port-series/mcsrp6/front.webp"
   ],
-  "specifications": [
+  "galleryImages": [
+    "/assets/products/firewall/dual-port-series/mcsrp6/front.webp",
+    "/assets/products/firewall/dual-port-series/mcsrp6/rear.webp"
+  ],
+  "operatingRange": "0–75 °C",
+  "sourceBrochure": "软路由SR/MCSRP6 brochure.pdf",
+  "sourceSha256": "c1d6a5bfcf8f1cf90cbf8584c85d8b1bef97bfec03ef7061cc5f2696524e8ea3",
+  "tagline": "Twin Lake network appliance with dual 2.5GbE and DDR5",
+  "description": "MCSRP6 offers Intel N150, N250 or Core i3-N355, up to 48 GB DDR5 and two Intel 2.5GbE ports. The system takes 12–19 V DC. Optional SFF-8654 storage expansion requires a carrier board and dedicated cable.",
+  "highlights": [
+    "Intel Twin Lake",
+    "2 × Intel i226-V 2.5GbE",
+    "Up to 48 GB DDR5",
+    "HDMI 2.0 + DisplayPort 1.4"
+  ],
+  "specs": [
     {
-      "label": "CPU",
-      "value": "Intel Alder Lake-N N100 / N200 / Core i3-N305; Twin Lake N150 / N250 / Core i3-N355"
-    },
-    {
-      "label": "Memory",
-      "value": "1 x DDR5 SO-DIMM, maximum 48GB"
+      "label": "Model",
+      "value": "MCSRP6"
     },
     {
       "label": "Network",
-      "value": "2 x Intel i226-V 2.5GbE LAN"
+      "value": "2 × Intel i226-V 2.5GbE"
     },
     {
-      "label": "Storage",
-      "value": "1 x M.2 slot supporting NVMe or NGFF SATA SSD"
+      "label": "CPU",
+      "value": "Intel N150 / N250 / Core i3-N355"
+    },
+    {
+      "label": "Chipset",
+      "value": "Intel Twin Lake"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel Graphics"
+    },
+    {
+      "label": "Memory",
+      "value": "1 × DDR5-4800 SO-DIMM (5200/5600 modules compatible), max. 48 GB"
     },
     {
       "label": "Display",
-      "value": "1 x HDMI 2.0 and 1 x DisplayPort 1.4, both supporting 4K at 60Hz"
+      "value": "HDMI 2.0 + DisplayPort 1.4, each up to 4K at 60 Hz"
     },
     {
       "label": "USB",
-      "value": "2 x USB 3.2 Gen 2, up to 10Gbps"
-    },
-    {
-      "label": "Dimensions",
-      "value": "115 x 114.3 x 40 mm"
-    },
-    {
-      "label": "Working Environment",
-      "value": "0°C to 75°C; 10%-90% relative humidity, non-condensing"
+      "value": "2 × USB 3.2 Gen 2 (10 Gbps)"
     },
     {
       "label": "Power",
-      "value": "DC 12-24V (5.5 x 2.5 mm)"
+      "value": "12–19 V DC (5.5 × 2.5 mm)"
+    },
+    {
+      "label": "Mainboard",
+      "value": "12–24 V DC at board level"
+    },
+    {
+      "label": "Storage",
+      "value": "1 × M.2 NVMe (PCIe ×1)"
+    },
+    {
+      "label": "Expansion",
+      "value": "Optional SFF-8654 8i carrier: 6 × M.2 or 2 × M.2 + 6 × SATA. Six PCIe ×1 links. Carrier and dedicated cable sold separately."
     },
     {
       "label": "Front I/O",
-      "value": "1 * DC IN 5.5 x 2.5 mm; 1 * HDMI 2.0; 1 * DP 1.4; 1 * 2.5G Ethernet LAN; 1 * USB 3.2; 1 * Power Button"
+      "value": "12–19 V DC, HDMI 2.0, DP 1.4, 2 × 2.5GbE, 2 × USB 3.2, power button"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "Standard blank panel. Optional 4 × USB 2.0 with dedicated panel, or SFF-8654 8i + 12 V ATX output with dedicated cable. Options sold separately."
+    },
+    {
+      "label": "Internal I/O",
+      "value": "SFF-8654 8i, 4-pin ATX output, Phoenix terminal, GPIO, COM, eDP, fan and USB 2.0 headers, auto power-on, clear BIOS, front-panel and M.2 Wi-Fi connections"
+    },
+    {
+      "label": "Dimensions",
+      "value": "Chassis: 115 × 114.3 × 40 mm. Board: 100 × 112 mm."
+    },
+    {
+      "label": "Material",
+      "value": "Aluminum alloy"
+    },
+    {
+      "label": "TDP",
+      "value": "9–15 W, depending on processor"
+    },
+    {
+      "label": "Mounting",
+      "value": "Desktop or wall"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0 to 75 °C, 10–90% RH, non-condensing"
+    },
+    {
+      "label": "Weight / color",
+      "value": "Black, approx. 0.4 kg"
     }
   ],
-  "features": [
+  "galleryCards": [
     {
-      "icon": "Network",
-      "title": "Dual Intel 2.5GbE Networking",
-      "description": "Two Intel i226-V interfaces for routing and edge-network deployments"
+      "image": "/assets/products/firewall/dual-port-series/mcsrp6/front.webp",
+      "title": "MCSRP6 · front panel"
     },
     {
-      "icon": "Zap",
-      "title": "Wide-Voltage DC Input",
-      "description": "12-24V DC input for flexible embedded installation"
-    },
-    {
-      "icon": "Layers",
-      "title": "Flexible Expansion",
-      "description": "M.2 storage, M.2 Wi-Fi, SFF-8654, GPIO, COM, eDP, fan, and front-panel connectivity"
+      "image": "/assets/products/firewall/dual-port-series/mcsrp6/rear.webp",
+      "title": "MCSRP6 · standard rear panel"
     }
   ],
-  "applications": [
+  "specifications": [
     {
-      "image": "/assets/products/firewall/mcsrp6/images/6.jpg",
-      "title": "Standard Interface Layout",
-      "description": "Clearly labeled front and rear connectivity"
+      "label": "Model",
+      "value": "MCSRP6"
     },
     {
-      "image": "/assets/products/firewall/mcsrp6/images/7.jpg",
-      "title": "Optional Expansion Panels",
-      "description": "Optional USB 2.0 or SFF-8654 and ATX power configurations"
+      "label": "Network",
+      "value": "2 × Intel i226-V 2.5GbE"
     },
     {
-      "image": "/assets/products/firewall/mcsrp6/images/5.jpg",
-      "title": "Fan Mounting Support",
-      "description": "Reserved mounting holes for an 80 x 80 mm fan"
+      "label": "CPU",
+      "value": "Intel N150 / N250 / Core i3-N355"
     },
     {
-      "image": "/assets/products/firewall/mcsrp6/images/4.jpg",
-      "title": "Application Scenarios",
-      "description": "AI robots, smart homes, smart hardware, soft routers, 3D printers, and education"
+      "label": "Chipset",
+      "value": "Intel Twin Lake"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel Graphics"
+    },
+    {
+      "label": "Memory",
+      "value": "1 × DDR5-4800 SO-DIMM (5200/5600 modules compatible), max. 48 GB"
+    },
+    {
+      "label": "Display",
+      "value": "HDMI 2.0 + DisplayPort 1.4, each up to 4K at 60 Hz"
+    },
+    {
+      "label": "USB",
+      "value": "2 × USB 3.2 Gen 2 (10 Gbps)"
+    },
+    {
+      "label": "Power",
+      "value": "12–19 V DC (5.5 × 2.5 mm)"
+    },
+    {
+      "label": "Mainboard",
+      "value": "12–24 V DC at board level"
+    },
+    {
+      "label": "Storage",
+      "value": "1 × M.2 NVMe (PCIe ×1)"
+    },
+    {
+      "label": "Expansion",
+      "value": "Optional SFF-8654 8i carrier: 6 × M.2 or 2 × M.2 + 6 × SATA. Six PCIe ×1 links. Carrier and dedicated cable sold separately."
+    },
+    {
+      "label": "Front I/O",
+      "value": "12–19 V DC, HDMI 2.0, DP 1.4, 2 × 2.5GbE, 2 × USB 3.2, power button"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "Standard blank panel. Optional 4 × USB 2.0 with dedicated panel, or SFF-8654 8i + 12 V ATX output with dedicated cable. Options sold separately."
+    },
+    {
+      "label": "Internal I/O",
+      "value": "SFF-8654 8i, 4-pin ATX output, Phoenix terminal, GPIO, COM, eDP, fan and USB 2.0 headers, auto power-on, clear BIOS, front-panel and M.2 Wi-Fi connections"
+    },
+    {
+      "label": "Dimensions",
+      "value": "Chassis: 115 × 114.3 × 40 mm. Board: 100 × 112 mm."
+    },
+    {
+      "label": "Material",
+      "value": "Aluminum alloy"
+    },
+    {
+      "label": "TDP",
+      "value": "9–15 W, depending on processor"
+    },
+    {
+      "label": "Mounting",
+      "value": "Desktop or wall"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0 to 75 °C, 10–90% RH, non-condensing"
+    },
+    {
+      "label": "Weight / color",
+      "value": "Black, approx. 0.4 kg"
     }
   ],
-  "brochure": "/assets/products/firewall/mcsrp6/documents/MCSRP6 brochure.pdf",
-  "alibabaUrl": "https://magicchip.en.alibaba.com"
+  "translations": {
+    "de": {
+      "tagline": "Twin-Lake-Netzwerkgerät mit zwei 2,5-GbE-Ports und DDR5",
+      "description": "MCSRP6 bietet Intel N150, N250 oder Core i3-N355, bis zu 48 GB DDR5 und zwei Intel-2,5-GbE-Ports. Das Gerät wird mit 12–19 V DC versorgt. Die optionale SFF-8654-Speichererweiterung benötigt eine Trägerplatine und ein passendes Kabel.",
+      "highlights": [
+        "Intel Twin Lake",
+        "2 × Intel i226-V 2.5GbE",
+        "Bis zu 48 GB DDR5",
+        "HDMI 2.0 + DisplayPort 1.4"
+      ],
+      "specs": [
+        {
+          "label": "Modell",
+          "value": "MCSRP6"
+        },
+        {
+          "label": "Netzwerk",
+          "value": "2 × Intel i226-V 2.5GbE"
+        },
+        {
+          "label": "Prozessor",
+          "value": "Intel N150 / N250 / Core i3-N355"
+        },
+        {
+          "label": "Plattform",
+          "value": "Intel Twin Lake"
+        },
+        {
+          "label": "Grafik",
+          "value": "Intel Graphics"
+        },
+        {
+          "label": "Arbeitsspeicher",
+          "value": "1 × DDR5-4800 SO-DIMM (Module mit 5200/5600 kompatibel), max. 48 GB"
+        },
+        {
+          "label": "Bildausgabe",
+          "value": "HDMI 2.0 + DisplayPort 1.4, jeweils bis 4K bei 60 Hz"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.2 Gen 2 (10 Gbps)"
+        },
+        {
+          "label": "Stromversorgung",
+          "value": "12–19 V DC (5.5 × 2.5 mm)"
+        },
+        {
+          "label": "Hauptplatine",
+          "value": "12–24 V DC auf Platinenebene"
+        },
+        {
+          "label": "Massenspeicher",
+          "value": "1 × M.2 NVMe (PCIe ×1)"
+        },
+        {
+          "label": "Erweiterung",
+          "value": "Optionale SFF-8654-8i-Trägerplatine: 6 × M.2 oder 2 × M.2 + 6 × SATA. Sechs PCIe-×1-Verbindungen. Trägerplatine und passendes Kabel separat erhältlich."
+        },
+        {
+          "label": "Frontanschlüsse",
+          "value": "12–19 V DC, HDMI 2.0, DP 1.4, 2 × 2.5GbE, 2 × USB 3.2, Ein/Aus-Taste"
+        },
+        {
+          "label": "Rückseitige Anschlüsse",
+          "value": "Geschlossene Rückblende serienmäßig. Optional 4 × USB 2.0 mit eigener Blende oder SFF-8654 8i + 12-V-ATX-Ausgang mit passendem Kabel. Optionen separat erhältlich."
+        },
+        {
+          "label": "Interne Anschlüsse",
+          "value": "SFF-8654 8i, 4-poliger ATX-Ausgang, Phoenix-Klemme, GPIO-, COM-, eDP-, Lüfter- und USB-2.0-Header, Anschlüsse für automatisches Einschalten, BIOS-Reset, Frontblende und M.2-WLAN"
+        },
+        {
+          "label": "Abmessungen",
+          "value": "Gehäuse: 115 × 114,3 × 40 mm. Platine: 100 × 112 mm."
+        },
+        {
+          "label": "Material",
+          "value": "Aluminiumlegierung"
+        },
+        {
+          "label": "TDP",
+          "value": "9–15 W je nach Prozessor"
+        },
+        {
+          "label": "Montage",
+          "value": "Tisch- oder Wandmontage"
+        },
+        {
+          "label": "Betriebsumgebung",
+          "value": "0 bis 75 °C, 10–90 % rF, nicht kondensierend"
+        },
+        {
+          "label": "Gewicht und Farbe",
+          "value": "Schwarz, ca. 0,4 kg"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp6/front.webp",
+          "title": "MCSRP6 · Frontblende"
+        },
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp6/rear.webp",
+          "title": "MCSRP6 · Standard-Rückblende"
+        }
+      ]
+    },
+    "fr": {
+      "tagline": "Appliance réseau Twin Lake à deux ports 2,5 GbE et DDR5",
+      "description": "Le MCSRP6 propose un Intel N150, N250 ou Core i3-N355, jusqu’à 48 Go de DDR5 et deux ports Intel 2,5 GbE. Le système est alimenté en 12–19 V CC. L’extension de stockage SFF-8654 en option nécessite une carte porteuse et un câble dédié.",
+      "highlights": [
+        "Intel Twin Lake",
+        "2 × Intel i226-V 2.5GbE",
+        "Jusqu’à 48 Go de DDR5",
+        "HDMI 2.0 + DisplayPort 1.4"
+      ],
+      "specs": [
+        {
+          "label": "Modèle",
+          "value": "MCSRP6"
+        },
+        {
+          "label": "Réseau",
+          "value": "2 × Intel i226-V 2.5GbE"
+        },
+        {
+          "label": "Processeur",
+          "value": "Intel N150 / N250 / Core i3-N355"
+        },
+        {
+          "label": "Plateforme",
+          "value": "Intel Twin Lake"
+        },
+        {
+          "label": "Graphiques",
+          "value": "Intel Graphics"
+        },
+        {
+          "label": "Mémoire",
+          "value": "1 × SO-DIMM DDR5-4800 (modules 5200/5600 compatibles), 48 Go max."
+        },
+        {
+          "label": "Affichage",
+          "value": "HDMI 2.0 + DisplayPort 1.4, chacun jusqu’à 4K à 60 Hz"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.2 Gen 2 (10 Gbps)"
+        },
+        {
+          "label": "Alimentation",
+          "value": "12–19 V DC (5.5 × 2.5 mm)"
+        },
+        {
+          "label": "Carte mère",
+          "value": "12–24 V CC au niveau de la carte"
+        },
+        {
+          "label": "Stockage",
+          "value": "1 × M.2 NVMe (PCIe ×1)"
+        },
+        {
+          "label": "Extension",
+          "value": "Carte porteuse SFF-8654 8i en option : 6 × M.2 ou 2 × M.2 + 6 × SATA. Six liaisons PCIe ×1. Carte et câble dédié vendus séparément."
+        },
+        {
+          "label": "Connectique avant",
+          "value": "12–19 V DC, HDMI 2.0, DP 1.4, 2 × 2.5GbE, 2 × USB 3.2, bouton d’alimentation"
+        },
+        {
+          "label": "Connectique arrière",
+          "value": "Panneau sans ports en standard. En option, 4 × USB 2.0 avec panneau dédié ou SFF-8654 8i + sortie ATX 12 V avec câble dédié. Options vendues séparément."
+        },
+        {
+          "label": "Connectique interne",
+          "value": "SFF-8654 8i, sortie ATX 4 broches, bornier Phoenix et connecteurs GPIO, COM, eDP, ventilateur et USB 2.0, connecteurs de mise sous tension automatique, de réinitialisation du BIOS, de façade et de Wi-Fi M.2"
+        },
+        {
+          "label": "Dimensions",
+          "value": "Boîtier : 115 × 114,3 × 40 mm. Carte : 100 × 112 mm."
+        },
+        {
+          "label": "Matériau",
+          "value": "Alliage d’aluminium"
+        },
+        {
+          "label": "TDP",
+          "value": "9–15 W selon le processeur"
+        },
+        {
+          "label": "Montage",
+          "value": "Sur table ou au mur"
+        },
+        {
+          "label": "Conditions de fonctionnement",
+          "value": "0 à 75 °C, 10–90 % HR, sans condensation"
+        },
+        {
+          "label": "Poids et couleur",
+          "value": "Noir, env. 0,4 kg"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp6/front.webp",
+          "title": "MCSRP6 · panneau avant"
+        },
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp6/rear.webp",
+          "title": "MCSRP6 · panneau arrière standard"
+        }
+      ]
+    },
+    "it": {
+      "tagline": "Appliance di rete Twin Lake con due porte 2,5 GbE e DDR5",
+      "description": "MCSRP6 offre Intel N150, N250 o Core i3-N355, fino a 48 GB di DDR5 e due porte Intel 2,5 GbE. Il sistema è alimentato a 12–19 V CC. L’espansione di archiviazione SFF-8654 opzionale richiede una scheda di espansione e un cavo dedicato.",
+      "highlights": [
+        "Intel Twin Lake",
+        "2 × Intel i226-V 2.5GbE",
+        "Fino a 48 GB di DDR5",
+        "HDMI 2.0 + DisplayPort 1.4"
+      ],
+      "specs": [
+        {
+          "label": "Modello",
+          "value": "MCSRP6"
+        },
+        {
+          "label": "Rete",
+          "value": "2 × Intel i226-V 2.5GbE"
+        },
+        {
+          "label": "Processore",
+          "value": "Intel N150 / N250 / Core i3-N355"
+        },
+        {
+          "label": "Piattaforma",
+          "value": "Intel Twin Lake"
+        },
+        {
+          "label": "Grafica",
+          "value": "Intel Graphics"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 × SO-DIMM DDR5-4800 (moduli 5200/5600 compatibili), max 48 GB"
+        },
+        {
+          "label": "Uscita video",
+          "value": "HDMI 2.0 + DisplayPort 1.4, ciascuna fino a 4K a 60 Hz"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.2 Gen 2 (10 Gbps)"
+        },
+        {
+          "label": "Alimentazione",
+          "value": "12–19 V DC (5.5 × 2.5 mm)"
+        },
+        {
+          "label": "Scheda madre",
+          "value": "12–24 V CC a livello di scheda"
+        },
+        {
+          "label": "Archiviazione",
+          "value": "1 × M.2 NVMe (PCIe ×1)"
+        },
+        {
+          "label": "Espansione",
+          "value": "Scheda SFF-8654 8i opzionale: 6 × M.2 o 2 × M.2 + 6 × SATA. Sei collegamenti PCIe ×1. Scheda e cavo dedicato venduti separatamente."
+        },
+        {
+          "label": "Porte anteriori",
+          "value": "12–19 V DC, HDMI 2.0, DP 1.4, 2 × 2.5GbE, 2 × USB 3.2, pulsante di accensione"
+        },
+        {
+          "label": "Porte posteriori",
+          "value": "Pannello standard senza porte. In opzione, 4 × USB 2.0 con pannello dedicato o SFF-8654 8i + uscita ATX 12 V con cavo dedicato. Opzioni vendute separatamente."
+        },
+        {
+          "label": "Connettori interni",
+          "value": "SFF-8654 8i, uscita ATX a 4 pin, morsetto Phoenix e connettori GPIO, COM, eDP, ventola e USB 2.0, connettori per accensione automatica, reset del BIOS, pannello frontale e Wi-Fi M.2"
+        },
+        {
+          "label": "Dimensioni",
+          "value": "Chassis: 115 × 114,3 × 40 mm. Scheda: 100 × 112 mm."
+        },
+        {
+          "label": "Materiale",
+          "value": "Lega di alluminio"
+        },
+        {
+          "label": "TDP",
+          "value": "9–15 W a seconda del processore"
+        },
+        {
+          "label": "Montaggio",
+          "value": "Su piano o a parete"
+        },
+        {
+          "label": "Condizioni operative",
+          "value": "Da 0 a 75 °C, 10–90% UR, senza condensa"
+        },
+        {
+          "label": "Peso e colore",
+          "value": "Nero, circa 0,4 kg"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp6/front.webp",
+          "title": "MCSRP6 · pannello anteriore"
+        },
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp6/rear.webp",
+          "title": "MCSRP6 · pannello posteriore standard"
+        }
+      ]
+    },
+    "es": {
+      "tagline": "Equipo de red Twin Lake con dos puertos de 2,5 GbE y DDR5",
+      "description": "MCSRP6 ofrece Intel N150, N250 o Core i3-N355, hasta 48 GB de DDR5 y dos puertos Intel de 2,5 GbE. El equipo funciona con 12–19 V CC. La expansión de almacenamiento SFF-8654 opcional requiere una tarjeta de expansión y un cable específico.",
+      "highlights": [
+        "Intel Twin Lake",
+        "2 × Intel i226-V 2.5GbE",
+        "Hasta 48 GB de DDR5",
+        "HDMI 2.0 + DisplayPort 1.4"
+      ],
+      "specs": [
+        {
+          "label": "Modelo",
+          "value": "MCSRP6"
+        },
+        {
+          "label": "Red",
+          "value": "2 × Intel i226-V 2.5GbE"
+        },
+        {
+          "label": "Procesador",
+          "value": "Intel N150 / N250 / Core i3-N355"
+        },
+        {
+          "label": "Plataforma",
+          "value": "Intel Twin Lake"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel Graphics"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 × SO-DIMM DDR5-4800 (módulos 5200/5600 compatibles), máx. 48 GB"
+        },
+        {
+          "label": "Salida de vídeo",
+          "value": "HDMI 2.0 + DisplayPort 1.4, cada uno hasta 4K a 60 Hz"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.2 Gen 2 (10 Gbps)"
+        },
+        {
+          "label": "Alimentación",
+          "value": "12–19 V DC (5.5 × 2.5 mm)"
+        },
+        {
+          "label": "Placa base",
+          "value": "12–24 V CC en la placa base"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "1 × M.2 NVMe (PCIe ×1)"
+        },
+        {
+          "label": "Expansión",
+          "value": "Tarjeta SFF-8654 8i opcional: 6 × M.2 o 2 × M.2 + 6 × SATA. Seis enlaces PCIe ×1. Tarjeta y cable específico de venta por separado."
+        },
+        {
+          "label": "Conexiones frontales",
+          "value": "12–19 V DC, HDMI 2.0, DP 1.4, 2 × 2.5GbE, 2 × USB 3.2, botón de encendido"
+        },
+        {
+          "label": "Conexiones traseras",
+          "value": "Panel de serie sin puertos. Opcionalmente, 4 × USB 2.0 con panel específico o SFF-8654 8i + salida ATX de 12 V con cable específico. Opciones de venta por separado."
+        },
+        {
+          "label": "Conectores internos",
+          "value": "SFF-8654 8i, salida ATX de 4 pines, bornera Phoenix y conectores GPIO, COM, eDP, ventilador y USB 2.0, conectores de encendido automático, reinicio de BIOS, panel frontal y Wi-Fi M.2"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "Chasis: 115 × 114,3 × 40 mm. Placa: 100 × 112 mm."
+        },
+        {
+          "label": "Material",
+          "value": "Aleación de aluminio"
+        },
+        {
+          "label": "TDP",
+          "value": "9–15 W según el procesador"
+        },
+        {
+          "label": "Montaje",
+          "value": "En sobremesa o en pared"
+        },
+        {
+          "label": "Condiciones de funcionamiento",
+          "value": "De 0 a 75 °C, 10–90 % HR, sin condensación"
+        },
+        {
+          "label": "Peso y color",
+          "value": "Negro, aprox. 0,4 kg"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp6/front.webp",
+          "title": "MCSRP6 · panel frontal"
+        },
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp6/rear.webp",
+          "title": "MCSRP6 · panel trasero de serie"
+        }
+      ]
+    }
+  }
 }

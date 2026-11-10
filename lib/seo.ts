@@ -224,11 +224,8 @@ export const productSeo: Record<string, SeoEntry & { category: string }> = {
     category: 'firewall-mini-pc',
   },
   mcsrp6: {
+    ...catalogFirewallProductSeo.mcsrp6,
     name: 'MCSRP6 Firewall Mini PC',
-    description: 'Compact Alder Lake-N and Twin Lake network appliance with dual Intel 2.5GbE, DDR5 memory, wide-voltage DC input, and flexible internal expansion.',
-    path: '/products/firewall-mini-pc/mcsrp6',
-    image: '/assets/products/firewall/mcsrp6/images/1.jpg',
-    category: 'firewall-mini-pc',
   },
 };
 

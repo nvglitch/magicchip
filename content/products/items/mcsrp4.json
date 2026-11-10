@@ -1,0 +1,610 @@
+{
+  "id": "mcsrp4",
+  "name": "MCSRP4",
+  "category": "firewall-mini-pc",
+  "series": "2L",
+  "published": true,
+  "image": "/assets/products/firewall/dual-port-series/mcsrp4/front.webp",
+  "images": [
+    "/assets/products/firewall/dual-port-series/mcsrp4/front.webp"
+  ],
+  "galleryImages": [
+    "/assets/products/firewall/dual-port-series/mcsrp4/front.webp",
+    "/assets/products/firewall/dual-port-series/mcsrp4/rear.webp"
+  ],
+  "operatingRange": "−10–60 °C",
+  "sourceBrochure": "软路由SR/MCSRP4 brochure.pdf",
+  "sourceSha256": "06123509f411288f2a7fc0080babe6f1b795af8117ebc2054792f1527b544937",
+  "tagline": "Elkhart Lake network appliance with dual 2.5GbE",
+  "description": "MCSRP4 uses the Intel Celeron J6412 as standard. It provides dual 2.5GbE, two HDMI 2.0 outputs, M.2 2242 NVMe and two SATA connections. The specified operating range is −10 to 60 °C.",
+  "highlights": [
+    "Intel Celeron J6412",
+    "2 × Intel i226-V 2.5GbE",
+    "Up to 32 GB DDR4",
+    "2 × HDMI 2.0"
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCSRP4"
+    },
+    {
+      "label": "Network",
+      "value": "2 × Intel i226-V 2.5GbE"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel Celeron J6412, 4 cores, 2.0 GHz (10 W). Other Elkhart Lake CPUs optional"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel UHD Graphics"
+    },
+    {
+      "label": "Memory",
+      "value": "1 × DDR4-3200 SO-DIMM, max. 32 GB"
+    },
+    {
+      "label": "Display",
+      "value": "2 × HDMI 2.0"
+    },
+    {
+      "label": "USB",
+      "value": "2 × USB 3.1, 4 × USB 2.0 via internal headers"
+    },
+    {
+      "label": "Power",
+      "value": "12 V DC (5.5 × 2.5 mm)"
+    },
+    {
+      "label": "Storage",
+      "value": "1 × M.2 2242 M-key PCIe NVMe + 2 × SATA 3.0 (6 Gbps)"
+    },
+    {
+      "label": "Expansion",
+      "value": "1 × M.2 E-key (Wi-Fi), Wake-on-LAN, PXE"
+    },
+    {
+      "label": "Hardware reset",
+      "value": "256 steps, 0–255 s"
+    },
+    {
+      "label": "Front I/O",
+      "value": "12 V DC, 2 × HDMI 2.0, 2 × 2.5GbE, 2 × USB 3.1, power button"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "Standard blank rear panel"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "COM: 1 × 2×5-pin (RS-232, optional RS-485). USB 2.0: 2 × 2×5-pin. TPM 2.0: 1 × 2×6-pin. GPIO, 4-pin CPU fan, 3-pin system fan."
+    },
+    {
+      "label": "Dimensions",
+      "value": "100 × 112 × 39.7 mm"
+    },
+    {
+      "label": "Material",
+      "value": "Aluminum alloy"
+    },
+    {
+      "label": "BIOS",
+      "value": "128 Mb Flash ROM"
+    },
+    {
+      "label": "System",
+      "value": "Windows 10 / Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "−10 to 60 °C, 5–95% RH, non-condensing"
+    },
+    {
+      "label": "Color",
+      "value": "Black"
+    }
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/firewall/dual-port-series/mcsrp4/front.webp",
+      "title": "MCSRP4 · front panel"
+    },
+    {
+      "image": "/assets/products/firewall/dual-port-series/mcsrp4/rear.webp",
+      "title": "MCSRP4 · standard rear panel"
+    }
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MCSRP4"
+    },
+    {
+      "label": "Network",
+      "value": "2 × Intel i226-V 2.5GbE"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel Celeron J6412, 4 cores, 2.0 GHz (10 W). Other Elkhart Lake CPUs optional"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel UHD Graphics"
+    },
+    {
+      "label": "Memory",
+      "value": "1 × DDR4-3200 SO-DIMM, max. 32 GB"
+    },
+    {
+      "label": "Display",
+      "value": "2 × HDMI 2.0"
+    },
+    {
+      "label": "USB",
+      "value": "2 × USB 3.1, 4 × USB 2.0 via internal headers"
+    },
+    {
+      "label": "Power",
+      "value": "12 V DC (5.5 × 2.5 mm)"
+    },
+    {
+      "label": "Storage",
+      "value": "1 × M.2 2242 M-key PCIe NVMe + 2 × SATA 3.0 (6 Gbps)"
+    },
+    {
+      "label": "Expansion",
+      "value": "1 × M.2 E-key (Wi-Fi), Wake-on-LAN, PXE"
+    },
+    {
+      "label": "Hardware reset",
+      "value": "256 steps, 0–255 s"
+    },
+    {
+      "label": "Front I/O",
+      "value": "12 V DC, 2 × HDMI 2.0, 2 × 2.5GbE, 2 × USB 3.1, power button"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "Standard blank rear panel"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "COM: 1 × 2×5-pin (RS-232, optional RS-485). USB 2.0: 2 × 2×5-pin. TPM 2.0: 1 × 2×6-pin. GPIO, 4-pin CPU fan, 3-pin system fan."
+    },
+    {
+      "label": "Dimensions",
+      "value": "100 × 112 × 39.7 mm"
+    },
+    {
+      "label": "Material",
+      "value": "Aluminum alloy"
+    },
+    {
+      "label": "BIOS",
+      "value": "128 Mb Flash ROM"
+    },
+    {
+      "label": "System",
+      "value": "Windows 10 / Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "−10 to 60 °C, 5–95% RH, non-condensing"
+    },
+    {
+      "label": "Color",
+      "value": "Black"
+    }
+  ],
+  "translations": {
+    "de": {
+      "tagline": "Elkhart-Lake-Netzwerkgerät mit zwei 2,5-GbE-Ports",
+      "description": "MCSRP4 nutzt standardmäßig den Intel Celeron J6412. Das Gerät bietet zwei 2,5-GbE-Ports, zwei HDMI-2.0-Ausgänge, M.2 2242 NVMe und zwei SATA-Anschlüsse. Der Betriebstemperaturbereich beträgt −10 bis 60 °C.",
+      "highlights": [
+        "Intel Celeron J6412",
+        "2 × Intel i226-V 2.5GbE",
+        "Bis zu 32 GB DDR4",
+        "2 × HDMI 2.0"
+      ],
+      "specs": [
+        {
+          "label": "Modell",
+          "value": "MCSRP4"
+        },
+        {
+          "label": "Netzwerk",
+          "value": "2 × Intel i226-V 2.5GbE"
+        },
+        {
+          "label": "Prozessor",
+          "value": "Intel Celeron J6412, 4 Kerne, 2,0 GHz (10 W). Weitere Elkhart-Lake-CPUs optional"
+        },
+        {
+          "label": "Grafik",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Arbeitsspeicher",
+          "value": "1 × DDR4-3200 SO-DIMM, max. 32 GB"
+        },
+        {
+          "label": "Bildausgabe",
+          "value": "2 × HDMI 2.0"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.1, 4 × USB 2.0 über interne Header"
+        },
+        {
+          "label": "Stromversorgung",
+          "value": "12 V DC (5.5 × 2.5 mm)"
+        },
+        {
+          "label": "Massenspeicher",
+          "value": "1 × M.2 2242 M-key PCIe NVMe + 2 × SATA 3.0 (6 Gbps)"
+        },
+        {
+          "label": "Erweiterung",
+          "value": "1 × M.2 E-key (Wi-Fi), Wake-on-LAN, PXE"
+        },
+        {
+          "label": "Hardware-Reset",
+          "value": "256 Stufen, 0–255 s"
+        },
+        {
+          "label": "Frontanschlüsse",
+          "value": "12 V DC, 2 × HDMI 2.0, 2 × 2.5GbE, 2 × USB 3.1, Ein/Aus-Taste"
+        },
+        {
+          "label": "Rückseitige Anschlüsse",
+          "value": "Geschlossene Rückblende serienmäßig"
+        },
+        {
+          "label": "Interne Anschlüsse",
+          "value": "COM: 1 × 2×5-polig (RS-232, optional RS-485). USB 2.0: 2 × 2×5-polig. TPM 2.0: 1 × 2×6-polig. GPIO, CPU-Lüfter 4-polig, Systemlüfter 3-polig."
+        },
+        {
+          "label": "Abmessungen",
+          "value": "100 × 112 × 39.7 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Aluminiumlegierung"
+        },
+        {
+          "label": "BIOS",
+          "value": "128 Mb Flash ROM"
+        },
+        {
+          "label": "Betriebssystem",
+          "value": "Windows 10 / Linux"
+        },
+        {
+          "label": "Betriebsumgebung",
+          "value": "−10 bis 60 °C, 5–95 % rF, nicht kondensierend"
+        },
+        {
+          "label": "Farbe",
+          "value": "Schwarz"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp4/front.webp",
+          "title": "MCSRP4 · Frontblende"
+        },
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp4/rear.webp",
+          "title": "MCSRP4 · Standard-Rückblende"
+        }
+      ]
+    },
+    "fr": {
+      "tagline": "Appliance réseau Elkhart Lake à deux ports 2,5 GbE",
+      "description": "Le MCSRP4 est équipé en standard du processeur Intel Celeron J6412. Il dispose de deux ports 2,5 GbE, de deux sorties HDMI 2.0, d’un emplacement M.2 2242 NVMe et de deux connexions SATA. Sa plage de fonctionnement est de −10 à 60 °C.",
+      "highlights": [
+        "Intel Celeron J6412",
+        "2 × Intel i226-V 2.5GbE",
+        "Jusqu’à 32 Go de DDR4",
+        "2 × HDMI 2.0"
+      ],
+      "specs": [
+        {
+          "label": "Modèle",
+          "value": "MCSRP4"
+        },
+        {
+          "label": "Réseau",
+          "value": "2 × Intel i226-V 2.5GbE"
+        },
+        {
+          "label": "Processeur",
+          "value": "Intel Celeron J6412, 4 cœurs, 2,0 GHz (10 W). Autres processeurs Elkhart Lake en option"
+        },
+        {
+          "label": "Graphiques",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Mémoire",
+          "value": "1 × DDR4-3200 SO-DIMM, 32 Go max."
+        },
+        {
+          "label": "Affichage",
+          "value": "2 × HDMI 2.0"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.1, 4 × USB 2.0 via les connecteurs internes"
+        },
+        {
+          "label": "Alimentation",
+          "value": "12 V DC (5.5 × 2.5 mm)"
+        },
+        {
+          "label": "Stockage",
+          "value": "1 × M.2 2242 M-key PCIe NVMe + 2 × SATA 3.0 (6 Gbps)"
+        },
+        {
+          "label": "Extension",
+          "value": "1 × M.2 E-key (Wi-Fi), Wake-on-LAN, PXE"
+        },
+        {
+          "label": "Réinitialisation matérielle",
+          "value": "256 niveaux, 0–255 s"
+        },
+        {
+          "label": "Connectique avant",
+          "value": "12 V DC, 2 × HDMI 2.0, 2 × 2.5GbE, 2 × USB 3.1, bouton d’alimentation"
+        },
+        {
+          "label": "Connectique arrière",
+          "value": "Panneau arrière sans ports en standard"
+        },
+        {
+          "label": "Connectique interne",
+          "value": "COM : 1 × 2×5 broches (RS-232, RS-485 en option). USB 2.0 : 2 × 2×5 broches. TPM 2.0 : 1 × 2×6 broches. GPIO, ventilateur CPU 4 broches, ventilateur système 3 broches."
+        },
+        {
+          "label": "Dimensions",
+          "value": "100 × 112 × 39.7 mm"
+        },
+        {
+          "label": "Matériau",
+          "value": "Alliage d’aluminium"
+        },
+        {
+          "label": "BIOS",
+          "value": "128 Mb Flash ROM"
+        },
+        {
+          "label": "Système d’exploitation",
+          "value": "Windows 10 / Linux"
+        },
+        {
+          "label": "Conditions de fonctionnement",
+          "value": "−10 à 60 °C, 5–95 % HR, sans condensation"
+        },
+        {
+          "label": "Couleur",
+          "value": "Noir"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp4/front.webp",
+          "title": "MCSRP4 · panneau avant"
+        },
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp4/rear.webp",
+          "title": "MCSRP4 · panneau arrière standard"
+        }
+      ]
+    },
+    "it": {
+      "tagline": "Appliance di rete Elkhart Lake con due porte 2,5 GbE",
+      "description": "MCSRP4 monta di serie Intel Celeron J6412. Offre due porte 2,5 GbE, due uscite HDMI 2.0, M.2 2242 NVMe e due connessioni SATA. L’intervallo operativo va da −10 a 60 °C.",
+      "highlights": [
+        "Intel Celeron J6412",
+        "2 × Intel i226-V 2.5GbE",
+        "Fino a 32 GB di DDR4",
+        "2 × HDMI 2.0"
+      ],
+      "specs": [
+        {
+          "label": "Modello",
+          "value": "MCSRP4"
+        },
+        {
+          "label": "Rete",
+          "value": "2 × Intel i226-V 2.5GbE"
+        },
+        {
+          "label": "Processore",
+          "value": "Intel Celeron J6412, 4 core, 2,0 GHz (10 W). Altre CPU Elkhart Lake opzionali"
+        },
+        {
+          "label": "Grafica",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 × DDR4-3200 SO-DIMM, max 32 GB"
+        },
+        {
+          "label": "Uscita video",
+          "value": "2 × HDMI 2.0"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.1, 4 × USB 2.0 tramite connettori interni"
+        },
+        {
+          "label": "Alimentazione",
+          "value": "12 V DC (5.5 × 2.5 mm)"
+        },
+        {
+          "label": "Archiviazione",
+          "value": "1 × M.2 2242 M-key PCIe NVMe + 2 × SATA 3.0 (6 Gbps)"
+        },
+        {
+          "label": "Espansione",
+          "value": "1 × M.2 E-key (Wi-Fi), Wake-on-LAN, PXE"
+        },
+        {
+          "label": "Ripristino hardware",
+          "value": "256 livelli, 0–255 s"
+        },
+        {
+          "label": "Porte anteriori",
+          "value": "12 V DC, 2 × HDMI 2.0, 2 × 2.5GbE, 2 × USB 3.1, pulsante di accensione"
+        },
+        {
+          "label": "Porte posteriori",
+          "value": "Pannello posteriore standard senza porte"
+        },
+        {
+          "label": "Connettori interni",
+          "value": "COM: 1 × 2×5 pin (RS-232, RS-485 opzionale). USB 2.0: 2 × 2×5 pin. TPM 2.0: 1 × 2×6 pin. GPIO, ventola CPU a 4 pin, ventola di sistema a 3 pin."
+        },
+        {
+          "label": "Dimensioni",
+          "value": "100 × 112 × 39.7 mm"
+        },
+        {
+          "label": "Materiale",
+          "value": "Lega di alluminio"
+        },
+        {
+          "label": "BIOS",
+          "value": "128 Mb Flash ROM"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10 / Linux"
+        },
+        {
+          "label": "Condizioni operative",
+          "value": "Da −10 a 60 °C, 5–95% UR, senza condensa"
+        },
+        {
+          "label": "Colore",
+          "value": "Nero"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp4/front.webp",
+          "title": "MCSRP4 · pannello anteriore"
+        },
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp4/rear.webp",
+          "title": "MCSRP4 · pannello posteriore standard"
+        }
+      ]
+    },
+    "es": {
+      "tagline": "Equipo de red Elkhart Lake con dos puertos de 2,5 GbE",
+      "description": "MCSRP4 incorpora de serie el Intel Celeron J6412. Ofrece dos puertos de 2,5 GbE, dos salidas HDMI 2.0, M.2 2242 NVMe y dos conexiones SATA. El intervalo de funcionamiento es de −10 a 60 °C.",
+      "highlights": [
+        "Intel Celeron J6412",
+        "2 × Intel i226-V 2.5GbE",
+        "Hasta 32 GB de DDR4",
+        "2 × HDMI 2.0"
+      ],
+      "specs": [
+        {
+          "label": "Modelo",
+          "value": "MCSRP4"
+        },
+        {
+          "label": "Red",
+          "value": "2 × Intel i226-V 2.5GbE"
+        },
+        {
+          "label": "Procesador",
+          "value": "Intel Celeron J6412, 4 núcleos, 2,0 GHz (10 W). Otras CPU Elkhart Lake opcionales"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 × DDR4-3200 SO-DIMM, máx. 32 GB"
+        },
+        {
+          "label": "Salida de vídeo",
+          "value": "2 × HDMI 2.0"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.1, 4 × USB 2.0 mediante conectores internos"
+        },
+        {
+          "label": "Alimentación",
+          "value": "12 V DC (5.5 × 2.5 mm)"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "1 × M.2 2242 M-key PCIe NVMe + 2 × SATA 3.0 (6 Gbps)"
+        },
+        {
+          "label": "Expansión",
+          "value": "1 × M.2 E-key (Wi-Fi), Wake-on-LAN, PXE"
+        },
+        {
+          "label": "Reinicio por hardware",
+          "value": "256 niveles, 0–255 s"
+        },
+        {
+          "label": "Conexiones frontales",
+          "value": "12 V DC, 2 × HDMI 2.0, 2 × 2.5GbE, 2 × USB 3.1, botón de encendido"
+        },
+        {
+          "label": "Conexiones traseras",
+          "value": "Panel trasero de serie sin puertos"
+        },
+        {
+          "label": "Conectores internos",
+          "value": "COM: 1 × 2×5 pines (RS-232, RS-485 opcional). USB 2.0: 2 × 2×5 pines. TPM 2.0: 1 × 2×6 pines. GPIO, ventilador de CPU de 4 pines, ventilador de sistema de 3 pines."
+        },
+        {
+          "label": "Dimensiones",
+          "value": "100 × 112 × 39.7 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Aleación de aluminio"
+        },
+        {
+          "label": "BIOS",
+          "value": "128 Mb Flash ROM"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10 / Linux"
+        },
+        {
+          "label": "Condiciones de funcionamiento",
+          "value": "De −10 a 60 °C, 5–95 % HR, sin condensación"
+        },
+        {
+          "label": "Color",
+          "value": "Negro"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp4/front.webp",
+          "title": "MCSRP4 · panel frontal"
+        },
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp4/rear.webp",
+          "title": "MCSRP4 · panel trasero de serie"
+        }
+      ]
+    }
+  }
+}

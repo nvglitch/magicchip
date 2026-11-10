@@ -1,19 +1,20 @@
 {
   "schemaVersion": 2,
   "sourceRoot": "D:\\本地资源库\\电脑相关\\电脑册子归档\\ver2",
-  "observedAtUtc": "2026-11-05T02:06:56.078874+00:00",
+  "observedAtUtc": "2026-11-10T06:30:23.838366+00:00",
   "observationOnly": false,
-  "totalPdfCount": 117,
+  "totalPdfCount": 124,
   "inScopePdfCount": 116,
   "statusCounts": {
     "deferred-by-user": 2,
+    "excluded-custom": 7,
     "pending-confirmation": 16,
     "superseded-by-merged-brochure": 22,
     "superseded-by-renamed-brochure": 5,
-    "updated": 44,
-    "verified-current": 58
+    "updated": 48,
+    "verified-current": 54
   },
-  "previousObservation": "brochure-history/before-2026-11-05-mcipcb13-update.json",
+  "previousObservation": "brochure-history/before-2026-11-10-mcsrp5-revision.json",
   "files": [
     {
       "relativePath": "AIPC/MCAIPC1 brochure.pdf",
@@ -406,7 +407,7 @@
       "hrefs": [
         "/products/industrial-mini-pc/mcipca1"
       ],
-      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
       "notes": "Network 行 1 个网口与后面板 2 个网口矛盾；保留既有 2 个，待核实。",
       "partialUpdate": true
     },
@@ -440,7 +441,7 @@
       "excluded": false,
       "changeSincePreviousObservation": "unchanged",
       "status": "pending-confirmation",
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
+      "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
       "notes": "已合并 Type A/B 与 i3-N305 风扇款到同页。HDMI 1.4 的 4K60 表述待确认，网页未承诺该上限。",
       "modelIds": [
         "mcipcb1"
@@ -485,7 +486,7 @@
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb11"
       ],
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
+      "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
       "notes": "网口规格行写 1 个，背面接口行写 2 个；保留待核实。",
       "partialUpdate": true
     },
@@ -525,8 +526,8 @@
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb13"
       ],
-      "changeSincePreviousObservation": "modified",
-      "reviewedAtUtc": "2026-11-05T02:21:16.819965+00:00",
+      "changeSincePreviousObservation": "unchanged",
+      "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
       "previousSha256": "747e9e9214d76ab83c66e2fb5e187602209091d79eda292e1b8134cd0f5b8c4b"
     },
     {
@@ -621,7 +622,7 @@
       "excluded": false,
       "changeSincePreviousObservation": "unchanged",
       "status": "pending-confirmation",
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
+      "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
       "notes": "已合并 Type A-D 与风扇款到同页；Type A 机箱尺寸比其余型号多 1 mm，按册子区分，实物待确认。",
       "modelIds": [
         "mcipcb15"
@@ -860,7 +861,7 @@
       "excluded": false,
       "changeSincePreviousObservation": "unchanged",
       "status": "pending-confirmation",
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
+      "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
       "notes": "已合并 Type A/B 与 J5005 到同页；Type A 的 DDR3 2400 MHz 记载待确认，网页未展示速度。",
       "modelIds": [
         "mcipcb2"
@@ -965,7 +966,7 @@
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb4"
       ],
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
+      "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
       "notes": "已同步明确的网口和存储参数；册子将 N5105 芯片组误写为 Alder Lake-N，待来源核实。"
     },
     {
@@ -984,7 +985,7 @@
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb5"
       ],
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
+      "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
       "notes": "CPU/平台命名与芯片组表述冲突，未照搬存疑项目。"
     },
     {
@@ -1103,7 +1104,7 @@
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb9"
       ],
-      "reviewedAtUtc": "2026-09-30T04:27:50.166136+00:00",
+      "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
       "notes": "USB 总数与前后面板分项存在冲突，保留待核实。"
     },
     {
@@ -1115,7 +1116,7 @@
       "excluded": false,
       "present": false,
       "status": "superseded-by-renamed-brochure",
-      "changeSincePreviousObservation": "removed",
+      "changeSincePreviousObservation": "still-missing",
       "modelIds": [
         "mcipc8-hdmi"
       ],
@@ -1311,7 +1312,7 @@
       "hrefs": [
         "/products/industrial-mini-pc/mcipcd1"
       ],
-      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
       "notes": "Network 行 5 个网口与面板行 4 个矛盾；保留既有 4 个，待核实。",
       "partialUpdate": true
     },
@@ -1912,7 +1913,7 @@
       "hrefs": [
         "/products/commercial-mini-pc/mc15uh"
       ],
-      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
       "notes": "用户要求暂缓：后面板 2×USB3.0 与整机 USB 数量矛盾，保留既有总数，暂不写冲突后面板数量。",
       "partialUpdate": true
     },
@@ -2157,7 +2158,7 @@
       "hrefs": [
         "/products/commercial-mini-pc/mcn7a"
       ],
-      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
       "notes": "用户要求暂缓：Memory 行 DDR5 与 Internal I/O 行 DDR4 矛盾；保留既有 DDR5，未采纳冲突 DDR4。",
       "partialUpdate": true
     },
@@ -2257,7 +2258,7 @@
       "hrefs": [
         "/products/commercial-mini-pc/mctar7"
       ],
-      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
       "notes": "用户要求暂缓：Ryzen AI 300 平台名与 Ryzen 4000/5000/7000 CPU 列表冲突，暂不采纳该平台名。",
       "partialUpdate": true
     },
@@ -2538,7 +2539,7 @@
       "hrefs": [
         "/products/firewall-mini-pc/mcsr6n2"
       ],
-      "reviewedAtUtc": "2026-10-13T09:54:12.159012+00:00",
+      "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
       "notes": "仅同步确定字段。CPU/平台名称及 HDMI 1.4 的 4K@60Hz 描述冲突，省略平台、显示版本和分辨率，待核实，不推进应用指纹。旧名称跳转已验证。",
       "status": "pending-confirmation",
       "partialUpdate": true,
@@ -2761,83 +2762,88 @@
     },
     {
       "relativePath": "软路由SR/MCSRP3 brochure.pdf",
-      "sizeBytes": 1107616,
-      "modifiedAtUtc": "2026-08-24T10:03:27.492065+00:00",
-      "observedSha256": "757071ea0607c339732c4cd705a525946690dcd4677e4eb0a7586106b29f436a",
-      "appliedSha256": "757071ea0607c339732c4cd705a525946690dcd4677e4eb0a7586106b29f436a",
+      "sizeBytes": 934594,
+      "modifiedAtUtc": "2026-11-10T05:44:25.524674+00:00",
+      "observedSha256": "5915a496212dc7c8ea348b18b343d319f1300fb9a41b874b38b5eafb2d84e0b1",
+      "appliedSha256": "5915a496212dc7c8ea348b18b343d319f1300fb9a41b874b38b5eafb2d84e0b1",
       "excluded": false,
       "present": true,
-      "status": "verified-current",
-      "changeSincePreviousObservation": "unchanged",
+      "status": "updated",
+      "changeSincePreviousObservation": "modified",
       "modelIds": [
         "mcsrp3"
       ],
       "hrefs": [
         "/products/firewall-mini-pc/mcsrp3"
       ],
-      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
+      "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
+      "appliedAtUtc": "2026-11-10T06:30:23.838366+00:00",
+      "notes": "2026-11-10 同步新版 Jasper Lake 参数、前后面板和选配后置 USB / Wi-Fi 天线说明。已验证五语详情、分类、搜索、SEO 网址、图片及生产构建。",
+      "previousSha256": "757071ea0607c339732c4cd705a525946690dcd4677e4eb0a7586106b29f436a"
     },
     {
       "relativePath": "软路由SR/MCSRP4 brochure.pdf",
-      "sizeBytes": 800712,
-      "modifiedAtUtc": "2026-08-24T10:03:28.070646+00:00",
-      "observedSha256": "487b84123d5dd6cab22e4d66ebbed688b72907bd387e36e9ed8a61eb7ba3675c",
-      "appliedSha256": "487b84123d5dd6cab22e4d66ebbed688b72907bd387e36e9ed8a61eb7ba3675c",
+      "sizeBytes": 773418,
+      "modifiedAtUtc": "2026-11-10T04:17:34.048611+00:00",
+      "observedSha256": "06123509f411288f2a7fc0080babe6f1b795af8117ebc2054792f1527b544937",
+      "appliedSha256": "06123509f411288f2a7fc0080babe6f1b795af8117ebc2054792f1527b544937",
       "excluded": false,
       "present": true,
-      "status": "verified-current",
-      "changeSincePreviousObservation": "unchanged",
+      "status": "updated",
+      "changeSincePreviousObservation": "modified",
       "modelIds": [
         "mcsrp4"
       ],
       "hrefs": [
         "/products/firewall-mini-pc/mcsrp4"
       ],
-      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
+      "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
+      "appliedAtUtc": "2026-11-10T06:30:23.838366+00:00",
+      "notes": "2026-11-10 同步新版 J6412 标配、双 HDMI 2.0、内部 USB / COM 排针、工作环境及前后面板。已验证五语详情、分类、搜索、SEO 网址、图片及生产构建。",
+      "previousSha256": "487b84123d5dd6cab22e4d66ebbed688b72907bd387e36e9ed8a61eb7ba3675c"
     },
     {
       "relativePath": "软路由SR/MCSRP5 brochure.pdf",
-      "sizeBytes": 1981601,
-      "modifiedAtUtc": "2026-08-24T10:03:29.170388+00:00",
-      "observedSha256": "605b8d7abdfd656d89f250781f2da906d964c6d9ddb68efea6e5f31666a6cbea",
-      "appliedSha256": "605b8d7abdfd656d89f250781f2da906d964c6d9ddb68efea6e5f31666a6cbea",
+      "sizeBytes": 1408780,
+      "modifiedAtUtc": "2026-11-10T06:39:23.413668+00:00",
+      "observedSha256": "65c59c6170ae8ff08cd56d4ba7af0a20efabfcef76eb13b3431a73e10efd5ba3",
+      "appliedSha256": "65c59c6170ae8ff08cd56d4ba7af0a20efabfcef76eb13b3431a73e10efd5ba3",
       "excluded": false,
       "present": true,
-      "status": "verified-current",
-      "changeSincePreviousObservation": "unchanged",
+      "status": "updated",
+      "changeSincePreviousObservation": "modified",
       "modelIds": [
         "mcsrp5"
       ],
       "hrefs": [
         "/products/firewall-mini-pc/mcsrp5"
       ],
-      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
+      "reviewedAtUtc": "2026-11-10T06:49:41.553823+00:00",
+      "appliedAtUtc": "2026-11-10T06:49:41.553823+00:00",
+      "notes": "2026-11-10 单独核对新版并同步五语 32 GB DDR5、双 HDMI 2.0（各 4K 60 Hz）、前面板及缩略图。前面板标记 DC-12V，官网整机供电按新版规格表列 12–19 V DC。新版后面板与既有资产相同。生产构建、五语页面、图片与参数搜索检查通过。",
+      "previousSha256": "7be2ccb853558b056852acd510116dba95c01c8df6bbc986b7fdb228432b7058",
+      "observedAtUtc": "2026-11-10T06:49:41.553823+00:00"
     },
     {
       "relativePath": "软路由SR/MCSRP6 brochure.pdf",
-      "sizeBytes": 2137502,
-      "modifiedAtUtc": "2026-08-24T10:03:31.931960+00:00",
-      "observedSha256": "88bac5828e2cd9368bf527bde2049b16c6685634579291b8a6062241d0681f6b",
-      "appliedSha256": "88bac5828e2cd9368bf527bde2049b16c6685634579291b8a6062241d0681f6b",
+      "sizeBytes": 1506001,
+      "modifiedAtUtc": "2026-11-10T05:49:24.681567+00:00",
+      "observedSha256": "c1d6a5bfcf8f1cf90cbf8584c85d8b1bef97bfec03ef7061cc5f2696524e8ea3",
+      "appliedSha256": "c1d6a5bfcf8f1cf90cbf8584c85d8b1bef97bfec03ef7061cc5f2696524e8ea3",
       "excluded": false,
       "present": true,
-      "status": "verified-current",
-      "changeSincePreviousObservation": "unchanged",
+      "status": "updated",
+      "changeSincePreviousObservation": "modified",
       "modelIds": [
         "mcsrp6"
       ],
       "hrefs": [
         "/products/firewall-mini-pc/mcsrp6"
       ],
-      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
+      "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
+      "appliedAtUtc": "2026-11-10T06:30:23.838366+00:00",
+      "notes": "2026-11-10 同步新版 Twin Lake、整机 12–19 V DC 与主板 12–24 V DC 的区别、NVMe 与 SFF-8654 选配扩展及前后面板。已验证五语详情、分类、搜索、SEO 网址、图片及生产构建。",
+      "previousSha256": "88bac5828e2cd9368bf527bde2049b16c6685634579291b8a6062241d0681f6b"
     },
     {
       "relativePath": "软路由SR/MCSRP7 brochure.pdf",
@@ -2986,6 +2992,104 @@
       "appliedAtUtc": "2026-10-31T10:07:34.154437+00:00",
       "previousSha256": "4c76c6ecea61f537278167160fc4770b7f2dc9e9a2f5fe84875c35cb61776975",
       "notes": "2026-10-31 核对新册整页与后面板后，同步五语供电为 9-36 V 四针航空插座，并替换官网后面板图；主图、正面图、其他参数、MCIPC8 独立型号和既有旧名称跳转保持。来源映射与导入脚本已更新。生产构建、168 条搜索回归、10 个五语详情、5 个分类分组、5 条同语言永久跳转、无前缀旧地址、站点地图与 6 个图片字节检查通过；浏览器已实测新图放大和参数显示。原始 PDF 只读。"
+    },
+    {
+      "relativePath": "定制册子/E238A-P_规格001_产品册.pdf",
+      "sizeBytes": 1682705,
+      "modifiedAtUtc": "2026-10-09T02:40:33.941594+00:00",
+      "observedSha256": "a8e8bba149de5ebd92b7afb29f329f1cbde210409c36f49c7f8a78b9ed3d2ffe",
+      "present": true,
+      "appliedSha256": null,
+      "excluded": true,
+      "status": "excluded-custom",
+      "changeSincePreviousObservation": "added",
+      "modelIds": [],
+      "hrefs": [],
+      "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
+    },
+    {
+      "relativePath": "定制册子/E238A-P_规格003_产品册.pdf",
+      "sizeBytes": 1709221,
+      "modifiedAtUtc": "2026-10-09T02:40:34.474948+00:00",
+      "observedSha256": "c814feed7d4e98109cfa9a470b73b179da313689c702f216225108e28b2c8083",
+      "present": true,
+      "appliedSha256": null,
+      "excluded": true,
+      "status": "excluded-custom",
+      "changeSincePreviousObservation": "added",
+      "modelIds": [],
+      "hrefs": [],
+      "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
+    },
+    {
+      "relativePath": "定制册子/E270A-P_规格002_产品册.pdf",
+      "sizeBytes": 1709192,
+      "modifiedAtUtc": "2026-10-09T02:40:35.002535+00:00",
+      "observedSha256": "d1d33003023e43bce03b2538a04a7a925d8d0af89f45e81ff981afedaea46012",
+      "present": true,
+      "appliedSha256": null,
+      "excluded": true,
+      "status": "excluded-custom",
+      "changeSincePreviousObservation": "added",
+      "modelIds": [],
+      "hrefs": [],
+      "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
+    },
+    {
+      "relativePath": "定制册子/E270A-P_规格004_产品册.pdf",
+      "sizeBytes": 1682705,
+      "modifiedAtUtc": "2026-10-09T02:40:35.605535+00:00",
+      "observedSha256": "66b89da1cbeeff30cccdd9c2c417405baaf4e7302f0b8fce8921814ac231ce79",
+      "present": true,
+      "appliedSha256": null,
+      "excluded": true,
+      "status": "excluded-custom",
+      "changeSincePreviousObservation": "added",
+      "modelIds": [],
+      "hrefs": [],
+      "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
+    },
+    {
+      "relativePath": "定制册子/MCIPCB13A Custom brochure.pdf",
+      "sizeBytes": 2400008,
+      "modifiedAtUtc": "2026-11-09T03:37:40.063957+00:00",
+      "observedSha256": "344942e8a4464014effd0ac2823cd845ee3a826e3f7f2b40c1748e7b9a9c381f",
+      "present": true,
+      "appliedSha256": null,
+      "excluded": true,
+      "status": "excluded-custom",
+      "changeSincePreviousObservation": "added",
+      "modelIds": [],
+      "hrefs": [],
+      "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
+    },
+    {
+      "relativePath": "定制册子/MCIPCB13B Custom brochure.pdf",
+      "sizeBytes": 2405781,
+      "modifiedAtUtc": "2026-11-09T03:37:42.870052+00:00",
+      "observedSha256": "05cd82d4b43615c4a500c676adcdc7f07de40e94c697b0f77fc966d775bcc663",
+      "present": true,
+      "appliedSha256": null,
+      "excluded": true,
+      "status": "excluded-custom",
+      "changeSincePreviousObservation": "added",
+      "modelIds": [],
+      "hrefs": [],
+      "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
+    },
+    {
+      "relativePath": "定制册子/MCMQR6 brochure.pdf",
+      "sizeBytes": 653215,
+      "modifiedAtUtc": "2026-11-06T02:13:44.018930+00:00",
+      "observedSha256": "425130fecc35f275c516fd8d1c9f2c6102820970628dcd4832544216531b33e3",
+      "present": true,
+      "appliedSha256": null,
+      "excluded": true,
+      "status": "excluded-custom",
+      "changeSincePreviousObservation": "added",
+      "modelIds": [],
+      "hrefs": [],
+      "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
     }
   ]
 }

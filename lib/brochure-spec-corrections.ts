@@ -72,28 +72,6 @@ export const brochureSpecCorrections: Record<string, { label: string; value: str
       "value": "DC12V Wide Voltage Supply(5.5 x 2.5 mm)"
     }
   ],
-  "mcsrp3": [
-    {
-      "label": "Front I/O",
-      "value": "1x Power Button; 2x HDMI 1.4; 2x USB 3.0; 2x 2.5G LAN; 1x DC-12V (5.5 x 2.5 mm)"
-    }
-  ],
-  "mcsrp4": [
-    {
-      "label": "Power",
-      "value": "DC 12V (5.5 x 2.5 mm)"
-    }
-  ],
-  "mcsrp6": [
-    {
-      "label": "Power",
-      "value": "DC 12-24V (5.5 x 2.5 mm)"
-    },
-    {
-      "label": "Front I/O",
-      "value": "1 * DC IN 5.5 x 2.5 mm; 1 * HDMI 2.0; 1 * DP 1.4; 1 * 2.5G Ethernet LAN; 1 * USB 3.2; 1 * Power Button"
-    }
-  ],
   "mgsrn100-v1": [
     {
       "label": "Power",

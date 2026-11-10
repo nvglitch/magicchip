@@ -230,15 +230,15 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
   },
   "mcsrp3": {
     "image": "/assets/products/thumbnails/mcsrp3.webp",
-    "source": "/assets/products/firewall/dual-port-series/mcsrp3/images/main-square.png"
+    "source": "/assets/products/firewall/dual-port-series/mcsrp3/front.webp"
   },
   "mcsrp4": {
     "image": "/assets/products/thumbnails/mcsrp4.webp",
-    "source": "/assets/products/firewall/dual-port-series/mcsrp4/images/main-square.png"
+    "source": "/assets/products/firewall/dual-port-series/mcsrp4/front.webp"
   },
   "mcsrp5": {
     "image": "/assets/products/thumbnails/mcsrp5.webp",
-    "source": "/assets/products/firewall/dual-port-series/mcsrp5/images/main-square.png"
+    "source": "/assets/products/firewall/dual-port-series/mcsrp5/front.webp"
   },
   "mc30s-ddr4": {
     "image": "/assets/products/thumbnails/mc30s.webp",
@@ -454,7 +454,7 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
   },
   "mcsrp6": {
     "image": "/assets/products/thumbnails/mcsrp6.webp",
-    "source": "/assets/products/firewall/mcsrp6/images/1.jpg"
+    "source": "/assets/products/firewall/dual-port-series/mcsrp6/front.webp"
   },
   "mc30s": {
     "image": "/assets/products/thumbnails/mc30s.webp",

@@ -53,7 +53,7 @@ const catalogIndustrialSearchEntries: SearchEntry[] = industrialCatalog
     image: sku.image,
     specs: mergeSpecifications(item.specs, sku.specs),
   })) || [])]);
-const curatedFirewallSearchIds = new Set(['mcr20', 'mcsrp6']);
+const curatedFirewallSearchIds = new Set(['mcr20']);
 const catalogFirewallSearchEntries: SearchEntry[] = firewallCatalog
   .filter((item) => !curatedFirewallSearchIds.has(item.id))
   .flatMap((item): SearchEntry[] => [{
@@ -184,14 +184,6 @@ const baseSearchIndex: SearchEntry[] = [
     type: 'product',
     keywords: ['firewall mini pc', '10gbe', '2.5gbe', 'router', 'vpn', 'sd-wan', 'gateway'],
     image: '/assets/products/firewall/mcr20/images/1.jpg',
-  },
-  {
-    title: 'MCSRP6',
-    description: 'Compact network appliance with dual Intel 2.5GbE, DDR5, and wide-voltage input.',
-    href: '/products/firewall-mini-pc/mcsrp6',
-    type: 'product',
-    keywords: ['firewall mini pc', '2.5gbe', 'router', 'vpn', 'sd-wan', 'iot gateway'],
-    image: '/assets/products/firewall/mcsrp6/images/1.jpg',
   },
   {
     title: 'Industrial Mini PCs',

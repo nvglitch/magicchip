@@ -1,0 +1,610 @@
+{
+  "id": "mcsrp3",
+  "name": "MCSRP3",
+  "category": "firewall-mini-pc",
+  "series": "2L",
+  "published": true,
+  "image": "/assets/products/firewall/dual-port-series/mcsrp3/front.webp",
+  "images": [
+    "/assets/products/firewall/dual-port-series/mcsrp3/front.webp"
+  ],
+  "galleryImages": [
+    "/assets/products/firewall/dual-port-series/mcsrp3/front.webp",
+    "/assets/products/firewall/dual-port-series/mcsrp3/rear.webp"
+  ],
+  "operatingRange": "0–70 °C",
+  "sourceBrochure": "软路由SR/MCSRP3 brochure.pdf",
+  "sourceSha256": "5915a496212dc7c8ea348b18b343d319f1300fb9a41b874b38b5eafb2d84e0b1",
+  "tagline": "Jasper Lake network appliance with dual 2.5GbE",
+  "description": "MCSRP3 pairs Intel Jasper Lake with dual 2.5GbE and two HDMI 1.4 outputs. It supports up to 32 GB DDR4, M.2 2242 NVMe and two SATA connections. Rear USB and Wi-Fi antenna connectors are optional.",
+  "highlights": [
+    "Intel Jasper Lake",
+    "2 × Intel i226-V 2.5GbE",
+    "Up to 32 GB DDR4",
+    "2 × HDMI 1.4"
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCSRP3"
+    },
+    {
+      "label": "Network",
+      "value": "2 × Intel i226-V 2.5GbE"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel N5100 / N5105 / N6005"
+    },
+    {
+      "label": "Chipset",
+      "value": "Intel Jasper Lake (10 nm)"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel UHD Graphics"
+    },
+    {
+      "label": "Memory",
+      "value": "1 × DDR4 SO-DIMM, 2400/2666/3200 MHz, max. 32 GB"
+    },
+    {
+      "label": "Display",
+      "value": "2 × HDMI 1.4 (4K at 30 Hz)"
+    },
+    {
+      "label": "USB",
+      "value": "2 × USB 3.0, up to 4 × USB 2.0 via internal headers"
+    },
+    {
+      "label": "Power",
+      "value": "12 V DC (5.5 × 2.5 mm)"
+    },
+    {
+      "label": "Storage",
+      "value": "1 × M.2 2242 NVMe + 2 × SATA 3.0"
+    },
+    {
+      "label": "Wireless",
+      "value": "1 × M.2 2230 E-key for Wi-Fi 6 / Bluetooth"
+    },
+    {
+      "label": "Front I/O",
+      "value": "2 × HDMI 1.4, 2 × USB 3.0, 2 × 2.5GbE, 12 V DC, power button"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "Standard blank rear panel, optional 4 × USB 2.0 and 2 × Wi-Fi antenna connectors"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "M.2 E-key, GPIO, COM, 12-pin SATA data/power, CMOS/BIOS jumper, M.2 2242 standoff and PCIe 3.0 ×4 M-key slot, 2 × USB 2.0 headers, DDR4 SO-DIMM"
+    },
+    {
+      "label": "Dimensions",
+      "value": "112 × 100 × 36.3 mm"
+    },
+    {
+      "label": "Material",
+      "value": "Aluminum alloy"
+    },
+    {
+      "label": "TDP",
+      "value": "15 W"
+    },
+    {
+      "label": "System",
+      "value": "Windows 7 / 8 / 10, Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0–70 °C, 5–90% RH"
+    },
+    {
+      "label": "Color",
+      "value": "Gray / black"
+    }
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/firewall/dual-port-series/mcsrp3/front.webp",
+      "title": "MCSRP3 · front panel"
+    },
+    {
+      "image": "/assets/products/firewall/dual-port-series/mcsrp3/rear.webp",
+      "title": "MCSRP3 · standard rear panel"
+    }
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MCSRP3"
+    },
+    {
+      "label": "Network",
+      "value": "2 × Intel i226-V 2.5GbE"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel N5100 / N5105 / N6005"
+    },
+    {
+      "label": "Chipset",
+      "value": "Intel Jasper Lake (10 nm)"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel UHD Graphics"
+    },
+    {
+      "label": "Memory",
+      "value": "1 × DDR4 SO-DIMM, 2400/2666/3200 MHz, max. 32 GB"
+    },
+    {
+      "label": "Display",
+      "value": "2 × HDMI 1.4 (4K at 30 Hz)"
+    },
+    {
+      "label": "USB",
+      "value": "2 × USB 3.0, up to 4 × USB 2.0 via internal headers"
+    },
+    {
+      "label": "Power",
+      "value": "12 V DC (5.5 × 2.5 mm)"
+    },
+    {
+      "label": "Storage",
+      "value": "1 × M.2 2242 NVMe + 2 × SATA 3.0"
+    },
+    {
+      "label": "Wireless",
+      "value": "1 × M.2 2230 E-key for Wi-Fi 6 / Bluetooth"
+    },
+    {
+      "label": "Front I/O",
+      "value": "2 × HDMI 1.4, 2 × USB 3.0, 2 × 2.5GbE, 12 V DC, power button"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "Standard blank rear panel, optional 4 × USB 2.0 and 2 × Wi-Fi antenna connectors"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "M.2 E-key, GPIO, COM, 12-pin SATA data/power, CMOS/BIOS jumper, M.2 2242 standoff and PCIe 3.0 ×4 M-key slot, 2 × USB 2.0 headers, DDR4 SO-DIMM"
+    },
+    {
+      "label": "Dimensions",
+      "value": "112 × 100 × 36.3 mm"
+    },
+    {
+      "label": "Material",
+      "value": "Aluminum alloy"
+    },
+    {
+      "label": "TDP",
+      "value": "15 W"
+    },
+    {
+      "label": "System",
+      "value": "Windows 7 / 8 / 10, Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0–70 °C, 5–90% RH"
+    },
+    {
+      "label": "Color",
+      "value": "Gray / black"
+    }
+  ],
+  "translations": {
+    "de": {
+      "tagline": "Jasper-Lake-Netzwerkgerät mit zwei 2,5-GbE-Ports",
+      "description": "MCSRP3 kombiniert Intel Jasper Lake mit zwei 2,5-GbE-Ports und zwei HDMI-1.4-Ausgängen. Das Gerät unterstützt bis zu 32 GB DDR4, M.2 2242 NVMe und zwei SATA-Anschlüsse. Rückseitige USB- und WLAN-Antennenanschlüsse sind optional.",
+      "highlights": [
+        "Intel Jasper Lake",
+        "2 × Intel i226-V 2.5GbE",
+        "Bis zu 32 GB DDR4",
+        "2 × HDMI 1.4"
+      ],
+      "specs": [
+        {
+          "label": "Modell",
+          "value": "MCSRP3"
+        },
+        {
+          "label": "Netzwerk",
+          "value": "2 × Intel i226-V 2.5GbE"
+        },
+        {
+          "label": "Prozessor",
+          "value": "Intel N5100 / N5105 / N6005"
+        },
+        {
+          "label": "Plattform",
+          "value": "Intel Jasper Lake (10 nm)"
+        },
+        {
+          "label": "Grafik",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Arbeitsspeicher",
+          "value": "1 × DDR4 SO-DIMM, 2400/2666/3200 MHz, max. 32 GB"
+        },
+        {
+          "label": "Bildausgabe",
+          "value": "2 × HDMI 1.4 (4K bei 30 Hz)"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.0, bis zu 4 × USB 2.0 über interne Header"
+        },
+        {
+          "label": "Stromversorgung",
+          "value": "12 V DC (5.5 × 2.5 mm)"
+        },
+        {
+          "label": "Massenspeicher",
+          "value": "1 × M.2 2242 NVMe + 2 × SATA 3.0"
+        },
+        {
+          "label": "Funkmodule",
+          "value": "1 × M.2 2230 E-Key für WLAN 6 / Bluetooth"
+        },
+        {
+          "label": "Frontanschlüsse",
+          "value": "2 × HDMI 1.4, 2 × USB 3.0, 2 × 2.5GbE, 12 V DC, Ein/Aus-Taste"
+        },
+        {
+          "label": "Rückseitige Anschlüsse",
+          "value": "Geschlossene Rückblende serienmäßig, optional 4 × USB 2.0 und 2 WLAN-Antennenanschlüsse"
+        },
+        {
+          "label": "Interne Anschlüsse",
+          "value": "M.2 E-Key, GPIO, COM, 12-poliger SATA-Daten-/Stromanschluss, CMOS/BIOS-Jumper, M.2-2242-Halterung und PCIe-3.0-×4-M-Key-Steckplatz, 2 × USB-2.0-Header, DDR4 SO-DIMM"
+        },
+        {
+          "label": "Abmessungen",
+          "value": "112 × 100 × 36.3 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Aluminiumlegierung"
+        },
+        {
+          "label": "TDP",
+          "value": "15 W"
+        },
+        {
+          "label": "Betriebssystem",
+          "value": "Windows 7 / 8 / 10, Linux"
+        },
+        {
+          "label": "Betriebsumgebung",
+          "value": "0–70 °C, 5–90 % rF"
+        },
+        {
+          "label": "Farbe",
+          "value": "Grau / Schwarz"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp3/front.webp",
+          "title": "MCSRP3 · Frontblende"
+        },
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp3/rear.webp",
+          "title": "MCSRP3 · Standard-Rückblende"
+        }
+      ]
+    },
+    "fr": {
+      "tagline": "Appliance réseau Jasper Lake à deux ports 2,5 GbE",
+      "description": "Le MCSRP3 associe Intel Jasper Lake à deux ports 2,5 GbE et deux sorties HDMI 1.4. Il prend en charge jusqu’à 32 Go de DDR4, un SSD M.2 2242 NVMe et deux connexions SATA. Les ports USB et les connecteurs d’antenne Wi-Fi à l’arrière sont en option.",
+      "highlights": [
+        "Intel Jasper Lake",
+        "2 × Intel i226-V 2.5GbE",
+        "Jusqu’à 32 Go de DDR4",
+        "2 × HDMI 1.4"
+      ],
+      "specs": [
+        {
+          "label": "Modèle",
+          "value": "MCSRP3"
+        },
+        {
+          "label": "Réseau",
+          "value": "2 × Intel i226-V 2.5GbE"
+        },
+        {
+          "label": "Processeur",
+          "value": "Intel N5100 / N5105 / N6005"
+        },
+        {
+          "label": "Plateforme",
+          "value": "Intel Jasper Lake (10 nm)"
+        },
+        {
+          "label": "Graphiques",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Mémoire",
+          "value": "1 × DDR4 SO-DIMM, 2400/2666/3200 MHz, 32 Go max."
+        },
+        {
+          "label": "Affichage",
+          "value": "2 × HDMI 1.4 (4K à 30 Hz)"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.0, jusqu’à 4 × USB 2.0 via les connecteurs internes"
+        },
+        {
+          "label": "Alimentation",
+          "value": "12 V DC (5.5 × 2.5 mm)"
+        },
+        {
+          "label": "Stockage",
+          "value": "1 × M.2 2242 NVMe + 2 × SATA 3.0"
+        },
+        {
+          "label": "Modules sans fil",
+          "value": "1 × M.2 2230 E-key pour Wi-Fi 6 / Bluetooth"
+        },
+        {
+          "label": "Connectique avant",
+          "value": "2 × HDMI 1.4, 2 × USB 3.0, 2 × 2.5GbE, 12 V DC, bouton d’alimentation"
+        },
+        {
+          "label": "Connectique arrière",
+          "value": "Panneau arrière sans ports en standard, en option 4 × USB 2.0 et 2 connecteurs d’antenne Wi-Fi"
+        },
+        {
+          "label": "Connectique interne",
+          "value": "M.2 E-key, GPIO, COM, SATA données/alimentation 12 broches, cavalier CMOS/BIOS, entretoise M.2 2242 et emplacement M-key PCIe 3.0 ×4, 2 connecteurs USB 2.0, DDR4 SO-DIMM"
+        },
+        {
+          "label": "Dimensions",
+          "value": "112 × 100 × 36.3 mm"
+        },
+        {
+          "label": "Matériau",
+          "value": "Alliage d’aluminium"
+        },
+        {
+          "label": "TDP",
+          "value": "15 W"
+        },
+        {
+          "label": "Système d’exploitation",
+          "value": "Windows 7 / 8 / 10, Linux"
+        },
+        {
+          "label": "Conditions de fonctionnement",
+          "value": "0–70 °C, 5–90 % HR"
+        },
+        {
+          "label": "Couleur",
+          "value": "Gris / noir"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp3/front.webp",
+          "title": "MCSRP3 · panneau avant"
+        },
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp3/rear.webp",
+          "title": "MCSRP3 · panneau arrière standard"
+        }
+      ]
+    },
+    "it": {
+      "tagline": "Appliance di rete Jasper Lake con due porte 2,5 GbE",
+      "description": "MCSRP3 abbina Intel Jasper Lake a due porte 2,5 GbE e due uscite HDMI 1.4. Supporta fino a 32 GB di DDR4, M.2 2242 NVMe e due connessioni SATA. Le porte USB e i connettori per antenne Wi-Fi posteriori sono opzionali.",
+      "highlights": [
+        "Intel Jasper Lake",
+        "2 × Intel i226-V 2.5GbE",
+        "Fino a 32 GB di DDR4",
+        "2 × HDMI 1.4"
+      ],
+      "specs": [
+        {
+          "label": "Modello",
+          "value": "MCSRP3"
+        },
+        {
+          "label": "Rete",
+          "value": "2 × Intel i226-V 2.5GbE"
+        },
+        {
+          "label": "Processore",
+          "value": "Intel N5100 / N5105 / N6005"
+        },
+        {
+          "label": "Piattaforma",
+          "value": "Intel Jasper Lake (10 nm)"
+        },
+        {
+          "label": "Grafica",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 × DDR4 SO-DIMM, 2400/2666/3200 MHz, max 32 GB"
+        },
+        {
+          "label": "Uscita video",
+          "value": "2 × HDMI 1.4 (4K a 30 Hz)"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.0, fino a 4 × USB 2.0 tramite connettori interni"
+        },
+        {
+          "label": "Alimentazione",
+          "value": "12 V DC (5.5 × 2.5 mm)"
+        },
+        {
+          "label": "Archiviazione",
+          "value": "1 × M.2 2242 NVMe + 2 × SATA 3.0"
+        },
+        {
+          "label": "Moduli wireless",
+          "value": "1 × M.2 2230 E-key per Wi-Fi 6 / Bluetooth"
+        },
+        {
+          "label": "Porte anteriori",
+          "value": "2 × HDMI 1.4, 2 × USB 3.0, 2 × 2.5GbE, 12 V DC, pulsante di accensione"
+        },
+        {
+          "label": "Porte posteriori",
+          "value": "Pannello posteriore standard senza porte, in opzione 4 × USB 2.0 e 2 connettori per antenne Wi-Fi"
+        },
+        {
+          "label": "Connettori interni",
+          "value": "M.2 E-key, GPIO, COM, SATA dati/alimentazione a 12 pin, jumper CMOS/BIOS, distanziale M.2 2242 e slot M-key PCIe 3.0 ×4, 2 connettori USB 2.0, DDR4 SO-DIMM"
+        },
+        {
+          "label": "Dimensioni",
+          "value": "112 × 100 × 36.3 mm"
+        },
+        {
+          "label": "Materiale",
+          "value": "Lega di alluminio"
+        },
+        {
+          "label": "TDP",
+          "value": "15 W"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 7 / 8 / 10, Linux"
+        },
+        {
+          "label": "Condizioni operative",
+          "value": "0–70 °C, 5–90% UR"
+        },
+        {
+          "label": "Colore",
+          "value": "Grigio / nero"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp3/front.webp",
+          "title": "MCSRP3 · pannello anteriore"
+        },
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp3/rear.webp",
+          "title": "MCSRP3 · pannello posteriore standard"
+        }
+      ]
+    },
+    "es": {
+      "tagline": "Equipo de red Jasper Lake con dos puertos de 2,5 GbE",
+      "description": "MCSRP3 combina Intel Jasper Lake con dos puertos de 2,5 GbE y dos salidas HDMI 1.4. Admite hasta 32 GB de DDR4, M.2 2242 NVMe y dos conexiones SATA. Los puertos USB y los conectores de antena Wi-Fi traseros son opcionales.",
+      "highlights": [
+        "Intel Jasper Lake",
+        "2 × Intel i226-V 2.5GbE",
+        "Hasta 32 GB de DDR4",
+        "2 × HDMI 1.4"
+      ],
+      "specs": [
+        {
+          "label": "Modelo",
+          "value": "MCSRP3"
+        },
+        {
+          "label": "Red",
+          "value": "2 × Intel i226-V 2.5GbE"
+        },
+        {
+          "label": "Procesador",
+          "value": "Intel N5100 / N5105 / N6005"
+        },
+        {
+          "label": "Plataforma",
+          "value": "Intel Jasper Lake (10 nm)"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 × DDR4 SO-DIMM, 2400/2666/3200 MHz, máx. 32 GB"
+        },
+        {
+          "label": "Salida de vídeo",
+          "value": "2 × HDMI 1.4 (4K a 30 Hz)"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.0, hasta 4 × USB 2.0 mediante conectores internos"
+        },
+        {
+          "label": "Alimentación",
+          "value": "12 V DC (5.5 × 2.5 mm)"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "1 × M.2 2242 NVMe + 2 × SATA 3.0"
+        },
+        {
+          "label": "Módulos inalámbricos",
+          "value": "1 × M.2 2230 E-key para Wi-Fi 6 / Bluetooth"
+        },
+        {
+          "label": "Conexiones frontales",
+          "value": "2 × HDMI 1.4, 2 × USB 3.0, 2 × 2.5GbE, 12 V DC, botón de encendido"
+        },
+        {
+          "label": "Conexiones traseras",
+          "value": "Panel trasero de serie sin puertos, opcionalmente 4 × USB 2.0 y 2 conectores de antena Wi-Fi"
+        },
+        {
+          "label": "Conectores internos",
+          "value": "M.2 E-key, GPIO, COM, SATA de datos/alimentación de 12 pines, puente CMOS/BIOS, separador M.2 2242 y ranura M-key PCIe 3.0 ×4, 2 conectores USB 2.0, DDR4 SO-DIMM"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "112 × 100 × 36.3 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Aleación de aluminio"
+        },
+        {
+          "label": "TDP",
+          "value": "15 W"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 7 / 8 / 10, Linux"
+        },
+        {
+          "label": "Condiciones de funcionamiento",
+          "value": "0–70 °C, 5–90 % HR"
+        },
+        {
+          "label": "Color",
+          "value": "Gris / negro"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp3/front.webp",
+          "title": "MCSRP3 · panel frontal"
+        },
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp3/rear.webp",
+          "title": "MCSRP3 · panel trasero de serie"
+        }
+      ]
+    }
+  }
+}

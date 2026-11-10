@@ -1,0 +1,634 @@
+{
+  "id": "mcsrp5",
+  "name": "MCSRP5",
+  "category": "firewall-mini-pc",
+  "series": "2L",
+  "published": true,
+  "image": "/assets/products/firewall/dual-port-series/mcsrp5/front.webp",
+  "images": [
+    "/assets/products/firewall/dual-port-series/mcsrp5/front.webp"
+  ],
+  "galleryImages": [
+    "/assets/products/firewall/dual-port-series/mcsrp5/front.webp",
+    "/assets/products/firewall/dual-port-series/mcsrp5/rear.webp"
+  ],
+  "operatingRange": "0–75 °C",
+  "sourceBrochure": "软路由SR/MCSRP5 brochure.pdf",
+  "sourceSha256": "65c59c6170ae8ff08cd56d4ba7af0a20efabfcef76eb13b3431a73e10efd5ba3",
+  "tagline": "Alder Lake-N network appliance with dual 2.5GbE and DDR5",
+  "description": "MCSRP5 offers Intel N100, N200 or Core i3-N305, up to 32 GB DDR5 and two Intel 2.5GbE ports. Both HDMI 2.0 ports support 4K at 60 Hz. Its fanless enclosure takes 12–19 V DC.",
+  "highlights": [
+    "Intel Alder Lake-N",
+    "2 × Intel i226-V 2.5GbE",
+    "Up to 32 GB DDR5",
+    "2 × HDMI 2.0"
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCSRP5"
+    },
+    {
+      "label": "Network",
+      "value": "2 × Intel i226-V 2.5GbE"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel N100 / N200 / Core i3-N305"
+    },
+    {
+      "label": "Chipset",
+      "value": "Intel Alder Lake-N"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel UHD Graphics"
+    },
+    {
+      "label": "Memory",
+      "value": "1 × DDR5 SO-DIMM, up to 32 GB"
+    },
+    {
+      "label": "Display",
+      "value": "2 × HDMI 2.0, each up to 4K at 60 Hz"
+    },
+    {
+      "label": "USB",
+      "value": "2 × USB 3.2 Gen 2 (10 Gbps). Two internal USB 2.0 headers."
+    },
+    {
+      "label": "Power",
+      "value": "12–19 V DC (5.5 × 2.5 mm)"
+    },
+    {
+      "label": "Mainboard",
+      "value": "12–24 V DC at board level"
+    },
+    {
+      "label": "Storage",
+      "value": "1 × M.2 NVMe (PCIe 3.0 ×1)"
+    },
+    {
+      "label": "Front I/O",
+      "value": "12–19 V DC, 2 × HDMI 2.0, 2 × 2.5GbE, 2 × USB 3.2, power button"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "Standard blank panel. Optional 4 × USB 2.0 with dedicated panel, or SFF-8654 8i + 12 V ATX output with dedicated cable. Options sold separately."
+    },
+    {
+      "label": "Internal I/O",
+      "value": "SFF-8654 8i, 4-pin ATX output, Phoenix terminal, GPIO, COM, eDP, fan and USB 2.0 headers"
+    },
+    {
+      "label": "Dimensions",
+      "value": "Chassis: 115 × 114.3 × 40 mm. Board: 100 × 112 mm."
+    },
+    {
+      "label": "Material",
+      "value": "Aluminum alloy"
+    },
+    {
+      "label": "Cooling",
+      "value": "Fanless, with copper heat spreader"
+    },
+    {
+      "label": "TDP",
+      "value": "9–15 W, depending on processor"
+    },
+    {
+      "label": "Mounting",
+      "value": "Desktop or wall"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0 to 75 °C, 10–90% RH"
+    },
+    {
+      "label": "Weight / color",
+      "value": "Black, approx. 0.4 kg"
+    }
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/firewall/dual-port-series/mcsrp5/front.webp",
+      "title": "MCSRP5 · front panel"
+    },
+    {
+      "image": "/assets/products/firewall/dual-port-series/mcsrp5/rear.webp",
+      "title": "MCSRP5 · standard rear panel"
+    }
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MCSRP5"
+    },
+    {
+      "label": "Network",
+      "value": "2 × Intel i226-V 2.5GbE"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel N100 / N200 / Core i3-N305"
+    },
+    {
+      "label": "Chipset",
+      "value": "Intel Alder Lake-N"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel UHD Graphics"
+    },
+    {
+      "label": "Memory",
+      "value": "1 × DDR5 SO-DIMM, up to 32 GB"
+    },
+    {
+      "label": "Display",
+      "value": "2 × HDMI 2.0, each up to 4K at 60 Hz"
+    },
+    {
+      "label": "USB",
+      "value": "2 × USB 3.2 Gen 2 (10 Gbps). Two internal USB 2.0 headers."
+    },
+    {
+      "label": "Power",
+      "value": "12–19 V DC (5.5 × 2.5 mm)"
+    },
+    {
+      "label": "Mainboard",
+      "value": "12–24 V DC at board level"
+    },
+    {
+      "label": "Storage",
+      "value": "1 × M.2 NVMe (PCIe 3.0 ×1)"
+    },
+    {
+      "label": "Front I/O",
+      "value": "12–19 V DC, 2 × HDMI 2.0, 2 × 2.5GbE, 2 × USB 3.2, power button"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "Standard blank panel. Optional 4 × USB 2.0 with dedicated panel, or SFF-8654 8i + 12 V ATX output with dedicated cable. Options sold separately."
+    },
+    {
+      "label": "Internal I/O",
+      "value": "SFF-8654 8i, 4-pin ATX output, Phoenix terminal, GPIO, COM, eDP, fan and USB 2.0 headers"
+    },
+    {
+      "label": "Dimensions",
+      "value": "Chassis: 115 × 114.3 × 40 mm. Board: 100 × 112 mm."
+    },
+    {
+      "label": "Material",
+      "value": "Aluminum alloy"
+    },
+    {
+      "label": "Cooling",
+      "value": "Fanless, with copper heat spreader"
+    },
+    {
+      "label": "TDP",
+      "value": "9–15 W, depending on processor"
+    },
+    {
+      "label": "Mounting",
+      "value": "Desktop or wall"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0 to 75 °C, 10–90% RH"
+    },
+    {
+      "label": "Weight / color",
+      "value": "Black, approx. 0.4 kg"
+    }
+  ],
+  "translations": {
+    "de": {
+      "tagline": "Alder-Lake-N-Netzwerkgerät mit zwei 2,5-GbE-Ports und DDR5",
+      "description": "MCSRP5 bietet Intel N100, N200 oder Core i3-N305, bis zu 32 GB DDR5 und zwei Intel-2,5-GbE-Ports. Beide HDMI-2.0-Anschlüsse unterstützen 4K bei 60 Hz. Das lüfterlose Gehäuse wird mit 12–19 V DC versorgt.",
+      "highlights": [
+        "Intel Alder Lake-N",
+        "2 × Intel i226-V 2.5GbE",
+        "Bis zu 32 GB DDR5",
+        "2 × HDMI 2.0"
+      ],
+      "specs": [
+        {
+          "label": "Modell",
+          "value": "MCSRP5"
+        },
+        {
+          "label": "Netzwerk",
+          "value": "2 × Intel i226-V 2.5GbE"
+        },
+        {
+          "label": "Prozessor",
+          "value": "Intel N100 / N200 / Core i3-N305"
+        },
+        {
+          "label": "Plattform",
+          "value": "Intel Alder Lake-N"
+        },
+        {
+          "label": "Grafik",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Arbeitsspeicher",
+          "value": "1 × DDR5 SO-DIMM, bis zu 32 GB"
+        },
+        {
+          "label": "Bildausgabe",
+          "value": "2 × HDMI 2.0, jeweils bis 4K bei 60 Hz"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.2 Gen 2 (10 Gbit/s). Zwei interne USB-2.0-Header."
+        },
+        {
+          "label": "Stromversorgung",
+          "value": "12–19 V DC (5.5 × 2.5 mm)"
+        },
+        {
+          "label": "Hauptplatine",
+          "value": "12–24 V DC auf Platinenebene"
+        },
+        {
+          "label": "Massenspeicher",
+          "value": "1 × M.2 NVMe (PCIe 3.0 ×1)"
+        },
+        {
+          "label": "Frontanschlüsse",
+          "value": "12–19 V DC, 2 × HDMI 2.0, 2 × 2.5GbE, 2 × USB 3.2, Ein/Aus-Taste"
+        },
+        {
+          "label": "Rückseitige Anschlüsse",
+          "value": "Geschlossene Rückblende serienmäßig. Optional 4 × USB 2.0 mit eigener Blende oder SFF-8654 8i + 12-V-ATX-Ausgang mit passendem Kabel. Optionen separat erhältlich."
+        },
+        {
+          "label": "Interne Anschlüsse",
+          "value": "SFF-8654 8i, 4-poliger ATX-Ausgang, Phoenix-Klemme, GPIO-, COM-, eDP-, Lüfter- und USB-2.0-Header"
+        },
+        {
+          "label": "Abmessungen",
+          "value": "Gehäuse: 115 × 114,3 × 40 mm. Platine: 100 × 112 mm."
+        },
+        {
+          "label": "Material",
+          "value": "Aluminiumlegierung"
+        },
+        {
+          "label": "Kühlung",
+          "value": "Lüfterlos mit Kupfer-Wärmeverteiler"
+        },
+        {
+          "label": "TDP",
+          "value": "9–15 W je nach Prozessor"
+        },
+        {
+          "label": "Montage",
+          "value": "Tisch- oder Wandmontage"
+        },
+        {
+          "label": "Betriebsumgebung",
+          "value": "0 bis 75 °C, 10–90 % rF"
+        },
+        {
+          "label": "Gewicht und Farbe",
+          "value": "Schwarz, ca. 0,4 kg"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp5/front.webp",
+          "title": "MCSRP5 · Frontblende"
+        },
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp5/rear.webp",
+          "title": "MCSRP5 · Standard-Rückblende"
+        }
+      ]
+    },
+    "fr": {
+      "tagline": "Appliance réseau Alder Lake-N à deux ports 2,5 GbE et DDR5",
+      "description": "Le MCSRP5 propose un Intel N100, N200 ou Core i3-N305, jusqu’à 32 Go de DDR5 et deux ports Intel 2,5 GbE. Les deux ports HDMI 2.0 prennent chacun en charge la 4K à 60 Hz. Son boîtier sans ventilateur est alimenté en 12–19 V CC.",
+      "highlights": [
+        "Intel Alder Lake-N",
+        "2 × Intel i226-V 2.5GbE",
+        "Jusqu’à 32 Go de DDR5",
+        "2 × HDMI 2.0"
+      ],
+      "specs": [
+        {
+          "label": "Modèle",
+          "value": "MCSRP5"
+        },
+        {
+          "label": "Réseau",
+          "value": "2 × Intel i226-V 2.5GbE"
+        },
+        {
+          "label": "Processeur",
+          "value": "Intel N100 / N200 / Core i3-N305"
+        },
+        {
+          "label": "Plateforme",
+          "value": "Intel Alder Lake-N"
+        },
+        {
+          "label": "Graphiques",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Mémoire",
+          "value": "1 × SO-DIMM DDR5, jusqu’à 32 Go"
+        },
+        {
+          "label": "Affichage",
+          "value": "2 × HDMI 2.0, chacun jusqu’à 4K à 60 Hz"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.2 Gen 2 (10 Gbit/s). Deux connecteurs internes USB 2.0."
+        },
+        {
+          "label": "Alimentation",
+          "value": "12–19 V DC (5.5 × 2.5 mm)"
+        },
+        {
+          "label": "Carte mère",
+          "value": "12–24 V CC au niveau de la carte"
+        },
+        {
+          "label": "Stockage",
+          "value": "1 × M.2 NVMe (PCIe 3.0 ×1)"
+        },
+        {
+          "label": "Connectique avant",
+          "value": "12–19 V DC, 2 × HDMI 2.0, 2 × 2.5GbE, 2 × USB 3.2, bouton d’alimentation"
+        },
+        {
+          "label": "Connectique arrière",
+          "value": "Panneau sans ports en standard. En option, 4 × USB 2.0 avec panneau dédié ou SFF-8654 8i + sortie ATX 12 V avec câble dédié. Options vendues séparément."
+        },
+        {
+          "label": "Connectique interne",
+          "value": "SFF-8654 8i, sortie ATX 4 broches, bornier Phoenix et connecteurs GPIO, COM, eDP, ventilateur et USB 2.0"
+        },
+        {
+          "label": "Dimensions",
+          "value": "Boîtier : 115 × 114,3 × 40 mm. Carte : 100 × 112 mm."
+        },
+        {
+          "label": "Matériau",
+          "value": "Alliage d’aluminium"
+        },
+        {
+          "label": "Refroidissement",
+          "value": "Sans ventilateur, avec diffuseur thermique en cuivre"
+        },
+        {
+          "label": "TDP",
+          "value": "9–15 W selon le processeur"
+        },
+        {
+          "label": "Montage",
+          "value": "Sur table ou au mur"
+        },
+        {
+          "label": "Conditions de fonctionnement",
+          "value": "0 à 75 °C, 10–90 % HR"
+        },
+        {
+          "label": "Poids et couleur",
+          "value": "Noir, env. 0,4 kg"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp5/front.webp",
+          "title": "MCSRP5 · panneau avant"
+        },
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp5/rear.webp",
+          "title": "MCSRP5 · panneau arrière standard"
+        }
+      ]
+    },
+    "it": {
+      "tagline": "Appliance di rete Alder Lake-N con due porte 2,5 GbE e DDR5",
+      "description": "MCSRP5 offre Intel N100, N200 o Core i3-N305, fino a 32 GB di DDR5 e due porte Intel 2,5 GbE. Entrambe le porte HDMI 2.0 supportano il 4K a 60 Hz. Lo chassis senza ventola è alimentato a 12–19 V CC.",
+      "highlights": [
+        "Intel Alder Lake-N",
+        "2 × Intel i226-V 2.5GbE",
+        "Fino a 32 GB di DDR5",
+        "2 × HDMI 2.0"
+      ],
+      "specs": [
+        {
+          "label": "Modello",
+          "value": "MCSRP5"
+        },
+        {
+          "label": "Rete",
+          "value": "2 × Intel i226-V 2.5GbE"
+        },
+        {
+          "label": "Processore",
+          "value": "Intel N100 / N200 / Core i3-N305"
+        },
+        {
+          "label": "Piattaforma",
+          "value": "Intel Alder Lake-N"
+        },
+        {
+          "label": "Grafica",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 × SO-DIMM DDR5, fino a 32 GB"
+        },
+        {
+          "label": "Uscita video",
+          "value": "2 × HDMI 2.0, ciascuna fino a 4K a 60 Hz"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.2 Gen 2 (10 Gbps). Due connettori interni USB 2.0."
+        },
+        {
+          "label": "Alimentazione",
+          "value": "12–19 V DC (5.5 × 2.5 mm)"
+        },
+        {
+          "label": "Scheda madre",
+          "value": "12–24 V CC a livello di scheda"
+        },
+        {
+          "label": "Archiviazione",
+          "value": "1 × M.2 NVMe (PCIe 3.0 ×1)"
+        },
+        {
+          "label": "Porte anteriori",
+          "value": "12–19 V DC, 2 × HDMI 2.0, 2 × 2.5GbE, 2 × USB 3.2, pulsante di accensione"
+        },
+        {
+          "label": "Porte posteriori",
+          "value": "Pannello standard senza porte. In opzione, 4 × USB 2.0 con pannello dedicato o SFF-8654 8i + uscita ATX 12 V con cavo dedicato. Opzioni vendute separatamente."
+        },
+        {
+          "label": "Connettori interni",
+          "value": "SFF-8654 8i, uscita ATX a 4 pin, morsetto Phoenix e connettori GPIO, COM, eDP, ventola e USB 2.0"
+        },
+        {
+          "label": "Dimensioni",
+          "value": "Chassis: 115 × 114,3 × 40 mm. Scheda: 100 × 112 mm."
+        },
+        {
+          "label": "Materiale",
+          "value": "Lega di alluminio"
+        },
+        {
+          "label": "Raffreddamento",
+          "value": "Senza ventola, con diffusore termico in rame"
+        },
+        {
+          "label": "TDP",
+          "value": "9–15 W a seconda del processore"
+        },
+        {
+          "label": "Montaggio",
+          "value": "Su piano o a parete"
+        },
+        {
+          "label": "Condizioni operative",
+          "value": "Da 0 a 75 °C, 10–90% UR"
+        },
+        {
+          "label": "Peso e colore",
+          "value": "Nero, circa 0,4 kg"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp5/front.webp",
+          "title": "MCSRP5 · pannello anteriore"
+        },
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp5/rear.webp",
+          "title": "MCSRP5 · pannello posteriore standard"
+        }
+      ]
+    },
+    "es": {
+      "tagline": "Equipo de red Alder Lake-N con dos puertos de 2,5 GbE y DDR5",
+      "description": "MCSRP5 ofrece Intel N100, N200 o Core i3-N305, hasta 32 GB de DDR5 y dos puertos Intel de 2,5 GbE. Los dos puertos HDMI 2.0 admiten 4K a 60 Hz cada uno. El chasis sin ventilador funciona con 12–19 V CC.",
+      "highlights": [
+        "Intel Alder Lake-N",
+        "2 × Intel i226-V 2.5GbE",
+        "Hasta 32 GB de DDR5",
+        "2 × HDMI 2.0"
+      ],
+      "specs": [
+        {
+          "label": "Modelo",
+          "value": "MCSRP5"
+        },
+        {
+          "label": "Red",
+          "value": "2 × Intel i226-V 2.5GbE"
+        },
+        {
+          "label": "Procesador",
+          "value": "Intel N100 / N200 / Core i3-N305"
+        },
+        {
+          "label": "Plataforma",
+          "value": "Intel Alder Lake-N"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 × SO-DIMM DDR5, hasta 32 GB"
+        },
+        {
+          "label": "Salida de vídeo",
+          "value": "2 × HDMI 2.0, cada uno hasta 4K a 60 Hz"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.2 Gen 2 (10 Gbps). Dos conectores internos USB 2.0."
+        },
+        {
+          "label": "Alimentación",
+          "value": "12–19 V DC (5.5 × 2.5 mm)"
+        },
+        {
+          "label": "Placa base",
+          "value": "12–24 V CC en la placa base"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "1 × M.2 NVMe (PCIe 3.0 ×1)"
+        },
+        {
+          "label": "Conexiones frontales",
+          "value": "12–19 V DC, 2 × HDMI 2.0, 2 × 2.5GbE, 2 × USB 3.2, botón de encendido"
+        },
+        {
+          "label": "Conexiones traseras",
+          "value": "Panel de serie sin puertos. Opcionalmente, 4 × USB 2.0 con panel específico o SFF-8654 8i + salida ATX de 12 V con cable específico. Opciones de venta por separado."
+        },
+        {
+          "label": "Conectores internos",
+          "value": "SFF-8654 8i, salida ATX de 4 pines, bornera Phoenix y conectores GPIO, COM, eDP, ventilador y USB 2.0"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "Chasis: 115 × 114,3 × 40 mm. Placa: 100 × 112 mm."
+        },
+        {
+          "label": "Material",
+          "value": "Aleación de aluminio"
+        },
+        {
+          "label": "Refrigeración",
+          "value": "Sin ventilador, con difusor térmico de cobre"
+        },
+        {
+          "label": "TDP",
+          "value": "9–15 W según el procesador"
+        },
+        {
+          "label": "Montaje",
+          "value": "En sobremesa o en pared"
+        },
+        {
+          "label": "Condiciones de funcionamiento",
+          "value": "De 0 a 75 °C, 10–90 % HR"
+        },
+        {
+          "label": "Peso y color",
+          "value": "Negro, aprox. 0,4 kg"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp5/front.webp",
+          "title": "MCSRP5 · panel frontal"
+        },
+        {
+          "image": "/assets/products/firewall/dual-port-series/mcsrp5/rear.webp",
+          "title": "MCSRP5 · panel trasero de serie"
+        }
+      ]
+    }
+  }
+}

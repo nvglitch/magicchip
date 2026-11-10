@@ -6,6 +6,10 @@ import type { ProductConfiguration } from '@/lib/product-specifications';
 import type { CatalogProductFeature, CatalogProductTranslations } from '@/lib/catalog-product-copy';
 import { mcsrc26 } from '@/lib/mcsrc26';
 import { mcsrp1Hdmi } from '@/lib/mcsrp1-hdmi';
+import mcsrp3 from '@/content/products/items/mcsrp3.json';
+import mcsrp4 from '@/content/products/items/mcsrp4.json';
+import mcsrp5 from '@/content/products/items/mcsrp5.json';
+import mcsrp6 from '@/content/products/items/mcsrp6.json';
 
 export type FirewallSeriesCode = '2L' | '4L' | '6L' | '10G' | '1U';
 
@@ -35,6 +39,9 @@ export type FirewallCatalogItem = {
   advantageSummary?: string;
   translations?: CatalogProductTranslations;
 };
+
+const mcsrpProducts: FirewallCatalogItem[] = [mcsrp3, mcsrp4, mcsrp5, mcsrp6]
+  .map(item => ({ ...item, series: '2L' }));
 
 const seriesDirectories: Record<FirewallSeriesCode, string> = {
   '2L': 'dual-port-series',
@@ -127,41 +134,7 @@ export const firewallCatalog: FirewallCatalogItem[] = [
     dimensions: '112.3 x 100 x 36.5 mm', operatingRange: '0°C to 70°C',
     highlights: ['Intel Celeron platform', '2 x Intel 2.5GbE', '2 x HDMI 1.4', 'M.2 NVMe storage'],
   }),
-  createProduct({
-    id: 'mcsrp3', name: 'MCSRP3', series: '2L',
-    tagline: 'Expandable dual-2.5GbE edge appliance',
-    description: 'MCSRP3 supports up to 32GB DDR4, dual Intel 2.5GbE, dual HDMI, NVMe and SATA storage, and wireless expansion for adaptable edge network deployments.',
-    cpu: 'Intel Celeron N5100 / N5105 / N6005', memory: 'DDR4, up to 32GB', network: '2 x Intel i226-V 2.5GbE',
-    display: '2 x HDMI 1.4', usb: '2 x USB 3.0 and 4 x USB 2.0', storage: 'M.2 NVMe 2242 and 2 x SATA 3.0',
-    expansion: 'M.2 E-Key for Wi-Fi / Bluetooth', operatingRange: '0°C to 70°C',
-    highlights: ['Intel Jasper Lake options', '2 x Intel 2.5GbE', 'DDR4 up to 32GB', 'NVMe + dual SATA'],
-  }),
-  createProduct({
-    id: 'mcsrp4', name: 'MCSRP4', series: '2L',
-    tagline: 'Elkhart Lake dual-2.5GbE network appliance',
-    description: 'MCSRP4 is a compact Elkhart Lake appliance with dual 2.5GbE, dual 4K-capable HDMI, NVMe and SATA storage, and an extended operating range.',
-    cpu: 'Intel Celeron J6412', memory: 'DDR4, up to 32GB', network: '2 x Intel i226-V 2.5GbE',
-    display: '2 x HDMI 2.0', usb: '2 x USB 3.1 and 4 x USB 2.0', storage: 'M.2 Key-M 2242 NVMe and 2 x SATA 3.0',
-    power: 'DC 12V', dimensions: '100 x 112 x 39.7 mm', operatingRange: '-10°C to 60°C',
-    highlights: ['Intel Celeron J6412', '2 x Intel 2.5GbE', '2 x HDMI 2.0', 'NVMe + dual SATA'],
-  }),
-  createProduct({
-    id: 'mcsrp5', name: 'MCSRP5', series: '2L',
-    tagline: 'Alder Lake-N dual-2.5GbE gateway platform',
-    description: 'MCSRP5 brings DDR5 memory, two Intel 2.5GbE ports, dual HDMI 2.0, and NVMe storage to a compact Alder Lake-N network platform.',
-    cpu: 'Intel N100 / N200 / Core i3-N305', memory: 'DDR5, up to 32GB', network: '2 x Intel i226-V 2.5GbE',
-    display: '2 x HDMI 2.0, up to 4K 60Hz', usb: '2 x USB 3.2 plus USB 2.0 headers', storage: 'M.2 NVMe 2242 / 2280',
-    operatingRange: '-10°C to 70°C', highlights: ['Intel Alder Lake-N', '2 x Intel 2.5GbE', 'DDR5 up to 32GB', 'Dual HDMI 2.0'],
-  }),
-  createProduct({
-    id: 'mcsrp6', name: 'MCSRP6', series: '2L',
-    tagline: 'Compact dual-2.5GbE Alder Lake-N and Twin Lake appliance',
-    description: 'MCSRP6 combines a compact fanless enclosure with dual Intel 2.5GbE, DDR5 memory, HDMI and DisplayPort output, and wide-range DC input.',
-    cpu: 'Intel Alder Lake-N or Twin Lake options', memory: 'DDR5, up to 48GB', network: '2 x Intel i226-V 2.5GbE',
-    display: 'HDMI 2.0 and DisplayPort 1.4', usb: '2 x USB 3.2 Gen 2', storage: 'M.2 NVMe', power: 'DC 12-24V',
-    dimensions: '115 x 114.3 x 40 mm', operatingRange: '0°C to 75°C',
-    highlights: ['Alder Lake-N / Twin Lake', '2 x Intel 2.5GbE', 'DDR5 up to 48GB', 'DC 12-24V input'],
-  }),
+  ...mcsrpProducts,
 
   createProduct({
     id: 'mc30s-ddr4', name: 'MC30S DDR4', series: '4L',

@@ -9,7 +9,8 @@ renderer=module('renderer','pdf-product-images.py'); importer=module('brochures'
 root=importer.SOURCE_ROOT
 models=['mcaipc3a','mcaipc3b','mcaipc3c','mcaipc3d','mcipc1','mcn7a','mcn7p']
 for mid in models:
- source=next(p for p in root.rglob('*.pdf') if p.stem.lower().startswith(mid+' '))
+ source=next(p for p in root.rglob('*.pdf')
+             if p.relative_to(root).parts[0] != '定制册子' and p.stem.lower().startswith(mid+' '))
  views=renderer.rendered_images(PdfReader(source).pages[0])
  base=f'/assets/products/ai/brochure/{mid}' if mid.startswith('mcai') else f'/assets/products/commercial/ver2/{mid}' if mid.startswith('mcn') else f'/assets/products/industrial/c-series/{mid}/images'
  out=ROOT/'public'/base.lstrip('/')

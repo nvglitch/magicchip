@@ -14,7 +14,9 @@ audit = []
 manifest_path = Path(__file__).resolve().parents[1] / 'docs/brochure-source-manifest.json'
 excluded_paths = {item['relativePath'] for item in json.loads(manifest_path.read_text(encoding='utf-8'))['files'] if item.get('excluded')}
 for source in brochures.SOURCE_ROOT.rglob('*.pdf'):
-    if source.relative_to(brochures.SOURCE_ROOT).as_posix() in excluded_paths: continue
+    relative = source.relative_to(brochures.SOURCE_ROOT)
+    if relative.parts[0] == '定制册子' or relative.as_posix() in excluded_paths:
+        continue
     model = re.sub(r'\s*brochure$', '', source.stem, flags=re.I)
     key = normalize(model)
     key = {'mcmqrseries': 'mcmqr5r6r7r8', 'newmcsr613u': 'mcsr613u'}.get(key, key)
