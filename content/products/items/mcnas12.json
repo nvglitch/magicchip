@@ -1,0 +1,734 @@
+{
+  "id": "mcnas12",
+  "name": "MCNAS12",
+  "category": "commercial-mini-pc",
+  "series": "NAS",
+  "published": true,
+  "image": "/assets/products/commercial/reviewed/mcnas12/rear.webp",
+  "images": [
+    "/assets/products/commercial/reviewed/mcnas12/rear.webp"
+  ],
+  "galleryImages": [
+    "/assets/products/commercial/reviewed/mcnas12/front.webp",
+    "/assets/products/commercial/reviewed/mcnas12/rear.webp"
+  ],
+  "operatingRange": "0°C to 60°C",
+  "sourceBrochure": "NAS PC/MCNAS12 brochure.pdf",
+  "sourceSha256": "e4bbcf0c2de96bc5e3e9f335e2ccbfe78c3a49a72de27ee5c0f47c779fcb2066",
+  "tagline": "DDR5 NAS computer with four 2.5GbE and two 10GbE SFP+ ports",
+  "description": "MCNAS12 offers selected Intel Alder Lake-U and Raptor Lake-U processors, up to 64 GB DDR5 and M.2 NVMe PCIe 4.0 ×4 storage. Four Intel i226 2.5GbE ports, two Intel 82599ES 10GbE SFP+ ports and an RJ45 serial console support local storage and network integration. The aluminum enclosure measures 154.6 × 131.7 × 60 mm.",
+  "highlights": [
+    "Intel Core i5-1235U / Core i3-1315U / Core i3-1215U / Processor U300E / Pentium Gold 8505",
+    "2 × DDR5 SO-DIMM, up to 64 GB / 5600 MHz",
+    "4 × Intel i226 2.5GbE RJ45 + 2 × Intel 82599ES 10GbE SFP+",
+    "1 × DisplayPort + 2 × HDMI + 1 × Type-C 3.1"
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCNAS12"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel Core i5-1235U / Core i3-1315U / Core i3-1215U / Processor U300E / Pentium Gold 8505"
+    },
+    {
+      "label": "Chipset",
+      "value": "Intel Alder Lake-U / Raptor Lake-U"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel UHD / Iris Xe Graphics"
+    },
+    {
+      "label": "Display",
+      "value": "1 × DisplayPort + 2 × HDMI + 1 × Type-C 3.1"
+    },
+    {
+      "label": "Memory",
+      "value": "2 × DDR5 SO-DIMM, up to 64 GB / 5600 MHz"
+    },
+    {
+      "label": "Material",
+      "value": "Aluminum alloy"
+    },
+    {
+      "label": "USB",
+      "value": "1 × USB 3.2 Gen 1 + 1 × Type-C 3.1 + 2 × USB 2.0"
+    },
+    {
+      "label": "Power",
+      "value": "12–19 V DC, 5.5 × 2.5 mm"
+    },
+    {
+      "label": "Network",
+      "value": "4 × Intel i226 2.5GbE RJ45 + 2 × Intel 82599ES 10GbE SFP+"
+    },
+    {
+      "label": "Serial",
+      "value": "1 × RJ45 COM"
+    },
+    {
+      "label": "Storage",
+      "value": "1 × M.2 NVMe PCIe 4.0 ×4 + 2 × SATA 3.0"
+    },
+    {
+      "label": "Expansion",
+      "value": "1 × TF card slot"
+    },
+    {
+      "label": "Dimensions",
+      "value": "154.6 × 131.7 × 60 mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI EFI BIOS"
+    },
+    {
+      "label": "System",
+      "value": "Windows 10 / Windows 11 / Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0–60 °C, 0–95% RH, non-condensing"
+    },
+    {
+      "label": "TDP",
+      "value": "15–28 W"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "DC input, 4 × 2.5GbE RJ45, 2 × 10GbE SFP+, 1 × RJ45 COM"
+    },
+    {
+      "label": "Front I/O",
+      "value": "1 × Type-C 3.1, 2 × USB 2.0, 1 × USB 3.2, 2 × HDMI, 1 × DP, TF, 2 × antenna connectors, audio jack, power button"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "2 × SATA 3.0, 1 × M.2, 1 × F_PANEL"
+    }
+  ],
+  "features": [
+    {
+      "icon": "Network",
+      "title": "Network interfaces",
+      "description": "4 × Intel i226 2.5GbE RJ45 + 2 × Intel 82599ES 10GbE SFP+"
+    },
+    {
+      "icon": "HardDrive",
+      "title": "Storage connections",
+      "description": "1 × M.2 NVMe PCIe 4.0 ×4 + 2 × SATA 3.0"
+    },
+    {
+      "icon": "Monitor",
+      "title": "Display connections",
+      "description": "1 × DisplayPort + 2 × HDMI + 1 × Type-C 3.1"
+    }
+  ],
+  "specificationHeading": "Hardware specifications",
+  "featureHeading": "Network, storage and display connections",
+  "advantageSummary": "DDR5 NAS computer with four 2.5GbE and two 10GbE SFP+ ports",
+  "galleryCards": [
+    {
+      "image": "/assets/products/commercial/reviewed/mcnas12/front.webp",
+      "title": "MCNAS12 · front panel"
+    },
+    {
+      "image": "/assets/products/commercial/reviewed/mcnas12/rear.webp",
+      "title": "MCNAS12 · rear panel"
+    }
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MCNAS12"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel Core i5-1235U / Core i3-1315U / Core i3-1215U / Processor U300E / Pentium Gold 8505"
+    },
+    {
+      "label": "Chipset",
+      "value": "Intel Alder Lake-U / Raptor Lake-U"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel UHD / Iris Xe Graphics"
+    },
+    {
+      "label": "Display",
+      "value": "1 × DisplayPort + 2 × HDMI + 1 × Type-C 3.1"
+    },
+    {
+      "label": "Memory",
+      "value": "2 × DDR5 SO-DIMM, up to 64 GB / 5600 MHz"
+    },
+    {
+      "label": "Material",
+      "value": "Aluminum alloy"
+    },
+    {
+      "label": "USB",
+      "value": "1 × USB 3.2 Gen 1 + 1 × Type-C 3.1 + 2 × USB 2.0"
+    },
+    {
+      "label": "Power",
+      "value": "12–19 V DC, 5.5 × 2.5 mm"
+    },
+    {
+      "label": "Network",
+      "value": "4 × Intel i226 2.5GbE RJ45 + 2 × Intel 82599ES 10GbE SFP+"
+    },
+    {
+      "label": "Serial",
+      "value": "1 × RJ45 COM"
+    },
+    {
+      "label": "Storage",
+      "value": "1 × M.2 NVMe PCIe 4.0 ×4 + 2 × SATA 3.0"
+    },
+    {
+      "label": "Expansion",
+      "value": "1 × TF card slot"
+    },
+    {
+      "label": "Dimensions",
+      "value": "154.6 × 131.7 × 60 mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI EFI BIOS"
+    },
+    {
+      "label": "System",
+      "value": "Windows 10 / Windows 11 / Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0–60 °C, 0–95% RH, non-condensing"
+    },
+    {
+      "label": "TDP",
+      "value": "15–28 W"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "DC input, 4 × 2.5GbE RJ45, 2 × 10GbE SFP+, 1 × RJ45 COM"
+    },
+    {
+      "label": "Front I/O",
+      "value": "1 × Type-C 3.1, 2 × USB 2.0, 1 × USB 3.2, 2 × HDMI, 1 × DP, TF, 2 × antenna connectors, audio jack, power button"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "2 × SATA 3.0, 1 × M.2, 1 × F_PANEL"
+    }
+  ],
+  "translations": {
+    "de": {
+      "tagline": "DDR5-NAS-Computer mit vier 2,5-GbE- und zwei 10-GbE-SFP+-Ports",
+      "description": "MCNAS12 bietet ausgewählte Intel-Alder-Lake-U- und Raptor-Lake-U-Prozessoren, bis zu 64 GB DDR5 und M.2-NVMe-Speicher mit PCIe 4.0 ×4. Vier Intel-i226-2,5-GbE-Ports, zwei Intel-82599ES-10-GbE-SFP+-Ports und eine serielle RJ45-Konsole unterstützen lokale Speicher- und Netzwerksysteme. Das Aluminiumgehäuse misst 154,6 × 131,7 × 60 mm.",
+      "highlights": [
+        "Intel Core i5-1235U / Core i3-1315U / Core i3-1215U / Processor U300E / Pentium Gold 8505",
+        "2 × DDR5 SO-DIMM, bis zu 64 GB / 5600 MHz",
+        "4 × Intel i226 2.5GbE RJ45 + 2 × Intel 82599ES 10GbE SFP+",
+        "1 × DisplayPort + 2 × HDMI + 1 × Type-C 3.1"
+      ],
+      "specs": [
+        {
+          "label": "Modell",
+          "value": "MCNAS12"
+        },
+        {
+          "label": "Prozessor",
+          "value": "Intel Core i5-1235U / Core i3-1315U / Core i3-1215U / Processor U300E / Pentium Gold 8505"
+        },
+        {
+          "label": "Plattform",
+          "value": "Intel Alder Lake-U / Raptor Lake-U"
+        },
+        {
+          "label": "Grafik",
+          "value": "Intel UHD / Iris Xe Graphics"
+        },
+        {
+          "label": "Bildausgabe",
+          "value": "1 × DisplayPort + 2 × HDMI + 1 × Type-C 3.1"
+        },
+        {
+          "label": "Arbeitsspeicher",
+          "value": "2 × DDR5 SO-DIMM, bis zu 64 GB / 5600 MHz"
+        },
+        {
+          "label": "Material",
+          "value": "Aluminiumlegierung"
+        },
+        {
+          "label": "USB",
+          "value": "1 × USB 3.2 Gen 1 + 1 × Type-C 3.1 + 2 × USB 2.0"
+        },
+        {
+          "label": "Stromversorgung",
+          "value": "12–19 V DC, 5.5 × 2.5 mm"
+        },
+        {
+          "label": "Netzwerk",
+          "value": "4 × Intel i226 2.5GbE RJ45 + 2 × Intel 82599ES 10GbE SFP+"
+        },
+        {
+          "label": "Serielle Anschlüsse",
+          "value": "1 × RJ45 COM"
+        },
+        {
+          "label": "Massenspeicher",
+          "value": "1 × M.2 NVMe PCIe 4.0 ×4 + 2 × SATA 3.0"
+        },
+        {
+          "label": "Erweiterung",
+          "value": "1 × TF-Kartensteckplatz"
+        },
+        {
+          "label": "Abmessungen",
+          "value": "154.6 × 131.7 × 60 mm"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI EFI BIOS"
+        },
+        {
+          "label": "Betriebssystem",
+          "value": "Windows 10 / Windows 11 / Linux"
+        },
+        {
+          "label": "Betriebsumgebung",
+          "value": "0–60 °C, 0–95 % rF, nicht kondensierend"
+        },
+        {
+          "label": "TDP",
+          "value": "15–28 W"
+        },
+        {
+          "label": "Rückseitige Anschlüsse",
+          "value": "DC-Eingang, 4 × 2,5-GbE-RJ45, 2 × 10-GbE-SFP+, 1 × RJ45-COM"
+        },
+        {
+          "label": "Frontanschlüsse",
+          "value": "1 × Type-C 3.1, 2 × USB 2.0, 1 × USB 3.2, 2 × HDMI, 1 × DP, TF, 2 × Antennenanschlüsse, Audiobuchse, Ein/Aus-Taste"
+        },
+        {
+          "label": "Interne Anschlüsse",
+          "value": "2 × SATA 3.0, 1 × M.2, 1 × F_PANEL"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Netzwerkschnittstellen",
+          "description": "4 × Intel i226 2.5GbE RJ45 + 2 × Intel 82599ES 10GbE SFP+"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Speicheranschlüsse",
+          "description": "1 × M.2 NVMe PCIe 4.0 ×4 + 2 × SATA 3.0"
+        },
+        {
+          "icon": "Monitor",
+          "title": "Bildschirmanschlüsse",
+          "description": "1 × DisplayPort + 2 × HDMI + 1 × Type-C 3.1"
+        }
+      ],
+      "specificationHeading": "Technische Daten",
+      "featureHeading": "Netzwerk-, Speicher- und Bildschirmanschlüsse",
+      "advantageSummary": "DDR5-NAS-Computer mit vier 2,5-GbE- und zwei 10-GbE-SFP+-Ports",
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/reviewed/mcnas12/front.webp",
+          "title": "MCNAS12 · Frontblende"
+        },
+        {
+          "image": "/assets/products/commercial/reviewed/mcnas12/rear.webp",
+          "title": "MCNAS12 · Rückblende"
+        }
+      ]
+    },
+    "fr": {
+      "tagline": "Ordinateur NAS DDR5 avec quatre ports 2,5 GbE et deux ports SFP+ 10 GbE",
+      "description": "Le MCNAS12 propose une sélection de processeurs Intel Alder Lake-U et Raptor Lake-U, jusqu’à 64 Go de DDR5 et un stockage M.2 NVMe PCIe 4.0 ×4. Quatre ports Intel i226 2,5 GbE, deux ports Intel 82599ES SFP+ 10 GbE et une console série RJ45 permettent l’intégration de services de stockage et de réseau locaux. Le boîtier en aluminium mesure 154,6 × 131,7 × 60 mm.",
+      "highlights": [
+        "Intel Core i5-1235U / Core i3-1315U / Core i3-1215U / Processor U300E / Pentium Gold 8505",
+        "2 × SO-DIMM DDR5, jusqu’à 64 Go / 5600 MHz",
+        "4 × Intel i226 2.5GbE RJ45 + 2 × Intel 82599ES 10GbE SFP+",
+        "1 × DisplayPort + 2 × HDMI + 1 × Type-C 3.1"
+      ],
+      "specs": [
+        {
+          "label": "Modèle",
+          "value": "MCNAS12"
+        },
+        {
+          "label": "Processeur",
+          "value": "Intel Core i5-1235U / Core i3-1315U / Core i3-1215U / Processor U300E / Pentium Gold 8505"
+        },
+        {
+          "label": "Plateforme",
+          "value": "Intel Alder Lake-U / Raptor Lake-U"
+        },
+        {
+          "label": "Graphiques",
+          "value": "Intel UHD / Iris Xe Graphics"
+        },
+        {
+          "label": "Affichage",
+          "value": "1 × DisplayPort + 2 × HDMI + 1 × Type-C 3.1"
+        },
+        {
+          "label": "Mémoire",
+          "value": "2 × SO-DIMM DDR5, jusqu’à 64 Go / 5600 MHz"
+        },
+        {
+          "label": "Matériau",
+          "value": "Alliage d’aluminium"
+        },
+        {
+          "label": "USB",
+          "value": "1 × USB 3.2 Gen 1 + 1 × Type-C 3.1 + 2 × USB 2.0"
+        },
+        {
+          "label": "Alimentation",
+          "value": "12–19 V DC, 5.5 × 2.5 mm"
+        },
+        {
+          "label": "Réseau",
+          "value": "4 × Intel i226 2.5GbE RJ45 + 2 × Intel 82599ES 10GbE SFP+"
+        },
+        {
+          "label": "Ports série",
+          "value": "1 × RJ45 COM"
+        },
+        {
+          "label": "Stockage",
+          "value": "1 × M.2 NVMe PCIe 4.0 ×4 + 2 × SATA 3.0"
+        },
+        {
+          "label": "Extension",
+          "value": "1 × lecteur de carte TF"
+        },
+        {
+          "label": "Dimensions",
+          "value": "154.6 × 131.7 × 60 mm"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI EFI BIOS"
+        },
+        {
+          "label": "Système d’exploitation",
+          "value": "Windows 10 / Windows 11 / Linux"
+        },
+        {
+          "label": "Conditions de fonctionnement",
+          "value": "0–60 °C, 0–95 % HR, sans condensation"
+        },
+        {
+          "label": "TDP",
+          "value": "15–28 W"
+        },
+        {
+          "label": "Connectique arrière",
+          "value": "Entrée CC, 4 × RJ45 2,5 GbE, 2 × SFP+ 10 GbE, 1 × COM RJ45"
+        },
+        {
+          "label": "Connectique avant",
+          "value": "1 × Type-C 3.1, 2 × USB 2.0, 1 × USB 3.2, 2 × HDMI, 1 × DP, TF, 2 connecteurs d’antenne, prise audio, bouton d’alimentation"
+        },
+        {
+          "label": "Connectique interne",
+          "value": "2 × SATA 3.0, 1 × M.2, 1 × F_PANEL"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Interfaces réseau",
+          "description": "4 × Intel i226 2.5GbE RJ45 + 2 × Intel 82599ES 10GbE SFP+"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Connexions de stockage",
+          "description": "1 × M.2 NVMe PCIe 4.0 ×4 + 2 × SATA 3.0"
+        },
+        {
+          "icon": "Monitor",
+          "title": "Connexions vidéo",
+          "description": "1 × DisplayPort + 2 × HDMI + 1 × Type-C 3.1"
+        }
+      ],
+      "specificationHeading": "Caractéristiques techniques",
+      "featureHeading": "Connexions réseau, stockage et vidéo",
+      "advantageSummary": "Ordinateur NAS DDR5 avec quatre ports 2,5 GbE et deux ports SFP+ 10 GbE",
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/reviewed/mcnas12/front.webp",
+          "title": "MCNAS12 · panneau avant"
+        },
+        {
+          "image": "/assets/products/commercial/reviewed/mcnas12/rear.webp",
+          "title": "MCNAS12 · panneau arrière"
+        }
+      ]
+    },
+    "it": {
+      "tagline": "Computer NAS DDR5 con quattro porte 2,5 GbE e due porte SFP+ 10 GbE",
+      "description": "MCNAS12 offre processori Intel Alder Lake-U e Raptor Lake-U selezionati, fino a 64 GB di DDR5 e archiviazione M.2 NVMe PCIe 4.0 ×4. Quattro porte Intel i226 2,5 GbE, due porte Intel 82599ES SFP+ 10 GbE e una console seriale RJ45 consentono l’integrazione di sistemi di archiviazione e reti locali. Lo chassis in alluminio misura 154,6 × 131,7 × 60 mm.",
+      "highlights": [
+        "Intel Core i5-1235U / Core i3-1315U / Core i3-1215U / Processor U300E / Pentium Gold 8505",
+        "2 × SO-DIMM DDR5, fino a 64 GB / 5600 MHz",
+        "4 × Intel i226 2.5GbE RJ45 + 2 × Intel 82599ES 10GbE SFP+",
+        "1 × DisplayPort + 2 × HDMI + 1 × Type-C 3.1"
+      ],
+      "specs": [
+        {
+          "label": "Modello",
+          "value": "MCNAS12"
+        },
+        {
+          "label": "Processore",
+          "value": "Intel Core i5-1235U / Core i3-1315U / Core i3-1215U / Processor U300E / Pentium Gold 8505"
+        },
+        {
+          "label": "Piattaforma",
+          "value": "Intel Alder Lake-U / Raptor Lake-U"
+        },
+        {
+          "label": "Grafica",
+          "value": "Intel UHD / Iris Xe Graphics"
+        },
+        {
+          "label": "Uscita video",
+          "value": "1 × DisplayPort + 2 × HDMI + 1 × Type-C 3.1"
+        },
+        {
+          "label": "Memoria",
+          "value": "2 × SO-DIMM DDR5, fino a 64 GB / 5600 MHz"
+        },
+        {
+          "label": "Materiale",
+          "value": "Lega di alluminio"
+        },
+        {
+          "label": "USB",
+          "value": "1 × USB 3.2 Gen 1 + 1 × Type-C 3.1 + 2 × USB 2.0"
+        },
+        {
+          "label": "Alimentazione",
+          "value": "12–19 V DC, 5.5 × 2.5 mm"
+        },
+        {
+          "label": "Rete",
+          "value": "4 × Intel i226 2.5GbE RJ45 + 2 × Intel 82599ES 10GbE SFP+"
+        },
+        {
+          "label": "Porte seriali",
+          "value": "1 × RJ45 COM"
+        },
+        {
+          "label": "Archiviazione",
+          "value": "1 × M.2 NVMe PCIe 4.0 ×4 + 2 × SATA 3.0"
+        },
+        {
+          "label": "Espansione",
+          "value": "1 × slot per scheda TF"
+        },
+        {
+          "label": "Dimensioni",
+          "value": "154.6 × 131.7 × 60 mm"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI EFI BIOS"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10 / Windows 11 / Linux"
+        },
+        {
+          "label": "Condizioni operative",
+          "value": "0–60 °C, 0–95% UR, senza condensa"
+        },
+        {
+          "label": "TDP",
+          "value": "15–28 W"
+        },
+        {
+          "label": "Porte posteriori",
+          "value": "Ingresso CC, 4 × RJ45 2,5 GbE, 2 × SFP+ 10 GbE, 1 × COM RJ45"
+        },
+        {
+          "label": "Porte anteriori",
+          "value": "1 × Type-C 3.1, 2 × USB 2.0, 1 × USB 3.2, 2 × HDMI, 1 × DP, TF, 2 connettori per antenne, presa audio, pulsante di accensione"
+        },
+        {
+          "label": "Connettori interni",
+          "value": "2 × SATA 3.0, 1 × M.2, 1 × F_PANEL"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Interfacce di rete",
+          "description": "4 × Intel i226 2.5GbE RJ45 + 2 × Intel 82599ES 10GbE SFP+"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Connessioni di archiviazione",
+          "description": "1 × M.2 NVMe PCIe 4.0 ×4 + 2 × SATA 3.0"
+        },
+        {
+          "icon": "Monitor",
+          "title": "Connessioni video",
+          "description": "1 × DisplayPort + 2 × HDMI + 1 × Type-C 3.1"
+        }
+      ],
+      "specificationHeading": "Specifiche tecniche",
+      "featureHeading": "Connessioni di rete, archiviazione e video",
+      "advantageSummary": "Computer NAS DDR5 con quattro porte 2,5 GbE e due porte SFP+ 10 GbE",
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/reviewed/mcnas12/front.webp",
+          "title": "MCNAS12 · pannello anteriore"
+        },
+        {
+          "image": "/assets/products/commercial/reviewed/mcnas12/rear.webp",
+          "title": "MCNAS12 · pannello posteriore"
+        }
+      ]
+    },
+    "es": {
+      "tagline": "Ordenador NAS DDR5 con cuatro puertos de 2,5 GbE y dos SFP+ de 10 GbE",
+      "description": "MCNAS12 ofrece una selección de procesadores Intel Alder Lake-U y Raptor Lake-U, hasta 64 GB de DDR5 y almacenamiento M.2 NVMe PCIe 4.0 ×4. Cuatro puertos Intel i226 de 2,5 GbE, dos puertos Intel 82599ES SFP+ de 10 GbE y una consola serie RJ45 permiten integrar almacenamiento y servicios de red locales. El chasis de aluminio mide 154,6 × 131,7 × 60 mm.",
+      "highlights": [
+        "Intel Core i5-1235U / Core i3-1315U / Core i3-1215U / Processor U300E / Pentium Gold 8505",
+        "2 × SO-DIMM DDR5, hasta 64 GB / 5600 MHz",
+        "4 × Intel i226 2.5GbE RJ45 + 2 × Intel 82599ES 10GbE SFP+",
+        "1 × DisplayPort + 2 × HDMI + 1 × Type-C 3.1"
+      ],
+      "specs": [
+        {
+          "label": "Modelo",
+          "value": "MCNAS12"
+        },
+        {
+          "label": "Procesador",
+          "value": "Intel Core i5-1235U / Core i3-1315U / Core i3-1215U / Processor U300E / Pentium Gold 8505"
+        },
+        {
+          "label": "Plataforma",
+          "value": "Intel Alder Lake-U / Raptor Lake-U"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel UHD / Iris Xe Graphics"
+        },
+        {
+          "label": "Salida de vídeo",
+          "value": "1 × DisplayPort + 2 × HDMI + 1 × Type-C 3.1"
+        },
+        {
+          "label": "Memoria",
+          "value": "2 × SO-DIMM DDR5, hasta 64 GB / 5600 MHz"
+        },
+        {
+          "label": "Material",
+          "value": "Aleación de aluminio"
+        },
+        {
+          "label": "USB",
+          "value": "1 × USB 3.2 Gen 1 + 1 × Type-C 3.1 + 2 × USB 2.0"
+        },
+        {
+          "label": "Alimentación",
+          "value": "12–19 V DC, 5.5 × 2.5 mm"
+        },
+        {
+          "label": "Red",
+          "value": "4 × Intel i226 2.5GbE RJ45 + 2 × Intel 82599ES 10GbE SFP+"
+        },
+        {
+          "label": "Puertos serie",
+          "value": "1 × RJ45 COM"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "1 × M.2 NVMe PCIe 4.0 ×4 + 2 × SATA 3.0"
+        },
+        {
+          "label": "Expansión",
+          "value": "1 × ranura para tarjeta TF"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "154.6 × 131.7 × 60 mm"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI EFI BIOS"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10 / Windows 11 / Linux"
+        },
+        {
+          "label": "Condiciones de funcionamiento",
+          "value": "0–60 °C, 0–95 % HR, sin condensación"
+        },
+        {
+          "label": "TDP",
+          "value": "15–28 W"
+        },
+        {
+          "label": "Conexiones traseras",
+          "value": "Entrada CC, 4 × RJ45 de 2,5 GbE, 2 × SFP+ de 10 GbE, 1 × COM RJ45"
+        },
+        {
+          "label": "Conexiones frontales",
+          "value": "1 × Type-C 3.1, 2 × USB 2.0, 1 × USB 3.2, 2 × HDMI, 1 × DP, TF, 2 conectores de antena, conector de audio, botón de encendido"
+        },
+        {
+          "label": "Conectores internos",
+          "value": "2 × SATA 3.0, 1 × M.2, 1 × F_PANEL"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Interfaces de red",
+          "description": "4 × Intel i226 2.5GbE RJ45 + 2 × Intel 82599ES 10GbE SFP+"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Conexiones de almacenamiento",
+          "description": "1 × M.2 NVMe PCIe 4.0 ×4 + 2 × SATA 3.0"
+        },
+        {
+          "icon": "Monitor",
+          "title": "Conexiones de vídeo",
+          "description": "1 × DisplayPort + 2 × HDMI + 1 × Type-C 3.1"
+        }
+      ],
+      "specificationHeading": "Especificaciones técnicas",
+      "featureHeading": "Conexiones de red, almacenamiento y vídeo",
+      "advantageSummary": "Ordenador NAS DDR5 con cuatro puertos de 2,5 GbE y dos SFP+ de 10 GbE",
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/reviewed/mcnas12/front.webp",
+          "title": "MCNAS12 · panel frontal"
+        },
+        {
+          "image": "/assets/products/commercial/reviewed/mcnas12/rear.webp",
+          "title": "MCNAS12 · panel trasero"
+        }
+      ]
+    }
+  }
+}

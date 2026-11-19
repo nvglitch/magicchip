@@ -1,3 +1,6 @@
+import mcipca1 from '@/content/products/items/mcipca1.json';
+import mcipcb11 from '@/content/products/items/mcipcb11.json';
+import mcipcd1 from '@/content/products/items/mcipcd1.json';
 import { applyBrochureSpecCorrections } from '@/lib/brochure-spec-corrections';
 import { brochureUpdates } from '@/lib/brochure-updates';
 import { industrialBrochureProducts } from '@/lib/brochure-products';
@@ -39,75 +42,7 @@ const industrialCatalogSource: IndustrialCatalogItem[] = [
   ...(tpcXProducts as IndustrialCatalogItem[]),
   ...(brochureUpdates.filter(item => item.series === 'B' || item.series === 'E') as IndustrialCatalogItem[]),
   ...industrialBrochureProducts,
-  {
-    "id": "mcipca1",
-    "name": "MCIPCA1",
-    "series": "A",
-    "tagline": "MCIPCA1 compact A Series industrial computer",
-    "description": "MCIPCA1 is a compact industrial computer with a single-COM or COM-less architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
-    "image": "/assets/products/industrial/a-series/mcipca1/images/main-transparent.png",
-    "highlights": [
-      "Onboard Intel Celeron J6412/ Pentium J6426",
-      "2 x HDMI;1 x DP",
-      "2 x RJ45 Gigabit LAN",
-      "2 x DB9 RS232 COM"
-    ],
-    "specs": [
-      {
-        "label": "Model",
-        "value": "MCIPCA1"
-      },
-      {
-        "label": "Series",
-        "value": "A Series"
-      },
-      {
-        "label": "CPU",
-        "value": "Onboard Intel Celeron J6412/ Pentium J6426"
-      },
-      {
-        "label": "Display",
-        "value": "2 x HDMI;1 x DP"
-      },
-      {
-        "label": "Memory",
-        "value": "1 x SODIMM DDR4 slot"
-      },
-      {
-        "label": "USB",
-        "value": "6 x USB2.0; 2 x USB3.0"
-      },
-      {
-        "label": "Network",
-        "value": "2 x RJ45 Gigabit LAN"
-      },
-      {
-        "label": "Serial",
-        "value": "2 x DB9 RS232 COM"
-      },
-      {
-        "label": "Storage",
-        "value": "1 x M.2 SSD slot"
-      },
-      {
-        "label": "Power",
-        "value": "1 x DC 12V"
-      },
-      {
-        "label": "System",
-        "value": "Windows10/WES10/Linux"
-      },
-      {
-        "label": "Operating Environment",
-        "value": "Working Temperature: -20~60℃；"
-      },
-      {
-        "label": "Dimensions",
-        "value": "135 x 127 x 38.7(mm)"
-      }
-    ],
-    "operatingRange": "Working Temperature: -20~60℃；"
-  },
+  mcipca1 as IndustrialCatalogItem,
   {
     "id": "mcipca2",
     "name": "MCIPCA2",
@@ -238,71 +173,7 @@ const industrialCatalogSource: IndustrialCatalogItem[] = [
     ],
     "operatingRange": "-20~60℃;5%~95% Relative humidity,"
   },
-  {
-    "id": "mcipcb11",
-    "name": "MCIPCB11",
-    "series": "B",
-    "tagline": "MCIPCB11 dual-LAN, dual-COM industrial computer",
-    "description": "MCIPCB11 is an industrial computer with dual-LAN and dual-COM architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
-    "image": "/assets/products/industrial/b-series/mcipcb11/images/main-transparent.png",
-    "highlights": [
-      "Intel N100",
-      "2 x HDMI; 1 x DP; 1 x USB-C(Display supported)",
-      "2 x Realtek RTL8111 Gigabit LAN",
-      "2 x COM（RS232/RS485）"
-    ],
-    "specs": [
-      {
-        "label": "Model",
-        "value": "MCIPCB11"
-      },
-      {
-        "label": "Series",
-        "value": "B Series"
-      },
-      {
-        "label": "CPU",
-        "value": "Intel N100"
-      },
-      {
-        "label": "Display",
-        "value": "2 x HDMI; 1 x DP; 1 x USB-C(Display supported)"
-      },
-      {
-        "label": "Memory",
-        "value": "1 x DDR4 SO-DIMM Slot"
-      },
-      {
-        "label": "USB",
-        "value": "4 x USB3.0/2 x USB2.0"
-      },
-      {
-        "label": "Network",
-        "value": "2 x Realtek RTL8111 Gigabit LAN"
-      },
-      {
-        "label": "Serial",
-        "value": "2 x COM（RS232/RS485）"
-      },
-      {
-        "label": "Power",
-        "value": "1 x DC 12V"
-      },
-      {
-        "label": "System",
-        "value": "Windows10/Windows11/Linux"
-      },
-      {
-        "label": "Operating Environment",
-        "value": "0~50℃;5%~90% Relative humidity,"
-      },
-      {
-        "label": "Dimensions",
-        "value": "138 x 126 x 48(mm)"
-      }
-    ],
-    "operatingRange": "0~50℃;5%~90% Relative humidity,"
-  },
+  mcipcb11 as IndustrialCatalogItem,
   {
     "id": "mcipcb12",
     "name": "MCIPCB12",
@@ -1556,75 +1427,7 @@ const industrialCatalogSource: IndustrialCatalogItem[] = [
     ],
     "operatingRange": "Operating Temperature: -20°C to 60°C"
   },
-  {
-    "id": "mcipcd1",
-    "name": "MCIPCD1",
-    "series": "D",
-    "tagline": "MCIPCD1 multi-LAN industrial computer with dual COM",
-    "description": "MCIPCD1 is a multi-LAN industrial computer with dual-COM architecture. Review the processor, memory, storage, and interface options listed on this page to select a suitable configuration.",
-    "image": "/assets/products/industrial/d-series/mcipcd1/images/main-square-srgb.jpg",
-    "highlights": [
-      "Intel Celeron N5095/N5105 (Select option)",
-      "1 x DP",
-      "4 x 2.5G Ethernet port",
-      "2 x DB9 COM(RS232/RS485)"
-    ],
-    "specs": [
-      {
-        "label": "Model",
-        "value": "MCIPCD1"
-      },
-      {
-        "label": "Series",
-        "value": "D Series"
-      },
-      {
-        "label": "CPU",
-        "value": "Intel Celeron N5095/N5105 (Select option)"
-      },
-      {
-        "label": "Display",
-        "value": "1 x DP"
-      },
-      {
-        "label": "Memory",
-        "value": "1 x SO-DIMM DDR4 slot"
-      },
-      {
-        "label": "USB",
-        "value": "2 x USB2.0; 2 x USB3.0"
-      },
-      {
-        "label": "Network",
-        "value": "4 x 2.5G Ethernet port"
-      },
-      {
-        "label": "Serial",
-        "value": "2 x DB9 COM(RS232/RS485)"
-      },
-      {
-        "label": "Storage",
-        "value": "1 x mSATA SSD; 1 x SATA 6.0Gb/s (Support 2.5 inch HDD/SSD)"
-      },
-      {
-        "label": "Power",
-        "value": "DC 12V-4A 5.5 x 2.5 (Options PoE 24V)"
-      },
-      {
-        "label": "System",
-        "value": "Windows10 / windows11 / Linux"
-      },
-      {
-        "label": "Operating Environment",
-        "value": "-20~50℃;5%~85% Relative humidity,"
-      },
-      {
-        "label": "Dimensions",
-        "value": "187x120x50 (mm)"
-      }
-    ],
-    "operatingRange": "-20~50℃;5%~85% Relative humidity,"
-  },
+  mcipcd1 as IndustrialCatalogItem,
   {
     "id": "mcipcd2",
     "name": "MCIPCD2",

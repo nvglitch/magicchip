@@ -1,3 +1,4 @@
+import mcnas12 from '@/content/products/items/mcnas12.json';
 import { nasSeptemberUpdates } from '@/lib/nas-september-updates';
 import { applyBrochureSpecCorrections } from '@/lib/brochure-spec-corrections';
 import { brochureUpdates } from '@/lib/brochure-updates';
@@ -1209,106 +1210,7 @@ export const commercialCatalog: CommercialCatalogItem[] = [
     ],
     "operatingRange": "0°C to 70°C; 5% to 85% relative humidity, non-condensing"
   },
-  {
-    "id": "mcnas12",
-    "name": "MCNAS12",
-    "series": "NAS",
-    "tagline": "Intel Core NAS platform with four 2.5GbE and dual 10GbE SFP+",
-    "description": "MCNAS12 combines 12th and 13th Gen Intel processor options, DDR5 memory, four 2.5GbE ports, dual 10GbE SFP+, NVMe, dual SATA, and triple-display output for compact storage and network services.",
-    "image": "/assets/products/commercial/nas/mcnas12/images/main-square.png",
-    "galleryImages": [
-      "/assets/nas12.png"
-    ],
-    "highlights": [
-      "Intel Core i5-1240P / Pentium Gold 8505 / Intel U300E",
-      "2 x DDR5 SO-DIMM, up to 64GB at 5600MHz",
-      "4 x Intel i226 2.5GbE and 2 x Intel 82599ES 10GbE SFP+",
-      "M.2 NVMe PCIe 3.0 x4 and 2 x external SATA 3.0"
-    ],
-    "specs": [
-      {
-        "label": "Model",
-        "value": "MCNAS12"
-      },
-      {
-        "label": "CPU",
-        "value": "Intel Core i5-1240P / Pentium Gold 8505 / Intel U300E"
-      },
-      {
-        "label": "Chipset",
-        "value": "Intel Alder Lake platform"
-      },
-      {
-        "label": "Graphics",
-        "value": "Intel Iris Xe Graphics"
-      },
-      {
-        "label": "Video",
-        "value": "DisplayPort, 2 x HDMI, and Type-C 3.1"
-      },
-      {
-        "label": "Memory",
-        "value": "2 x DDR5 SO-DIMM, up to 64GB at 5600MHz"
-      },
-      {
-        "label": "USB",
-        "value": "USB 3.2 Gen 1, Type-C 3.1, and 2 x USB 2.0"
-      },
-      {
-        "label": "Material",
-        "value": "Aluminum alloy"
-      },
-      {
-        "label": "Power",
-        "value": "DC 12V to 19V"
-      },
-      {
-        "label": "Network",
-        "value": "4 x Intel i226 2.5GbE and 2 x Intel 82599ES 10GbE SFP+"
-      },
-      {
-        "label": "Storage",
-        "value": "M.2 NVMe PCIe 3.0 x4 and 2 x external SATA 3.0"
-      },
-      {
-        "label": "Expansion",
-        "value": "TF card and F_PANEL header"
-      },
-      {
-        "label": "Front I/O",
-        "value": "1 x power input; 4 x 2.5GbE RJ45; 2 x 10GbE SFP+; 1 x RJ45 COM"
-      },
-      {
-        "label": "Rear I/O",
-        "value": "1 x Type-C 3.1; 2 x USB 2.0; 1 x USB 3.2; 2 x HDMI with audio; 1 x DisplayPort; 1 x power button; 1 x TF card slot; 1 x antenna connector; 1 x audio jack"
-      },
-      {
-        "label": "Internal I/O",
-        "value": "2 x SATA 3.0 connectors; 1 x M.2 connector; 1 x front-panel header"
-      },
-      {
-        "label": "Dimensions",
-        "value": "145.4 x 131.7 x 60 mm"
-      },
-      {
-        "label": "BIOS",
-        "value": "AMI EFI BIOS"
-      },
-      {
-        "label": "TDP",
-        "value": "15W to 28W"
-      },
-      {
-        "label": "System",
-        "value": "Windows 10 / Windows 11 / Linux"
-      },
-      {
-        "label": "Working Environment",
-        "value": "0°C to 60°C; 0% to 95% relative humidity, non-condensing"
-      }
-    ],
-    "operatingRange": "0°C to 60°C; 0% to 95% relative humidity, non-condensing"
-  },
+  mcnas12 as CommercialCatalogItem,
   {
     "id": "mcnash10",
     "name": "MCNASH10",

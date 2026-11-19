@@ -82,12 +82,6 @@ export const brochureSpecCorrections: Record<string, { label: string; value: str
       "value": "1 x DC-IN 12V(5.5 x 2.5 mm); 4 x Intel i226-V 2.5G Ethernet port; 2 x USB 2.0; 1 x HDMI 2.1(Support 4k@60Hz); 1 x DP1.4(Support 4k@60Hz)"
     }
   ],
-  "mcipca1": [
-    {
-      "label": "Memory",
-      "value": "1 x DDR4 SO-DIMM Slot Max 32GB"
-    }
-  ],
   "mcipcb3": [
     { "label": "Network", "value": "2 × Intel I226-V 2.5GbE RJ45" }
   ],
@@ -156,12 +150,6 @@ export const brochureSpecCorrections: Record<string, { label: string; value: str
     {
       "label": "Network",
       "value": "1 x Intel I219LM GbE; 1 x Intel i226-V 2.5 GbE; supports vPro, WOL and PXE boot"
-    }
-  ],
-  "mcipcd1": [
-    {
-      "label": "Memory",
-      "value": "1 x DDR4 SO-DIMM Memory slot, Up to 32GB 3200MHz"
     }
   ],
   "mctpc-1201e": [

@@ -8,13 +8,13 @@
   "statusCounts": {
     "deferred-by-user": 2,
     "excluded-custom": 7,
-    "pending-confirmation": 16,
+    "pending-confirmation": 14,
     "superseded-by-merged-brochure": 22,
     "superseded-by-renamed-brochure": 5,
-    "updated": 48,
-    "verified-current": 54
+    "updated": 51,
+    "verified-current": 53
   },
-  "previousObservation": "brochure-history/before-2026-11-10-mcsrp5-revision.json",
+  "previousObservation": "brochure-history/before-2026-11-19-four-model-update.json",
   "files": [
     {
       "relativePath": "AIPC/MCAIPC1 brochure.pdf",
@@ -180,23 +180,25 @@
     },
     {
       "relativePath": "NAS PC/MCNAS12 brochure.pdf",
-      "sizeBytes": 1310153,
-      "modifiedAtUtc": "2026-08-26T03:04:21.730525+00:00",
-      "observedSha256": "82f6b243c9ced584c9571082fb6ed063427ea9daeed9c3abcd531f4c1d2cf62a",
-      "appliedSha256": "82f6b243c9ced584c9571082fb6ed063427ea9daeed9c3abcd531f4c1d2cf62a",
+      "sizeBytes": 1957048,
+      "modifiedAtUtc": "2026-11-17T03:07:41.855841+00:00",
+      "observedSha256": "e4bbcf0c2de96bc5e3e9f335e2ccbfe78c3a49a72de27ee5c0f47c779fcb2066",
+      "appliedSha256": "e4bbcf0c2de96bc5e3e9f335e2ccbfe78c3a49a72de27ee5c0f47c779fcb2066",
       "excluded": false,
       "present": true,
-      "status": "verified-current",
-      "changeSincePreviousObservation": "unchanged",
+      "status": "updated",
+      "changeSincePreviousObservation": "modified",
       "modelIds": [
         "mcnas12"
       ],
       "hrefs": [
         "/products/commercial-mini-pc/mcnas12"
       ],
-      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
+      "reviewedAtUtc": "2026-11-19T02:12:01.644178+00:00",
+      "appliedAtUtc": "2026-11-19T02:12:01.644178+00:00",
+      "notes": "2026-11-19 按新版同步 CPU 清单、Alder Lake-U / Raptor Lake-U、核显类别、PCIe 4.0 ×4、154.6 × 131.7 × 60 mm、前后面板定义及双天线接口。完整五语参数与正反面图接入同一产品记录，默认展示网络接口后面板。 已通过 20 个五语详情页、12 个资源、168 条产品/SKU 搜索回归及生产构建，并目视检查代表性页面。",
+      "previousSha256": "82f6b243c9ced584c9571082fb6ed063427ea9daeed9c3abcd531f4c1d2cf62a",
+      "observedAtUtc": "2026-11-19T02:12:01.644178+00:00"
     },
     {
       "relativePath": "NAS PC/MCNAS14A brochure.pdf",
@@ -393,23 +395,25 @@
     },
     {
       "relativePath": "工控机IPC/A系列/MCIPCA1 brochure.pdf",
-      "sizeBytes": 1198567,
-      "modifiedAtUtc": "2026-08-24T10:07:49.207621+00:00",
-      "observedSha256": "6d4a39e462bbb90d57f2fb8e078eebb16cfb4ef4bf39bf5d43bddcb92d8eced7",
-      "appliedSha256": null,
+      "sizeBytes": 1169342,
+      "modifiedAtUtc": "2026-11-10T07:14:27.226191+00:00",
+      "observedSha256": "e9b189510a6b2b23c1aa33f18e6e05c06ea71a12df41e9f3f2a18f9bf2f097fa",
+      "appliedSha256": "e9b189510a6b2b23c1aa33f18e6e05c06ea71a12df41e9f3f2a18f9bf2f097fa",
       "excluded": false,
       "present": true,
-      "status": "pending-confirmation",
-      "changeSincePreviousObservation": "unchanged",
+      "status": "updated",
+      "changeSincePreviousObservation": "modified",
       "modelIds": [
         "mcipca1"
       ],
       "hrefs": [
         "/products/industrial-mini-pc/mcipca1"
       ],
-      "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
-      "notes": "Network 行 1 个网口与后面板 2 个网口矛盾；保留既有 2 个，待核实。",
-      "partialUpdate": true
+      "reviewedAtUtc": "2026-11-19T02:12:01.644178+00:00",
+      "notes": "2026-11-19 按新版同步单千兆网口、NVMe / SATA / mSATA、内存容量、前后面板、内部接口与工作/存储环境。完整五语内容采用 content/products/items/mcipca1.json。 已通过 20 个五语详情页、12 个资源、168 条产品/SKU 搜索回归及生产构建，并目视检查代表性页面。",
+      "appliedAtUtc": "2026-11-19T02:12:01.644178+00:00",
+      "previousSha256": "6d4a39e462bbb90d57f2fb8e078eebb16cfb4ef4bf39bf5d43bddcb92d8eced7",
+      "observedAtUtc": "2026-11-19T02:12:01.644178+00:00"
     },
     {
       "relativePath": "工控机IPC/A系列/MCIPCA2 brochure.pdf",
@@ -472,22 +476,25 @@
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB11 brochure.pdf",
-      "sizeBytes": 633686,
-      "modifiedAtUtc": "2026-09-30T01:44:35.427382+00:00",
-      "observedSha256": "9845fc0d5add7dc19109c423c471051a9deb471ac1d7de3cbff5fe76abeb7f9c",
-      "appliedSha256": null,
+      "sizeBytes": 562549,
+      "modifiedAtUtc": "2026-11-10T07:14:27.359102+00:00",
+      "observedSha256": "bb010cb8007e5bb501a7566c06201458df579a799d504d01e304402b3272b66a",
+      "appliedSha256": "9845fc0d5add7dc19109c423c471051a9deb471ac1d7de3cbff5fe76abeb7f9c",
       "excluded": false,
       "present": true,
       "status": "pending-confirmation",
-      "changeSincePreviousObservation": "unchanged",
+      "changeSincePreviousObservation": "modified",
       "modelIds": [
         "mcipcb11"
       ],
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb11"
       ],
-      "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
-      "notes": "网口规格行写 1 个，背面接口行写 2 个；保留待核实。",
+      "reviewedAtUtc": "2026-11-19T02:12:01.644178+00:00",
+      "notes": "2026-11-19 双 Realtek RTL8111 千兆网口与用户确认一致。已同步新版明确参数、SATA / M.2 存储、扩展与前后面板及五语内容。源册核显 HD Graphics 600 及 M.2 2880 / 2280 尺寸表述仍有疑点，官网不宣称该核显型号或存储模块尺寸。按本次指示暂缓问题处理，保留原已应用指纹，最新册子为部分同步。 已通过 20 个五语详情页、12 个资源、168 条产品/SKU 搜索回归及生产构建，并目视检查代表性页面。",
+      "appliedAtUtc": "2026-11-10T07:08:25.011639+00:00",
+      "previousSha256": "9845fc0d5add7dc19109c423c471051a9deb471ac1d7de3cbff5fe76abeb7f9c",
+      "observedAtUtc": "2026-11-19T02:12:01.644178+00:00",
       "partialUpdate": true
     },
     {
@@ -1298,23 +1305,25 @@
     },
     {
       "relativePath": "工控机IPC/D系列/MCIPCD1 Brochure.pdf",
-      "sizeBytes": 768151,
-      "modifiedAtUtc": "2026-08-24T10:08:14.220801+00:00",
-      "observedSha256": "4db1dc1f88c84ac745d63619bff36622ea23118996ee30d49e612aed24ddd0cf",
-      "appliedSha256": null,
+      "sizeBytes": 738861,
+      "modifiedAtUtc": "2026-11-10T07:14:27.520724+00:00",
+      "observedSha256": "d5b56ea2b7c9dc95aae67aca6e2fe43ead234d5ec227f54da1dead628ad09916",
+      "appliedSha256": "d5b56ea2b7c9dc95aae67aca6e2fe43ead234d5ec227f54da1dead628ad09916",
       "excluded": false,
       "present": true,
-      "status": "pending-confirmation",
-      "changeSincePreviousObservation": "unchanged",
+      "status": "updated",
+      "changeSincePreviousObservation": "modified",
       "modelIds": [
         "mcipcd1"
       ],
       "hrefs": [
         "/products/industrial-mini-pc/mcipcd1"
       ],
-      "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
-      "notes": "Network 行 5 个网口与面板行 4 个矛盾；保留既有 4 个，待核实。",
-      "partialUpdate": true
+      "reviewedAtUtc": "2026-11-19T02:12:01.644178+00:00",
+      "notes": "2026-11-19 按新版同步五个 Intel I225 2.5GbE 网口、前面板五网口、HDMI + VGA、四口 PoE 选配、存储和扩展。完整五语内容与正反面图接入同一记录，默认头图展示五网口前面板。 已通过 20 个五语详情页、12 个资源、168 条产品/SKU 搜索回归及生产构建，并目视检查代表性页面。",
+      "appliedAtUtc": "2026-11-19T02:12:01.644178+00:00",
+      "previousSha256": "4db1dc1f88c84ac745d63619bff36622ea23118996ee30d49e612aed24ddd0cf",
+      "observedAtUtc": "2026-11-19T02:12:01.644178+00:00"
     },
     {
       "relativePath": "工控机IPC/D系列/MCIPCD2 brochure.pdf",

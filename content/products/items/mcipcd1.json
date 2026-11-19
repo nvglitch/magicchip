@@ -1,0 +1,734 @@
+{
+  "id": "mcipcd1",
+  "name": "MCIPCD1",
+  "category": "industrial-mini-pc",
+  "series": "D",
+  "published": true,
+  "image": "/assets/products/industrial/reviewed/mcipcd1/front.webp",
+  "images": [
+    "/assets/products/industrial/reviewed/mcipcd1/front.webp"
+  ],
+  "galleryImages": [
+    "/assets/products/industrial/reviewed/mcipcd1/front.webp",
+    "/assets/products/industrial/reviewed/mcipcd1/rear.webp"
+  ],
+  "operatingRange": "-20°C to 50°C",
+  "sourceBrochure": "工控机IPC/D系列/MCIPCD1 Brochure.pdf",
+  "sourceSha256": "d5b56ea2b7c9dc95aae67aca6e2fe43ead234d5ec227f54da1dead628ad09916",
+  "tagline": "Five-port 2.5GbE industrial computer with dual COM",
+  "description": "MCIPCD1 provides five Intel I225 2.5GbE ports on the front panel, with four-port PoE available as an option. Intel N5095 or N5105, up to 32 GB DDR4-3200, dual DB9 COM, HDMI and VGA support industrial equipment and network integration. The enclosure measures 187 × 120 × 50 mm.",
+  "highlights": [
+    "Intel Celeron N5095 / N5105",
+    "1 × DDR4-3200 SO-DIMM, up to 32 GB",
+    "5 × Intel I225 2.5GbE RJ45, optional PoE on 4 ports",
+    "1 × HDMI + 1 × VGA"
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCIPCD1"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel Celeron N5095 / N5105"
+    },
+    {
+      "label": "Chipset",
+      "value": "BKHD-1338NP-3.5"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel UHD Graphics"
+    },
+    {
+      "label": "Display",
+      "value": "1 × HDMI + 1 × VGA"
+    },
+    {
+      "label": "Memory",
+      "value": "1 × DDR4-3200 SO-DIMM, up to 32 GB"
+    },
+    {
+      "label": "Material",
+      "value": "Aluminum alloy"
+    },
+    {
+      "label": "USB",
+      "value": "2 × USB 2.0 + 2 × USB 3.0"
+    },
+    {
+      "label": "Power",
+      "value": "12 V DC / 4 A, 5.5 × 2.5 mm. Optional PoE 24 V."
+    },
+    {
+      "label": "Network",
+      "value": "5 × Intel I225 2.5GbE RJ45, optional PoE on 4 ports"
+    },
+    {
+      "label": "Serial",
+      "value": "2 × DB9 COM (RS-232 / RS-485)"
+    },
+    {
+      "label": "Storage",
+      "value": "1 × mSATA SSD + 1 × SATA 6 Gb/s for 2.5-inch HDD / SSD"
+    },
+    {
+      "label": "Expansion",
+      "value": "2 × Mini PCIe for Wi-Fi / Bluetooth / 4G"
+    },
+    {
+      "label": "Dimensions",
+      "value": "187 × 120 × 50 mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI EFI BIOS, auto power-on, scheduled boot, Wake-on-LAN, PXE, watchdog"
+    },
+    {
+      "label": "TDP",
+      "value": "6–28 W"
+    },
+    {
+      "label": "System",
+      "value": "Windows 10 / Windows 11 / Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "−20 to 50 °C, 5–85% RH, non-condensing"
+    },
+    {
+      "label": "Front I/O",
+      "value": "1 × DC input, 2 × USB 3.0, 5 × 2.5GbE RJ45"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "2 × USB 2.0, 2 × DB9 COM (RS-232 / RS-485), HDMI, VGA, power button"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "DDR4 SO-DIMM, 2 × Mini PCIe, mSATA, SATA 6 Gb/s, J_VGA"
+    }
+  ],
+  "features": [
+    {
+      "icon": "Network",
+      "title": "Network interfaces",
+      "description": "5 × Intel I225 2.5GbE RJ45, optional PoE on 4 ports"
+    },
+    {
+      "icon": "HardDrive",
+      "title": "Storage connections",
+      "description": "1 × mSATA SSD + 1 × SATA 6 Gb/s for 2.5-inch HDD / SSD"
+    },
+    {
+      "icon": "Monitor",
+      "title": "Display connections",
+      "description": "1 × HDMI + 1 × VGA"
+    }
+  ],
+  "specificationHeading": "Hardware specifications",
+  "featureHeading": "Network, storage and display connections",
+  "advantageSummary": "Five-port 2.5GbE industrial computer with dual COM",
+  "galleryCards": [
+    {
+      "image": "/assets/products/industrial/reviewed/mcipcd1/front.webp",
+      "title": "MCIPCD1 · front panel"
+    },
+    {
+      "image": "/assets/products/industrial/reviewed/mcipcd1/rear.webp",
+      "title": "MCIPCD1 · rear panel"
+    }
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MCIPCD1"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel Celeron N5095 / N5105"
+    },
+    {
+      "label": "Chipset",
+      "value": "BKHD-1338NP-3.5"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel UHD Graphics"
+    },
+    {
+      "label": "Display",
+      "value": "1 × HDMI + 1 × VGA"
+    },
+    {
+      "label": "Memory",
+      "value": "1 × DDR4-3200 SO-DIMM, up to 32 GB"
+    },
+    {
+      "label": "Material",
+      "value": "Aluminum alloy"
+    },
+    {
+      "label": "USB",
+      "value": "2 × USB 2.0 + 2 × USB 3.0"
+    },
+    {
+      "label": "Power",
+      "value": "12 V DC / 4 A, 5.5 × 2.5 mm. Optional PoE 24 V."
+    },
+    {
+      "label": "Network",
+      "value": "5 × Intel I225 2.5GbE RJ45, optional PoE on 4 ports"
+    },
+    {
+      "label": "Serial",
+      "value": "2 × DB9 COM (RS-232 / RS-485)"
+    },
+    {
+      "label": "Storage",
+      "value": "1 × mSATA SSD + 1 × SATA 6 Gb/s for 2.5-inch HDD / SSD"
+    },
+    {
+      "label": "Expansion",
+      "value": "2 × Mini PCIe for Wi-Fi / Bluetooth / 4G"
+    },
+    {
+      "label": "Dimensions",
+      "value": "187 × 120 × 50 mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI EFI BIOS, auto power-on, scheduled boot, Wake-on-LAN, PXE, watchdog"
+    },
+    {
+      "label": "TDP",
+      "value": "6–28 W"
+    },
+    {
+      "label": "System",
+      "value": "Windows 10 / Windows 11 / Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "−20 to 50 °C, 5–85% RH, non-condensing"
+    },
+    {
+      "label": "Front I/O",
+      "value": "1 × DC input, 2 × USB 3.0, 5 × 2.5GbE RJ45"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "2 × USB 2.0, 2 × DB9 COM (RS-232 / RS-485), HDMI, VGA, power button"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "DDR4 SO-DIMM, 2 × Mini PCIe, mSATA, SATA 6 Gb/s, J_VGA"
+    }
+  ],
+  "translations": {
+    "de": {
+      "tagline": "Industriecomputer mit fünf 2,5-GbE-Ports und zwei COM-Ports",
+      "description": "MCIPCD1 bietet fünf Intel-I225-2,5-GbE-Ports an der Frontblende, optional mit PoE an vier Ports. Intel N5095 oder N5105, bis zu 32 GB DDR4-3200, zwei DB9-COM-Ports, HDMI und VGA unterstützen die Integration von Industrieanlagen und Netzwerken. Das Gehäuse misst 187 × 120 × 50 mm.",
+      "highlights": [
+        "Intel Celeron N5095 / N5105",
+        "1 × DDR4-3200 SO-DIMM, bis zu 32 GB",
+        "5 × Intel I225 2,5-GbE-RJ45, optional PoE an 4 Ports",
+        "1 × HDMI + 1 × VGA"
+      ],
+      "specs": [
+        {
+          "label": "Modell",
+          "value": "MCIPCD1"
+        },
+        {
+          "label": "Prozessor",
+          "value": "Intel Celeron N5095 / N5105"
+        },
+        {
+          "label": "Plattform",
+          "value": "BKHD-1338NP-3.5"
+        },
+        {
+          "label": "Grafik",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Bildausgabe",
+          "value": "1 × HDMI + 1 × VGA"
+        },
+        {
+          "label": "Arbeitsspeicher",
+          "value": "1 × DDR4-3200 SO-DIMM, bis zu 32 GB"
+        },
+        {
+          "label": "Material",
+          "value": "Aluminiumlegierung"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 2.0 + 2 × USB 3.0"
+        },
+        {
+          "label": "Stromversorgung",
+          "value": "12 V DC / 4 A, 5,5 × 2,5 mm. Optional PoE 24 V."
+        },
+        {
+          "label": "Netzwerk",
+          "value": "5 × Intel I225 2,5-GbE-RJ45, optional PoE an 4 Ports"
+        },
+        {
+          "label": "Serielle Anschlüsse",
+          "value": "2 × DB9 COM (RS-232 / RS-485)"
+        },
+        {
+          "label": "Massenspeicher",
+          "value": "1 × mSATA-SSD + 1 × SATA 6 Gbit/s für 2,5-Zoll-HDD / SSD"
+        },
+        {
+          "label": "Erweiterung",
+          "value": "2 × Mini PCIe für WLAN / Bluetooth / 4G"
+        },
+        {
+          "label": "Abmessungen",
+          "value": "187 × 120 × 50 mm"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI EFI BIOS, automatisches Einschalten, zeitgesteuerter Start, Wake-on-LAN, PXE, Watchdog"
+        },
+        {
+          "label": "TDP",
+          "value": "6–28 W"
+        },
+        {
+          "label": "Betriebssystem",
+          "value": "Windows 10 / Windows 11 / Linux"
+        },
+        {
+          "label": "Betriebsumgebung",
+          "value": "−20 bis 50 °C, 5–85 % rF, nicht kondensierend"
+        },
+        {
+          "label": "Frontanschlüsse",
+          "value": "1 × DC-Eingang, 2 × USB 3.0, 5 × 2,5-GbE-RJ45"
+        },
+        {
+          "label": "Rückseitige Anschlüsse",
+          "value": "2 × USB 2.0, 2 × DB9 COM (RS-232 / RS-485), HDMI, VGA, Ein/Aus-Taste"
+        },
+        {
+          "label": "Interne Anschlüsse",
+          "value": "DDR4 SO-DIMM, 2 × Mini PCIe, mSATA, SATA 6 Gb/s, J_VGA"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Netzwerkschnittstellen",
+          "description": "5 × Intel I225 2,5-GbE-RJ45, optional PoE an 4 Ports"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Speicheranschlüsse",
+          "description": "1 × mSATA-SSD + 1 × SATA 6 Gbit/s für 2,5-Zoll-HDD / SSD"
+        },
+        {
+          "icon": "Monitor",
+          "title": "Bildschirmanschlüsse",
+          "description": "1 × HDMI + 1 × VGA"
+        }
+      ],
+      "specificationHeading": "Technische Daten",
+      "featureHeading": "Netzwerk-, Speicher- und Bildschirmanschlüsse",
+      "advantageSummary": "Industriecomputer mit fünf 2,5-GbE-Ports und zwei COM-Ports",
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/reviewed/mcipcd1/front.webp",
+          "title": "MCIPCD1 · Frontblende"
+        },
+        {
+          "image": "/assets/products/industrial/reviewed/mcipcd1/rear.webp",
+          "title": "MCIPCD1 · Rückblende"
+        }
+      ]
+    },
+    "fr": {
+      "tagline": "Ordinateur industriel avec cinq ports 2,5 GbE et deux ports COM",
+      "description": "Le MCIPCD1 dispose de cinq ports Intel I225 2,5 GbE en façade, avec PoE disponible en option sur quatre ports. Intel N5095 ou N5105, jusqu’à 32 Go de DDR4-3200, deux ports COM DB9, HDMI et VGA permettent l’intégration d’équipements industriels et de réseaux. Le boîtier mesure 187 × 120 × 50 mm.",
+      "highlights": [
+        "Intel Celeron N5095 / N5105",
+        "1 × SO-DIMM DDR4-3200, jusqu’à 32 Go",
+        "5 × Intel I225 RJ45 2,5 GbE, PoE en option sur 4 ports",
+        "1 × HDMI + 1 × VGA"
+      ],
+      "specs": [
+        {
+          "label": "Modèle",
+          "value": "MCIPCD1"
+        },
+        {
+          "label": "Processeur",
+          "value": "Intel Celeron N5095 / N5105"
+        },
+        {
+          "label": "Plateforme",
+          "value": "BKHD-1338NP-3.5"
+        },
+        {
+          "label": "Graphiques",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Affichage",
+          "value": "1 × HDMI + 1 × VGA"
+        },
+        {
+          "label": "Mémoire",
+          "value": "1 × SO-DIMM DDR4-3200, jusqu’à 32 Go"
+        },
+        {
+          "label": "Matériau",
+          "value": "Alliage d’aluminium"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 2.0 + 2 × USB 3.0"
+        },
+        {
+          "label": "Alimentation",
+          "value": "12 V CC / 4 A, 5,5 × 2,5 mm. PoE 24 V en option."
+        },
+        {
+          "label": "Réseau",
+          "value": "5 × Intel I225 RJ45 2,5 GbE, PoE en option sur 4 ports"
+        },
+        {
+          "label": "Ports série",
+          "value": "2 × DB9 COM (RS-232 / RS-485)"
+        },
+        {
+          "label": "Stockage",
+          "value": "1 × SSD mSATA + 1 × SATA 6 Gbit/s pour HDD / SSD 2,5 pouces"
+        },
+        {
+          "label": "Extension",
+          "value": "2 × Mini PCIe pour Wi-Fi / Bluetooth / 4G"
+        },
+        {
+          "label": "Dimensions",
+          "value": "187 × 120 × 50 mm"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI EFI BIOS, mise sous tension automatique, démarrage programmé, Wake-on-LAN, PXE, chien de garde"
+        },
+        {
+          "label": "TDP",
+          "value": "6–28 W"
+        },
+        {
+          "label": "Système d’exploitation",
+          "value": "Windows 10 / Windows 11 / Linux"
+        },
+        {
+          "label": "Conditions de fonctionnement",
+          "value": "−20 à 50 °C, 5–85 % HR, sans condensation"
+        },
+        {
+          "label": "Connectique avant",
+          "value": "1 × entrée CC, 2 × USB 3.0, 5 × RJ45 2,5 GbE"
+        },
+        {
+          "label": "Connectique arrière",
+          "value": "2 × USB 2.0, 2 × DB9 COM (RS-232 / RS-485), HDMI, VGA, bouton d’alimentation"
+        },
+        {
+          "label": "Connectique interne",
+          "value": "DDR4 SO-DIMM, 2 × Mini PCIe, mSATA, SATA 6 Gb/s, J_VGA"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Interfaces réseau",
+          "description": "5 × Intel I225 RJ45 2,5 GbE, PoE en option sur 4 ports"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Connexions de stockage",
+          "description": "1 × SSD mSATA + 1 × SATA 6 Gbit/s pour HDD / SSD 2,5 pouces"
+        },
+        {
+          "icon": "Monitor",
+          "title": "Connexions vidéo",
+          "description": "1 × HDMI + 1 × VGA"
+        }
+      ],
+      "specificationHeading": "Caractéristiques techniques",
+      "featureHeading": "Connexions réseau, stockage et vidéo",
+      "advantageSummary": "Ordinateur industriel avec cinq ports 2,5 GbE et deux ports COM",
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/reviewed/mcipcd1/front.webp",
+          "title": "MCIPCD1 · panneau avant"
+        },
+        {
+          "image": "/assets/products/industrial/reviewed/mcipcd1/rear.webp",
+          "title": "MCIPCD1 · panneau arrière"
+        }
+      ]
+    },
+    "it": {
+      "tagline": "Computer industriale con cinque porte 2,5 GbE e due COM",
+      "description": "MCIPCD1 offre cinque porte Intel I225 2,5 GbE sul pannello anteriore, con PoE opzionale su quattro porte. Intel N5095 o N5105, fino a 32 GB di DDR4-3200, due porte COM DB9, HDMI e VGA supportano l’integrazione di apparecchiature industriali e reti. Lo chassis misura 187 × 120 × 50 mm.",
+      "highlights": [
+        "Intel Celeron N5095 / N5105",
+        "1 × SO-DIMM DDR4-3200, fino a 32 GB",
+        "5 × Intel I225 RJ45 2,5 GbE, PoE opzionale su 4 porte",
+        "1 × HDMI + 1 × VGA"
+      ],
+      "specs": [
+        {
+          "label": "Modello",
+          "value": "MCIPCD1"
+        },
+        {
+          "label": "Processore",
+          "value": "Intel Celeron N5095 / N5105"
+        },
+        {
+          "label": "Piattaforma",
+          "value": "BKHD-1338NP-3.5"
+        },
+        {
+          "label": "Grafica",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Uscita video",
+          "value": "1 × HDMI + 1 × VGA"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 × SO-DIMM DDR4-3200, fino a 32 GB"
+        },
+        {
+          "label": "Materiale",
+          "value": "Lega di alluminio"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 2.0 + 2 × USB 3.0"
+        },
+        {
+          "label": "Alimentazione",
+          "value": "12 V CC / 4 A, 5,5 × 2,5 mm. PoE 24 V opzionale."
+        },
+        {
+          "label": "Rete",
+          "value": "5 × Intel I225 RJ45 2,5 GbE, PoE opzionale su 4 porte"
+        },
+        {
+          "label": "Porte seriali",
+          "value": "2 × DB9 COM (RS-232 / RS-485)"
+        },
+        {
+          "label": "Archiviazione",
+          "value": "1 × SSD mSATA + 1 × SATA 6 Gb/s per HDD / SSD da 2,5 pollici"
+        },
+        {
+          "label": "Espansione",
+          "value": "2 × Mini PCIe per Wi-Fi / Bluetooth / 4G"
+        },
+        {
+          "label": "Dimensioni",
+          "value": "187 × 120 × 50 mm"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI EFI BIOS, accensione automatica, avvio programmato, Wake-on-LAN, PXE, watchdog"
+        },
+        {
+          "label": "TDP",
+          "value": "6–28 W"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10 / Windows 11 / Linux"
+        },
+        {
+          "label": "Condizioni operative",
+          "value": "Da −20 a 50 °C, 5–85% UR, senza condensa"
+        },
+        {
+          "label": "Porte anteriori",
+          "value": "1 × ingresso CC, 2 × USB 3.0, 5 × RJ45 2,5 GbE"
+        },
+        {
+          "label": "Porte posteriori",
+          "value": "2 × USB 2.0, 2 × DB9 COM (RS-232 / RS-485), HDMI, VGA, pulsante di accensione"
+        },
+        {
+          "label": "Connettori interni",
+          "value": "DDR4 SO-DIMM, 2 × Mini PCIe, mSATA, SATA 6 Gb/s, J_VGA"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Interfacce di rete",
+          "description": "5 × Intel I225 RJ45 2,5 GbE, PoE opzionale su 4 porte"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Connessioni di archiviazione",
+          "description": "1 × SSD mSATA + 1 × SATA 6 Gb/s per HDD / SSD da 2,5 pollici"
+        },
+        {
+          "icon": "Monitor",
+          "title": "Connessioni video",
+          "description": "1 × HDMI + 1 × VGA"
+        }
+      ],
+      "specificationHeading": "Specifiche tecniche",
+      "featureHeading": "Connessioni di rete, archiviazione e video",
+      "advantageSummary": "Computer industriale con cinque porte 2,5 GbE e due COM",
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/reviewed/mcipcd1/front.webp",
+          "title": "MCIPCD1 · pannello anteriore"
+        },
+        {
+          "image": "/assets/products/industrial/reviewed/mcipcd1/rear.webp",
+          "title": "MCIPCD1 · pannello posteriore"
+        }
+      ]
+    },
+    "es": {
+      "tagline": "Ordenador industrial con cinco puertos de 2,5 GbE y dos COM",
+      "description": "MCIPCD1 dispone de cinco puertos Intel I225 de 2,5 GbE en el panel frontal, con PoE opcional en cuatro puertos. Intel N5095 o N5105, hasta 32 GB de DDR4-3200, dos puertos COM DB9, HDMI y VGA permiten integrar equipos industriales y redes. El chasis mide 187 × 120 × 50 mm.",
+      "highlights": [
+        "Intel Celeron N5095 / N5105",
+        "1 × SO-DIMM DDR4-3200, hasta 32 GB",
+        "5 × Intel I225 RJ45 de 2,5 GbE, PoE opcional en 4 puertos",
+        "1 × HDMI + 1 × VGA"
+      ],
+      "specs": [
+        {
+          "label": "Modelo",
+          "value": "MCIPCD1"
+        },
+        {
+          "label": "Procesador",
+          "value": "Intel Celeron N5095 / N5105"
+        },
+        {
+          "label": "Plataforma",
+          "value": "BKHD-1338NP-3.5"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Salida de vídeo",
+          "value": "1 × HDMI + 1 × VGA"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 × SO-DIMM DDR4-3200, hasta 32 GB"
+        },
+        {
+          "label": "Material",
+          "value": "Aleación de aluminio"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 2.0 + 2 × USB 3.0"
+        },
+        {
+          "label": "Alimentación",
+          "value": "12 V CC / 4 A, 5,5 × 2,5 mm. PoE de 24 V opcional."
+        },
+        {
+          "label": "Red",
+          "value": "5 × Intel I225 RJ45 de 2,5 GbE, PoE opcional en 4 puertos"
+        },
+        {
+          "label": "Puertos serie",
+          "value": "2 × DB9 COM (RS-232 / RS-485)"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "1 × SSD mSATA + 1 × SATA de 6 Gb/s para HDD / SSD de 2,5 pulgadas"
+        },
+        {
+          "label": "Expansión",
+          "value": "2 × Mini PCIe para Wi-Fi / Bluetooth / 4G"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "187 × 120 × 50 mm"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI EFI BIOS, encendido automático, arranque programado, Wake-on-LAN, PXE, temporizador de vigilancia"
+        },
+        {
+          "label": "TDP",
+          "value": "6–28 W"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10 / Windows 11 / Linux"
+        },
+        {
+          "label": "Condiciones de funcionamiento",
+          "value": "De −20 a 50 °C, 5–85 % HR, sin condensación"
+        },
+        {
+          "label": "Conexiones frontales",
+          "value": "1 × entrada CC, 2 × USB 3.0, 5 × RJ45 de 2,5 GbE"
+        },
+        {
+          "label": "Conexiones traseras",
+          "value": "2 × USB 2.0, 2 × DB9 COM (RS-232 / RS-485), HDMI, VGA, botón de encendido"
+        },
+        {
+          "label": "Conectores internos",
+          "value": "DDR4 SO-DIMM, 2 × Mini PCIe, mSATA, SATA 6 Gb/s, J_VGA"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Interfaces de red",
+          "description": "5 × Intel I225 RJ45 de 2,5 GbE, PoE opcional en 4 puertos"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Conexiones de almacenamiento",
+          "description": "1 × SSD mSATA + 1 × SATA de 6 Gb/s para HDD / SSD de 2,5 pulgadas"
+        },
+        {
+          "icon": "Monitor",
+          "title": "Conexiones de vídeo",
+          "description": "1 × HDMI + 1 × VGA"
+        }
+      ],
+      "specificationHeading": "Especificaciones técnicas",
+      "featureHeading": "Conexiones de red, almacenamiento y vídeo",
+      "advantageSummary": "Ordenador industrial con cinco puertos de 2,5 GbE y dos COM",
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/reviewed/mcipcd1/front.webp",
+          "title": "MCIPCD1 · panel frontal"
+        },
+        {
+          "image": "/assets/products/industrial/reviewed/mcipcd1/rear.webp",
+          "title": "MCIPCD1 · panel trasero"
+        }
+      ]
+    }
+  }
+}

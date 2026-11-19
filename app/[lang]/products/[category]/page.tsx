@@ -207,7 +207,7 @@ const commercialSeries = [
     code: 'NAS',
     title: 'NAS PC Series',
     description: 'Compact storage and network-service platforms with multi-drive, multi-LAN, and high-speed uplink options',
-    image: '/assets/products/commercial/nas/mcnas12/images/main-square.png',
+    image: commercialCatalog.find(product => product.id === 'mcnas12')!.image,
     models: commercialCatalog.filter((product) => product.series === 'NAS').map(({ id, name, image }) => ({ id, name, image })),
   },
   {

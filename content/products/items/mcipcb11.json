@@ -1,0 +1,710 @@
+{
+  "id": "mcipcb11",
+  "name": "MCIPCB11",
+  "category": "industrial-mini-pc",
+  "series": "B",
+  "published": true,
+  "image": "/assets/products/industrial/reviewed/mcipcb11/front.webp",
+  "images": [
+    "/assets/products/industrial/reviewed/mcipcb11/front.webp"
+  ],
+  "galleryImages": [
+    "/assets/products/industrial/reviewed/mcipcb11/front.webp",
+    "/assets/products/industrial/reviewed/mcipcb11/rear.webp"
+  ],
+  "operatingRange": "0°C to 50°C",
+  "sourceBrochure": "工控机IPC/B系列/MCIPCB11 brochure.pdf",
+  "sourceSha256": "bb010cb8007e5bb501a7566c06201458df579a799d504d01e304402b3272b66a",
+  "tagline": "Intel N100 industrial computer with dual Gigabit LAN and dual COM",
+  "description": "MCIPCB11 combines Intel N100, DDR4 SO-DIMM memory and two Realtek RTL8111 Gigabit Ethernet ports. Two RS-232/RS-485 COM ports, HDMI, DisplayPort and display-capable Type-C connections support equipment integration. SATA and M.2 storage and wireless module slots are provided in a 138 × 126 × 48 mm enclosure.",
+  "highlights": [
+    "Intel N100, 4 cores, up to 3.40 GHz, 6 MB cache",
+    "1 × DDR4 SO-DIMM",
+    "2 × Realtek RTL8111 Gigabit RJ45 LAN",
+    "2 × HDMI + 1 × DisplayPort + 1 × USB-C with display output"
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCIPCB11"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel N100, 4 cores, up to 3.40 GHz, 6 MB cache"
+    },
+    {
+      "label": "Chipset",
+      "value": "Intel N100"
+    },
+    {
+      "label": "Display",
+      "value": "2 × HDMI + 1 × DisplayPort + 1 × USB-C with display output"
+    },
+    {
+      "label": "Memory",
+      "value": "1 × DDR4 SO-DIMM"
+    },
+    {
+      "label": "Weight",
+      "value": "1.65 kg"
+    },
+    {
+      "label": "USB",
+      "value": "4 × USB 3.0 + 2 × USB 2.0"
+    },
+    {
+      "label": "Power",
+      "value": "12 V DC / 4 A, 5.5 × 2.5 mm"
+    },
+    {
+      "label": "Network",
+      "value": "2 × Realtek RTL8111 Gigabit RJ45 LAN"
+    },
+    {
+      "label": "Serial",
+      "value": "2 × COM RS-232 / RS-485"
+    },
+    {
+      "label": "Storage",
+      "value": "1 × SATA 3.0 + 1 × M.2 SSD (SATA 3.0 / NVMe PCIe 3.0 ×1)"
+    },
+    {
+      "label": "Expansion",
+      "value": "1 × M.2 2230 CNVi, 1 × Mini PCIe, watchdog, Wake-on-LAN, PXE"
+    },
+    {
+      "label": "Dimensions",
+      "value": "138 × 126 × 48 mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI UEFI BIOS"
+    },
+    {
+      "label": "TDP",
+      "value": "6 W"
+    },
+    {
+      "label": "System",
+      "value": "Windows 10 / Windows 11 / Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0–50 °C, 5–90% RH, non-condensing"
+    },
+    {
+      "label": "Front I/O",
+      "value": "4 × USB 3.0, 2 × COM RS-232 / RS-485, audio output, power button"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "2 × Realtek RTL8111 Gigabit RJ45, 12 V DC, 2 × HDMI, 1 × DP, 2 × USB 2.0, 1 × Type-C"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "M.2 2230, Mini PCIe, M.2 SSD, GPIO, DDR4 SO-DIMM, F_PANEL, SATA data/power, eDP, CLR_CMOS"
+    }
+  ],
+  "features": [
+    {
+      "icon": "Network",
+      "title": "Network interfaces",
+      "description": "2 × Realtek RTL8111 Gigabit RJ45 LAN"
+    },
+    {
+      "icon": "HardDrive",
+      "title": "Storage connections",
+      "description": "1 × SATA 3.0 + 1 × M.2 SSD (SATA 3.0 / NVMe PCIe 3.0 ×1)"
+    },
+    {
+      "icon": "Monitor",
+      "title": "Display connections",
+      "description": "2 × HDMI + 1 × DisplayPort + 1 × USB-C with display output"
+    }
+  ],
+  "specificationHeading": "Hardware specifications",
+  "featureHeading": "Network, storage and display connections",
+  "advantageSummary": "Intel N100 industrial computer with dual Gigabit LAN and dual COM",
+  "galleryCards": [
+    {
+      "image": "/assets/products/industrial/reviewed/mcipcb11/front.webp",
+      "title": "MCIPCB11 · front panel"
+    },
+    {
+      "image": "/assets/products/industrial/reviewed/mcipcb11/rear.webp",
+      "title": "MCIPCB11 · rear panel"
+    }
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MCIPCB11"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel N100, 4 cores, up to 3.40 GHz, 6 MB cache"
+    },
+    {
+      "label": "Chipset",
+      "value": "Intel N100"
+    },
+    {
+      "label": "Display",
+      "value": "2 × HDMI + 1 × DisplayPort + 1 × USB-C with display output"
+    },
+    {
+      "label": "Memory",
+      "value": "1 × DDR4 SO-DIMM"
+    },
+    {
+      "label": "Weight",
+      "value": "1.65 kg"
+    },
+    {
+      "label": "USB",
+      "value": "4 × USB 3.0 + 2 × USB 2.0"
+    },
+    {
+      "label": "Power",
+      "value": "12 V DC / 4 A, 5.5 × 2.5 mm"
+    },
+    {
+      "label": "Network",
+      "value": "2 × Realtek RTL8111 Gigabit RJ45 LAN"
+    },
+    {
+      "label": "Serial",
+      "value": "2 × COM RS-232 / RS-485"
+    },
+    {
+      "label": "Storage",
+      "value": "1 × SATA 3.0 + 1 × M.2 SSD (SATA 3.0 / NVMe PCIe 3.0 ×1)"
+    },
+    {
+      "label": "Expansion",
+      "value": "1 × M.2 2230 CNVi, 1 × Mini PCIe, watchdog, Wake-on-LAN, PXE"
+    },
+    {
+      "label": "Dimensions",
+      "value": "138 × 126 × 48 mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI UEFI BIOS"
+    },
+    {
+      "label": "TDP",
+      "value": "6 W"
+    },
+    {
+      "label": "System",
+      "value": "Windows 10 / Windows 11 / Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "0–50 °C, 5–90% RH, non-condensing"
+    },
+    {
+      "label": "Front I/O",
+      "value": "4 × USB 3.0, 2 × COM RS-232 / RS-485, audio output, power button"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "2 × Realtek RTL8111 Gigabit RJ45, 12 V DC, 2 × HDMI, 1 × DP, 2 × USB 2.0, 1 × Type-C"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "M.2 2230, Mini PCIe, M.2 SSD, GPIO, DDR4 SO-DIMM, F_PANEL, SATA data/power, eDP, CLR_CMOS"
+    }
+  ],
+  "translations": {
+    "de": {
+      "tagline": "Intel-N100-Industriecomputer mit zwei Gigabit-LAN- und zwei COM-Ports",
+      "description": "MCIPCB11 kombiniert Intel N100, DDR4-SO-DIMM-Arbeitsspeicher und zwei Realtek-RTL8111-Gigabit-Ethernet-Ports. Zwei RS-232/RS-485-COM-Ports, HDMI, DisplayPort und Type-C mit Bildausgabe unterstützen die Geräteintegration. SATA- und M.2-Speicheranschlüsse sowie Funkmodulsteckplätze befinden sich im 138 × 126 × 48 mm großen Gehäuse.",
+      "highlights": [
+        "Intel N100, 4 Kerne, bis zu 3,40 GHz, 6 MB Cache",
+        "1 × DDR4 SO-DIMM",
+        "2 × Realtek RTL8111 Gigabit RJ45 LAN",
+        "2 × HDMI + 1 × DisplayPort + 1 × USB-C mit Bildausgabe"
+      ],
+      "specs": [
+        {
+          "label": "Modell",
+          "value": "MCIPCB11"
+        },
+        {
+          "label": "Prozessor",
+          "value": "Intel N100, 4 Kerne, bis zu 3,40 GHz, 6 MB Cache"
+        },
+        {
+          "label": "Plattform",
+          "value": "Intel N100"
+        },
+        {
+          "label": "Bildausgabe",
+          "value": "2 × HDMI + 1 × DisplayPort + 1 × USB-C mit Bildausgabe"
+        },
+        {
+          "label": "Arbeitsspeicher",
+          "value": "1 × DDR4 SO-DIMM"
+        },
+        {
+          "label": "Gewicht",
+          "value": "1.65 kg"
+        },
+        {
+          "label": "USB",
+          "value": "4 × USB 3.0 + 2 × USB 2.0"
+        },
+        {
+          "label": "Stromversorgung",
+          "value": "12 V DC / 4 A, 5.5 × 2.5 mm"
+        },
+        {
+          "label": "Netzwerk",
+          "value": "2 × Realtek RTL8111 Gigabit RJ45 LAN"
+        },
+        {
+          "label": "Serielle Anschlüsse",
+          "value": "2 × COM RS-232 / RS-485"
+        },
+        {
+          "label": "Massenspeicher",
+          "value": "1 × SATA 3.0 + 1 × M.2 SSD (SATA 3.0 / NVMe PCIe 3.0 ×1)"
+        },
+        {
+          "label": "Erweiterung",
+          "value": "1 × M.2 2230 CNVi, 1 × Mini PCIe, Watchdog, Wake-on-LAN, PXE"
+        },
+        {
+          "label": "Abmessungen",
+          "value": "138 × 126 × 48 mm"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI UEFI BIOS"
+        },
+        {
+          "label": "TDP",
+          "value": "6 W"
+        },
+        {
+          "label": "Betriebssystem",
+          "value": "Windows 10 / Windows 11 / Linux"
+        },
+        {
+          "label": "Betriebsumgebung",
+          "value": "0–50 °C, 5–90 % rF, nicht kondensierend"
+        },
+        {
+          "label": "Frontanschlüsse",
+          "value": "4 × USB 3.0, 2 × COM RS-232 / RS-485, Audioausgang, Ein/Aus-Taste"
+        },
+        {
+          "label": "Rückseitige Anschlüsse",
+          "value": "2 × Realtek RTL8111 Gigabit RJ45, 12 V DC, 2 × HDMI, 1 × DP, 2 × USB 2.0, 1 × Type-C"
+        },
+        {
+          "label": "Interne Anschlüsse",
+          "value": "M.2 2230, Mini PCIe, M.2-SSD, GPIO, DDR4 SO-DIMM, F_PANEL, SATA-Daten/Strom, eDP, CLR_CMOS"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Netzwerkschnittstellen",
+          "description": "2 × Realtek RTL8111 Gigabit RJ45 LAN"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Speicheranschlüsse",
+          "description": "1 × SATA 3.0 + 1 × M.2 SSD (SATA 3.0 / NVMe PCIe 3.0 ×1)"
+        },
+        {
+          "icon": "Monitor",
+          "title": "Bildschirmanschlüsse",
+          "description": "2 × HDMI + 1 × DisplayPort + 1 × USB-C mit Bildausgabe"
+        }
+      ],
+      "specificationHeading": "Technische Daten",
+      "featureHeading": "Netzwerk-, Speicher- und Bildschirmanschlüsse",
+      "advantageSummary": "Intel-N100-Industriecomputer mit zwei Gigabit-LAN- und zwei COM-Ports",
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/reviewed/mcipcb11/front.webp",
+          "title": "MCIPCB11 · Frontblende"
+        },
+        {
+          "image": "/assets/products/industrial/reviewed/mcipcb11/rear.webp",
+          "title": "MCIPCB11 · Rückblende"
+        }
+      ]
+    },
+    "fr": {
+      "tagline": "Ordinateur industriel Intel N100 avec deux ports LAN Gigabit et deux ports COM",
+      "description": "Le MCIPCB11 associe Intel N100, mémoire DDR4 SO-DIMM et deux ports Ethernet Gigabit Realtek RTL8111. Deux ports COM RS-232/RS-485, HDMI, DisplayPort et Type-C avec sortie vidéo facilitent l’intégration des équipements. Des connexions de stockage SATA et M.2 et des emplacements pour modules sans fil sont proposés dans un boîtier de 138 × 126 × 48 mm.",
+      "highlights": [
+        "Intel N100, 4 cœurs, jusqu’à 3,40 GHz, 6 Mo de cache",
+        "1 × DDR4 SO-DIMM",
+        "2 × Realtek RTL8111 Gigabit RJ45 LAN",
+        "2 × HDMI + 1 × DisplayPort + 1 × USB-C avec sortie vidéo"
+      ],
+      "specs": [
+        {
+          "label": "Modèle",
+          "value": "MCIPCB11"
+        },
+        {
+          "label": "Processeur",
+          "value": "Intel N100, 4 cœurs, jusqu’à 3,40 GHz, 6 Mo de cache"
+        },
+        {
+          "label": "Plateforme",
+          "value": "Intel N100"
+        },
+        {
+          "label": "Affichage",
+          "value": "2 × HDMI + 1 × DisplayPort + 1 × USB-C avec sortie vidéo"
+        },
+        {
+          "label": "Mémoire",
+          "value": "1 × DDR4 SO-DIMM"
+        },
+        {
+          "label": "Poids",
+          "value": "1.65 kg"
+        },
+        {
+          "label": "USB",
+          "value": "4 × USB 3.0 + 2 × USB 2.0"
+        },
+        {
+          "label": "Alimentation",
+          "value": "12 V DC / 4 A, 5.5 × 2.5 mm"
+        },
+        {
+          "label": "Réseau",
+          "value": "2 × Realtek RTL8111 Gigabit RJ45 LAN"
+        },
+        {
+          "label": "Ports série",
+          "value": "2 × COM RS-232 / RS-485"
+        },
+        {
+          "label": "Stockage",
+          "value": "1 × SATA 3.0 + 1 × M.2 SSD (SATA 3.0 / NVMe PCIe 3.0 ×1)"
+        },
+        {
+          "label": "Extension",
+          "value": "1 × M.2 2230 CNVi, 1 × Mini PCIe, chien de garde, Wake-on-LAN, PXE"
+        },
+        {
+          "label": "Dimensions",
+          "value": "138 × 126 × 48 mm"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI UEFI BIOS"
+        },
+        {
+          "label": "TDP",
+          "value": "6 W"
+        },
+        {
+          "label": "Système d’exploitation",
+          "value": "Windows 10 / Windows 11 / Linux"
+        },
+        {
+          "label": "Conditions de fonctionnement",
+          "value": "0–50 °C, 5–90 % HR, sans condensation"
+        },
+        {
+          "label": "Connectique avant",
+          "value": "4 × USB 3.0, 2 × COM RS-232 / RS-485, sortie audio, bouton d’alimentation"
+        },
+        {
+          "label": "Connectique arrière",
+          "value": "2 × Realtek RTL8111 Gigabit RJ45, 12 V DC, 2 × HDMI, 1 × DP, 2 × USB 2.0, 1 × Type-C"
+        },
+        {
+          "label": "Connectique interne",
+          "value": "M.2 2230, Mini PCIe, SSD M.2, GPIO, DDR4 SO-DIMM, F_PANEL, SATA données/alimentation, eDP, CLR_CMOS"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Interfaces réseau",
+          "description": "2 × Realtek RTL8111 Gigabit RJ45 LAN"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Connexions de stockage",
+          "description": "1 × SATA 3.0 + 1 × M.2 SSD (SATA 3.0 / NVMe PCIe 3.0 ×1)"
+        },
+        {
+          "icon": "Monitor",
+          "title": "Connexions vidéo",
+          "description": "2 × HDMI + 1 × DisplayPort + 1 × USB-C avec sortie vidéo"
+        }
+      ],
+      "specificationHeading": "Caractéristiques techniques",
+      "featureHeading": "Connexions réseau, stockage et vidéo",
+      "advantageSummary": "Ordinateur industriel Intel N100 avec deux ports LAN Gigabit et deux ports COM",
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/reviewed/mcipcb11/front.webp",
+          "title": "MCIPCB11 · panneau avant"
+        },
+        {
+          "image": "/assets/products/industrial/reviewed/mcipcb11/rear.webp",
+          "title": "MCIPCB11 · panneau arrière"
+        }
+      ]
+    },
+    "it": {
+      "tagline": "Computer industriale Intel N100 con due porte LAN Gigabit e due COM",
+      "description": "MCIPCB11 combina Intel N100, memoria DDR4 SO-DIMM e due porte Ethernet Gigabit Realtek RTL8111. Due porte COM RS-232/RS-485, HDMI, DisplayPort e Type-C con uscita video supportano l’integrazione delle apparecchiature. Connessioni di archiviazione SATA e M.2 e slot per moduli wireless sono integrati in uno chassis di 138 × 126 × 48 mm.",
+      "highlights": [
+        "Intel N100, 4 core, fino a 3,40 GHz, 6 MB di cache",
+        "1 × DDR4 SO-DIMM",
+        "2 × Realtek RTL8111 Gigabit RJ45 LAN",
+        "2 × HDMI + 1 × DisplayPort + 1 × USB-C con uscita video"
+      ],
+      "specs": [
+        {
+          "label": "Modello",
+          "value": "MCIPCB11"
+        },
+        {
+          "label": "Processore",
+          "value": "Intel N100, 4 core, fino a 3,40 GHz, 6 MB di cache"
+        },
+        {
+          "label": "Piattaforma",
+          "value": "Intel N100"
+        },
+        {
+          "label": "Uscita video",
+          "value": "2 × HDMI + 1 × DisplayPort + 1 × USB-C con uscita video"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 × DDR4 SO-DIMM"
+        },
+        {
+          "label": "Peso",
+          "value": "1.65 kg"
+        },
+        {
+          "label": "USB",
+          "value": "4 × USB 3.0 + 2 × USB 2.0"
+        },
+        {
+          "label": "Alimentazione",
+          "value": "12 V DC / 4 A, 5.5 × 2.5 mm"
+        },
+        {
+          "label": "Rete",
+          "value": "2 × Realtek RTL8111 Gigabit RJ45 LAN"
+        },
+        {
+          "label": "Porte seriali",
+          "value": "2 × COM RS-232 / RS-485"
+        },
+        {
+          "label": "Archiviazione",
+          "value": "1 × SATA 3.0 + 1 × M.2 SSD (SATA 3.0 / NVMe PCIe 3.0 ×1)"
+        },
+        {
+          "label": "Espansione",
+          "value": "1 × M.2 2230 CNVi, 1 × Mini PCIe, watchdog, Wake-on-LAN, PXE"
+        },
+        {
+          "label": "Dimensioni",
+          "value": "138 × 126 × 48 mm"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI UEFI BIOS"
+        },
+        {
+          "label": "TDP",
+          "value": "6 W"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10 / Windows 11 / Linux"
+        },
+        {
+          "label": "Condizioni operative",
+          "value": "0–50 °C, 5–90% UR, senza condensa"
+        },
+        {
+          "label": "Porte anteriori",
+          "value": "4 × USB 3.0, 2 × COM RS-232 / RS-485, uscita audio, pulsante di accensione"
+        },
+        {
+          "label": "Porte posteriori",
+          "value": "2 × Realtek RTL8111 Gigabit RJ45, 12 V DC, 2 × HDMI, 1 × DP, 2 × USB 2.0, 1 × Type-C"
+        },
+        {
+          "label": "Connettori interni",
+          "value": "M.2 2230, Mini PCIe, SSD M.2, GPIO, DDR4 SO-DIMM, F_PANEL, SATA dati/alimentazione, eDP, CLR_CMOS"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Interfacce di rete",
+          "description": "2 × Realtek RTL8111 Gigabit RJ45 LAN"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Connessioni di archiviazione",
+          "description": "1 × SATA 3.0 + 1 × M.2 SSD (SATA 3.0 / NVMe PCIe 3.0 ×1)"
+        },
+        {
+          "icon": "Monitor",
+          "title": "Connessioni video",
+          "description": "2 × HDMI + 1 × DisplayPort + 1 × USB-C con uscita video"
+        }
+      ],
+      "specificationHeading": "Specifiche tecniche",
+      "featureHeading": "Connessioni di rete, archiviazione e video",
+      "advantageSummary": "Computer industriale Intel N100 con due porte LAN Gigabit e due COM",
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/reviewed/mcipcb11/front.webp",
+          "title": "MCIPCB11 · pannello anteriore"
+        },
+        {
+          "image": "/assets/products/industrial/reviewed/mcipcb11/rear.webp",
+          "title": "MCIPCB11 · pannello posteriore"
+        }
+      ]
+    },
+    "es": {
+      "tagline": "Ordenador industrial Intel N100 con dos puertos LAN Gigabit y dos COM",
+      "description": "MCIPCB11 combina Intel N100, memoria DDR4 SO-DIMM y dos puertos Ethernet Gigabit Realtek RTL8111. Dos puertos COM RS-232/RS-485, HDMI, DisplayPort y Type-C con salida de vídeo facilitan la integración de equipos. El chasis de 138 × 126 × 48 mm incorpora conexiones de almacenamiento SATA y M.2 y ranuras para módulos inalámbricos.",
+      "highlights": [
+        "Intel N100, 4 núcleos, hasta 3,40 GHz, 6 MB de caché",
+        "1 × DDR4 SO-DIMM",
+        "2 × Realtek RTL8111 Gigabit RJ45 LAN",
+        "2 × HDMI + 1 × DisplayPort + 1 × USB-C con salida de vídeo"
+      ],
+      "specs": [
+        {
+          "label": "Modelo",
+          "value": "MCIPCB11"
+        },
+        {
+          "label": "Procesador",
+          "value": "Intel N100, 4 núcleos, hasta 3,40 GHz, 6 MB de caché"
+        },
+        {
+          "label": "Plataforma",
+          "value": "Intel N100"
+        },
+        {
+          "label": "Salida de vídeo",
+          "value": "2 × HDMI + 1 × DisplayPort + 1 × USB-C con salida de vídeo"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 × DDR4 SO-DIMM"
+        },
+        {
+          "label": "Peso",
+          "value": "1.65 kg"
+        },
+        {
+          "label": "USB",
+          "value": "4 × USB 3.0 + 2 × USB 2.0"
+        },
+        {
+          "label": "Alimentación",
+          "value": "12 V DC / 4 A, 5.5 × 2.5 mm"
+        },
+        {
+          "label": "Red",
+          "value": "2 × Realtek RTL8111 Gigabit RJ45 LAN"
+        },
+        {
+          "label": "Puertos serie",
+          "value": "2 × COM RS-232 / RS-485"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "1 × SATA 3.0 + 1 × M.2 SSD (SATA 3.0 / NVMe PCIe 3.0 ×1)"
+        },
+        {
+          "label": "Expansión",
+          "value": "1 × M.2 2230 CNVi, 1 × Mini PCIe, temporizador de vigilancia, Wake-on-LAN, PXE"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "138 × 126 × 48 mm"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI UEFI BIOS"
+        },
+        {
+          "label": "TDP",
+          "value": "6 W"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10 / Windows 11 / Linux"
+        },
+        {
+          "label": "Condiciones de funcionamiento",
+          "value": "0–50 °C, 5–90 % HR, sin condensación"
+        },
+        {
+          "label": "Conexiones frontales",
+          "value": "4 × USB 3.0, 2 × COM RS-232 / RS-485, salida de audio, botón de encendido"
+        },
+        {
+          "label": "Conexiones traseras",
+          "value": "2 × Realtek RTL8111 Gigabit RJ45, 12 V DC, 2 × HDMI, 1 × DP, 2 × USB 2.0, 1 × Type-C"
+        },
+        {
+          "label": "Conectores internos",
+          "value": "M.2 2230, Mini PCIe, SSD M.2, GPIO, DDR4 SO-DIMM, F_PANEL, SATA datos/alimentación, eDP, CLR_CMOS"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Interfaces de red",
+          "description": "2 × Realtek RTL8111 Gigabit RJ45 LAN"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Conexiones de almacenamiento",
+          "description": "1 × SATA 3.0 + 1 × M.2 SSD (SATA 3.0 / NVMe PCIe 3.0 ×1)"
+        },
+        {
+          "icon": "Monitor",
+          "title": "Conexiones de vídeo",
+          "description": "2 × HDMI + 1 × DisplayPort + 1 × USB-C con salida de vídeo"
+        }
+      ],
+      "specificationHeading": "Especificaciones técnicas",
+      "featureHeading": "Conexiones de red, almacenamiento y vídeo",
+      "advantageSummary": "Ordenador industrial Intel N100 con dos puertos LAN Gigabit y dos COM",
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/reviewed/mcipcb11/front.webp",
+          "title": "MCIPCB11 · panel frontal"
+        },
+        {
+          "image": "/assets/products/industrial/reviewed/mcipcb11/rear.webp",
+          "title": "MCIPCB11 · panel trasero"
+        }
+      ]
+    }
+  }
+}

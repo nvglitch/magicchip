@@ -74,7 +74,7 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
   },
   "mcipca1": {
     "image": "/assets/products/thumbnails/mcipca1.webp",
-    "source": "/assets/products/industrial/a-series/mcipca1/images/main-transparent.png"
+    "source": "/assets/products/industrial/reviewed/mcipca1/front.webp"
   },
   "mcipcb10": {
     "image": "/assets/products/thumbnails/mcipcb10.webp",
@@ -82,7 +82,7 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
   },
   "mcipcb11": {
     "image": "/assets/products/thumbnails/mcipcb11.webp",
-    "source": "/assets/products/industrial/b-series/mcipcb11/images/main-transparent.png"
+    "source": "/assets/products/industrial/reviewed/mcipcb11/front.webp"
   },
   "mcipcb3": {
     "image": "/assets/products/thumbnails/mcipcb3.webp",
@@ -150,7 +150,7 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
   },
   "mcipcd1": {
     "image": "/assets/products/thumbnails/mcipcd1.webp",
-    "source": "/assets/products/industrial/d-series/mcipcd1/images/main-square-srgb.jpg"
+    "source": "/assets/products/industrial/reviewed/mcipcd1/front.webp"
   },
   "mcipcd2": {
     "image": "/assets/products/thumbnails/mcipcd2.webp",
@@ -406,7 +406,7 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
   },
   "mcnas12": {
     "image": "/assets/products/thumbnails/mcnas12.webp",
-    "source": "/assets/products/commercial/nas/mcnas12/images/main-square.png"
+    "source": "/assets/products/commercial/reviewed/mcnas12/rear.webp"
   },
   "mcnash10": {
     "image": "/assets/products/thumbnails/mcnash10.webp",

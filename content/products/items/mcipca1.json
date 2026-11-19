@@ -1,0 +1,758 @@
+{
+  "id": "mcipca1",
+  "name": "MCIPCA1",
+  "category": "industrial-mini-pc",
+  "series": "A",
+  "published": true,
+  "image": "/assets/products/industrial/reviewed/mcipca1/front.webp",
+  "images": [
+    "/assets/products/industrial/reviewed/mcipca1/front.webp"
+  ],
+  "galleryImages": [
+    "/assets/products/industrial/reviewed/mcipca1/front.webp",
+    "/assets/products/industrial/reviewed/mcipca1/rear.webp"
+  ],
+  "operatingRange": "-20°C to 60°C",
+  "sourceBrochure": "工控机IPC/A系列/MCIPCA1 brochure.pdf",
+  "sourceSha256": "e9b189510a6b2b23c1aa33f18e6e05c06ea71a12df41e9f3f2a18f9bf2f097fa",
+  "tagline": "Elkhart Lake industrial computer with one Gigabit LAN port",
+  "description": "MCIPCA1 combines Intel Celeron J6412 or Pentium J6426 with up to 32 GB DDR4, one Gigabit Ethernet port and two DB9 RS-232 ports. Dual HDMI and DisplayPort outputs, eight USB ports and NVMe, SATA and mSATA connections support machine-side integration. The enclosure measures 135 × 127 × 38.7 mm.",
+  "highlights": [
+    "Intel Celeron J6412 / Pentium J6426",
+    "1 × DDR4 SO-DIMM, up to 32 GB",
+    "1 × Realtek Gigabit RJ45 LAN",
+    "2 × HDMI + 1 × DisplayPort"
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCIPCA1"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel Celeron J6412 / Pentium J6426"
+    },
+    {
+      "label": "Chipset",
+      "value": "Intel Elkhart Lake"
+    },
+    {
+      "label": "Display",
+      "value": "2 × HDMI + 1 × DisplayPort"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel UHD Graphics"
+    },
+    {
+      "label": "Memory",
+      "value": "1 × DDR4 SO-DIMM, up to 32 GB"
+    },
+    {
+      "label": "Weight",
+      "value": "Net 0.8 kg, gross 1 kg"
+    },
+    {
+      "label": "USB",
+      "value": "2 × USB 3.0 + 6 × USB 2.0"
+    },
+    {
+      "label": "Power",
+      "value": "12 V DC"
+    },
+    {
+      "label": "Network",
+      "value": "1 × Realtek Gigabit RJ45 LAN"
+    },
+    {
+      "label": "Serial",
+      "value": "2 × DB9 RS-232 COM"
+    },
+    {
+      "label": "Storage",
+      "value": "1 × M.2 2280 NVMe + 1 × SATA 3.0 + 1 × mSATA 3.0"
+    },
+    {
+      "label": "Expansion",
+      "value": "M.2 2230 for Wi-Fi / Bluetooth, watchdog, Wake-on-LAN, PXE"
+    },
+    {
+      "label": "Dimensions",
+      "value": "135 × 127 × 38.7 mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI UEFI BIOS"
+    },
+    {
+      "label": "TDP",
+      "value": "10 W"
+    },
+    {
+      "label": "System",
+      "value": "Windows 10 / WES 10 / Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "−20 to 60 °C, 10–90% RH, non-condensing"
+    },
+    {
+      "label": "Storage Environment",
+      "value": "−30 to 70 °C"
+    },
+    {
+      "label": "Front I/O",
+      "value": "2 × USB 3.0, 6 × USB 2.0, 2 × DB9 RS-232 COM, power button"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "1 × Gigabit RJ45, 12 V DC, 2 × HDMI 1.4, 1 × DP 1.2, microphone / speaker"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "SATA 3.0, M.2 SSD, mSATA 3.0, DDR4 SO-DIMM, M.2 2230 Wi-Fi / Bluetooth, CMOS battery"
+    }
+  ],
+  "features": [
+    {
+      "icon": "Network",
+      "title": "Network interfaces",
+      "description": "1 × Realtek Gigabit RJ45 LAN"
+    },
+    {
+      "icon": "HardDrive",
+      "title": "Storage connections",
+      "description": "1 × M.2 2280 NVMe + 1 × SATA 3.0 + 1 × mSATA 3.0"
+    },
+    {
+      "icon": "Monitor",
+      "title": "Display connections",
+      "description": "2 × HDMI + 1 × DisplayPort"
+    }
+  ],
+  "specificationHeading": "Hardware specifications",
+  "featureHeading": "Network, storage and display connections",
+  "advantageSummary": "Elkhart Lake industrial computer with one Gigabit LAN port",
+  "galleryCards": [
+    {
+      "image": "/assets/products/industrial/reviewed/mcipca1/front.webp",
+      "title": "MCIPCA1 · front panel"
+    },
+    {
+      "image": "/assets/products/industrial/reviewed/mcipca1/rear.webp",
+      "title": "MCIPCA1 · rear panel"
+    }
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MCIPCA1"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel Celeron J6412 / Pentium J6426"
+    },
+    {
+      "label": "Chipset",
+      "value": "Intel Elkhart Lake"
+    },
+    {
+      "label": "Display",
+      "value": "2 × HDMI + 1 × DisplayPort"
+    },
+    {
+      "label": "Graphics",
+      "value": "Intel UHD Graphics"
+    },
+    {
+      "label": "Memory",
+      "value": "1 × DDR4 SO-DIMM, up to 32 GB"
+    },
+    {
+      "label": "Weight",
+      "value": "Net 0.8 kg, gross 1 kg"
+    },
+    {
+      "label": "USB",
+      "value": "2 × USB 3.0 + 6 × USB 2.0"
+    },
+    {
+      "label": "Power",
+      "value": "12 V DC"
+    },
+    {
+      "label": "Network",
+      "value": "1 × Realtek Gigabit RJ45 LAN"
+    },
+    {
+      "label": "Serial",
+      "value": "2 × DB9 RS-232 COM"
+    },
+    {
+      "label": "Storage",
+      "value": "1 × M.2 2280 NVMe + 1 × SATA 3.0 + 1 × mSATA 3.0"
+    },
+    {
+      "label": "Expansion",
+      "value": "M.2 2230 for Wi-Fi / Bluetooth, watchdog, Wake-on-LAN, PXE"
+    },
+    {
+      "label": "Dimensions",
+      "value": "135 × 127 × 38.7 mm"
+    },
+    {
+      "label": "BIOS",
+      "value": "AMI UEFI BIOS"
+    },
+    {
+      "label": "TDP",
+      "value": "10 W"
+    },
+    {
+      "label": "System",
+      "value": "Windows 10 / WES 10 / Linux"
+    },
+    {
+      "label": "Operating Environment",
+      "value": "−20 to 60 °C, 10–90% RH, non-condensing"
+    },
+    {
+      "label": "Storage Environment",
+      "value": "−30 to 70 °C"
+    },
+    {
+      "label": "Front I/O",
+      "value": "2 × USB 3.0, 6 × USB 2.0, 2 × DB9 RS-232 COM, power button"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "1 × Gigabit RJ45, 12 V DC, 2 × HDMI 1.4, 1 × DP 1.2, microphone / speaker"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "SATA 3.0, M.2 SSD, mSATA 3.0, DDR4 SO-DIMM, M.2 2230 Wi-Fi / Bluetooth, CMOS battery"
+    }
+  ],
+  "translations": {
+    "de": {
+      "tagline": "Elkhart-Lake-Industriecomputer mit einem Gigabit-LAN-Port",
+      "description": "MCIPCA1 kombiniert Intel Celeron J6412 oder Pentium J6426 mit bis zu 32 GB DDR4, einem Gigabit-Ethernet-Port und zwei DB9-RS-232-Ports. Zwei HDMI-Ausgänge, DisplayPort, acht USB-Ports sowie NVMe-, SATA- und mSATA-Anschlüsse unterstützen die maschinennahe Integration. Das Gehäuse misst 135 × 127 × 38,7 mm.",
+      "highlights": [
+        "Intel Celeron J6412 / Pentium J6426",
+        "1 × DDR4 SO-DIMM, bis zu 32 GB",
+        "1 × Realtek Gigabit RJ45 LAN",
+        "2 × HDMI + 1 × DisplayPort"
+      ],
+      "specs": [
+        {
+          "label": "Modell",
+          "value": "MCIPCA1"
+        },
+        {
+          "label": "Prozessor",
+          "value": "Intel Celeron J6412 / Pentium J6426"
+        },
+        {
+          "label": "Plattform",
+          "value": "Intel Elkhart Lake"
+        },
+        {
+          "label": "Bildausgabe",
+          "value": "2 × HDMI + 1 × DisplayPort"
+        },
+        {
+          "label": "Grafik",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Arbeitsspeicher",
+          "value": "1 × DDR4 SO-DIMM, bis zu 32 GB"
+        },
+        {
+          "label": "Gewicht",
+          "value": "Netto 0,8 kg, brutto 1 kg"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.0 + 6 × USB 2.0"
+        },
+        {
+          "label": "Stromversorgung",
+          "value": "12 V DC"
+        },
+        {
+          "label": "Netzwerk",
+          "value": "1 × Realtek Gigabit RJ45 LAN"
+        },
+        {
+          "label": "Serielle Anschlüsse",
+          "value": "2 × DB9 RS-232 COM"
+        },
+        {
+          "label": "Massenspeicher",
+          "value": "1 × M.2 2280 NVMe + 1 × SATA 3.0 + 1 × mSATA 3.0"
+        },
+        {
+          "label": "Erweiterung",
+          "value": "M.2 2230 für WLAN / Bluetooth, Watchdog, Wake-on-LAN, PXE"
+        },
+        {
+          "label": "Abmessungen",
+          "value": "135 × 127 × 38.7 mm"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI UEFI BIOS"
+        },
+        {
+          "label": "TDP",
+          "value": "10 W"
+        },
+        {
+          "label": "Betriebssystem",
+          "value": "Windows 10 / WES 10 / Linux"
+        },
+        {
+          "label": "Betriebsumgebung",
+          "value": "−20 bis 60 °C, 10–90 % rF, nicht kondensierend"
+        },
+        {
+          "label": "Lagertemperatur",
+          "value": "−30 bis 70 °C"
+        },
+        {
+          "label": "Frontanschlüsse",
+          "value": "2 × USB 3.0, 6 × USB 2.0, 2 × DB9 RS-232 COM, Ein/Aus-Taste"
+        },
+        {
+          "label": "Rückseitige Anschlüsse",
+          "value": "1 × Gigabit-RJ45, 12 V DC, 2 × HDMI 1.4, 1 × DP 1.2, Mikrofon / Lautsprecher"
+        },
+        {
+          "label": "Interne Anschlüsse",
+          "value": "SATA 3.0, M.2-SSD, mSATA 3.0, DDR4 SO-DIMM, M.2 2230 WLAN / Bluetooth, CMOS-Batterie"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Netzwerkschnittstellen",
+          "description": "1 × Realtek Gigabit RJ45 LAN"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Speicheranschlüsse",
+          "description": "1 × M.2 2280 NVMe + 1 × SATA 3.0 + 1 × mSATA 3.0"
+        },
+        {
+          "icon": "Monitor",
+          "title": "Bildschirmanschlüsse",
+          "description": "2 × HDMI + 1 × DisplayPort"
+        }
+      ],
+      "specificationHeading": "Technische Daten",
+      "featureHeading": "Netzwerk-, Speicher- und Bildschirmanschlüsse",
+      "advantageSummary": "Elkhart-Lake-Industriecomputer mit einem Gigabit-LAN-Port",
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/reviewed/mcipca1/front.webp",
+          "title": "MCIPCA1 · Frontblende"
+        },
+        {
+          "image": "/assets/products/industrial/reviewed/mcipca1/rear.webp",
+          "title": "MCIPCA1 · Rückblende"
+        }
+      ]
+    },
+    "fr": {
+      "tagline": "Ordinateur industriel Elkhart Lake avec un port LAN Gigabit",
+      "description": "Le MCIPCA1 associe un Intel Celeron J6412 ou Pentium J6426 à jusqu’à 32 Go de DDR4, un port Ethernet Gigabit et deux ports DB9 RS-232. Deux sorties HDMI, un DisplayPort, huit ports USB et des connexions NVMe, SATA et mSATA facilitent l’intégration à proximité des machines. Le boîtier mesure 135 × 127 × 38,7 mm.",
+      "highlights": [
+        "Intel Celeron J6412 / Pentium J6426",
+        "1 × SO-DIMM DDR4, jusqu’à 32 Go",
+        "1 × Realtek Gigabit RJ45 LAN",
+        "2 × HDMI + 1 × DisplayPort"
+      ],
+      "specs": [
+        {
+          "label": "Modèle",
+          "value": "MCIPCA1"
+        },
+        {
+          "label": "Processeur",
+          "value": "Intel Celeron J6412 / Pentium J6426"
+        },
+        {
+          "label": "Plateforme",
+          "value": "Intel Elkhart Lake"
+        },
+        {
+          "label": "Affichage",
+          "value": "2 × HDMI + 1 × DisplayPort"
+        },
+        {
+          "label": "Graphiques",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Mémoire",
+          "value": "1 × SO-DIMM DDR4, jusqu’à 32 Go"
+        },
+        {
+          "label": "Poids",
+          "value": "Net 0,8 kg, brut 1 kg"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.0 + 6 × USB 2.0"
+        },
+        {
+          "label": "Alimentation",
+          "value": "12 V DC"
+        },
+        {
+          "label": "Réseau",
+          "value": "1 × Realtek Gigabit RJ45 LAN"
+        },
+        {
+          "label": "Ports série",
+          "value": "2 × DB9 RS-232 COM"
+        },
+        {
+          "label": "Stockage",
+          "value": "1 × M.2 2280 NVMe + 1 × SATA 3.0 + 1 × mSATA 3.0"
+        },
+        {
+          "label": "Extension",
+          "value": "M.2 2230 pour Wi-Fi / Bluetooth, chien de garde, Wake-on-LAN, PXE"
+        },
+        {
+          "label": "Dimensions",
+          "value": "135 × 127 × 38.7 mm"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI UEFI BIOS"
+        },
+        {
+          "label": "TDP",
+          "value": "10 W"
+        },
+        {
+          "label": "Système d’exploitation",
+          "value": "Windows 10 / WES 10 / Linux"
+        },
+        {
+          "label": "Conditions de fonctionnement",
+          "value": "−20 à 60 °C, 10–90 % HR, sans condensation"
+        },
+        {
+          "label": "Température de stockage",
+          "value": "−30 à 70 °C"
+        },
+        {
+          "label": "Connectique avant",
+          "value": "2 × USB 3.0, 6 × USB 2.0, 2 × DB9 RS-232 COM, bouton d’alimentation"
+        },
+        {
+          "label": "Connectique arrière",
+          "value": "1 × RJ45 Gigabit, 12 V CC, 2 × HDMI 1.4, 1 × DP 1.2, microphone / haut-parleur"
+        },
+        {
+          "label": "Connectique interne",
+          "value": "SATA 3.0, SSD M.2, mSATA 3.0, DDR4 SO-DIMM, M.2 2230 Wi-Fi / Bluetooth, pile CMOS"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Interfaces réseau",
+          "description": "1 × Realtek Gigabit RJ45 LAN"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Connexions de stockage",
+          "description": "1 × M.2 2280 NVMe + 1 × SATA 3.0 + 1 × mSATA 3.0"
+        },
+        {
+          "icon": "Monitor",
+          "title": "Connexions vidéo",
+          "description": "2 × HDMI + 1 × DisplayPort"
+        }
+      ],
+      "specificationHeading": "Caractéristiques techniques",
+      "featureHeading": "Connexions réseau, stockage et vidéo",
+      "advantageSummary": "Ordinateur industriel Elkhart Lake avec un port LAN Gigabit",
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/reviewed/mcipca1/front.webp",
+          "title": "MCIPCA1 · panneau avant"
+        },
+        {
+          "image": "/assets/products/industrial/reviewed/mcipca1/rear.webp",
+          "title": "MCIPCA1 · panneau arrière"
+        }
+      ]
+    },
+    "it": {
+      "tagline": "Computer industriale Elkhart Lake con una porta LAN Gigabit",
+      "description": "MCIPCA1 combina Intel Celeron J6412 o Pentium J6426 con fino a 32 GB di DDR4, una porta Ethernet Gigabit e due porte DB9 RS-232. Due uscite HDMI, DisplayPort, otto porte USB e connessioni NVMe, SATA e mSATA supportano l’integrazione a bordo macchina. Lo chassis misura 135 × 127 × 38,7 mm.",
+      "highlights": [
+        "Intel Celeron J6412 / Pentium J6426",
+        "1 × SO-DIMM DDR4, fino a 32 GB",
+        "1 × Realtek Gigabit RJ45 LAN",
+        "2 × HDMI + 1 × DisplayPort"
+      ],
+      "specs": [
+        {
+          "label": "Modello",
+          "value": "MCIPCA1"
+        },
+        {
+          "label": "Processore",
+          "value": "Intel Celeron J6412 / Pentium J6426"
+        },
+        {
+          "label": "Piattaforma",
+          "value": "Intel Elkhart Lake"
+        },
+        {
+          "label": "Uscita video",
+          "value": "2 × HDMI + 1 × DisplayPort"
+        },
+        {
+          "label": "Grafica",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 × SO-DIMM DDR4, fino a 32 GB"
+        },
+        {
+          "label": "Peso",
+          "value": "Netto 0,8 kg, lordo 1 kg"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.0 + 6 × USB 2.0"
+        },
+        {
+          "label": "Alimentazione",
+          "value": "12 V DC"
+        },
+        {
+          "label": "Rete",
+          "value": "1 × Realtek Gigabit RJ45 LAN"
+        },
+        {
+          "label": "Porte seriali",
+          "value": "2 × DB9 RS-232 COM"
+        },
+        {
+          "label": "Archiviazione",
+          "value": "1 × M.2 2280 NVMe + 1 × SATA 3.0 + 1 × mSATA 3.0"
+        },
+        {
+          "label": "Espansione",
+          "value": "M.2 2230 per Wi-Fi / Bluetooth, watchdog, Wake-on-LAN, PXE"
+        },
+        {
+          "label": "Dimensioni",
+          "value": "135 × 127 × 38.7 mm"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI UEFI BIOS"
+        },
+        {
+          "label": "TDP",
+          "value": "10 W"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10 / WES 10 / Linux"
+        },
+        {
+          "label": "Condizioni operative",
+          "value": "Da −20 a 60 °C, 10–90% UR, senza condensa"
+        },
+        {
+          "label": "Temperatura di stoccaggio",
+          "value": "Da −30 a 70 °C"
+        },
+        {
+          "label": "Porte anteriori",
+          "value": "2 × USB 3.0, 6 × USB 2.0, 2 × DB9 RS-232 COM, pulsante di accensione"
+        },
+        {
+          "label": "Porte posteriori",
+          "value": "1 × RJ45 Gigabit, 12 V CC, 2 × HDMI 1.4, 1 × DP 1.2, microfono / altoparlante"
+        },
+        {
+          "label": "Connettori interni",
+          "value": "SATA 3.0, SSD M.2, mSATA 3.0, DDR4 SO-DIMM, M.2 2230 Wi-Fi / Bluetooth, batteria CMOS"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Interfacce di rete",
+          "description": "1 × Realtek Gigabit RJ45 LAN"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Connessioni di archiviazione",
+          "description": "1 × M.2 2280 NVMe + 1 × SATA 3.0 + 1 × mSATA 3.0"
+        },
+        {
+          "icon": "Monitor",
+          "title": "Connessioni video",
+          "description": "2 × HDMI + 1 × DisplayPort"
+        }
+      ],
+      "specificationHeading": "Specifiche tecniche",
+      "featureHeading": "Connessioni di rete, archiviazione e video",
+      "advantageSummary": "Computer industriale Elkhart Lake con una porta LAN Gigabit",
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/reviewed/mcipca1/front.webp",
+          "title": "MCIPCA1 · pannello anteriore"
+        },
+        {
+          "image": "/assets/products/industrial/reviewed/mcipca1/rear.webp",
+          "title": "MCIPCA1 · pannello posteriore"
+        }
+      ]
+    },
+    "es": {
+      "tagline": "Ordenador industrial Elkhart Lake con un puerto LAN Gigabit",
+      "description": "MCIPCA1 combina Intel Celeron J6412 o Pentium J6426 con hasta 32 GB de DDR4, un puerto Ethernet Gigabit y dos puertos DB9 RS-232. Dos salidas HDMI, DisplayPort, ocho puertos USB y conexiones NVMe, SATA y mSATA facilitan la integración junto a la máquina. El chasis mide 135 × 127 × 38,7 mm.",
+      "highlights": [
+        "Intel Celeron J6412 / Pentium J6426",
+        "1 × SO-DIMM DDR4, hasta 32 GB",
+        "1 × Realtek Gigabit RJ45 LAN",
+        "2 × HDMI + 1 × DisplayPort"
+      ],
+      "specs": [
+        {
+          "label": "Modelo",
+          "value": "MCIPCA1"
+        },
+        {
+          "label": "Procesador",
+          "value": "Intel Celeron J6412 / Pentium J6426"
+        },
+        {
+          "label": "Plataforma",
+          "value": "Intel Elkhart Lake"
+        },
+        {
+          "label": "Salida de vídeo",
+          "value": "2 × HDMI + 1 × DisplayPort"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 × SO-DIMM DDR4, hasta 32 GB"
+        },
+        {
+          "label": "Peso",
+          "value": "Neto 0,8 kg, bruto 1 kg"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.0 + 6 × USB 2.0"
+        },
+        {
+          "label": "Alimentación",
+          "value": "12 V DC"
+        },
+        {
+          "label": "Red",
+          "value": "1 × Realtek Gigabit RJ45 LAN"
+        },
+        {
+          "label": "Puertos serie",
+          "value": "2 × DB9 RS-232 COM"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "1 × M.2 2280 NVMe + 1 × SATA 3.0 + 1 × mSATA 3.0"
+        },
+        {
+          "label": "Expansión",
+          "value": "M.2 2230 para Wi-Fi / Bluetooth, temporizador de vigilancia, Wake-on-LAN, PXE"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "135 × 127 × 38.7 mm"
+        },
+        {
+          "label": "BIOS",
+          "value": "AMI UEFI BIOS"
+        },
+        {
+          "label": "TDP",
+          "value": "10 W"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10 / WES 10 / Linux"
+        },
+        {
+          "label": "Condiciones de funcionamiento",
+          "value": "De −20 a 60 °C, 10–90 % HR, sin condensación"
+        },
+        {
+          "label": "Temperatura de almacenamiento",
+          "value": "De −30 a 70 °C"
+        },
+        {
+          "label": "Conexiones frontales",
+          "value": "2 × USB 3.0, 6 × USB 2.0, 2 × DB9 RS-232 COM, botón de encendido"
+        },
+        {
+          "label": "Conexiones traseras",
+          "value": "1 × RJ45 Gigabit, 12 V CC, 2 × HDMI 1.4, 1 × DP 1.2, micrófono / altavoz"
+        },
+        {
+          "label": "Conectores internos",
+          "value": "SATA 3.0, SSD M.2, mSATA 3.0, DDR4 SO-DIMM, M.2 2230 Wi-Fi / Bluetooth, pila CMOS"
+        }
+      ],
+      "features": [
+        {
+          "icon": "Network",
+          "title": "Interfaces de red",
+          "description": "1 × Realtek Gigabit RJ45 LAN"
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Conexiones de almacenamiento",
+          "description": "1 × M.2 2280 NVMe + 1 × SATA 3.0 + 1 × mSATA 3.0"
+        },
+        {
+          "icon": "Monitor",
+          "title": "Conexiones de vídeo",
+          "description": "2 × HDMI + 1 × DisplayPort"
+        }
+      ],
+      "specificationHeading": "Especificaciones técnicas",
+      "featureHeading": "Conexiones de red, almacenamiento y vídeo",
+      "advantageSummary": "Ordenador industrial Elkhart Lake con un puerto LAN Gigabit",
+      "galleryCards": [
+        {
+          "image": "/assets/products/industrial/reviewed/mcipca1/front.webp",
+          "title": "MCIPCA1 · panel frontal"
+        },
+        {
+          "image": "/assets/products/industrial/reviewed/mcipca1/rear.webp",
+          "title": "MCIPCA1 · panel trasero"
+        }
+      ]
+    }
+  }
+}
