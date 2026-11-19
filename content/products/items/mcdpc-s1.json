@@ -1,0 +1,709 @@
+{
+  "id": "mcdpc-s1",
+  "name": "MCDPC-S1",
+  "category": "commercial-mini-pc",
+  "series": "DPC",
+  "published": true,
+  "image": "/assets/products/commercial/dpc/mcdpc-s1/front.webp",
+  "images": [
+    "/assets/products/commercial/dpc/mcdpc-s1/front.webp"
+  ],
+  "galleryImages": [
+    "/assets/products/commercial/dpc/mcdpc-s1/front.webp",
+    "/assets/products/commercial/dpc/mcdpc-s1/rear.webp"
+  ],
+  "sourceBrochure": "桌面端DPC/MCDPC-S1 brochure.pdf",
+  "sourceSha256": "ca92657bbfb1c4a02a1fe01a1b67d3c463f8f0a205e63794ac6536a79aa82892",
+  "tagline": "13.5 mm slim Intel N100 / N150 desktop mini PC",
+  "description": "MCDPC-S1 combines an Intel N100 or N150 processor with 8, 12 or 16 GB onboard LPDDR5X in a 159 × 80 × 13.5 mm metal-and-glass enclosure. One M.2 2280 SSD slot supports SATA or PCIe 3.0 ×4 storage. HDMI, USB-C DisplayPort, Gigabit Ethernet and 65 W USB-C PD power provide desktop connectivity, with optional VESA mounting.",
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCDPC-S1"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel N100 (Alder Lake-N) / Intel N150 (Twin Lake)"
+    },
+    {
+      "label": "Graphics",
+      "value": "Integrated Intel graphics"
+    },
+    {
+      "label": "Memory",
+      "value": "Onboard LPDDR5X, 64-bit, 8 / 12 / 16 GB options"
+    },
+    {
+      "label": "Storage",
+      "value": "1 × M.2 2280 SSD, SATA or PCIe 3.0 ×4 with auto-detection"
+    },
+    {
+      "label": "Display",
+      "value": "1 × HDMI 2.1 TMDS with CEC + 1 × USB-C DisplayPort output with USB PD"
+    },
+    {
+      "label": "Network",
+      "value": "1 × Realtek RTL8111H Gigabit RJ45 LAN"
+    },
+    {
+      "label": "Wireless",
+      "value": "1216 onboard Wi-Fi interface, 802.11 b/g/n/ac/ax, 2.4 / 5 / 6 GHz, Bluetooth"
+    },
+    {
+      "label": "Front I/O",
+      "value": "1 × USB-C 3.2 Gen 1, 1 × 3.5 mm CTIA combo audio jack, power button"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "1 × USB-C PD input, 1 × USB-C 3.2 Gen 1 / DP / PD, 1 × HDMI, 1 × USB-A 3.2 Gen 1, 1 × RJ45, reset pinhole"
+    },
+    {
+      "label": "Power",
+      "value": "65 W USB-C PD input"
+    },
+    {
+      "label": "Dimensions",
+      "value": "159 × 80 × 13.5 mm"
+    },
+    {
+      "label": "Board dimensions",
+      "value": "124.3 × 73.5 × 1.2 mm"
+    },
+    {
+      "label": "Material",
+      "value": "Metal mid-frame and bottom cover, glass top cover"
+    },
+    {
+      "label": "Mounting",
+      "value": "Desktop, optional VESA mount"
+    },
+    {
+      "label": "Security",
+      "value": "Kensington lock, firmware TPM"
+    },
+    {
+      "label": "System",
+      "value": "Windows 11, multi-language support"
+    },
+    {
+      "label": "Standby",
+      "value": "S3 by default, Modern Standby optional"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "1 × 4-pin CPU fan connector"
+    },
+    {
+      "label": "Indicators",
+      "value": "2 × white power LEDs"
+    }
+  ],
+  "highlights": [
+    "Intel N100 / N150",
+    "Onboard LPDDR5X, 64-bit, 8 / 12 / 16 GB options",
+    "HDMI + USB-C DisplayPort",
+    "159 × 80 × 13.5 mm"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/commercial/dpc/mcdpc-s1/front.webp",
+      "title": "MCDPC-S1 · front and product view"
+    },
+    {
+      "image": "/assets/products/commercial/dpc/mcdpc-s1/rear.webp",
+      "title": "MCDPC-S1 · rear interfaces"
+    }
+  ],
+  "specificationHeading": "MCDPC-S1 hardware specifications",
+  "featureHeading": "A slim desktop with USB-C power",
+  "advantageSummary": "13.5 mm slim Intel N100 / N150 desktop mini PC",
+  "features": [
+    {
+      "icon": "Layers",
+      "title": "Slim enclosure and mounting",
+      "description": "159 × 80 × 13.5 mm metal-and-glass enclosure, with optional VESA mount."
+    },
+    {
+      "icon": "Monitor",
+      "title": "Display and peripheral connections",
+      "description": "HDMI 2.1 TMDS with CEC and USB-C DisplayPort connect displays. Front USB-C and CTIA audio provide peripheral access."
+    },
+    {
+      "icon": "HardDrive",
+      "title": "Memory and SSD options",
+      "description": "Choose 8, 12 or 16 GB onboard LPDDR5X. One M.2 2280 slot auto-detects SATA or PCIe 3.0 ×4 SSDs."
+    }
+  ],
+  "specifications": [
+    {
+      "label": "Model",
+      "value": "MCDPC-S1"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel N100 (Alder Lake-N) / Intel N150 (Twin Lake)"
+    },
+    {
+      "label": "Graphics",
+      "value": "Integrated Intel graphics"
+    },
+    {
+      "label": "Memory",
+      "value": "Onboard LPDDR5X, 64-bit, 8 / 12 / 16 GB options"
+    },
+    {
+      "label": "Storage",
+      "value": "1 × M.2 2280 SSD, SATA or PCIe 3.0 ×4 with auto-detection"
+    },
+    {
+      "label": "Display",
+      "value": "1 × HDMI 2.1 TMDS with CEC + 1 × USB-C DisplayPort output with USB PD"
+    },
+    {
+      "label": "Network",
+      "value": "1 × Realtek RTL8111H Gigabit RJ45 LAN"
+    },
+    {
+      "label": "Wireless",
+      "value": "1216 onboard Wi-Fi interface, 802.11 b/g/n/ac/ax, 2.4 / 5 / 6 GHz, Bluetooth"
+    },
+    {
+      "label": "Front I/O",
+      "value": "1 × USB-C 3.2 Gen 1, 1 × 3.5 mm CTIA combo audio jack, power button"
+    },
+    {
+      "label": "Rear I/O",
+      "value": "1 × USB-C PD input, 1 × USB-C 3.2 Gen 1 / DP / PD, 1 × HDMI, 1 × USB-A 3.2 Gen 1, 1 × RJ45, reset pinhole"
+    },
+    {
+      "label": "Power",
+      "value": "65 W USB-C PD input"
+    },
+    {
+      "label": "Dimensions",
+      "value": "159 × 80 × 13.5 mm"
+    },
+    {
+      "label": "Board dimensions",
+      "value": "124.3 × 73.5 × 1.2 mm"
+    },
+    {
+      "label": "Material",
+      "value": "Metal mid-frame and bottom cover, glass top cover"
+    },
+    {
+      "label": "Mounting",
+      "value": "Desktop, optional VESA mount"
+    },
+    {
+      "label": "Security",
+      "value": "Kensington lock, firmware TPM"
+    },
+    {
+      "label": "System",
+      "value": "Windows 11, multi-language support"
+    },
+    {
+      "label": "Standby",
+      "value": "S3 by default, Modern Standby optional"
+    },
+    {
+      "label": "Internal I/O",
+      "value": "1 × 4-pin CPU fan connector"
+    },
+    {
+      "label": "Indicators",
+      "value": "2 × white power LEDs"
+    }
+  ],
+  "translations": {
+    "de": {
+      "tagline": "13,5 mm schlanker Desktop-Mini-PC mit Intel N100 / N150",
+      "description": "MCDPC-S1 kombiniert einen Intel-N100- oder N150-Prozessor mit 8, 12 oder 16 GB fest verlötetem LPDDR5X in einem 159 × 80 × 13,5 mm großen Metall-Glas-Gehäuse. Ein M.2-2280-SSD-Steckplatz unterstützt SATA oder PCIe 3.0 ×4. HDMI, USB-C mit DisplayPort, Gigabit-Ethernet und 65-W-USB-C-PD-Stromversorgung bieten Desktop-Konnektivität. Eine VESA-Halterung ist optional erhältlich.",
+      "specs": [
+        {
+          "label": "Modell",
+          "value": "MCDPC-S1"
+        },
+        {
+          "label": "Prozessor",
+          "value": "Intel N100 (Alder Lake-N) / Intel N150 (Twin Lake)"
+        },
+        {
+          "label": "Grafik",
+          "value": "Integrierte Intel-Grafik"
+        },
+        {
+          "label": "Arbeitsspeicher",
+          "value": "Fest verlötetes LPDDR5X, 64 Bit, wahlweise 8 / 12 / 16 GB"
+        },
+        {
+          "label": "Massenspeicher",
+          "value": "1 × M.2-2280-SSD, SATA oder PCIe 3.0 ×4 mit automatischer Erkennung"
+        },
+        {
+          "label": "Bildausgabe",
+          "value": "1 × HDMI 2.1 TMDS mit CEC + 1 × USB-C-DisplayPort-Ausgang mit USB PD"
+        },
+        {
+          "label": "Netzwerk",
+          "value": "1 × Realtek RTL8111H Gigabit RJ45 LAN"
+        },
+        {
+          "label": "Funkverbindungen",
+          "value": "Onboard-WLAN-Schnittstelle 1216, 802.11 b/g/n/ac/ax, 2,4 / 5 / 6 GHz, Bluetooth"
+        },
+        {
+          "label": "Frontanschlüsse",
+          "value": "1 × USB-C 3.2 Gen 1, 1 × 3,5-mm-CTIA-Kombi-Audiobuchse, Ein/Aus-Taste"
+        },
+        {
+          "label": "Rückseitige Anschlüsse",
+          "value": "1 × USB-C-PD-Eingang, 1 × USB-C 3.2 Gen 1 / DP / PD, 1 × HDMI, 1 × USB-A 3.2 Gen 1, 1 × RJ45, Reset-Öffnung"
+        },
+        {
+          "label": "Stromversorgung",
+          "value": "65-W-USB-C-PD-Eingang"
+        },
+        {
+          "label": "Abmessungen",
+          "value": "159 × 80 × 13.5 mm"
+        },
+        {
+          "label": "Platinenabmessungen",
+          "value": "124.3 × 73.5 × 1.2 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Mittelrahmen und Bodenabdeckung aus Metall, Glasoberseite"
+        },
+        {
+          "label": "Montage",
+          "value": "Tischmontage, optionale VESA-Halterung"
+        },
+        {
+          "label": "Sicherheit",
+          "value": "Kensington-Schloss, Firmware-TPM"
+        },
+        {
+          "label": "Betriebssystem",
+          "value": "Windows 11, mehrsprachige Unterstützung"
+        },
+        {
+          "label": "Standby",
+          "value": "S3 standardmäßig, Modern Standby optional"
+        },
+        {
+          "label": "Interne Anschlüsse",
+          "value": "1 × 4-poliger CPU-Lüfteranschluss"
+        },
+        {
+          "label": "Anzeigen",
+          "value": "2 × weiße Betriebs-LEDs"
+        }
+      ],
+      "highlights": [
+        "Intel N100 / N150",
+        "Fest verlötetes LPDDR5X, 64 Bit, wahlweise 8 / 12 / 16 GB",
+        "HDMI + USB-C DisplayPort",
+        "159 × 80 × 13.5 mm"
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/dpc/mcdpc-s1/front.webp",
+          "title": "MCDPC-S1 · Front- und Produktansicht"
+        },
+        {
+          "image": "/assets/products/commercial/dpc/mcdpc-s1/rear.webp",
+          "title": "MCDPC-S1 · rückseitige Anschlüsse"
+        }
+      ],
+      "specificationHeading": "Technische Daten des MCDPC-S1",
+      "featureHeading": "Schlanker Desktop mit USB-C-Stromversorgung",
+      "advantageSummary": "13,5 mm schlanker Desktop-Mini-PC mit Intel N100 / N150",
+      "features": [
+        {
+          "icon": "Layers",
+          "title": "Schlankes Gehäuse und Montage",
+          "description": "159 × 80 × 13,5 mm großes Metall-Glas-Gehäuse mit optionaler VESA-Halterung."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Bildschirm- und Peripherieanschlüsse",
+          "description": "HDMI 2.1 TMDS mit CEC und USB-C-DisplayPort verbinden Bildschirme. USB-C und CTIA-Audio an der Vorderseite bieten Zugang für Peripheriegeräte."
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Arbeitsspeicher- und SSD-Optionen",
+          "description": "Wählen Sie 8, 12 oder 16 GB fest verlötetes LPDDR5X. Ein M.2-2280-Steckplatz erkennt SATA- oder PCIe-3.0-×4-SSDs automatisch."
+        }
+      ]
+    },
+    "fr": {
+      "tagline": "Mini PC de bureau fin de 13,5 mm avec Intel N100 / N150",
+      "description": "Le MCDPC-S1 associe un processeur Intel N100 ou N150 à 8, 12 ou 16 Go de LPDDR5X soudée dans un boîtier en métal et verre de 159 × 80 × 13,5 mm. Un emplacement SSD M.2 2280 prend en charge le SATA ou le PCIe 3.0 ×4. HDMI, USB-C DisplayPort, Ethernet Gigabit et alimentation USB-C PD de 65 W assurent les connexions de bureau, avec fixation VESA en option.",
+      "specs": [
+        {
+          "label": "Modèle",
+          "value": "MCDPC-S1"
+        },
+        {
+          "label": "Processeur",
+          "value": "Intel N100 (Alder Lake-N) / Intel N150 (Twin Lake)"
+        },
+        {
+          "label": "Graphiques",
+          "value": "Graphiques Intel intégrés"
+        },
+        {
+          "label": "Mémoire",
+          "value": "LPDDR5X soudée, 64 bits, au choix 8 / 12 / 16 Go"
+        },
+        {
+          "label": "Stockage",
+          "value": "1 × SSD M.2 2280, SATA ou PCIe 3.0 ×4 avec détection automatique"
+        },
+        {
+          "label": "Affichage",
+          "value": "1 × HDMI 2.1 TMDS avec CEC + 1 × sortie DisplayPort USB-C avec USB PD"
+        },
+        {
+          "label": "Réseau",
+          "value": "1 × Realtek RTL8111H Gigabit RJ45 LAN"
+        },
+        {
+          "label": "Sans fil",
+          "value": "Interface Wi-Fi 1216 intégrée, 802.11 b/g/n/ac/ax, 2,4 / 5 / 6 GHz, Bluetooth"
+        },
+        {
+          "label": "Connectique avant",
+          "value": "1 × USB-C 3.2 Gen 1, 1 × prise audio combinée CTIA de 3,5 mm, bouton d’alimentation"
+        },
+        {
+          "label": "Connectique arrière",
+          "value": "1 × entrée USB-C PD, 1 × USB-C 3.2 Gen 1 / DP / PD, 1 × HDMI, 1 × USB-A 3.2 Gen 1, 1 × RJ45, orifice de réinitialisation"
+        },
+        {
+          "label": "Alimentation",
+          "value": "Entrée USB-C PD de 65 W"
+        },
+        {
+          "label": "Dimensions",
+          "value": "159 × 80 × 13.5 mm"
+        },
+        {
+          "label": "Dimensions de la carte",
+          "value": "124.3 × 73.5 × 1.2 mm"
+        },
+        {
+          "label": "Matériau",
+          "value": "Cadre central et capot inférieur en métal, capot supérieur en verre"
+        },
+        {
+          "label": "Montage",
+          "value": "Sur bureau, fixation VESA en option"
+        },
+        {
+          "label": "Sécurité",
+          "value": "Verrou Kensington, TPM par micrologiciel"
+        },
+        {
+          "label": "Système d’exploitation",
+          "value": "Windows 11, prise en charge multilingue"
+        },
+        {
+          "label": "Veille",
+          "value": "S3 par défaut, Modern Standby en option"
+        },
+        {
+          "label": "Connectique interne",
+          "value": "1 × connecteur de ventilateur CPU à 4 broches"
+        },
+        {
+          "label": "Voyants",
+          "value": "2 × voyants d’alimentation blancs"
+        }
+      ],
+      "highlights": [
+        "Intel N100 / N150",
+        "LPDDR5X soudée, 64 bits, au choix 8 / 12 / 16 Go",
+        "HDMI + USB-C DisplayPort",
+        "159 × 80 × 13.5 mm"
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/dpc/mcdpc-s1/front.webp",
+          "title": "MCDPC-S1 · vue avant et vue du produit"
+        },
+        {
+          "image": "/assets/products/commercial/dpc/mcdpc-s1/rear.webp",
+          "title": "MCDPC-S1 · connectique arrière"
+        }
+      ],
+      "specificationHeading": "Caractéristiques techniques du MCDPC-S1",
+      "featureHeading": "Un ordinateur de bureau fin alimenté par USB-C",
+      "advantageSummary": "Mini PC de bureau fin de 13,5 mm avec Intel N100 / N150",
+      "features": [
+        {
+          "icon": "Layers",
+          "title": "Boîtier fin et montage",
+          "description": "Boîtier en métal et verre de 159 × 80 × 13,5 mm, avec fixation VESA en option."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Connexions vidéo et périphériques",
+          "description": "HDMI 2.1 TMDS avec CEC et USB-C DisplayPort connectent les écrans. L’USB-C et la prise audio CTIA en façade permettent de brancher les périphériques."
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Options de mémoire et SSD",
+          "description": "Choisissez 8, 12 ou 16 Go de LPDDR5X soudée. Un emplacement M.2 2280 détecte automatiquement les SSD SATA ou PCIe 3.0 ×4."
+        }
+      ]
+    },
+    "it": {
+      "tagline": "Mini PC desktop sottile da 13,5 mm con Intel N100 / N150",
+      "description": "MCDPC-S1 combina un processore Intel N100 o N150 con 8, 12 o 16 GB di LPDDR5X saldata in uno chassis in metallo e vetro di 159 × 80 × 13,5 mm. Uno slot SSD M.2 2280 supporta SATA o PCIe 3.0 ×4. HDMI, USB-C DisplayPort, Ethernet Gigabit e alimentazione USB-C PD da 65 W forniscono connettività desktop, con montaggio VESA opzionale.",
+      "specs": [
+        {
+          "label": "Modello",
+          "value": "MCDPC-S1"
+        },
+        {
+          "label": "Processore",
+          "value": "Intel N100 (Alder Lake-N) / Intel N150 (Twin Lake)"
+        },
+        {
+          "label": "Grafica",
+          "value": "Grafica Intel integrata"
+        },
+        {
+          "label": "Memoria",
+          "value": "LPDDR5X saldata, 64 bit, opzioni da 8 / 12 / 16 GB"
+        },
+        {
+          "label": "Archiviazione",
+          "value": "1 × SSD M.2 2280, SATA o PCIe 3.0 ×4 con rilevamento automatico"
+        },
+        {
+          "label": "Uscita video",
+          "value": "1 × HDMI 2.1 TMDS con CEC + 1 × uscita DisplayPort USB-C con USB PD"
+        },
+        {
+          "label": "Rete",
+          "value": "1 × Realtek RTL8111H Gigabit RJ45 LAN"
+        },
+        {
+          "label": "Wireless",
+          "value": "Interfaccia Wi-Fi 1216 integrata, 802.11 b/g/n/ac/ax, 2,4 / 5 / 6 GHz, Bluetooth"
+        },
+        {
+          "label": "Porte anteriori",
+          "value": "1 × USB-C 3.2 Gen 1, 1 × presa audio combinata CTIA da 3,5 mm, pulsante di accensione"
+        },
+        {
+          "label": "Porte posteriori",
+          "value": "1 × ingresso USB-C PD, 1 × USB-C 3.2 Gen 1 / DP / PD, 1 × HDMI, 1 × USB-A 3.2 Gen 1, 1 × RJ45, foro di ripristino"
+        },
+        {
+          "label": "Alimentazione",
+          "value": "Ingresso USB-C PD da 65 W"
+        },
+        {
+          "label": "Dimensioni",
+          "value": "159 × 80 × 13.5 mm"
+        },
+        {
+          "label": "Dimensioni della scheda",
+          "value": "124.3 × 73.5 × 1.2 mm"
+        },
+        {
+          "label": "Materiale",
+          "value": "Telaio centrale e coperchio inferiore in metallo, coperchio superiore in vetro"
+        },
+        {
+          "label": "Montaggio",
+          "value": "Su scrivania, montaggio VESA opzionale"
+        },
+        {
+          "label": "Sicurezza",
+          "value": "Blocco Kensington, TPM firmware"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11, supporto multilingue"
+        },
+        {
+          "label": "Standby",
+          "value": "S3 predefinito, Modern Standby opzionale"
+        },
+        {
+          "label": "Connettori interni",
+          "value": "1 × connettore per ventola CPU a 4 pin"
+        },
+        {
+          "label": "Indicatori",
+          "value": "2 × LED di alimentazione bianchi"
+        }
+      ],
+      "highlights": [
+        "Intel N100 / N150",
+        "LPDDR5X saldata, 64 bit, opzioni da 8 / 12 / 16 GB",
+        "HDMI + USB-C DisplayPort",
+        "159 × 80 × 13.5 mm"
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/dpc/mcdpc-s1/front.webp",
+          "title": "MCDPC-S1 · vista anteriore e del prodotto"
+        },
+        {
+          "image": "/assets/products/commercial/dpc/mcdpc-s1/rear.webp",
+          "title": "MCDPC-S1 · interfacce posteriori"
+        }
+      ],
+      "specificationHeading": "Specifiche tecniche di MCDPC-S1",
+      "featureHeading": "Un desktop sottile con alimentazione USB-C",
+      "advantageSummary": "Mini PC desktop sottile da 13,5 mm con Intel N100 / N150",
+      "features": [
+        {
+          "icon": "Layers",
+          "title": "Chassis sottile e montaggio",
+          "description": "Chassis in metallo e vetro di 159 × 80 × 13,5 mm, con montaggio VESA opzionale."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Connessioni video e periferiche",
+          "description": "HDMI 2.1 TMDS con CEC e USB-C DisplayPort collegano i monitor. USB-C e audio CTIA anteriori consentono di collegare le periferiche."
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Opzioni di memoria e SSD",
+          "description": "Scegliere 8, 12 o 16 GB di LPDDR5X saldata. Uno slot M.2 2280 rileva automaticamente SSD SATA o PCIe 3.0 ×4."
+        }
+      ]
+    },
+    "es": {
+      "tagline": "Mini PC de sobremesa delgado de 13,5 mm con Intel N100 / N150",
+      "description": "MCDPC-S1 combina un procesador Intel N100 o N150 con 8, 12 o 16 GB de LPDDR5X soldada en un chasis de metal y vidrio de 159 × 80 × 13,5 mm. Una ranura SSD M.2 2280 admite SATA o PCIe 3.0 ×4. HDMI, USB-C DisplayPort, Ethernet Gigabit y alimentación USB-C PD de 65 W ofrecen conectividad de sobremesa, con soporte VESA opcional.",
+      "specs": [
+        {
+          "label": "Modelo",
+          "value": "MCDPC-S1"
+        },
+        {
+          "label": "Procesador",
+          "value": "Intel N100 (Alder Lake-N) / Intel N150 (Twin Lake)"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Gráficos Intel integrados"
+        },
+        {
+          "label": "Memoria",
+          "value": "LPDDR5X soldada, 64 bits, opciones de 8 / 12 / 16 GB"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "1 × SSD M.2 2280, SATA o PCIe 3.0 ×4 con detección automática"
+        },
+        {
+          "label": "Salida de vídeo",
+          "value": "1 × HDMI 2.1 TMDS con CEC + 1 × salida DisplayPort USB-C con USB PD"
+        },
+        {
+          "label": "Red",
+          "value": "1 × Realtek RTL8111H Gigabit RJ45 LAN"
+        },
+        {
+          "label": "Conexiones inalámbricas",
+          "value": "Interfaz Wi-Fi 1216 integrada, 802.11 b/g/n/ac/ax, 2,4 / 5 / 6 GHz, Bluetooth"
+        },
+        {
+          "label": "Conexiones frontales",
+          "value": "1 × USB-C 3.2 Gen 1, 1 × conector de audio combinado CTIA de 3,5 mm, botón de encendido"
+        },
+        {
+          "label": "Conexiones traseras",
+          "value": "1 × entrada USB-C PD, 1 × USB-C 3.2 Gen 1 / DP / PD, 1 × HDMI, 1 × USB-A 3.2 Gen 1, 1 × RJ45, orificio de reinicio"
+        },
+        {
+          "label": "Alimentación",
+          "value": "Entrada USB-C PD de 65 W"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "159 × 80 × 13.5 mm"
+        },
+        {
+          "label": "Dimensiones de la placa",
+          "value": "124.3 × 73.5 × 1.2 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Marco central y tapa inferior de metal, tapa superior de vidrio"
+        },
+        {
+          "label": "Montaje",
+          "value": "Sobremesa, soporte VESA opcional"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Bloqueo Kensington, TPM por firmware"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11, compatibilidad con varios idiomas"
+        },
+        {
+          "label": "Espera",
+          "value": "S3 de serie, Modern Standby opcional"
+        },
+        {
+          "label": "Conectores internos",
+          "value": "1 × conector de ventilador de CPU de 4 pines"
+        },
+        {
+          "label": "Indicadores",
+          "value": "2 × LED blancos de alimentación"
+        }
+      ],
+      "highlights": [
+        "Intel N100 / N150",
+        "LPDDR5X soldada, 64 bits, opciones de 8 / 12 / 16 GB",
+        "HDMI + USB-C DisplayPort",
+        "159 × 80 × 13.5 mm"
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/dpc/mcdpc-s1/front.webp",
+          "title": "MCDPC-S1 · vista frontal y del producto"
+        },
+        {
+          "image": "/assets/products/commercial/dpc/mcdpc-s1/rear.webp",
+          "title": "MCDPC-S1 · interfaces traseras"
+        }
+      ],
+      "specificationHeading": "Especificaciones técnicas de MCDPC-S1",
+      "featureHeading": "Un equipo de sobremesa delgado con alimentación USB-C",
+      "advantageSummary": "Mini PC de sobremesa delgado de 13,5 mm con Intel N100 / N150",
+      "features": [
+        {
+          "icon": "Layers",
+          "title": "Chasis delgado y montaje",
+          "description": "Chasis de metal y vidrio de 159 × 80 × 13,5 mm, con soporte VESA opcional."
+        },
+        {
+          "icon": "Monitor",
+          "title": "Conexiones de vídeo y periféricos",
+          "description": "HDMI 2.1 TMDS con CEC y USB-C DisplayPort conectan las pantallas. USB-C y audio CTIA frontales permiten conectar periféricos."
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Opciones de memoria y SSD",
+          "description": "Elija 8, 12 o 16 GB de LPDDR5X soldada. Una ranura M.2 2280 detecta automáticamente SSD SATA o PCIe 3.0 ×4."
+        }
+      ]
+    }
+  }
+}

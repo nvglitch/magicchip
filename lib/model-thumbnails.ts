@@ -515,5 +515,9 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
   "mcipcbp1": {
     "image": "/assets/products/thumbnails/mcipcbp1.webp",
     "source": "/assets/products/industrial/october/mcipcbp1/main.webp"
+  },
+  "mcdpc-s1": {
+    "image": "/assets/products/thumbnails/mcdpc-s1.webp",
+    "source": "/assets/products/commercial/dpc/mcdpc-s1/front.webp"
   }
 };

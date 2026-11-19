@@ -1,4 +1,5 @@
 import mcnas12 from '@/content/products/items/mcnas12.json';
+import mcdpcS1 from '@/content/products/items/mcdpc-s1.json';
 import { nasSeptemberUpdates } from '@/lib/nas-september-updates';
 import { applyBrochureSpecCorrections } from '@/lib/brochure-spec-corrections';
 import { brochureUpdates } from '@/lib/brochure-updates';
@@ -42,6 +43,7 @@ export const commercialCatalog: CommercialCatalogItem[] = [
   ...nasSeptemberUpdates,
   ...nasMotherboards,
   mcdpc2,
+  mcdpcS1 as CommercialCatalogItem,
   {
     "id": "mc12",
     "name": "MC12",

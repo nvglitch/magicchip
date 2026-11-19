@@ -78,8 +78,12 @@ assert(matchSearch(fixture([{ label: 'USB', value: 'USB 4.0' }]), 'USB 4.0'));
 assert(matchSearch(fixture([{ label: 'Memory', value: 'DDR5-4800' }]), 'DDR5'));
 assert.equal(matchSearch(fixture([{ label: 'Memory', value: 'DDR4' }]), 'DDR5'), null);
 assert(matchSearch(fixture([{ label: 'Cooling', value: 'fanless' }]), 'fanles'));
+assert(matchSearch(fixture([{ label: 'Dimensions', value: '159 × 80 × 13.5 mm' }]), '13.5mm'));
+assert.equal(matchSearch(fixture([{ label: 'Dimensions', value: '159 × 80 × 13.5 mm' }]), '15mm'), null);
+assert(matchSearch(power('65 W USB-C PD input'), '65W'));
+assert(matchSearch(power('65W USB-C PD input'), '65 W'));
 const products = siteSearchIndex.filter(e => e.type === 'product');
-assert.equal(products.length, 168);
+assert.equal(products.length, 169);
 assert(products.every(e => e.specs?.length));
 assert.equal(new Set(products.map(e => e.href)).size, products.length);
 for (const query of ['MCDPC2', 'Core Ultra 96GB Thunderbolt 4', 'Dampfkammer', 'chambre à vapeur', 'camera di vapore', 'cámara de vapor']) {

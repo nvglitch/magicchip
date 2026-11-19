@@ -8,7 +8,7 @@ export function normalizeSearch(value: string): string {
     .replace(/\bintell\b/g, 'intel')
     .replace(/wide[ -]?(?:input[ -]?)?voltage/g, 'widevoltage')
     .replace(/(?:gbe|gbps)/g, 'g').replace(/\bcom\b/g, 'serial')
-    .replace(/(\d)\s+(v|gb|tb|g|mhz|mt\/s)\b/g, '$1$2')
+    .replace(/(\d)\s+(v|w|mm|gb|tb|g|mhz|mt\/s)\b/g, '$1$2')
     .replace(/(usb|ddr)\s+(\d+(?:\.\d+)?)(?![\d.]|\s*[x×])/g, '$1$2')
     .replace(/[®™]/g, '').replace(/\s+/g, ' ').trim();
 }

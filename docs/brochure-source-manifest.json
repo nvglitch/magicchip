@@ -1,20 +1,20 @@
 {
   "schemaVersion": 2,
   "sourceRoot": "D:\\本地资源库\\电脑相关\\电脑册子归档\\ver2",
-  "observedAtUtc": "2026-11-10T06:30:23.838366+00:00",
+  "observedAtUtc": "2026-11-19T08:50:21.510194+00:00",
   "observationOnly": false,
-  "totalPdfCount": 124,
-  "inScopePdfCount": 116,
+  "totalPdfCount": 125,
+  "inScopePdfCount": 117,
   "statusCounts": {
     "deferred-by-user": 2,
     "excluded-custom": 7,
     "pending-confirmation": 14,
     "superseded-by-merged-brochure": 22,
     "superseded-by-renamed-brochure": 5,
-    "updated": 51,
+    "updated": 52,
     "verified-current": 53
   },
-  "previousObservation": "brochure-history/before-2026-11-19-four-model-update.json",
+  "previousObservation": "brochure-history/before-2026-11-19-mcdpc-s1-update.json",
   "files": [
     {
       "relativePath": "AIPC/MCAIPC1 brochure.pdf",
@@ -187,7 +187,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "modified",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcnas12"
       ],
@@ -402,7 +402,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "modified",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipca1"
       ],
@@ -483,7 +483,7 @@
       "excluded": false,
       "present": true,
       "status": "pending-confirmation",
-      "changeSincePreviousObservation": "modified",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcb11"
       ],
@@ -1312,7 +1312,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "modified",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcipcd1"
       ],
@@ -2778,7 +2778,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "modified",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcsrp3"
       ],
@@ -2799,7 +2799,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "modified",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcsrp4"
       ],
@@ -2820,7 +2820,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "modified",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcsrp5"
       ],
@@ -2842,7 +2842,7 @@
       "excluded": false,
       "present": true,
       "status": "updated",
-      "changeSincePreviousObservation": "modified",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [
         "mcsrp6"
       ],
@@ -3011,7 +3011,7 @@
       "appliedSha256": null,
       "excluded": true,
       "status": "excluded-custom",
-      "changeSincePreviousObservation": "added",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [],
       "hrefs": [],
       "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
@@ -3025,7 +3025,7 @@
       "appliedSha256": null,
       "excluded": true,
       "status": "excluded-custom",
-      "changeSincePreviousObservation": "added",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [],
       "hrefs": [],
       "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
@@ -3039,7 +3039,7 @@
       "appliedSha256": null,
       "excluded": true,
       "status": "excluded-custom",
-      "changeSincePreviousObservation": "added",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [],
       "hrefs": [],
       "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
@@ -3053,7 +3053,7 @@
       "appliedSha256": null,
       "excluded": true,
       "status": "excluded-custom",
-      "changeSincePreviousObservation": "added",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [],
       "hrefs": [],
       "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
@@ -3067,7 +3067,7 @@
       "appliedSha256": null,
       "excluded": true,
       "status": "excluded-custom",
-      "changeSincePreviousObservation": "added",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [],
       "hrefs": [],
       "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
@@ -3081,7 +3081,7 @@
       "appliedSha256": null,
       "excluded": true,
       "status": "excluded-custom",
-      "changeSincePreviousObservation": "added",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [],
       "hrefs": [],
       "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
@@ -3095,10 +3095,30 @@
       "appliedSha256": null,
       "excluded": true,
       "status": "excluded-custom",
-      "changeSincePreviousObservation": "added",
+      "changeSincePreviousObservation": "unchanged",
       "modelIds": [],
       "hrefs": [],
       "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
+    },
+    {
+      "relativePath": "桌面端DPC/MCDPC-S1 brochure.pdf",
+      "sizeBytes": 2307252,
+      "modifiedAtUtc": "2026-11-19T08:30:17.926196+00:00",
+      "observedSha256": "ca92657bbfb1c4a02a1fe01a1b67d3c463f8f0a205e63794ac6536a79aa82892",
+      "present": true,
+      "changeSincePreviousObservation": "added",
+      "appliedSha256": "ca92657bbfb1c4a02a1fe01a1b67d3c463f8f0a205e63794ac6536a79aa82892",
+      "excluded": false,
+      "status": "updated",
+      "modelIds": [
+        "mcdpc-s1"
+      ],
+      "hrefs": [
+        "/products/commercial-mini-pc/mcdpc-s1"
+      ],
+      "reviewedAtUtc": "2026-11-19T08:50:21.510194+00:00",
+      "appliedAtUtc": "2026-11-19T08:50:21.510194+00:00",
+      "notes": "2026-11-19 新增商业 DPC 型号 MCDPC-S1。五语介绍、20 项参数、原册正反面、缩略图、自然排序导航、参数搜索、SEO 与站点地图采用同一记录。N100 / N150、板载 8 / 12 / 16 GB LPDDR5X、M.2 2280 SATA / PCIe 3.0 ×4 自动识别、HDMI 2.1 TMDS CEC、USB-C DP、千兆网口、65 W USB-C PD、13.5 mm 机箱及 VESA 选配按册子列出。风扇仅列内部排针，不推断整机无风扇或工作温度。生产构建、169 条产品/SKU 搜索、五语详情和分类入口、图片字节及浏览器显示检查通过。"
     }
   ]
 }
