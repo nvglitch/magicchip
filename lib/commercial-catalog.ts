@@ -1,11 +1,11 @@
 import mcnas12 from '@/content/products/items/mcnas12.json';
-import mcdpcS1 from '@/content/products/items/mcdpc-s1.json';
+import mcnucM1 from '@/content/products/items/mcnucm1.json';
+import mcnuc5 from '@/content/products/items/mcnuc-5.json';
 import { nasSeptemberUpdates } from '@/lib/nas-september-updates';
 import { applyBrochureSpecCorrections } from '@/lib/brochure-spec-corrections';
 import { brochureUpdates } from '@/lib/brochure-updates';
 import { commercialBrochureProducts } from '@/lib/brochure-products';
 import { nasMotherboards } from '@/lib/nas-motherboards';
-import { mcdpc2 } from '@/lib/mcdpc2';
 import { mcmqrSeries } from '@/lib/mcmqr-series';
 import { mcnDesktopProducts } from '@/lib/mcn-desktop-products';
 import type { CatalogProductFeature, CatalogProductCopy, CatalogProductTranslations } from '@/lib/catalog-product-copy';
@@ -42,8 +42,8 @@ export const commercialCatalog: CommercialCatalogItem[] = [
   ...commercialBrochureProducts,
   ...nasSeptemberUpdates,
   ...nasMotherboards,
-  mcdpc2,
-  mcdpcS1 as CommercialCatalogItem,
+  mcnuc5 as CommercialCatalogItem,
+  mcnucM1 as CommercialCatalogItem,
   {
     "id": "mc12",
     "name": "MC12",

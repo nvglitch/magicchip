@@ -41,7 +41,7 @@ PRODUCTS = {
     "MCNAS11": ("NAS", "Intel Core i3-1115G4", "64GB DDR4", "4 x RJ45 + 2 x SFP+"),
     "MCNAS14A": ("NAS", "Intel Core Ultra 125H / 155H / 185H", "96GB DDR5", "4 x 2.5GbE + 2 x 10GbE SFP+"),
     "MCNAS14B": ("NAS", "Intel Core Ultra 125H / 155H / 185H", "96GB DDR5", "4 x 2.5GbE + 4 x 10GbE SFP+"),
-    "MCDPC1": ("DPC", "Intel N100 / N150", "16GB DDR4", "Dual Gigabit LAN"),
+    "MCNUC-4": ("DPC", "Intel N100 / N150", "16GB DDR4", "Dual Gigabit LAN"),
     "MCAIPC3A": ("AI", "AMD Ryzen / Ryzen AI options", "64GB onboard LPDDR5", "MCIO expansion"),
     "MCAIPC3B": ("AI", "AMD Ryzen AI options", "64GB DDR5 SO-DIMM", "OCuLink expansion"),
     "MCAIPC3C": ("AI", "Intel Core Ultra options", "64GB DDR5 SO-DIMM", "OCuLink expansion"),
@@ -148,6 +148,10 @@ def chassis_images():
 def build():
     industrial, commercial, ai = [], [], []
     for model, (series, cpu, memory, connectivity) in PRODUCTS.items():
+        # Keep the reviewed five-language November record when rebuilding historical imports.
+        if model == "MCNUC-4":
+            commercial.append(json.loads((ROOT / "content/products/items/mcnuc-4.json").read_text(encoding="utf-8")))
+            continue
         source = source_file(model)
         reader = PdfReader(source)
         product_id = "mcai2" if model == "MCAIPC2" else model.lower()
@@ -160,7 +164,7 @@ def build():
         titles = ["Front panel", "Rear panel", "Enclosure view"]
         if model == "MCAIPC2":
             titles = ["H04-BQ front view", "H04-BQ enclosure view"]
-        main = 1 if model in ["MCNAS14A", "MCNAS14B"] else len(product_images) - 1 if series == "AI" or model == "MCDPC1" else 0
+        main = 1 if model in ["MCNAS14A", "MCNAS14B"] else len(product_images) - 1 if series == "AI" or model == "MCNUC-4" else 0
         square(product_images[main], output / "main.webp")
         cards = []
         for i, image in enumerate(product_images):
@@ -174,7 +178,7 @@ def build():
         elif series == "AI":
             description = f"{model} combines {cpu}, up to {memory}, dual 2.5GbE networking, and {connectivity} in a 132 x 132 x 50.5 mm enclosure. Dual PCIe 4.0 M.2 storage, HDMI, DisplayPort, and USB4 support local computing and professional desktop workloads."
         else:
-            description = "MCDPC1 is an Intel N100 / N150 desktop mini PC with replaceable DDR4 memory, dual Gigabit LAN, two M.2 2280 storage slots, and DisplayPort, HDMI, and USB-C display connections. A built-in 36 W power supply simplifies desk installation."
+            description = f"{model} is an Intel N100 / N150 desktop mini PC with replaceable DDR4 memory, dual Gigabit LAN, two M.2 2280 storage slots, and DisplayPort, HDMI, and USB-C display connections. A built-in 36 W power supply simplifies desk installation."
         highlights = [cpu, f"Up to {memory}", connectivity, "Dual serial interfaces" if series in ["B", "D"] else "Dual M.2 PCIe 4.0 SSD" if series == "AI" else "NVMe + SATA storage"]
         record = {"id": product_id, "name": model, "tagline": tagline, "description": description,
                   "image": f"{base}/main.webp", "galleryImages": [c["image"] for c in cards],

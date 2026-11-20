@@ -519,5 +519,17 @@ export const modelThumbnails: Record<string, { image: string; source: string }> 
   "mcdpc-s1": {
     "image": "/assets/products/thumbnails/mcdpc-s1.webp",
     "source": "/assets/products/commercial/dpc/mcdpc-s1/front.webp"
+  },
+  "mcnuc-4": {
+    "image": "/assets/products/thumbnails/mcdpc1.webp",
+    "source": "/assets/products/commercial/brochure/mcdpc1/main.webp"
+  },
+  "mcnuc-5": {
+    "image": "/assets/products/thumbnails/mcdpc2.webp",
+    "source": "/assets/products/commercial/dpc/mcdpc2/main.webp"
+  },
+  "mcnucm1": {
+    "image": "/assets/products/thumbnails/mcdpc-s1.webp",
+    "source": "/assets/products/commercial/dpc/mcdpc-s1/front.webp"
   }
 };

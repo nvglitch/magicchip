@@ -87,7 +87,18 @@ assert.equal(products.length, 169);
 assert(products.every(e => e.specs?.length));
 assert.equal(new Set(products.map(e => e.href)).size, products.length);
 for (const query of ['MCDPC2', 'Core Ultra 96GB Thunderbolt 4', 'Dampfkammer', 'chambre à vapeur', 'camera di vapore', 'cámara de vapor']) {
-  assert(searchSite(query).some(entry => entry.href === '/products/commercial-mini-pc/mcdpc2'), `MCDPC2 query failed: ${query}`);
+  assert(searchSite(query).some(entry => entry.href === '/products/commercial-mini-pc/mcnuc-5'), `MCNUC-5 query failed: ${query}`);
+}
+const { commercialProductAliases, commercialLegacyNames } = load('lib/commercial-product-aliases.ts');
+for (const [id, legacyNames] of Object.entries(commercialLegacyNames)) {
+  const href = `/products/commercial-mini-pc/${id}`;
+  const current = siteSearchIndex.find(entry => entry.href === href);
+  assert(current, `Missing renamed product: ${id}`);
+  for (const oldName of legacyNames) {
+    assert.equal(searchSite(oldName)[0]?.href, href, `Legacy name failed: ${oldName}`);
+    assert.equal(commercialProductAliases[oldName.toLowerCase()], href);
+    assert(!siteSearchIndex.some(entry => entry.href === `/products/commercial-mini-pc/${oldName.toLowerCase()}`));
+  }
 }
 for (const entry of products) assert.equal(searchSite(entry.title)[0]?.href, entry.href);
 const mcsrc26 = load('lib/firewall-catalog.ts').firewallCatalog.find(item => item.id === 'mcsrc26');

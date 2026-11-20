@@ -11,6 +11,7 @@ import { aiCatalog } from '@/lib/ai-catalog';
 import { industrialCatalog } from '@/lib/industrial-catalog';
 import { firewallCatalog } from '@/lib/firewall-catalog';
 import { commercialCatalog } from '@/lib/commercial-catalog';
+import { commercialLegacyNames } from '@/lib/commercial-product-aliases';
 import { mergeSpecifications } from '@/lib/product-specifications';
 import { firewallLegacyNames } from '@/lib/firewall-product-aliases';
 import { nasMotherboardCopy } from '@/lib/nas-motherboard-copy';
@@ -89,6 +90,7 @@ const catalogCommercialSearchEntries: SearchEntry[] = commercialCatalog.map((ite
     ...(item.series === 'NAS-MB' ? Object.values(nasMotherboardCopy).flatMap(copy => copy.keywords).filter(keyword => !/mini.?itx/i.test(keyword) || item.specs.some(spec => /mini.?itx/i.test(spec.value))) : []),
     `${item.series.toLowerCase()} series`,
     item.name.toLowerCase(),
+    ...(commercialLegacyNames[item.id] || []),
     ...Object.values(item.translations || {}).flatMap(copy => [copy.tagline, ...copy.highlights, ...copy.specs.map(spec => `${spec.label} ${spec.value}`)]),
   ],
   image: item.image,

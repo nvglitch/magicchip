@@ -1,0 +1,686 @@
+{
+  "id": "mcnuc-4",
+  "name": "MCNUC-4",
+  "tagline": "Intel N100 / N150 compact desktop PC",
+  "description": "MCNUC-4 is an Intel N100 / N150 desktop mini PC with replaceable DDR4 memory, dual Gigabit LAN, two M.2 2280 storage slots, and DisplayPort, HDMI, and USB-C display connections. A built-in 36 W power supply simplifies desk installation.",
+  "image": "/assets/products/commercial/brochure/mcdpc1/main.webp",
+  "galleryImages": [
+    "/assets/products/commercial/brochure/mcdpc1/view-1.webp",
+    "/assets/products/commercial/brochure/mcdpc1/view-2.webp",
+    "/assets/products/commercial/brochure/mcdpc1/view-3.webp"
+  ],
+  "galleryCards": [
+    {
+      "image": "/assets/products/commercial/brochure/mcdpc1/view-1.webp",
+      "title": "MCNUC-4 front panel"
+    },
+    {
+      "image": "/assets/products/commercial/brochure/mcdpc1/view-2.webp",
+      "title": "MCNUC-4 rear panel"
+    },
+    {
+      "image": "/assets/products/commercial/brochure/mcdpc1/view-3.webp",
+      "title": "MCNUC-4 enclosure view"
+    }
+  ],
+  "highlights": [
+    "Intel N100 / N150",
+    "Up to 16GB DDR4",
+    "Dual Gigabit LAN",
+    "NVMe + SATA storage"
+  ],
+  "specs": [
+    {
+      "label": "Model",
+      "value": "MCNUC-4"
+    },
+    {
+      "label": "CPU",
+      "value": "Intel Alder Lake-N N100 / N150"
+    },
+    {
+      "label": "Memory",
+      "value": "1 x DDR4 SODIMM, max 16 GB"
+    },
+    {
+      "label": "Network",
+      "value": "2 x Realtek RTL8111H Gigabit Ethernet ports"
+    },
+    {
+      "label": "USB",
+      "value": "2 x USB3.2 Gen2 Type-A (10 Gb/s); 2 x USB2.0; 1 x USB3.2 Gen2 Type-C (10 Gb/s)"
+    },
+    {
+      "label": "DP",
+      "value": "1 x DP1.4"
+    },
+    {
+      "label": "HDMI",
+      "value": "1 x HDMI2.1"
+    },
+    {
+      "label": "USB Type-C",
+      "value": "1 x USB Type-C display output"
+    },
+    {
+      "label": "Power button",
+      "value": "1 x Power button"
+    },
+    {
+      "label": "Audio",
+      "value": "1 x headphone/microphone combo jack"
+    },
+    {
+      "label": "Storage - M.2 SSD",
+      "value": "2 x M.2 2280 NVMe (1 slot also supports M.2 SATA)"
+    },
+    {
+      "label": "Wi-Fi",
+      "value": "1 x M.2 2232 for Wi-Fi"
+    },
+    {
+      "label": "OS",
+      "value": "Windows 10, Windows 11, Linux"
+    },
+    {
+      "label": "Features",
+      "value": "Wake-on-LAN, Auto Power On, scheduled power-on, PXE boot"
+    },
+    {
+      "label": "AC input",
+      "value": "AC 100-240 V, 50/60 Hz; built-in 36 W power supply"
+    },
+    {
+      "label": "Material",
+      "value": "Fire-retardant ABS"
+    },
+    {
+      "label": "Installation",
+      "value": "Desktop"
+    },
+    {
+      "label": "Dimensions",
+      "value": "140 x 133 x 46 mm, including silicone feet"
+    },
+    {
+      "label": "Weight",
+      "value": "2 kg"
+    },
+    {
+      "label": "Environment - Storage temperature",
+      "value": "-30~70 C"
+    },
+    {
+      "label": "Environment - Operating temperature",
+      "value": "-20~60 C"
+    },
+    {
+      "label": "Environment - Storage humidity",
+      "value": "10%~90% RH at 30 C, non-condensing"
+    }
+  ],
+  "series": "DPC",
+  "operatingRange": "-20°C to 60°C",
+  "sourceBrochure": "桌面端DPC/MCNUC-4 Brochure.pdf",
+  "sourceSha256": "6ad4354326aaaca9c8555e8c7c70dac80baf9e14316e2124a521b3bb55bc9d77",
+  "category": "commercial-mini-pc",
+  "published": true,
+  "specificationHeading": "MCNUC-4 hardware specifications",
+  "featureHeading": "Desktop connectivity and expansion",
+  "advantageSummary": "Replaceable DDR4 memory, dual M.2 storage and a built-in power supply in a compact desktop enclosure.",
+  "features": [
+    {
+      "icon": "Cpu",
+      "title": "Replaceable memory",
+      "description": "Intel N100 / N150 processors with one DDR4 SO-DIMM slot supporting up to 16 GB."
+    },
+    {
+      "icon": "HardDrive",
+      "title": "Storage and display connections",
+      "description": "Two M.2 2280 NVMe slots, one also supporting SATA, plus HDMI, DisplayPort and USB-C display outputs."
+    },
+    {
+      "icon": "Zap",
+      "title": "Built-in power supply",
+      "description": "A 36 W internal power supply accepts 100–240 V AC, 50/60 Hz, for desktop installation."
+    }
+  ],
+  "translations": {
+    "de": {
+      "tagline": "Kompakter Intel-N100-/N150-Desktop-PC",
+      "description": "MCNUC-4 kombiniert einen Intel N100 oder N150 mit austauschbarem DDR4-Arbeitsspeicher, zwei Gigabit-LAN-Anschlüssen und zwei M.2-2280-SSD-Steckplätzen. DisplayPort, HDMI und USB-C bieten Bildausgabe. Ein integriertes 36-W-Netzteil versorgt das kompakte Desktop-Gehäuse.",
+      "highlights": [
+        "Intel N100 / N150",
+        "Bis zu 16 GB DDR4",
+        "Zwei Gigabit-LAN-Anschlüsse",
+        "NVMe- und SATA-Speicher"
+      ],
+      "specificationHeading": "Technische Daten des MCNUC-4",
+      "featureHeading": "Desktop-Anschlüsse und Erweiterung",
+      "advantageSummary": "Austauschbarer DDR4-Arbeitsspeicher, zwei M.2-SSD-Steckplätze und ein integriertes Netzteil im kompakten Desktop-Gehäuse.",
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "Austauschbarer Arbeitsspeicher",
+          "description": "Intel N100 / N150 mit einem DDR4-SO-DIMM-Steckplatz für bis zu 16 GB."
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Speicher und Bildausgabe",
+          "description": "Zwei M.2-2280-NVMe-Steckplätze, davon einer auch für SATA, sowie HDMI, DisplayPort und USB-C mit Bildausgabe."
+        },
+        {
+          "icon": "Zap",
+          "title": "Integriertes Netzteil",
+          "description": "Das interne 36-W-Netzteil nimmt 100–240 V AC bei 50/60 Hz auf; vorgesehen für Desktop-Aufstellung."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modell",
+          "value": "MCNUC-4"
+        },
+        {
+          "label": "Prozessor",
+          "value": "Intel Alder Lake-N N100 / N150"
+        },
+        {
+          "label": "Arbeitsspeicher",
+          "value": "1 × DDR4 SO-DIMM, maximal 16 GB"
+        },
+        {
+          "label": "Netzwerk",
+          "value": "2 × Realtek RTL8111H Gigabit-Ethernet"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.2 Gen 2 Typ A (10 Gbit/s); 2 × USB 2.0; 1 × USB 3.2 Gen 2 Typ C (10 Gbit/s)"
+        },
+        {
+          "label": "DisplayPort",
+          "value": "1 × DisplayPort 1.4"
+        },
+        {
+          "label": "HDMI",
+          "value": "1 × HDMI 2.1"
+        },
+        {
+          "label": "USB-C-Video",
+          "value": "1 × USB-C mit Bildausgabe"
+        },
+        {
+          "label": "Ein-/Ausschalter",
+          "value": "1 × Ein-/Ausschalter"
+        },
+        {
+          "label": "Audio",
+          "value": "1 × kombinierter Kopfhörer-/Mikrofonanschluss"
+        },
+        {
+          "label": "Speicher – M.2-SSD",
+          "value": "2 × M.2 2280 NVMe; ein Steckplatz unterstützt auch M.2 SATA"
+        },
+        {
+          "label": "WLAN",
+          "value": "1 × M.2 2232 für WLAN"
+        },
+        {
+          "label": "Betriebssystem",
+          "value": "Windows 10, Windows 11, Linux"
+        },
+        {
+          "label": "Systemfunktionen",
+          "value": "Wake-on-LAN, automatisches Einschalten nach Stromzufuhr, zeitgesteuertes Einschalten, PXE-Boot"
+        },
+        {
+          "label": "Netzeingang",
+          "value": "100–240 V AC, 50/60 Hz; integriertes 36-W-Netzteil"
+        },
+        {
+          "label": "Material",
+          "value": "Flammhemmendes ABS"
+        },
+        {
+          "label": "Montage",
+          "value": "Desktop-Aufstellung"
+        },
+        {
+          "label": "Abmessungen",
+          "value": "140 × 133 × 46 mm, einschließlich Silikonfüßen"
+        },
+        {
+          "label": "Gewicht",
+          "value": "2 kg"
+        },
+        {
+          "label": "Lagertemperatur",
+          "value": "−30 bis +70 °C"
+        },
+        {
+          "label": "Betriebstemperatur",
+          "value": "−20 bis +60 °C"
+        },
+        {
+          "label": "Lagerfeuchtigkeit",
+          "value": "10–90 % relative Luftfeuchtigkeit bei 30 °C, nicht kondensierend"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/brochure/mcdpc1/view-1.webp",
+          "title": "MCNUC-4 · Vorderseite"
+        },
+        {
+          "image": "/assets/products/commercial/brochure/mcdpc1/view-2.webp",
+          "title": "MCNUC-4 · Rückseite"
+        },
+        {
+          "image": "/assets/products/commercial/brochure/mcdpc1/view-3.webp",
+          "title": "MCNUC-4 · Gehäuseansicht"
+        }
+      ]
+    },
+    "fr": {
+      "tagline": "PC de bureau compact Intel N100 / N150",
+      "description": "Le MCNUC-4 associe un processeur Intel N100 ou N150 à une mémoire DDR4 remplaçable, deux ports LAN Gigabit et deux emplacements SSD M.2 2280. DisplayPort, HDMI et USB-C assurent les sorties vidéo. Son boîtier compact intègre une alimentation de 36 W.",
+      "highlights": [
+        "Intel N100 / N150",
+        "Jusqu’à 16 Go de DDR4",
+        "Deux ports LAN Gigabit",
+        "Stockage NVMe et SATA"
+      ],
+      "specificationHeading": "Caractéristiques techniques du MCNUC-4",
+      "featureHeading": "Connexions et extension de bureau",
+      "advantageSummary": "Mémoire DDR4 remplaçable, deux emplacements SSD M.2 et alimentation intégrée dans un boîtier de bureau compact.",
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "Mémoire remplaçable",
+          "description": "Intel N100 / N150 avec un emplacement SO-DIMM DDR4 jusqu’à 16 Go."
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Stockage et connexions vidéo",
+          "description": "Deux emplacements M.2 2280 NVMe, dont un compatible SATA, ainsi que HDMI, DisplayPort et USB-C avec sortie vidéo."
+        },
+        {
+          "icon": "Zap",
+          "title": "Alimentation intégrée",
+          "description": "L’alimentation interne de 36 W accepte 100–240 V CA, 50/60 Hz, pour une installation sur bureau."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modèle",
+          "value": "MCNUC-4"
+        },
+        {
+          "label": "Processeur",
+          "value": "Intel Alder Lake-N N100 / N150"
+        },
+        {
+          "label": "Mémoire",
+          "value": "1 × SO-DIMM DDR4, 16 Go maximum"
+        },
+        {
+          "label": "Réseau",
+          "value": "2 × Ethernet Gigabit Realtek RTL8111H"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.2 Gen 2 type A (10 Gbit/s) ; 2 × USB 2.0 ; 1 × USB 3.2 Gen 2 type C (10 Gbit/s)"
+        },
+        {
+          "label": "DisplayPort",
+          "value": "1 × DisplayPort 1.4"
+        },
+        {
+          "label": "HDMI",
+          "value": "1 × HDMI 2.1"
+        },
+        {
+          "label": "Vidéo USB-C",
+          "value": "1 × USB-C avec sortie vidéo"
+        },
+        {
+          "label": "Bouton marche/arrêt",
+          "value": "1 × bouton marche/arrêt"
+        },
+        {
+          "label": "Audio",
+          "value": "1 × prise combinée casque/microphone"
+        },
+        {
+          "label": "Stockage – SSD M.2",
+          "value": "2 × M.2 2280 NVMe ; un emplacement prend aussi en charge le M.2 SATA"
+        },
+        {
+          "label": "Wi-Fi",
+          "value": "1 × M.2 2232 pour Wi-Fi"
+        },
+        {
+          "label": "Système d’exploitation",
+          "value": "Windows 10, Windows 11, Linux"
+        },
+        {
+          "label": "Fonctions système",
+          "value": "Wake-on-LAN, démarrage automatique à la mise sous tension, démarrage programmé, démarrage PXE"
+        },
+        {
+          "label": "Alimentation secteur",
+          "value": "100–240 V CA, 50/60 Hz ; alimentation intégrée de 36 W"
+        },
+        {
+          "label": "Matériau",
+          "value": "ABS ignifuge"
+        },
+        {
+          "label": "Installation",
+          "value": "Sur bureau"
+        },
+        {
+          "label": "Dimensions",
+          "value": "140 × 133 × 46 mm, pieds en silicone compris"
+        },
+        {
+          "label": "Poids",
+          "value": "2 kg"
+        },
+        {
+          "label": "Température de stockage",
+          "value": "−30 à +70 °C"
+        },
+        {
+          "label": "Température de fonctionnement",
+          "value": "−20 à +60 °C"
+        },
+        {
+          "label": "Humidité de stockage",
+          "value": "10–90 % HR à 30 °C, sans condensation"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/brochure/mcdpc1/view-1.webp",
+          "title": "MCNUC-4 · Face avant"
+        },
+        {
+          "image": "/assets/products/commercial/brochure/mcdpc1/view-2.webp",
+          "title": "MCNUC-4 · Face arrière"
+        },
+        {
+          "image": "/assets/products/commercial/brochure/mcdpc1/view-3.webp",
+          "title": "MCNUC-4 · Vue du boîtier"
+        }
+      ]
+    },
+    "it": {
+      "tagline": "PC desktop compatto Intel N100 / N150",
+      "description": "MCNUC-4 abbina un processore Intel N100 o N150 a memoria DDR4 sostituibile, due porte LAN Gigabit e due slot SSD M.2 2280. DisplayPort, HDMI e USB-C forniscono le uscite video. Il case desktop compatto integra un alimentatore da 36 W.",
+      "highlights": [
+        "Intel N100 / N150",
+        "Fino a 16 GB DDR4",
+        "Due porte LAN Gigabit",
+        "Archiviazione NVMe e SATA"
+      ],
+      "specificationHeading": "Specifiche tecniche di MCNUC-4",
+      "featureHeading": "Connessioni ed espansione desktop",
+      "advantageSummary": "Memoria DDR4 sostituibile, due slot SSD M.2 e alimentatore integrato in un case desktop compatto.",
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "Memoria sostituibile",
+          "description": "Intel N100 / N150 con uno slot SO-DIMM DDR4 fino a 16 GB."
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Archiviazione e collegamenti video",
+          "description": "Due slot M.2 2280 NVMe, uno compatibile anche con SATA, e uscite video HDMI, DisplayPort e USB-C."
+        },
+        {
+          "icon": "Zap",
+          "title": "Alimentatore integrato",
+          "description": "L’alimentatore interno da 36 W accetta 100–240 V CA, 50/60 Hz, per l’installazione su scrivania."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modello",
+          "value": "MCNUC-4"
+        },
+        {
+          "label": "Processore",
+          "value": "Intel Alder Lake-N N100 / N150"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 × SO-DIMM DDR4, massimo 16 GB"
+        },
+        {
+          "label": "Rete",
+          "value": "2 × Ethernet Gigabit Realtek RTL8111H"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.2 Gen 2 tipo A (10 Gbit/s); 2 × USB 2.0; 1 × USB 3.2 Gen 2 tipo C (10 Gbit/s)"
+        },
+        {
+          "label": "DisplayPort",
+          "value": "1 × DisplayPort 1.4"
+        },
+        {
+          "label": "HDMI",
+          "value": "1 × HDMI 2.1"
+        },
+        {
+          "label": "Video USB-C",
+          "value": "1 × USB-C con uscita video"
+        },
+        {
+          "label": "Pulsante di accensione",
+          "value": "1 × pulsante di accensione"
+        },
+        {
+          "label": "Audio",
+          "value": "1 × presa combinata cuffie/microfono"
+        },
+        {
+          "label": "Archiviazione – SSD M.2",
+          "value": "2 × M.2 2280 NVMe; uno slot supporta anche M.2 SATA"
+        },
+        {
+          "label": "Wi-Fi",
+          "value": "1 × M.2 2232 per Wi-Fi"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10, Windows 11, Linux"
+        },
+        {
+          "label": "Funzioni di sistema",
+          "value": "Wake-on-LAN, accensione automatica al ripristino dell’alimentazione, accensione programmata, avvio PXE"
+        },
+        {
+          "label": "Alimentazione di rete",
+          "value": "100–240 V CA, 50/60 Hz; alimentatore integrato da 36 W"
+        },
+        {
+          "label": "Materiale",
+          "value": "ABS ignifugo"
+        },
+        {
+          "label": "Installazione",
+          "value": "Su scrivania"
+        },
+        {
+          "label": "Dimensioni",
+          "value": "140 × 133 × 46 mm, piedini in silicone inclusi"
+        },
+        {
+          "label": "Peso",
+          "value": "2 kg"
+        },
+        {
+          "label": "Temperatura di stoccaggio",
+          "value": "Da −30 a +70 °C"
+        },
+        {
+          "label": "Temperatura operativa",
+          "value": "Da −20 a +60 °C"
+        },
+        {
+          "label": "Umidità di stoccaggio",
+          "value": "10–90 % UR a 30 °C, senza condensa"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/brochure/mcdpc1/view-1.webp",
+          "title": "MCNUC-4 · Pannello anteriore"
+        },
+        {
+          "image": "/assets/products/commercial/brochure/mcdpc1/view-2.webp",
+          "title": "MCNUC-4 · Pannello posteriore"
+        },
+        {
+          "image": "/assets/products/commercial/brochure/mcdpc1/view-3.webp",
+          "title": "MCNUC-4 · Vista del case"
+        }
+      ]
+    },
+    "es": {
+      "tagline": "PC de sobremesa compacto Intel N100 / N150",
+      "description": "MCNUC-4 combina un procesador Intel N100 o N150 con memoria DDR4 reemplazable, dos puertos LAN Gigabit y dos ranuras SSD M.2 2280. DisplayPort, HDMI y USB-C proporcionan salidas de vídeo. Su carcasa compacta de sobremesa integra una fuente de alimentación de 36 W.",
+      "highlights": [
+        "Intel N100 / N150",
+        "Hasta 16 GB DDR4",
+        "Dos puertos LAN Gigabit",
+        "Almacenamiento NVMe y SATA"
+      ],
+      "specificationHeading": "Especificaciones de hardware de MCNUC-4",
+      "featureHeading": "Conexiones y ampliación de sobremesa",
+      "advantageSummary": "Memoria DDR4 reemplazable, dos ranuras SSD M.2 y fuente de alimentación integrada en una carcasa compacta.",
+      "features": [
+        {
+          "icon": "Cpu",
+          "title": "Memoria reemplazable",
+          "description": "Intel N100 / N150 con una ranura SO-DIMM DDR4 de hasta 16 GB."
+        },
+        {
+          "icon": "HardDrive",
+          "title": "Almacenamiento y vídeo",
+          "description": "Dos ranuras M.2 2280 NVMe, una también compatible con SATA, y salidas de vídeo HDMI, DisplayPort y USB-C."
+        },
+        {
+          "icon": "Zap",
+          "title": "Fuente de alimentación integrada",
+          "description": "La fuente interna de 36 W admite 100–240 V CA, 50/60 Hz, para instalación de sobremesa."
+        }
+      ],
+      "specs": [
+        {
+          "label": "Modelo",
+          "value": "MCNUC-4"
+        },
+        {
+          "label": "Procesador",
+          "value": "Intel Alder Lake-N N100 / N150"
+        },
+        {
+          "label": "Memoria",
+          "value": "1 × SO-DIMM DDR4, máximo 16 GB"
+        },
+        {
+          "label": "Red",
+          "value": "2 × Ethernet Gigabit Realtek RTL8111H"
+        },
+        {
+          "label": "USB",
+          "value": "2 × USB 3.2 Gen 2 tipo A (10 Gbit/s); 2 × USB 2.0; 1 × USB 3.2 Gen 2 tipo C (10 Gbit/s)"
+        },
+        {
+          "label": "DisplayPort",
+          "value": "1 × DisplayPort 1.4"
+        },
+        {
+          "label": "HDMI",
+          "value": "1 × HDMI 2.1"
+        },
+        {
+          "label": "Vídeo USB-C",
+          "value": "1 × USB-C con salida de vídeo"
+        },
+        {
+          "label": "Botón de encendido",
+          "value": "1 × botón de encendido"
+        },
+        {
+          "label": "Audio",
+          "value": "1 × conector combinado de auriculares y micrófono"
+        },
+        {
+          "label": "Almacenamiento – SSD M.2",
+          "value": "2 × M.2 2280 NVMe; una ranura también admite M.2 SATA"
+        },
+        {
+          "label": "Wi-Fi",
+          "value": "1 × M.2 2232 para Wi-Fi"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10, Windows 11, Linux"
+        },
+        {
+          "label": "Funciones del sistema",
+          "value": "Wake-on-LAN, encendido automático al recibir alimentación, encendido programado, arranque PXE"
+        },
+        {
+          "label": "Entrada de corriente",
+          "value": "100–240 V CA, 50/60 Hz; fuente de alimentación integrada de 36 W"
+        },
+        {
+          "label": "Material",
+          "value": "ABS ignífugo"
+        },
+        {
+          "label": "Instalación",
+          "value": "Sobremesa"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "140 × 133 × 46 mm, incluidos los pies de silicona"
+        },
+        {
+          "label": "Peso",
+          "value": "2 kg"
+        },
+        {
+          "label": "Temperatura de almacenamiento",
+          "value": "De −30 a +70 °C"
+        },
+        {
+          "label": "Temperatura de funcionamiento",
+          "value": "De −20 a +60 °C"
+        },
+        {
+          "label": "Humedad de almacenamiento",
+          "value": "10–90 % HR a 30 °C, sin condensación"
+        }
+      ],
+      "galleryCards": [
+        {
+          "image": "/assets/products/commercial/brochure/mcdpc1/view-1.webp",
+          "title": "MCNUC-4 · Panel frontal"
+        },
+        {
+          "image": "/assets/products/commercial/brochure/mcdpc1/view-2.webp",
+          "title": "MCNUC-4 · Panel trasero"
+        },
+        {
+          "image": "/assets/products/commercial/brochure/mcdpc1/view-3.webp",
+          "title": "MCNUC-4 · Vista de la carcasa"
+        }
+      ]
+    }
+  }
+}

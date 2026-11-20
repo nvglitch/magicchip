@@ -7,6 +7,7 @@ import { firewallCatalog } from '@/lib/firewall-catalog';
 import { industrialCatalog, industrialProductAliases } from '@/lib/industrial-catalog';
 import { aiCatalog, aiProductAliases } from '@/lib/ai-catalog';
 import { firewallProductAliases } from '@/lib/firewall-product-aliases';
+import { commercialProductAliases } from '@/lib/commercial-product-aliases';
 import { permanentRedirect } from 'next/navigation';
 import { mergeSpecifications, type ProductConfiguration } from '@/lib/product-specifications';
 import { categorySeo, createPageMetadata, productSeo, serializeJsonLd, SITE_NAME, SITE_URL } from '@/lib/seo';
@@ -22,6 +23,7 @@ export async function generateMetadata({ params }: Omit<ProductLayoutProps, 'chi
   if (category === 'industrial-mini-pc' && industrialProductAliases[id]) permanentRedirect(localizedHref(industrialProductAliases[id], lang));
   if (category === 'ai-mini-pc' && aiProductAliases[id]) permanentRedirect(localizedHref(aiProductAliases[id], lang));
   if (category === 'firewall-mini-pc' && firewallProductAliases[id]) permanentRedirect(localizedHref(firewallProductAliases[id], lang));
+  if (category === 'commercial-mini-pc' && commercialProductAliases[id]) permanentRedirect(localizedHref(commercialProductAliases[id], lang));
   const product = productSeo[id];
 
   if (!product || product.category !== category) {
@@ -36,6 +38,7 @@ export default async function ProductLayout({ children, params }: ProductLayoutP
   if (category === 'industrial-mini-pc' && industrialProductAliases[id]) permanentRedirect(localizedHref(industrialProductAliases[id], lang));
   if (category === 'ai-mini-pc' && aiProductAliases[id]) permanentRedirect(localizedHref(aiProductAliases[id], lang));
   if (category === 'firewall-mini-pc' && firewallProductAliases[id]) permanentRedirect(localizedHref(firewallProductAliases[id], lang));
+  if (category === 'commercial-mini-pc' && commercialProductAliases[id]) permanentRedirect(localizedHref(commercialProductAliases[id], lang));
   const product = productSeo[id];
   const categoryEntry = categorySeo[category];
   const catalogItem = [...industrialCatalog, ...firewallCatalog, ...commercialCatalog, ...aiCatalog].find((item) => item.id === id);

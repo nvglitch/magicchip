@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "sourceRoot": "D:\\本地资源库\\电脑相关\\电脑册子归档\\ver2",
-  "observedAtUtc": "2026-11-19T08:50:21.510194+00:00",
+  "observedAtUtc": "2026-11-20T01:52:38.777006+00:00",
   "observationOnly": false,
   "totalPdfCount": 125,
   "inScopePdfCount": 117,
@@ -10,11 +10,11 @@
     "excluded-custom": 7,
     "pending-confirmation": 14,
     "superseded-by-merged-brochure": 22,
-    "superseded-by-renamed-brochure": 5,
-    "updated": 52,
-    "verified-current": 53
+    "superseded-by-renamed-brochure": 8,
+    "updated": 53,
+    "verified-current": 52
   },
-  "previousObservation": "brochure-history/before-2026-11-19-mcdpc-s1-update.json",
+  "previousObservation": "brochure-history/before-2026-11-20-nuc-brochure-update.json",
   "files": [
     {
       "relativePath": "AIPC/MCAIPC1 brochure.pdf",
@@ -394,6 +394,104 @@
       "appliedAtUtc": "2026-10-13T09:54:12.159012+00:00"
     },
     {
+      "relativePath": "定制册子/E238A-P_规格001_产品册.pdf",
+      "sizeBytes": 1682705,
+      "modifiedAtUtc": "2026-10-09T02:40:33.941594+00:00",
+      "observedSha256": "a8e8bba149de5ebd92b7afb29f329f1cbde210409c36f49c7f8a78b9ed3d2ffe",
+      "present": true,
+      "appliedSha256": null,
+      "excluded": true,
+      "status": "excluded-custom",
+      "changeSincePreviousObservation": "unchanged",
+      "modelIds": [],
+      "hrefs": [],
+      "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
+    },
+    {
+      "relativePath": "定制册子/E238A-P_规格003_产品册.pdf",
+      "sizeBytes": 1709221,
+      "modifiedAtUtc": "2026-10-09T02:40:34.474948+00:00",
+      "observedSha256": "c814feed7d4e98109cfa9a470b73b179da313689c702f216225108e28b2c8083",
+      "present": true,
+      "appliedSha256": null,
+      "excluded": true,
+      "status": "excluded-custom",
+      "changeSincePreviousObservation": "unchanged",
+      "modelIds": [],
+      "hrefs": [],
+      "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
+    },
+    {
+      "relativePath": "定制册子/E270A-P_规格002_产品册.pdf",
+      "sizeBytes": 1709192,
+      "modifiedAtUtc": "2026-10-09T02:40:35.002535+00:00",
+      "observedSha256": "d1d33003023e43bce03b2538a04a7a925d8d0af89f45e81ff981afedaea46012",
+      "present": true,
+      "appliedSha256": null,
+      "excluded": true,
+      "status": "excluded-custom",
+      "changeSincePreviousObservation": "unchanged",
+      "modelIds": [],
+      "hrefs": [],
+      "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
+    },
+    {
+      "relativePath": "定制册子/E270A-P_规格004_产品册.pdf",
+      "sizeBytes": 1682705,
+      "modifiedAtUtc": "2026-10-09T02:40:35.605535+00:00",
+      "observedSha256": "66b89da1cbeeff30cccdd9c2c417405baaf4e7302f0b8fce8921814ac231ce79",
+      "present": true,
+      "appliedSha256": null,
+      "excluded": true,
+      "status": "excluded-custom",
+      "changeSincePreviousObservation": "unchanged",
+      "modelIds": [],
+      "hrefs": [],
+      "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
+    },
+    {
+      "relativePath": "定制册子/MCIPCB13A Custom brochure.pdf",
+      "sizeBytes": 2400008,
+      "modifiedAtUtc": "2026-11-09T03:37:40.063957+00:00",
+      "observedSha256": "344942e8a4464014effd0ac2823cd845ee3a826e3f7f2b40c1748e7b9a9c381f",
+      "present": true,
+      "appliedSha256": null,
+      "excluded": true,
+      "status": "excluded-custom",
+      "changeSincePreviousObservation": "unchanged",
+      "modelIds": [],
+      "hrefs": [],
+      "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
+    },
+    {
+      "relativePath": "定制册子/MCIPCB13B Custom brochure.pdf",
+      "sizeBytes": 2405781,
+      "modifiedAtUtc": "2026-11-09T03:37:42.870052+00:00",
+      "observedSha256": "05cd82d4b43615c4a500c676adcdc7f07de40e94c697b0f77fc966d775bcc663",
+      "present": true,
+      "appliedSha256": null,
+      "excluded": true,
+      "status": "excluded-custom",
+      "changeSincePreviousObservation": "unchanged",
+      "modelIds": [],
+      "hrefs": [],
+      "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
+    },
+    {
+      "relativePath": "定制册子/MCMQR6 brochure.pdf",
+      "sizeBytes": 653215,
+      "modifiedAtUtc": "2026-11-06T02:13:44.018930+00:00",
+      "observedSha256": "425130fecc35f275c516fd8d1c9f2c6102820970628dcd4832544216531b33e3",
+      "present": true,
+      "appliedSha256": null,
+      "excluded": true,
+      "status": "excluded-custom",
+      "changeSincePreviousObservation": "unchanged",
+      "modelIds": [],
+      "hrefs": [],
+      "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
+    },
+    {
       "relativePath": "工控机IPC/A系列/MCIPCA1 brochure.pdf",
       "sizeBytes": 1169342,
       "modifiedAtUtc": "2026-11-10T07:14:27.226191+00:00",
@@ -452,7 +550,9 @@
       ],
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb1"
-      ]
+      ],
+      "lastPendingReviewAtUtc": "2026-11-20T01:52:38.777006+00:00",
+      "lastPendingReviewResult": "来源 SHA-256 与上次一致，对应官网产品记录与更新前快照一致；既有疑点继续待确认，保留原应用指纹。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB10 brochure.pdf",
@@ -495,7 +595,9 @@
       "appliedAtUtc": "2026-11-10T07:08:25.011639+00:00",
       "previousSha256": "9845fc0d5add7dc19109c423c471051a9deb471ac1d7de3cbff5fe76abeb7f9c",
       "observedAtUtc": "2026-11-19T02:12:01.644178+00:00",
-      "partialUpdate": true
+      "partialUpdate": true,
+      "lastPendingReviewAtUtc": "2026-11-20T01:52:38.777006+00:00",
+      "lastPendingReviewResult": "来源 SHA-256 与上次一致，对应官网产品记录与更新前快照一致；既有疑点继续待确认，保留原应用指纹。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB12 brochure.pdf",
@@ -535,7 +637,9 @@
       ],
       "changeSincePreviousObservation": "unchanged",
       "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
-      "previousSha256": "747e9e9214d76ab83c66e2fb5e187602209091d79eda292e1b8134cd0f5b8c4b"
+      "previousSha256": "747e9e9214d76ab83c66e2fb5e187602209091d79eda292e1b8134cd0f5b8c4b",
+      "lastPendingReviewAtUtc": "2026-11-20T01:52:38.777006+00:00",
+      "lastPendingReviewResult": "来源 SHA-256 与上次一致，对应官网产品记录与更新前快照一致；既有疑点继续待确认，保留原应用指纹。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB13A brochure.pdf",
@@ -636,7 +740,9 @@
       ],
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb15"
-      ]
+      ],
+      "lastPendingReviewAtUtc": "2026-11-20T01:52:38.777006+00:00",
+      "lastPendingReviewResult": "来源 SHA-256 与上次一致，对应官网产品记录与更新前快照一致；既有疑点继续待确认，保留原应用指纹。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB15A Brochure.pdf",
@@ -875,7 +981,9 @@
       ],
       "hrefs": [
         "/products/industrial-mini-pc/mcipcb2"
-      ]
+      ],
+      "lastPendingReviewAtUtc": "2026-11-20T01:52:38.777006+00:00",
+      "lastPendingReviewResult": "来源 SHA-256 与上次一致，对应官网产品记录与更新前快照一致；既有疑点继续待确认，保留原应用指纹。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB2-D3 Brochure.pdf",
@@ -974,7 +1082,9 @@
         "/products/industrial-mini-pc/mcipcb4"
       ],
       "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
-      "notes": "已同步明确的网口和存储参数；册子将 N5105 芯片组误写为 Alder Lake-N，待来源核实。"
+      "notes": "已同步明确的网口和存储参数；册子将 N5105 芯片组误写为 Alder Lake-N，待来源核实。",
+      "lastPendingReviewAtUtc": "2026-11-20T01:52:38.777006+00:00",
+      "lastPendingReviewResult": "来源 SHA-256 与上次一致，对应官网产品记录与更新前快照一致；既有疑点继续待确认，保留原应用指纹。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB5 Brochure.pdf",
@@ -993,7 +1103,9 @@
         "/products/industrial-mini-pc/mcipcb5"
       ],
       "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
-      "notes": "CPU/平台命名与芯片组表述冲突，未照搬存疑项目。"
+      "notes": "CPU/平台命名与芯片组表述冲突，未照搬存疑项目。",
+      "lastPendingReviewAtUtc": "2026-11-20T01:52:38.777006+00:00",
+      "lastPendingReviewResult": "来源 SHA-256 与上次一致，对应官网产品记录与更新前快照一致；既有疑点继续待确认，保留原应用指纹。"
     },
     {
       "relativePath": "工控机IPC/B系列/MCIPCB6 Brochure.pdf",
@@ -1112,7 +1224,29 @@
         "/products/industrial-mini-pc/mcipcb9"
       ],
       "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
-      "notes": "USB 总数与前后面板分项存在冲突，保留待核实。"
+      "notes": "USB 总数与前后面板分项存在冲突，保留待核实。",
+      "lastPendingReviewAtUtc": "2026-11-20T01:52:38.777006+00:00",
+      "lastPendingReviewResult": "来源 SHA-256 与上次一致，对应官网产品记录与更新前快照一致；既有疑点继续待确认，保留原应用指纹。"
+    },
+    {
+      "relativePath": "工控机IPC/B系列/MCIPCBP1 brochure.pdf",
+      "sizeBytes": 1930912,
+      "modifiedAtUtc": "2026-10-29T06:25:09.886760+00:00",
+      "observedSha256": "c50b21d786415548949b117daa414d0684de9eb6c1be7e1a96dc3cae2a26478e",
+      "appliedSha256": "c50b21d786415548949b117daa414d0684de9eb6c1be7e1a96dc3cae2a26478e",
+      "excluded": false,
+      "present": true,
+      "status": "updated",
+      "changeSincePreviousObservation": "unchanged",
+      "reviewedAtUtc": "2026-10-29T07:58:33.246518+00:00",
+      "appliedAtUtc": "2026-10-29T07:58:33.246518+00:00",
+      "modelIds": [
+        "mcipcbp1"
+      ],
+      "hrefs": [
+        "/products/industrial-mini-pc/mcipcbp1"
+      ],
+      "notes": "2026-10-29 已按新版核对并同步完整五语参数、介绍、功能卡和本地产品图；分类/菜单、搜索、SEO、结构化参数及缩略图均接入同一记录。生产构建、搜索回归、25 个五语页面和 15 条永久跳转验证通过。浏览器运行环境启动失败，未完成本次电脑/手机排版目视复核。详见当日工控机更新报告；原始 PDF 未修改。"
     },
     {
       "relativePath": "工控机IPC/C系列/MCIPC1 Brochure.pdf",
@@ -1141,6 +1275,26 @@
       "canonicalHrefs": [
         "/products/industrial-mini-pc/mcipc8-hdmi"
       ]
+    },
+    {
+      "relativePath": "工控机IPC/C系列/MCIPC2 brochure.pdf",
+      "sizeBytes": 3882613,
+      "modifiedAtUtc": "2026-10-29T05:58:47.199470+00:00",
+      "observedSha256": "38808c1e74575452f365ccd91cc13bbf6af1f80e2783d656c3baa0affe0d433e",
+      "appliedSha256": "38808c1e74575452f365ccd91cc13bbf6af1f80e2783d656c3baa0affe0d433e",
+      "excluded": false,
+      "present": true,
+      "status": "updated",
+      "changeSincePreviousObservation": "unchanged",
+      "reviewedAtUtc": "2026-10-29T07:58:33.246518+00:00",
+      "appliedAtUtc": "2026-10-29T07:58:33.246518+00:00",
+      "modelIds": [
+        "mcipc2"
+      ],
+      "hrefs": [
+        "/products/industrial-mini-pc/mcipc2"
+      ],
+      "notes": "2026-10-29 已按新版核对并同步完整五语参数、介绍、功能卡和本地产品图；分类/菜单、搜索、SEO、结构化参数及缩略图均接入同一记录。生产构建、搜索回归、25 个五语页面和 15 条永久跳转验证通过。浏览器运行环境启动失败，未完成本次电脑/手机排版目视复核。详见当日工控机更新报告；原始 PDF 未修改。"
     },
     {
       "relativePath": "工控机IPC/C系列/MCIPC2A brochure.pdf",
@@ -1282,6 +1436,30 @@
       "appliedAtUtc": "2026-10-29T07:58:33.246518+00:00",
       "notes": "2026-10-29 已按新版核对并同步完整五语参数、介绍、功能卡和本地产品图；分类/菜单、搜索、SEO、结构化参数及缩略图均接入同一记录。生产构建、搜索回归、25 个五语页面和 15 条永久跳转验证通过。浏览器运行环境启动失败，未完成本次电脑/手机排版目视复核。详见当日工控机更新报告；原始 PDF 未修改。",
       "previousSha256": "b5eaa9c8247620f679ab1931c16fe80ec899756003ab8975ef5a1d35ca2dd99e"
+    },
+    {
+      "relativePath": "工控机IPC/C系列/MCIPC8-HDMI brochure.pdf",
+      "sizeBytes": 2654774,
+      "modifiedAtUtc": "2026-10-31T09:37:39.881231+00:00",
+      "observedSha256": "73b30b37f48bc16fa9b1e893b07adf35bb462f4013045a0536ac6ed8c0fea18f",
+      "excluded": false,
+      "appliedSha256": "73b30b37f48bc16fa9b1e893b07adf35bb462f4013045a0536ac6ed8c0fea18f",
+      "present": true,
+      "status": "updated",
+      "changeSincePreviousObservation": "unchanged",
+      "modelIds": [
+        "mcipc8-hdmi"
+      ],
+      "legacyModelIds": [
+        "mcipc1"
+      ],
+      "hrefs": [
+        "/products/industrial-mini-pc/mcipc8-hdmi"
+      ],
+      "reviewedAtUtc": "2026-10-31T10:07:34.154437+00:00",
+      "appliedAtUtc": "2026-10-31T10:07:34.154437+00:00",
+      "previousSha256": "4c76c6ecea61f537278167160fc4770b7f2dc9e9a2f5fe84875c35cb61776975",
+      "notes": "2026-10-31 核对新册整页与后面板后，同步五语供电为 9-36 V 四针航空插座，并替换官网后面板图；主图、正面图、其他参数、MCIPC8 独立型号和既有旧名称跳转保持。来源映射与导入脚本已更新。生产构建、168 条搜索回归、10 个五语详情、5 个分类分组、5 条同语言永久跳转、无前缀旧地址、站点地图与 6 个图片字节检查通过；浏览器已实测新图放大和参数显示。原始 PDF 只读。"
     },
     {
       "relativePath": "工控机IPC/C系列/MCIPC9 brochure.pdf",
@@ -1924,7 +2102,9 @@
       ],
       "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
       "notes": "用户要求暂缓：后面板 2×USB3.0 与整机 USB 数量矛盾，保留既有总数，暂不写冲突后面板数量。",
-      "partialUpdate": true
+      "partialUpdate": true,
+      "lastPendingReviewAtUtc": "2026-11-20T01:52:38.777006+00:00",
+      "lastPendingReviewResult": "来源 SHA-256 与上次一致，对应官网产品记录与更新前快照一致；既有疑点继续待确认，保留原应用指纹。"
     },
     {
       "relativePath": "桌面端DPC/MCAR9 brochure.pdf",
@@ -1967,24 +2147,58 @@
       "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
+      "relativePath": "桌面端DPC/MCDPC-S1 brochure.pdf",
+      "sizeBytes": 2307252,
+      "modifiedAtUtc": "2026-11-19T08:30:17.926196+00:00",
+      "observedSha256": "ca92657bbfb1c4a02a1fe01a1b67d3c463f8f0a205e63794ac6536a79aa82892",
+      "present": false,
+      "changeSincePreviousObservation": "missing",
+      "appliedSha256": "ca92657bbfb1c4a02a1fe01a1b67d3c463f8f0a205e63794ac6536a79aa82892",
+      "excluded": false,
+      "status": "superseded-by-renamed-brochure",
+      "modelIds": [
+        "mcnucm1"
+      ],
+      "hrefs": [
+        "/products/commercial-mini-pc/mcnucm1"
+      ],
+      "reviewedAtUtc": "2026-11-20T01:52:38.777006+00:00",
+      "appliedAtUtc": "2026-11-19T08:50:21.510194+00:00",
+      "notes": "2026-11-19 新增商业 DPC 型号 MCDPC-S1。五语介绍、20 项参数、原册正反面、缩略图、自然排序导航、参数搜索、SEO 与站点地图采用同一记录。N100 / N150、板载 8 / 12 / 16 GB LPDDR5X、M.2 2280 SATA / PCIe 3.0 ×4 自动识别、HDMI 2.1 TMDS CEC、USB-C DP、千兆网口、65 W USB-C PD、13.5 mm 机箱及 VESA 选配按册子列出。风扇仅列内部排针，不推断整机无风扇或工作温度。生产构建、169 条产品/SKU 搜索、五语详情和分类入口、图片字节及浏览器显示检查通过。 2026-11-20 新版册子内更名为 MCNUCM1，由 桌面端DPC/MCNUCM1 brochure.pdf 接替；官网旧路由保留五语永久跳转。旧已应用指纹和应用时间仅保留历史。",
+      "legacyModelIds": [
+        "mcdpc-s1"
+      ],
+      "canonicalHrefs": [
+        "/products/commercial-mini-pc/mcnucm1"
+      ],
+      "supersededBy": "桌面端DPC/MCNUCM1 brochure.pdf"
+    },
+    {
       "relativePath": "桌面端DPC/MCDPC1 Brochure.pdf",
       "sizeBytes": 859162,
       "modifiedAtUtc": "2026-08-27T09:48:31.966212+00:00",
       "observedSha256": "f1ff6e89fcc577225881c7c262f1779a682de16360815115cae3f6fb9eef1cfe",
       "appliedSha256": "f1ff6e89fcc577225881c7c262f1779a682de16360815115cae3f6fb9eef1cfe",
       "excluded": false,
-      "present": true,
-      "status": "verified-current",
-      "changeSincePreviousObservation": "unchanged",
+      "present": false,
+      "status": "superseded-by-renamed-brochure",
+      "changeSincePreviousObservation": "missing",
       "modelIds": [
-        "mcdpc1"
+        "mcnuc-4"
       ],
       "hrefs": [
-        "/products/commercial-mini-pc/mcdpc1"
+        "/products/commercial-mini-pc/mcnuc-4"
       ],
-      "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
+      "reviewedAtUtc": "2026-11-20T01:52:38.777006+00:00",
       "appliedAtUtc": "2026-09-11T01:14:40.127470+00:00",
-      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
+      "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。 2026-11-20 新版册子内更名为 MCNUC-4，由 桌面端DPC/MCNUC-4 Brochure.pdf 接替；官网旧路由保留五语永久跳转。旧已应用指纹和应用时间仅保留历史。",
+      "legacyModelIds": [
+        "mcdpc1"
+      ],
+      "canonicalHrefs": [
+        "/products/commercial-mini-pc/mcnuc-4"
+      ],
+      "supersededBy": "桌面端DPC/MCNUC-4 Brochure.pdf"
     },
     {
       "relativePath": "桌面端DPC/MCDPC2 Brochure.pdf",
@@ -1993,18 +2207,25 @@
       "observedSha256": "7ffc34abb5039512277055f4f610cc3b5184d589e55a05288a8ebca4a5177831",
       "appliedSha256": "7ffc34abb5039512277055f4f610cc3b5184d589e55a05288a8ebca4a5177831",
       "excluded": false,
-      "present": true,
-      "status": "updated",
-      "changeSincePreviousObservation": "unchanged",
+      "present": false,
+      "status": "superseded-by-renamed-brochure",
+      "changeSincePreviousObservation": "missing",
       "modelIds": [
-        "mcdpc2"
+        "mcnuc-5"
       ],
       "hrefs": [
-        "/products/commercial-mini-pc/mcdpc2"
+        "/products/commercial-mini-pc/mcnuc-5"
       ],
-      "reviewedAtUtc": "2026-10-20T02:20:01.566382+00:00",
+      "reviewedAtUtc": "2026-11-20T01:52:38.777006+00:00",
       "appliedAtUtc": "2026-10-20T02:20:01.566382+00:00",
-      "notes": "2026-10-20：按用户指定资料新增 DPC 独立型号 MCDPC2。已核对固定册子库为同一指纹，落实 22 行参数、三视图、统一缩略图、五语言内容、搜索和 SEO；保留 CPU/内存/接口按确认配置的说明，生产构建与页面检查通过。"
+      "notes": "2026-10-20：按用户指定资料新增 DPC 独立型号 MCDPC2。已核对固定册子库为同一指纹，落实 22 行参数、三视图、统一缩略图、五语言内容、搜索和 SEO；保留 CPU/内存/接口按确认配置的说明，生产构建与页面检查通过。 2026-11-20 新版册子内更名为 MCNUC-5，由 桌面端DPC/MCNUC-5 Brochure.pdf 接替；官网旧路由保留五语永久跳转。旧已应用指纹和应用时间仅保留历史。",
+      "legacyModelIds": [
+        "mcdpc2"
+      ],
+      "canonicalHrefs": [
+        "/products/commercial-mini-pc/mcnuc-5"
+      ],
+      "supersededBy": "桌面端DPC/MCNUC-5 Brochure.pdf"
     },
     {
       "relativePath": "桌面端DPC/MCGM13 brochure.pdf",
@@ -2169,7 +2390,9 @@
       ],
       "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
       "notes": "用户要求暂缓：Memory 行 DDR5 与 Internal I/O 行 DDR4 矛盾；保留既有 DDR5，未采纳冲突 DDR4。",
-      "partialUpdate": true
+      "partialUpdate": true,
+      "lastPendingReviewAtUtc": "2026-11-20T01:52:38.777006+00:00",
+      "lastPendingReviewResult": "来源 SHA-256 与上次一致，对应官网产品记录与更新前快照一致；既有疑点继续待确认，保留原应用指纹。"
     },
     {
       "relativePath": "桌面端DPC/MCN7P Brochure.pdf",
@@ -2252,6 +2475,78 @@
       "notes": "已核对册子与网站主要参数；已落实无争议修正，网站保留摘要展示方式。"
     },
     {
+      "relativePath": "桌面端DPC/MCNUC-4 Brochure.pdf",
+      "appliedSha256": "6ad4354326aaaca9c8555e8c7c70dac80baf9e14316e2124a521b3bb55bc9d77",
+      "excluded": false,
+      "sizeBytes": 594090,
+      "modifiedAtUtc": "2026-11-19T09:34:55.609237+00:00",
+      "observedSha256": "6ad4354326aaaca9c8555e8c7c70dac80baf9e14316e2124a521b3bb55bc9d77",
+      "present": true,
+      "changeSincePreviousObservation": "added",
+      "status": "updated",
+      "modelIds": [
+        "mcnuc-4"
+      ],
+      "legacyModelIds": [
+        "mcdpc1"
+      ],
+      "hrefs": [
+        "/products/commercial-mini-pc/mcnuc-4"
+      ],
+      "reviewedAtUtc": "2026-11-20T01:52:38.777006+00:00",
+      "appliedAtUtc": "2026-11-20T01:52:38.777006+00:00",
+      "supersedes": "桌面端DPC/MCDPC1 Brochure.pdf",
+      "notes": "2026-11-20 新册页内名称已确认为 MCNUC-4，与原型号 MCDPC1 的硬件配置和配图核对一致。已同步五语产品名称、参数型号行、图库文字、分类/菜单、缩略图映射、搜索旧名兼容、SEO 与站点地图；旧网址五语 308 永久跳转到新地址。MCNUC-4 补齐德/法/意/西四语完整详情。15 个详情、15 条旧路由、5 个分类、9 张图片、169 条产品/SKU 搜索及生产构建通过；三款桌面显示与手机宽度检查正常。"
+    },
+    {
+      "relativePath": "桌面端DPC/MCNUC-5 Brochure.pdf",
+      "appliedSha256": "c5c325cc207c457a8b9bb3067ed7009aeffdb1e29931bcc0f411691a6710d03b",
+      "excluded": false,
+      "sizeBytes": 2829362,
+      "modifiedAtUtc": "2026-11-19T09:34:56.021532+00:00",
+      "observedSha256": "c5c325cc207c457a8b9bb3067ed7009aeffdb1e29931bcc0f411691a6710d03b",
+      "present": true,
+      "changeSincePreviousObservation": "added",
+      "status": "updated",
+      "modelIds": [
+        "mcnuc-5"
+      ],
+      "legacyModelIds": [
+        "mcdpc2"
+      ],
+      "hrefs": [
+        "/products/commercial-mini-pc/mcnuc-5"
+      ],
+      "reviewedAtUtc": "2026-11-20T01:52:38.777006+00:00",
+      "appliedAtUtc": "2026-11-20T01:52:38.777006+00:00",
+      "supersedes": "桌面端DPC/MCDPC2 Brochure.pdf",
+      "notes": "2026-11-20 新册页内名称已确认为 MCNUC-5，与原型号 MCDPC2 的硬件配置和配图核对一致。已同步五语产品名称、参数型号行、图库文字、分类/菜单、缩略图映射、搜索旧名兼容、SEO 与站点地图；旧网址五语 308 永久跳转到新地址。MCNUC-4 补齐德/法/意/西四语完整详情。15 个详情、15 条旧路由、5 个分类、9 张图片、169 条产品/SKU 搜索及生产构建通过；三款桌面显示与手机宽度检查正常。"
+    },
+    {
+      "relativePath": "桌面端DPC/MCNUCM1 brochure.pdf",
+      "appliedSha256": "5598347f21eb3abe9ae955f52c7c3029fb2fe6c76ce3e19e1146bbde2955c0d1",
+      "excluded": false,
+      "sizeBytes": 2255340,
+      "modifiedAtUtc": "2026-11-19T09:40:20.824198+00:00",
+      "observedSha256": "5598347f21eb3abe9ae955f52c7c3029fb2fe6c76ce3e19e1146bbde2955c0d1",
+      "present": true,
+      "changeSincePreviousObservation": "added",
+      "status": "updated",
+      "modelIds": [
+        "mcnucm1"
+      ],
+      "legacyModelIds": [
+        "mcdpc-s1"
+      ],
+      "hrefs": [
+        "/products/commercial-mini-pc/mcnucm1"
+      ],
+      "reviewedAtUtc": "2026-11-20T01:52:38.777006+00:00",
+      "appliedAtUtc": "2026-11-20T01:52:38.777006+00:00",
+      "supersedes": "桌面端DPC/MCDPC-S1 brochure.pdf",
+      "notes": "2026-11-20 新册页内名称已确认为 MCNUCM1，与原型号 MCDPC-S1 的硬件配置和配图核对一致。已同步五语产品名称、参数型号行、图库文字、分类/菜单、缩略图映射、搜索旧名兼容、SEO 与站点地图；旧网址五语 308 永久跳转到新地址。MCNUC-4 补齐德/法/意/西四语完整详情。15 个详情、15 条旧路由、5 个分类、9 张图片、169 条产品/SKU 搜索及生产构建通过；三款桌面显示与手机宽度检查正常。"
+    },
+    {
       "relativePath": "桌面端DPC/MCTAR7 brochure.pdf",
       "sizeBytes": 1016590,
       "modifiedAtUtc": "2026-09-01T07:05:27.705548+00:00",
@@ -2269,7 +2564,9 @@
       ],
       "reviewedAtUtc": "2026-11-10T06:30:23.838366+00:00",
       "notes": "用户要求暂缓：Ryzen AI 300 平台名与 Ryzen 4000/5000/7000 CPU 列表冲突，暂不采纳该平台名。",
-      "partialUpdate": true
+      "partialUpdate": true,
+      "lastPendingReviewAtUtc": "2026-11-20T01:52:38.777006+00:00",
+      "lastPendingReviewResult": "来源 SHA-256 与上次一致，对应官网产品记录与更新前快照一致；既有疑点继续待确认，保留原应用指纹。"
     },
     {
       "relativePath": "桌面端DPC/MCVX4 brochure.pdf",
@@ -2552,7 +2849,9 @@
       "notes": "仅同步确定字段。CPU/平台名称及 HDMI 1.4 的 4K@60Hz 描述冲突，省略平台、显示版本和分辨率，待核实，不推进应用指纹。旧名称跳转已验证。",
       "status": "pending-confirmation",
       "partialUpdate": true,
-      "partialAppliedAtUtc": "2026-10-13T09:54:12.159012+00:00"
+      "partialAppliedAtUtc": "2026-10-13T09:54:12.159012+00:00",
+      "lastPendingReviewAtUtc": "2026-11-20T01:52:38.777006+00:00",
+      "lastPendingReviewResult": "来源 SHA-256 与上次一致，对应官网产品记录与更新前快照一致；既有疑点继续待确认，保留原应用指纹。"
     },
     {
       "relativePath": "软路由SR/MCSR6N3 Brochure.pdf",
@@ -2937,188 +3236,6 @@
       "reviewedAtUtc": "2026-09-11T01:14:40.127470+00:00",
       "notes": "MCSR613U 与 New_MCSR613U 两册 CPU、内存等配置存在差异，未擅自选择或合并冲突配置。 2026-10-13：来源文件名已消失，现有 MCSR613U 页面保留；用户暂缓 N4，未据文件删除自动下架或选择冲突配置。",
       "partialUpdate": true
-    },
-    {
-      "relativePath": "工控机IPC/B系列/MCIPCBP1 brochure.pdf",
-      "sizeBytes": 1930912,
-      "modifiedAtUtc": "2026-10-29T06:25:09.886760+00:00",
-      "observedSha256": "c50b21d786415548949b117daa414d0684de9eb6c1be7e1a96dc3cae2a26478e",
-      "appliedSha256": "c50b21d786415548949b117daa414d0684de9eb6c1be7e1a96dc3cae2a26478e",
-      "excluded": false,
-      "present": true,
-      "status": "updated",
-      "changeSincePreviousObservation": "unchanged",
-      "reviewedAtUtc": "2026-10-29T07:58:33.246518+00:00",
-      "appliedAtUtc": "2026-10-29T07:58:33.246518+00:00",
-      "modelIds": [
-        "mcipcbp1"
-      ],
-      "hrefs": [
-        "/products/industrial-mini-pc/mcipcbp1"
-      ],
-      "notes": "2026-10-29 已按新版核对并同步完整五语参数、介绍、功能卡和本地产品图；分类/菜单、搜索、SEO、结构化参数及缩略图均接入同一记录。生产构建、搜索回归、25 个五语页面和 15 条永久跳转验证通过。浏览器运行环境启动失败，未完成本次电脑/手机排版目视复核。详见当日工控机更新报告；原始 PDF 未修改。"
-    },
-    {
-      "relativePath": "工控机IPC/C系列/MCIPC2 brochure.pdf",
-      "sizeBytes": 3882613,
-      "modifiedAtUtc": "2026-10-29T05:58:47.199470+00:00",
-      "observedSha256": "38808c1e74575452f365ccd91cc13bbf6af1f80e2783d656c3baa0affe0d433e",
-      "appliedSha256": "38808c1e74575452f365ccd91cc13bbf6af1f80e2783d656c3baa0affe0d433e",
-      "excluded": false,
-      "present": true,
-      "status": "updated",
-      "changeSincePreviousObservation": "unchanged",
-      "reviewedAtUtc": "2026-10-29T07:58:33.246518+00:00",
-      "appliedAtUtc": "2026-10-29T07:58:33.246518+00:00",
-      "modelIds": [
-        "mcipc2"
-      ],
-      "hrefs": [
-        "/products/industrial-mini-pc/mcipc2"
-      ],
-      "notes": "2026-10-29 已按新版核对并同步完整五语参数、介绍、功能卡和本地产品图；分类/菜单、搜索、SEO、结构化参数及缩略图均接入同一记录。生产构建、搜索回归、25 个五语页面和 15 条永久跳转验证通过。浏览器运行环境启动失败，未完成本次电脑/手机排版目视复核。详见当日工控机更新报告；原始 PDF 未修改。"
-    },
-    {
-      "relativePath": "工控机IPC/C系列/MCIPC8-HDMI brochure.pdf",
-      "sizeBytes": 2654774,
-      "modifiedAtUtc": "2026-10-31T09:37:39.881231+00:00",
-      "observedSha256": "73b30b37f48bc16fa9b1e893b07adf35bb462f4013045a0536ac6ed8c0fea18f",
-      "excluded": false,
-      "appliedSha256": "73b30b37f48bc16fa9b1e893b07adf35bb462f4013045a0536ac6ed8c0fea18f",
-      "present": true,
-      "status": "updated",
-      "changeSincePreviousObservation": "unchanged",
-      "modelIds": [
-        "mcipc8-hdmi"
-      ],
-      "legacyModelIds": [
-        "mcipc1"
-      ],
-      "hrefs": [
-        "/products/industrial-mini-pc/mcipc8-hdmi"
-      ],
-      "reviewedAtUtc": "2026-10-31T10:07:34.154437+00:00",
-      "appliedAtUtc": "2026-10-31T10:07:34.154437+00:00",
-      "previousSha256": "4c76c6ecea61f537278167160fc4770b7f2dc9e9a2f5fe84875c35cb61776975",
-      "notes": "2026-10-31 核对新册整页与后面板后，同步五语供电为 9-36 V 四针航空插座，并替换官网后面板图；主图、正面图、其他参数、MCIPC8 独立型号和既有旧名称跳转保持。来源映射与导入脚本已更新。生产构建、168 条搜索回归、10 个五语详情、5 个分类分组、5 条同语言永久跳转、无前缀旧地址、站点地图与 6 个图片字节检查通过；浏览器已实测新图放大和参数显示。原始 PDF 只读。"
-    },
-    {
-      "relativePath": "定制册子/E238A-P_规格001_产品册.pdf",
-      "sizeBytes": 1682705,
-      "modifiedAtUtc": "2026-10-09T02:40:33.941594+00:00",
-      "observedSha256": "a8e8bba149de5ebd92b7afb29f329f1cbde210409c36f49c7f8a78b9ed3d2ffe",
-      "present": true,
-      "appliedSha256": null,
-      "excluded": true,
-      "status": "excluded-custom",
-      "changeSincePreviousObservation": "unchanged",
-      "modelIds": [],
-      "hrefs": [],
-      "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
-    },
-    {
-      "relativePath": "定制册子/E238A-P_规格003_产品册.pdf",
-      "sizeBytes": 1709221,
-      "modifiedAtUtc": "2026-10-09T02:40:34.474948+00:00",
-      "observedSha256": "c814feed7d4e98109cfa9a470b73b179da313689c702f216225108e28b2c8083",
-      "present": true,
-      "appliedSha256": null,
-      "excluded": true,
-      "status": "excluded-custom",
-      "changeSincePreviousObservation": "unchanged",
-      "modelIds": [],
-      "hrefs": [],
-      "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
-    },
-    {
-      "relativePath": "定制册子/E270A-P_规格002_产品册.pdf",
-      "sizeBytes": 1709192,
-      "modifiedAtUtc": "2026-10-09T02:40:35.002535+00:00",
-      "observedSha256": "d1d33003023e43bce03b2538a04a7a925d8d0af89f45e81ff981afedaea46012",
-      "present": true,
-      "appliedSha256": null,
-      "excluded": true,
-      "status": "excluded-custom",
-      "changeSincePreviousObservation": "unchanged",
-      "modelIds": [],
-      "hrefs": [],
-      "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
-    },
-    {
-      "relativePath": "定制册子/E270A-P_规格004_产品册.pdf",
-      "sizeBytes": 1682705,
-      "modifiedAtUtc": "2026-10-09T02:40:35.605535+00:00",
-      "observedSha256": "66b89da1cbeeff30cccdd9c2c417405baaf4e7302f0b8fce8921814ac231ce79",
-      "present": true,
-      "appliedSha256": null,
-      "excluded": true,
-      "status": "excluded-custom",
-      "changeSincePreviousObservation": "unchanged",
-      "modelIds": [],
-      "hrefs": [],
-      "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
-    },
-    {
-      "relativePath": "定制册子/MCIPCB13A Custom brochure.pdf",
-      "sizeBytes": 2400008,
-      "modifiedAtUtc": "2026-11-09T03:37:40.063957+00:00",
-      "observedSha256": "344942e8a4464014effd0ac2823cd845ee3a826e3f7f2b40c1748e7b9a9c381f",
-      "present": true,
-      "appliedSha256": null,
-      "excluded": true,
-      "status": "excluded-custom",
-      "changeSincePreviousObservation": "unchanged",
-      "modelIds": [],
-      "hrefs": [],
-      "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
-    },
-    {
-      "relativePath": "定制册子/MCIPCB13B Custom brochure.pdf",
-      "sizeBytes": 2405781,
-      "modifiedAtUtc": "2026-11-09T03:37:42.870052+00:00",
-      "observedSha256": "05cd82d4b43615c4a500c676adcdc7f07de40e94c697b0f77fc966d775bcc663",
-      "present": true,
-      "appliedSha256": null,
-      "excluded": true,
-      "status": "excluded-custom",
-      "changeSincePreviousObservation": "unchanged",
-      "modelIds": [],
-      "hrefs": [],
-      "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
-    },
-    {
-      "relativePath": "定制册子/MCMQR6 brochure.pdf",
-      "sizeBytes": 653215,
-      "modifiedAtUtc": "2026-11-06T02:13:44.018930+00:00",
-      "observedSha256": "425130fecc35f275c516fd8d1c9f2c6102820970628dcd4832544216531b33e3",
-      "present": true,
-      "appliedSha256": null,
-      "excluded": true,
-      "status": "excluded-custom",
-      "changeSincePreviousObservation": "unchanged",
-      "modelIds": [],
-      "hrefs": [],
-      "notes": "用户确认定制册子只计入来源统计，不用于官网标准型号更新。"
-    },
-    {
-      "relativePath": "桌面端DPC/MCDPC-S1 brochure.pdf",
-      "sizeBytes": 2307252,
-      "modifiedAtUtc": "2026-11-19T08:30:17.926196+00:00",
-      "observedSha256": "ca92657bbfb1c4a02a1fe01a1b67d3c463f8f0a205e63794ac6536a79aa82892",
-      "present": true,
-      "changeSincePreviousObservation": "added",
-      "appliedSha256": "ca92657bbfb1c4a02a1fe01a1b67d3c463f8f0a205e63794ac6536a79aa82892",
-      "excluded": false,
-      "status": "updated",
-      "modelIds": [
-        "mcdpc-s1"
-      ],
-      "hrefs": [
-        "/products/commercial-mini-pc/mcdpc-s1"
-      ],
-      "reviewedAtUtc": "2026-11-19T08:50:21.510194+00:00",
-      "appliedAtUtc": "2026-11-19T08:50:21.510194+00:00",
-      "notes": "2026-11-19 新增商业 DPC 型号 MCDPC-S1。五语介绍、20 项参数、原册正反面、缩略图、自然排序导航、参数搜索、SEO 与站点地图采用同一记录。N100 / N150、板载 8 / 12 / 16 GB LPDDR5X、M.2 2280 SATA / PCIe 3.0 ×4 自动识别、HDMI 2.1 TMDS CEC、USB-C DP、千兆网口、65 W USB-C PD、13.5 mm 机箱及 VESA 选配按册子列出。风扇仅列内部排针，不推断整机无风扇或工作温度。生产构建、169 条产品/SKU 搜索、五语详情和分类入口、图片字节及浏览器显示检查通过。"
     }
   ]
 }

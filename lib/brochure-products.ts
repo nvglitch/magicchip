@@ -2,6 +2,7 @@
 // Regenerate with scripts/import-september-products.py; review source ambiguities before publishing.
 import type { IndustrialCatalogItem } from './industrial-catalog';
 import type { CommercialCatalogItem } from './commercial-catalog';
+import mcnuc4 from '@/content/products/items/mcnuc-4.json';
 
 type Provenance = { sourceBrochure: string; sourceSha256: string };
 
@@ -2705,132 +2706,7 @@ export const commercialBrochureProducts: (CommercialCatalogItem & Provenance)[] 
     "sourceBrochure": "public/assets/NAS PC/MCNAS14B brochure.pdf",
     "sourceSha256": "656b4eed8c1ec883f77bd0c0c1c874b6b8dbeeaedc5b819c2230344433631a33"
   },
-  {
-    "id": "mcdpc1",
-    "name": "MCDPC1",
-    "tagline": "Intel N100 / N150 compact desktop PC",
-    "description": "MCDPC1 is an Intel N100 / N150 desktop mini PC with replaceable DDR4 memory, dual Gigabit LAN, two M.2 2280 storage slots, and DisplayPort, HDMI, and USB-C display connections. A built-in 36 W power supply simplifies desk installation.",
-    "image": "/assets/products/commercial/brochure/mcdpc1/main.webp",
-    "galleryImages": [
-      "/assets/products/commercial/brochure/mcdpc1/view-1.webp",
-      "/assets/products/commercial/brochure/mcdpc1/view-2.webp",
-      "/assets/products/commercial/brochure/mcdpc1/view-3.webp"
-    ],
-    "galleryCards": [
-      {
-        "image": "/assets/products/commercial/brochure/mcdpc1/view-1.webp",
-        "title": "MCDPC1 front panel"
-      },
-      {
-        "image": "/assets/products/commercial/brochure/mcdpc1/view-2.webp",
-        "title": "MCDPC1 rear panel"
-      },
-      {
-        "image": "/assets/products/commercial/brochure/mcdpc1/view-3.webp",
-        "title": "MCDPC1 enclosure view"
-      }
-    ],
-    "highlights": [
-      "Intel N100 / N150",
-      "Up to 16GB DDR4",
-      "Dual Gigabit LAN",
-      "NVMe + SATA storage"
-    ],
-    "specs": [
-      {
-        "label": "Model",
-        "value": "MCDPC1"
-      },
-      {
-        "label": "CPU",
-        "value": "Intel Alder Lake-N N100 / N150"
-      },
-      {
-        "label": "Memory",
-        "value": "1 x DDR4 SODIMM, max 16 GB"
-      },
-      {
-        "label": "Network",
-        "value": "2 x Realtek RTL8111H Gigabit Ethernet ports"
-      },
-      {
-        "label": "USB",
-        "value": "2 x USB3.2 Gen2 Type-A (10 Gb/s); 2 x USB2.0; 1 x USB3.2 Gen2 Type-C (10 Gb/s)"
-      },
-      {
-        "label": "DP",
-        "value": "1 x DP1.4"
-      },
-      {
-        "label": "HDMI",
-        "value": "1 x HDMI2.1"
-      },
-      {
-        "label": "USB Type-C",
-        "value": "1 x USB Type-C display output"
-      },
-      {
-        "label": "Power button",
-        "value": "1 x Power button"
-      },
-      {
-        "label": "Audio",
-        "value": "1 x headphone/microphone combo jack"
-      },
-      {
-        "label": "Storage - M.2 SSD",
-        "value": "2 x M.2 2280 NVMe (1 slot also supports M.2 SATA)"
-      },
-      {
-        "label": "Wi-Fi",
-        "value": "1 x M.2 2232 for Wi-Fi"
-      },
-      {
-        "label": "OS",
-        "value": "Windows 10, Windows 11, Linux"
-      },
-      {
-        "label": "Features",
-        "value": "Wake-on-LAN, Auto Power On, scheduled power-on, PXE boot"
-      },
-      {
-        "label": "AC input",
-        "value": "AC 100-240 V, 50/60 Hz; built-in 36 W power supply"
-      },
-      {
-        "label": "Material",
-        "value": "Fire-retardant ABS"
-      },
-      {
-        "label": "Installation",
-        "value": "Desktop"
-      },
-      {
-        "label": "Dimensions",
-        "value": "140 x 133 x 46 mm, including silicone feet"
-      },
-      {
-        "label": "Weight",
-        "value": "2 kg"
-      },
-      {
-        "label": "Environment - Storage temperature",
-        "value": "-30~70 C"
-      },
-      {
-        "label": "Environment - Operating temperature",
-        "value": "-20~60 C"
-      },
-      {
-        "label": "Environment - Storage humidity",
-        "value": "10%~90% RH at 30 C, non-condensing"
-      }
-    ],
-    "series": "DPC",
-    "operatingRange": "-20°C to 60°C",
-    "sourceBrochure": "public/assets/桌面端DPC/MCDPC1 Brochure.pdf",
-    "sourceSha256": "f1ff6e89fcc577225881c7c262f1779a682de16360815115cae3f6fb9eef1cfe"
-  }
+  mcnuc4 as CommercialCatalogItem & Provenance
 ];
 
 export const aiBrochureProducts = [

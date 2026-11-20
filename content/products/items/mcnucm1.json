@@ -1,6 +1,6 @@
 {
-  "id": "mcdpc-s1",
-  "name": "MCDPC-S1",
+  "id": "mcnucm1",
+  "name": "MCNUCM1",
   "category": "commercial-mini-pc",
   "series": "DPC",
   "published": true,
@@ -12,14 +12,14 @@
     "/assets/products/commercial/dpc/mcdpc-s1/front.webp",
     "/assets/products/commercial/dpc/mcdpc-s1/rear.webp"
   ],
-  "sourceBrochure": "桌面端DPC/MCDPC-S1 brochure.pdf",
-  "sourceSha256": "ca92657bbfb1c4a02a1fe01a1b67d3c463f8f0a205e63794ac6536a79aa82892",
+  "sourceBrochure": "桌面端DPC/MCNUCM1 brochure.pdf",
+  "sourceSha256": "5598347f21eb3abe9ae955f52c7c3029fb2fe6c76ce3e19e1146bbde2955c0d1",
   "tagline": "13.5 mm slim Intel N100 / N150 desktop mini PC",
-  "description": "MCDPC-S1 combines an Intel N100 or N150 processor with 8, 12 or 16 GB onboard LPDDR5X in a 159 × 80 × 13.5 mm metal-and-glass enclosure. One M.2 2280 SSD slot supports SATA or PCIe 3.0 ×4 storage. HDMI, USB-C DisplayPort, Gigabit Ethernet and 65 W USB-C PD power provide desktop connectivity, with optional VESA mounting.",
+  "description": "MCNUCM1 combines an Intel N100 or N150 processor with 8, 12 or 16 GB onboard LPDDR5X in a 159 × 80 × 13.5 mm metal-and-glass enclosure. One M.2 2280 SSD slot supports SATA or PCIe 3.0 ×4 storage. HDMI, USB-C DisplayPort, Gigabit Ethernet and 65 W USB-C PD power provide desktop connectivity, with optional VESA mounting.",
   "specs": [
     {
       "label": "Model",
-      "value": "MCDPC-S1"
+      "value": "MCNUCM1"
     },
     {
       "label": "CPU",
@@ -107,14 +107,14 @@
   "galleryCards": [
     {
       "image": "/assets/products/commercial/dpc/mcdpc-s1/front.webp",
-      "title": "MCDPC-S1 · front and product view"
+      "title": "MCNUCM1 · front and product view"
     },
     {
       "image": "/assets/products/commercial/dpc/mcdpc-s1/rear.webp",
-      "title": "MCDPC-S1 · rear interfaces"
+      "title": "MCNUCM1 · rear interfaces"
     }
   ],
-  "specificationHeading": "MCDPC-S1 hardware specifications",
+  "specificationHeading": "MCNUCM1 hardware specifications",
   "featureHeading": "A slim desktop with USB-C power",
   "advantageSummary": "13.5 mm slim Intel N100 / N150 desktop mini PC",
   "features": [
@@ -137,7 +137,7 @@
   "specifications": [
     {
       "label": "Model",
-      "value": "MCDPC-S1"
+      "value": "MCNUCM1"
     },
     {
       "label": "CPU",
@@ -219,11 +219,11 @@
   "translations": {
     "de": {
       "tagline": "13,5 mm schlanker Desktop-Mini-PC mit Intel N100 / N150",
-      "description": "MCDPC-S1 kombiniert einen Intel-N100- oder N150-Prozessor mit 8, 12 oder 16 GB fest verlötetem LPDDR5X in einem 159 × 80 × 13,5 mm großen Metall-Glas-Gehäuse. Ein M.2-2280-SSD-Steckplatz unterstützt SATA oder PCIe 3.0 ×4. HDMI, USB-C mit DisplayPort, Gigabit-Ethernet und 65-W-USB-C-PD-Stromversorgung bieten Desktop-Konnektivität. Eine VESA-Halterung ist optional erhältlich.",
+      "description": "MCNUCM1 kombiniert einen Intel-N100- oder N150-Prozessor mit 8, 12 oder 16 GB fest verlötetem LPDDR5X in einem 159 × 80 × 13,5 mm großen Metall-Glas-Gehäuse. Ein M.2-2280-SSD-Steckplatz unterstützt SATA oder PCIe 3.0 ×4. HDMI, USB-C mit DisplayPort, Gigabit-Ethernet und 65-W-USB-C-PD-Stromversorgung bieten Desktop-Konnektivität. Eine VESA-Halterung ist optional erhältlich.",
       "specs": [
         {
           "label": "Modell",
-          "value": "MCDPC-S1"
+          "value": "MCNUCM1"
         },
         {
           "label": "Prozessor",
@@ -311,14 +311,14 @@
       "galleryCards": [
         {
           "image": "/assets/products/commercial/dpc/mcdpc-s1/front.webp",
-          "title": "MCDPC-S1 · Front- und Produktansicht"
+          "title": "MCNUCM1 · Front- und Produktansicht"
         },
         {
           "image": "/assets/products/commercial/dpc/mcdpc-s1/rear.webp",
-          "title": "MCDPC-S1 · rückseitige Anschlüsse"
+          "title": "MCNUCM1 · rückseitige Anschlüsse"
         }
       ],
-      "specificationHeading": "Technische Daten des MCDPC-S1",
+      "specificationHeading": "Technische Daten des MCNUCM1",
       "featureHeading": "Schlanker Desktop mit USB-C-Stromversorgung",
       "advantageSummary": "13,5 mm schlanker Desktop-Mini-PC mit Intel N100 / N150",
       "features": [
@@ -341,11 +341,11 @@
     },
     "fr": {
       "tagline": "Mini PC de bureau fin de 13,5 mm avec Intel N100 / N150",
-      "description": "Le MCDPC-S1 associe un processeur Intel N100 ou N150 à 8, 12 ou 16 Go de LPDDR5X soudée dans un boîtier en métal et verre de 159 × 80 × 13,5 mm. Un emplacement SSD M.2 2280 prend en charge le SATA ou le PCIe 3.0 ×4. HDMI, USB-C DisplayPort, Ethernet Gigabit et alimentation USB-C PD de 65 W assurent les connexions de bureau, avec fixation VESA en option.",
+      "description": "Le MCNUCM1 associe un processeur Intel N100 ou N150 à 8, 12 ou 16 Go de LPDDR5X soudée dans un boîtier en métal et verre de 159 × 80 × 13,5 mm. Un emplacement SSD M.2 2280 prend en charge le SATA ou le PCIe 3.0 ×4. HDMI, USB-C DisplayPort, Ethernet Gigabit et alimentation USB-C PD de 65 W assurent les connexions de bureau, avec fixation VESA en option.",
       "specs": [
         {
           "label": "Modèle",
-          "value": "MCDPC-S1"
+          "value": "MCNUCM1"
         },
         {
           "label": "Processeur",
@@ -433,14 +433,14 @@
       "galleryCards": [
         {
           "image": "/assets/products/commercial/dpc/mcdpc-s1/front.webp",
-          "title": "MCDPC-S1 · vue avant et vue du produit"
+          "title": "MCNUCM1 · vue avant et vue du produit"
         },
         {
           "image": "/assets/products/commercial/dpc/mcdpc-s1/rear.webp",
-          "title": "MCDPC-S1 · connectique arrière"
+          "title": "MCNUCM1 · connectique arrière"
         }
       ],
-      "specificationHeading": "Caractéristiques techniques du MCDPC-S1",
+      "specificationHeading": "Caractéristiques techniques du MCNUCM1",
       "featureHeading": "Un ordinateur de bureau fin alimenté par USB-C",
       "advantageSummary": "Mini PC de bureau fin de 13,5 mm avec Intel N100 / N150",
       "features": [
@@ -463,11 +463,11 @@
     },
     "it": {
       "tagline": "Mini PC desktop sottile da 13,5 mm con Intel N100 / N150",
-      "description": "MCDPC-S1 combina un processore Intel N100 o N150 con 8, 12 o 16 GB di LPDDR5X saldata in uno chassis in metallo e vetro di 159 × 80 × 13,5 mm. Uno slot SSD M.2 2280 supporta SATA o PCIe 3.0 ×4. HDMI, USB-C DisplayPort, Ethernet Gigabit e alimentazione USB-C PD da 65 W forniscono connettività desktop, con montaggio VESA opzionale.",
+      "description": "MCNUCM1 combina un processore Intel N100 o N150 con 8, 12 o 16 GB di LPDDR5X saldata in uno chassis in metallo e vetro di 159 × 80 × 13,5 mm. Uno slot SSD M.2 2280 supporta SATA o PCIe 3.0 ×4. HDMI, USB-C DisplayPort, Ethernet Gigabit e alimentazione USB-C PD da 65 W forniscono connettività desktop, con montaggio VESA opzionale.",
       "specs": [
         {
           "label": "Modello",
-          "value": "MCDPC-S1"
+          "value": "MCNUCM1"
         },
         {
           "label": "Processore",
@@ -555,14 +555,14 @@
       "galleryCards": [
         {
           "image": "/assets/products/commercial/dpc/mcdpc-s1/front.webp",
-          "title": "MCDPC-S1 · vista anteriore e del prodotto"
+          "title": "MCNUCM1 · vista anteriore e del prodotto"
         },
         {
           "image": "/assets/products/commercial/dpc/mcdpc-s1/rear.webp",
-          "title": "MCDPC-S1 · interfacce posteriori"
+          "title": "MCNUCM1 · interfacce posteriori"
         }
       ],
-      "specificationHeading": "Specifiche tecniche di MCDPC-S1",
+      "specificationHeading": "Specifiche tecniche di MCNUCM1",
       "featureHeading": "Un desktop sottile con alimentazione USB-C",
       "advantageSummary": "Mini PC desktop sottile da 13,5 mm con Intel N100 / N150",
       "features": [
@@ -585,11 +585,11 @@
     },
     "es": {
       "tagline": "Mini PC de sobremesa delgado de 13,5 mm con Intel N100 / N150",
-      "description": "MCDPC-S1 combina un procesador Intel N100 o N150 con 8, 12 o 16 GB de LPDDR5X soldada en un chasis de metal y vidrio de 159 × 80 × 13,5 mm. Una ranura SSD M.2 2280 admite SATA o PCIe 3.0 ×4. HDMI, USB-C DisplayPort, Ethernet Gigabit y alimentación USB-C PD de 65 W ofrecen conectividad de sobremesa, con soporte VESA opcional.",
+      "description": "MCNUCM1 combina un procesador Intel N100 o N150 con 8, 12 o 16 GB de LPDDR5X soldada en un chasis de metal y vidrio de 159 × 80 × 13,5 mm. Una ranura SSD M.2 2280 admite SATA o PCIe 3.0 ×4. HDMI, USB-C DisplayPort, Ethernet Gigabit y alimentación USB-C PD de 65 W ofrecen conectividad de sobremesa, con soporte VESA opcional.",
       "specs": [
         {
           "label": "Modelo",
-          "value": "MCDPC-S1"
+          "value": "MCNUCM1"
         },
         {
           "label": "Procesador",
@@ -677,14 +677,14 @@
       "galleryCards": [
         {
           "image": "/assets/products/commercial/dpc/mcdpc-s1/front.webp",
-          "title": "MCDPC-S1 · vista frontal y del producto"
+          "title": "MCNUCM1 · vista frontal y del producto"
         },
         {
           "image": "/assets/products/commercial/dpc/mcdpc-s1/rear.webp",
-          "title": "MCDPC-S1 · interfaces traseras"
+          "title": "MCNUCM1 · interfaces traseras"
         }
       ],
-      "specificationHeading": "Especificaciones técnicas de MCDPC-S1",
+      "specificationHeading": "Especificaciones técnicas de MCNUCM1",
       "featureHeading": "Un equipo de sobremesa delgado con alimentación USB-C",
       "advantageSummary": "Mini PC de sobremesa delgado de 13,5 mm con Intel N100 / N150",
       "features": [
